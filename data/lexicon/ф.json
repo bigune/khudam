@@ -1,0 +1,354 @@
+[
+  {
+    "cyrillic": "фабрик",
+    "candidates": [
+      {
+        "traditional": "ᠹᠠᠪᠷᠢᠺ",
+        "latin": "fabrik",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фабрикч",
+    "candidates": [
+      {
+        "traditional": "ᠹᠠᠪᠷᠢᠺᠴᠢ",
+        "latin": "fabrikch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фактур",
+    "candidates": [
+      {
+        "traditional": "ᠹᠠᠺᠲ᠋ᠦᠶᠢᠷ",
+        "latin": "faktur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "факультет",
+    "candidates": [
+      {
+        "traditional": "ᠹᠠᠺᠦᠶᠢᠯᠢᠲ᠋ᠧᠲ",
+        "latin": "fakulityet",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фарао",
+    "candidates": [
+      {
+        "traditional": "ᠹᠠᠷᠠᠣ",
+        "latin": "farao",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фашизм",
+    "candidates": [
+      {
+        "traditional": "ᠹᠠᠱᠢᠰᠮ",
+        "latin": "fashizm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фашист",
+    "candidates": [
+      {
+        "traditional": "ᠹᠠᠱᠢᠰᠲ",
+        "latin": "fashist",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "феодал",
+    "candidates": [
+      {
+        "traditional": "ᠹᠧᠣᠳᠠᠯ",
+        "latin": "fyeodal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "феодализм",
+    "candidates": [
+      {
+        "traditional": "ᠹᠧᠣᠳᠠᠯᠢᠰᠮ",
+        "latin": "fyeodalizm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ферм",
+    "candidates": [
+      {
+        "traditional": "ᠹᠧᠷᠮ",
+        "latin": "fyerm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фестиваль",
+    "candidates": [
+      {
+        "traditional": "ᠹᠧᠰᠲ᠋ᠢᠸᠠᠯ",
+        "latin": "fyestivali",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "физик",
+    "candidates": [
+      {
+        "traditional": "ᠹᠢᠽᠢᠺ",
+        "latin": "fizik",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "физикч",
+    "candidates": [
+      {
+        "traditional": "ᠹᠢᠽᠢᠺᠴᠢ",
+        "latin": "fizikch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "физиологи",
+    "candidates": [
+      {
+        "traditional": "ᠹᠢᠽᠢᠣᠯᠣᠭᠢ",
+        "latin": "fiziologi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "физиологич",
+    "candidates": [
+      {
+        "traditional": "ᠹᠢᠽᠢᠣᠯᠣᠭᠢᠴᠢ",
+        "latin": "fiziologich",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "философи",
+    "candidates": [
+      {
+        "traditional": "ᠹᠢᠯᠣᠰᠣᠹᠢ",
+        "latin": "filosofi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "философич",
+    "candidates": [
+      {
+        "traditional": "ᠹᠢᠯᠣᠰᠣᠹᠢᠴᠢ",
+        "latin": "filosofich",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "финтек",
+    "candidates": [
+      {
+        "traditional": "ᠹᠢᠨᠲ᠋ᠧᠺ",
+        "latin": "fintyek",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фитнес",
+    "candidates": [
+      {
+        "traditional": "ᠹᠢᠲᠨᠧᠰ",
+        "latin": "fitnyes",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фитнесс",
+    "candidates": [
+      {
+        "traditional": "ᠹᠢᠲᠨᠧᠰ",
+        "latin": "fitnyess",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фишер",
+    "candidates": [
+      {
+        "traditional": "ᠹᠢᠱᠧᠷ",
+        "latin": "fishyer",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фонд",
+    "candidates": [
+      {
+        "traditional": "ᠹᠣᠨᠳ᠋",
+        "latin": "fond",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фонем",
+    "candidates": [
+      {
+        "traditional": "ᠹᠣᠨᠧᠮ",
+        "latin": "fonyem",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "форум",
+    "candidates": [
+      {
+        "traditional": "ᠹᠣᠷᠣᠮ",
+        "latin": "forum",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фосфор",
+    "candidates": [
+      {
+        "traditional": "ᠹᠣᠰᠹᠣᠷ",
+        "latin": "fosfor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фото",
+    "candidates": [
+      {
+        "traditional": "ᠹᠣᠲ᠋ᠣ",
+        "latin": "foto",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фотосинтез",
+    "candidates": [
+      {
+        "traditional": "ᠹᠣᠲ᠋ᠣᠰᠢᠨᠲ᠋ᠧᠽ",
+        "latin": "fotosintyez",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "франц",
+    "candidates": [
+      {
+        "traditional": "ᠹᠷᠠᠨᠼᠢ",
+        "latin": "frants",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фронт",
+    "candidates": [
+      {
+        "traditional": "ᠹᠷᠣᠨᠲ",
+        "latin": "front",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фунт",
+    "candidates": [
+      {
+        "traditional": "ᠹᠦᠨᠲ",
+        "latin": "funt",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фэйсбүүк",
+    "candidates": [
+      {
+        "traditional": "ᠹᠡᠢᠰᠪᠥᠺ",
+        "latin": "feisbuuk",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фүнтүүз",
+    "candidates": [
+      {
+        "traditional": "ᠹᠦᠨᠲ᠋ᠢᠦᠵᠡ",
+        "latin": "funtuuz",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  }
+]

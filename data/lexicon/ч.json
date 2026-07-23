@@ -1,0 +1,5359 @@
+[
+  {
+    "cyrillic": "ч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠤ",
+        "latin": "ch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаа",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠ",
+        "latin": "chaa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаавас",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠪᠠᠰ",
+        "latin": "chaavas",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавга",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠠᠭ᠎᠊ᠠ",
+        "latin": "chavga",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавганц",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠠᠭᠠᠨᠴᠠ",
+        "latin": "chavgants",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавдаг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠳᠠᠭ",
+        "latin": "chavdag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавдагдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠳᠠᠭᠳᠠᠬᠤ",
+        "latin": "chavdagdah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавдаглах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠳᠠᠭᠯᠠᠬᠤ",
+        "latin": "chavdaglah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавдаграх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠠᠳᠠᠭᠠᠷᠠᠬᠤ",
+        "latin": "chavdagrah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавдагруулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠠᠳᠠᠭᠠᠷᠠᠭᠤᠯᠬᠤ",
+        "latin": "chavdagruulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавдагсах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠳᠠᠭᠰᠬᠤ",
+        "latin": "chavdagsah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавдагтах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠳᠠᠭᠲᠤᠬᠤ",
+        "latin": "chavdagtah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавдагших",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠳᠠᠭᠰᠢᠬᠤ",
+        "latin": "chavdagshih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавдгархах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠳᠠᠭᠠᠷᠬᠠᠬᠤ",
+        "latin": "chavdgarhah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаври",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠪᠠᠷᠢ",
+        "latin": "chavri",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠ᠎᠊ᠠ",
+        "latin": "chavh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавхаахай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠᠬᠠᠢ",
+        "latin": "chavhaahai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавхай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠᠢ",
+        "latin": "chavhai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавхайрах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠᠶᠢᠷᠠᠬᠤ",
+        "latin": "chavhairah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавхдас",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠᠳᠠᠰᠤ",
+        "latin": "chavhdas",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавхдаслах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠᠳᠠᠰᠤᠯᠠᠬᠤ",
+        "latin": "chavhdaslah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавхдастай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠᠳᠠᠰᠤᠲᠠᠢ",
+        "latin": "chavhdastai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавхдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠᠳᠠᠬᠤ",
+        "latin": "chavhdah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавхуун",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠᠭᠤᠨ",
+        "latin": "chavhuun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавхуурах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠᠭᠤᠷᠠᠬᠤ",
+        "latin": "chavhuurah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавхууруулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠᠭᠤᠷᠠᠭᠤᠯᠬᠤ",
+        "latin": "chavhuuruulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавхуурхах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠᠭᠤᠷᠬᠠᠬᠤ",
+        "latin": "chavhuurhah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавцах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠴᠠᠬᠤ",
+        "latin": "chavtsah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавчирга",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠠᠷᠭ᠎᠊ᠠ",
+        "latin": "chavchirga",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавчиргадах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠴᠢᠷᠭᠠᠳᠠᠬᠤ",
+        "latin": "chavchirgadah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавчиргадуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠴᠢᠷᠭᠠᠳᠠᠭᠤᠯᠬᠤ",
+        "latin": "chavchirgaduulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чавчиргалах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠴᠢᠷᠭᠠᠯᠠᠬᠤ",
+        "latin": "chavchirgalah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагнаал",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠨᠠᠭᠠᠯ",
+        "latin": "chagnaal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагнаалдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠨᠠᠭᠠᠯᠳᠠᠬᠤ",
+        "latin": "chagnaaldah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагнал",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠨᠠᠯ",
+        "latin": "chagnal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагнах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠨᠠᠬᠤ",
+        "latin": "chagnah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагнуул",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠨᠠᠭᠤᠯ",
+        "latin": "chagnuul",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагнуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠨᠠᠭᠤᠯᠬᠤ",
+        "latin": "chagnuulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагнуулч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠨᠠᠭᠤᠯᠴᠢ",
+        "latin": "chagnuulch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагнуур",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠨᠠᠭᠤᠷ",
+        "latin": "chagnuur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагт",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠲᠠ",
+        "latin": "chagt",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагтайх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠲᠠᠶᠢᠬᠤ",
+        "latin": "chagtaih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагтга",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠲᠠᠭᠠ",
+        "latin": "chagtga",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагтгалах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠲᠠᠭᠠᠯᠠᠬᠤ",
+        "latin": "chagtgalah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагтгалуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠲᠠᠭᠠᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "chagtgaluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагтлагдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠲᠠᠯᠠᠭᠳᠠᠬᠤ",
+        "latin": "chagtlagdah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагтлах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠲᠠᠯᠠᠬᠤ",
+        "latin": "chagtlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагтлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠲᠠᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "chagtluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагтуун",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠲᠠᠭᠤᠨ",
+        "latin": "chagtuun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чагчиг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠭᠴᠢᠭ",
+        "latin": "chagchig",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадагдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠭᠳᠠᠬᠤ",
+        "latin": "chadagdah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадаж",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠵᠤ",
+        "latin": "chadaj",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадал",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠯ",
+        "latin": "chadal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадалжих",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠯᠵᠢᠬᠤ",
+        "latin": "chadaljih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадалжуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠯᠵᠢᠭᠤᠯᠬᠤ",
+        "latin": "chadaljuulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадалтан",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠯᠲᠠᠨ",
+        "latin": "chadaltan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадамгай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠮᠠᠭᠠᠢ",
+        "latin": "chadamgai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадамгайдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠮᠠᠭᠠᠶᠢᠳᠠᠬᠤ",
+        "latin": "chadamgaidah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадамрайрхах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠮᠠᠷᠠᠶᠢᠷᠬᠠᠬᠤ",
+        "latin": "chadamrairhah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадан",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠨ",
+        "latin": "chadan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠬᠤ",
+        "latin": "chadah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадвар",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠪᠤᠷᠢ",
+        "latin": "chadvar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадваржих",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠪᠤᠷᠢᠵᠢᠬᠤ",
+        "latin": "chadvarjih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадваржуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠪᠤᠷᠢᠵᠢᠭᠤᠯᠬᠤ",
+        "latin": "chadvarjuulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадварлаг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠪᠤᠷᠢᠯᠢᠭ",
+        "latin": "chadvarlag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадварлах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠪᠤᠷᠢᠯᠠᠬᠤ",
+        "latin": "chadvarlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаддаг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠳᠠᠭ",
+        "latin": "chaddag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадлархаг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠯᠠᠷᠬᠠᠭ",
+        "latin": "chadlarhag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадлархах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠯᠠᠷᠬᠠᠬᠤ",
+        "latin": "chadlarhah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадлархуу",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠯᠠᠷᠬᠠᠤ",
+        "latin": "chadlarhuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадмаг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠮᠠᠭ",
+        "latin": "chadmag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадмагдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠮᠠᠭᠳᠠᠬᠤ",
+        "latin": "chadmagdah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадна",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠨ᠎ᠠ",
+        "latin": "chadna",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадсан",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠭᠰᠠᠨ",
+        "latin": "chadsan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадуух",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠤᠬᠤ",
+        "latin": "chaduuh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадхагар",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠠᠬᠠᠭᠠᠷ",
+        "latin": "chadhagar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чадхайх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠬᠠᠶᠢᠬᠤ",
+        "latin": "chadhaih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чалбан",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠪᠠᠩ",
+        "latin": "chalban",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чалчаа",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠯᠴᠢᠶ᠎᠊ᠠ",
+        "latin": "chalchaa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чалчаадах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠯᠴᠢᠶᠠᠳᠠᠬᠤ",
+        "latin": "chalchaadah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чалчих",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠯᠴᠢᠬᠤ",
+        "latin": "chalchih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чалчраа",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠯᠴᠢᠷᠠᠭ᠎᠊ᠠ",
+        "latin": "chalchraa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чалчраатах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠯᠴᠢᠷᠠᠭᠠᠲᠤᠬᠤ",
+        "latin": "chalchraatah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чалчрах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠯᠴᠢᠷᠠᠬᠤ",
+        "latin": "chalchrah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чалчруулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠯᠴᠢᠷᠠᠭᠤᠯᠬᠤ",
+        "latin": "chalchruulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чам",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮ᠎᠊ᠠ",
+        "latin": "cham",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чамай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠠᠢ",
+        "latin": "chamai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чамалхай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠠᠯᠠᠬᠠᠢ",
+        "latin": "chamalhai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чамар",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠠᠷ",
+        "latin": "chamar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чамарлах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠠᠷᠯᠠᠬᠤ",
+        "latin": "chamarlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чамарлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠠᠷᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "chamarluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чамархай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠠᠷᠬᠠᠢ",
+        "latin": "chamarhai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чамархах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠠᠷᠬᠠᠬᠤ",
+        "latin": "chamarhah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чамламтгай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠠᠯᠠᠮᠠᠲᠠᠭᠠᠢ",
+        "latin": "chamlamtgai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чамламхай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠠᠯᠠᠮᠠᠬᠠᠢ",
+        "latin": "chamlamhai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чамлах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠠᠯᠠᠬᠤ",
+        "latin": "chamlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чамлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠠᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "chamluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чамхуун",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠠᠬᠤᠨ",
+        "latin": "chamhuun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанагш",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠭᠰᠢ",
+        "latin": "chanagsh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанагшдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠭᠰᠢᠳᠠᠬᠤ",
+        "latin": "chanagshdah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанагшдуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠭᠰᠢᠳᠤᠭᠤᠯᠬᠤ",
+        "latin": "chanagshduulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанагшлах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠭᠰᠢᠯᠠᠬᠤ",
+        "latin": "chanagshlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанагшлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠭᠰᠢᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "chanagshluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаналга",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠯᠭ᠎᠊ᠠ",
+        "latin": "chanalga",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанамал",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠮᠠᠯ",
+        "latin": "chanamal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанар",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠷ",
+        "latin": "chanar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанаржих",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠷᠵᠢᠬᠤ",
+        "latin": "chanarjih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанаржуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠷᠵᠢᠭᠤᠯᠬᠤ",
+        "latin": "chanarjuulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанартай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠷᠲᠠᠢ",
+        "latin": "chanartai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанат",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠲ",
+        "latin": "chanat",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠬᠤ",
+        "latin": "chanah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанга",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭ᠎᠊ᠠ",
+        "latin": "changa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангаалгах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠭᠠᠯᠭᠠᠬᠤ",
+        "latin": "changaalgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангаамал",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠮᠠᠯ",
+        "latin": "changaamal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангаах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠭᠠᠬᠤ",
+        "latin": "changaah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангаацалдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠭᠠᠴᠠᠯᠳᠤᠬᠤ",
+        "latin": "changaatsaldah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангад",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠳᠤ",
+        "latin": "changad",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангадах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠳᠠᠬᠤ",
+        "latin": "changadah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангадуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠳᠠᠭᠤᠯᠬᠤ",
+        "latin": "changaduulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангалаг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠯᠠᠭ",
+        "latin": "changalag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангалах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠯᠠᠬᠤ",
+        "latin": "changalah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангалуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "changaluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангарах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠷᠠᠬᠤ",
+        "latin": "changarah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангаруулагч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠭᠠᠷᠠᠭᠤᠯᠤᠭᠴᠢ",
+        "latin": "changaruulagch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангасах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠰᠬᠤ",
+        "latin": "changasah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангасгах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠰᠬᠠᠬᠤ",
+        "latin": "changasgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангатах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠳᠬᠤ",
+        "latin": "changatah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангатгагч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠳᠬᠠᠭᠴᠢ",
+        "latin": "changatgagch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангатгах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠳᠭᠠᠬᠤ",
+        "latin": "changatgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангахан",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠠᠬᠠᠨ",
+        "latin": "changahan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чангилзуур",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠢᠯᠵᠠᠭᠤᠷ",
+        "latin": "changilzuur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанд",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠳᠠ",
+        "latin": "chand",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чандаа",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠳᠠᠭ᠎᠊ᠠ",
+        "latin": "chandaa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чандага",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠳᠠᠭ᠎᠊ᠠ",
+        "latin": "chandaga",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чандар",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠳᠠᠷ",
+        "latin": "chandar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чандлалцах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠳᠠᠯᠤᠯᠴᠠᠬᠤ",
+        "latin": "chandlaltsah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чандлах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠳᠠᠯᠠᠬᠤ",
+        "latin": "chandlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чандлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠳᠠᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "chandluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чандмань",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠳᠠᠮᠠᠨᠢ",
+        "latin": "chandmani",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чандруу",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠳᠠᠷᠤᠤ",
+        "latin": "chandruu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чандрууших",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠳᠠᠷᠤᠤᠰᠢᠬᠤ",
+        "latin": "chandruushih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанс",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠰᠠ",
+        "latin": "chans",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чансаа",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠰᠠᠭ᠎᠊ᠠ",
+        "latin": "chansaa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чантуу",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠲᠤᠤ",
+        "latin": "chantuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чануулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠭᠤᠯᠬᠤ",
+        "latin": "chanuulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠬ᠎᠊ᠠ",
+        "latin": "chanh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чанхилзуур",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠬᠢᠯᠵᠠᠭᠤᠷ",
+        "latin": "chanhilzuur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠠᠢ",
+        "latin": "charai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарайх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠠᠶᠢᠬᠤ",
+        "latin": "charaih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарам",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠠᠮ᠎᠊ᠠ",
+        "latin": "charam",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарамхан",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠠᠮᠠᠬᠠᠨ",
+        "latin": "charamhan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарамхийх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠷᠮᠠᠬᠢᠬᠤ",
+        "latin": "charamhiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарга",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭ᠎᠊ᠠ",
+        "latin": "charga",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргаг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠭ",
+        "latin": "chargag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргагдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠭᠳᠠᠬᠤ",
+        "latin": "chargagdah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠢ",
+        "latin": "chargai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргалах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠯᠠᠬᠤ",
+        "latin": "chargalah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргалуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "chargaluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргуу",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠭᠤ",
+        "latin": "charguu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргуудах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠭᠤᠳᠠᠬᠤ",
+        "latin": "charguudah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргуудуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠭᠤᠳᠠᠭᠤᠯᠬᠤ",
+        "latin": "charguuduulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠭᠤᠯᠬᠤ",
+        "latin": "charguulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргуулдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠭᠤᠯᠳᠠᠬᠤ",
+        "latin": "charguuldah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргуусах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠭᠤᠰᠬᠤ",
+        "latin": "charguusah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргуусгах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠭᠤᠰᠬᠠᠬᠤ",
+        "latin": "charguusgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргуутах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠭᠤᠳᠬᠤ",
+        "latin": "charguutah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чаргуутгах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠠᠭᠤᠳᠬᠠᠬᠤ",
+        "latin": "charguutgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чардайлгах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠳᠠᠶᠢᠯᠭᠠᠬᠤ",
+        "latin": "chardailgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чардайх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠳᠠᠶᠢᠬᠤ",
+        "latin": "chardaih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чардалзах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠳᠠᠯᠵᠠᠬᠤ",
+        "latin": "chardalzah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чардганах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠳᠠᠭᠠᠨᠠᠬᠤ",
+        "latin": "chardganah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чардгар",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠳᠠᠭᠠᠷ",
+        "latin": "chardgar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарлаа",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠠᠯᠠᠭ᠎᠊ᠠ",
+        "latin": "charlaa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарлаах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠠᠯᠠᠬᠤ",
+        "latin": "charlaah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарламтгай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠠᠯᠠᠮᠠᠲᠠᠭᠠᠢ",
+        "latin": "charlamtgai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарламхай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠠᠯᠠᠮᠠᠬᠠᠢ",
+        "latin": "charlamhai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарлах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠠᠯᠠᠬᠤ",
+        "latin": "charlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠠᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "charluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чармаа",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠠᠮ᠎᠊ᠠ",
+        "latin": "charmaa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чармайлгах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠮᠠᠶᠢᠯᠭᠠᠬᠤ",
+        "latin": "charmailgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чармайлт",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠮᠠᠶᠢᠯᠲᠠ",
+        "latin": "charmailt",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чармайх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠮᠠᠶᠢᠬᠤ",
+        "latin": "charmaih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чармах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠮᠠᠬᠤ",
+        "latin": "charmah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чарцархай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠷᠴᠠᠷᠬᠠᠢ",
+        "latin": "chartsarhai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "час",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠰ",
+        "latin": "chas",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чат",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠲ",
+        "latin": "chat",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чатхагар",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠬᠠᠭᠠᠷ",
+        "latin": "chathagar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чатхайх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠬᠠᠶᠢᠬᠤ",
+        "latin": "chathaih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чахрах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠠᠷᠠᠬᠤ",
+        "latin": "chahrah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чахруулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠠᠷᠠᠭᠤᠯᠬᠤ",
+        "latin": "chahruulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чахруун",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠠᠷᠠᠭᠤᠨ",
+        "latin": "chahruun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чац",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠ",
+        "latin": "chats",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацав",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠪ",
+        "latin": "chatsav",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацавганах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠪᠠᠭᠠᠨᠠᠬᠤ",
+        "latin": "chatsavganah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацавхийх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠪᠬᠢᠬᠤ",
+        "latin": "chatsavhiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацалзах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠯᠵᠠᠬᠤ",
+        "latin": "chatsalzah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацаргана",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠷᠭᠠᠨ᠎᠊ᠠ",
+        "latin": "chatsargana",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацархаг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠷᠬᠠᠭ",
+        "latin": "chatsarhag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацархайлах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠷᠬᠠᠶᠢᠯᠠᠬᠤ",
+        "latin": "chatsarhailah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацархуу",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠷᠬᠠᠤ",
+        "latin": "chatsarhuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацасхийх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠰᠬᠢᠬᠤ",
+        "latin": "chatsashiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацвалзах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠪᠠᠯᠵᠠᠬᠤ",
+        "latin": "chatsvalzah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацга",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠭ᠎᠊ᠠ",
+        "latin": "chatsga",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацганах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠭᠠᠨᠠᠬᠤ",
+        "latin": "chatsganah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацуу",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠤ",
+        "latin": "chatsuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацуудах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠤᠳᠠᠬᠤ",
+        "latin": "chatsuudah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠤᠯᠠᠬᠤ",
+        "latin": "chatsuulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацуулуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠤᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "chatsuuluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацуурах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠤᠷᠠᠬᠤ",
+        "latin": "chatsuurah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацууруулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠤᠷᠠᠭᠤᠯᠬᠤ",
+        "latin": "chatsuuruulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацуурхах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠤᠷᠬᠠᠬᠤ",
+        "latin": "chatsuurhah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацуусах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠤᠰᠬᠤ",
+        "latin": "chatsuusah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чацуусгах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠠᠤᠰᠬᠠᠬᠤ",
+        "latin": "chatsuusgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чек",
+    "candidates": [
+      {
+        "traditional": "ᠴᠧᠺ",
+        "latin": "chyek",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чи",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢ",
+        "latin": "chi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чив",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪ",
+        "latin": "chiv",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠡ",
+        "latin": "chivh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивхдэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠡᠳᠡᠬᠦ",
+        "latin": "chivhdeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивхдүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠡᠳᠡᠭᠦᠯᠬᠦ",
+        "latin": "chivhduuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивхийх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠬᠢᠬᠦ",
+        "latin": "chivhiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивчин",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠴᠢᠨ",
+        "latin": "chivchin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивчүүр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠴᠢᠭᠦᠷ",
+        "latin": "chivchuur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивэгч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠡᠭᠴᠢ",
+        "latin": "chivegch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивэгчит",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠡᠭᠴᠢᠲᠦ",
+        "latin": "chivegchit",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивэл",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠢᠯ",
+        "latin": "chivel",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивэлт",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠢᠯᠲᠦ",
+        "latin": "chivelt",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠡᠬᠦ",
+        "latin": "chiveh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠪᠦᠭᠦᠯᠬᠦ",
+        "latin": "chivuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чивүүр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠪᠪᠦᠭᠦᠷ",
+        "latin": "chivuur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢ",
+        "latin": "chig",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигж",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠵᠢ",
+        "latin": "chigj",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигжих",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠵᠢᠬᠤ",
+        "latin": "chigjih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигжрэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠵᠢᠷᠡᠬᠦ",
+        "latin": "chigjreh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигжрүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠵᠢᠷᠡᠭᠦᠯᠬᠦ",
+        "latin": "chigjruuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигжээс",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠵᠢᠶᠡᠰᠦ",
+        "latin": "chigjees",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигжээслэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠵᠢᠶᠡᠰᠦᠯᠡᠬᠦ",
+        "latin": "chigjeesleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигжээслүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠵᠢᠶᠡᠰᠦᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chigjeesluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигжүү",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠵᠢᠭᠦᠦ",
+        "latin": "chigjuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигжүүдэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠵᠢᠭᠦᠳᠡᠬᠦ",
+        "latin": "chigjuudeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигжүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠵᠢᠭᠦᠯᠬᠦ",
+        "latin": "chigjuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигжүүхэн",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠵᠢᠭᠦᠬᠡᠨ",
+        "latin": "chigjuuhen",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиглэл",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠯᠡᠯ",
+        "latin": "chiglel",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиглэлт",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠯᠡᠯᠲᠡ",
+        "latin": "chiglelt",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиглэрэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠯᠡᠷᠡᠬᠦ",
+        "latin": "chiglereh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиглэрүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠯᠡᠷᠡᠭᠦᠯᠬᠦ",
+        "latin": "chigleruuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиглэсэн",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠯᠡᠭᠰᠡᠨ",
+        "latin": "chiglesen",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиглэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠢᠭᠯᠡᠬᠦ",
+        "latin": "chigleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиглүүлэгч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠯᠡᠭᠦᠯᠦᠭᠴᠢ",
+        "latin": "chigluulegch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиглүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chigluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигнэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠨᠡᠬᠦ",
+        "latin": "chigneh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигнүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠨᠡᠭᠦᠯᠬᠦ",
+        "latin": "chignuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигнүүр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠨᠡᠭᠦᠷ",
+        "latin": "chignuur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠴᠢ",
+        "latin": "chigch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигчий",
+    "candidates": [
+      {
+        "traditional": "ᠰᠢᠭᠡᠵᠡᠢ",
+        "latin": "chigchii",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигчийлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠴᠢᠢᠯᠡᠬᠦ",
+        "latin": "chigchiileh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигчийлүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠴᠢᠢᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chigchiiluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чигчлүүр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠴᠢᠯᠡᠭᠦᠷ",
+        "latin": "chigchluur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чидун",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠤᠨ",
+        "latin": "chidun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чижин",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠵᠢᠩ",
+        "latin": "chijin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чий",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠢ",
+        "latin": "chii",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠭ",
+        "latin": "chiig",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийгдэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠭᠳᠡᠬᠦ",
+        "latin": "chiigdeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийглэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠭᠯᠡᠬᠦ",
+        "latin": "chiigleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийглүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠭᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chiigluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийгтэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠭᠳᠦᠬᠦ",
+        "latin": "chiigteh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийгтүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠭᠲᠦᠭᠦᠯᠬᠦ",
+        "latin": "chiigtuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийгч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠭᠴᠢ",
+        "latin": "chiigch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийдэн",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠧᠩ",
+        "latin": "chiiden",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠷ᠎᠊ᠡ",
+        "latin": "chiir",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийрмэг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠷᠮᠡᠭ",
+        "latin": "chiirmeg",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийрэг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠷᠠᠭ",
+        "latin": "chiireg",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийрэгжих",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠷᠠᠭᠵᠢᠬᠤ",
+        "latin": "chiiregjih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийрэгжүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠷᠠᠭᠵᠢᠭᠤᠯᠬᠦ",
+        "latin": "chiiregjuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийрэгших",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠷᠠᠭᠰᠢᠬᠤ",
+        "latin": "chiiregshih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийрэгшүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠢᠷᠠᠭᠰᠢᠭᠦᠯᠬᠦ",
+        "latin": "chiiregshuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийтүү",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠲᠦᠦ",
+        "latin": "chiituu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чийхрах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠢᠬᠠᠷᠠᠬᠤ",
+        "latin": "chiihrah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилгэр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠭᠡᠷ",
+        "latin": "chilger",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилгэрших",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠭᠡᠷᠰᠢᠬᠦ",
+        "latin": "chilgershih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилгэршүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠭᠡᠷᠰᠢᠭᠦᠯᠬᠦ",
+        "latin": "chilgershuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилгэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠭᠡᠬᠦ",
+        "latin": "chilgeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилгээх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠭᠡᠭᠡᠬᠦ",
+        "latin": "chilgeeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилдгэр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠳᠡᠭᠡᠷ",
+        "latin": "childger",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилдийх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠳᠡᠶᠢᠬᠦ",
+        "latin": "childiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилдэн",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠳᠡᠩ",
+        "latin": "childen",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилийлгэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠢᠢᠯᠭᠡᠬᠦ",
+        "latin": "chiliilgeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилийх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠢᠢᠬᠦ",
+        "latin": "chiliih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠡᠬᠦ",
+        "latin": "chileh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилээ",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠡᠭᠡ",
+        "latin": "chilee",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилээрхэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠡᠭᠡᠷᠬᠡᠬᠦ",
+        "latin": "chileerheh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилээрэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠡᠭᠡᠷᠡᠬᠦ",
+        "latin": "chileereh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилээх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠡᠭᠡᠬᠦ",
+        "latin": "chileeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чилүүр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠡᠭᠦᠷ",
+        "latin": "chiluur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢ",
+        "latin": "chimh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхийлгэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢᠢᠯᠭᠡᠬᠦ",
+        "latin": "chimhiilgeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхийх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢᠢᠬᠦ",
+        "latin": "chimhiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхлэгдэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢᠯᠡᠭᠳᠡᠬᠦ",
+        "latin": "chimhlegdeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢᠯᠡᠬᠦ",
+        "latin": "chimhleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхлүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chimhluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхлүүр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢᠯᠡᠭᠦᠷ",
+        "latin": "chimhluur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхэлхийлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢᠯᠬᠢᠯᠡᠬᠦ",
+        "latin": "chimhelhiileh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхэр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢᠷ",
+        "latin": "chimher",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхэрлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠡᠷᠯᠡᠬᠦ",
+        "latin": "chimherleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхэрлүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠡᠷᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chimherluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢᠬᠦ",
+        "latin": "chimheh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхээрлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠡᠷᠢᠯᠡᠬᠦ",
+        "latin": "chimheerleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхээрлүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠡᠷᠢᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chimheerluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢᠭᠦᠯᠬᠦ",
+        "latin": "chimhuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхүүн",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢᠭᠦᠨ",
+        "latin": "chimhuun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимхүүр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠬᠢᠭᠦᠷ",
+        "latin": "chimhuur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимчигнэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠴᠢᠩᠨᠡᠬᠦ",
+        "latin": "chimchigneh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимчигнүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠴᠢᠭᠢᠨᠡᠭᠦᠯᠬᠦ",
+        "latin": "chimchignuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимэг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠭ",
+        "latin": "chimeg",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимэгдэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠭᠳᠡᠬᠦ",
+        "latin": "chimegdeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимэглэл",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠭᠯᠡᠯ",
+        "latin": "chimeglel",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимэглэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠭᠯᠡᠬᠦ",
+        "latin": "chimegleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимэглүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠭᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chimegluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимэгт",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠭᠲᠦ",
+        "latin": "chimegt",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимэгч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠭᠴᠢ",
+        "latin": "chimegch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимэрхэг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠷᠬᠡᠭ",
+        "latin": "chimerheg",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠬᠦ",
+        "latin": "chimeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимээ",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠭᠡ",
+        "latin": "chimee",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимээлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠭᠡᠯᠡᠬᠦ",
+        "latin": "chimeeleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимээлүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠭᠡᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chimeeluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чимүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠡᠭᠦᠯᠬᠦ",
+        "latin": "chimuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чин",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨ",
+        "latin": "chin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чингэлэг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠡᠯᠢᠭ",
+        "latin": "chingeleg",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чингэнэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠢᠨᠡᠬᠦ",
+        "latin": "chingeneh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чингэнүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠢᠨᠡᠭᠦᠯᠬᠦ",
+        "latin": "chingenuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чингэр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠭᠢᠷ",
+        "latin": "chinger",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинжал",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠵᠠᠯ",
+        "latin": "chinjal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинжалдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠵᠠᠯᠳᠤᠬᠤ",
+        "latin": "chinjaldah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинжүү",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠵᠦᠦ",
+        "latin": "chinjuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиний",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠤ",
+        "latin": "chinii",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинийх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠤᠬᠢ",
+        "latin": "chiniih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинхэр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠩᠬᠢᠷ",
+        "latin": "chinher",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинэг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠡᠭ",
+        "latin": "chineg",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинэрэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠦᠷᠡᠬᠦ",
+        "latin": "chinereh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинэрүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠦᠷᠡᠭᠦᠯᠬᠦ",
+        "latin": "chineruuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠬᠦ",
+        "latin": "chineh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинээжих",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠡᠭᠡᠵᠢᠬᠦ",
+        "latin": "chineejih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинээжүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠡᠭᠡᠵᠢᠭᠦᠯᠬᠦ",
+        "latin": "chineejuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинээлэг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠡᠭᠡᠯᠢᠭ",
+        "latin": "chineeleg",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинээрхлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠡᠭᠡᠷᠬᠡᠯᠡᠬᠦ",
+        "latin": "chineerhleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинээрхэг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠡᠭᠡᠷᠬᠡᠭ",
+        "latin": "chineerheg",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинээрхүү",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠡᠭᠡᠷᠬᠡᠦ",
+        "latin": "chineerhuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинээрхүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠡᠭᠡᠷᠬᠡᠭᠦᠯᠬᠦ",
+        "latin": "chineerhuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чинээх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠦᠭᠡᠬᠦ",
+        "latin": "chineeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиргүүл",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠡᠦᠯ",
+        "latin": "chirguul",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиргүүлдэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠡᠦᠯᠳᠡᠬᠦ",
+        "latin": "chirguuldeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чиргүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠡᠦᠯᠬᠦ",
+        "latin": "chirguuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чирхрэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠬᠢᠷᠡᠬᠦ",
+        "latin": "chirhreh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чирэгдэл",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠦᠭᠳᠡᠯ",
+        "latin": "chiregdel",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чирэгдэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠭᠳᠡᠬᠦ",
+        "latin": "chiregdeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чирэгдүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠦᠭᠳᠡᠭᠦᠯᠬᠦ",
+        "latin": "chiregduuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чирэгч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠦᠭᠴᠢ",
+        "latin": "chiregch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чирэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠦᠬᠦ",
+        "latin": "chireh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чирүүл",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠦᠭᠦᠯ",
+        "latin": "chiruul",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чирүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠷᠢᠭᠦᠯᠬᠦ",
+        "latin": "chiruuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чисчүү",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠰᠴᠡᠦ",
+        "latin": "chischuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чих",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢ",
+        "latin": "chih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихдэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠳᠡᠬᠦ",
+        "latin": "chihdeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихдүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠳᠡᠭᠦᠯᠬᠦ",
+        "latin": "chihduuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠯᠡᠬᠦ",
+        "latin": "chihleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихлүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chihluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихмай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠮᠠᠢ",
+        "latin": "chihmai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихрэг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠷᠡᠭ",
+        "latin": "chihreg",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихрэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠷᠬᠦ",
+        "latin": "chihreh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихт",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠲᠦ",
+        "latin": "chiht",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихцэлдэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠴᠡᠯᠳᠦᠬᠦ",
+        "latin": "chihtseldeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихцэлдүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠴᠡᠯᠳᠦᠭᠦᠯᠬᠦ",
+        "latin": "chihtselduuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихцэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠴᠡᠬᠦ",
+        "latin": "chihtseh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэвч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠪᠴᠢ",
+        "latin": "chihevch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэгдэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠭᠳᠡᠬᠦ",
+        "latin": "chihegdeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэл",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠯ",
+        "latin": "chihel",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэлдэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠯᠳᠦᠬᠦ",
+        "latin": "chiheldeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэлдүүр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠯᠳᠦᠭᠦᠷ",
+        "latin": "chihelduur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэлт",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠯᠲᠡ",
+        "latin": "chihelt",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэлцэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠯᠴᠡᠬᠦ",
+        "latin": "chiheltseh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэр",
+    "candidates": [
+      {
+        "traditional": "ᠰᠢᠬᠢᠷ",
+        "latin": "chiher",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэрлэх",
+    "candidates": [
+      {
+        "traditional": "ᠰᠢᠬᠢᠷᠯᠡᠬᠦ",
+        "latin": "chiherleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэрлүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠰᠢᠬᠢᠷᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chiherluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэрхэг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠷᠬᠡᠭ",
+        "latin": "chiherheg",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэрхүү",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠷᠬᠡᠦ",
+        "latin": "chiherhuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠬᠦ",
+        "latin": "chiheh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠭᠦᠯᠬᠦ",
+        "latin": "chihuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихүүр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠢᠭᠦᠷ",
+        "latin": "chihuur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичигдэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠢᠭᠳᠡᠬᠦ",
+        "latin": "chichigdeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичигнэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠢᠭᠢᠨᠡᠬᠦ",
+        "latin": "chichigneh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичигнүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠢᠭᠢᠨᠡᠭᠦᠯᠬᠦ",
+        "latin": "chichignuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичирхийлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠡᠴᠡᠷᠬᠢᠯᠡᠬᠦ",
+        "latin": "chichirhiileh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичирхлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠡᠴᠡᠷᠬᠡᠯᠬᠦ",
+        "latin": "chichirhleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичих",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠢᠬᠦ",
+        "latin": "chichih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠢᠯᠡᠬᠦ",
+        "latin": "chichleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичлүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠢᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chichluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичрэглэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠡᠴᠡᠷᠡᠭᠯᠡᠬᠦ",
+        "latin": "chichregleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичрэл",
+    "candidates": [
+      {
+        "traditional": "ᠴᠡᠴᠡᠷᠡᠯ",
+        "latin": "chichrel",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичрэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠡᠴᠡᠷᠡᠬᠦ",
+        "latin": "chichreh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичрүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠡᠴᠡᠷᠡᠭᠦᠯᠬᠦ",
+        "latin": "chichruuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичээс",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠢᠭᠡᠰᠦ",
+        "latin": "chichees",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичээслэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠢᠭᠡᠰᠦᠯᠡᠬᠦ",
+        "latin": "chicheesleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичүү",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠡᠦ",
+        "latin": "chichuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠢᠭᠦᠯᠬᠦ",
+        "latin": "chichuuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чичүүр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠴᠢᠭᠦᠷ",
+        "latin": "chichuur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чка",
+    "candidates": [
+      {
+        "traditional": "ᠴᠺᠠ",
+        "latin": "chka",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чогчгор",
+    "candidates": [
+      {
+        "traditional": "ᠴᠣᠭᠴᠣᠭᠣᠷ",
+        "latin": "chogchgor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чогчойх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠣᠭᠴᠣᠶᠢᠬᠤ",
+        "latin": "chogchoih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чойчгор",
+    "candidates": [
+      {
+        "traditional": "ᠴᠣᠶᠢᠴᠣᠭᠣᠷ",
+        "latin": "choichgor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чойчийх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠣᠶᠢᠴᠢᠢᠬᠤ",
+        "latin": "choichiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чоно",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠣ᠎᠊ᠠ",
+        "latin": "chono",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чоногоно",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠤᠭᠠᠨ᠎᠊ᠠ",
+        "latin": "chonogono",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чономбар",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠤᠮᠪᠠᠷ",
+        "latin": "chonombar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чононцор",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠤᠨᠴᠢᠷ",
+        "latin": "chonontsor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чохой",
+    "candidates": [
+      {
+        "traditional": "ᠴᠣᠬᠣᠢ",
+        "latin": "chohoi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чохойдох",
+    "candidates": [
+      {
+        "traditional": "ᠴᠣᠬᠠᠶᠢᠳᠠᠬᠤ",
+        "latin": "chohoidoh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чохойдуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠣᠬᠠᠶᠢᠳᠠᠭᠤᠯᠬᠤ",
+        "latin": "chohoiduulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чугуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠭᠤᠭᠤᠯᠬᠤ",
+        "latin": "chuguulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуу",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤ",
+        "latin": "chuluu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуудах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠳᠠᠬᠤ",
+        "latin": "chuluudah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуудуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠳᠠᠭᠤᠯᠬᠤ",
+        "latin": "chuluuduulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуужих",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠵᠢᠬᠤ",
+        "latin": "chuluujih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуужуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠵᠢᠭᠤᠯᠬᠤ",
+        "latin": "chuluujuulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуулаг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠯᠢᠭ",
+        "latin": "chuluulag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуун",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠨ",
+        "latin": "chuluun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуунбаатар",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠨᠪᠠᠭᠠᠲᠤᠷ",
+        "latin": "chuluunbaatar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуурах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠷᠠᠬᠤ",
+        "latin": "chuluurah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуурхаг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠷᠬᠠᠭ",
+        "latin": "chuluurhag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуурхуу",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠷᠬᠠᠤ",
+        "latin": "chuluurhuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуут",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠲᠤ",
+        "latin": "chuluut",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулуутай",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠲᠠᠢ",
+        "latin": "chuluutai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулууч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠤᠤᠴᠢ",
+        "latin": "chuluuch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чулууших",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠠᠭᠤᠰᠢᠬᠤ",
+        "latin": "chuluushih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чун",
+    "candidates": [
+      {
+        "traditional": "ᠴᠤᠩ",
+        "latin": "chun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чуу",
+    "candidates": [
+      {
+        "traditional": "ᠴᠤᠤ",
+        "latin": "chuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чуулал",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠤᠯᠤᠯ",
+        "latin": "chuulal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠤᠯᠬᠤ",
+        "latin": "chuulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чуулган",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠭᠤᠯᠭᠠᠨ",
+        "latin": "chuulgan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чуулуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠭᠤᠯᠤᠭᠤᠯᠬᠤ",
+        "latin": "chuuluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чухаг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠤᠬᠠᠭ",
+        "latin": "chuhag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чухагдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠤᠬᠠᠭᠳᠠᠬᠤ",
+        "latin": "chuhagdah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чухагчлах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠤᠬᠠᠭᠴᠢᠯᠠᠬᠤ",
+        "latin": "chuhagchlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чухал",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠤᠯᠠ",
+        "latin": "chuhal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чухалчлагдах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠤᠯᠠᠴᠢᠯᠠᠭᠳᠠᠬᠤ",
+        "latin": "chuhalchlagdah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чухалчлах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠤᠯᠠᠴᠢᠯᠠᠬᠤ",
+        "latin": "chuhalchlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чухалчлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠬᠤᠯᠠᠴᠢᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "chuhalchluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чухам",
+    "candidates": [
+      {
+        "traditional": "ᠴᠤᠬᠤᠮ",
+        "latin": "chuham",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чухамлах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠤᠬᠤᠮᠯᠠᠬᠤ",
+        "latin": "chuhamlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чухамлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠴᠤᠬᠤᠮᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "chuhamluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чээг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠡᠭᠡᠭ",
+        "latin": "cheeg",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чээглэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠡᠭᠡᠭᠯᠡᠬᠦ",
+        "latin": "cheegleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чяс",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠰ",
+        "latin": "chyas",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чүдэнз",
+    "candidates": [
+      {
+        "traditional": "ᠴᠦᠢᠳᠡᠩ",
+        "latin": "chudenz",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чүчээ",
+    "candidates": [
+      {
+        "traditional": "ᠴᠦᠴᠡᠭᠡ",
+        "latin": "chuchee",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чүү",
+    "candidates": [
+      {
+        "traditional": "ᠴᠦᠦ",
+        "latin": "chuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөдөр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠦᠷ",
+        "latin": "chudur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөдөрлүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠦᠷᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chudurluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөдөрлөгдөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠦᠷᠯᠡᠭᠳᠡᠬᠦ",
+        "latin": "chudurlugduh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөдөрлөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠦᠷᠯᠡᠬᠦ",
+        "latin": "chudurluh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөлөө",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠦᠭᠡ",
+        "latin": "chuluu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөлөөлж",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠦᠭᠡᠯᠡᠵᠦ",
+        "latin": "chuluulj",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөлөөлүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠦᠭᠡᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chuluuluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөлөөлөгдсөн",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠦᠭᠡᠯᠡᠭᠳᠡᠭᠰᠡᠨ",
+        "latin": "chuluulugdsun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөлөөлөгдөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠦᠭᠡᠯᠡᠭᠳᠡᠬᠦ",
+        "latin": "chuluulugduh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөлөөлөгч",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠦᠭᠡᠯᠡᠭᠴᠢ",
+        "latin": "chuluulugch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөлөөлөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠦᠭᠡᠯᠡᠬᠦ",
+        "latin": "chuluuluh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөлөөт",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠦᠭᠡᠲᠦ",
+        "latin": "chuluut",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөлөөтэй",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠯᠦᠭᠡᠲᠡᠢ",
+        "latin": "chuluutei",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөлөөчлөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠦᠯᠦᠭᠡᠴᠢᠯᠡᠬᠦ",
+        "latin": "chuluuchluh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөмөг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠦᠭᠡ",
+        "latin": "chumug",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөмөглүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠦᠭᠡᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chumugluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөмөглөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠦᠭᠡᠯᠡᠬᠦ",
+        "latin": "chumugluh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөмөгчлүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠦᠭᠡᠴᠢᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "chumugchluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөмөгчлөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠮᠦᠭᠡᠴᠢᠯᠡᠬᠦ",
+        "latin": "chumugchluh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөргөр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠥᠷᠦᠭᠡᠷ",
+        "latin": "churgur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөрийлгөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠥᠷᠦᠶᠢᠯᠭᠡᠬᠦ",
+        "latin": "churiilguh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөрийх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠥᠷᠦᠶᠢᠬᠦ",
+        "latin": "churiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөрөгнөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠥᠷᠥᠭᠡᠨᠡᠬᠦ",
+        "latin": "churugnuh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөрөлзөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠥᠷᠦᠯᠵᠡᠬᠦ",
+        "latin": "churulzuh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөтгөр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠳᠬᠥᠷ",
+        "latin": "chutgur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠥᠬᠦ",
+        "latin": "chuh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөчгөр",
+    "candidates": [
+      {
+        "traditional": "ᠴᠥᠴᠢᠭᠡᠷ",
+        "latin": "chuchgur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөчигнөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠡᠴᠢᠩᠨᠡᠬᠦ",
+        "latin": "chuchignuh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөчийлгөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠥᠴᠢᠢᠯᠭᠡᠬᠦ",
+        "latin": "chuchiilguh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөчийх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠥᠴᠢᠢᠬᠦ",
+        "latin": "chuchiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөчилзөх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠥᠴᠢᠯᠵᠡᠬᠦ",
+        "latin": "chuchilzuh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөчих",
+    "candidates": [
+      {
+        "traditional": "ᠴᠦᠴᠢᠬᠦ",
+        "latin": "chuchih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "чөчүү",
+    "candidates": [
+      {
+        "traditional": "ᠴᠥᠴᠢᠭᠦᠦ",
+        "latin": "chuchuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  }
+]

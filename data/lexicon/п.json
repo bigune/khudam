@@ -1,0 +1,1949 @@
+[
+  {
+    "cyrillic": "п",
+    "candidates": [
+      {
+        "traditional": "ᠫ",
+        "latin": "p",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "паа",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠ",
+        "latin": "paa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "паадайлгах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠠᠳᠠᠶᠢᠯᠭᠠᠬᠤ",
+        "latin": "paadailgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "паадайх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠠᠳᠠᠶᠢᠬᠤ",
+        "latin": "paadaih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "паадалзах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠠᠳᠠᠯᠵᠠᠬᠤ",
+        "latin": "paadalzah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "паадганах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠠᠳᠠᠭᠠᠨᠠᠬᠤ",
+        "latin": "paadganah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "паадгар",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠠᠳᠠᠭᠠᠷ",
+        "latin": "paadgar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "паалан",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠠᠨ",
+        "latin": "paalan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пааландах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠠᠳᠠᠬᠤ",
+        "latin": "paalandah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пааландуулах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠠᠩᠳᠠᠭᠤᠯᠬᠤ",
+        "latin": "paalanduulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пааланших",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠠᠩᠰᠢᠬᠤ",
+        "latin": "paalanshih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "паах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠬ᠎᠊ᠠ",
+        "latin": "paah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "павильон",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠸᠢᠯᠢᠶᠣᠨ",
+        "latin": "pavilion",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "паг",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭ",
+        "latin": "pag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пагдайлгах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠳᠠᠶᠢᠯᠭᠠᠬᠤ",
+        "latin": "pagdailgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пагдайх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠳᠠᠶᠢᠬᠤ",
+        "latin": "pagdaih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пагдалзах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠳᠠᠯᠵᠠᠬᠤ",
+        "latin": "pagdalzah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пагдганах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠳᠠᠭᠠᠨᠠᠬᠤ",
+        "latin": "pagdganah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пагдгар",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠳᠠᠭᠠᠷ",
+        "latin": "pagdgar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пагдгардах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠳᠠᠭᠠᠷᠳᠠᠬᠤ",
+        "latin": "pagdgardah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пагс",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠰᠠ",
+        "latin": "pags",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пагсдах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠭᠰᠠᠳᠠᠬᠤ",
+        "latin": "pagsdah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пад",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠳ",
+        "latin": "pad",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "падаан",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠳᠠᠩ",
+        "latin": "padaan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "падан",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠳᠠᠨ",
+        "latin": "padan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "падхийх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠳᠬᠢᠬᠤ",
+        "latin": "padhiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пай",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠢ",
+        "latin": "pai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пайз",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠶᠢᠵᠠ",
+        "latin": "paiz",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пайзлагдах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠶᠢᠵᠠᠯᠠᠭᠳᠠᠬᠤ",
+        "latin": "paizlagdah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пайзлах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠶᠢᠵᠠᠯᠠᠬᠤ",
+        "latin": "paizlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пайзлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠶᠢᠵᠠᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "paizluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пал",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯ",
+        "latin": "pal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "палан",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠠᠩ",
+        "latin": "palan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "паланцаг",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠠᠩᠴᠣᠭ",
+        "latin": "palantsag",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "палеонтологи",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠧᠣᠨᠲ᠋ᠣᠯᠣᠭᠢ",
+        "latin": "palyeontologi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "палеонтологич",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠧᠣᠨᠲ᠋ᠣᠯᠣᠭᠢᠴᠢ",
+        "latin": "palyeontologich",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "палхайлгах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠬᠠᠶᠢᠯᠭᠠᠬᠤ",
+        "latin": "palhailgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "палхайх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠬᠠᠶᠢᠬᠤ",
+        "latin": "palhaih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "палхалзах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠬᠠᠯᠵᠠᠬᠤ",
+        "latin": "palhalzah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "палхалзуулах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠬᠠᠯᠵᠠᠭᠤᠯᠬᠤ",
+        "latin": "palhalzuulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "палхганах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠬᠠᠭᠠᠨᠠᠬᠤ",
+        "latin": "palhganah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "палхгануулах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠬᠠᠭᠠᠨᠠᠭᠤᠯᠬᠤ",
+        "latin": "palhganuulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "палхгар",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠬᠠᠭᠠᠷ",
+        "latin": "palhgar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "палхийх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠬᠢᠬᠤ",
+        "latin": "palhiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пальто",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠯᠢᠲ᠋ᠣ᠋",
+        "latin": "palito",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "памбаганах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠮᠪᠠᠭᠠᠨᠠᠬᠤ",
+        "latin": "pambaganah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "памбагар",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠮᠪᠠᠭᠠᠷ",
+        "latin": "pambagar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "памбагардах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠮᠪᠠᠭᠠᠷᠳᠠᠬᠤ",
+        "latin": "pambagardah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "памбагардуулах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠮᠪᠠᠭᠠᠷᠳᠠᠭᠤᠯᠬᠤ",
+        "latin": "pambagarduulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "памбайлгах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠮᠪᠠᠶᠢᠯᠭᠠᠬᠤ",
+        "latin": "pambailgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "памбайх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠮᠪᠠᠶᠢᠬᠤ",
+        "latin": "pambaih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "памбалзах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠮᠪᠠᠯᠵᠠᠬᠤ",
+        "latin": "pambalzah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пан",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠩ",
+        "latin": "pan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пандайлгах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠨᠳᠠᠶᠢᠯᠭᠠᠬᠤ",
+        "latin": "pandailgah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пандайх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠨᠳᠠᠶᠢᠬᠤ",
+        "latin": "pandaih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пандалзах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠨᠳᠠᠯᠵᠠᠬᠤ",
+        "latin": "pandalzah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пандганах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠨᠳᠠᠭᠠᠨᠠᠬᠤ",
+        "latin": "pandganah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пандгар",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠨᠳᠠᠭᠠᠷ",
+        "latin": "pandgar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "панз",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠨᠵᠠ",
+        "latin": "panz",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "панзлах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠨᠽᠠᠯᠠᠬᠤ",
+        "latin": "panzlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "панзчин",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠨᠽᠠᠴᠢᠨ",
+        "latin": "panzchin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "папирос",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠫᠢᠷᠣᠰ",
+        "latin": "papiros",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "папуа",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠫᠦᠠ",
+        "latin": "papua",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "параллел",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠷᠠᠯᠧᠯ",
+        "latin": "parallyel",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "парашют",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠷᠠᠱᠶᠤᠶᠢᠲ",
+        "latin": "parashyut",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "парашютат",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠷᠠᠰᠢᠶᠦ᠋ᠲ᠋ᠠᠲ",
+        "latin": "parashyutat",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "парк",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠷᠺ",
+        "latin": "park",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "парламент",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠷᠯᠠᠮᠧᠨᠲ",
+        "latin": "parlamyent",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "партизан",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠷᠲ᠋ᠢᠽᠠᠨ",
+        "latin": "partizan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пас",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠰ",
+        "latin": "pas",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "паспорт",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠰᠫᠣᠷᠲ",
+        "latin": "pasport",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пассив",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠰᠰᠢᠪ",
+        "latin": "passiv",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "патриотизм",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠲᠷᠶᠣᠲ᠋ᠢᠰᠮ",
+        "latin": "patriotizm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠬᠤ",
+        "latin": "pah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пелес",
+    "candidates": [
+      {
+        "traditional": "ᠫᠧᠯᠧᠰ",
+        "latin": "pyelyes",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пендуан",
+    "candidates": [
+      {
+        "traditional": "ᠫᠧᠩᠳᠦ᠋ᠸᠠᠨ",
+        "latin": "pyenduan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "перпендикуляр",
+    "candidates": [
+      {
+        "traditional": "ᠫᠧᠷᠫᠡᠨᠳᠢᠺᠦᠶᠢᠯᠢᠶᠠᠷ",
+        "latin": "pyerpyendikulyar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пив",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠸ",
+        "latin": "piv",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пиг",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠭ",
+        "latin": "pig",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пижигнэх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠵᠢᠩᠨᠡᠬᠦ",
+        "latin": "pijigneh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пийпаа",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠫᠠ",
+        "latin": "piipaa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пийшин",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠰᠢᠩ",
+        "latin": "piishin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пилатис",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠯᠠᠲ᠋ᠢᠰ",
+        "latin": "pilatis",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пин",
+    "candidates": [
+      {
+        "traditional": "ᠫᠧᠩ",
+        "latin": "pin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пинс",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠩᠰᠡ",
+        "latin": "pins",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пинслэх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠩᠰᠡᠯᠡᠬᠦ",
+        "latin": "pinsleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пинтүү",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠨᠲ᠋ᠧᠦ",
+        "latin": "pintuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пионер",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠣᠨᠧᠷ",
+        "latin": "pionyer",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пиржигнэх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠷᠵᠢᠭᠢᠨᠡᠬᠦ",
+        "latin": "pirjigneh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пирэн",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠷᠡᠩ",
+        "latin": "piren",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пис",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠰ",
+        "latin": "pis",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пиу",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠶᠣᠤ",
+        "latin": "piu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "плакат",
+    "candidates": [
+      {
+        "traditional": "ᠫᠯᠠᠺᠠᠲ",
+        "latin": "plakat",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "платформ",
+    "candidates": [
+      {
+        "traditional": "ᠫᠯᠠᠲ᠋ᠹᠣᠷᠮ",
+        "latin": "platform",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "поваарь",
+    "candidates": [
+      {
+        "traditional": "ᠫᠣᠸᠠᠷᠢ",
+        "latin": "povaari",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "подань",
+    "candidates": [
+      {
+        "traditional": "ᠫᠣᠳᠠᠨᠢ",
+        "latin": "podani",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пожур",
+    "candidates": [
+      {
+        "traditional": "ᠫᠣᠵᠤᠷ",
+        "latin": "pojur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пол",
+    "candidates": [
+      {
+        "traditional": "ᠫᠣᠯ",
+        "latin": "pol",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "полосаа",
+    "candidates": [
+      {
+        "traditional": "ᠫᠣᠯᠣᠰᠠ",
+        "latin": "polosaa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "помбогонох",
+    "candidates": [
+      {
+        "traditional": "ᠫᠣᠮᠪᠣᠭᠣᠨᠠᠬᠤ",
+        "latin": "pombogonoh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "помбогор",
+    "candidates": [
+      {
+        "traditional": "ᠫᠣᠮᠪᠣᠭᠣᠷ",
+        "latin": "pombogor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "помбойлгох",
+    "candidates": [
+      {
+        "traditional": "ᠫᠣᠮᠪᠣᠶᠢᠯᠭᠠᠬᠤ",
+        "latin": "pomboilgoh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "помбойх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠣᠮᠪᠣᠶᠢᠬᠤ",
+        "latin": "pomboih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "поолуу",
+    "candidates": [
+      {
+        "traditional": "ᠫᠣᠣᠯᠤᠤ",
+        "latin": "pooluu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пооч",
+    "candidates": [
+      {
+        "traditional": "ᠫᠤᠭᠠᠴᠢ",
+        "latin": "pooch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "порчигнох",
+    "candidates": [
+      {
+        "traditional": "ᠫᠣᠷᠴᠢᠭᠢᠨᠠᠬᠤ",
+        "latin": "porchignoh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пос",
+    "candidates": [
+      {
+        "traditional": "ᠫᠣᠰ",
+        "latin": "pos",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "прага",
+    "candidates": [
+      {
+        "traditional": "ᠫᠠᠷᠭ᠎ᠠ",
+        "latin": "praga",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "практик",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠠᠺᠲ᠋ᠢᠭ",
+        "latin": "praktik",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "програм",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠣᠭᠷᠠᠮ",
+        "latin": "program",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "программ",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠣᠭᠷᠠᠮ",
+        "latin": "programm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "прокурор",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠣᠺᠤᠶᠢᠷᠣᠷ",
+        "latin": "prokuror",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пролетари",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠣᠯᠧᠲ᠋ᠠᠷᠢ",
+        "latin": "prolyetari",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пролетарижих",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠣᠯᠧᠲ᠋ᠠᠷᠢᠵᠢᠬᠤ",
+        "latin": "prolyetarijih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пролетариших",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠣᠯᠧᠲ᠋ᠠᠷᠢᠰᠢᠬᠦ",
+        "latin": "prolyetarishih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пропорци",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠣᠫᠤᠷᠼᠢ",
+        "latin": "proportsi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пропуск",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠣᠫᠤᠶᠢᠰᠺ",
+        "latin": "propusk",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "протокол",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠣᠲ᠋ᠣᠺᠣᠯ",
+        "latin": "protokol",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "протоплазм",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠣᠲ᠋ᠣᠫᠯᠠᠽᠮ",
+        "latin": "protoplazm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "профессор",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠣᠹᠧᠰᠰᠣᠷ",
+        "latin": "profyessor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "процент",
+    "candidates": [
+      {
+        "traditional": "ᠫᠷᠣᠼᠧᠨᠲ",
+        "latin": "protsyent",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пуй",
+    "candidates": [
+      {
+        "traditional": "ᠫᠤᠢ",
+        "latin": "pui",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пул",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠯ",
+        "latin": "pul",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пулемёт",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠯᠧᠮᠶᠣᠲ",
+        "latin": "pulyemyot",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пун",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠨ",
+        "latin": "pun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пур",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠷ",
+        "latin": "pur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пурхийх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠷᠬᠢᠬᠦ",
+        "latin": "purhiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пурчигнах",
+    "candidates": [
+      {
+        "traditional": "ᠫᠤᠷᠴᠢᠭᠢᠨᠠᠬᠤ",
+        "latin": "purchignah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пуужин",
+    "candidates": [
+      {
+        "traditional": "ᠫᠤᠤᠵᠢᠩ",
+        "latin": "puujin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пуулуу",
+    "candidates": [
+      {
+        "traditional": "ᠫᠤᠤᠯᠤ",
+        "latin": "puuluu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пфүү",
+    "candidates": [
+      {
+        "traditional": "ᠫᠹᠦ",
+        "latin": "pfuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэй",
+    "candidates": [
+      {
+        "traditional": "ᠫᠡᠢ",
+        "latin": "pei",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэйж",
+    "candidates": [
+      {
+        "traditional": "ᠫᠡᠢᠵ",
+        "latin": "peij",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэлийх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠡᠯᠡᠶᠢᠬᠦ",
+        "latin": "peliih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэмбийх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠡᠮᠪᠡᠶᠢᠬᠦ",
+        "latin": "pembiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэмбэгнэх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠡᠮᠪᠡᠭᠡᠨᠡᠬᠦ",
+        "latin": "pembegneh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэмбэгэр",
+    "candidates": [
+      {
+        "traditional": "ᠫᠡᠮᠪᠡᠭᠡᠷ",
+        "latin": "pembeger",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэмбэлзэх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠡᠮᠪᠡᠯᠵᠡᠬᠦ",
+        "latin": "pembelzeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэндгэр",
+    "candidates": [
+      {
+        "traditional": "ᠫᠡᠨᠳᠡᠭᠡᠷ",
+        "latin": "pendger",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэндийх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠨᠳᠡᠶᠢᠬᠦ",
+        "latin": "pendiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэндэгнэх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠡᠨᠳᠡᠩᠨᠡᠬᠦ",
+        "latin": "pendegneh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэндэлзэх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠡᠨᠳᠡᠯᠵᠡᠬᠦ",
+        "latin": "pendelzeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэнс",
+    "candidates": [
+      {
+        "traditional": "ᠫᠡᠩᠰᠡ",
+        "latin": "pens",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пэнсэлдэй",
+    "candidates": [
+      {
+        "traditional": "ᠫᠧᠩᠰᠡᠯᠳᠡᠢ",
+        "latin": "penseldei",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пээ",
+    "candidates": [
+      {
+        "traditional": "ᠫᠡ",
+        "latin": "pee",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пял",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠯᠠ",
+        "latin": "pyal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пялайх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠯᠠᠶᠢᠬᠤ",
+        "latin": "pyalaih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пянз",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠨᠽᠠ",
+        "latin": "pyanz",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пяс",
+    "candidates": [
+      {
+        "traditional": "ᠫᠢᠰ",
+        "latin": "pyas",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүвин",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠪᠢᠨ",
+        "latin": "puvin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүд",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠳ᠋",
+        "latin": "pud",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүйпай",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠢᠫᠠᠢ",
+        "latin": "puipai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүл",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠯ",
+        "latin": "pul",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүлхийх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠯᠬᠢᠬᠦ",
+        "latin": "pulhiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүн",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠨ",
+        "latin": "pun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүнз",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠨᠵᠡ",
+        "latin": "punz",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүнлүү",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠩᠯᠦᠦ",
+        "latin": "punluu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүнхгэр",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠩᠬᠦᠭᠡᠷ",
+        "latin": "punhger",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүнхийх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠩᠬᠢᠬᠦ",
+        "latin": "punhiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүрдхийх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠷᠳ᠋ᠬᠢᠬᠦ",
+        "latin": "purdhiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүрш",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠷᠱᠢ",
+        "latin": "pursh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүрштэй",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠷᠱᠢᠲᠡᠢ",
+        "latin": "purshtei",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүрэв",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠷᠪᠦ",
+        "latin": "purev",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүрэвдаш",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠷᠪᠦᠳᠠᠰᠢ",
+        "latin": "purevdash",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүү",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦ",
+        "latin": "puu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүүз",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠦᠵᠡ",
+        "latin": "puuz",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠦᠯᠡᠬᠦ",
+        "latin": "puuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүүс",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠰᠡ",
+        "latin": "puus",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүүсгэр",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠦᠰᠬᠡᠷ",
+        "latin": "puusger",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүүсийх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠦᠰᠡᠶᠢᠬᠦ",
+        "latin": "puusiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пүүсүү",
+    "candidates": [
+      {
+        "traditional": "ᠫᠦᠦᠰᠦᠦ",
+        "latin": "puusuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пөмбийлгөх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠥᠮᠪᠦᠶᠢᠯᠭᠡᠬᠦ",
+        "latin": "pumbiilguh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пөмбийх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠥᠮᠪᠥᠶᠢᠬᠦ",
+        "latin": "pumbiih",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пөмбөгнөх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠥᠮᠪᠦᠭᠡᠨᠡᠬᠦ",
+        "latin": "pumbugnuh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пөмбөгөр",
+    "candidates": [
+      {
+        "traditional": "ᠫᠥᠮᠪᠥᠭᠡᠷ",
+        "latin": "pumbugur",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пөмбөгөрдүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠥᠮᠪᠥᠭᠡᠷᠳᠡᠭᠦᠯᠬᠦ",
+        "latin": "pumbugurduuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "пөмбөгөрдөх",
+    "candidates": [
+      {
+        "traditional": "ᠫᠥᠮᠪᠦᠭᠡᠷᠳᠡᠬᠦ",
+        "latin": "pumbugurduh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  }
+]

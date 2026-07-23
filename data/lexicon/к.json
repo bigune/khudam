@@ -1,0 +1,1982 @@
+[
+  {
+    "cyrillic": "к",
+    "candidates": [
+      {
+        "traditional": "ᠺ",
+        "latin": "k",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кабель",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠪᠧᠯ",
+        "latin": "kabyeli",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кабин",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠪᠢᠨ",
+        "latin": "kabin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кабинет",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠪᠢᠨᠧᠲ",
+        "latin": "kabinyet",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кагор",
+    "candidates": [
+      {
+        "traditional": "ᠺᠡᠭᠣᠷ",
+        "latin": "kagor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кадет",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠳᠧᠲ",
+        "latin": "kadyet",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "казах",
+    "candidates": [
+      {
+        "traditional": "ᠬᠠᠰᠠᠭ",
+        "latin": "kazah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "казахстан",
+    "candidates": [
+      {
+        "traditional": "ᠬᠠᠰᠠᠭᠰᠲ᠋ᠠᠨ",
+        "latin": "kazahstan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "какао",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠺᠠᠣ",
+        "latin": "kakao",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "календарчлах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠯᠧᠨᠳᠠᠷᠴᠢᠯᠠᠬᠤ",
+        "latin": "kalyendarchlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "календарь",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠯᠧᠨᠳᠠᠷᠢ",
+        "latin": "kalyendari",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кали",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠯᠢ",
+        "latin": "kali",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "калибр",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠯᠢᠪᠷ",
+        "latin": "kalibr",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "калори",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠯᠣᠷᠢ",
+        "latin": "kalori",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "калош",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠯᠤᠰ",
+        "latin": "kalosh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кальци",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠯᠼᠢ",
+        "latin": "kalitsi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "камер",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠮᠧᠷ",
+        "latin": "kamyer",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "камертон",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠮᠧᠷᠲ᠋ᠣᠨ",
+        "latin": "kamyerton",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кампани",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠮᠫᠠᠨᠢ",
+        "latin": "kampani",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кампаничлах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠮᠫᠠᠨᠢᠴᠢᠯᠠᠬᠤ",
+        "latin": "kampanichlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "камфор",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠮᠹᠣᠷ",
+        "latin": "kamfor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кандидат",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠨᠳᠢᠳᠠᠲ",
+        "latin": "kandidat",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "капитал",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠫᠢᠲ᠋ᠠᠯ",
+        "latin": "kapital",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "капитализм",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠫᠢᠲ᠋ᠠᠯᠢᠰᠮ",
+        "latin": "kapitalizm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "капиталист",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠫᠲ᠋ᠠᠯᠢᠰᠲ",
+        "latin": "kapitalist",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "капиталтан",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠫᠢᠲ᠋ᠠᠯᠲᠠᠨ",
+        "latin": "kapitaltan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "капрон",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠫᠷᠣᠨ",
+        "latin": "kapron",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "карабин",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠠᠪᠢᠨ",
+        "latin": "karabin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "каракуль",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠠᠺᠦᠶᠢᠯᠢ",
+        "latin": "karakuli",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "карамель",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠠᠮᠧᠯ",
+        "latin": "karamyeli",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "карантийлагдах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠠᠨᠲ᠋ᠢᠢᠯᠠᠭᠳᠠᠬᠤ",
+        "latin": "karantiilagdah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "карантийлах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠠᠨᠲ᠋ᠢᠯᠠᠬᠤ",
+        "latin": "karantiilah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "карантийлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠠᠨᠲ᠋ᠢᠢᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "karantiiluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "карантин",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠠᠨᠲ᠋ᠢᠨ",
+        "latin": "karantin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "караоке",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠠᠣᠺᠧ",
+        "latin": "karaokye",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "карбол",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠪᠣᠯ",
+        "latin": "karbol",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "карбюратор",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠪᠶᠤᠶᠢᠷᠠᠲ᠋ᠣᠷ",
+        "latin": "karbyurator",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "карбюрац",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠪᠶᠤᠶᠢᠷᠠᠼ",
+        "latin": "karbyurats",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "карман",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠮᠠᠨ",
+        "latin": "karman",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "карт",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠲ",
+        "latin": "kart",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "картель",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠷᠲ᠋ᠧᠯ",
+        "latin": "kartyeli",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "касс",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠰᠰ",
+        "latin": "kass",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кассач",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠰᠰᠠᠴᠢ",
+        "latin": "kassach",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кассет",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠰᠰᠧᠲ",
+        "latin": "kassyet",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "каталог",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠲ᠋ᠠᠯᠣᠭ",
+        "latin": "katalog",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "категори",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠲ᠋ᠧᠭᠣᠷᠢ",
+        "latin": "katyegori",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "катет",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠲ᠋ᠧᠲ",
+        "latin": "katyet",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "католик",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠲ᠋ᠣᠯᠢᠭ",
+        "latin": "katolik",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "катушка",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠲᠤᠱᠺᠠ",
+        "latin": "katushka",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "каучук",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠤᠢᠴᠤᠤᠶᠢ",
+        "latin": "kauchuk",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кафе",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠹᠧ",
+        "latin": "kafye",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кафедр",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠹᠧᠳ᠋ᠷ",
+        "latin": "kafyedr",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "каша",
+    "candidates": [
+      {
+        "traditional": "ᠺᠠᠱᠠ",
+        "latin": "kasha",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кв",
+    "candidates": [
+      {
+        "traditional": "ᠺᠦᠸᠠᠳ᠋",
+        "latin": "kv",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "квадрат",
+    "candidates": [
+      {
+        "traditional": "ᠺᠦᠸᠠᠳ᠋",
+        "latin": "kvadrat",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "квас",
+    "candidates": [
+      {
+        "traditional": "ᠺᠸᠠᠰ",
+        "latin": "kvas",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "квитанци",
+    "candidates": [
+      {
+        "traditional": "ᠺᠸᠢᠲ᠋ᠠᠨᠼᠢ",
+        "latin": "kvitantsi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "керосин",
+    "candidates": [
+      {
+        "traditional": "ᠺᠧᠷᠣᠰᠢᠨ",
+        "latin": "kyerosin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кило",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠯᠣ᠋",
+        "latin": "kilo",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "киловатт",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠯᠣᠸᠠᠲ",
+        "latin": "kilovatt",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "киловольт",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠯᠣᠸᠣᠯᠲ᠋",
+        "latin": "kilovolit",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "километр",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠯᠣᠮᠧᠲ᠋ᠷ",
+        "latin": "kilomyetr",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кино",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠨᠣ᠋",
+        "latin": "kino",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "киноаппарат",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠨᠣ᠋ᠠᠫᠫᠠᠷᠠᠲ",
+        "latin": "kinoapparat",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "киномеханикч",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠨᠣᠮᠧᠬᠠᠨᠢᠭᠴᠢ",
+        "latin": "kinomyehanikch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "киностуди",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠨᠣᠰᠲ᠋ᠦ᠋ᠳᠢ",
+        "latin": "kinostudi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кинотеатр",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠨᠣᠲᠢᠶᠠᠲ᠋ᠷ",
+        "latin": "kinotyeatr",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кинофестиваль",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠨᠣᠹᠧᠰᠲ᠋ᠢᠸᠠᠯᠢ",
+        "latin": "kinofyestivali",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кинофильм",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠨᠣᠹᠢᠯᠢᠮ",
+        "latin": "kinofilim",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кирилл",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠷᠢᠯ",
+        "latin": "kirill",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кисель",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠰᠧᠯ",
+        "latin": "kisyeli",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кислота",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠰᠯᠣᠲ᠋ᠠ",
+        "latin": "kislota",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "китель",
+    "candidates": [
+      {
+        "traditional": "ᠺᠢᠲ᠋ᠧᠯ",
+        "latin": "kityeli",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "клапан",
+    "candidates": [
+      {
+        "traditional": "ᠺᠯᠠᠫᠠᠨ",
+        "latin": "klapan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "классик",
+    "candidates": [
+      {
+        "traditional": "ᠺᠯᠠᠰᠰᠢᠺ",
+        "latin": "klassik",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "классикч",
+    "candidates": [
+      {
+        "traditional": "ᠺᠯᠠᠰᠰᠢᠺᠴᠢ",
+        "latin": "klassikch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "клиник",
+    "candidates": [
+      {
+        "traditional": "ᠺᠯᠢᠨᠢᠺ",
+        "latin": "klinik",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "клуб",
+    "candidates": [
+      {
+        "traditional": "ᠺᠯᠤᠶᠢᠪ",
+        "latin": "klub",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "км",
+    "candidates": [
+      {
+        "traditional": "ᠺᠮ",
+        "latin": "km",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ковакс",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠸᠠᠺᠰ",
+        "latin": "kovaks",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коверкот",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠸᠧᠷᠺᠣᠲ",
+        "latin": "kovyerkot",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ковид",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠸᠢᠳ",
+        "latin": "kovid",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "код",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠳ᠋",
+        "latin": "kod",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кокс",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠺᠰ",
+        "latin": "koks",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кокслох",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠺᠰᠯᠠᠬᠤ",
+        "latin": "koksloh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "колбаса",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠯᠪᠠᠰᠠ",
+        "latin": "kolbasa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коллеги",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠯᠯᠧᠭᠢ",
+        "latin": "kollyegi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коллектив",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠯᠯᠧᠺᠲ᠋ᠢᠣ",
+        "latin": "kollyektiv",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коллоид",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠯᠯᠣᠶᠢᠳ᠋",
+        "latin": "kolloid",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коллпро",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠯᠯᠫᠷᠣ",
+        "latin": "kollpro",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "колони",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠯᠣᠨᠢ",
+        "latin": "koloni",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "колоничлогдох",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠯᠣᠨᠢᠴᠢᠯᠠᠭᠳᠠᠬᠤ",
+        "latin": "kolonichlogdoh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "колоничлогч",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠯᠣᠨᠢᠴᠢᠯᠠᠭᠴᠢ",
+        "latin": "kolonichlogch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "колоничлол",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠯᠣᠨᠢᠴᠢᠯᠠᠯ",
+        "latin": "kolonichlol",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "колоничлох",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠯᠤᠨᠢᠴᠢᠯᠠᠬᠤ",
+        "latin": "kolonichloh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "колоничлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠯᠣᠨᠢᠴᠢᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "kolonichluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "колонка",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠯᠣᠨᠺᠠ",
+        "latin": "kolonka",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "команд",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠠᠨᠳ",
+        "latin": "komand",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "командлагч",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠠᠨᠳᠠᠯᠠᠭᠴᠢ",
+        "latin": "komandlagch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "командлал",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠠᠨᠳᠯᠠᠯ",
+        "latin": "komandlal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "командлах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠠᠨᠳᠠᠯᠠᠬᠤ",
+        "latin": "komandlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "командлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠠᠨᠳᠠᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "komandluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "комбайн",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠪᠠᠶᠢᠨ",
+        "latin": "kombain",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "комбайнч",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠪᠠᠶᠢᠨᠴᠢ",
+        "latin": "kombainch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "комбинат",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠪᠢᠨᠠᠲ",
+        "latin": "kombinat",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "комбинезон",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠪᠢᠨᠧᠽᠣᠨ",
+        "latin": "kombinyezon",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "комендант",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠧᠨᠳᠠᠨᠲ",
+        "latin": "komyendant",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "комик",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠢᠺ",
+        "latin": "komik",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коминтерн",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠢᠨᠲ᠋ᠧᠷᠠᠨ",
+        "latin": "komintyern",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "комисс",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠢᠰ",
+        "latin": "komiss",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "комиссар",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠢᠰᠰᠠᠷ",
+        "latin": "komissar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "комисслох",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠢᠰᠯᠠᠬᠤ",
+        "latin": "komissloh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "комисслуулах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠢᠰᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "komissluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коммун",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠮᠤᠶᠢᠨ",
+        "latin": "kommun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коммунизм",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠮᠤᠶᠢᠨᠢᠰᠮ",
+        "latin": "kommunizm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коммутатор",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠮᠤᠶᠢᠲ᠋ᠠᠲ᠋ᠣᠷ",
+        "latin": "kommutator",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "компани",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠫᠠᠨᠢ",
+        "latin": "kompani",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "компанидах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠫᠠᠨᠢᠳᠠᠬᠤ",
+        "latin": "kompanidah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "компас",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠫᠠᠰ",
+        "latin": "kompas",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "комплекст",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠫᠯᠧᠺᠰᠲ",
+        "latin": "komplyekst",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "композитор",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠫᠣᠽᠢᠲ᠋ᠣᠷ",
+        "latin": "kompozitor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "компот",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠫᠣᠲ",
+        "latin": "kompot",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "компресс",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠫᠷᠧᠰ",
+        "latin": "kompryess",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "компьютер",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠫᠢᠶᠦ᠋ᠲ᠋ᠧᠷ",
+        "latin": "kompiyutyer",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "комсомол",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠮᠰᠣᠮᠣᠯ",
+        "latin": "komsomol",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "конвейер",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠸᠧᠢᠧᠷ",
+        "latin": "konvyeiyer",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "конверт",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠸᠧᠷᠲ",
+        "latin": "konvyert",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "конгресс",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠩᠷᠧᠰ",
+        "latin": "kongryess",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "конденсатор",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠳᠧᠨᠰᠠᠲ᠋ᠣᠷ",
+        "latin": "kondyensator",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кондуктор",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠳᠤᠶᠢᠺᠲ᠋ᠣᠷ",
+        "latin": "konduktor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "консерв",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠰᠧᠷᠠᠸ",
+        "latin": "konsyerv",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "консервлох",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠰᠧᠷᠠᠸᠯᠠᠬᠤ",
+        "latin": "konsyervloh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "консервлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠰᠧᠷᠠᠸᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "konsyervluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "конспект",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠰᠫᠧᠺᠲ",
+        "latin": "konspyekt",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "конспектлох",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠰᠫᠧᠺᠲᠯᠠᠬᠤ",
+        "latin": "konspyektloh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "конспектлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠰᠫᠧᠺᠲᠠᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "konspyektluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "конструкторч",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠰᠲ᠋ᠷᠤᠶᠢᠺᠲ᠋ᠣᠷᠴᠢ",
+        "latin": "konstruktorch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "конструкци",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠰᠲ᠋ᠷᠢᠺᠼᠢ",
+        "latin": "konstruktsi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "консул",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠰᠤᠶᠢᠯ",
+        "latin": "konsul",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "консультац",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠰᠤᠶᠢᠯᠢᠲ᠋ᠠᠼ",
+        "latin": "konsulitats",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "контент",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠲ᠋ᠧᠨᠲ",
+        "latin": "kontyent",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "контор",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠲ᠋ᠣᠷ",
+        "latin": "kontor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "конторлох",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠲ᠋ᠣᠷᠯᠠᠬᠤ",
+        "latin": "kontorloh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "конторлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠲ᠋ᠣᠷᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "kontorluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "контробанда",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠲ᠋ᠷᠣᠪᠠᠩᠳᠠ",
+        "latin": "kontrobanda",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "концерн",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠼᠧᠷᠢᠨ",
+        "latin": "kontsyern",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "концерт",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠼᠧᠷᠲ",
+        "latin": "kontsyert",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "концесси",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠼᠧᠰᠢ",
+        "latin": "kontsyessi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "концессич",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠼᠧᠰᠢᠴ",
+        "latin": "kontsyessich",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коньки",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠢᠺᠢ",
+        "latin": "koniki",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коньяк",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠨᠢᠶᠠᠺ",
+        "latin": "koniyak",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кооператив",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠣᠫᠧᠷᠠᠲ᠋ᠢᠣ",
+        "latin": "koopyerativ",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кооперац",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠣᠫᠧᠷᠠᠼ",
+        "latin": "koopyerats",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коридор",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠷᠢᠳᠣᠷ",
+        "latin": "koridor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коронавирус",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠷᠤᠨᠠᠸᠢᠷᠦᠰ",
+        "latin": "koronavirus",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коронавируст",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠷᠤᠨᠠᠸᠢᠷᠦ᠋ᠰᠲᠦ",
+        "latin": "koronavirust",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "короновируст",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠷᠣᠨᠣᠸᠢᠷᠦ᠋ᠰᠲᠦ",
+        "latin": "koronovirust",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "корпораци",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠷᠫᠣᠷᠠᠼᠢ",
+        "latin": "korporatsi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "корпус",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠷᠫᠤᠶᠢᠰ",
+        "latin": "korpus",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "корректор",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠷᠷᠧᠺᠲ᠋ᠣᠷ",
+        "latin": "korryektor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "космополитизм",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠰᠮᠣᠫᠣᠯᠢᠲ᠋ᠢᠰᠮ",
+        "latin": "kosmopolitizm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "костюм",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠰᠲ᠋ᠶᠤᠶᠢᠮ",
+        "latin": "kostyum",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "котлет",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠲ᠋ᠯᠧᠲ",
+        "latin": "kotlyet",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кофе",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠹᠧ",
+        "latin": "kofye",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кофейн",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠹᠧᠢᠨ",
+        "latin": "kofyein",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "коэффицент",
+    "candidates": [
+      {
+        "traditional": "ᠺᠣᠧᠹᠹᠢᠼᠧᠨᠲ",
+        "latin": "koeffitsyent",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кран",
+    "candidates": [
+      {
+        "traditional": "ᠺᠷᠠᠨ",
+        "latin": "kran",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кредит",
+    "candidates": [
+      {
+        "traditional": "ᠺᠷᠧᠳᠢᠲ",
+        "latin": "kryedit",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кредитор",
+    "candidates": [
+      {
+        "traditional": "ᠺᠷᠧᠳᠢᠲᠠᠷ",
+        "latin": "kryeditor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "крейсер",
+    "candidates": [
+      {
+        "traditional": "ᠺᠷᠠᠶᠢᠰᠧᠷ",
+        "latin": "kryeisyer",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "крепдешин",
+    "candidates": [
+      {
+        "traditional": "ᠺᠷᠧᠫᠳᠧᠱᠢᠨ",
+        "latin": "kryepdyeshin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кризис",
+    "candidates": [
+      {
+        "traditional": "ᠺᠷᠢᠽᠢᠰ",
+        "latin": "krizis",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "куб",
+    "candidates": [
+      {
+        "traditional": "ᠺᠦᠪ",
+        "latin": "kub",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кублэх",
+    "candidates": [
+      {
+        "traditional": "ᠺᠦᠪᠯᠡᠬᠦ",
+        "latin": "kubleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кублүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠺᠦᠪᠡᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "kubluuleh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кубметр",
+    "candidates": [
+      {
+        "traditional": "ᠺᠦᠪᠮᠧᠲ᠋ᠷ",
+        "latin": "kubmyetr",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "кузов",
+    "candidates": [
+      {
+        "traditional": "ᠺᠦᠽᠣᠪ",
+        "latin": "kuzov",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "культиватор",
+    "candidates": [
+      {
+        "traditional": "ᠺᠦᠯᠢᠲ᠋ᠢᠸᠠᠲ᠋ᠣᠷ",
+        "latin": "kulitivator",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "купон",
+    "candidates": [
+      {
+        "traditional": "ᠺᠦ᠋ᠫᠣᠨ",
+        "latin": "kupon",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "курс",
+    "candidates": [
+      {
+        "traditional": "ᠺᠦᠷᠰ",
+        "latin": "kurs",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  }
+]

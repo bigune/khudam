@@ -1,0 +1,307 @@
+# Хянуулахаар хүлээгдэж буй бичлэгүүд / Entries flagged for review
+
+Суурь өгөгдлөөс автоматаар оруулж чадаагүй, эсвэл эргэлзээтэй бичлэгүүдийг энд жагсаана. This file collects entries that need human eyes — either skipped during import or flagged as suspicious.
+
+<!-- wmk-import:begin (auto-generated, do not edit between markers) -->
+
+## Seed entries skipped by `scripts/import-wmk.ts`
+
+These rows from the writtenMongolianKeyboard seed could not be imported automatically. They are listed here so humans can recover them by hand (see CONTRIBUTING.md). Машин импортоор оруулж чадаагүй мөрүүд — гараар сэргээж оруулахад тусламж хэрэгтэй.
+
+### Not a clean Cyrillic word (74)
+
+Dictionary markup (trailing `:`, homonym numbering, stray characters) needs stripping, and homonym rows need `sense` labels:
+
+- `зоо:`
+- `зөгөн:`
+- `идээ-2`
+- `идээ-3`
+- `ил-2`
+- `мантуулиг:`
+- `нал:`
+- `налай:`
+- `нэс:`
+- `нэхэл:`
+- `овру��лах`
+- `оног:`
+- `онон:`
+- `өвдөл:`
+- `өвхөг:`
+- `өвхөс:`
+- `өлiii`
+- `өө-i`
+- `өө-ii`
+- `пар:`
+- `пид:`
+- `пир:`
+- `пор:`
+- `садархай-ii`
+- `садга-ii`
+- `садганах-ii`
+- `сажлах-i`
+- `сажлах-ii`
+- `сай-i`
+- `сай-ii`
+- `сайр-i`
+- `сайр-ii`
+- `сайр-iii`
+- `согшин:`
+- `солиг:`
+- `сундуй:`
+- `сүйтгүү��эх`
+- `сэвэхⅰ`
+- `сэвэхⅱ`
+- `сэгⅰ`
+- `сэгⅱ`
+- `сэглэхⅰ`
+- `сэглэхⅱ`
+- `сэдэвⅰ`
+- `сэдэвⅱ`
+- `сэдэвлэхⅰ`
+- `сэдэвлэхⅱ`
+- `сэжигдэхⅰ`
+- `сэжигдэхⅱ`
+- `сэрүүнⅰ`
+- `сэрүүнⅱ`
+- `сэршⅰ`
+- `сэршⅱ`
+- `уваа:`
+- `уваан:`
+- `уван:`
+- `удар:`
+- `улцар:`
+- `унаш:`
+- `ундуй:`
+- `унжин:`
+- `унжир:`
+- `уудлахii`
+- `ухаа/н/`
+- `хайлган:`
+- `халт:`
+- `хушит:`
+- `хэрээ_iii`
+- `цагцхайт:`
+- `цал:`
+- `цангис:`
+- `цасч:`
+- `эвлэн:`
+- `эргэн:`
+
+### Corrupt traditional field (212)
+
+The seed's traditional column contains Latin/Cyrillic text instead of Mongolian script. The correct spelling must be supplied by a human:
+
+- `амь` (seed had `"ami"`)
+- `анх` (seed had `"anh"`)
+- `арав` (seed had `"arav"`)
+- `аргуу` (seed had `"arguu"`)
+- `архич` (seed had `"arhich"`)
+- `бид` (seed had `"bid"`)
+- `бич` (seed had `"bich"`)
+- `бөрөл` (seed had `"burulborj"`)
+- `гинжлэх` (seed had `"ᠭᠢᠨᠵᠢᠯᠡx"`)
+- `гинших` (seed had `"ᠭᠢᠩᠰᠢx"`)
+- `гиншигнэх` (seed had `"ᠭᠢᠩᠰᠢᠩᠨᠡx"`)
+- `гиншүүлэх` (seed had `"ᠭᠢᠩᠰᠢᠭᠦᠯᠡx"`)
+- `гирэвших` (seed had `"ᠭᠢᠷᠪᠢᠰᠢx"`)
+- `гичлэх` (seed had `"ᠭᠢᠴᠢᠯᠡx"`)
+- `гишгүүлэх` (seed had `"ᠭᠢᠰᠬᠢᠭᠦᠯᠡx"`)
+- `гишгэх` (seed had `"ᠭᠢᠰᠬᠢx"`)
+- `гишгэгдэх` (seed had `"ᠭᠢᠰᠬᠢᠭᠳᠡx"`)
+- `гишгэлэх` (seed had `"ᠭᠢᠰᠬᠢᠯᠡx"`)
+- `гиюүрүүлэх` (seed had `"ᠭᠡᠶᠦᠷᠡᠭᠦᠯᠡx"`)
+- `гиюүрэх` (seed had `"ᠭᠡᠶᠦᠷᠡx"`)
+- `годхийх` (seed had `"ᠭᠣᠳxᠢᠢx"`)
+- `годволзох` (seed had `"ᠭᠣᠳᠣᠪᠠᠯᠵᠠx"`)
+- `годгодох` (seed had `"ᠭᠣᠳᠣᠭᠣᠳᠣx"`)
+- `годгойдох` (seed had `"ᠭᠣᠳᠣᠭᠣᠶᠢᠳᠣx"`)
+- `годгонох` (seed had `"ᠭᠣᠳᠣᠭᠣᠨᠠx"`)
+- `годгонуулах` (seed had `"ᠭᠣᠳᠣᠭᠣᠨᠠᠭᠤᠯx"`)
+- `годгосхийх` (seed had `"ᠭᠣᠳᠣᠭᠣᠰxᠢᠢx"`)
+- `годилдох` (seed had `"ᠭᠣᠳᠣᠯᠢᠳᠠx"`)
+- `годойх` (seed had `"ᠭᠣᠳᠣᠢx"`)
+- `годойлгох` (seed had `"ᠭᠣᠳᠣᠶᠢᠯᠭ᠎᠊ᠠx"`)
+- `годолзох` (seed had `"ᠭᠣᠳᠣᠯᠵᠠx"`)
+- `годонтох` (seed had `"ᠭᠣᠳᠣᠩᠲᠠx"`)
+- `годройтох` (seed had `"ᠭᠣᠳᠣᠷᠣᠶᠢᠲᠤx"`)
+- `годройтуулах` (seed had `"ᠭᠣᠳᠣᠷᠣᠶᠢᠲᠠᠭᠤᠯx"`)
+- `годронтох` (seed had `"ᠭᠣᠳᠣᠷᠣᠩᠲᠤx"`)
+- `годронтуулах` (seed had `"ᠭᠣᠳᠣᠷᠣᠩᠲᠤᠭᠤᠯx"`)
+- `гоёдох` (seed had `"ᠭᠣᠶᠣᠳᠠx"`)
+- `гоёлхийлэх` (seed had `"ᠭᠣᠶᠣᠯxᠢᠢᠯx"`)
+- `гоёмсоглох` (seed had `"ᠭᠣᠶᠣᠮᠰᠣᠭᠯᠠx"`)
+- `гоёмсогмолох` (seed had `"ᠭᠣᠶᠣᠮᠰᠣᠭᠮᠣᠯᠣx"`)
+- `гөлтрөг` (seed had `"gultrugbusreg"`)
+- `гүег` (seed had `"басар"`)
+- `гүем` (seed had `"guyemguyen"`)
+- `долоо` (seed had `"doloo"`)
+- `долрох` (seed had `"ᠳᠣᠯᠣᠷᠠx"`)
+- `долшрох` (seed had `"ᠳᠣᠯᠣᠰᠢᠷᠣx"`)
+- `домнох` (seed had `"ᠳᠣᠮᠨᠣx"`)
+- `домнуулах` (seed had `"ᠳᠣᠮᠨᠣᠭᠤᠯᠠx"`)
+- `домоглох` (seed had `"ᠳᠣᠮᠣᠭᠯᠠx"`)
+- `домтох` (seed had `"ᠳᠣᠮᠲᠣx"`)
+- `домчлох` (seed had `"ᠳᠣᠮᠴᠢᠯᠠx"`)
+- `донгиохон` (seed had `"ᠳᠣᠩᠭᠢᠶ᠎᠊ᠠxᠣᠨ"`)
+- `донгиодох` (seed had `"ᠳᠣᠩᠭᠢᠶᠠᠳᠠx"`)
+- `донгиорох` (seed had `"ᠳᠣᠩᠭᠢᠶᠠᠷᠠx"`)
+- `донгиотох` (seed had `"ᠳᠣᠩᠭᠢᠶᠠᠲᠠx"`)
+- `донгодох` (seed had `"ᠳᠣᠩᠭᠣᠳx"`)
+- `донгодуулах` (seed had `"ᠳᠣᠩᠭᠣᠳᠤᠭᠤᠯx"`)
+- `донгосох` (seed had `"ᠳᠣᠩᠭᠣᠰx"`)
+- `донгосуулах` (seed had `"ᠳᠣᠩᠭᠣᠰᠤᠭᠤᠯx"`)
+- `доноголзох` (seed had `"ᠳᠣᠨᠣᠭᠣᠯᠵᠠx"`)
+- `доош` (seed had `"doosh"`)
+- `доргио` (seed had `"dorgio"`)
+- `дөнж` (seed had `"dunj"`)
+- `дөнө` (seed had `"dunu"`)
+- `дөрөв` (seed had `"duruv"`)
+- `дөч` (seed had `"duch"`)
+- `дугаруулах` (seed had `"ᠳᠤᠤᠭᠠᠷᠠᠭ��ᠯᠬᠤ"`)
+- `дүдэр` (seed had `"duderdudrai"`)
+- `жанч` (seed had `"janch"`)
+- `жүжигч` (seed had `"jujigch"`)
+- `загасч` (seed had `"zagasch"`)
+- `замч` (seed had `"zamch"`)
+- `зандалч` (seed had `"zandalch"`)
+- `зогой` (seed had `"zogoihuvilgana"`)
+- `илч` (seed had `"ilch"`)
+- `лавших` (seed had `"ᠯᠠᠪᠰᠢx"`)
+- `лавшрах` (seed had `"ᠯᠠᠪᠰᠢᠷᠠx"`)
+- `лавшруулах` (seed had `"ᠯᠠᠪᠰᠢᠷᠠᠭᠤᠯx"`)
+- `манх` (seed had `"manh"`)
+- `мах` (seed had `"mah"`)
+- `машин` (seed had `"mashin"`)
+- `мойл` (seed had `"moil"`)
+- `монио` (seed had `"moniomonish"`)
+- `мөлүү` (seed had `"muluu"`)
+- `мянга` (seed had `"myanga"`)
+- `мяндас` (seed had `"myandas"`)
+- `найм` (seed had `"naim"`)
+- `наймаач` (seed had `"naimaach"`)
+- `найрч` (seed had `"nairch"`)
+- `ноос` (seed had `"noos"`)
+- `нүүрс` (seed had `"nuurs"`)
+- `нүүрсч` (seed had `"nuursch"`)
+- `нэхмэлч` (seed had `"nehmelch"`)
+- `онги` (seed had `"ongi"`)
+- `орд` (seed had `"ord"`)
+- `панс` (seed had `"pans"`)
+- `сахлархуу` (seed had `"ᠰᠠᠬᠠ��ᠠᠷᠬᠠᠤ"`)
+- `тавиу` (seed had `"taviu"`)
+- `тавиул` (seed had `"taviul"`)
+- `тавуул` (seed had `"tavuul"`)
+- `тайвшруулах` (seed had `"ᠲᠠᠶᠢᠪᠤᠰ��ᠷᠠᠭᠤᠯᠬᠤ"`)
+- `тамхи` (seed had `"tamhi"`)
+- `тарвага` (seed had `"tarvaga"`)
+- `тариа` (seed had `"taria"`)
+- `ташаа` (seed had `"tashaa"`)
+- `тоох` (seed had `"ᠲᠣᠭ᠎᠊ᠠx"`)
+- `тоохгүй` (seed had `"ᠲᠣᠭ᠎᠊ᠠxᠭᠦᠢ"`)
+- `тооройлох` (seed had `"ᠲᠣᠭᠤᠷᠤᠶᠢᠯᠠx"`)
+- `тоосгорох` (seed had `"ᠲᠣᠭᠣᠰᠣᠭᠣᠷᠣx"`)
+- `тоослох` (seed had `"ᠲᠣᠭᠣᠰᠣᠯᠠx"`)
+- `тоослуулах` (seed had `"ᠲᠣᠭᠣᠰᠣᠯᠠᠭᠤᠯx"`)
+- `тоосорхог` (seed had `"ᠲᠣᠭᠣᠰᠣᠷᠠxᠣᠭ"`)
+- `тоосорхуу` (seed had `"ᠲᠣᠭᠣᠰᠣᠷᠠxᠤᠤ"`)
+- `тоосрох` (seed had `"ᠲᠣᠭᠣᠰᠣᠷᠠx"`)
+- `тоосруулах` (seed had `"ᠲᠣᠭᠣᠰᠣᠷᠠᠭᠤᠯx"`)
+- `тооцох` (seed had `"ᠲᠣᠭᠠᠴᠠx"`)
+- `тооцогдох` (seed had `"ᠲᠣᠭᠠᠴᠠᠭᠳᠠx"`)
+- `тооцоолох` (seed had `"ᠲᠣᠭᠠᠴᠠᠭᠠᠯᠠx"`)
+- `тооцуулах` (seed had `"ᠲᠣᠭᠠᠴᠠᠭᠤᠯx"`)
+- `тоочих` (seed had `"ᠲᠣᠭᠠᠴᠢx"`)
+- `тоочигдох` (seed had `"ᠲᠣᠭᠠᠴᠢᠭᠳᠠx"`)
+- `тоочуулах` (seed had `"ᠲᠣᠭᠠᠴᠢᠭᠤᠯx"`)
+- `түм` (seed had `"tum"`)
+- `тэмээ` (seed had `"temee"`)
+- `тэмээч` (seed had `"temeech"`)
+- `тэрхүү` (seed had `"��ᠡᠷᠬᠡᠦ"`)
+- `үнэг` (seed had `"uneg"`)
+- `үргээлэг` (seed had `"urgeeleg"`)
+- `үрээ` (seed had `"uree"`)
+- `үүлгэрдүү` (seed had `"ᠡᠭᠦᠯᠭᠡᠷᠳ���ᠭᠦᠦ"`)
+- `халуухан` (seed had `"ᠬᠠᠯᠠᠭ��ᠬᠠᠨ"`)
+- `харьцаа` (seed had `"haritsaa"`)
+- `харьяа` (seed had `"hariyaa"`)
+- `хогч` (seed had `"hogch"`)
+- `хоёул` (seed had `"hoyoul"`)
+- `холбооч` (seed had `"holbooch"`)
+- `хөгжимч` (seed had `"hugjimch"`)
+- `хувгай` (seed had `"huvgaihorildoi"`)
+- `хутга` (seed had `"hutga"`)
+- `хүүшлэх` (seed had `"ᠬᠡᠦ��ᠢᠯᠡᠬᠦ"`)
+- `хэд` (seed had `"hed"`)
+- `хятруу` (seed had `"���ᠢᠲᠠᠷᠤᠤ"`)
+- `цаас` (seed had `"tsaas"`)
+- `цавуу` (seed had `"tsavuu"`)
+- `цавчдас` (seed had `"tsavchdas"`)
+- `цавь` (seed had `"tsavi"`)
+- `цамч` (seed had `"tsamch"`)
+- `цанач` (seed had `"tsanach"`)
+- `цонх` (seed had `"tsonh"`)
+- `цоолго` (seed had `"tsoolgo"`)
+- `цуваа` (seed had `"tsuvaa"`)
+- `чийрс` (seed had `"chiirs"`)
+- `шовшуур` (seed had `"shovshuurshovshooron"`)
+- `шөрвөс` (seed had `"shurvus"`)
+- `шувууч` (seed had `"shuvuuch"`)
+- `шулдас` (seed had `"shuldas"`)
+- `элхэг` (seed had `"ᠡᠯ᠎᠊ᠡxᠡᠭᠡ"`)
+- `элхэгдүүлэх` (seed had `"ᠡᠯ᠎᠊ᠡxᠡᠭᠳᠡᠭᠦᠯᠡx"`)
+- `элхэгдэх` (seed had `"ᠡᠯ᠎᠊ᠡxᠡᠩᠳᠡx"`)
+- `элдүүрч` (seed had `"elduurch"`)
+- `элмэгдэх` (seed had `"ᠡᠯᠡᠮᠡᠭᠳᠡx"`)
+- `элмэгрэх` (seed had `"ᠡᠯᠡᠮᠡᠭᠷᠡx"`)
+- `элмэгших` (seed had `"ᠡᠯᠡᠮᠡᠭᠰᠢx"`)
+- `элмэрэх` (seed had `"ᠡᠯᠮᠡᠷᠡx"`)
+- `элсдэх` (seed had `"ᠡᠯᠰᠡᠳᠡx"`)
+- `элслэх` (seed had `"ᠡᠯᠡᠰᠦᠯᠡx"`)
+- `элсрэх` (seed had `"ᠡᠯᠡᠰᠦᠷᠡx"`)
+- `элсүүлэх` (seed had `"ᠡᠯᠰᠡᠭᠦᠯᠡx"`)
+- `элсүүлэгдэх` (seed had `"ᠡᠯᠰᠡᠭᠦᠯᠢᠭᠳᠡx"`)
+- `элсэх` (seed had `"ᠡᠯᠰᠡx"`)
+- `элсэгдэх` (seed had `"ᠡᠯᠰᠡᠭᠳᠡx"`)
+- `элсэглэх` (seed had `"ᠡᠯᠰᠡᠭᠯᠡx"`)
+- `элсэрхүү` (seed had `"ᠡᠯᠡᠰᠦᠷᠡxᠦᠦ"`)
+- `элсэрхэг` (seed had `"ᠡᠯᠡᠰᠦᠷᠡxᠡᠭᠡ"`)
+- `элтлүүлэх` (seed had `"ᠡᠯᠲᠡᠯᠦᠭᠦᠯᠡx"`)
+- `элтлэх` (seed had `"ᠡᠯᠲᠡᠯᠡx"`)
+- `элтрүүлэх` (seed had `"ᠡᠯᠲᠦᠷᠢᠭᠦᠯᠡx"`)
+- `элтрэх` (seed had `"ᠡᠯᠲᠡᠷᠭᠡx"`)
+- `элтэрхий` (seed had `"ᠡᠯᠲᠡᠷᠡxᠢᠢ"`)
+- `элүүлэх` (seed had `"ᠡᠯᠢᠭᠦᠯᠡx"`)
+- `элэх` (seed had `"ᠡᠯᠡx"`)
+- `элэгдэх` (seed had `"ᠡᠯᠢᠭᠡᠳᠡx"`)
+- `элэглүүлэх` (seed had `"ᠡᠯᠡᠭᠯᠡᠭᠦᠯᠡx"`)
+- `элэглэх` (seed had `"ᠡᠯᠡᠭᠯᠡx"`)
+- `элэглэгдэх` (seed had `"ᠡᠯᠡᠭᠯᠡᠭᠳᠡx"`)
+- `элэгрэх` (seed had `"ᠡᠯᠢᠭᠡᠷ᠎᠊ᠡx"`)
+- `элэгсэх` (seed had `"ᠡᠯᠢᠭᠡᠰᠡx"`)
+- `элэгшээх` (seed had `"ᠡᠯᠢᠭᠡᠰᠢᠶᠡx"`)
+- `элэгшээлгэх` (seed had `"ᠡᠯᠢᠭᠡᠰᠢᠶᠡᠯᠭᠡx"`)
+- `элэнхий` (seed had `"ᠡᠯᠢᠨxᠢᠢ"`)
+- `элэнхийтэх` (seed had `"ᠡᠯᠢᠨxᠢᠭᠢᠲᠡx"`)
+- `элээх` (seed had `"ᠡᠯᠢᠭᠡx"`)
+- `эмбэрэх` (seed had `"ᠡᠮᠪᠡᠷᠢx"`)
+- `эмгэглүүлэх` (seed had `"ᠡᠮᠭᠡᠭᠯᠡᠭᠦᠯᠡx"`)
+- `эмгэглэх` (seed had `"ᠡᠮᠭᠡᠭᠯᠡx"`)
+- `эмгэгрэх` (seed had `"ᠡᠮᠭᠡᠭᠷᠡx"`)
+- `эмгэнэх` (seed had `"ᠡᠮᠭᠡᠨᠢx"`)
+- `эмжих` (seed had `"ᠡᠮᠵᠢx"`)
+- `эмжүүлэх` (seed had `"ᠡᠮᠵᠢᠭᠦᠯᠡx"`)
+- `эмжээрлүүлэх` (seed had `"ᠡᠮᠵᠢᠶᠡᠷᠯᠡᠭᠦᠯᠡx"`)
+- `эмжээрлэх` (seed had `"ᠡᠮᠵᠢᠶᠡᠷᠢᠯᠡx"`)
+- `эмзэглүүлэх` (seed had `"ᠡᠮᠵᠡᠭᠯᠡᠭᠦᠯᠡx"`)
+- `эмзэглэх` (seed had `"ᠡᠮᠵᠡᠭᠯᠡx"`)
+- `эмлэх` (seed had `"ᠡᠮᠡᠯᠡx"`)
+- `эмнүүлэх` (seed had `"ᠡᠮᠨᠡᠭᠦᠯᠡx"`)
+- `энэхэн` (seed had `"ᠡ���ᠡᠬᠡᠨ"`)
+- `ялаа` (seed had `"yalaa"`)
+- `ялман` (seed had `"yalmanchoiron"`)
+- `ямаа` (seed had `"yamaa"`)
+- `янгадай` (seed had `"yangadaiyanguudai"`)
+- `янзагалах` (seed had `"ᠢᠨᠵ��ᠭᠠᠯᠠᠬᠤ"`)
+- `нийслэлийн` (seed had `"您输入的文本过多！"`)
+
+<!-- wmk-import:end -->

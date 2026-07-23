@@ -1,0 +1,607 @@
+[
+  {
+    "cyrillic": "в",
+    "candidates": [
+      {
+        "traditional": "ᠸ",
+        "latin": "v",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваа",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠ",
+        "latin": "vaa",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваадагнах",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠳᠠᠩᠨᠠᠬᠤ",
+        "latin": "vaadagnah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваадагнуулах",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠳᠠᠩᠨᠠᠭᠤᠯᠬᠤ",
+        "latin": "vaadagnuulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваадан",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠳᠠᠩ",
+        "latin": "vaadan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваал",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠯᠠ",
+        "latin": "vaal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваалах",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠯᠠᠬᠤ",
+        "latin": "vaalah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваалуулах",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "vaaluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваар",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠭᠠᠷ",
+        "latin": "vaar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваарлах",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠭᠠᠷᠯᠠᠬᠤ",
+        "latin": "vaarlah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваарлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠭᠠᠷᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "vaarluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваарч",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠭᠠᠷᠴᠢ",
+        "latin": "vaarch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваатал",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠲᠤᠯ",
+        "latin": "vaatal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваатах",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠭᠠᠲᠤᠬᠤ",
+        "latin": "vaatah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вагон",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠭᠣᠨ",
+        "latin": "vagon",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вазелин",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠽᠧᠯᠢᠨ",
+        "latin": "vazyelin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваккум",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠺᠺᠦ᠋ᠮ",
+        "latin": "vakkum",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вакцин",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠺᠼᠢᠨ",
+        "latin": "vaktsin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вакцинжуулалт",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠺᠼᠢᠨᠵᠢᠭᠤᠯᠤᠯᠲᠠ",
+        "latin": "vaktsinjuulalt",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вакцинжуулах",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠺᠼᠢᠨᠵᠢᠭᠤᠯᠬᠤ",
+        "latin": "vaktsinjuulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вальс",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠯᠢᠰ",
+        "latin": "valis",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "валют",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠯᠶᠦ᠋ᠲ",
+        "latin": "valyut",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ван",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠩ",
+        "latin": "van",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вандан",
+    "candidates": [
+      {
+        "traditional": "ᠪᠠᠨᠳᠠᠩ",
+        "latin": "vandan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вандуй",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠩᠳᠤᠢ",
+        "latin": "vandui",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ванчуу",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠩᠴᠤᠤ",
+        "latin": "vanchuu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вар",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠷ",
+        "latin": "var",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ватт",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠲ",
+        "latin": "vatt",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ваучер",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠤᠢᠴᠧᠷ",
+        "latin": "vauchyer",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вачир",
+    "candidates": [
+      {
+        "traditional": "ᠸᠠᠴᠢᠷ",
+        "latin": "vachir",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вегетатив",
+    "candidates": [
+      {
+        "traditional": "ᠸᠧᠭᠧᠲ᠋ᠠᠲ᠋ᠢᠸ",
+        "latin": "vyegyetativ",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вексель",
+    "candidates": [
+      {
+        "traditional": "ᠸᠧᠺᠰᠧᠯ",
+        "latin": "vyeksyeli",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вена",
+    "candidates": [
+      {
+        "traditional": "ᠸᠸᠨᠠ",
+        "latin": "vyena",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вивангирид",
+    "candidates": [
+      {
+        "traditional": "ᠸᠢᠸᠠᠩᠭᠢᠷᠢᠳ᠋",
+        "latin": "vivangirid",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "видео",
+    "candidates": [
+      {
+        "traditional": "ᠸᠢᠳᠢᠣ᠋",
+        "latin": "vidyeo",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "видодо",
+    "candidates": [
+      {
+        "traditional": "ᠸᠢᠳᠣᠳᠣ",
+        "latin": "vidodo",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "виз",
+    "candidates": [
+      {
+        "traditional": "ᠸᠢᠰᠠ",
+        "latin": "viz",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "виза",
+    "candidates": [
+      {
+        "traditional": "ᠸᠢᠰᠠ",
+        "latin": "viza",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вий",
+    "candidates": [
+      {
+        "traditional": "ᠸᠢᠢ",
+        "latin": "vii",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "винтов",
+    "candidates": [
+      {
+        "traditional": "ᠸᠢᠨᠲ᠋ᠣᠸ",
+        "latin": "vintov",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "виртуал",
+    "candidates": [
+      {
+        "traditional": "ᠸᠢᠷᠲᠤᠸᠠᠯ",
+        "latin": "virtual",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вирус",
+    "candidates": [
+      {
+        "traditional": "ᠸᠢᠷᠦᠰ",
+        "latin": "virus",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "витамин",
+    "candidates": [
+      {
+        "traditional": "ᠸᠢᠲ᠋ᠠᠮᠢᠨ",
+        "latin": "vitamin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "витрин",
+    "candidates": [
+      {
+        "traditional": "ᠸᠢᠲᠷᠢᠨ",
+        "latin": "vitrin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вишай",
+    "candidates": [
+      {
+        "traditional": "ᠸᠢᠱᠠᠢ",
+        "latin": "vishai",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вогон",
+    "candidates": [
+      {
+        "traditional": "ᠸᠭᠠᠨ",
+        "latin": "vogon",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вокзал",
+    "candidates": [
+      {
+        "traditional": "ᠸᠣᠺᠽᠠᠯ",
+        "latin": "vokzal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "волейбол",
+    "candidates": [
+      {
+        "traditional": "ᠸᠣᠯᠧᠢᠪᠣᠯ",
+        "latin": "volyeibol",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "володимир",
+    "candidates": [
+      {
+        "traditional": "ᠸᠣᠯᠣᠳᠢᠮᠢᠷ",
+        "latin": "volodimir",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вольт",
+    "candidates": [
+      {
+        "traditional": "ᠸᠣᠯᠲ᠋",
+        "latin": "volit",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вольтметр",
+    "candidates": [
+      {
+        "traditional": "ᠸᠣᠯᠲ᠋ᠮᠧᠲ᠋ᠷ",
+        "latin": "volitmyetr",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вольфрам",
+    "candidates": [
+      {
+        "traditional": "ᠸᠣᠯᠹᠷᠠᠮ",
+        "latin": "volifram",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вэ",
+    "candidates": [
+      {
+        "traditional": "ᠪᠤᠢ",
+        "latin": "ve",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вэб",
+    "candidates": [
+      {
+        "traditional": "ᠸᠪ",
+        "latin": "veb",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "вэлзэх",
+    "candidates": [
+      {
+        "traditional": "ᠪᠦᠯᠵᠡᠬᠦ",
+        "latin": "velzeh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  }
+]

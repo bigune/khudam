@@ -1,0 +1,607 @@
+[
+  {
+    "cyrillic": "р",
+    "candidates": [
+      {
+        "traditional": "ᠷ",
+        "latin": "r",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "равжим",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠪᠵᠠᠮ",
+        "latin": "ravjim",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "радиатор",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠳᠢᠶᠠᠲ᠋ᠣᠷ",
+        "latin": "radiator",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "радий",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠳᠢ",
+        "latin": "radii",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "радикал",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠳᠢᠺᠠᠯ",
+        "latin": "radikal",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "радикализм",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠳᠢᠺᠠᠯᠢᠰᠮ",
+        "latin": "radikalizm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "радио",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠳᠢᠣ᠋",
+        "latin": "radio",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "радиограмм",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠳᠢᠣᠭᠷᠠᠮ",
+        "latin": "radiogramm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "радиосонирхогч",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠳᠢᠣᠰᠣᠨᠢᠷᠬᠠᠭᠴᠢ",
+        "latin": "radiosonirhogch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "радиостанци",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠳᠢᠣᠰᠲ᠋ᠠᠨᠼᠢ",
+        "latin": "radiostantsi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "радиотелеграмм",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠳᠢᠣᠲ᠋ᠧᠯᠡᠭᠷᠠᠮ",
+        "latin": "radiotyelyegramm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "радиотехник",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠳᠢᠣᠲ᠋ᠧᠭᠨᠢᠭ",
+        "latin": "radiotyehnik",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "радиус",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠳᠢᠦ᠋ᠰ",
+        "latin": "radius",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "район",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠶᠣᠨ",
+        "latin": "raion",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рам",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠮ",
+        "latin": "ram",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рапорт",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠫᠣᠷᠲ",
+        "latin": "raport",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рах",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠬᠤ",
+        "latin": "rah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "раху",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠬᠤ",
+        "latin": "rahu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рашаагнах",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠰᠢᠶᠠᠩᠨᠠᠬᠤ",
+        "latin": "rashaagnah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рашаан",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠰᠢᠶᠠᠨ",
+        "latin": "rashaan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рашаантах",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠰᠢᠶᠠᠨᠲᠤᠬᠤ",
+        "latin": "rashaantah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "реализм",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠠᠯᠢᠰᠮ",
+        "latin": "ryealizm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "реалист",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠠᠯᠢᠰᠲ",
+        "latin": "ryealist",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "редактор",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠳᠠᠺᠲᠣᠷ",
+        "latin": "ryedaktor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "редакторлох",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠳᠠᠺᠲ᠋ᠣᠷᠯᠠᠬᠤ",
+        "latin": "ryedaktorloh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "редакторлуулах",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠳᠠᠺᠲᠣᠷᠯᠠᠭᠤᠯᠬᠤ",
+        "latin": "ryedaktorluulah",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "редакц",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠳᠠᠺᠼ",
+        "latin": "ryedakts",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "резин",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠽᠢᠨ",
+        "latin": "ryezin",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рекорд",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠺᠣᠷᠳ᠋",
+        "latin": "ryekord",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ректор",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠺᠲ᠋ᠣᠷ",
+        "latin": "ryektor",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ремко",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠮᠺᠣ",
+        "latin": "ryemko",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рен",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠨ",
+        "latin": "ryen",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рентген",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠨ᠋ᠲ᠋ᠭᠧᠨ",
+        "latin": "ryentgyen",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рентгенграмм",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠨ᠋ᠲ᠋ᠭᠧᠨᠭᠷᠠᠮ",
+        "latin": "ryentgyengramm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рентгенграфи",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠨ᠋ᠲ᠋ᠭᠧᠨᠭᠷᠠᠹᠢ",
+        "latin": "ryentgyengrafi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рентгенч",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠨ᠋ᠲ᠋ᠭᠧᠨᠴᠢ",
+        "latin": "ryentgyench",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ренчинлхүмбэ",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠨ᠋ᠴᠢᠩᠯᠬᠦᠮᠪᠦ",
+        "latin": "ryenchinlhumbe",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "репо",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠫᠣ",
+        "latin": "ryepo",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ресторан",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠰᠲ᠋ᠣᠷᠠᠨ",
+        "latin": "ryestoran",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "референт",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠹᠧᠷᠧᠨᠲ",
+        "latin": "ryefyeryent",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рефлекс",
+    "candidates": [
+      {
+        "traditional": "ᠷᠧᠹᠯᠧᠺᠰ",
+        "latin": "ryeflyeks",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "риалган",
+    "candidates": [
+      {
+        "traditional": "ᠷᠢᠶᠠᠯᠭᠠᠨ",
+        "latin": "rialgan",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "риваади",
+    "candidates": [
+      {
+        "traditional": "ᠷᠢᠪᠠᠳᠢ",
+        "latin": "rivaadi",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рид",
+    "candidates": [
+      {
+        "traditional": "ᠷᠢᠳᠢ",
+        "latin": "rid",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "роваагинь",
+    "candidates": [
+      {
+        "traditional": "ᠷᠪᠠᠭᠢᠨᠢ",
+        "latin": "rovaagini",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ройтерс",
+    "candidates": [
+      {
+        "traditional": "ᠷᠣᠢᠲ᠋ᠧᠷᠰ",
+        "latin": "roityers",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "роль",
+    "candidates": [
+      {
+        "traditional": "ᠷᠣᠯᠢ",
+        "latin": "roli",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "роман",
+    "candidates": [
+      {
+        "traditional": "ᠷᠣᠮᠠᠨ",
+        "latin": "roman",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "романс",
+    "candidates": [
+      {
+        "traditional": "ᠷᠣᠮᠠᠨᠰ",
+        "latin": "romans",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "романтизм",
+    "candidates": [
+      {
+        "traditional": "ᠷᠣᠮᠠᠨᠲ᠋ᠢᠰᠮ",
+        "latin": "romantizm",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "романтикч",
+    "candidates": [
+      {
+        "traditional": "ᠷᠣᠮᠠᠨᠲ᠋ᠢᠭᠴᠢ",
+        "latin": "romantikch",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ророма",
+    "candidates": [
+      {
+        "traditional": "ᠷᠣᠷᠣᠮ᠎᠊ᠠ",
+        "latin": "roroma",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рт",
+    "candidates": [
+      {
+        "traditional": "ᠷᠲ",
+        "latin": "rt",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "руу",
+    "candidates": [
+      {
+        "traditional": "ᠷᠤ",
+        "latin": "ruu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рүү",
+    "candidates": [
+      {
+        "traditional": "ᠷᠦᠦ",
+        "latin": "ruu",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  }
+]
