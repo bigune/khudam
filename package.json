@@ -1,0 +1,19 @@
+{
+  "name": "khudam-repo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "validate": "bun scripts/validate.ts",
+    "import:wmk": "bun scripts/import-wmk.ts",
+    "build:data": "bun scripts/build-data.ts",
+    "build": "bun run build:data && bun --cwd packages/converter run build",
+    "test": "bun run build:data && bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "typescript": "^5.5.0"
+  }
+}
