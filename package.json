@@ -9,7 +9,7 @@
     "validate": "bun scripts/validate.ts",
     "import:wmk": "bun scripts/import-wmk.ts",
     "build:data": "bun scripts/build-data.ts",
-    "build": "bun run build:data && bun --cwd packages/converter run build",
+    "build": "bun run build:data && tsc -p packages/converter/tsconfig.build.json",
     "test": "bun run build:data && bun test"
   },
   "devDependencies": {
