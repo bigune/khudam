@@ -18,6 +18,15 @@
     "README.md"
   ],
   "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigune/khudam.git",
+    "directory": "packages/converter"
+  },
+  "homepage": "https://github.com/bigune/khudam#readme",
+  "bugs": {
+    "url": "https://github.com/bigune/khudam/issues"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json"
   },
