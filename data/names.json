@@ -1,0 +1,57 @@
+[
+  {
+    "cyrillic": "баатар",
+    "candidates": [
+      {
+        "traditional": "ᠪᠠᠭᠠᠲᠤᠷ",
+        "latin": "baatar",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "болд",
+    "candidates": [
+      {
+        "traditional": "ᠪᠣᠯᠣᠳ",
+        "latin": "bold",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "оюун",
+    "candidates": [
+      {
+        "traditional": "ᠣᠶᠤᠨ",
+        "latin": "oyun",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "сүх",
+    "candidates": [
+      {
+        "traditional": "ᠰᠦᠬᠡ",
+        "latin": "suh",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "цэцэг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠡᠴᠡᠭ",
+        "latin": "tsetseg",
+        "verified": false,
+        "source": "wmk-import"
+      }
+    ]
+  }
+]
