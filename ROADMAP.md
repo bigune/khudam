@@ -1,6 +1,6 @@
 # Khudam roadmap / Замын зураг
 
-Зорилго том — монгол бичгийн нээлттэй дижитал гэр болох; ажиллагааны дарамт байнга тэг байх ёстой (статик өгөгдөл, сервер байхгүй). The mission is big; the operational budget stays near zero. Growth comes from community and data quality, in this order: more verified data → more reviewers → governance docs → richer tooling.
+Монгол бичгийн нээлттэй, дижитал төв болох том зорилготой; үйл ажиллагааны ачаалал хамгийн бага хэмжээнд байх ёстой (статик өгөгдөл, сервер байхгүй). The mission is big; the operational budget stays near zero. Growth comes from community and data quality, in this order: more verified data → more reviewers → governance docs → richer tooling.
 
 ## Phase 0 — scaffold ✅ (2026-07-24)
 

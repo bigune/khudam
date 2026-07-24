@@ -1,6 +1,6 @@
 # Өгөгдлийн эх сурвалж / Data sources
 
-Энэ файл үгсийн сангийн бичлэг бүр хаанаас ирснийг бүртгэнэ. / This file records
+Энэ файл үгсийн сангийн бичлэг бүр хаанаас үүсэлтэйг бүртгэнэ. / This file records
 where every layer of the lexicon comes from. The `source` field on each candidate
 refers to the sections below.
 
@@ -18,20 +18,20 @@ refers to the sections below.
   the whole layer must be treated as an unverified bootstrap.
 - **Known defects of the seed:**
   - One-to-many mappings were collapsed to a single form (e.g. **уул** carries
-    only ᠤᠤᠯ *uul* "original"; ᠠᠭᠤᠯᠠ *agula* "mountain" is missing entirely).
+    only ᠤᠤᠯ _uul_ "original"; ᠠᠭᠤᠯᠠ _agula_ "mountain" is missing entirely).
     Recovering missing candidates is core community work.
   - 13th-century orthography cannot be derived from Cyrillic by rules, so any
     individual machine-converted form may simply be wrong.
 
 ### Import statistics (`scripts/import-wmk.ts`)
 
-| | |
-|---|---|
-| Seed rows | 28,263 |
-| Imported entries | 27,977 (30 shards, all `verified: false`) |
-| Homoglyph repairs (Latin `x` → Cyrillic `х`) | 116 |
-| Skipped — cyrillic form has dictionary markup / corruption | 74 |
-| Skipped — traditional field is not Mongolian script | 212 |
+|                                                            |                                           |
+| ---------------------------------------------------------- | ----------------------------------------- |
+| Seed rows                                                  | 28,263                                    |
+| Imported entries                                           | 27,977 (30 shards, all `verified: false`) |
+| Homoglyph repairs (Latin `x` → Cyrillic `х`)               | 116                                       |
+| Skipped — cyrillic form has dictionary markup / corruption | 74                                        |
+| Skipped — traditional field is not Mongolian script        | 212                                       |
 
 Every skipped row is listed in [`REVIEW.md`](REVIEW.md) so humans can recover it.
 The importer performs **no orthographic corrections** — the homoglyph repair is a

@@ -6,21 +6,21 @@
 
 ## Монгол
 
-Khudam-д тусламж хэлбэр бүрээр хэрэгтэй, гэхдээ хамгийн үнэтэй нь **үгсийн сангийн засвар** юм. Програмчлал огт мэдэхгүй байсан ч болно — GitHub-ийн вэб хуудаснаас шууд засвар оруулах алхам алхмаар зааврыг доор бичив.
+Khudam-д ямар ч төрлийн дэмжлэг нээлттэй хэдий ч, хамгийн үнэтэй хувь нэмэр бол **үгсийн сангийн засвар** юм. Програмчлал огт мэдэхгүй байсан ч болно — GitHub-ийн вэб хуудаснаас шууд засвар оруулах дэлгэрэнгүй зааврыг доор бичив.
 
 ### Юуг засах вэ?
 
 - Монгол бичгийн буруу хэлбэрийг зөв болгох (хамгийн чухал!)
 - Нэг кирилл үг олон утгатай бол дутуу хувилбарыг нэмэх (жишээ нь **уул** гэдэг үг ᠠᠭᠤᠯᠠ “уул ус” ба ᠤᠤᠯ “уул нь” гэсэн хоёр өөр үг байж болно)
 - `sense` (утгын тайлбар) нэмэх
-- Дутуу үг, дутуу нэр нэмэх
+- Орхигдсон үг, нэрсийг нэмэх
 
-### Вэб хуудаснаас үг засах — алхам алхмаар
+### Вэб хуудаснаас үг засах алхмууд
 
-1. **Файлаа ол.** Үгийн эхний үсгээр нь `data/lexicon/` доторх файлыг нээнэ. Жишээ: «уул» гэдэг үг `data/lexicon/у.json` дотор бий. Хүний нэр бол `data/names.json`.
-2. **Үгээ ол.** Файл нээгдсэн үед гар дээрээ `Ctrl+F` (Mac: `Cmd+F`) дараад `"cyrillic": "уул"` гэж хайна.
-3. **Засварын горимд ор.** Файлын баруун дээд буланд байгаа харандааны зураг (✏️ *Edit this file*) дээр дар. GitHub «fork» үүсгэх тухай асуувал зөвшөөрнө үү (энэ нь таны нэр дээрх түр хуулбар гэсэн үг).
-4. **Засвараа хий.** Жишээ бичлэг:
+1. **Файлаа олох.** Үгийн эхний үсгээр нь `data/lexicon/` доторх файлыг нээнэ. Жишээ: «уул» гэдэг үг `data/lexicon/у.json` дотор бий. Хүний нэр бол `data/names.json`.
+2. **Үгээ олох.** Файл нээгдсэн үед гар дээрээ `Ctrl+F` (Mac: `Cmd+F`) дараад `"cyrillic": "уул"` гэж хайна.
+3. **Засварын горимд орох.** Файлын баруун дээд буланд байгаа харандааны зураг (✏️ _Edit this file_) дээр дарна. GitHub «fork» үүсгэх тухай асуувал зөвшөөрнө үү (энэ нь таны нэр дээрх түр хуулбар гэсэн үг).
+4. **Засвар хийх.** Жишээ бичлэг:
 
    ```json
    {
@@ -40,24 +40,25 @@ Khudam-д тусламж хэлбэр бүрээр хэрэгтэй, гэхдэ�
    - Шинэ хувилбар нэмэх бол `candidates` дотор дээрхтэй ижил бүтэцтэй блок нэмнэ. Хоёр ба түүнээс олон хувилбартай бол **хувилбар бүрд `"sense"`** (утгын ялгаа, жишээ нь `"sense": "mountain"`) заавал бичнэ.
    - Хашилт `"`, таслал `,` , хаалт `{ }`-ыг бүү мартаарай — JSON форматад бүгд чухал. Алдвал айх зүйлгүй: автомат шалгагч алдааг тань энгийн үгээр тайлбарлаж хэлнэ.
    - `"verified"`-ийг өөрөө `true` болгох шаардлагагүй — хянагч баталгаажуулсны дараа тавьдаг.
-5. **Илгээ.** Хуудасны дээд хэсгийн ногоон *Commit changes...* товчийг дараад:
-   - Товч тайлбар бич (жишээ: «уул: ᠠᠭᠤᠯᠠ хувилбар нэмэв»);
-   - **Эх сурвалжаа дурд** — аль толь бичиг, сурах бичиг, эсвэл өөрийн мэдлэг үү? Энэ нь хянагчид маш их тус болно;
-   - *Propose changes* → *Create pull request* дарна.
-6. **Хүлээ.** Автомат шалгалт ажиллана (формат зөв эсэхийг шалгана). Дараа нь хянагч хүн засварыг тань үзэж, асуулт байвал PR дотор ярилцаад, нийлүүлж авна. Баярлалаа! 🎉
+
+5. **Илгээх.** Хуудасны дээд хэсгийн ногоон _Commit changes..._ товчийг дараад:
+   - Товч тайлбар бичнэ (жишээ: «уул: ᠠᠭᠤᠯᠠ хувилбар нэмэв»);
+   - **Эх сурвалжаа дурдна** — аль толь бичиг, сурах бичиг, эсвэл өөрийн мэдлэг үү? Энэ нь хянагчид маш их тус болно;
+   - _Propose changes_ → _Create pull request_ дарна.
+6. **Хүлээх.** Автомат шалгалт ажиллана (формат зөв эсэхийг шалгана). Дараа нь хянагч хүн засварыг тань үзэж, асуулт байвал PR дотор ярилцаад, нийлүүлж авна. Баярлалаа! 🎉
 
 ### Шинэ үг нэмэх
 
-Мөн адил, гэхдээ хоёр зүйл анхаараарай:
+Дээрхтэй ижил, гэхдээ хоёр зүйлийг анхаараарай:
 
 - Файл доторх үгс **кириллээрээ цагаан толгойн дарааллаар** байх ёстой — шинэ үгээ зөв байрлалд нь оруулна (алдвал шалгагч хэлж өгнө).
-- `"source"`-д `"community"` гэж бичнэ.
+- `"source"` талбарт `"community"` гэж бичнэ.
 
 ### Дүрэм
 
 - Нэг PR-д нэг сэдвийн (нэг үг, эсвэл цөөн холбоотой үгсийн) засвар байвал хамгийн хурдан хянагдана.
 - Монгол бичгийн хэлбэрийг **стандарт Юникодоор** (U+1800–U+18AF) бичнэ. Бусад кодчилол хэрэглэхгүй.
-- Маргаантай тохиолдолд эх сурвалжтай нь ярилцъя — PR бол яриа өрнүүлэх газар.
+- Маргаантай тохиолдлыг эх сурвалжид тулгуурлан шийднэ — PR бол хэлэлцүүлэг өрнүүлэх талбар юм.
 
 ### Кодод хувь нэмэр оруулах
 
@@ -87,7 +88,7 @@ Khudam welcomes every kind of help, but the most valuable is **lexicon correctio
 
 1. **Find the file.** Lexicon files are sharded by first letter: the word «уул» lives in `data/lexicon/у.json`. Personal names live in `data/names.json`.
 2. **Find the word.** With the file open, press `Ctrl+F` (Mac: `Cmd+F`) and search for `"cyrillic": "уул"`.
-3. **Enter edit mode.** Click the pencil icon (✏️ *Edit this file*) at the top right. If GitHub asks to create a fork, accept — that is just your personal working copy.
+3. **Enter edit mode.** Click the pencil icon (✏️ _Edit this file_) at the top right. If GitHub asks to create a fork, accept — that is just your personal working copy.
 4. **Make the change.** An entry looks like this:
 
    ```json
@@ -108,10 +109,11 @@ Khudam welcomes every kind of help, but the most valuable is **lexicon correctio
    - To add an alternative, add another block of the same shape inside `candidates`. When there are two or more candidates, **every candidate must have a `"sense"`** (a short meaning label, e.g. `"sense": "mountain"`).
    - Mind the quotes, commas, and braces — JSON needs all of them. Don't worry about mistakes: the automatic checker explains any problem in plain language.
    - You don't need to set `"verified": true` yourself — a reviewer does that after confirming.
-5. **Submit.** Click the green *Commit changes...* button:
+
+5. **Submit.** Click the green _Commit changes..._ button:
    - Write a short description (e.g. “уул: add ᠠᠭᠤᠯᠠ candidate”);
    - **Cite your source** — which dictionary or textbook, or personal knowledge? This helps the reviewer a lot;
-   - *Propose changes* → *Create pull request*.
+   - _Propose changes_ → _Create pull request_.
 6. **Wait.** Automated validation runs first (format checks). Then a human reviewer looks at your change, discusses if needed, and merges. Thank you! 🎉
 
 ### Adding a new word
