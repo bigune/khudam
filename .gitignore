@@ -4,6 +4,10 @@ node_modules/
 # build artifacts
 dist/
 packages/converter/src/generated/
+apps/web/.next/
+apps/web/out/
+apps/web/next-env.d.ts
+.vercel/
 
 # logs & OS noise
 *.log
