@@ -8,6 +8,7 @@
     "build": "bun run --cwd ../.. build && next build"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "khudam": "workspace:*",
     "next": "^16.2.11",
     "react": "^19.2.8",
