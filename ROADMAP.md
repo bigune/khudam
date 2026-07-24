@@ -10,11 +10,15 @@
 - `khudam` package v0: `lookupWord` + `convertText`, zero deps, data compiled in at build time, flagged rule-based fallback for unknown words
 - `data/names.json` starter, empty `data/suffixes.json`
 
-## Phase 1 — name verification + suray.mn integration
+## Phase 1 — name verification + public converter page
 
 - Recruit reviewers who read монгол бичиг; verify `names.json` toward 100%
-- Publish `khudam` to npm; consume it from suray.mn (fully client-side)
-- Honest ambiguity UI on the website: show all candidates + verified badges
+- ✅ Publish `khudam` to npm (0.1.0, 2026-07-24)
+- ✅ Converter UI as `apps/web` workspace in this repo → khudam.suray.mn
+  (own Vercel project; builds from the workspace so merged data PRs go live
+  without an npm release; suray.mn links to it)
+- Honest ambiguity UI: show all candidates + verified badges (v0 shipped
+  with `apps/web`; refine with real-user feedback)
 - Recover the 286 seed rows listed in `data/REVIEW.md`
 
 ## Phase 2 — suffix engine

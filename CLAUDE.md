@@ -2,7 +2,7 @@
 
 ## What this project is
 
-Khudam is an open-source Cyrillic ↔ Traditional Mongolian script (монгол бичиг) lexicon and converter library. The name comes from Худам монгол бичиг, the classical/historical name of the script itself. Public naming: "Khudam — нээлттэй монгол бичиг хөрвүүлэгч" (repo: khudam, npm package: khudam; keep "монгол бичиг хөрвүүлэгч" in descriptions for searchability). The long-term mission: become the free, open, standard-Unicode home for digital traditional Mongolian writing — a community-corrected lexicon anyone can use, plus a client-side conversion engine. The website suray.mn (separate repo: Next.js + Tailwind + next-intl, fully static, Vercel free tier) will consume this as an npm package.
+Khudam is an open-source Cyrillic ↔ Traditional Mongolian script (монгол бичиг) lexicon and converter library. The name comes from Худам монгол бичиг, the classical/historical name of the script itself. Public naming: "Khudam — нээлттэй монгол бичиг хөрвүүлэгч" (repo: khudam, npm package: khudam; keep "монгол бичиг хөрвүүлэгч" in descriptions for searchability). The long-term mission: become the free, open, standard-Unicode home for digital traditional Mongolian writing — a community-corrected lexicon anyone can use, plus a client-side conversion engine. The converter's public UI lives in this repo (`apps/web`, deployed at khudam.suray.mn) so merged data PRs go live without an npm release; the broader site suray.mn (separate repo) links to it and can consume the npm package for anything else.
 
 The ambition is large — mainstream infrastructure for a national script — but the maintenance budget is a few hours per week. Resolve that tension with a **lean core**: zero ops, static data, contributor accessibility. Complexity must pay rent; scale comes from community and data quality, not from features.
 
@@ -24,7 +24,7 @@ Toolchain: **bun** (runtime, package manager, script runner, and test runner). T
 - Main block: U+1800–U+18AF. Also uses FVS1–FVS3 (U+180B–U+180D) free variation selectors, MVS (U+180E), and NNBSP (U+202F) before suffixes.
 - Letters take positional forms (initial/medial/final) rendered by the font — we store logical code points only, never presentation forms.
 - Several distinct letters share identical glyphs; encoding correctness cannot be judged visually. Validate by code point, not by appearance.
-- Font support is inconsistent across OS/browsers. The library never assumes rendering works; the website layer deals with fonts (Noto Sans Mongolian webfont, `writing-mode: vertical-lr`) and PNG export.
+- Font support is inconsistent across OS/browsers. The library never assumes rendering works; the web layer (`apps/web`) deals with fonts (Noto Sans Mongolian webfont, `writing-mode: vertical-lr`) and PNG export.
 - Use standard Unicode only. Do NOT adopt Bolorsoft's proprietary "Тунгаамал" encoding model.
 
 **Competitive context:** Bolorsoft's KIMO is the commercial incumbent (paid, Windows, MS Word plugin). We do not compete on full-document official accuracy. Our wedge: free, web-first, instant conversion of names / words / short phrases, with honest ambiguity UI and verified-quality tiers.
@@ -70,6 +70,8 @@ Watchlist: the CoPiT paper (arXiv 2607.05849) released a 14,125-entry verified l
 ## Package layout
 
 ```
+apps/web/               # static Next.js converter UI -> khudam.suray.mn (own Vercel project,
+                        #   root directory apps/web; consumes khudam via the bun workspace)
 packages/converter/     # TypeScript npm package: khudam
   src/
     index.ts            # public API
