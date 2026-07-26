@@ -308,8 +308,6 @@ The seed's traditional column contains Latin/Cyrillic text instead of Mongolian 
 
 ## Systematic correction: ᠶᠢ (U+1836 U+1822) → ᠢ (U+1822)
 
-Монгол бичгийн дунд байрлалд ᠶ (U+1836) ба ᠢ (U+1822) бараг ижил дүрстэй. Тийм учраас суурь өгөгдлийн (`wmk-import`) машин хөрвүүлэгч ᠢ-гийн өмнө илүүц ᠶ нэмж, кирилл **й**-г ᠶᠢ (ya+i) гэж буруу хадгалсан байна. Зөв нь ганц ᠢ (нэг шүд) — өмнөх эгшигтэйгээ диптонг үүсгэнэ (жишээ: сайн ᠰᠠᠶᠢᠨ → ᠰᠠᠢᠨ). Эх хэлтэн зэрэгцүүлэн үзэж баталсан. / In medial position ᠶ (U+1836) and ᠢ (U+1822) are near-homoglyphs, so the bootstrap converter inserted a spurious ᠶ before ᠢ, storing Cyrillic **й** as ᠶᠢ (ya+i). The correct form is a single ᠢ (one tooth), forming the diphthong with the preceding vowel (e.g. сайн ᠰᠠᠶᠢᠨ → ᠰᠠᠢᠨ). Confirmed with a native speaker via side-by-side rendering — a systematic wmk-import defect, not a per-word one.
-
 **Correction applied** via [`scripts/fix-yi-digraph.ts`](../scripts/fix-yi-digraph.ts): medial ᠶᠢ → ᠢ (drop the spurious ᠶ) in the **2,780** entries whose Cyrillic key contains й. Full rationale and citations: [ENCODING.md, Decision 001](ENCODING.md). These remain `verified: false` — a machine correction is not human verification, so they still need review before anyone sets `verified: true`.
 
 Word-initial ᠶᠢ (a legitimate е/ё/ю/я glide, e.g. `ес` → ᠶᠢᠰᠦ) and entries with no й were deliberately **excluded** from the automatic fix and are listed below for a human to decide. Rerun the script with `--include-no-short-i` only after reviewing them.
