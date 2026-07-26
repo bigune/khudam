@@ -124,7 +124,7 @@
     "cyrillic": "енхийх",
     "candidates": [
       {
-        "traditional": "ᠬᠥᠩᠬᠦᠶᠢᠬᠦ",
+        "traditional": "ᠬᠥᠩᠬᠦᠢᠬᠦ",
         "latin": "yenhiih",
         "verified": false,
         "source": "wmk-import"
@@ -322,7 +322,7 @@
     "cyrillic": "ерөнхийдөх",
     "candidates": [
       {
-        "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠶᠢᠳᠡᠬᠦ",
+        "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠢᠳᠡᠬᠦ",
         "latin": "yerunhiiduh",
         "verified": false,
         "source": "wmk-import"
@@ -333,7 +333,7 @@
     "cyrillic": "ерөнхийлөгч",
     "candidates": [
       {
-        "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠶᠢᠯᠡᠭᠴᠢ",
+        "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠢᠯᠡᠭᠴᠢ",
         "latin": "yerunhiilugch",
         "verified": false,
         "source": "wmk-import"
@@ -344,7 +344,7 @@
     "cyrillic": "ерөнхийлөх",
     "candidates": [
       {
-        "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠶᠢᠯᠡᠬᠦ",
+        "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠢᠯᠡᠬᠦ",
         "latin": "yerunhiiluh",
         "verified": false,
         "source": "wmk-import"
@@ -586,7 +586,7 @@
     "cyrillic": "еэтийх",
     "candidates": [
       {
-        "traditional": "ᠶᠡᠲᠦᠶᠢᠬᠦ",
+        "traditional": "ᠶᠡᠲᠦᠢᠬᠦ",
         "latin": "yetiih",
         "verified": false,
         "source": "wmk-import"

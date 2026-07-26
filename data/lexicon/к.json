@@ -1125,7 +1125,7 @@
     "cyrillic": "комбайн",
     "candidates": [
       {
-        "traditional": "ᠺᠣᠮᠪᠠᠶᠢᠨ",
+        "traditional": "ᠺᠣᠮᠪᠠᠢᠨ",
         "latin": "kombain",
         "verified": false,
         "source": "wmk-import"
@@ -1136,7 +1136,7 @@
     "cyrillic": "комбайнч",
     "candidates": [
       {
-        "traditional": "ᠺᠣᠮᠪᠠᠶᠢᠨᠴᠢ",
+        "traditional": "ᠺᠣᠮᠪᠠᠢᠨᠴᠢ",
         "latin": "kombainch",
         "verified": false,
         "source": "wmk-import"
@@ -1862,7 +1862,7 @@
     "cyrillic": "крейсер",
     "candidates": [
       {
-        "traditional": "ᠺᠷᠠᠶᠢᠰᠧᠷ",
+        "traditional": "ᠺᠷᠠᠢᠰᠧᠷ",
         "latin": "kryeisyer",
         "verified": false,
         "source": "wmk-import"

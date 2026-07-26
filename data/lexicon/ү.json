@@ -91,7 +91,7 @@
     "cyrillic": "үгийгүү",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠭᠦᠦ",
+        "traditional": "ᠦᠭᠡᠢᠭᠦᠦ",
         "latin": "ugiiguu",
         "verified": false,
         "source": "wmk-import"
@@ -102,7 +102,7 @@
     "cyrillic": "үгийрэл",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠷᠡᠯ",
+        "traditional": "ᠦᠭᠡᠢᠷᠡᠯ",
         "latin": "ugiirel",
         "verified": false,
         "source": "wmk-import"
@@ -113,7 +113,7 @@
     "cyrillic": "үгийрэх",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠷᠡᠬᠦ",
+        "traditional": "ᠦᠭᠡᠢᠷᠡᠬᠦ",
         "latin": "ugiireh",
         "verified": false,
         "source": "wmk-import"
@@ -124,7 +124,7 @@
     "cyrillic": "үгийрүүлэх",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠷᠡᠭᠦᠯᠬᠦ",
+        "traditional": "ᠦᠭᠡᠢᠷᠡᠭᠦᠯᠬᠦ",
         "latin": "ugiiruuleh",
         "verified": false,
         "source": "wmk-import"
@@ -135,7 +135,7 @@
     "cyrillic": "үгийсгэл",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠰᠬᠡᠯ",
+        "traditional": "ᠦᠭᠡᠢᠰᠬᠡᠯ",
         "latin": "ugiisgel",
         "verified": false,
         "source": "wmk-import"
@@ -322,7 +322,7 @@
     "cyrillic": "үгүйдэх",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠳᠡᠬᠦ",
+        "traditional": "ᠦᠭᠡᠢᠳᠡᠬᠦ",
         "latin": "uguideh",
         "verified": false,
         "source": "wmk-import"
@@ -333,7 +333,7 @@
     "cyrillic": "үгүйдүүлэх",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠦᠶᠢᠳᠡᠭᠦᠯᠬᠦ",
+        "traditional": "ᠦᠭᠦᠢᠳᠡᠭᠦᠯᠬᠦ",
         "latin": "uguiduuleh",
         "verified": false,
         "source": "wmk-import"
@@ -344,7 +344,7 @@
     "cyrillic": "үгүйлэгдэх",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠯᠡᠭᠳᠡᠬᠦ",
+        "traditional": "ᠦᠭᠡᠢᠯᠡᠭᠳᠡᠬᠦ",
         "latin": "uguilegdeh",
         "verified": false,
         "source": "wmk-import"
@@ -355,7 +355,7 @@
     "cyrillic": "үгүйлэх",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠯᠡᠬᠦ",
+        "traditional": "ᠦᠭᠡᠢᠯᠡᠬᠦ",
         "latin": "uguileh",
         "verified": false,
         "source": "wmk-import"
@@ -366,7 +366,7 @@
     "cyrillic": "үгүйлүүлэх",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠯᠡᠭᠦᠯᠬᠦ",
+        "traditional": "ᠦᠭᠡᠢᠯᠡᠭᠦᠯᠬᠦ",
         "latin": "uguiluuleh",
         "verified": false,
         "source": "wmk-import"
@@ -377,7 +377,7 @@
     "cyrillic": "үгүйлүүштэй",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠯᠡᠭᠦᠰᠢᠲᠡᠢ",
+        "traditional": "ᠦᠭᠡᠢᠯᠡᠭᠦᠰᠢᠲᠡᠢ",
         "latin": "uguiluushtei",
         "verified": false,
         "source": "wmk-import"
@@ -388,7 +388,7 @@
     "cyrillic": "үгүйрэл",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠷᠡᠯ",
+        "traditional": "ᠦᠭᠡᠢᠷᠡᠯ",
         "latin": "uguirel",
         "verified": false,
         "source": "wmk-import"
@@ -399,7 +399,7 @@
     "cyrillic": "үгүйрэх",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠷᠡᠬᠦ",
+        "traditional": "ᠦᠭᠡᠢᠷᠡᠬᠦ",
         "latin": "uguireh",
         "verified": false,
         "source": "wmk-import"
@@ -410,7 +410,7 @@
     "cyrillic": "үгүйрүүлэх",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠷᠡᠭᠦᠯᠬᠦ",
+        "traditional": "ᠦᠭᠡᠢᠷᠡᠭᠦᠯᠬᠦ",
         "latin": "uguiruuleh",
         "verified": false,
         "source": "wmk-import"
@@ -421,7 +421,7 @@
     "cyrillic": "үгүйсгэгдэж",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠰᠬᠡᠭᠳᠡᠵᠦ",
+        "traditional": "ᠦᠭᠡᠢᠰᠬᠡᠭᠳᠡᠵᠦ",
         "latin": "uguisgegdej",
         "verified": false,
         "source": "wmk-import"
@@ -432,7 +432,7 @@
     "cyrillic": "үгүйсгэгдэх",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠰᠬᠡᠭᠳᠡᠬᠦ",
+        "traditional": "ᠦᠭᠡᠢᠰᠬᠡᠭᠳᠡᠬᠦ",
         "latin": "uguisgegdeh",
         "verified": false,
         "source": "wmk-import"
@@ -443,7 +443,7 @@
     "cyrillic": "үгүйтэй",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠲᠡᠢ",
+        "traditional": "ᠦᠭᠡᠢᠲᠡᠢ",
         "latin": "uguitei",
         "verified": false,
         "source": "wmk-import"
@@ -454,7 +454,7 @@
     "cyrillic": "үгүйтэх",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠶᠢᠲᠦᠬᠦ",
+        "traditional": "ᠦᠭᠡᠢᠲᠦᠬᠦ",
         "latin": "uguiteh",
         "verified": false,
         "source": "wmk-import"
@@ -2148,7 +2148,7 @@
     "cyrillic": "үлбийлгэх",
     "candidates": [
       {
-        "traditional": "ᠦᠯᠪᠡᠶᠢᠯᠭᠡᠬᠦ",
+        "traditional": "ᠦᠯᠪᠡᠢᠯᠭᠡᠬᠦ",
         "latin": "ulbiilgeh",
         "verified": false,
         "source": "wmk-import"
@@ -2159,7 +2159,7 @@
     "cyrillic": "үлбийх",
     "candidates": [
       {
-        "traditional": "ᠦᠯᠪᠡᠶᠢᠬᠦ",
+        "traditional": "ᠦᠯᠪᠡᠢᠬᠦ",
         "latin": "ulbiih",
         "verified": false,
         "source": "wmk-import"
@@ -2676,7 +2676,7 @@
     "cyrillic": "үлхийлгэх",
     "candidates": [
       {
-        "traditional": "ᠦᠯᠡᠬᠦᠶᠢᠯᠭᠡᠬᠦ",
+        "traditional": "ᠦᠯᠡᠬᠦᠢᠯᠭᠡᠬᠦ",
         "latin": "ulhiilgeh",
         "verified": false,
         "source": "wmk-import"
@@ -2687,7 +2687,7 @@
     "cyrillic": "үлхийрэх",
     "candidates": [
       {
-        "traditional": "ᠦᠯᠡᠬᠡᠶᠢᠷᠡᠬᠦ",
+        "traditional": "ᠦᠯᠡᠬᠡᠢᠷᠡᠬᠦ",
         "latin": "ulhiireh",
         "verified": false,
         "source": "wmk-import"
@@ -2698,7 +2698,7 @@
     "cyrillic": "үлхийх",
     "candidates": [
       {
-        "traditional": "ᠦᠯᠬᠦᠶᠢᠢᠬᠦ",
+        "traditional": "ᠦᠯᠬᠦᠢᠢᠬᠦ",
         "latin": "ulhiih",
         "verified": false,
         "source": "wmk-import"
@@ -3017,7 +3017,7 @@
     "cyrillic": "үмийлгэх",
     "candidates": [
       {
-        "traditional": "ᠦᠮᠦᠶᠢᠯᠭᠡᠬᠦ",
+        "traditional": "ᠦᠮᠦᠢᠯᠭᠡᠬᠦ",
         "latin": "umiilgeh",
         "verified": false,
         "source": "wmk-import"
@@ -3028,7 +3028,7 @@
     "cyrillic": "үмийх",
     "candidates": [
       {
-        "traditional": "ᠦᠮᠦᠶᠢᠢᠬᠦ",
+        "traditional": "ᠦᠮᠦᠢᠢᠬᠦ",
         "latin": "umiih",
         "verified": false,
         "source": "wmk-import"
@@ -3094,7 +3094,7 @@
     "cyrillic": "үмхийрэх",
     "candidates": [
       {
-        "traditional": "ᠦᠮᠡᠬᠡᠶᠢᠷᠡᠬᠦ",
+        "traditional": "ᠦᠮᠡᠬᠡᠢᠷᠡᠬᠦ",
         "latin": "umhiireh",
         "verified": false,
         "source": "wmk-import"
@@ -3105,7 +3105,7 @@
     "cyrillic": "үмхийрүүлэх",
     "candidates": [
       {
-        "traditional": "ᠦᠮᠦᠬᠡᠶᠢᠷᠡᠭᠦᠯᠬᠦ",
+        "traditional": "ᠦᠮᠦᠬᠡᠢᠷᠡᠭᠦᠯᠬᠦ",
         "latin": "umhiiruuleh",
         "verified": false,
         "source": "wmk-import"
@@ -3391,7 +3391,7 @@
     "cyrillic": "үнсийлгэх",
     "candidates": [
       {
-        "traditional": "ᠦᠩᠰᠡᠶᠢᠯᠭᠡᠬᠦ",
+        "traditional": "ᠦᠩᠰᠡᠢᠯᠭᠡᠬᠦ",
         "latin": "unsiilgeh",
         "verified": false,
         "source": "wmk-import"
@@ -3402,7 +3402,7 @@
     "cyrillic": "үнсийх",
     "candidates": [
       {
-        "traditional": "ᠦᠩᠰᠡᠶᠢᠬᠦ",
+        "traditional": "ᠦᠩᠰᠡᠢᠬᠦ",
         "latin": "unsiih",
         "verified": false,
         "source": "wmk-import"
@@ -3930,7 +3930,7 @@
     "cyrillic": "үнэтэйдэх",
     "candidates": [
       {
-        "traditional": "ᠦᠨᠡᠲᠡᠶᠢᠳᠡᠬᠦ",
+        "traditional": "ᠦᠨᠡᠲᠡᠢᠳᠡᠬᠦ",
         "latin": "uneteideh",
         "verified": false,
         "source": "wmk-import"
@@ -5459,7 +5459,7 @@
     "cyrillic": "үхэтхийх",
     "candidates": [
       {
-        "traditional": "ᠦᠭᠡᠳᠬᠦᠶᠢᠬᠦ",
+        "traditional": "ᠦᠭᠡᠳᠬᠦᠢᠬᠦ",
         "latin": "uhethiih",
         "verified": false,
         "source": "wmk-import"
@@ -5910,7 +5910,7 @@
     "cyrillic": "үүрцайх",
     "candidates": [
       {
-        "traditional": "ᠡᠭᠦᠷᠴᠠᠶᠢᠬᠤ",
+        "traditional": "ᠡᠭᠦᠷᠴᠠᠢᠬᠤ",
         "latin": "uurtsaih",
         "verified": false,
         "source": "wmk-import"

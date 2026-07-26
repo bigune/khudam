@@ -305,3 +305,83 @@ The seed's traditional column contains Latin/Cyrillic text instead of Mongolian 
 - `нийслэлийн` (seed had `"您输入的文本过多！"`)
 
 <!-- wmk-import:end -->
+
+## Systematic correction: ᠶᠢ (U+1836 U+1822) → ᠢ (U+1822)
+
+Монгол бичгийн дунд байрлалд ᠶ (U+1836) ба ᠢ (U+1822) бараг ижил дүрстэй. Тийм учраас суурь өгөгдлийн (`wmk-import`) машин хөрвүүлэгч ᠢ-гийн өмнө илүүц ᠶ нэмж, кирилл **й**-г ᠶᠢ (ya+i) гэж буруу хадгалсан байна. Зөв нь ганц ᠢ (нэг шүд) — өмнөх эгшигтэйгээ диптонг үүсгэнэ (жишээ: сайн ᠰᠠᠶᠢᠨ → ᠰᠠᠢᠨ). Эх хэлтэн зэрэгцүүлэн үзэж баталсан. / In medial position ᠶ (U+1836) and ᠢ (U+1822) are near-homoglyphs, so the bootstrap converter inserted a spurious ᠶ before ᠢ, storing Cyrillic **й** as ᠶᠢ (ya+i). The correct form is a single ᠢ (one tooth), forming the diphthong with the preceding vowel (e.g. сайн ᠰᠠᠶᠢᠨ → ᠰᠠᠢᠨ). Confirmed with a native speaker via side-by-side rendering — a systematic wmk-import defect, not a per-word one.
+
+**Correction applied** via [`scripts/fix-yi-digraph.ts`](../scripts/fix-yi-digraph.ts): medial ᠶᠢ → ᠢ (drop the spurious ᠶ) in the **2,780** entries whose Cyrillic key contains й. These remain `verified: false` — a machine correction is not human verification, so they still need review before anyone sets `verified: true`.
+
+Word-initial ᠶᠢ (a legitimate е/ё/ю/я glide, e.g. `ес` → ᠶᠢᠰᠦ) and entries with no й were deliberately **excluded** from the automatic fix and are listed below for a human to decide. Rerun the script with `--include-no-short-i` only after reviewing them.
+
+### Excluded from the automatic fix — need human review (63)
+
+#### Word-initial ᠶᠢ — probably a real е/ё glide, likely KEEP (11)
+
+- `ертөнц` (_yertunts_) — `ᠶᠢᠷᠲᠢᠨᠴᠦ` → would be `ᠢᠷᠲᠢᠨᠴᠦ`
+- `ес` (_yes_) — `ᠶᠢᠰᠦ` → would be `ᠢᠰᠦ`
+- `есдүгээр` (_yesdugeer_) — `ᠶᠢᠰᠦᠳᠦᠭᠡᠷ` → would be `ᠢᠰᠦᠳᠦᠭᠡᠷ`
+- `еслөх` (_yesluh_) — `ᠶᠢᠰᠦᠯᠬᠦ` → would be `ᠢᠰᠦᠯᠬᠦ`
+- `есүүл` (_yesuul_) — `ᠶᠢᠰᠦᠭᠦᠯᠡ` → would be `ᠢᠰᠦᠭᠦᠯᠡ`
+- `есөгчин` (_yesugchin_) — `ᠶᠢᠰᠦᠭᠴᠢᠨ` → would be `ᠢᠰᠦᠭᠴᠢᠨ`
+- `есөн` (_yesun_) — `ᠶᠢᠰᠦᠨ` → would be `ᠢᠰᠦᠨ`
+- `есөөд` (_yesuud_) — `ᠶᠢᠰᠦᠭᠡᠳ` → would be `ᠢᠰᠦᠭᠡᠳ`
+- `илбэдэгдэх` (_ilbedegdeh_) — `ᠶᠢᠯᠸᠢᠳᠡᠭᠳᠡᠬᠦ` → would be `ᠢᠯᠸᠢᠳᠡᠭᠳᠡᠬᠦ`
+- `илбэдэх` (_ilbedeh_) — `ᠶᠢᠯᠸᠢᠳᠡᠬᠦ` → would be `ᠢᠯᠸᠢᠳᠡᠬᠦ`
+- `ин` (_in_) — `ᠶᠢᠨ` → would be `ᠢᠨ`
+
+#### Other (loanword artifacts / ии words) — decide case by case (52)
+
+- `аккумулятор` (_akkumulyator_) — `ᠠᠺᠺᠦᠢᠮᠦᠦᠶᠢᠶᠠᠲ᠋ᠣᠷ` → would be `ᠠᠺᠺᠦᠢᠮᠦᠦᠢᠶᠠᠲ᠋ᠣᠷ`
+- `амбулатори` (_ambulatori_) — `ᠠᠮᠪᠤᠶᠢᠯᠠᠲ᠋ᠣᠷᠢ` → would be `ᠠᠮᠪᠤᠢᠯᠠᠲ᠋ᠣᠷᠢ`
+- `ангаалдах` (_angaaldah_) — `ᠠᠩᠭᠠᠶᠢᠯᠳᠤᠬᠤ` → would be `ᠠᠩᠭᠠᠢᠯᠳᠤᠬᠤ`
+- `аэробик` (_aerobik_) — `ᠠᠶᠢᠷᠣᠪᠢᠺ` → would be `ᠠᠢᠷᠣᠪᠢᠺ`
+- `баярмөнх` (_bayarmunh_) — `ᠪᠠᠶᠠᠷᠮᠥᠶᠢᠩᠬᠡ` → would be `ᠪᠠᠶᠠᠷᠮᠥᠢᠩᠬᠡ`
+- `буддизм` (_buddizm_) — `ᠪᠤᠳ᠋ᠳ᠋ᠾᠠᠶᠢᠰᠮ` → would be `ᠪᠤᠳ᠋ᠳ᠋ᠾᠠᠢᠰᠮ`
+- `гаалилах` (_gaalilah_) — `ᠭᠠᠶᠢᠯᠢᠯᠠᠬᠤ` → would be `ᠭᠠᠢᠯᠢᠯᠠᠬᠤ`
+- `гааль` (_gaali_) — `ᠭᠠᠶᠢᠯᠢ` → would be `ᠭᠠᠢᠯᠢ`
+- `градус` (_gradus_) — `ᠭᠷᠠᠳᠦᠶᠢᠰ` → would be `ᠭᠷᠠᠳᠦᠢᠰ`
+- `даяан` (_dayan_) — `ᠳᠠᠶᠢᠨ` → would be `ᠳᠠᠢᠨ`
+- `даяг` (_dayag_) — `ᠳᠠᠶᠢᠭ` → would be `ᠳᠠᠢᠭ`
+- `даян` (_dayan_) — `ᠳᠠᠶᠢᠨ` → would be `ᠳᠠᠢᠨ`
+- `диктатур` (_diktatur_) — `ᠳ᠋ᠢᠺᠲ᠋ᠠᠲ᠋ᠦᠶᠢᠷ` → would be `ᠳ᠋ᠢᠺᠲ᠋ᠠᠲ᠋ᠦᠢᠷ`
+- `индонез` (_indonyez_) — `ᠢᠨᠳᠥᠶᠢᠨᠧᠽ` → would be `ᠢᠨᠳᠥᠢᠨᠧᠽ`
+- `институт` (_institut_) — `ᠢᠨᠰᠲ᠋ᠢᠲ᠋ᠦᠶᠢᠲ` → would be `ᠢᠨᠰᠲ᠋ᠢᠲ᠋ᠦᠢᠲ`
+- `интурист` (_inturist_) — `ᠢᠨᠲᠤᠶᠢᠷᠢᠰᠲ` → would be `ᠢᠨᠲᠤᠢᠷᠢᠰᠲ`
+- `каракуль` (_karakuli_) — `ᠺᠠᠷᠠᠺᠦᠶᠢᠯᠢ` → would be `ᠺᠠᠷᠠᠺᠦᠢᠯᠢ`
+- `карбюратор` (_karbyurator_) — `ᠺᠠᠷᠪᠶᠤᠶᠢᠷᠠᠲ᠋ᠣᠷ` → would be `ᠺᠠᠷᠪᠶᠤᠢᠷᠠᠲ᠋ᠣᠷ`
+- `карбюрац` (_karbyurats_) — `ᠺᠠᠷᠪᠶᠤᠶᠢᠷᠠᠼ` → would be `ᠺᠠᠷᠪᠶᠤᠢᠷᠠᠼ`
+- `каучук` (_kauchuk_) — `ᠺᠠᠤᠢᠴᠤᠤᠶᠢ` → would be `ᠺᠠᠤᠢᠴᠤᠤᠢ`
+- `клуб` (_klub_) — `ᠺᠯᠤᠶᠢᠪ` → would be `ᠺᠯᠤᠢᠪ`
+- `коллоид` (_kolloid_) — `ᠺᠣᠯᠯᠣᠶᠢᠳ᠋` → would be `ᠺᠣᠯᠯᠣᠢᠳ᠋`
+- `коммун` (_kommun_) — `ᠺᠣᠮᠮᠤᠶᠢᠨ` → would be `ᠺᠣᠮᠮᠤᠢᠨ`
+- `коммунизм` (_kommunizm_) — `ᠺᠣᠮᠮᠤᠶᠢᠨᠢᠰᠮ` → would be `ᠺᠣᠮᠮᠤᠢᠨᠢᠰᠮ`
+- `коммутатор` (_kommutator_) — `ᠺᠣᠮᠮᠤᠶᠢᠲ᠋ᠠᠲ᠋ᠣᠷ` → would be `ᠺᠣᠮᠮᠤᠢᠲ᠋ᠠᠲ᠋ᠣᠷ`
+- `кондуктор` (_konduktor_) — `ᠺᠣᠨᠳᠤᠶᠢᠺᠲ᠋ᠣᠷ` → would be `ᠺᠣᠨᠳᠤᠢᠺᠲ᠋ᠣᠷ`
+- `конструкторч` (_konstruktorch_) — `ᠺᠣᠨᠰᠲ᠋ᠷᠤᠶᠢᠺᠲ᠋ᠣᠷᠴᠢ` → would be `ᠺᠣᠨᠰᠲ᠋ᠷᠤᠢᠺᠲ᠋ᠣᠷᠴᠢ`
+- `консул` (_konsul_) — `ᠺᠣᠨᠰᠤᠶᠢᠯ` → would be `ᠺᠣᠨᠰᠤᠢᠯ`
+- `консультац` (_konsulitats_) — `ᠺᠣᠨᠰᠤᠶᠢᠯᠢᠲ᠋ᠠᠼ` → would be `ᠺᠣᠨᠰᠤᠢᠯᠢᠲ᠋ᠠᠼ`
+- `корпус` (_korpus_) — `ᠺᠣᠷᠫᠤᠶᠢᠰ` → would be `ᠺᠣᠷᠫᠤᠢᠰ`
+- `костюм` (_kostyum_) — `ᠺᠣᠰᠲ᠋ᠶᠤᠶᠢᠮ` → would be `ᠺᠣᠰᠲ᠋ᠶᠤᠢᠮ`
+- `люстра` (_lyustra_) — `ᠯᠶᠤᠶᠢᠰᠲ᠋ᠷᠠ` → would be `ᠯᠶᠤᠢᠰᠲ᠋ᠷᠠ`
+- `натурализм` (_naturalizm_) — `ᠨᠠᠲ᠋ᠦᠶᠢᠷᠠᠯᠢᠰᠮ` → would be `ᠨᠠᠲ᠋ᠦᠢᠷᠠᠯᠢᠰᠮ`
+- `оппортунизм` (_opportunizm_) — `ᠣᠫᠫᠣᠷᠲ᠋ᠤᠶᠢᠨᠢᠰᠮ` → would be `ᠣᠫᠫᠣᠷᠲ᠋ᠤᠢᠨᠢᠰᠮ`
+- `оппортунист` (_opportunist_) — `ᠣᠫᠫᠣᠷᠲ᠋ᠤᠶᠢᠨᠢᠰᠲ` → would be `ᠣᠫᠫᠣᠷᠲ᠋ᠤᠢᠨᠢᠰᠲ`
+- `оупх` (_ouph_) — `ᠣᠦᠶᠢᠬ` → would be `ᠣᠦᠢᠬ`
+- `парашют` (_parashyut_) — `ᠫᠠᠷᠠᠱᠶᠤᠶᠢᠲ` → would be `ᠫᠠᠷᠠᠱᠶᠤᠢᠲ`
+- `перпендикуляр` (_pyerpyendikulyar_) — `ᠫᠧᠷᠫᠡᠨᠳᠢᠺᠦᠶᠢᠯᠢᠶᠠᠷ` → would be `ᠫᠧᠷᠫᠡᠨᠳᠢᠺᠦᠢᠯᠢᠶᠠᠷ`
+- `прокурор` (_prokuror_) — `ᠫᠷᠣᠺᠤᠶᠢᠷᠣᠷ` → would be `ᠫᠷᠣᠺᠤᠢᠷᠣᠷ`
+- `пропуск` (_propusk_) — `ᠫᠷᠣᠫᠤᠶᠢᠰᠺ` → would be `ᠫᠷᠣᠫᠤᠢᠰᠺ`
+- `секунд` (_syekund_) — `ᠰᠧᠺᠦᠶᠢᠨᠳ᠋` → would be `ᠰᠧᠺᠦᠢᠨᠳ᠋`
+- `секюритиз` (_syekyuritiz_) — `ᠰᠧᠺᠦᠶᠤᠶᠢᠷᠢᠲ᠋ᠢᠰ` → would be `ᠰᠧᠺᠦᠶᠤᠢᠷᠢᠲ᠋ᠢᠰ`
+- `сэвсиилгэх` (_sevsiilgeh_) — `ᠰᠡᠪᠰᠡᠶᠢᠯᠭᠡᠬᠦ` → would be `ᠰᠡᠪᠰᠡᠢᠯᠭᠡᠬᠦ`
+- `украин` (_ukrain_) — `ᠦᠺᠷᠠᠶᠢᠨ` → would be `ᠦᠺᠷᠠᠢᠨ`
+- `устөрөгч` (_usturugch_) — `ᠤᠰᠤᠲᠥᠶᠢᠷᠦᠭᠴᠢ` → would be `ᠤᠰᠤᠲᠥᠢᠷᠦᠭᠴᠢ`
+- `фактур` (_faktur_) — `ᠹᠠᠺᠲ᠋ᠦᠶᠢᠷ` → would be `ᠹᠠᠺᠲ᠋ᠦᠢᠷ`
+- `факультет` (_fakulityet_) — `ᠹᠠᠺᠦᠶᠢᠯᠢᠲ᠋ᠧᠲ` → would be `ᠹᠠᠺᠦᠢᠯᠢᠲ᠋ᠧᠲ`
+- `хатиар` (_hatiar_) — `ᠬᠠᠲᠠᠶᠢᠷ` → would be `ᠬᠠᠲᠠᠢᠷ`
+- `хонхоилгох` (_honhoilgoh_) — `ᠬᠣᠩᠬᠣᠶᠢᠯᠭᠠᠬᠤ` → would be `ᠬᠣᠩᠬᠣᠢᠯᠭᠠᠬᠤ`
+- `хэриглэх` (_herigleh_) — `ᠬᠡᠷᠡᠶᠢᠭᠯᠡᠬᠦ` → would be `ᠬᠡᠷᠡᠢᠭᠯᠡᠬᠦ`
+- `шүүгээлэх` (_shuugeeleh_) — `ᠱᠦᠬᠦᠶᠢᠯᠡᠬᠦ` → would be `ᠱᠦᠬᠦᠢᠯᠡᠬᠦ`
+- `эрээвэр` (_ereever_) — `ᠡᠶᠢᠶᠡᠪᠦᠷᠢ` → would be `ᠡᠢᠶᠡᠪᠦᠷᠢ`
+

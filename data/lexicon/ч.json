@@ -201,7 +201,7 @@
     "cyrillic": "чавхайрах",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠪᠬᠠᠶᠢᠷᠠᠬᠤ",
+        "traditional": "ᠴᠢᠪᠬᠠᠢᠷᠠᠬᠤ",
         "latin": "chavhairah",
         "verified": false,
         "source": "wmk-import"
@@ -454,7 +454,7 @@
     "cyrillic": "чагтайх",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠭᠲᠠᠶᠢᠬᠤ",
+        "traditional": "ᠴᠢᠭᠲᠠᠢᠬᠤ",
         "latin": "chagtaih",
         "verified": false,
         "source": "wmk-import"
@@ -630,7 +630,7 @@
     "cyrillic": "чадамгайдах",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠳᠠᠮᠠᠭᠠᠶᠢᠳᠠᠬᠤ",
+        "traditional": "ᠴᠢᠳᠠᠮᠠᠭᠠᠢᠳᠠᠬᠤ",
         "latin": "chadamgaidah",
         "verified": false,
         "source": "wmk-import"
@@ -641,7 +641,7 @@
     "cyrillic": "чадамрайрхах",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠳᠠᠮᠠᠷᠠᠶᠢᠷᠬᠠᠬᠤ",
+        "traditional": "ᠴᠢᠳᠠᠮᠠᠷᠠᠢᠷᠬᠠᠬᠤ",
         "latin": "chadamrairhah",
         "verified": false,
         "source": "wmk-import"
@@ -839,7 +839,7 @@
     "cyrillic": "чадхайх",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠳᠬᠠᠶᠢᠬᠤ",
+        "traditional": "ᠴᠢᠳᠬᠠᠢᠬᠤ",
         "latin": "chadhaih",
         "verified": false,
         "source": "wmk-import"
@@ -1631,7 +1631,7 @@
     "cyrillic": "чарайх",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠷᠠᠶᠢᠬᠤ",
+        "traditional": "ᠴᠢᠷᠠᠢᠬᠤ",
         "latin": "charaih",
         "verified": false,
         "source": "wmk-import"
@@ -1840,7 +1840,7 @@
     "cyrillic": "чардайлгах",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠷᠳᠠᠶᠢᠯᠭᠠᠬᠤ",
+        "traditional": "ᠴᠢᠷᠳᠠᠢᠯᠭᠠᠬᠤ",
         "latin": "chardailgah",
         "verified": false,
         "source": "wmk-import"
@@ -1851,7 +1851,7 @@
     "cyrillic": "чардайх",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠷᠳᠠᠶᠢᠬᠤ",
+        "traditional": "ᠴᠢᠷᠳᠠᠢᠬᠤ",
         "latin": "chardaih",
         "verified": false,
         "source": "wmk-import"
@@ -1972,7 +1972,7 @@
     "cyrillic": "чармайлгах",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠷᠮᠠᠶᠢᠯᠭᠠᠬᠤ",
+        "traditional": "ᠴᠢᠷᠮᠠᠢᠯᠭᠠᠬᠤ",
         "latin": "charmailgah",
         "verified": false,
         "source": "wmk-import"
@@ -1983,7 +1983,7 @@
     "cyrillic": "чармайлт",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠷᠮᠠᠶᠢᠯᠲᠠ",
+        "traditional": "ᠴᠢᠷᠮᠠᠢᠯᠲᠠ",
         "latin": "charmailt",
         "verified": false,
         "source": "wmk-import"
@@ -1994,7 +1994,7 @@
     "cyrillic": "чармайх",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠷᠮᠠᠶᠢᠬᠤ",
+        "traditional": "ᠴᠢᠷᠮᠠᠢᠬᠤ",
         "latin": "charmaih",
         "verified": false,
         "source": "wmk-import"
@@ -2060,7 +2060,7 @@
     "cyrillic": "чатхайх",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠳᠬᠠᠶᠢᠬᠤ",
+        "traditional": "ᠴᠢᠳᠬᠠᠢᠬᠤ",
         "latin": "chathaih",
         "verified": false,
         "source": "wmk-import"
@@ -2181,7 +2181,7 @@
     "cyrillic": "чацархайлах",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠴᠠᠷᠬᠠᠶᠢᠯᠠᠬᠤ",
+        "traditional": "ᠴᠢᠴᠠᠷᠬᠠᠢᠯᠠᠬᠤ",
         "latin": "chatsarhailah",
         "verified": false,
         "source": "wmk-import"
@@ -3116,7 +3116,7 @@
     "cyrillic": "чилдийх",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠯᠳᠡᠶᠢᠬᠦ",
+        "traditional": "ᠴᠢᠯᠳᠡᠢᠬᠦ",
         "latin": "childiih",
         "verified": false,
         "source": "wmk-import"
@@ -4469,7 +4469,7 @@
     "cyrillic": "чогчойх",
     "candidates": [
       {
-        "traditional": "ᠴᠣᠭᠴᠣᠶᠢᠬᠤ",
+        "traditional": "ᠴᠣᠭᠴᠣᠢᠬᠤ",
         "latin": "chogchoih",
         "verified": false,
         "source": "wmk-import"
@@ -4480,7 +4480,7 @@
     "cyrillic": "чойчгор",
     "candidates": [
       {
-        "traditional": "ᠴᠣᠶᠢᠴᠣᠭᠣᠷ",
+        "traditional": "ᠴᠣᠢᠴᠣᠭᠣᠷ",
         "latin": "choichgor",
         "verified": false,
         "source": "wmk-import"
@@ -4491,7 +4491,7 @@
     "cyrillic": "чойчийх",
     "candidates": [
       {
-        "traditional": "ᠴᠣᠶᠢᠴᠢᠢᠬᠤ",
+        "traditional": "ᠴᠣᠢᠴᠢᠢᠬᠤ",
         "latin": "choichiih",
         "verified": false,
         "source": "wmk-import"
@@ -4557,7 +4557,7 @@
     "cyrillic": "чохойдох",
     "candidates": [
       {
-        "traditional": "ᠴᠣᠬᠠᠶᠢᠳᠠᠬᠤ",
+        "traditional": "ᠴᠣᠬᠠᠢᠳᠠᠬᠤ",
         "latin": "chohoidoh",
         "verified": false,
         "source": "wmk-import"
@@ -4568,7 +4568,7 @@
     "cyrillic": "чохойдуулах",
     "candidates": [
       {
-        "traditional": "ᠴᠣᠬᠠᠶᠢᠳᠠᠭᠤᠯᠬᠤ",
+        "traditional": "ᠴᠣᠬᠠᠢᠳᠠᠭᠤᠯᠬᠤ",
         "latin": "chohoiduulah",
         "verified": false,
         "source": "wmk-import"
@@ -5217,7 +5217,7 @@
     "cyrillic": "чөрийлгөх",
     "candidates": [
       {
-        "traditional": "ᠴᠥᠷᠦᠶᠢᠯᠭᠡᠬᠦ",
+        "traditional": "ᠴᠥᠷᠦᠢᠯᠭᠡᠬᠦ",
         "latin": "churiilguh",
         "verified": false,
         "source": "wmk-import"
@@ -5228,7 +5228,7 @@
     "cyrillic": "чөрийх",
     "candidates": [
       {
-        "traditional": "ᠴᠥᠷᠦᠶᠢᠬᠦ",
+        "traditional": "ᠴᠥᠷᠦᠢᠬᠦ",
         "latin": "churiih",
         "verified": false,
         "source": "wmk-import"
