@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "bun run --cwd ../.. build:data && next dev",
+    "dev": "bun run --cwd ../.. build && next dev",
     "build": "bun run --cwd ../.. build && next build"
   },
   "dependencies": {
