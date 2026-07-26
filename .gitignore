@@ -13,3 +13,6 @@ apps/web/next-env.d.ts
 *.log
 .DS_Store
 Thumbs.db
+
+# local planning / scratch (not committed)
+.plans/
