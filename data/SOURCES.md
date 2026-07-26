@@ -2,7 +2,9 @@
 
 Энэ файл үгсийн сангийн бичлэг бүр хаанаас үүсэлтэйг бүртгэнэ. / This file records
 where every layer of the lexicon comes from. The `source` field on each candidate
-refers to the sections below.
+refers to the sections below. Кодчиллын шийдвэрүүдийг [ENCODING.md](ENCODING.md)-д
+бүртгэнэ. / Encoding-model decisions (which code points spell what) are recorded
+in [ENCODING.md](ENCODING.md).
 
 ## `wmk-import` — bootstrap seed (2026-07-24)
 

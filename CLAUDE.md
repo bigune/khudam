@@ -26,6 +26,7 @@ Toolchain: **bun** (runtime, package manager, script runner, and test runner). T
 - Several distinct letters share identical glyphs; encoding correctness cannot be judged visually. Validate by code point, not by appearance.
 - Font support is inconsistent across OS/browsers. The library never assumes rendering works; the web layer (`apps/web`) deals with fonts (Noto Sans Mongolian webfont, `writing-mode: vertical-lr`) and PNG export.
 - Use standard Unicode only. Do NOT adopt Bolorsoft's proprietary "Тунгаамал" encoding model.
+- Encoding-model decisions (e.g. postvocalic й = single ᠢ U+1822, never the ᠶᠢ digraph) are recorded with citations in `data/ENCODING.md` — follow them, and route any new code-point-level policy question through that file.
 
 **Competitive context:** Bolorsoft's KIMO is the commercial incumbent (paid, Windows, MS Word plugin). We do not compete on full-document official accuracy. Our wedge: free, web-first, instant conversion of names / words / short phrases, with honest ambiguity UI and verified-quality tiers.
 
