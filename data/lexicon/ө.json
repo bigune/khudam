@@ -25,7 +25,7 @@
     "cyrillic": "өвгөлжинө",
     "candidates": [
       {
-        "traditional": "ᠡᠪᠦᠭᠡᠯᠵᠢᠨ᠎᠊ᠡ",
+        "traditional": "ᠡᠪᠦᠭᠡᠯᠵᠢᠨ᠎ᠡ",
         "latin": "uvguljinu",
         "verified": false,
         "source": "wmk-import"
@@ -146,7 +146,7 @@
     "cyrillic": "өвдөм",
     "candidates": [
       {
-        "traditional": "ᠡᠪᠡᠳᠦᠮ᠎᠊ᠡ",
+        "traditional": "ᠡᠪᠡᠳᠦᠮ᠎ᠡ",
         "latin": "uvdum",
         "verified": false,
         "source": "wmk-import"
@@ -696,7 +696,7 @@
     "cyrillic": "өвөлжөө",
     "candidates": [
       {
-        "traditional": "ᠡᠪᠦᠯᠵᠢᠶ᠎᠊ᠡ",
+        "traditional": "ᠡᠪᠦᠯᠵᠢᠶ᠎ᠡ",
         "latin": "uvuljuu",
         "verified": false,
         "source": "wmk-import"
@@ -1213,7 +1213,7 @@
     "cyrillic": "өгөр",
     "candidates": [
       {
-        "traditional": "ᠥᠭᠢᠷ᠎᠊ᠡ",
+        "traditional": "ᠥᠭᠢᠷ᠎ᠡ",
         "latin": "ugur",
         "verified": false,
         "source": "wmk-import"
@@ -2665,7 +2665,7 @@
     "cyrillic": "өмнө",
     "candidates": [
       {
-        "traditional": "ᠡᠮᠦᠨ᠎᠊ᠡ",
+        "traditional": "ᠡᠮᠦᠨ᠎ᠡ",
         "latin": "umnu",
         "verified": false,
         "source": "wmk-import"
@@ -3171,7 +3171,7 @@
     "cyrillic": "өнгийм",
     "candidates": [
       {
-        "traditional": "ᠥᠩᠭᠡᠢᠮ᠎᠊ᠡ",
+        "traditional": "ᠥᠩᠭᠡᠢᠮ᠎ᠡ",
         "latin": "ungiim",
         "verified": false,
         "source": "wmk-import"
@@ -4843,7 +4843,7 @@
     "cyrillic": "өрнө",
     "candidates": [
       {
-        "traditional": "ᠥᠷᠥᠨ᠎᠊ᠡ",
+        "traditional": "ᠥᠷᠥᠨ᠎ᠡ",
         "latin": "urnu",
         "verified": false,
         "source": "wmk-import"
@@ -5294,7 +5294,7 @@
     "cyrillic": "өрөвдөм",
     "candidates": [
       {
-        "traditional": "ᠥᠷᠥᠪᠳᠥᠮ᠎᠊ᠡ",
+        "traditional": "ᠥᠷᠥᠪᠳᠥᠮ᠎ᠡ",
         "latin": "uruvdum",
         "verified": false,
         "source": "wmk-import"
@@ -5426,7 +5426,7 @@
     "cyrillic": "өрөм",
     "candidates": [
       {
-        "traditional": "ᠥᠷᠥᠮ᠎᠊ᠡ",
+        "traditional": "ᠥᠷᠥᠮ᠎ᠡ",
         "latin": "urum",
         "verified": false,
         "source": "wmk-import"
@@ -6262,7 +6262,7 @@
     "cyrillic": "өтөл",
     "candidates": [
       {
-        "traditional": "ᠥᠲᠡᠯ᠎᠊ᠡ",
+        "traditional": "ᠥᠲᠡᠯ᠎ᠡ",
         "latin": "utul",
         "verified": false,
         "source": "wmk-import"
@@ -6724,7 +6724,7 @@
     "cyrillic": "өшөө",
     "candidates": [
       {
-        "traditional": "ᠥᠰᠢᠶ᠎᠊ᠡ",
+        "traditional": "ᠥᠰᠢᠶ᠎ᠡ",
         "latin": "ushuu",
         "verified": false,
         "source": "wmk-import"
@@ -7043,7 +7043,7 @@
     "cyrillic": "өөр",
     "candidates": [
       {
-        "traditional": "ᠥᠭᠡᠷ᠎᠊ᠡ",
+        "traditional": "ᠥᠭᠡᠷ᠎ᠡ",
         "latin": "uur",
         "verified": false,
         "source": "wmk-import"

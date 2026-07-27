@@ -430,10 +430,11 @@ Evidence that the first is a generator hack, not a spelling:
   special detached final vowel (HarfBuzz + Noto v3.002 confirm: with nirugu the final
   a renders as an ordinary connected `A.fina`; without it, as the correct `Aa.isol`).
 
-**Proposed ruling (needs human sign-off + native-speaker spot check, per Decision 001
-process):** strip U+180A from every U+180E U+180A sequence, leaving standard MVS +
-vowel. Idempotent fix script, ~1,113 entries, patch release, recorded as ENCODING.md
-Decision 003. Хүний баталгаажуулалт шаардлагатай — тогтоол гараагүй байна.
+**Ruled and applied (2026-07-27):** maintainer approved; recorded as
+[ENCODING.md](ENCODING.md) Decision 003 and applied by
+`scripts/fix-mvs-nirugu.ts` (1,113 candidates rewritten, all still
+`verified: false`). Kept here for the record; the per-word батга question below
+remains open.
 
 Separate, per-word question (NOT covered by the pattern fix): whether a given word
 should carry the MVS final vowel at all. Example flagged:

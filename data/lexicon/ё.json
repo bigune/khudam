@@ -69,7 +69,7 @@
     "cyrillic": "ёвчоо",
     "candidates": [
       {
-        "traditional": "ᠶᠣᠪᠣᠴᠢᠶ᠎᠊ᠠ",
+        "traditional": "ᠶᠣᠪᠣᠴᠢᠶ᠎ᠠ",
         "latin": "yovchoo",
         "verified": false,
         "source": "wmk-import"
@@ -905,7 +905,7 @@
     "cyrillic": "ёр",
     "candidates": [
       {
-        "traditional": "ᠢᠷᠸ᠎᠊ᠠ",
+        "traditional": "ᠢᠷᠸ᠎ᠠ",
         "latin": "yor",
         "verified": false,
         "source": "wmk-import"
@@ -916,7 +916,7 @@
     "cyrillic": "ёргио",
     "candidates": [
       {
-        "traditional": "ᠶᠣᠷᠭᠢᠶ᠎᠊ᠠ",
+        "traditional": "ᠶᠣᠷᠭᠢᠶ᠎ᠠ",
         "latin": "yorgio",
         "verified": false,
         "source": "wmk-import"

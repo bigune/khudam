@@ -36,7 +36,7 @@
     "cyrillic": "чавга",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠪᠠᠭ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠪᠠᠭ᠎ᠠ",
         "latin": "chavga",
         "verified": false,
         "source": "wmk-import"
@@ -168,7 +168,7 @@
     "cyrillic": "чавх",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠪᠬᠠ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠪᠬᠠ᠎ᠠ",
         "latin": "chavh",
         "verified": false,
         "source": "wmk-import"
@@ -311,7 +311,7 @@
     "cyrillic": "чавчирга",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠪᠬᠠᠷᠭ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠪᠬᠠᠷᠭ᠎ᠠ",
         "latin": "chavchirga",
         "verified": false,
         "source": "wmk-import"
@@ -861,7 +861,7 @@
     "cyrillic": "чалчаа",
     "candidates": [
       {
-        "traditional": "ᠴᠠᠯᠴᠢᠶ᠎᠊ᠠ",
+        "traditional": "ᠴᠠᠯᠴᠢᠶ᠎ᠠ",
         "latin": "chalchaa",
         "verified": false,
         "source": "wmk-import"
@@ -894,7 +894,7 @@
     "cyrillic": "чалчраа",
     "candidates": [
       {
-        "traditional": "ᠴᠠᠯᠴᠢᠷᠠᠭ᠎᠊ᠠ",
+        "traditional": "ᠴᠠᠯᠴᠢᠷᠠᠭ᠎ᠠ",
         "latin": "chalchraa",
         "verified": false,
         "source": "wmk-import"
@@ -938,7 +938,7 @@
     "cyrillic": "чам",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠮ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠮ᠎ᠠ",
         "latin": "cham",
         "verified": false,
         "source": "wmk-import"
@@ -1136,7 +1136,7 @@
     "cyrillic": "чаналга",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠨᠠᠯᠭ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠨᠠᠯᠭ᠎ᠠ",
         "latin": "chanalga",
         "verified": false,
         "source": "wmk-import"
@@ -1224,7 +1224,7 @@
     "cyrillic": "чанга",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠩᠭ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠩᠭ᠎ᠠ",
         "latin": "changa",
         "verified": false,
         "source": "wmk-import"
@@ -1455,7 +1455,7 @@
     "cyrillic": "чандаа",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠨᠳᠠᠭ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠨᠳᠠᠭ᠎ᠠ",
         "latin": "chandaa",
         "verified": false,
         "source": "wmk-import"
@@ -1466,7 +1466,7 @@
     "cyrillic": "чандага",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠨᠳᠠᠭ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠨᠳᠠᠭ᠎ᠠ",
         "latin": "chandaga",
         "verified": false,
         "source": "wmk-import"
@@ -1565,7 +1565,7 @@
     "cyrillic": "чансаа",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠨᠰᠠᠭ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠨᠰᠠᠭ᠎ᠠ",
         "latin": "chansaa",
         "verified": false,
         "source": "wmk-import"
@@ -1598,7 +1598,7 @@
     "cyrillic": "чанх",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠩᠬ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠩᠬ᠎ᠠ",
         "latin": "chanh",
         "verified": false,
         "source": "wmk-import"
@@ -1642,7 +1642,7 @@
     "cyrillic": "чарам",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠷᠠᠮ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠷᠠᠮ᠎ᠠ",
         "latin": "charam",
         "verified": false,
         "source": "wmk-import"
@@ -1675,7 +1675,7 @@
     "cyrillic": "чарга",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠷᠭ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠷᠭ᠎ᠠ",
         "latin": "charga",
         "verified": false,
         "source": "wmk-import"
@@ -1895,7 +1895,7 @@
     "cyrillic": "чарлаа",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠷᠠᠯᠠᠭ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠷᠠᠯᠠᠭ᠎ᠠ",
         "latin": "charlaa",
         "verified": false,
         "source": "wmk-import"
@@ -1961,7 +1961,7 @@
     "cyrillic": "чармаа",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠷᠠᠮ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠷᠠᠮ᠎ᠠ",
         "latin": "charmaa",
         "verified": false,
         "source": "wmk-import"
@@ -2159,7 +2159,7 @@
     "cyrillic": "чацаргана",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠴᠠᠷᠭᠠᠨ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠴᠠᠷᠭᠠᠨ᠎ᠠ",
         "latin": "chatsargana",
         "verified": false,
         "source": "wmk-import"
@@ -2225,7 +2225,7 @@
     "cyrillic": "чацга",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠴᠠᠭ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠴᠠᠭ᠎ᠠ",
         "latin": "chatsga",
         "verified": false,
         "source": "wmk-import"
@@ -2951,7 +2951,7 @@
     "cyrillic": "чийр",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠭᠢᠷ᠎᠊ᠡ",
+        "traditional": "ᠴᠢᠭᠢᠷ᠎ᠡ",
         "latin": "chiir",
         "verified": false,
         "source": "wmk-import"
@@ -4502,7 +4502,7 @@
     "cyrillic": "чоно",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠨᠣ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠨᠣ᠎ᠠ",
         "latin": "chono",
         "verified": false,
         "source": "wmk-import"
@@ -4513,7 +4513,7 @@
     "cyrillic": "чоногоно",
     "candidates": [
       {
-        "traditional": "ᠴᠢᠨᠤᠭᠠᠨ᠎᠊ᠠ",
+        "traditional": "ᠴᠢᠨᠤᠭᠠᠨ᠎ᠠ",
         "latin": "chonogono",
         "verified": false,
         "source": "wmk-import"

@@ -707,7 +707,7 @@
     "cyrillic": "үе",
     "candidates": [
       {
-        "traditional": "ᠦᠶ᠎᠊ᠡ",
+        "traditional": "ᠦᠶ᠎ᠡ",
         "latin": "uye",
         "verified": false,
         "source": "wmk-import"
@@ -2038,7 +2038,7 @@
     "cyrillic": "үйрэм",
     "candidates": [
       {
-        "traditional": "ᠦᠢᠷᠡᠮ᠎᠊ᠡ",
+        "traditional": "ᠦᠢᠷᠡᠮ᠎ᠡ",
         "latin": "uirem",
         "verified": false,
         "source": "wmk-import"
@@ -3490,7 +3490,7 @@
     "cyrillic": "үнэ",
     "candidates": [
       {
-        "traditional": "ᠦᠨ᠎᠊ᠡ",
+        "traditional": "ᠦᠨ᠎ᠡ",
         "latin": "une",
         "verified": false,
         "source": "wmk-import"
@@ -3963,7 +3963,7 @@
     "cyrillic": "үнээ",
     "candidates": [
       {
-        "traditional": "ᠦᠨᠢᠶ᠎᠊ᠡ",
+        "traditional": "ᠦᠨᠢᠶ᠎ᠡ",
         "latin": "unee",
         "verified": false,
         "source": "wmk-import"
@@ -3985,7 +3985,7 @@
     "cyrillic": "үр",
     "candidates": [
       {
-        "traditional": "ᠦᠷ᠎᠊ᠡ",
+        "traditional": "ᠦᠷ᠎ᠡ",
         "latin": "ur",
         "verified": false,
         "source": "wmk-import"
@@ -4766,7 +4766,7 @@
     "cyrillic": "үрэм",
     "candidates": [
       {
-        "traditional": "ᠦᠷᠦᠮ᠎᠊ᠡ",
+        "traditional": "ᠦᠷᠦᠮ᠎ᠡ",
         "latin": "urem",
         "verified": false,
         "source": "wmk-import"
@@ -5151,7 +5151,7 @@
     "cyrillic": "үтрэм",
     "candidates": [
       {
-        "traditional": "ᠦᠲᠦᠷᠮ᠎᠊ᠡ",
+        "traditional": "ᠦᠲᠦᠷᠮ᠎ᠡ",
         "latin": "utrem",
         "verified": false,
         "source": "wmk-import"
@@ -5184,7 +5184,7 @@
     "cyrillic": "үтрээ",
     "candidates": [
       {
-        "traditional": "ᠦᠲᠦᠷᠢᠶ᠎᠊ᠡ",
+        "traditional": "ᠦᠲᠦᠷᠢᠶ᠎ᠡ",
         "latin": "utree",
         "verified": false,
         "source": "wmk-import"
@@ -5195,7 +5195,7 @@
     "cyrillic": "үтэл",
     "candidates": [
       {
-        "traditional": "ᠦᠲᠡᠯ᠎᠊ᠡ",
+        "traditional": "ᠦᠲᠡᠯ᠎ᠡ",
         "latin": "utel",
         "verified": false,
         "source": "wmk-import"

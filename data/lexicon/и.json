@@ -311,7 +311,7 @@
     "cyrillic": "идрээ",
     "candidates": [
       {
-        "traditional": "ᠢᠳᠡᠷ᠎᠊ᠡ",
+        "traditional": "ᠢᠳᠡᠷ᠎ᠡ",
         "latin": "idree",
         "verified": false,
         "source": "wmk-import"
@@ -630,7 +630,7 @@
     "cyrillic": "идээр",
     "candidates": [
       {
-        "traditional": "ᠢᠳᠡᠷ᠎᠊ᠡ",
+        "traditional": "ᠢᠳᠡᠷ᠎ᠡ",
         "latin": "ideer",
         "verified": false,
         "source": "wmk-import"
@@ -3402,7 +3402,7 @@
     "cyrillic": "иртэл",
     "candidates": [
       {
-        "traditional": "ᠢᠷᠡᠲᠡᠯ᠎᠊ᠡ",
+        "traditional": "ᠢᠷᠡᠲᠡᠯ᠎ᠡ",
         "latin": "irtel",
         "verified": false,
         "source": "wmk-import"
@@ -4172,7 +4172,7 @@
     "cyrillic": "ихэр",
     "candidates": [
       {
-        "traditional": "ᠢᠬᠡᠷ᠎᠊ᠡ",
+        "traditional": "ᠢᠬᠡᠷ᠎ᠡ",
         "latin": "iher",
         "verified": false,
         "source": "wmk-import"

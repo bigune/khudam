@@ -69,3 +69,31 @@ The written-apart suffixes beginning with the glide *y* — genitive **ᠶᠢᠨ
 
 - `suffixes.json` keeps U+1836 in ᠶᠢᠨ, ᠶᠢ, ᠢᠶᠠᠷ, ᠢᠶᠡᠷ, ᠢᠶᠠᠨ, ᠢᠶᠡᠨ; the ᠲᠠᠢ/ᠲᠡᠢ coda stays a single ᠢ. Pinned by code-point tests in `packages/converter/test/suffix.test.ts`.
 - Human review of the suffix table ([REVIEW.md](REVIEW.md)) can overturn this like any decision — with code-point-level evidence.
+
+---
+
+## Decision 003 — Detached final vowel: MVS + vowel, never MVS + NIRUGU + vowel
+
+**Date:** 2026-07-27 · **Approved by:** maintainer · **Applied by:** [`scripts/fix-mvs-nirugu.ts`](../scripts/fix-mvs-nirugu.ts) (1,113 candidates)
+
+### The rule
+
+The detached final vowel (Cyrillic words like цаана, батга whose traditional form ends in the separated ᠎ᠠ/᠎ᠡ) is encoded **MVS (U+180E) directly followed by the vowel**. The wmk seed frequently inserted a NIRUGU (᠊ U+180A) between them; that sequence is removed. NIRUGU remains valid in its documented role (patronymic abbreviations and other deliberate joining), which the seed never used.
+
+| Word | Encoding | Code points | |
+| --- | --- | --- | --- |
+| авга | ᠠᠪᠠᠭ᠎ᠠ | … U+182D **U+180E U+1820** | ✔ Khudam |
+| авга | ᠠᠪᠠᠭ᠎᠊ᠠ | … U+182D **U+180E U+180A U+1820** | ✘ seed hack (removed) |
+
+### Evidence
+
+1. **Purpose of the characters.** MVS exists precisely to produce the special detached final vowel form. UTN #57 (v4, §2.3) defines U+180A NIRUGU as a character that "behaves exactly like ZWJ but is visible as a piece of stem stroke," used "to cause joining in everyday text," canonically in patronymic abbreviations. Inserting it after MVS *re-joins* the vowel the MVS just detached — the two cancel out.
+2. **Rendering confirms** (HarfBuzz 12 + Noto Sans Mongolian v3.002): `MVS+NIRUGU+ᠠ` shapes as `mvs.wide nirugu uni1820.A.fina` — an ordinary connected final a; `MVS+ᠠ` shapes as the consonant's MVS form + `mvs.narrow uni1820.Aa.isol` — the correct detached form. (Corroborating only; the ruling stands on the character semantics, per ground rule 3.)
+3. **Internal inconsistency of the seed:** 1,113 candidates used the hacked sequence vs 134 the standard one — the same phenomenon encoded two ways in one machine-generated dataset. U+180A appeared *nowhere else* in the seed (zero legitimate uses), so the removal is loss-free.
+4. **External corroboration:** the батга spelling observed on other Mongolian-script sites carries no nirugu (see REVIEW.md — its remaining letter-level differences are a separate, per-word question).
+
+### Consequences
+
+- New entries and corrections must write the detached final vowel as MVS + vowel. NIRUGU is accepted only in its documented joining role, never adjacent to MVS.
+- As always: corrected candidates stay `verified: false`, `source` unchanged; the fix script is idempotent and never touches `verified: true` candidates.
+- Whether a *particular* word should have the MVS final vowel at all remains a dictionary-level question per word (e.g. батга), not covered by this decision.
