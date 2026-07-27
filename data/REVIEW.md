@@ -439,7 +439,11 @@ remains open.
 Separate, per-word question (NOT covered by the pattern fix): whether a given word
 should carry the MVS final vowel at all. Example flagged:
 
-- `батга` — ours `ᠪᠠᠳᠬ᠎᠊ᠠ` (b-a-d-q + MVS+NIRUGU+a); observed elsewhere on the web
-  as `ᠪᠠᠲᠠᠭᠠ` (b-a-t-a-g-a, no MVS). These differ in the *letters themselves*
-  (ᠳᠬ vs ᠲᠠᠭ, i.e. U+1833 U+182C vs U+1832 U+1820 U+182D) — a dictionary-level
-  discrepancy no script can rule on. Needs a cited human correction.
+- `батга` — a reference site lists two candidates for this word; its **first
+  matches ours** (`ᠪᠠᠳᠬ᠎ᠠ` after Decision 003), and its second, `ᠪᠠᠲᠠᠭᠠ`
+  (b-a-t-a-g-a, U+182A U+1820 U+1832 U+1820 U+182D U+1820), is absent from our
+  lexicon. Not a correction case — the wmk import's known one-to-many collapse:
+  a possible missing second candidate. Adding it needs a human PR that also
+  supplies `sense` labels for both (the schema requires senses once
+  candidates > 1), after checking whether the two forms are sense-scoped
+  meanings or orthographic variants.
