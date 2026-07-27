@@ -1,11 +1,17 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
-import { Noto_Sans_Mongolian } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const notoMongolian = Noto_Sans_Mongolian({
+// Self-hosted FULL Noto Sans Mongolian (v3.002, OFL — see fonts/OFL.txt).
+// Do not switch to next/font/google: Google Fonts serves this family sliced
+// into many unicode-range @font-face resources, which puts NNBSP (U+202F) in
+// a different resource than the Mongolian letters. That splits the text into
+// separate font runs, so the font's suffix-shaping rules (e.g. ᠶᠢᠨ after
+// NNBSP taking the I-shaped form) can never apply.
+const notoMongolian = localFont({
+  src: "./fonts/NotoSansMongolian-Regular.woff2",
   weight: "400",
-  subsets: ["mongolian"],
   variable: "--font-mongolian",
   display: "swap",
 });
