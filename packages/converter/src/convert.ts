@@ -1,5 +1,6 @@
 import { transliterateFallback } from "./fallback.js";
 import { lookupWord } from "./lookup.js";
+import { decomposeWord } from "./suffix.js";
 import type { Token } from "./types.js";
 
 /** A run of modern Mongolian Cyrillic letters (either case) is a word. */
@@ -12,7 +13,9 @@ const CYRILLIC_RUN_RE = /[а-яёөүА-ЯЁӨҮ]+/gu;
  *   reconstructs the normalized input exactly.
  * - Cyrillic words become word tokens with the full candidate list from the
  *   lexicon (candidates carry verified flags; ambiguity is never collapsed).
- * - Words missing from the lexicon get a rule-based transliteration flagged
+ * - Words missing from the lexicon are tried as stem + suffix (see
+ *   suffix.ts); composed candidates are flagged source: "suffix-rule".
+ * - Words that fail both get a rule-based transliteration flagged
  *   fallback: true — never disguised as dictionary output.
  * - Everything else (whitespace, punctuation, Latin, digits) is passed
  *   through as separator tokens with no candidates.
@@ -38,6 +41,8 @@ function separatorToken(input: string): Token {
 function wordToken(input: string): Token {
   const candidates = lookupWord(input);
   if (candidates.length > 0) return { input, candidates, fallback: false };
+  const composed = decomposeWord(input);
+  if (composed.length > 0) return { input, candidates: composed, fallback: false };
   const transliterated = transliterateFallback(input);
   if (transliterated.length === 0) return { input, candidates: [], fallback: false };
   return {

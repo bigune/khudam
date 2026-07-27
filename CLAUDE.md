@@ -18,7 +18,7 @@ Toolchain: **bun** (runtime, package manager, script runner, and test runner). T
 
 **One-to-many is fundamental.** A single Cyrillic word can map to multiple traditional words with different meanings. уул itself: ᠠᠭᠤᠯᠠ (*agula*, mountain) vs ᠤᠤᠯ (*uul*, original — as in уул нь). The schema stores an ARRAY of candidates per Cyrillic form; the engine returns all candidates and lets the UI/user choose. Never silently collapse to one candidate.
 
-**Mongolian is agglutinative.** Words = stem + chain of suffixes. Suffix inventories differ between scripts, and in traditional script many suffixes are written as separate units joined by NNBSP (U+202F). Full morphological handling is a later phase; v0 handles whole-word lookup plus a curated common-suffix table (`data/suffixes.json`).
+**Mongolian is agglutinative.** Words = stem + chain of suffixes. Suffix inventories differ between scripts, and in traditional script many suffixes are written as separate units joined by NNBSP (U+202F). Full morphological handling is a later phase; v0 handles whole-word lookup plus a curated common-suffix table (`data/suffixes.json`) applied by the suffix engine (`packages/converter/src/suffix.ts`) — depth 1, conditions evaluated on the traditional stem. Grammar rules are recorded with citations in `data/GRAMMAR.md`; route new morphology-rule questions through that file (code-point questions still go to `data/ENCODING.md`).
 
 **Unicode gotchas (traditional Mongolian is notoriously hard):**
 - Main block: U+1800–U+18AF. Also uses FVS1–FVS3 (U+180B–U+180D) free variation selectors, MVS (U+180E), and NNBSP (U+202F) before suffixes.
