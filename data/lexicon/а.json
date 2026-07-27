@@ -1463,6 +1463,18 @@
     ]
   },
   {
+    "cyrillic": "аварга",
+    "candidates": [
+      {
+        "traditional": "ᠠᠪᠤᠷᠭᠤ",
+        "latin": "aburɣu",
+        "sense": "giant, gigantic, colossal, enormous, gargantuan, mountainous, prodigious,…",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "аварзэд",
     "candidates": [
       {
@@ -1721,8 +1733,10 @@
       {
         "traditional": "ᠠᠪᠠᠷᠢᠬᠤ",
         "latin": "avirah",
+        "sense": "to climb, ascend, clamber up, scramble",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1941,8 +1955,10 @@
       {
         "traditional": "ᠠᠪᠤᠷᠠᠭᠴᠢ",
         "latin": "avragch",
+        "sense": "rescuer; saviour",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2909,8 +2925,16 @@
       {
         "traditional": "ᠠᠭᠵᠠᠢᠬᠤ",
         "latin": "agzaih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠭᠵᠠᠶᠢᠬᠤ",
+        "latin": "aɣǰayiqu",
+        "sense": "to shiver",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3184,8 +3208,10 @@
       {
         "traditional": "ᠠᠩᠨᠠᠬᠤ",
         "latin": "agnah",
+        "sense": "to hunt",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3613,8 +3639,10 @@
       {
         "traditional": "ᠠᠭᠤᠢ",
         "latin": "agui",
+        "sense": "cave",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3877,8 +3905,10 @@
       {
         "traditional": "ᠠᠳᠠ",
         "latin": "ad",
+        "sense": "devil, evil spirit",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3954,8 +3984,10 @@
       {
         "traditional": "ᠠᠳᠠᠯ",
         "latin": "adal",
+        "sense": "one's own",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4119,8 +4151,10 @@
       {
         "traditional": "ᠠᠳᠠᠯᠢ",
         "latin": "adil",
+        "sense": "same",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4350,8 +4384,10 @@
       {
         "traditional": "ᠠᠳᠠᠷᠠᠬᠤ",
         "latin": "adrah",
+        "sense": "to be stubborn",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4746,8 +4782,10 @@
       {
         "traditional": "ᠠᠵᠢᠯ",
         "latin": "ajil",
+        "sense": "job, work, activity, business, employment, occupation",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5076,8 +5114,10 @@
       {
         "traditional": "ᠠᠵᠠ",
         "latin": "az",
+        "sense": "fortune, luck",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5637,8 +5677,16 @@
       {
         "traditional": "ᠠᠢᠯᠴᠢᠯᠠᠬᠤ",
         "latin": "ailchlah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠶᠢᠯᠴᠢᠯᠠᠬᠤ",
+        "latin": "ayilčilaqu",
+        "sense": "to visit",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5780,8 +5828,10 @@
       {
         "traditional": "ᠠᠶᠤᠮᠠᠬᠠᠢ",
         "latin": "aimhai",
+        "sense": "cowardly",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5813,8 +5863,16 @@
       {
         "traditional": "ᠠᠢᠷᠠᠭ",
         "latin": "airag",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠶᠢᠷᠠᠭ",
+        "latin": "ayiraɣ",
+        "sense": "koumiss (a popular Mongolian drink made from fermented mare’s milk).",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5923,8 +5981,10 @@
       {
         "traditional": "ᠠᠶᠤᠬᠤ",
         "latin": "aih",
+        "sense": "to fear, to be afraid of",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6055,8 +6115,16 @@
       {
         "traditional": "ᠠᠯᠠ",
         "latin": "al",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠯ",
+        "latin": "al",
+        "sense": "red",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6429,8 +6497,10 @@
       {
         "traditional": "ᠠᠯᠪᠠᠳᠠᠬᠤ",
         "latin": "albadah",
+        "sense": "to compel, to coerce",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6737,8 +6807,10 @@
       {
         "traditional": "ᠠᠯᠳᠠᠭ᠎ᠠ",
         "latin": "aldaa",
+        "sense": "mistake",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6902,8 +6974,16 @@
       {
         "traditional": "ᠠᠯᠠᠳᠠᠬᠤ",
         "latin": "aldah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠯᠳᠠᠬᠤ",
+        "latin": "aldaqu",
+        "sense": "to lose (a thing, an ability, a quality...)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7287,8 +7367,16 @@
       {
         "traditional": "ᠠᠯᠢᠮ᠎ᠠ",
         "latin": "alim",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠯᠢᠮ᠎᠎ᠠ",
+        "latin": "alim--a",
+        "sense": "apple",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7584,8 +7672,10 @@
       {
         "traditional": "ᠠᠯᠤᠰ",
         "latin": "als",
+        "sense": "distance",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7760,8 +7850,10 @@
       {
         "traditional": "ᠠᠯᠲᠠᠭᠠᠨ᠎ᠠ",
         "latin": "altgana",
+        "sense": "Caragana leucophloea",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7859,8 +7951,10 @@
       {
         "traditional": "ᠠᠯᠤᠬ᠎ᠠ",
         "latin": "alh",
+        "sense": "hammer (both hand and mechanically powered)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7870,8 +7964,10 @@
       {
         "traditional": "ᠠᠯᠬᠤᠭ᠎ᠠ",
         "latin": "alhaa",
+        "sense": "step",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7925,8 +8021,10 @@
       {
         "traditional": "ᠠᠯᠬᠤᠮ",
         "latin": "alham",
+        "sense": "step",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7958,8 +8056,10 @@
       {
         "traditional": "ᠠᠯᠬᠤᠬᠤ",
         "latin": "alhah",
+        "sense": "to step",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8233,8 +8333,10 @@
       {
         "traditional": "ᠠᠯᠴᠢᠭᠤᠷ",
         "latin": "alchuur",
+        "sense": "towel",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8288,8 +8390,10 @@
       {
         "traditional": "ᠠᠮᠠ",
         "latin": "am",
+        "sense": "mouth (the opening of an animal through which food is ingested)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8684,8 +8788,22 @@
       {
         "traditional": "ᠠᠮᠧᠷᠢᠺᠠ",
         "latin": "amyerik",
+        "sense": "American",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      }
+    ]
+  },
+  {
+    "cyrillic": "америкчууд",
+    "candidates": [
+      {
+        "traditional": "ᠠᠮᠧᠷᠢᠺᠠᠴᠤᠳ",
+        "latin": "amērikačud",
+        "sense": "plural of америк (amerik)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8706,8 +8824,10 @@
       {
         "traditional": "ᠠᠮᠵᠢᠯᠲᠠ",
         "latin": "amjilt",
+        "sense": "success",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8728,8 +8848,10 @@
       {
         "traditional": "ᠠᠮᠵᠢᠬᠤ",
         "latin": "amjih",
+        "sense": "to do in time, to make it in time",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8904,8 +9026,10 @@
       {
         "traditional": "ᠠᠮᠠᠯᠠᠬᠤ",
         "latin": "amlah",
+        "sense": "to promise",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8992,8 +9116,10 @@
       {
         "traditional": "ᠠᠮᠠᠷᠠᠯᠲᠠ",
         "latin": "amralt",
+        "sense": "holiday",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9003,8 +9129,16 @@
       {
         "traditional": "ᠠᠮᠤᠷᠠᠬᠤ",
         "latin": "amrah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠮᠠᠷᠠᠬᠤ",
+        "latin": "amaraqu",
+        "sense": "to rest",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9212,8 +9346,10 @@
       {
         "traditional": "ᠠᠮᠲᠠ",
         "latin": "amt",
+        "sense": "taste; palate",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9531,8 +9667,16 @@
       {
         "traditional": "ᠠᠮᠢᠳᠤᠷᠠᠯ",
         "latin": "amidral",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠮᠢᠳ᠋ᠤᠷᠠᠯ",
+        "latin": "amidural",
+        "sense": "life",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9542,8 +9686,10 @@
       {
         "traditional": "ᠠᠮᠢᠳᠤᠷᠠᠬᠤ",
         "latin": "amidrah",
+        "sense": "to live",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9685,8 +9831,10 @@
       {
         "traditional": "ᠠᠮᠢᠰᠬᠤᠯᠠᠬᠤ",
         "latin": "amisgalah",
+        "sense": "to breathe",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9828,8 +9976,10 @@
       {
         "traditional": "ᠠᠨᠠᠷ",
         "latin": "anar",
+        "sense": "pomegranate, Punica granatum",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10153,6 +10303,18 @@
     ]
   },
   {
+    "cyrillic": "ангасан",
+    "candidates": [
+      {
+        "traditional": "ᠠᠩᠭᠠᠭᠰᠠᠨ",
+        "latin": "angɣaɣsan",
+        "sense": "dry",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "ангах",
     "candidates": [
       {
@@ -10268,8 +10430,10 @@
       {
         "traditional": "ᠠᠩᠭᠢᠯᠠᠬᠤ",
         "latin": "angilah",
+        "sense": "to classify (divide into classes)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10334,8 +10498,16 @@
       {
         "traditional": "ᠠᠩᠭᠯᠢ",
         "latin": "angli",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠩᠩᠯᠢ",
+        "latin": "angngli",
+        "sense": "English",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10989,6 +11161,18 @@
     ]
   },
   {
+    "cyrillic": "анх",
+    "candidates": [
+      {
+        "traditional": "ᠠᠩᠬ᠎ᠠ",
+        "latin": "angq-a",
+        "sense": "beginning",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "анхаарал",
     "candidates": [
       {
@@ -11126,8 +11310,10 @@
       {
         "traditional": "ᠠᠩᠬᠢᠯᠤᠮ᠎ᠠ",
         "latin": "anhilam",
+        "sense": "fragrant, sweet-smelling, redolent",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11324,8 +11510,16 @@
       {
         "traditional": "ᠠᠫᠲ᠋ᠧᠺ",
         "latin": "aptyek",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠫᠳᠡᠭ",
+        "latin": "apdeg",
+        "sense": "drugstore, pharmacy, chemist's",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11357,8 +11551,10 @@
       {
         "traditional": "ᠠᠷᠠᠭ᠎ᠠ",
         "latin": "araa",
+        "sense": "molar",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11425,6 +11621,18 @@
         "latin": "araahan",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "араб",
+    "candidates": [
+      {
+        "traditional": "ᠠᠷᠠᠪ",
+        "latin": "arab",
+        "sense": "Arab, Arabic, Arabian",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11500,8 +11708,10 @@
       {
         "traditional": "ᠠᠷᠠᠢ",
         "latin": "arai",
+        "sense": "a bit, slightly",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11709,8 +11919,10 @@
       {
         "traditional": "ᠠᠷᠪᠠᠢ",
         "latin": "arvai",
+        "sense": "barley",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11775,8 +11987,10 @@
       {
         "traditional": "ᠠᠷᠪᠠᠨ",
         "latin": "arvan",
+        "sense": "oblique of арав (arav, “ten”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12006,8 +12220,10 @@
       {
         "traditional": "ᠠᠷᠭ᠎ᠠ",
         "latin": "arga",
+        "sense": "manner, way, means",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12050,8 +12266,10 @@
       {
         "traditional": "ᠠᠷᠭᠠᠯ",
         "latin": "argal",
+        "sense": "dung, manure",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12094,8 +12312,10 @@
       {
         "traditional": "ᠠᠷᠭᠠᠯᠢ",
         "latin": "argali",
+        "sense": "argali (Ovis ammon, wild sheep)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12677,8 +12897,10 @@
       {
         "traditional": "ᠠᠷᠵᠠᠭᠠᠷ",
         "latin": "arzgar",
+        "sense": "jagged",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12831,8 +13053,10 @@
       {
         "traditional": "ᠠᠷᠢᠭᠤᠨ",
         "latin": "ariun",
+        "sense": "pure, clear, clean, holy, hygienic, sanitary",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13106,8 +13330,10 @@
       {
         "traditional": "ᠠᠷᠰᠯᠠᠨ",
         "latin": "arslan",
+        "sense": "lion",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13317,6 +13543,18 @@
         "latin": "arhityektur",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "архичин",
+    "candidates": [
+      {
+        "traditional": "ᠠᠷᠢᠬᠢᠴᠢᠨ",
+        "latin": "ariqičin",
+        "sense": "drunkard, alcoholic",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13568,8 +13806,10 @@
       {
         "traditional": "ᠠᠷᠠᠰᠤ",
         "latin": "aris",
+        "sense": "skin",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13634,8 +13874,10 @@
       {
         "traditional": "ᠠᠰᠠᠭᠠᠭᠤᠷ",
         "latin": "asaaguur",
+        "sense": "cigarette lighter, lighter",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13766,8 +14008,17 @@
       {
         "traditional": "ᠠᠰᠠᠷ",
         "latin": "asar",
+        "sense": "field tent, pavilion",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠠᠰᠤᠷᠤ",
+        "latin": "asuru",
+        "sense": "much, a lot, very, extremely",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13788,8 +14039,10 @@
       {
         "traditional": "ᠠᠰᠠᠬᠤ",
         "latin": "asah",
+        "sense": "to cling to, to latch on",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14162,8 +14415,16 @@
       {
         "traditional": "ᠠᠰᠠᠭᠤᠳᠠᠯ",
         "latin": "asuudal",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠰᠠᠭᠣᠳᠠᠯ",
+        "latin": "asaɣodal",
+        "sense": "question",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -14217,8 +14478,10 @@
       {
         "traditional": "ᠠᠰᠠᠭᠤᠬᠤ",
         "latin": "asuuh",
+        "sense": "to ask, to inquire",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14261,8 +14524,10 @@
       {
         "traditional": "ᠠᠲᠠ",
         "latin": "at",
+        "sense": "a castrated camel of five years or older",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15295,8 +15560,10 @@
       {
         "traditional": "ᠠᠬᠢᠬᠤ",
         "latin": "ahih",
+        "sense": "to advance (literally or figuratively)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15482,8 +15749,17 @@
       {
         "traditional": "ᠠᠴᠠ",
         "latin": "ats",
+        "sense": "fork, prong, bifurcation",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠠᠴᠤ",
+        "latin": "aču",
+        "sense": "needle used for making nets",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15603,8 +15879,10 @@
       {
         "traditional": "ᠠᠴᠢ",
         "latin": "ach",
+        "sense": "grandson",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15614,8 +15892,10 @@
       {
         "traditional": "ᠠᠴᠢᠶ᠎ᠠ",
         "latin": "achaa",
+        "sense": "burden, load",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15702,8 +15982,16 @@
       {
         "traditional": "ᠠᠴᠢᠬ᠎ᠠ",
         "latin": "achih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠴᠢᠬᠤ",
+        "latin": "ačiqu",
+        "sense": "to load, burden, pile up",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15933,8 +16221,10 @@
       {
         "traditional": "ᠠᠰᠢᠭᠯᠠᠬᠤ",
         "latin": "ashiglah",
+        "sense": "to use",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16417,8 +16707,16 @@
       {
         "traditional": "ᠠᠶᠠᠯᠬᠤ",
         "latin": "ayalah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠠᠶᠠᠯᠠᠬᠤ",
+        "latin": "ayalaqu",
+        "sense": "to travel",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -16439,8 +16737,10 @@
       {
         "traditional": "ᠠᠶᠠᠯᠭᠤ",
         "latin": "ayalguu",
+        "sense": "dialect",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

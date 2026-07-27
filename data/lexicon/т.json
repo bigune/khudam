@@ -16,8 +16,10 @@
       {
         "traditional": "ᠲᠠ",
         "latin": "ta",
+        "sense": "you",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -599,8 +601,10 @@
       {
         "traditional": "ᠲᠠᠭᠠᠬᠤ",
         "latin": "taah",
+        "sense": "to guess",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -874,8 +878,10 @@
       {
         "traditional": "ᠲᠠᠪᠤᠨ",
         "latin": "tavan",
+        "sense": "oblique of тав (tav, “five”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1061,8 +1067,10 @@
       {
         "traditional": "ᠲᠠᠪᠢᠯᠭ᠎ᠠ",
         "latin": "tavilga",
+        "sense": "furniture",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1083,8 +1091,10 @@
       {
         "traditional": "ᠲᠠᠪᠢᠨ",
         "latin": "tavin",
+        "sense": "oblique of тавь (tavʹ, “fifty”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1347,8 +1357,10 @@
       {
         "traditional": "ᠲᠠᠪᠠᠬᠠᠢ",
         "latin": "tavhai",
+        "sense": "foot",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1952,8 +1964,10 @@
       {
         "traditional": "ᠲᠠᠭᠲᠠᠭ᠎ᠠ",
         "latin": "tagtaa",
+        "sense": "pigeon",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2161,8 +2175,16 @@
       {
         "traditional": "ᠲᠠᠢᠵᠢ",
         "latin": "taij",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠠᠶᠢᠵᠢ",
+        "latin": "tayiǰi",
+        "sense": "a nobleman",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2293,8 +2315,16 @@
       {
         "traditional": "ᠲᠠᠢᠯᠪᠤᠷᠢᠯᠠᠬᠤ",
         "latin": "tailbarlah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠠᠶᠢᠯᠪᠤᠷᠢᠯᠠᠬᠤ",
+        "latin": "tayilburilaqu",
+        "sense": "to explain",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2612,8 +2642,16 @@
       {
         "traditional": "ᠲᠠᠺᠰᠢ",
         "latin": "taksi",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲ᠋ᠠᠻᠰᠢ",
+        "latin": "taksi",
+        "sense": "taxi; cab",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2788,8 +2826,10 @@
       {
         "traditional": "ᠲᠠᠯᠠᠪᠠᠢ",
         "latin": "talbai",
+        "sense": "a flat surface; an even area",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2799,8 +2839,10 @@
       {
         "traditional": "ᠲᠠᠯᠠᠪᠤᠷ",
         "latin": "talbar",
+        "sense": "field",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3052,8 +3094,10 @@
       {
         "traditional": "ᠲᠠᠯᠬ᠎ᠠ",
         "latin": "talh",
+        "sense": "bread",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3239,8 +3283,16 @@
       {
         "traditional": "ᠲᠠᠮ",
         "latin": "tam",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠠᠮᠤ",
+        "latin": "tamu",
+        "sense": "hell",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3261,8 +3313,16 @@
       {
         "traditional": "ᠲᠠᠮᠠᠬᠤ",
         "latin": "tamah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠠᠮᠤᠬᠤ",
+        "latin": "tamuqu",
+        "sense": "alternative form of томох (tomox, “to spin (rope)”)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3272,8 +3332,10 @@
       {
         "traditional": "ᠲᠠᠮᠠᠭ᠎ᠠ",
         "latin": "tamga",
+        "sense": "stamp, seal",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3619,6 +3681,18 @@
     ]
   },
   {
+    "cyrillic": "тамхи",
+    "candidates": [
+      {
+        "traditional": "ᠲᠠᠮᠠᠬᠢ",
+        "latin": "tamaqi",
+        "sense": "tobacco",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "тамхилах",
     "candidates": [
       {
@@ -3712,8 +3786,10 @@
       {
         "traditional": "ᠲᠠᠨ᠎ᠠ",
         "latin": "tana",
+        "sense": "mother-of-pearl; nacre",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3736,6 +3812,18 @@
         "latin": "tanagdah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "танай",
+    "candidates": [
+      {
+        "traditional": "ᠲᠠᠨ᠎ᠤ",
+        "latin": "tan-u",
+        "sense": "your, yours",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4675,6 +4763,18 @@
     ]
   },
   {
+    "cyrillic": "тарвага",
+    "candidates": [
+      {
+        "traditional": "ᠲᠠᠷᠪᠠᠭ᠎ᠠ",
+        "latin": "tarbaɣ-a",
+        "sense": "marmot, tarbagan",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "тарвагацаа",
     "candidates": [
       {
@@ -4735,8 +4835,10 @@
       {
         "traditional": "ᠲᠠᠷᠪᠤᠰ",
         "latin": "tarvas",
+        "sense": "watermelon",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4840,6 +4942,18 @@
     ]
   },
   {
+    "cyrillic": "тариа",
+    "candidates": [
+      {
+        "traditional": "ᠲᠠᠷᠢᠶ᠎ᠠ",
+        "latin": "tariy-a",
+        "sense": "grain, cereal",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "тариалан",
     "candidates": [
       {
@@ -4924,6 +5038,18 @@
         "latin": "tariulah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "тариур",
+    "candidates": [
+      {
+        "traditional": "ᠲᠠᠷᠢᠭᠤᠷ",
+        "latin": "tariɣur",
+        "sense": "syringe",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5241,8 +5367,10 @@
       {
         "traditional": "ᠲᠠᠷᠬᠠᠬᠤ",
         "latin": "tarhah",
+        "sense": "to scatter, to disperse",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5263,8 +5391,10 @@
       {
         "traditional": "ᠲᠠᠷᠢᠬᠢ",
         "latin": "tarhi",
+        "sense": "brain",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5494,8 +5624,10 @@
       {
         "traditional": "ᠲᠠᠰᠤᠯᠪᠤᠷᠢ",
         "latin": "tasalbar",
+        "sense": "cheque, check; ticket; coupon; receipt",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5760,6 +5892,18 @@
         "latin": "tataal",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "татаар",
+    "candidates": [
+      {
+        "traditional": "ᠲᠠᠲ᠋ᠠᠷ",
+        "latin": "tatar",
+        "sense": "Tartar",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6605,8 +6749,10 @@
       {
         "traditional": "ᠲᠠᠬᠢᠬᠤ",
         "latin": "tahih",
+        "sense": "to sacrifice",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6816,6 +6962,18 @@
         "latin": "tachiyadam",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ташаа",
+    "candidates": [
+      {
+        "traditional": "ᠲᠠᠰᠢᠶ᠎ᠠ",
+        "latin": "tasiy-a",
+        "sense": "hip, thigh, side, joint, ham",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7177,8 +7335,10 @@
       {
         "traditional": "ᠲᠠᠶᠠᠭ",
         "latin": "tayag",
+        "sense": "stick, cane",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7364,8 +7524,16 @@
       {
         "traditional": "ᠲᠧᠯᠧᠹᠣᠨ",
         "latin": "tyelyefon",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲ᠋ᠧᠯᠧᠹᠣᠨ",
+        "latin": "tēlēfon",
+        "sense": "telephone",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7496,8 +7664,16 @@
       {
         "traditional": "ᠲᠧᠭᠨᠣᠯᠣᠭᠢ",
         "latin": "tyehnologi",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠧᠻᠨᠣᠯᠣᠬᠢ",
+        "latin": "tēknoloqi",
+        "sense": "technology",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7518,8 +7694,16 @@
       {
         "traditional": "ᠲᠢᠪ",
         "latin": "tiv",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠢᠢᠪ",
+        "latin": "tiib",
+        "sense": "continent",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8079,8 +8263,10 @@
       {
         "traditional": "ᠲᠣᠪᠴᠢ",
         "latin": "tovch",
+        "sense": "button (fastener)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8530,8 +8716,10 @@
       {
         "traditional": "ᠲᠣᠭᠯᠠᠭᠠᠮ",
         "latin": "togloom",
+        "sense": "game, toy",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8552,8 +8740,10 @@
       {
         "traditional": "ᠲᠣᠭᠯᠠᠬᠤ",
         "latin": "togloh",
+        "sense": "to play, act, joke",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8585,8 +8775,16 @@
       {
         "traditional": "ᠲᠣᠭᠣᠭ᠎ᠠ",
         "latin": "togoo",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠭᠤᠭ᠎ᠠ",
+        "latin": "toɣuɣ-a",
+        "sense": "pot, saucepan",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8607,8 +8805,16 @@
       {
         "traditional": "ᠲᠣᠭᠣᠭᠠᠴᠢ",
         "latin": "togooch",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠭᠤᠭᠠᠴᠢ",
+        "latin": "toɣuɣači",
+        "sense": "cook; chef",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8618,8 +8824,16 @@
       {
         "traditional": "ᠲᠣᠭᠣᠷᠤᠤ",
         "latin": "togoruu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠭᠤᠷᠤᠤ",
+        "latin": "toɣuruu",
+        "sense": "crane",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8629,8 +8843,16 @@
       {
         "traditional": "ᠲᠣᠭᠣᠰ",
         "latin": "togos",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠭᠤᠰ",
+        "latin": "toɣus",
+        "sense": "peacock",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8893,8 +9115,10 @@
       {
         "traditional": "ᠲᠣᠭᠲᠠᠭᠠᠯ",
         "latin": "togtool",
+        "sense": "resolution (official decision)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8915,8 +9139,10 @@
       {
         "traditional": "ᠲᠣᠭᠲᠠᠭᠠᠮᠵᠢ",
         "latin": "togtoomj",
+        "sense": "edict",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8948,8 +9174,10 @@
       {
         "traditional": "ᠲᠣᠭᠲᠠᠭᠠᠬᠤ",
         "latin": "togtooh",
+        "sense": "causative voice in -оох (-oox) of тогтох (togtox, “to settle”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9828,8 +10056,16 @@
       {
         "traditional": "ᠲᠤᠭᠤᠷᠢᠬᠤ",
         "latin": "toiroh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠭᠤᠷᠢᠬᠤ",
+        "latin": "toɣuriqu",
+        "sense": "to circle (to go around)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9839,8 +10075,16 @@
       {
         "traditional": "ᠲᠣᠭᠣᠷᠢᠭᠤ",
         "latin": "toiruu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠭᠤᠷᠢᠭᠤ",
+        "latin": "toɣuriɣu",
+        "sense": "roundabout, indirect (road)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9960,8 +10204,16 @@
       {
         "traditional": "ᠲᠣᠯᠣᠭᠠᠢ",
         "latin": "tolgoi",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠯᠤᠭᠠᠢ",
+        "latin": "toluɣai",
+        "sense": "head",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10290,8 +10542,16 @@
       {
         "traditional": "ᠲᠣᠮᠣ",
         "latin": "tom",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠮᠤ",
+        "latin": "tomu",
+        "sense": "big",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10587,8 +10847,16 @@
       {
         "traditional": "ᠲᠣᠮᠣᠬᠤ",
         "latin": "tomoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠠᠮᠤᠬᠤ",
+        "latin": "tamuqu",
+        "sense": "to twist, to splice (a rope)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10642,8 +10910,16 @@
       {
         "traditional": "ᠲᠣᠮᠣᠰᠬᠤ",
         "latin": "tomsoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠮᠤᠰᠬᠤ",
+        "latin": "tomusqu",
+        "sense": "to grow bigger",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11269,8 +11545,10 @@
       {
         "traditional": "ᠲᠣᠩᠰᠢᠭᠤᠯ",
         "latin": "tonshuul",
+        "sense": "woodpecker",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11302,8 +11580,10 @@
       {
         "traditional": "ᠲᠣᠭ᠎ᠠ",
         "latin": "too",
+        "sense": "numerative, arithmetic",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11456,8 +11736,10 @@
       {
         "traditional": "ᠲᠣᠭᠠᠯᠠᠬᠤ",
         "latin": "tooloh",
+        "sense": "to count",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11643,8 +11925,17 @@
       {
         "traditional": "ᠲᠣᠣᠷ",
         "latin": "toor",
+        "sense": "peach (both tree and fruit)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠲᠣᠷ",
+        "latin": "tor",
+        "sense": "only used in тоор тоор (toor toor)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11753,8 +12044,16 @@
       {
         "traditional": "ᠲᠣᠭᠣᠰᠣ",
         "latin": "toos",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠭᠤᠰᠤ",
+        "latin": "toɣusu",
+        "sense": "dust",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11907,8 +12206,16 @@
       {
         "traditional": "ᠲᠣᠷ",
         "latin": "tor",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠣᠷ",
+        "latin": "toor",
+        "sense": "net",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11918,8 +12225,10 @@
       {
         "traditional": "ᠲᠣᠷᠭ᠎ᠠ",
         "latin": "torgo",
+        "sense": "silk (fabric)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12006,8 +12315,16 @@
       {
         "traditional": "ᠲᠣᠷᠭᠣᠬᠤ",
         "latin": "torgoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠷᠭᠠᠬᠤ",
+        "latin": "torɣaqu",
+        "sense": "causative voice in -гох (-gox) of торох (torox, “to get stuck”)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -12039,8 +12356,10 @@
       {
         "traditional": "ᠲᠣᠷᠭᠠᠭᠤᠯᠢ",
         "latin": "torguuli",
+        "sense": "fine (penalty)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12578,8 +12897,16 @@
       {
         "traditional": "ᠲᠣᠰ",
         "latin": "tos",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠰᠤ",
+        "latin": "tosu",
+        "sense": "fat, grease, oil, butter",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -12842,8 +13169,16 @@
       {
         "traditional": "ᠲᠣᠳᠢ",
         "latin": "toti",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠳ᠋ᠢ",
+        "latin": "todi",
+        "sense": "parrot",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13139,8 +13474,16 @@
       {
         "traditional": "ᠲᠣᠬᠣᠢ",
         "latin": "tohoi",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠣᠬᠤᠢ",
+        "latin": "toqui",
+        "sense": "elbow",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13535,8 +13878,16 @@
       {
         "traditional": "ᠲᠷᠠᠮᠸᠠᠢ",
         "latin": "tramvai",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲ᠋ᠷᠠᠮᠸᠠᠢ",
+        "latin": "tramwai",
+        "sense": "tram, tramway",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13618,6 +13969,25 @@
     ]
   },
   {
+    "cyrillic": "тувачууд",
+    "candidates": [
+      {
+        "traditional": "ᠲᠤᠸᠠᠴᠤᠳ",
+        "latin": "tuwačud",
+        "sense": "nominative plural of тува (tuva)",
+        "verified": false,
+        "source": "wiktionary"
+      },
+      {
+        "traditional": "ᠲᠤᠪᠠᠴᠤᠳ",
+        "latin": "tubačud",
+        "sense": "nominative plural of тува (tuva)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "туг",
     "candidates": [
       {
@@ -13656,8 +14026,10 @@
       {
         "traditional": "ᠲᠤᠭᠤᠯ",
         "latin": "tugal",
+        "sense": "calf",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14140,8 +14512,10 @@
       {
         "traditional": "ᠲᠤᠯᠤᠯᠳᠤᠭᠠᠨ",
         "latin": "tulaldaan",
+        "sense": "battle",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14817,6 +15191,18 @@
     ]
   },
   {
+    "cyrillic": "тунадас",
+    "candidates": [
+      {
+        "traditional": "ᠲᠤᠨᠤᠳᠠᠰᠤ",
+        "latin": "tunudasu",
+        "sense": "sediment",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "тунамал",
     "candidates": [
       {
@@ -14888,8 +15274,10 @@
       {
         "traditional": "ᠲᠤᠩᠭᠠᠯᠠᠭ",
         "latin": "tungalag",
+        "sense": "transparent",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15493,8 +15881,10 @@
       {
         "traditional": "ᠲᠤᠷᠰᠢᠯᠭ᠎ᠠ",
         "latin": "turshlaga",
+        "sense": "experience",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15570,8 +15960,16 @@
       {
         "traditional": "ᠲᠤᠰ",
         "latin": "tus",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠤᠰᠠ",
+        "latin": "tusa",
+        "sense": "avail, boost, help, helping, adjuvancy, aid, benefit, helping hand, succour",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15583,6 +15981,18 @@
         "latin": "tusaah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "тусагдахуун",
+    "candidates": [
+      {
+        "traditional": "ᠲᠤᠰᠤᠭᠳᠠᠬᠤᠨ",
+        "latin": "tusuɣdaqun",
+        "sense": "object (thing acted upon)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15625,8 +16035,16 @@
       {
         "traditional": "ᠲᠤᠰᠤᠬᠤ",
         "latin": "tusah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠤᠰᠬᠤ",
+        "latin": "tusqu",
+        "sense": "to hit upon, strike, be hit",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15955,8 +16373,10 @@
       {
         "traditional": "ᠲᠤᠰᠠᠯᠠᠮᠵᠢ",
         "latin": "tuslamj",
+        "sense": "aid, help, assistance",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15988,8 +16408,16 @@
       {
         "traditional": "ᠲᠤᠰᠯᠠᠬᠤ",
         "latin": "tuslah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠤᠰᠠᠯᠠᠬᠤ",
+        "latin": "tusalaqu",
+        "sense": "to help, assist, succour",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -16045,6 +16473,18 @@
         "latin": "tutam",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "тутарга",
+    "candidates": [
+      {
+        "traditional": "ᠲᠤᠲᠤᠷᠭ᠎ᠠ",
+        "latin": "tuturɣ-a",
+        "sense": "rice",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -16351,8 +16791,17 @@
       {
         "traditional": "ᠲᠤᠭᠤᠷᠠᠢ",
         "latin": "tuurai",
+        "sense": "hoof",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠲᠤᠷᠤᠭᠤ",
+        "latin": "turuɣu",
+        "sense": "hoof",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -16395,8 +16844,10 @@
       {
         "traditional": "ᠲᠤᠭᠤᠷᠭ᠎ᠠ",
         "latin": "tuurga",
+        "sense": "wall",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16582,8 +17033,10 @@
       {
         "traditional": "ᠲᠤᠬᠠᠢ",
         "latin": "tuhai",
+        "sense": "occasion, time",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17077,8 +17530,16 @@
       {
         "traditional": "ᠲᠡᠪᠡᠨᠡ",
         "latin": "tevne",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠡᠪᠡᠨ᠎ᠡ",
+        "latin": "teben-e",
+        "sense": "a large needle for sewing leather or felt",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -17352,8 +17813,10 @@
       {
         "traditional": "ᠲᠡᠪᠴᠢᠬᠦ",
         "latin": "tevchih",
+        "sense": "to tolerate",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17363,8 +17826,10 @@
       {
         "traditional": "ᠲᠡᠪᠴᠢᠶᠡᠷᠢ",
         "latin": "tevcheer",
+        "sense": "patience",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17429,8 +17894,10 @@
       {
         "traditional": "ᠲᠡᠪᠡᠷᠢ",
         "latin": "tever",
+        "sense": "embrace, hug",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17506,8 +17973,16 @@
       {
         "traditional": "ᠲᠡᠭ",
         "latin": "teg",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠡᠭᠡ",
+        "latin": "tege",
+        "sense": "zero",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -17693,8 +18168,10 @@
       {
         "traditional": "ᠲᠡᠭᠰᠢ",
         "latin": "tegsh",
+        "sense": "equal, level, even, smooth",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17825,8 +18302,16 @@
       {
         "traditional": "ᠲᠡᠳᠡ",
         "latin": "ted",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠡᠳ᠋ᠡ",
+        "latin": "tede",
+        "sense": "they",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -18441,8 +18926,10 @@
       {
         "traditional": "ᠲᠡᠮᠡᠴᠡᠭᠴᠢ",
         "latin": "temtsegch",
+        "sense": "fighter, contestant, champion",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -18496,8 +18983,10 @@
       {
         "traditional": "ᠲᠡᠮᠡᠴᠡᠬᠦ",
         "latin": "temtseh",
+        "sense": "to struggle, fight, compete, scramble",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -18507,8 +18996,10 @@
       {
         "traditional": "ᠲᠡᠮᠡᠴᠡᠭᠡᠨ",
         "latin": "temtseen",
+        "sense": "competition; tournament",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -19343,8 +19834,10 @@
       {
         "traditional": "ᠲᠡᠷᠡ",
         "latin": "ter",
+        "sense": "that",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -19574,8 +20067,10 @@
       {
         "traditional": "ᠲᠡᠷᠰ",
         "latin": "ters",
+        "sense": "heretical, heterodox, dissident",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -19761,8 +20256,17 @@
       {
         "traditional": "ᠲᠡᠰ",
         "latin": "tes",
+        "sense": "completely, totally",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠲᠡᠰᠦ",
+        "latin": "tesü",
+        "sense": "rowan, mountain-ash",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -19772,8 +20276,10 @@
       {
         "traditional": "ᠲᠡᠰᠪᠦᠷᠢ",
         "latin": "tesver",
+        "sense": "patience, endurance",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -19915,8 +20421,10 @@
       {
         "traditional": "ᠲᠡᠰᠦᠷᠡᠬᠦ",
         "latin": "tesreh",
+        "sense": "to blow up, burst, explode",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20146,8 +20654,10 @@
       {
         "traditional": "ᠲᠡᠬᠡ",
         "latin": "teh",
+        "sense": "Siberian ibex",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -21653,8 +22163,10 @@
       {
         "traditional": "ᠲᠦᠢᠮᠡᠷ",
         "latin": "tuimer",
+        "sense": "conflagration, wildfire, blaze",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -21862,8 +22374,16 @@
       {
         "traditional": "ᠲᠦᠯᠬᠦᠬᠦ",
         "latin": "tulheh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠦᠯᠬᠢᠬᠦ",
+        "latin": "tülkikü",
+        "sense": "to push",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -21950,8 +22470,10 @@
       {
         "traditional": "ᠲᠦᠯᠬᠢᠭᠦᠷ",
         "latin": "tulhuur",
+        "sense": "key (for use with a lock)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -21963,6 +22485,18 @@
         "latin": "tulsh",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "түлэгдэлт",
+    "candidates": [
+      {
+        "traditional": "ᠲᠦᠯᠡᠭᠳᠡᠯᠲᠡ",
+        "latin": "tülegdelte",
+        "sense": "burn (injury)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -24167,6 +24701,18 @@
     ]
   },
   {
+    "cyrillic": "төлгө",
+    "candidates": [
+      {
+        "traditional": "ᠲᠥᠯᠭᠡ",
+        "latin": "tölge",
+        "sense": "mantic",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "төлж",
     "candidates": [
       {
@@ -24546,8 +25092,16 @@
       {
         "traditional": "ᠤᠯᠭᠤᠬᠤ",
         "latin": "tuluh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠥᠯᠦᠬᠦ",
+        "latin": "tölükü",
+        "sense": "to pay",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -24557,8 +25111,10 @@
       {
         "traditional": "ᠲᠥᠯᠥᠭᠡ",
         "latin": "tuluu",
+        "sense": "for; for the sake of",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -24590,8 +25146,16 @@
       {
         "traditional": "ᠲᠥᠯᠥᠭᠡᠯᠡᠭᠴᠢ",
         "latin": "tuluulugch",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠥᠯᠦᠭᠡᠯᠡᠭᠴᠢ",
+        "latin": "tölügelegči",
+        "sense": "representative; agent",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -24733,8 +25297,16 @@
       {
         "traditional": "ᠲᠥᠮᠥᠰᠥ",
         "latin": "tums",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠥᠮᠦᠰᠦ",
+        "latin": "tömüsü",
+        "sense": "potato",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -24854,8 +25426,16 @@
       {
         "traditional": "ᠲᠥᠷᠥ",
         "latin": "tur",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠥ᠋ᠷᠦ",
+        "latin": "törü",
+        "sense": "rule, order",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -24876,8 +25456,16 @@
       {
         "traditional": "ᠲᠥᠷᠬᠥ",
         "latin": "turh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠥᠷᠬᠦ",
+        "latin": "törkü",
+        "sense": "form, figure, character, personality",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -25052,8 +25640,10 @@
       {
         "traditional": "ᠲᠥᠷᠥᠬᠦ",
         "latin": "turuh",
+        "sense": "to give birth, be born",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -25096,8 +25686,10 @@
       {
         "traditional": "ᠲᠥᠰᠲᠡᠢ",
         "latin": "tustei",
+        "sense": "resembling",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -25151,8 +25743,16 @@
       {
         "traditional": "ᠲᠥᠰᠥᠪᠯᠡᠬᠦ",
         "latin": "tusuvluh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠲᠥᠰᠦᠪᠯᠡᠬᠦ",
+        "latin": "tösüblekü",
+        "sense": "to budget",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

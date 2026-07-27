@@ -115,8 +115,16 @@
       {
         "traditional": "ᠺᠠᠯᠧᠨᠳᠠᠷᠢ",
         "latin": "kalyendari",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠻᠠᠯᠧᠨᠳᠠᠷᠢ",
+        "latin": "kalēndari",
+        "sense": "calendar",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -434,8 +442,16 @@
       {
         "traditional": "ᠺᠠᠷᠲ",
         "latin": "kart",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠻᠠᠷᠲ᠋",
+        "latin": "kart",
+        "sense": "card, map, chart",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1281,8 +1297,16 @@
       {
         "traditional": "ᠺᠣᠮᠫᠠᠨᠢ",
         "latin": "kompani",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠻᠣᠮᠫᠠᠨᠢ",
+        "latin": "kompani",
+        "sense": "company; firm",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1523,8 +1547,16 @@
       {
         "traditional": "ᠺᠣᠨᠰᠤᠶᠢᠯ",
         "latin": "konsul",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠺᠣᠨᠰᠦ᠋ᠯ",
+        "latin": "konsül",
+        "sense": "consul (official residing in major foreign towns to represent and protect the…",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1556,8 +1588,16 @@
       {
         "traditional": "ᠺᠣᠨᠲ᠋ᠣᠷ",
         "latin": "kontor",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠻᠣᠨᠲ᠋ᠣᠷ",
+        "latin": "kontor",
+        "sense": "office; bureau",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1776,8 +1816,16 @@
       {
         "traditional": "ᠺᠣᠰᠲ᠋ᠶᠤᠶᠢᠮ",
         "latin": "kostyum",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠻᠣᠰᠲ᠋ᠢᠶᠦᠮ",
+        "latin": "kostiyüm",
+        "sense": "suit (suit of clothes, men’s suit or women’s suit)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

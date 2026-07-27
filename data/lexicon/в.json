@@ -93,8 +93,10 @@
       {
         "traditional": "ᠸᠠᠭᠠᠷ",
         "latin": "vaar",
+        "sense": "vase; jar; pitcher",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -258,8 +260,16 @@
       {
         "traditional": "ᠪᠠᠨᠳᠠᠩ",
         "latin": "vandan",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠸᠠᠩᠳᠠᠩ",
+        "latin": "wangdang",
+        "sense": "bench (set)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -401,8 +411,10 @@
       {
         "traditional": "ᠸᠢᠰᠠ",
         "latin": "viz",
+        "sense": "visa",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

@@ -115,8 +115,10 @@
       {
         "traditional": "ᠱᠠᠭᠠᠵᠠᠭᠠᠢ",
         "latin": "shaazgai",
+        "sense": "Eurasian magpie, (Pica pica)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -313,8 +315,10 @@
       {
         "traditional": "ᠱᠠᠭᠠᠷᠳᠠᠬᠤ",
         "latin": "shaardah",
+        "sense": "to urge, to hurry",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -324,8 +328,10 @@
       {
         "traditional": "ᠱᠠᠭᠠᠷᠳᠠᠯᠭ᠎ᠠ",
         "latin": "shaardlaga",
+        "sense": "urgency, demand",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -599,8 +605,10 @@
       {
         "traditional": "ᠰᠢᠪᠠᠷ",
         "latin": "shavar",
+        "sense": "clay",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1248,8 +1256,16 @@
       {
         "traditional": "ᠰᠢᠪᠠᠵᠢ",
         "latin": "shavij",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠢᠪᠡᠵᠢ",
+        "latin": "sibeǰi",
+        "sense": "insect, bug",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1347,8 +1363,10 @@
       {
         "traditional": "ᠱᠠᠭ᠎ᠠ",
         "latin": "shagai",
+        "sense": "ankle",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1501,8 +1519,10 @@
       {
         "traditional": "ᠱᠠᠩᠨᠠᠯ",
         "latin": "shagnal",
+        "sense": "prize; reward",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1963,8 +1983,16 @@
       {
         "traditional": "ᠱᠠᠯ",
         "latin": "shal",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠱᠠᠯᠠ",
+        "latin": "šala",
+        "sense": "floor (bottom part of a room)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2326,8 +2354,10 @@
       {
         "traditional": "ᠰᠢᠯᠪᠤᠷᠬᠠᠢ",
         "latin": "shalbarhai",
+        "sense": "abrasion (superficial wound)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2502,8 +2532,10 @@
       {
         "traditional": "ᠰᠢᠯᠭᠠᠯᠲᠠ",
         "latin": "shalgalt",
+        "sense": "test; examination",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2601,8 +2633,10 @@
       {
         "traditional": "ᠰᠢᠯᠭᠠᠬᠤ",
         "latin": "shalgah",
+        "sense": "to verify (to ascertain the truth of)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2623,8 +2657,10 @@
       {
         "traditional": "ᠰᠢᠯᠭᠠᠭᠤᠷ",
         "latin": "shalguur",
+        "sense": "criterion",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3019,8 +3055,10 @@
       {
         "traditional": "ᠰᠢᠯᠲᠠᠭ",
         "latin": "shaltag",
+        "sense": "motive, reason, pretext",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3140,8 +3178,10 @@
       {
         "traditional": "ᠰᠢᠯᠲᠠᠭᠠᠨ",
         "latin": "shaltgaan",
+        "sense": "root, cause (that which causes an event)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3822,8 +3862,10 @@
       {
         "traditional": "ᠰᠢᠨᠠ",
         "latin": "shanaa",
+        "sense": "cheekbone, cheek region",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3954,8 +3996,10 @@
       {
         "traditional": "ᠱᠠᠩᠳᠠ",
         "latin": "shand",
+        "sense": "springlet (a small watersource)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4053,8 +4097,10 @@
       {
         "traditional": "ᠱᠠᠨᠵᠠ",
         "latin": "shanz",
+        "sense": "A Mongolian lute-like traditional musical instrument, similar to Chinese…",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5021,8 +5067,10 @@
       {
         "traditional": "ᠱᠠᠲᠤ",
         "latin": "shat",
+        "sense": "stair, stairs, staircase, stairway",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5076,8 +5124,10 @@
       {
         "traditional": "ᠰᠢᠲᠠᠭᠠᠬᠤ",
         "latin": "shataah",
+        "sense": "causative voice in -аах (-aax) of шатах (šatax, “to burn”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5120,8 +5170,10 @@
       {
         "traditional": "ᠰᠢᠲᠠᠷ᠎ᠠ",
         "latin": "shatar",
+        "sense": "chess",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5175,8 +5227,10 @@
       {
         "traditional": "ᠰᠢᠲᠠᠬᠤ",
         "latin": "shatah",
+        "sense": "to burn, to catch fire",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5210,6 +5264,18 @@
         "latin": "shatlalt",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "шафа",
+    "candidates": [
+      {
+        "traditional": "ᠱᠠᠹᠠ",
+        "latin": "šafa",
+        "sense": "sofa",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5329,8 +5395,10 @@
       {
         "traditional": "ᠰᠢᠬᠠᠬᠤ",
         "latin": "shahah",
+        "sense": "to press",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5615,8 +5683,10 @@
       {
         "traditional": "ᠰᠢᠪᠡᠨᠡᠬᠦ",
         "latin": "shivneh",
+        "sense": "to whisper",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6022,8 +6092,10 @@
       {
         "traditional": "ᠰᠢᠪᠡᠭᠡᠰᠦ",
         "latin": "shivees",
+        "sense": "tattoo",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6605,8 +6677,10 @@
       {
         "traditional": "ᠰᠢᠭᠤᠸᠠ",
         "latin": "shiigua",
+        "sense": "watermelon",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6649,8 +6723,10 @@
       {
         "traditional": "ᠰᠢᠢᠳᠪᠦᠷᠢ",
         "latin": "shiidver",
+        "sense": "decision",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6875,6 +6951,18 @@
     ]
   },
   {
+    "cyrillic": "шийжүү",
+    "candidates": [
+      {
+        "traditional": "ᠰᠢᠵᠢᠦ",
+        "latin": "siǰiü",
+        "sense": "congee (rice gruel)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "шийр",
     "candidates": [
       {
@@ -6935,8 +7023,10 @@
       {
         "traditional": "ᠰᠢᠳᠬᠡᠯ",
         "latin": "shiitgel",
+        "sense": "punishment",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6990,8 +7080,16 @@
       {
         "traditional": "ᠰᠢᠯᠢ",
         "latin": "shil",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠢᠯ",
+        "latin": "sil",
+        "sense": "glass",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7001,8 +7099,10 @@
       {
         "traditional": "ᠰᠢᠯᠪᠢ",
         "latin": "shilbe",
+        "sense": "shin, shank",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7518,8 +7618,10 @@
       {
         "traditional": "ᠰᠢᠯᠦᠭᠦᠰᠦ",
         "latin": "shiluus",
+        "sense": "lynx",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7859,8 +7961,10 @@
       {
         "traditional": "ᠰᠢᠩᠭᠡᠨ",
         "latin": "shingen",
+        "sense": "runny, thin, watery",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8200,8 +8304,10 @@
       {
         "traditional": "ᠰᠢᠨ᠎ᠡ",
         "latin": "shine",
+        "sense": "new",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8224,6 +8330,18 @@
         "latin": "shinedeh",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "шинэлэг",
+    "candidates": [
+      {
+        "traditional": "ᠰᠢᠨᠡᠯᠢᠭ",
+        "latin": "sinelig",
+        "sense": "brand new, fresh",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8255,8 +8373,16 @@
       {
         "traditional": "ᠰᠢᠨᠡᠰ",
         "latin": "shines",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠢᠨᠠᠰᠣ",
+        "latin": "sinaso",
+        "sense": "larch (Larix)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8365,8 +8491,10 @@
       {
         "traditional": "ᠰᠢᠨᠡᠴᠢᠯᠡᠯ",
         "latin": "shinechlel",
+        "sense": "reform; reconstruction",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8728,8 +8856,10 @@
       {
         "traditional": "ᠰᠢᠷᠬᠡᠭ",
         "latin": "shirheg",
+        "sense": "thread, filament",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9476,8 +9606,16 @@
       {
         "traditional": "ᠱᠣᠳᠣᠢ",
         "latin": "shodoi",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠱᠣᠳᠤᠢ",
+        "latin": "šodui",
+        "sense": "penis",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9588,6 +9726,18 @@
         "latin": "shojiih",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "шоколад",
+    "candidates": [
+      {
+        "traditional": "ᠱᠣᠻᠣᠯᠠᠳ᠋",
+        "latin": "šokolad",
+        "sense": "chocolate",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9861,8 +10011,16 @@
       {
         "traditional": "ᠱᠣᠩᠬᠣᠷ",
         "latin": "shonhor",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠱᠣᠩᠬᠤᠷ",
+        "latin": "šongqur",
+        "sense": "falcon",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9872,8 +10030,16 @@
       {
         "traditional": "ᠱᠣᠣ",
         "latin": "shoo",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠱᠣ",
+        "latin": "šo",
+        "sense": "die, dice",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10169,8 +10335,10 @@
       {
         "traditional": "ᠰᠢᠷᠭᠤᠯᠵᠢ",
         "latin": "shorgoolj",
+        "sense": "ant",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10204,6 +10372,18 @@
         "latin": "shorjignuulah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "шорлог",
+    "candidates": [
+      {
+        "traditional": "ᠱᠣᠷᠤᠯᠠᠭ",
+        "latin": "šorulaɣ",
+        "sense": "barbecue",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10268,8 +10448,16 @@
       {
         "traditional": "ᠱᠣᠷᠣᠩ",
         "latin": "shoron",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠱᠣᠷᠤᠩ",
+        "latin": "šorung",
+        "sense": "prison; jail, gaol",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10279,8 +10467,16 @@
       {
         "traditional": "ᠰᠢᠷᠣᠢ",
         "latin": "shoroo",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠢᠷᠤᠢ",
+        "latin": "sirui",
+        "sense": "soil",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10312,8 +10508,16 @@
       {
         "traditional": "ᠱᠣᠬᠣᠢ",
         "latin": "shohoi",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠣᠬᠤ",
+        "latin": "čoqu",
+        "sense": "lime",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10402,6 +10606,18 @@
         "latin": "shoshgo",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "шпагетти",
+    "candidates": [
+      {
+        "traditional": "ᠱᠫᠠᠭᠧᠲ᠋ᠲ᠋ᠢ",
+        "latin": "špaɣētti",
+        "sense": "spaghetti",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10686,8 +10902,10 @@
       {
         "traditional": "ᠰᠢᠪᠠᠭᠤ",
         "latin": "shuvuu",
+        "sense": "bird (animal)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10708,8 +10926,10 @@
       {
         "traditional": "ᠱᠤᠭᠤᠮ",
         "latin": "shugam",
+        "sense": "line, dash",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11071,8 +11291,10 @@
       {
         "traditional": "ᠰᠢᠯᠤᠭᠤᠨ",
         "latin": "shuluun",
+        "sense": "straight (not curved)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11280,8 +11502,10 @@
       {
         "traditional": "ᠰᠢᠮᠠᠭᠤᠯ",
         "latin": "shumuul",
+        "sense": "mosquito",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11819,8 +12043,10 @@
       {
         "traditional": "ᠱᠤᠤᠭᠢᠶᠠᠨ",
         "latin": "shuugian",
+        "sense": "murmur, noise (of wind, of crowds)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11984,8 +12210,10 @@
       {
         "traditional": "ᠰᠢᠤᠳᠠᠨ",
         "latin": "shuudan",
+        "sense": "mail; post",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12358,8 +12586,10 @@
       {
         "traditional": "ᠰᠢᠭᠡᠬᠦ",
         "latin": "sheeh",
+        "sense": "to urinate",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12435,8 +12665,10 @@
       {
         "traditional": "ᠰᠢᠳᠦ",
         "latin": "shud",
+        "sense": "tooth",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12556,8 +12788,10 @@
       {
         "traditional": "ᠰᠢᠯᠦᠰᠦ",
         "latin": "shuls",
+        "sense": "saliva",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12754,8 +12988,10 @@
       {
         "traditional": "ᠰᠢᠯᠦᠭᠴᠢ",
         "latin": "shulegch",
+        "sense": "poet",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12897,8 +13133,10 @@
       {
         "traditional": "ᠰᠢᠬᠦᠷ",
         "latin": "shuher",
+        "sense": "umbrella",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12985,8 +13223,10 @@
       {
         "traditional": "ᠰᠢᠭᠦᠳᠡᠷᠢ",
         "latin": "shuuder",
+        "sense": "dew",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13117,8 +13357,16 @@
       {
         "traditional": "ᠰᠢᠭᠦᠷ",
         "latin": "shuur",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠱᠦᠭᠦᠷ",
+        "latin": "šügür",
+        "sense": "broom",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13139,8 +13387,16 @@
       {
         "traditional": "ᠱᠤᠤᠷᠳᠠᠬᠤ",
         "latin": "shuurdeh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠱᠦᠭᠦᠷᠳᠡᠬᠦ",
+        "latin": "šügürdekü",
+        "sense": "to sweep (to clean using a broom or brush)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13174,6 +13430,18 @@
         "latin": "shuurmegleh",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "шүүрс",
+    "candidates": [
+      {
+        "traditional": "ᠰᠢᠭᠦᠷᠡᠰᠦ",
+        "latin": "sigüresü",
+        "sense": "sigh",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13238,8 +13506,22 @@
       {
         "traditional": "ᠰᠢᠭᠦᠰᠦ",
         "latin": "shuus",
+        "sense": "juice",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      }
+    ]
+  },
+  {
+    "cyrillic": "шүүслэг",
+    "candidates": [
+      {
+        "traditional": "ᠰᠢᠭᠦᠰᠦᠯᠢᠭ",
+        "latin": "sigüsülig",
+        "sense": "juicy, sappy",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13249,8 +13531,10 @@
       {
         "traditional": "ᠰᠢᠭᠦᠰᠦᠯᠡᠬᠦ",
         "latin": "shuusleh",
+        "sense": "to juice (to drain juice from)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13271,8 +13555,10 @@
       {
         "traditional": "ᠰᠢᠭᠦᠬᠦ",
         "latin": "shuuh",
+        "sense": "court",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13502,8 +13788,16 @@
       {
         "traditional": "ᠱᠥᠯᠥ",
         "latin": "shul",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠱᠥᠯᠦ",
+        "latin": "šölü",
+        "sense": "soup",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

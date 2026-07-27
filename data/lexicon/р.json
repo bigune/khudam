@@ -143,6 +143,18 @@
     ]
   },
   {
+    "cyrillic": "размер",
+    "candidates": [
+      {
+        "traditional": "ᠷᠠᠽᠮᠧᠷ",
+        "latin": "razmēr",
+        "sense": "size (of clothing)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "район",
     "candidates": [
       {
@@ -302,8 +314,10 @@
       {
         "traditional": "ᠷᠧᠽᠢᠨ",
         "latin": "ryezin",
+        "sense": "rubber",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -517,6 +531,18 @@
     ]
   },
   {
+    "cyrillic": "ром",
+    "candidates": [
+      {
+        "traditional": "ᠷᠣᠮᠠ",
+        "latin": "roma",
+        "sense": "Roman",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "роман",
     "candidates": [
       {
@@ -579,6 +605,18 @@
         "latin": "rt",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "рубль",
+    "candidates": [
+      {
+        "traditional": "ᠷᠤᠪᠯᠢ",
+        "latin": "rubli",
+        "sense": "ruble",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

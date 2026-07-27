@@ -203,8 +203,10 @@
       {
         "traditional": "ᠬᠠᠭᠠᠯᠭ᠎ᠠ",
         "latin": "haalga",
+        "sense": "door",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -247,8 +249,10 @@
       {
         "traditional": "ᠬᠠᠭᠠᠯᠲᠠᠲᠠᠢ",
         "latin": "haalttai",
+        "sense": "closed, shut",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -269,8 +273,10 @@
       {
         "traditional": "ᠬᠠᠮᠢᠭ᠎ᠠ",
         "latin": "haana",
+        "sense": "where",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -302,8 +308,10 @@
       {
         "traditional": "ᠬᠠᠭᠠᠬᠤ",
         "latin": "haah",
+        "sense": "to close, block, obstruct",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -544,8 +552,10 @@
       {
         "traditional": "ᠬᠠᠪᠤᠷ",
         "latin": "havar",
+        "sense": "spring (season)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -742,8 +752,10 @@
       {
         "traditional": "ᠬᠠᠪᠢᠷᠭ᠎ᠠ",
         "latin": "havirga",
+        "sense": "rib",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1281,8 +1293,16 @@
       {
         "traditional": "ᠬᠠᠪᠴᠢᠯ",
         "latin": "havtsal",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠪᠴᠠᠯ",
+        "latin": "qabčal",
+        "sense": "gorge, ravine",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1303,8 +1323,10 @@
       {
         "traditional": "ᠬᠠᠪᠴᠢ",
         "latin": "havch",
+        "sense": "crab",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1468,8 +1490,10 @@
       {
         "traditional": "ᠬᠠᠪᠴᠢᠬᠤ",
         "latin": "havchih",
+        "sense": "to squeeze, to clamp",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1743,8 +1767,10 @@
       {
         "traditional": "ᠬᠠᠭ",
         "latin": "hag",
+        "sense": "coating, crust",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1754,8 +1780,10 @@
       {
         "traditional": "ᠬᠠᠭ᠎ᠠ",
         "latin": "haga",
+        "sense": "asunder",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1897,8 +1925,10 @@
       {
         "traditional": "ᠬᠠᠭᠠᠷᠠᠬᠤ",
         "latin": "hagarah",
+        "sense": "to break",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2337,8 +2367,17 @@
       {
         "traditional": "ᠬᠠᠳᠠ",
         "latin": "had",
+        "sense": "boulder, rock, crag",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠬᠠᠳ",
+        "latin": "qad",
+        "sense": "blackcurrant",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2469,8 +2508,10 @@
       {
         "traditional": "ᠬᠠᠳᠠᠭ",
         "latin": "hadag",
+        "sense": "khata (traditional Tibetan ceremonial scarf)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2876,8 +2917,10 @@
       {
         "traditional": "ᠬᠠᠳᠤᠭᠤᠷ",
         "latin": "haduur",
+        "sense": "sickle",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3129,8 +3172,10 @@
       {
         "traditional": "ᠬᠠᠵᠠᠭᠠᠷ",
         "latin": "hazaar",
+        "sense": "bridle",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3250,8 +3295,10 @@
       {
         "traditional": "ᠬᠠᠵᠠᠬᠤ",
         "latin": "hazah",
+        "sense": "to bite",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3833,8 +3880,16 @@
       {
         "traditional": "ᠬᠠᠢᠯᠤᠮᠠᠭ",
         "latin": "hailmag",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠶ᠋ᠢᠯᠤᠮᠠᠭ",
+        "latin": "qayilumaɣ",
+        "sense": "molten",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3998,8 +4053,16 @@
       {
         "traditional": "ᠬᠠᠢᠨᠤᠭ",
         "latin": "hainag",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠶᠢᠨᠤᠭ",
+        "latin": "qayinuɣ",
+        "sense": "dzo (yak–cow hybrid)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4284,8 +4347,16 @@
       {
         "traditional": "ᠬᠠᠢᠷᠠᠯᠠᠬᠤ",
         "latin": "hairlah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠶ᠋ᠢᠷᠠᠯᠠᠬᠤ",
+        "latin": "qayiralaqu",
+        "sense": "to love",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4526,8 +4597,16 @@
       {
         "traditional": "ᠬᠠᠢᠬᠤ",
         "latin": "haih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠶᠢᠬᠤ",
+        "latin": "qayiqu",
+        "sense": "to look for; to seek",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4603,8 +4682,16 @@
       {
         "traditional": "ᠬᠠᠢᠴᠢ",
         "latin": "haich",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠶ᠋ᠢᠴᠢ",
+        "latin": "qayiči",
+        "sense": "scissors",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4625,8 +4712,16 @@
       {
         "traditional": "ᠬᠠᠢᠴᠢᠯᠠᠬᠤ",
         "latin": "haichlah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠶ᠋ᠢᠴᠢᠯᠠᠬᠤ",
+        "latin": "qayičilaqu",
+        "sense": "to cut with scissors",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4726,6 +4821,18 @@
         "latin": "halaalgah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "халаас",
+    "candidates": [
+      {
+        "traditional": "ᠬᠠᠯᠠᠭᠠᠰᠤ",
+        "latin": "qalaɣasu",
+        "sense": "pocket",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4999,8 +5106,10 @@
       {
         "traditional": "ᠬᠠᠯᠪᠠᠭ᠎ᠠ",
         "latin": "halbaga",
+        "sense": "spoon",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5395,8 +5504,16 @@
       {
         "traditional": "ᠬᠠᠯᠠᠳᠠᠬᠤ",
         "latin": "haldah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠯᠳᠠᠬᠤ",
+        "latin": "qaldaqu",
+        "sense": "to near",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5434,6 +5551,18 @@
     ]
   },
   {
+    "cyrillic": "халдваргүйжүүлэгч",
+    "candidates": [
+      {
+        "traditional": "ᠬᠠᠯᠳᠠᠪᠤᠷᠢᠭᠦᠶᠢᠵᠢᠭᠦᠯᠦᠭᠴᠢ",
+        "latin": "qaldaburiɣüyiǰigülügči",
+        "sense": "disinfectant",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "халдваргүйжүүлэлт",
     "candidates": [
       {
@@ -5441,6 +5570,18 @@
         "latin": "haldvarguijuulelt",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "халдваргүйжүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠬᠠᠯᠳᠠᠪᠤᠷᠢᠭᠦᠶᠢᠵᠢᠭᠦᠯᠬᠦ",
+        "latin": "qaldaburiɣüyiǰigülkü",
+        "sense": "To disinfect, asepticize",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5461,8 +5602,10 @@
       {
         "traditional": "ᠬᠠᠯᠳᠠᠪᠤᠷᠢᠯᠠᠬᠤ",
         "latin": "haldvarlah",
+        "sense": "to be infected",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6187,8 +6330,10 @@
       {
         "traditional": "ᠬᠠᠯᠠᠭᠤᠨ",
         "latin": "haluun",
+        "sense": "hot (in temperature)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6275,8 +6420,10 @@
       {
         "traditional": "ᠬᠠᠯᠬ᠎ᠠ",
         "latin": "halh",
+        "sense": "Khalkha (a subgroup of the Mongol people)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6737,8 +6884,10 @@
       {
         "traditional": "ᠬᠠᠯᠢᠰᠤ",
         "latin": "halis",
+        "sense": "shell, skin, membrane, peel",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6816,6 +6965,18 @@
         "latin": "halit",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "хальтирах",
+    "candidates": [
+      {
+        "traditional": "ᠬᠠᠯᠲᠤᠷᠢᠬᠤ",
+        "latin": "qalturiqu",
+        "sense": "to slip, glide, slide",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7122,8 +7283,16 @@
       {
         "traditional": "ᠬᠠᠮᠠᠷ",
         "latin": "hamar",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠪᠠᠷ",
+        "latin": "qabar",
+        "sense": "nose",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7265,8 +7434,10 @@
       {
         "traditional": "ᠬᠠᠮᠠᠭᠠᠯᠠᠬᠤ",
         "latin": "hamgaalah",
+        "sense": "to defend",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7595,8 +7766,10 @@
       {
         "traditional": "ᠬᠠᠮᠲᠤ",
         "latin": "hamt",
+        "sense": "together; along (with)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7958,8 +8131,10 @@
       {
         "traditional": "ᠬᠠᠨ",
         "latin": "han",
+        "sense": "archduke; princely khan",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8728,8 +8903,10 @@
       {
         "traditional": "ᠬᠠᠨᠢᠶᠠᠬᠤ",
         "latin": "haniah",
+        "sense": "to cough",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9102,8 +9279,10 @@
       {
         "traditional": "ᠬᠠᠨᠴᠤᠢ",
         "latin": "hantsui",
+        "sense": "sleeve, arm",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9256,8 +9435,10 @@
       {
         "traditional": "ᠬᠠᠷ᠎ᠠ",
         "latin": "har",
+        "sense": "black (color)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9531,8 +9712,16 @@
       {
         "traditional": "ᠬᠠᠷᠠᠢᠬᠤ",
         "latin": "haraih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠷᠠᠶᠢᠬᠤ",
+        "latin": "qarayiqu",
+        "sense": "to leap; to jump",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9762,8 +9951,10 @@
       {
         "traditional": "ᠬᠠᠷᠠᠨᠳᠠ",
         "latin": "harandaa",
+        "sense": "pencil",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9817,8 +10008,10 @@
       {
         "traditional": "ᠬᠠᠷᠠᠬᠤ",
         "latin": "harah",
+        "sense": "to see",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9828,8 +10021,10 @@
       {
         "traditional": "ᠬᠠᠷᠪᠤᠭ᠎ᠠ",
         "latin": "harvaa",
+        "sense": "archery",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9839,8 +10034,10 @@
       {
         "traditional": "ᠬᠠᠷᠪᠤᠭᠠᠴᠢ",
         "latin": "harvaach",
+        "sense": "archer",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10169,8 +10366,10 @@
       {
         "traditional": "ᠬᠠᠷᠭᠠᠨ᠎ᠠ",
         "latin": "hargana",
+        "sense": "caragana, Caragana arborescens",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10565,8 +10764,10 @@
       {
         "traditional": "ᠬᠠᠷᠢᠨ",
         "latin": "harin",
+        "sense": "modal converb in -н (-n) of харих (xarix, “to return”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10576,8 +10777,10 @@
       {
         "traditional": "ᠬᠠᠷᠢᠭᠤ",
         "latin": "hariu",
+        "sense": "return",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10620,8 +10823,16 @@
       {
         "traditional": "ᠬᠠᠷᠢᠭᠤᠯᠬᠤ",
         "latin": "hariulah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠷᠢᠭᠤᠯᠠᠬᠤ",
+        "latin": "qarigulaqu",
+        "sense": "to answer, to reciprocate",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11104,8 +11315,10 @@
       {
         "traditional": "ᠬᠠᠷᠰᠢ",
         "latin": "harsh",
+        "sense": "mansion; castle; palace",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11337,6 +11550,18 @@
         "latin": "haritsuulsan",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "харьяа",
+    "candidates": [
+      {
+        "traditional": "ᠬᠠᠷᠢᠶ᠎ᠠ",
+        "latin": "qariy-a",
+        "sense": "area",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11643,8 +11868,10 @@
       {
         "traditional": "ᠬᠠᠲᠤᠭᠲᠠᠢ",
         "latin": "hatagtai",
+        "sense": "madam; lady; Mrs",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11709,8 +11936,10 @@
       {
         "traditional": "ᠬᠠᠲᠤᠨ",
         "latin": "hatan",
+        "sense": "princess",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12171,8 +12400,16 @@
       {
         "traditional": "ᠬᠠᠳᠠᠮᠠᠯ",
         "latin": "hatmal",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠲᠠᠮᠠᠯ",
+        "latin": "qatamal",
+        "sense": "dried, dry",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -12182,8 +12419,10 @@
       {
         "traditional": "ᠬᠠᠲᠠᠭᠤ",
         "latin": "hatuu",
+        "sense": "hard, inflexible, tough, harsh",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12644,8 +12883,10 @@
       {
         "traditional": "ᠬᠠᠬᠤᠤᠯᠢ",
         "latin": "hahuuli",
+        "sense": "bribe",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12743,8 +12984,16 @@
       {
         "traditional": "ᠬᠠᠴᠢᠭ",
         "latin": "hachig",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠴᠢᠬ",
+        "latin": "qačiq",
+        "sense": "tick (bug)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13370,8 +13619,16 @@
       {
         "traditional": "ᠬᠠᠶᠠᠭ",
         "latin": "hayag",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠶᠢᠭ",
+        "latin": "qayiɣ",
+        "sense": "address",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13447,8 +13704,10 @@
       {
         "traditional": "ᠬᠠᠶᠠᠯᠠᠬᠤ",
         "latin": "hayalah",
+        "sense": "to drizzle, to fall lightly",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13513,8 +13772,10 @@
       {
         "traditional": "ᠬᠠᠶᠠᠬᠤ",
         "latin": "hayah",
+        "sense": "to throw",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13612,8 +13873,10 @@
       {
         "traditional": "ᠬᠢᠮ᠎ᠠ",
         "latin": "hiam",
+        "sense": "lunch meat",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13871,13 +14134,27 @@
     ]
   },
   {
+    "cyrillic": "хижээл",
+    "candidates": [
+      {
+        "traditional": "ᠬᠡᠵᠢᠶᠡᠯ",
+        "latin": "keǰiyel",
+        "sense": "old, middle-aged",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "хий",
     "candidates": [
       {
         "traditional": "ᠬᠡᠢ",
         "latin": "hii",
+        "sense": "air, gas, atmosphere, bubble",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13953,8 +14230,16 @@
       {
         "traditional": "ᠬᠡᠢᠳ",
         "latin": "hiid",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠡᠶᠢᠳ",
+        "latin": "keyid",
+        "sense": "monastery",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -14008,8 +14293,10 @@
       {
         "traditional": "ᠬᠢᠭᠢᠯᠢ",
         "latin": "hiil",
+        "sense": "bass viol",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14085,8 +14372,16 @@
       {
         "traditional": "ᠬᠢᠯᠴᠡ",
         "latin": "hiilch",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠢᠭᠢᠯᠢᠴᠢ",
+        "latin": "kigiliči",
+        "sense": "violinist",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -14140,8 +14435,10 @@
       {
         "traditional": "ᠬᠢᠮᠡᠯ",
         "latin": "hiimel",
+        "sense": "artificial",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14426,8 +14723,10 @@
       {
         "traditional": "ᠬᠢᠯᠢ",
         "latin": "hil",
+        "sense": "border, edge, margin",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14525,8 +14824,10 @@
       {
         "traditional": "ᠬᠢᠯᠢᠩ",
         "latin": "hilen",
+        "sense": "velvet; velour; plush",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14767,8 +15068,16 @@
       {
         "traditional": "ᠬᠢᠷᠡᠰ",
         "latin": "hirs",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠡᠷᠢᠰ",
+        "latin": "keris",
+        "sense": "rhinoceros",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15275,6 +15584,18 @@
         "latin": "ho",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "хобби",
+    "candidates": [
+      {
+        "traditional": "ᠬᠣᠪᠪᠢ",
+        "latin": "qobbi",
+        "sense": "hobby",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15911,8 +16232,10 @@
       {
         "traditional": "ᠬᠣᠭ",
         "latin": "hog",
+        "sense": "garbage, rubbish, dust, litter",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16373,8 +16696,16 @@
       {
         "traditional": "ᠬᠣᠢᠭ",
         "latin": "hoig",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠶᠢᠭ",
+        "latin": "qoyiɣ",
+        "sense": "peninsula",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -16428,8 +16759,16 @@
       {
         "traditional": "ᠬᠣᠢᠳ",
         "latin": "hoid",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠶᠢᠳᠤ",
+        "latin": "qoyidu",
+        "sense": "northward",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -16483,8 +16822,16 @@
       {
         "traditional": "ᠬᠣᠢᠨ᠎ᠠ",
         "latin": "hoino",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠶᠢᠨ᠎ᠠ",
+        "latin": "qoyin-a",
+        "sense": "behind",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -16615,8 +16962,16 @@
       {
         "traditional": "ᠬᠣᠢᠲᠤᠨ",
         "latin": "hoiton",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠶᠢᠲᠣᠨ",
+        "latin": "qoyiton",
+        "sense": "next year",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -16846,8 +17201,10 @@
       {
         "traditional": "ᠬᠣᠯᠠ",
         "latin": "hol",
+        "sense": "far",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17088,8 +17445,16 @@
       {
         "traditional": "ᠬᠣᠯᠪᠣᠭ᠎ᠠ",
         "latin": "holboo",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠯᠪᠤᠭ᠎ᠠ",
+        "latin": "qolbuɣ-a",
+        "sense": "connection, link",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -17099,8 +17464,16 @@
       {
         "traditional": "ᠬᠣᠯᠪᠣᠭᠠᠰᠤ",
         "latin": "holboos",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠯᠪᠤᠭᠠᠰᠤ",
+        "latin": "qolbuɣasu",
+        "sense": "conjugation",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -17253,8 +17626,16 @@
       {
         "traditional": "ᠬᠤᠯᠢᠯᠳᠤᠭᠤᠯᠬᠤ",
         "latin": "holildoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠯᠢᠯᠳᠤᠬᠤ",
+        "latin": "qolilduqu",
+        "sense": "to mix, blend, be mixed",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -17352,8 +17733,16 @@
       {
         "traditional": "ᠬᠤᠯᠢᠬᠤ",
         "latin": "holih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠯᠢᠬᠤ",
+        "latin": "qoliqu",
+        "sense": "to mix, shuffle, stir, adulterate",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -18705,8 +19094,16 @@
       {
         "traditional": "ᠬᠣᠨᠣᠭ",
         "latin": "honog",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠨᠤᠭ",
+        "latin": "qonuɣ",
+        "sense": "day",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -18760,8 +19157,16 @@
       {
         "traditional": "ᠬᠤᠨᠤᠬᠤ",
         "latin": "honoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠨᠤᠬᠤ",
+        "latin": "qonuqu",
+        "sense": "To stay the night",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -19167,8 +19572,10 @@
       {
         "traditional": "ᠬᠣᠨᠢ",
         "latin": "honi",
+        "sense": "sheep",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -19442,8 +19849,16 @@
       {
         "traditional": "ᠬᠣᠭᠣᠷᠣᠨᠳᠣ",
         "latin": "hoorond",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠭᠤᠷᠤᠨᠳᠤ",
+        "latin": "qoɣurundu",
+        "sense": "between",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -19596,8 +20011,16 @@
       {
         "traditional": "ᠬᠣᠣᠷ",
         "latin": "hor",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠣᠷ᠎ᠠ",
+        "latin": "qoor-a",
+        "sense": "poison",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -19926,8 +20349,10 @@
       {
         "traditional": "ᠬᠣᠷᠢᠭᠳᠠᠯ",
         "latin": "horigdol",
+        "sense": "captive; prisoner",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -19992,8 +20417,10 @@
       {
         "traditional": "ᠬᠣᠷᠢᠨ",
         "latin": "horin",
+        "sense": "twenty",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20465,8 +20892,16 @@
       {
         "traditional": "ᠬᠤᠷᠤᠰᠬᠤ",
         "latin": "horsoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠷᠤᠰᠬᠤ",
+        "latin": "qorusqu",
+        "sense": "to burn, to sting",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -20608,8 +21043,16 @@
       {
         "traditional": "ᠬᠣᠷᠣᠬᠠᠢ",
         "latin": "horhoi",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠷᠤᠬᠠᠢ",
+        "latin": "qoruqai",
+        "sense": "maggot, insect, bug",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -20784,8 +21227,10 @@
       {
         "traditional": "ᠬᠣᠷᠴᠢᠨ",
         "latin": "horchin",
+        "sense": "Khorchin (a Mongolian tribe)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20927,8 +21372,10 @@
       {
         "traditional": "ᠬᠣᠣᠰ",
         "latin": "hos",
+        "sense": "pair",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -21191,8 +21638,16 @@
       {
         "traditional": "ᠬᠣᠲᠠᠨ",
         "latin": "hoton",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠲᠤᠩ",
+        "latin": "qotung",
+        "sense": "Muslim peoples",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -21554,8 +22009,16 @@
       {
         "traditional": "ᠬᠣᠴᠣᠷᠤᠭᠳᠠᠯ",
         "latin": "hotsrogdol",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠣᠴᠤᠷᠤᠭᠳᠠᠯ",
+        "latin": "qočuruɣdal",
+        "sense": "arrearage, hangover",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -21620,8 +22083,10 @@
       {
         "traditional": "ᠬᠣᠴᠢ",
         "latin": "hoch",
+        "sense": "nickname",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -21796,8 +22261,10 @@
       {
         "traditional": "ᠬᠣᠰᠬᠢᠨᠠᠭ",
         "latin": "hoshnogo",
+        "sense": "rectum",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -22313,8 +22780,10 @@
       {
         "traditional": "ᠬᠤᠸᠠᠩᠯᠢ",
         "latin": "huanli",
+        "sense": "calendar",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -22423,8 +22892,16 @@
       {
         "traditional": "ᠬᠤᠸᠠᠱᠧᠩ",
         "latin": "huasan",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠤᠸᠠᠰᠠᠩ",
+        "latin": "quwasang",
+        "sense": "peanut",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -22434,8 +22911,16 @@
       {
         "traditional": "ᠬᠤᠪ",
         "latin": "huv",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠤᠪᠠ",
+        "latin": "quba",
+        "sense": "amber",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -22511,8 +22996,10 @@
       {
         "traditional": "ᠬᠤᠪᠢᠶᠠᠷᠢ",
         "latin": "huvaari",
+        "sense": "schedule; timetable",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -22566,8 +23053,16 @@
       {
         "traditional": "ᠬᠤᠪᠠᠨᠴᠠᠷ",
         "latin": "huvantsar",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠤᠪᠠᠨᠴᠢᠷ",
+        "latin": "qubančir",
+        "sense": "plastic",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -22676,8 +23171,10 @@
       {
         "traditional": "ᠬᠤᠪᠢᠯᠪᠤᠷᠢ",
         "latin": "huvilbar",
+        "sense": "version",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -22742,8 +23239,10 @@
       {
         "traditional": "ᠬᠤᠪᠢᠩ",
         "latin": "huvin",
+        "sense": "bucket",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -22896,8 +23395,10 @@
       {
         "traditional": "ᠬᠤᠪᠴᠠᠰᠤ",
         "latin": "huvtsas",
+        "sense": "clothes, clothing",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -22973,8 +23474,10 @@
       {
         "traditional": "ᠬᠤᠪᠢ",
         "latin": "huvi",
+        "sense": "part, share, lot",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -23149,8 +23652,10 @@
       {
         "traditional": "ᠬᠤᠭᠤᠴᠠᠭ᠎ᠠ",
         "latin": "hugatsaa",
+        "sense": "term, period (span of time)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -23292,8 +23797,10 @@
       {
         "traditional": "ᠬᠤᠳᠠᠯ",
         "latin": "hudal",
+        "sense": "lie (falsehood)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -23303,8 +23810,10 @@
       {
         "traditional": "ᠬᠤᠳᠠᠯᠳᠤᠭ᠎ᠠ",
         "latin": "hudaldaa",
+        "sense": "business, commerce, market, marketing",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -23336,8 +23845,10 @@
       {
         "traditional": "ᠬᠤᠳᠠᠯᠳᠤᠭᠠᠴᠢᠨ",
         "latin": "hudaldaachin",
+        "sense": "merchant; trader",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -23391,8 +23902,16 @@
       {
         "traditional": "ᠬᠤᠳᠠᠯᠳᠤᠭᠠᠴᠢᠯᠠᠬᠤ",
         "latin": "hudaldah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠤᠳᠠᠯᠳᠤᠬᠤ",
+        "latin": "qudalduqu",
+        "sense": "to trade",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -23413,8 +23932,10 @@
       {
         "traditional": "ᠬᠤᠳᠠᠯᠴᠢ",
         "latin": "hudalch",
+        "sense": "liar",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -23437,6 +23958,18 @@
         "latin": "hudar",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "хударга",
+    "candidates": [
+      {
+        "traditional": "ᠬᠤᠳᠤᠷᠭ᠎ᠠ",
+        "latin": "qudurɣ-a",
+        "sense": "crupper (a leather strap looped under a horse's tail)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -23644,8 +24177,10 @@
       {
         "traditional": "ᠬᠤᠢ",
         "latin": "hui",
+        "sense": "sheath, scabbard, holster (for a blade, gun, etc.)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -24013,6 +24548,18 @@
     ]
   },
   {
+    "cyrillic": "хуйцаа",
+    "candidates": [
+      {
+        "traditional": "ᠬᠤᠶᠢᠴᠠᠢ",
+        "latin": "quyičai",
+        "sense": "huitsaa soup (of cabbage, green onions, fried potatoes, carrots, celery and…",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "хул",
     "candidates": [
       {
@@ -24095,8 +24642,10 @@
       {
         "traditional": "ᠬᠤᠯᠠᠨ",
         "latin": "hulan",
+        "sense": "Mongolian wild ass, khulan",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -24194,8 +24743,10 @@
       {
         "traditional": "ᠬᠤᠯᠠᠭᠠᠢ",
         "latin": "hulgai",
+        "sense": "theft",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -24227,8 +24778,16 @@
       {
         "traditional": "ᠬᠤᠯᠠᠭᠠᠢᠴᠢ",
         "latin": "hulgaich",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠤᠯᠠᠭᠠᠶᠢᠴᠢ",
+        "latin": "qulaɣayiči",
+        "sense": "thief",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -24249,8 +24808,10 @@
       {
         "traditional": "ᠬᠤᠯᠤᠭᠠᠨ᠎ᠠ",
         "latin": "hulgana",
+        "sense": "mouse",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -24282,8 +24843,16 @@
       {
         "traditional": "ᠬᠤᠯᠭᠠᠬᠤ",
         "latin": "hulgah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠤᠯᠤᠭᠠᠬᠤ",
+        "latin": "qulugaqu",
+        "sense": "to steal; to rob",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -24491,8 +25060,10 @@
       {
         "traditional": "ᠬᠤᠯᠤᠰᠤ",
         "latin": "huls",
+        "sense": "rush",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -24546,8 +25117,16 @@
       {
         "traditional": "ᠬᠤᠯᠬᠢ",
         "latin": "hulhi",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠤᠯᠢᠬᠢ",
+        "latin": "quliqi",
+        "sense": "earwax",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -24865,8 +25444,10 @@
       {
         "traditional": "ᠬᠢᠮᠤᠰᠤ",
         "latin": "hums",
+        "sense": "nails",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -25305,8 +25886,31 @@
       {
         "traditional": "ᠬᠤᠷ᠎ᠠ",
         "latin": "hur",
+        "sense": "precipitation (water falling from the atmosphere in any form)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠬᠠᠷ᠎ᠠ",
+        "latin": "qar-a",
+        "sense": "black grouse",
+        "verified": false,
+        "source": "wiktionary"
+      },
+      {
+        "traditional": "ᠬᠣᠷ",
+        "latin": "qor",
+        "sense": "black grouse",
+        "verified": false,
+        "source": "wiktionary"
+      },
+      {
+        "traditional": "ᠬᠤᠷ",
+        "latin": "qur",
+        "sense": "last year's",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -25393,8 +25997,10 @@
       {
         "traditional": "ᠬᠤᠷᠢᠶᠠᠮᠵᠢ",
         "latin": "huraamj",
+        "sense": "fee; levy; duty",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -25514,8 +26120,10 @@
       {
         "traditional": "ᠬᠤᠷᠠᠯ",
         "latin": "hural",
+        "sense": "khural, assembly, parliament",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -25899,8 +26507,10 @@
       {
         "traditional": "ᠬᠤᠷᠳᠤᠰᠬᠤ",
         "latin": "hurdsah",
+        "sense": "to speed up, to accelerate",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -26020,8 +26630,10 @@
       {
         "traditional": "ᠬᠤᠷᠢᠮ",
         "latin": "hurim",
+        "sense": "wedding",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -26163,8 +26775,16 @@
       {
         "traditional": "ᠬᠤᠷᠤᠤ",
         "latin": "huruu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠤᠷᠤᠭᠤ",
+        "latin": "quruɣu",
+        "sense": "finger",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -26174,8 +26794,10 @@
       {
         "traditional": "ᠬᠤᠷᠤᠭᠤᠪᠴᠢ",
         "latin": "huruuvch",
+        "sense": "thimble (cap for the fingers, used in sewing to push the needle.)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -26262,8 +26884,10 @@
       {
         "traditional": "ᠬᠤᠷᠬᠢᠷᠠᠬᠤ",
         "latin": "hurhirah",
+        "sense": "to snore",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -26493,8 +27117,10 @@
       {
         "traditional": "ᠬᠤᠷᠢᠴᠠᠯ",
         "latin": "huritsal",
+        "sense": "sex; sexual intercourse",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -26559,8 +27185,10 @@
       {
         "traditional": "ᠬᠤᠰᠤ",
         "latin": "hus",
+        "sense": "birch",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -26603,8 +27231,10 @@
       {
         "traditional": "ᠬᠤᠰᠤᠬᠤ",
         "latin": "husah",
+        "sense": "to scrape",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -26730,6 +27360,18 @@
     ]
   },
   {
+    "cyrillic": "хутга",
+    "candidates": [
+      {
+        "traditional": "ᠬᠢᠲᠤᠭ᠎ᠠ",
+        "latin": "qituɣ-a",
+        "sense": "knife",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "хутгалах",
     "candidates": [
       {
@@ -26746,8 +27388,16 @@
       {
         "traditional": "ᠬᠤᠳᠭᠤᠯᠳᠤᠬᠤ",
         "latin": "hutgaldah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠤᠳᠬᠤᠯᠳᠤᠬᠤ",
+        "latin": "qudkulduqu",
+        "sense": "to mix, mingle, scramble",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -27043,8 +27693,10 @@
       {
         "traditional": "ᠬᠠᠭᠤᠳᠠᠰᠤ",
         "latin": "huudas",
+        "sense": "page, sheet of paper, leaf, list",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -27252,8 +27904,10 @@
       {
         "traditional": "ᠬᠠᠤᠯᠢ",
         "latin": "huuli",
+        "sense": "law (both legal and scientific)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -27285,8 +27939,10 @@
       {
         "traditional": "ᠬᠠᠤᠯᠢᠴᠢ",
         "latin": "huulich",
+        "sense": "lawyer",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -27296,8 +27952,10 @@
       {
         "traditional": "ᠬᠠᠤᠯᠢᠴᠢᠯᠠᠬᠤ",
         "latin": "huulichlah",
+        "sense": "To legalize",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -27527,8 +28185,17 @@
       {
         "traditional": "ᠬᠠᠭᠤᠷᠠᠬᠤ",
         "latin": "huurah",
+        "sense": "to peel off, to tear off",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠬᠠᠭᠤᠷᠬᠤ",
+        "latin": "qagurqu",
+        "sense": "to deceive, to beguile, to cheat",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -27538,8 +28205,16 @@
       {
         "traditional": "ᠬᠤᠤᠷᠭ᠎ᠠ",
         "latin": "huurga",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠠᠭᠤᠷᠭ᠎ᠠ",
+        "latin": "qagurɣ-a",
+        "sense": "stew, huurga (dish prepared by frying or simmering)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -27989,8 +28664,10 @@
       {
         "traditional": "ᠬᠤᠤᠱᠤᠤᠷ",
         "latin": "huushuur",
+        "sense": "fried dumpling filled with minced meat and seasoning; khuushuur",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -28765,6 +29442,18 @@
     ]
   },
   {
+    "cyrillic": "хэвтэх",
+    "candidates": [
+      {
+        "traditional": "ᠬᠡᠪᠲᠡᠬᠦ",
+        "latin": "kebtekü",
+        "sense": "to lie (to be in a horizontal position)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "хэвтэш",
     "candidates": [
       {
@@ -29315,6 +30004,18 @@
     ]
   },
   {
+    "cyrillic": "хэд",
+    "candidates": [
+      {
+        "traditional": "ᠬᠡᠳᠦ",
+        "latin": "kedü",
+        "sense": "any",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "хэдгэнэ",
     "candidates": [
       {
@@ -29452,8 +30153,10 @@
       {
         "traditional": "ᠬᠡᠳᠦᠨ",
         "latin": "heden",
+        "sense": "how much, how many",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -29474,8 +30177,10 @@
       {
         "traditional": "ᠬᠡᠳᠡᠷᠯᠡᠬᠦ",
         "latin": "hederleh",
+        "sense": "to be quarrelsome, to be irascible",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -29639,8 +30344,10 @@
       {
         "traditional": "ᠬᠡᠵᠢᠶ᠎ᠡ",
         "latin": "hezee",
+        "sense": "when",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -29804,8 +30511,10 @@
       {
         "traditional": "ᠬᠡᠯᠪᠡᠷᠢ",
         "latin": "helber",
+        "sense": "shape, form",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -30607,8 +31316,22 @@
       {
         "traditional": "ᠬᠡᠯᠡᠴᠡ",
         "latin": "helts",
+        "sense": "phrase",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      }
+    ]
+  },
+  {
+    "cyrillic": "хэлцэл",
+    "candidates": [
+      {
+        "traditional": "ᠬᠡᠯᠡᠴᠡᠯ",
+        "latin": "kelečel",
+        "sense": "contract; treaty; bargain",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -30695,8 +31418,10 @@
       {
         "traditional": "ᠬᠡᠯᠡᠯᠴᠡᠬᠦ",
         "latin": "heleltseh",
+        "sense": "cooperative voice in -лцэх (-lcex) of хэлэх (xelex, “to say”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -30849,8 +31574,10 @@
       {
         "traditional": "ᠬᠡᠯᠡᠬᠦ",
         "latin": "heleh",
+        "sense": "to say, speak, tell",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -30893,8 +31620,10 @@
       {
         "traditional": "ᠬᠡᠮ",
         "latin": "hem",
+        "sense": "degree (temperature)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -30948,8 +31677,10 @@
       {
         "traditional": "ᠬᠡᠮᠵᠢᠶ᠎ᠡ",
         "latin": "hemjee",
+        "sense": "measure",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -31443,8 +32174,10 @@
       {
         "traditional": "ᠬᠡᠨ",
         "latin": "hen",
+        "sense": "who",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -32323,8 +33056,10 @@
       {
         "traditional": "ᠬᠡᠷᠴᠢᠮ",
         "latin": "herchim",
+        "sense": "piece, cut, slice, segment",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -32466,8 +33201,10 @@
       {
         "traditional": "ᠬᠡᠷᠡᠭ",
         "latin": "hereg",
+        "sense": "affair, case (an event or a set of events taken as an object of interest)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -32554,8 +33291,10 @@
       {
         "traditional": "ᠬᠡᠷᠡᠭᠯᠡᠭᠳᠡᠬᠦ",
         "latin": "hereglegdeh",
+        "sense": "passive voice in -гдэх (-gdex) of хэрэглэх (xereglex, “to use”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -32565,8 +33304,10 @@
       {
         "traditional": "ᠬᠡᠷᠡᠭᠯᠡᠭᠳᠡᠬᠦᠨ",
         "latin": "hereglegdehuun",
+        "sense": "equipment, supplies",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -32576,8 +33317,10 @@
       {
         "traditional": "ᠬᠡᠷᠡᠭᠯᠡᠭᠴᠢ",
         "latin": "hereglegch",
+        "sense": "user",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -32609,8 +33352,10 @@
       {
         "traditional": "ᠬᠡᠷᠡᠭᠯᠡᠯ",
         "latin": "hereglel",
+        "sense": "usage (an act or manner of use)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -32620,8 +33365,10 @@
       {
         "traditional": "ᠬᠡᠷᠡᠭᠯᠡᠬᠦ",
         "latin": "heregleh",
+        "sense": "to use, apply",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -32642,8 +33389,10 @@
       {
         "traditional": "ᠬᠡᠷᠡᠭᠯᠡᠭᠡ",
         "latin": "hereglee",
+        "sense": "consumption, usage, needs",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -32655,6 +33404,18 @@
         "latin": "heregluuleh",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "хэрэглүүр",
+    "candidates": [
+      {
+        "traditional": "ᠬᠡᠷᠡᠭᠯᠡᠭᠦᠷ",
+        "latin": "kereglegür",
+        "sense": "contraption (machine)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -32785,8 +33546,16 @@
       {
         "traditional": "ᠬᠡᠷᠡᠮ",
         "latin": "herem",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠡᠷᠡᠮᠦ",
+        "latin": "keremü",
+        "sense": "squirrel",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -32818,8 +33587,10 @@
       {
         "traditional": "ᠬᠡᠷᠢᠶ᠎ᠡ",
         "latin": "heree",
+        "sense": "crow",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -32873,8 +33644,10 @@
       {
         "traditional": "ᠬᠡᠷᠡᠭᠦᠯ",
         "latin": "heruul",
+        "sense": "quarrel",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -33214,8 +33987,10 @@
       {
         "traditional": "ᠬᠡᠲᠡᠪᠴᠢ",
         "latin": "hetevch",
+        "sense": "tinderbox",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -33302,8 +34077,10 @@
       {
         "traditional": "ᠬᠡᠬᠡᠷᠡᠬᠦ",
         "latin": "hehreh",
+        "sense": "to burp; to belch",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -33687,8 +34464,17 @@
       {
         "traditional": "ᠬᠡᠭᠡᠷ᠎ᠡ",
         "latin": "heer",
+        "sense": "wilderness, wasteland",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠬᠡᠭᠡᠷ",
+        "latin": "keger",
+        "sense": "bay, chestnut (of animals)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -34292,8 +35078,10 @@
       {
         "traditional": "ᠬᠢᠯᠭᠠᠰᠤ",
         "latin": "hyalgas",
+        "sense": "hair (of a horse, of a tail)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -34600,8 +35388,10 @@
       {
         "traditional": "ᠬᠢᠮᠤᠷᠠᠯ",
         "latin": "hyamral",
+        "sense": "crisis",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -35205,8 +35995,10 @@
       {
         "traditional": "ᠬᠢᠷᠭᠠᠬᠤ",
         "latin": "hyargah",
+        "sense": "to cut (hair)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -35315,8 +36107,10 @@
       {
         "traditional": "ᠬᠢᠷᠰᠠ",
         "latin": "hyars",
+        "sense": "corsac fox",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -35975,8 +36769,16 @@
       {
         "traditional": "ᠬᠥᠳᠡᠷᠢ",
         "latin": "huder",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠦᠳᠡᠷᠢ",
+        "latin": "küderi",
+        "sense": "musk deer",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -36019,8 +36821,16 @@
       {
         "traditional": "ᠬᠥᠵᠦᠭᠦᠦ",
         "latin": "huzuu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠦᠵᠦᠭᠦᠦ",
+        "latin": "küǰügüü",
+        "sense": "neck (of a person, of a bottle...)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -36151,8 +36961,10 @@
       {
         "traditional": "ᠬᠦᠢᠰᠦ",
         "latin": "huis",
+        "sense": "gender; sex",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -36591,8 +37403,10 @@
       {
         "traditional": "ᠬᠦᠯᠢᠬᠦ",
         "latin": "huleh",
+        "sense": "to tie down",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -36723,8 +37537,10 @@
       {
         "traditional": "ᠬᠦᠯᠢᠶᠡᠬᠦ",
         "latin": "huleeh",
+        "sense": "to wait",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -37196,8 +38012,10 @@
       {
         "traditional": "ᠬᠦᠨᠡᠰᠦ",
         "latin": "huns",
+        "sense": "alimentation, eats, feed, food, foodstuff, mess, meal, meat, nutriment,…",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -37339,8 +38157,10 @@
       {
         "traditional": "ᠬᠦᠨᠴᠡᠯ",
         "latin": "huntsel",
+        "sense": "arsenic",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -37515,8 +38335,16 @@
       {
         "traditional": "ᠬᠦᠷᠳ᠋",
         "latin": "hurd",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠦᠷᠳᠦ",
+        "latin": "kürdü",
+        "sense": "wheel",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -37559,8 +38387,10 @@
       {
         "traditional": "ᠬᠦᠷᠵᠡ",
         "latin": "hurz",
+        "sense": "shovel, spade",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -37636,8 +38466,16 @@
       {
         "traditional": "ᠬᠦᠷᠲᠡᠯ᠎ᠡ",
         "latin": "hurtel",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠦᠷᠲᠡᠯ",
+        "latin": "kürtel",
+        "sense": "until",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -37680,8 +38518,10 @@
       {
         "traditional": "ᠬᠦᠷᠲᠡᠬᠦ",
         "latin": "hurteh",
+        "sense": "to receive, to attain",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -37779,8 +38619,10 @@
       {
         "traditional": "ᠬᠦᠷᠬᠢᠷ᠎ᠡ",
         "latin": "hurhree",
+        "sense": "waterfall",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -37911,8 +38753,22 @@
       {
         "traditional": "ᠬᠦᠷᠡᠯ",
         "latin": "hurel",
+        "sense": "bronze",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      }
+    ]
+  },
+  {
+    "cyrillic": "хүрэлзгэнэ",
+    "candidates": [
+      {
+        "traditional": "ᠬᠦᠷᠡᠯᠵᠡᠭᠡᠨ᠎ᠡ",
+        "latin": "kürelǰegen-e",
+        "sense": "cricket (insect)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -37977,8 +38833,15 @@
       {
         "traditional": "ᠬᠦᠷᠮ᠎ᠡ",
         "latin": "hurem",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᡴᡥᡠᡵᡝᠮ",
+        "sense": "jacket",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -37988,8 +38851,16 @@
       {
         "traditional": "ᠬᠦᠷᠢᠨ",
         "latin": "huren",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠦᠷᠡᠩ",
+        "latin": "küreng",
+        "sense": "brown, chestnut",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -38065,8 +38936,10 @@
       {
         "traditional": "ᠬᠦᠷᠬᠦ",
         "latin": "hureh",
+        "sense": "to reach, to arrive at",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -38076,8 +38949,16 @@
       {
         "traditional": "ᠬᠦᠷ᠎ᠡ",
         "latin": "huree",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠦᠷᠢᠶ᠎ᠡ",
+        "latin": "küriy-e",
+        "sense": "enclosure",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -38098,8 +38979,10 @@
       {
         "traditional": "ᠬᠦᠷᠢᠶᠡᠯᠡᠩ",
         "latin": "hureelen",
+        "sense": "garden",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -38296,8 +39179,10 @@
       {
         "traditional": "ᠬᠦᠰᠡᠯᠲᠡ",
         "latin": "huselt",
+        "sense": "request",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -38318,8 +39203,10 @@
       {
         "traditional": "ᠬᠦᠰᠡᠬᠦ",
         "latin": "huseh",
+        "sense": "to wish, to desire, to yearn for",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -38428,8 +39315,10 @@
       {
         "traditional": "ᠬᠦᠴᠦ",
         "latin": "huch",
+        "sense": "strength, power",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -38472,8 +39361,16 @@
       {
         "traditional": "ᠬᠦᠴᠦᠯᠡ",
         "latin": "huchil",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠦᠴᠢᠯ",
+        "latin": "küčil",
+        "sense": "acid",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -39011,8 +39908,10 @@
       {
         "traditional": "ᠬᠡᠦᠬᠡᠳ",
         "latin": "huuhed",
+        "sense": "child (one's offspring)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -39024,6 +39923,18 @@
         "latin": "huuheldii",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "хүүхэлдэй",
+    "candidates": [
+      {
+        "traditional": "ᠬᠡᠦᠬᠡᠯᠳᠡᠢ",
+        "latin": "keükeldei",
+        "sense": "doll, puppet",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -39462,8 +40373,10 @@
       {
         "traditional": "ᠬᠥᠪᠴᠢ",
         "latin": "huvch",
+        "sense": "bowstring",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -39572,8 +40485,16 @@
       {
         "traditional": "ᠬᠥᠪᠡᠭᠦᠨ",
         "latin": "huvuun",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥ᠋ᠪᠡᠭᠦᠨ",
+        "latin": "köbegün",
+        "sense": "child",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -39627,8 +40548,16 @@
       {
         "traditional": "ᠬᠥᠪᠥᠨ",
         "latin": "huvun",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠪᠦᠩ",
+        "latin": "köbüng",
+        "sense": "cotton",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -39792,8 +40721,16 @@
       {
         "traditional": "ᠬᠥᠭᠵᠢᠮ᠎ᠡ",
         "latin": "hugjim",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠭᠵᠢᠮ",
+        "latin": "kögǰim",
+        "sense": "music",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -39827,6 +40764,18 @@
         "latin": "hugjimt",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "хөгжимчин",
+    "candidates": [
+      {
+        "traditional": "ᠬᠥᠭᠵᠢᠮᠴᠢᠨ",
+        "latin": "kögǰimčin",
+        "sense": "musician",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -40254,8 +41203,10 @@
       {
         "traditional": "ᠬᠥᠳᠡᠯᠬᠦ",
         "latin": "hudluh",
+        "sense": "to move, to shift (change position)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -40287,8 +41238,10 @@
       {
         "traditional": "ᠬᠥᠳᠡᠯᠭᠡᠭᠦᠷ",
         "latin": "hudulguur",
+        "sense": "engine, motor",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -40551,8 +41504,16 @@
       {
         "traditional": "ᠬᠥᠵᠥᠷ",
         "latin": "huzur",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠵᠦᠷ",
+        "latin": "köǰür",
+        "sense": "playing card",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -40595,8 +41556,10 @@
       {
         "traditional": "ᠬᠥᠯ",
         "latin": "hul",
+        "sense": "foot, leg",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -40727,8 +41690,10 @@
       {
         "traditional": "ᠬᠥᠯᠳᠡᠬᠦ",
         "latin": "hulduh",
+        "sense": "To freeze",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -40826,8 +41791,16 @@
       {
         "traditional": "ᠬᠥᠯᠥᠷᠡᠬᠦ",
         "latin": "hulruh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠯᠦᠷᠡᠬᠦ",
+        "latin": "kölürekü",
+        "sense": "to sweat, chafe, perspire",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -40837,8 +41810,16 @@
       {
         "traditional": "ᠬᠥᠯᠰᠡ",
         "latin": "huls",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠯᠦᠰᠦ",
+        "latin": "kölüsü",
+        "sense": "perspiration",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -41101,8 +42082,16 @@
       {
         "traditional": "ᠬᠥᠯᠥᠭ",
         "latin": "hulug",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠯᠭᠡ",
+        "latin": "kölge",
+        "sense": "ship; vessel",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -41222,8 +42211,10 @@
       {
         "traditional": "ᠬᠥᠮᠦᠷᠢᠭᠦᠯᠬᠦ",
         "latin": "humruuleh",
+        "sense": "causative of хөмрөх (xömröx)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -41255,8 +42246,16 @@
       {
         "traditional": "ᠬᠥᠮᠥᠷᠢᠬᠦ",
         "latin": "humruh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠮᠦᠷᠢᠬᠦ",
+        "latin": "kömürikü",
+        "sense": "to turn over",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -41607,8 +42606,10 @@
       {
         "traditional": "ᠬᠥᠩᠭᠡᠨ",
         "latin": "hungun",
+        "sense": "light (in weight), easy, airy, wakeful, soft, gentle, frothy, giddy, gossamer,…",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -41728,8 +42729,10 @@
       {
         "traditional": "ᠬᠥᠨᠳᠡᠢ",
         "latin": "hundii",
+        "sense": "empty, hollow",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -41926,8 +42929,10 @@
       {
         "traditional": "ᠬᠥᠨᠵᠢᠯᠡ",
         "latin": "hunjil",
+        "sense": "blanket",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -42069,8 +43074,16 @@
       {
         "traditional": "ᠬᠥᠨᠥᠭ",
         "latin": "hunug",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠨᠦᠭ",
+        "latin": "könüg",
+        "sense": "bucket",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -42223,8 +43236,22 @@
       {
         "traditional": "ᠬᠥᠷᠦᠭᠡᠭᠦᠷ",
         "latin": "hurguur",
+        "sense": "refrigerator",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      }
+    ]
+  },
+  {
+    "cyrillic": "хөргөгч",
+    "candidates": [
+      {
+        "traditional": "ᠬᠥᠷᠦᠭᠡᠭᠴᠢ",
+        "latin": "körügegči",
+        "sense": "refrigerator",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -42344,8 +43371,16 @@
       {
         "traditional": "ᠬᠥᠷᠦᠰ",
         "latin": "hurs",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠷᠦᠰᠦ",
+        "latin": "körüsü",
+        "sense": "dirt, turf",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -42421,8 +43456,10 @@
       {
         "traditional": "ᠬᠥᠷᠰᠢ",
         "latin": "hursh",
+        "sense": "neighbour",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -42432,8 +43469,16 @@
       {
         "traditional": "ᠬᠥᠷᠥᠭ",
         "latin": "hurug",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠷᠦᠭ",
+        "latin": "körüg",
+        "sense": "portrait",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -42542,8 +43587,10 @@
       {
         "traditional": "ᠬᠢᠷᠦᠭᠡ",
         "latin": "huruu",
+        "sense": "saw",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -42564,8 +43611,10 @@
       {
         "traditional": "ᠬᠢᠷᠦᠭᠡᠳᠡᠬᠦ",
         "latin": "huruuduh",
+        "sense": "to saw",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -42806,8 +43855,16 @@
       {
         "traditional": "ᠬᠥᠲᠥᠯᠪᠦᠷᠢ",
         "latin": "hutulbur",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠲᠦᠯᠪᠦᠷᠢ",
+        "latin": "kötülbüri",
+        "sense": "program (set of structured activities)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -43037,8 +44094,16 @@
       {
         "traditional": "ᠬᠥᠬᠥᠥᠷ",
         "latin": "huhuur",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠬᠦᠦᠷ",
+        "latin": "köküür",
+        "sense": "a leather bag for holding liquid (usually used for fermenting dairy products)…",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -43202,8 +44267,16 @@
       {
         "traditional": "ᠬᠥᠰᠢᠬᠦ",
         "latin": "hushih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥ᠊ᠰ᠊ᠢ᠊ᠬᠥ",
+        "latin": "kö-s-i-kö",
+        "sense": "to become stiff",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -43356,8 +44429,10 @@
       {
         "traditional": "ᠬᠥᠰᠢᠶ᠎ᠡ",
         "latin": "hushuu",
+        "sense": "monument",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -43818,8 +44893,16 @@
       {
         "traditional": "ᠬᠥᠭᠡᠷᠭᠡ",
         "latin": "huurug",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠭᠦᠭᠦᠷᠭᠡ",
+        "latin": "gügürge",
+        "sense": "bridge",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -43961,8 +45044,10 @@
       {
         "traditional": "ᠬᠥᠭᠡᠰᠦ",
         "latin": "huus",
+        "sense": "foam, lather, suds, bubble",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -44093,8 +45178,16 @@
       {
         "traditional": "ᠬᠥᠭᠡᠬᠦ",
         "latin": "huuh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠬᠥᠭᠡᠭᠡᠬᠦ",
+        "latin": "kögegekü",
+        "sense": "to swell",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

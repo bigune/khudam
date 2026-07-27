@@ -115,8 +115,10 @@
       {
         "traditional": "ᠤᠭ",
         "latin": "ug",
+        "sense": "root, base",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -269,8 +271,16 @@
       {
         "traditional": "ᠤᠬᠢᠶᠠᠬᠤ",
         "latin": "ugaah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠤᠭᠠᠬᠤ",
+        "latin": "uɣaqu",
+        "sense": "to wash",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -742,8 +752,16 @@
       {
         "traditional": "ᠤᠳᠤ",
         "latin": "ud",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠤᠳᠠ",
+        "latin": "uda",
+        "sense": "willow",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -753,8 +771,10 @@
       {
         "traditional": "ᠤᠳᠠᠭ᠎ᠠ",
         "latin": "udaa",
+        "sense": "time (an occurrence)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1072,8 +1092,17 @@
       {
         "traditional": "ᠨᠢᠳᠤᠭᠠᠨ",
         "latin": "udgan",
+        "sense": "shamaness",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠢᠳᠤᠭᠠᠨ",
+        "latin": "iduɣan",
+        "sense": "shamaness",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1127,8 +1156,10 @@
       {
         "traditional": "ᠤᠳᠤᠷᠢᠳᠤᠮᠵᠢ",
         "latin": "udirdamj",
+        "sense": "policy, guidelines, instructions",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1853,8 +1884,10 @@
       {
         "traditional": "ᠤᠯᠠᠭᠠᠨ",
         "latin": "ulaan",
+        "sense": "red",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2205,8 +2238,22 @@
       {
         "traditional": "ᠤᠯᠠᠮᠵᠢᠯᠠᠯ",
         "latin": "ulamjlal",
+        "sense": "tradition",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      }
+    ]
+  },
+  {
+    "cyrillic": "уламжлалт",
+    "candidates": [
+      {
+        "traditional": "ᠤᠯᠠᠮᠵᠢᠯᠠᠯᠲᠤ",
+        "latin": "ulamǰilaltu",
+        "sense": "traditional",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2590,8 +2637,10 @@
       {
         "traditional": "ᠤᠯᠢᠶᠠᠰᠤ",
         "latin": "ulias",
+        "sense": "aspen",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3283,8 +3332,10 @@
       {
         "traditional": "ᠤᠨᠠᠭ᠎ᠠ",
         "latin": "unaga",
+        "sense": "foal (baby horse)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3415,8 +3466,17 @@
       {
         "traditional": "ᠤᠨᠠᠬᠤ",
         "latin": "unah",
+        "sense": "to fall",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠤᠨᠤᠬᠤ",
+        "latin": "unuqu",
+        "sense": "to ride (a horse)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3558,8 +3618,10 @@
       {
         "traditional": "ᠤᠩᠭᠤᠬᠤ",
         "latin": "ungah",
+        "sense": "to break wind; to fart",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3976,8 +4038,10 @@
       {
         "traditional": "ᠤᠨᠲᠠᠬᠤ",
         "latin": "untah",
+        "sense": "to sleep",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4207,8 +4271,10 @@
       {
         "traditional": "ᠤᠩᠰᠢᠭᠴᠢ",
         "latin": "unshigch",
+        "sense": "reader",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4229,8 +4295,10 @@
       {
         "traditional": "ᠤᠩᠰᠢᠬᠤ",
         "latin": "unshih",
+        "sense": "to read",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4339,8 +4407,10 @@
       {
         "traditional": "ᠤᠷ᠎ᠠ",
         "latin": "ur",
+        "sense": "handicraft, skill, craft",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4537,8 +4607,10 @@
       {
         "traditional": "ᠤᠷᠤᠯᠳᠤᠭᠠᠨ",
         "latin": "uraldaan",
+        "sense": "race (contest of speed)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4812,8 +4884,10 @@
       {
         "traditional": "ᠤᠷᠪᠠᠯ",
         "latin": "urval",
+        "sense": "reaction",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4900,8 +4974,10 @@
       {
         "traditional": "ᠤᠷᠪᠠᠬᠤ",
         "latin": "urvah",
+        "sense": "to turn out",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4955,8 +5031,10 @@
       {
         "traditional": "ᠤᠷᠭᠤᠮᠠᠯ",
         "latin": "urgamal",
+        "sense": "plant (organism capable of photosynthesis)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5186,8 +5264,10 @@
       {
         "traditional": "ᠤᠷᠢᠶ᠎ᠠ",
         "latin": "uria",
+        "sense": "summon, invite",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5362,8 +5442,10 @@
       {
         "traditional": "ᠤᠷᠢᠬᠤ",
         "latin": "urih",
+        "sense": "to call",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5373,8 +5455,10 @@
       {
         "traditional": "ᠤᠷᠠᠯᠢᠭ",
         "latin": "urlag",
+        "sense": "art; craft",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5450,8 +5534,10 @@
       {
         "traditional": "ᠤᠷᠤᠰᠬᠠᠯ",
         "latin": "ursgal",
+        "sense": "flow, current, stream",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5494,8 +5580,10 @@
       {
         "traditional": "ᠤᠷᠲᠤ",
         "latin": "urt",
+        "sense": "long",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5747,8 +5835,10 @@
       {
         "traditional": "ᠤᠷᠤᠭᠤᠯ",
         "latin": "uruul",
+        "sense": "lip",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6484,8 +6574,10 @@
       {
         "traditional": "ᠤᠲᠤᠭ᠎ᠠ",
         "latin": "utaa",
+        "sense": "smoke",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6561,8 +6653,10 @@
       {
         "traditional": "ᠤᠲᠠᠰᠤ",
         "latin": "utas",
+        "sense": "thread",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6627,8 +6721,10 @@
       {
         "traditional": "ᠤᠳᠬ᠎ᠠ",
         "latin": "utga",
+        "sense": "meaning, sense",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7353,8 +7449,10 @@
       {
         "traditional": "ᠤᠭᠤᠯᠢ",
         "latin": "uuli",
+        "sense": "eared owl",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7397,8 +7495,17 @@
       {
         "traditional": "ᠠᠭᠤᠷ",
         "latin": "uur",
+        "sense": "steam",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠤᠭᠤᠷ",
+        "latin": "uɣur",
+        "sense": "mortar",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7419,8 +7526,10 @@
       {
         "traditional": "ᠤᠷᠭ᠎ᠠ",
         "latin": "uurga",
+        "sense": "lasso pole; lasso",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7590,13 +7699,27 @@
     ]
   },
   {
+    "cyrillic": "ууртай",
+    "candidates": [
+      {
+        "traditional": "ᠠᠭᠤᠷᠲᠠᠢ",
+        "latin": "aɣurtai",
+        "sense": "angry",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "уурхай",
     "candidates": [
       {
         "traditional": "ᠠᠭᠤᠷᠬᠠᠢ",
         "latin": "uurhai",
+        "sense": "mine",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7793,8 +7916,10 @@
       {
         "traditional": "ᠤᠤᠭᠤᠬᠤ",
         "latin": "uuh",
+        "sense": "to drink",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7903,8 +8028,10 @@
       {
         "traditional": "ᠤᠭᠤᠴᠠ",
         "latin": "uuts",
+        "sense": "hip",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7916,6 +8043,18 @@
         "latin": "uuch",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "уучлаарай",
+    "candidates": [
+      {
+        "traditional": "ᠠᠭᠤᠴᠢᠯᠠᠭᠠᠷᠠᠢ",
+        "latin": "aɣučilaɣarai",
+        "sense": "sorry, excuse me",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7969,8 +8108,10 @@
       {
         "traditional": "ᠠᠭᠤᠴᠢᠯᠠᠬᠤ",
         "latin": "uuchlah",
+        "sense": "to forgive",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8002,8 +8143,10 @@
       {
         "traditional": "ᠠᠭᠤᠰᠬᠢ",
         "latin": "uushgi",
+        "sense": "lungs",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8101,8 +8244,10 @@
       {
         "traditional": "ᠤᠬᠠᠭᠠᠨ",
         "latin": "uhaan",
+        "sense": "mind, intellect, wits, consciousness, wisdom, knowledge, meaning, idea",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8255,8 +8400,10 @@
       {
         "traditional": "ᠤᠬᠠᠮᠰᠠᠷ",
         "latin": "uhamsar",
+        "sense": "conscience",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9267,8 +9414,10 @@
       {
         "traditional": "ᠤᠶᠠᠬᠤ",
         "latin": "uyah",
+        "sense": "to tie",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

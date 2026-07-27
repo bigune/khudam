@@ -929,8 +929,16 @@
       {
         "traditional": "ᠣᠬᠢᠬᠤ",
         "latin": "ogih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠭᠢᠬᠤ",
+        "latin": "oɣiqu",
+        "sense": "to retch, to burp",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1105,8 +1113,16 @@
       {
         "traditional": "ᠣᠭᠣᠲᠣᠨ᠎ᠠ",
         "latin": "ogotno",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠭᠤᠲᠤᠨ᠎ᠠ",
+        "latin": "oɣutun-a",
+        "sense": "field rat, mouse",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1116,8 +1132,16 @@
       {
         "traditional": "ᠣᠭᠣᠲᠣᠷ",
         "latin": "ogotor",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠭᠤᠲᠤᠷ",
+        "latin": "oɣutur",
+        "sense": "short",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1292,8 +1316,10 @@
       {
         "traditional": "ᠣᠭᠲᠠᠷᠭᠤᠢ",
         "latin": "ogtorgui",
+        "sense": "space",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1578,8 +1604,16 @@
       {
         "traditional": "ᠣᠳᠣ",
         "latin": "odoo",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠳᠤ",
+        "latin": "odu",
+        "sense": "now",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1655,8 +1689,16 @@
       {
         "traditional": "ᠣᠵᠣᠬᠤ",
         "latin": "ozoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠵᠤᠬᠤ",
+        "latin": "oǰuqu",
+        "sense": "to kiss",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1677,8 +1719,10 @@
       {
         "traditional": "ᠣᠢ",
         "latin": "oi",
+        "sense": "anniversary, jubilee",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1754,8 +1798,16 @@
       {
         "traditional": "ᠤᠢᠯᠠᠭᠠᠬᠤ",
         "latin": "oilgoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠶ᠋ᠢᠯᠠᠭᠠᠬᠤ",
+        "latin": "oyilaɣaqu",
+        "sense": "to understand (someone, something)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1864,8 +1916,16 @@
       {
         "traditional": "ᠣᠢᠮᠣᠰᠤ",
         "latin": "oims",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠶ᠋ᠢᠮᠤᠰᠤ",
+        "latin": "oyimusu",
+        "sense": "sock, stocking",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2865,8 +2925,16 @@
       {
         "traditional": "ᠤᠯᠬᠤ",
         "latin": "oloh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠯᠬᠤ",
+        "latin": "olqu",
+        "sense": "to find, to discover",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2876,8 +2944,16 @@
       {
         "traditional": "ᠣᠯᠣᠰᠣ",
         "latin": "ols",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠯᠤᠰᠤ",
+        "latin": "olusu",
+        "sense": "hemp, rope, chain",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3173,8 +3249,10 @@
       {
         "traditional": "ᠣᠮᠤᠭ",
         "latin": "omog",
+        "sense": "pride, haughtiness",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4284,8 +4362,16 @@
       {
         "traditional": "ᠣᠨᠣᠯ",
         "latin": "onol",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠨᠤᠯ",
+        "latin": "onul",
+        "sense": "theory",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4350,8 +4436,23 @@
       {
         "traditional": "ᠣᠨᠣᠭ᠎ᠠ",
         "latin": "onoo",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠨᠤᠭ᠎ᠠ",
+        "latin": "onuɣ-a",
+        "sense": "hit (a successful shot)",
+        "verified": false,
+        "source": "wiktionary"
+      },
+      {
+        "traditional": "ᠣᠨᠤᠭᠤ",
+        "latin": "onuɣu",
+        "sense": "slit (on a garment)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4878,8 +4979,10 @@
       {
         "traditional": "ᠣᠨᠢ",
         "latin": "oni",
+        "sense": "arrow notch",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4900,8 +5003,10 @@
       {
         "traditional": "ᠣᠨᠢᠰᠤ",
         "latin": "onis",
+        "sense": "strike plate, keeper (part of the doorjamb which receives bolt)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5318,8 +5423,16 @@
       {
         "traditional": "ᠣᠷᠣ",
         "latin": "or",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠷᠤ",
+        "latin": "oru",
+        "sense": "bed",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5791,8 +5904,28 @@
       {
         "traditional": "ᠣᠷᠣᠢ",
         "latin": "oroi",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠷᠤᠢ",
+        "latin": "orui",
+        "sense": "evening",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
+    "cyrillic": "оройвч",
+    "candidates": [
+      {
+        "traditional": "ᠣᠷᠤᠶᠢᠪᠴᠢ",
+        "latin": "oruyibči",
+        "sense": "houve (close fitting cap)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6033,8 +6166,16 @@
       {
         "traditional": "ᠣᠷᠣᠮ",
         "latin": "orom",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠷᠤᠮ",
+        "latin": "orum",
+        "sense": "imprint",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6935,8 +7076,10 @@
       {
         "traditional": "ᠣᠷᠴᠢᠮ",
         "latin": "orchim",
+        "sense": "around, about (approximately)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6990,8 +7133,10 @@
       {
         "traditional": "ᠣᠷᠴᠢᠭᠤᠯᠤᠭᠴᠢ",
         "latin": "orchuulagch",
+        "sense": "translator",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7001,8 +7146,16 @@
       {
         "traditional": "ᠤᠷᠴᠢᠭᠤᠯᠬᠤ",
         "latin": "orchuulah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠷᠴᠢᠭᠤᠯᠬᠤ",
+        "latin": "orčiɣulqu",
+        "sense": "to translate",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7122,8 +7275,16 @@
       {
         "traditional": "ᠤᠷᠤᠰᠢᠬᠤ",
         "latin": "orshih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠷᠤᠰᠢᠬᠤ",
+        "latin": "orusiqu",
+        "sense": "entity",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7639,8 +7800,10 @@
       {
         "traditional": "ᠥᠬᠢᠨ",
         "latin": "ohin",
+        "sense": "girl",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7892,8 +8055,10 @@
       {
         "traditional": "ᠣᠴᠢᠬᠤ",
         "latin": "ochih",
+        "sense": "to go, to come",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7958,8 +8123,10 @@
       {
         "traditional": "ᠣᠶᠤᠨ",
         "latin": "oyun",
+        "sense": "mind, intellect, spirit",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8002,8 +8169,10 @@
       {
         "traditional": "ᠣᠶᠤᠲᠠᠨ",
         "latin": "oyutan",
+        "sense": "student",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8079,8 +8248,16 @@
       {
         "traditional": "ᠣᠶᠣᠳᠠᠯ",
         "latin": "oyodol",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠣᠶᠤᠳᠠᠯ",
+        "latin": "oyudal",
+        "sense": "sewing, stitchery",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

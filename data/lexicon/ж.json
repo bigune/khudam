@@ -49,8 +49,10 @@
       {
         "traditional": "ᠵᠢᠭᠠᠯ",
         "latin": "jaal",
+        "sense": "little, small",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -346,8 +348,10 @@
       {
         "traditional": "ᠵᠢᠳᠠ",
         "latin": "jad",
+        "sense": "spear, lance",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1067,6 +1071,18 @@
     ]
   },
   {
+    "cyrillic": "жаран",
+    "candidates": [
+      {
+        "traditional": "ᠵᠢᠷᠠᠨ",
+        "latin": "ǰiran",
+        "sense": "oblique of жар (žar, “sixty”)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "жарантаа",
     "candidates": [
       {
@@ -1182,8 +1198,10 @@
       {
         "traditional": "ᠵᠢᠷᠭᠠᠬᠤ",
         "latin": "jargah",
+        "sense": "to rejoice, be happy, delight",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1589,8 +1607,16 @@
       {
         "traditional": "ᠵᠢᠪᠡᠷ",
         "latin": "jiver",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠢᠪᠡᠷᠢ",
+        "latin": "ǰiberi",
+        "sense": "moustache",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1644,8 +1670,10 @@
       {
         "traditional": "ᠵᠢᠭᠳᠡ",
         "latin": "jigd",
+        "sense": "uniform, regular.",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1771,6 +1799,18 @@
     ]
   },
   {
+    "cyrillic": "жигнэмэг",
+    "candidates": [
+      {
+        "traditional": "ᠵᠢᠩᠨᠡᠮᠡᠭ",
+        "latin": "ǰingnemeg",
+        "sense": "cookie",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "жигнэмэл",
     "candidates": [
       {
@@ -1782,13 +1822,27 @@
     ]
   },
   {
+    "cyrillic": "жигнэсэн",
+    "candidates": [
+      {
+        "traditional": "ᠵᠢᠩᠨᠡᠭᠰᠡᠨ",
+        "latin": "ǰingnegsen",
+        "sense": "steamed",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "жигнэх",
     "candidates": [
       {
         "traditional": "ᠵᠢᠩᠨᠡᠬᠦ",
         "latin": "jigneh",
+        "sense": "to weigh",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1963,8 +2017,10 @@
       {
         "traditional": "ᠵᠢᠭᠦᠷ",
         "latin": "jiguur",
+        "sense": "wing",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2073,8 +2129,10 @@
       {
         "traditional": "ᠵᠢᠵᠢᠭ",
         "latin": "jijig",
+        "sense": "little, small",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2777,8 +2835,10 @@
       {
         "traditional": "ᠵᠢᠮᠢᠰ",
         "latin": "jims",
+        "sense": "fruit",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2799,8 +2859,16 @@
       {
         "traditional": "ᠵᠢᠮᠢᠰᠯᠡᠭ",
         "latin": "jimsleg",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠢᠮᠢᠰᠯᠢᠭ",
+        "latin": "ǰimislig",
+        "sense": "fruit-bearing, abundant in fruit",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2876,8 +2944,10 @@
       {
         "traditional": "ᠵᠢᠩ",
         "latin": "jin",
+        "sense": "weight",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3041,8 +3111,10 @@
       {
         "traditional": "ᠵᠢᠨᠲᠦᠦ",
         "latin": "jintuu",
+        "sense": "pillow, cushion",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3514,8 +3586,10 @@
       {
         "traditional": "ᠵᠢᠷᠮᠦᠰᠦᠨ",
         "latin": "jiremsen",
+        "sense": "pregnant",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3822,8 +3896,16 @@
       {
         "traditional": "ᠵᠢᠯᠣᠭᠣ",
         "latin": "joloo",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠢᠯᠤᠭᠤ",
+        "latin": "ǰiluɣu",
+        "sense": "rein",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3866,8 +3948,16 @@
       {
         "traditional": "ᠵᠢᠯᠣᠭᠣᠴᠢ",
         "latin": "jolooch",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠢᠯᠤᠭᠤᠴᠢ",
+        "latin": "ǰiluɣuči",
+        "sense": "driver",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4141,8 +4231,10 @@
       {
         "traditional": "ᠵᠣᠩᠰᠢ",
         "latin": "jonsh",
+        "sense": "spar",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4152,8 +4244,10 @@
       {
         "traditional": "ᠵᠣᠣᠮ᠎ᠠ",
         "latin": "joom",
+        "sense": "cockroach",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4251,8 +4345,10 @@
       {
         "traditional": "ᠵᠣᠷ",
         "latin": "jor",
+        "sense": "prescription",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4295,8 +4391,16 @@
       {
         "traditional": "ᠵᠣᠷᠯᠣᠩ",
         "latin": "jorlon",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠣᠷᠯᠤᠩ",
+        "latin": "ǰorlung",
+        "sense": "toilet, outhouse",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4455,6 +4559,18 @@
     ]
   },
   {
+    "cyrillic": "жунгаа",
+    "candidates": [
+      {
+        "traditional": "ᠵᠤᠨᠭᠭ᠎ᠠ",
+        "latin": "ǰunɣɣ-a",
+        "sense": "Chinese",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "жундан",
     "candidates": [
       {
@@ -4493,8 +4609,10 @@
       {
         "traditional": "ᠵᠢᠷᠤᠮ",
         "latin": "juram",
+        "sense": "order, routine, principle, rules, system, procedure, form",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4583,6 +4701,18 @@
         "latin": "juramshuulah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "журнал",
+    "candidates": [
+      {
+        "traditional": "ᠿᠦᠷᠨᠠᠯ",
+        "latin": "řürnal",
+        "sense": "magazine, periodical, journal",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4779,8 +4909,10 @@
       {
         "traditional": "ᠵᠦᠵᠦᠭᠡ",
         "latin": "jujig",
+        "sense": "play, performance, show, piece",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4803,6 +4935,18 @@
         "latin": "jujigluuleh",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "жүжигчин",
+    "candidates": [
+      {
+        "traditional": "ᠵᠦᠵᠦᠭᠡᠴᠢᠨ",
+        "latin": "ǰüǰügečin",
+        "sense": "actor; artist",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4900,8 +5044,10 @@
       {
         "traditional": "ᠵᠦᠷᠵᠢ",
         "latin": "jurj",
+        "sense": "orange (fruit)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

@@ -5,8 +5,10 @@
       {
         "traditional": "ᠴᠤ",
         "latin": "ch",
+        "sense": "even",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -214,8 +216,10 @@
       {
         "traditional": "ᠴᠢᠪᠬᠠᠳᠠᠰᠤ",
         "latin": "chavhdas",
+        "sense": "string (of a musical instrument)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -390,8 +394,10 @@
       {
         "traditional": "ᠴᠢᠩᠨᠠᠬᠤ",
         "latin": "chagnah",
+        "sense": "to listen",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1188,6 +1194,18 @@
     ]
   },
   {
+    "cyrillic": "чанарлаг",
+    "candidates": [
+      {
+        "traditional": "ᠴᠢᠨᠠᠷᠯᠢᠭ",
+        "latin": "činarliɣ",
+        "sense": "high-quality",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "чанартай",
     "candidates": [
       {
@@ -1677,8 +1695,10 @@
       {
         "traditional": "ᠴᠢᠷᠭ᠎ᠠ",
         "latin": "charga",
+        "sense": "sledge, sleigh, sled",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2348,8 +2368,16 @@
       {
         "traditional": "ᠴᠧᠺ",
         "latin": "chyek",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠧᠻ",
+        "latin": "čēk",
+        "sense": "check/cheque",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2359,8 +2387,10 @@
       {
         "traditional": "ᠴᠢ",
         "latin": "chi",
+        "sense": "you (subject pronoun: the person being addressed)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2865,8 +2895,10 @@
       {
         "traditional": "ᠴᠢᠭᠢᠭ",
         "latin": "chiig",
+        "sense": "wet",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3657,8 +3689,10 @@
       {
         "traditional": "ᠴᠢᠨᠵᠦᠦ",
         "latin": "chinjuu",
+        "sense": "pepper, pimento, hot pepper, red pepper",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3679,8 +3713,16 @@
       {
         "traditional": "ᠴᠢᠨᠤᠬᠢ",
         "latin": "chiniih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠢᠨ᠋ᠤᠬᠢ",
+        "latin": "činuqi",
+        "sense": "yours",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3921,8 +3963,16 @@
       {
         "traditional": "ᠴᠢᠷᠦᠬᠦ",
         "latin": "chireh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠢᠷᠬᠦ",
+        "latin": "čirkü",
+        "sense": "to drag",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3965,8 +4015,10 @@
       {
         "traditional": "ᠴᠢᠬᠢ",
         "latin": "chih",
+        "sense": "ear",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4174,8 +4226,22 @@
       {
         "traditional": "ᠰᠢᠬᠢᠷ",
         "latin": "chiher",
+        "sense": "sugar",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      }
+    ]
+  },
+  {
+    "cyrillic": "чихэрлэг",
+    "candidates": [
+      {
+        "traditional": "ᠰᠢᠬᠢᠷᠯᠢᠭ",
+        "latin": "sikirlig",
+        "sense": "sugar",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4592,8 +4658,10 @@
       {
         "traditional": "ᠴᠢᠯᠠᠭᠤ",
         "latin": "chuluu",
+        "sense": "calculus",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4823,8 +4891,10 @@
       {
         "traditional": "ᠴᠤᠬᠠᠭ",
         "latin": "chuhag",
+        "sense": "very rare",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4856,8 +4926,10 @@
       {
         "traditional": "ᠴᠢᠬᠤᠯᠠ",
         "latin": "chuhal",
+        "sense": "very important, essential",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5153,8 +5225,10 @@
       {
         "traditional": "ᠴᠢᠮᠦᠭᠡ",
         "latin": "chumug",
+        "sense": "bone marrow",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

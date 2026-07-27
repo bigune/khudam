@@ -16,8 +16,10 @@
       {
         "traditional": "ᠡᠪ",
         "latin": "ev",
+        "sense": "harmony, concord",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -500,8 +502,10 @@
       {
         "traditional": "ᠡᠪᠰᠡᠬᠦ",
         "latin": "evseh",
+        "sense": "to reconcile",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1512,8 +1516,16 @@
       {
         "traditional": "ᠡᠭᠡᠬᠦ",
         "latin": "egeh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠡᠭᠡᠬᠥ",
+        "latin": "egekö",
+        "sense": "to return",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1578,8 +1590,17 @@
       {
         "traditional": "ᠡᠳ᠋",
         "latin": "ed",
+        "sense": "material (substance out of which a thing is made)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠡᠳ᠋ᠡ",
+        "latin": "ede",
+        "sense": "plural of энэ (ene, “this”): they over here",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1677,8 +1698,16 @@
       {
         "traditional": "ᠡᠳᠡᠭᠡᠷ",
         "latin": "edgeer",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠡᠳ᠋ᠡᠭᠡᠷ",
+        "latin": "edeger",
+        "sense": "these",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2205,8 +2234,10 @@
       {
         "traditional": "ᠡᠵᠡᠮᠳᠡᠬᠦ",
         "latin": "ezemdeh",
+        "sense": "to possess, gain the admiration, conquer",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2931,8 +2962,10 @@
       {
         "traditional": "ᠡᠯᠡᠰᠦ",
         "latin": "els",
+        "sense": "sand",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3063,8 +3096,17 @@
       {
         "traditional": "ᠡᠯᠢᠭᠡ",
         "latin": "eleg",
+        "sense": "liver (organ)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠡᠯᠡᠭ",
+        "latin": "eleg",
+        "sense": "mockery, derision",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3184,8 +3226,17 @@
       {
         "traditional": "ᠡᠮ",
         "latin": "em",
+        "sense": "medicine, medication, drug, preparation, remedy, pill, potion",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠡᠮ᠎ᠡ",
+        "latin": "em-e",
+        "sense": "female, woman, wife",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3338,8 +3389,10 @@
       {
         "traditional": "ᠡᠮᠨᠡᠯᠭᠡ",
         "latin": "emneleg",
+        "sense": "treatment",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3734,8 +3787,10 @@
       {
         "traditional": "ᠡᠮᠴᠢᠯᠡᠭᠡ",
         "latin": "emchilgee",
+        "sense": "treatment, therapy",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3888,8 +3943,10 @@
       {
         "traditional": "ᠡᠮᠡᠭᠡ",
         "latin": "emee",
+        "sense": "grandmother",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3899,8 +3956,10 @@
       {
         "traditional": "ᠡᠮᠡᠭᠡᠯ",
         "latin": "emeel",
+        "sense": "saddle",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3921,8 +3980,10 @@
       {
         "traditional": "ᠡᠮᠡᠭᠡᠯᠯᠡᠬᠦ",
         "latin": "emeelleh",
+        "sense": "to saddle",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3954,8 +4015,10 @@
       {
         "traditional": "ᠡᠮᠢᠶᠡᠬᠦ",
         "latin": "emeeh",
+        "sense": "to fear",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4064,8 +4127,16 @@
       {
         "traditional": "ᠡᠨᠳᠡ",
         "latin": "end",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠡᠨᠳ᠋ᠡ",
+        "latin": "ende",
+        "sense": "here, herein, herewith, hereinto, there, therein",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4570,8 +4641,10 @@
       {
         "traditional": "ᠡᠨᠡᠷᠢᠯ",
         "latin": "enerel",
+        "sense": "benevolence; kindness; charity; compassion",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4713,8 +4786,10 @@
       {
         "traditional": "ᠡᠷ᠎ᠡ",
         "latin": "er",
+        "sense": "male",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4862,6 +4937,18 @@
     ]
   },
   {
+    "cyrillic": "эрвээхэй",
+    "candidates": [
+      {
+        "traditional": "ᠡᠷᠪᠡᠬᠡᠢ",
+        "latin": "erbekei",
+        "sense": "butterfly",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "эргэл",
     "candidates": [
       {
@@ -4922,8 +5009,10 @@
       {
         "traditional": "ᠡᠷᠡᠭᠡᠯᠵᠡᠬᠦ",
         "latin": "ergelzeh",
+        "sense": "to hesitate, to waver",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5010,8 +5099,10 @@
       {
         "traditional": "ᠡᠷᠭᠢᠬᠦ",
         "latin": "ergeh",
+        "sense": "to turn",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5340,8 +5431,10 @@
       {
         "traditional": "ᠡᠷᠯᠢᠵᠡ",
         "latin": "erliiz",
+        "sense": "cross-breed, hybrid (organism produced by mating of different breeds)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5736,8 +5829,17 @@
       {
         "traditional": "ᠡᠷᠬᠡ",
         "latin": "erh",
+        "sense": "authority (power to enforce rules)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠡᠷᠢᠬᠡ",
+        "latin": "erike",
+        "sense": "prayer beads",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5758,8 +5860,10 @@
       {
         "traditional": "ᠡᠷᠡᠬᠡᠢ",
         "latin": "erhii",
+        "sense": "thumb",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5769,8 +5873,16 @@
       {
         "traditional": "ᠡᠷᠡᠬᠡᠢᠪᠴᠢ",
         "latin": "erhiivch",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠡᠷᠡᠬᠡᠶᠢᠪᠴᠢ",
+        "latin": "erekeyibči",
+        "sense": "thumb ring",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5857,8 +5969,10 @@
       {
         "traditional": "ᠡᠷᠬᠡᠲᠡᠨ",
         "latin": "erhten",
+        "sense": "organ; limb",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5956,8 +6070,10 @@
       {
         "traditional": "ᠡᠷᠬᠢᠮ",
         "latin": "erhem",
+        "sense": "important",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6110,8 +6226,10 @@
       {
         "traditional": "ᠡᠷᠴᠢ",
         "latin": "erch",
+        "sense": "power, intensity, might",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6319,8 +6437,10 @@
       {
         "traditional": "ᠡᠷᠭᠢᠳᠡᠬᠦ",
         "latin": "eregdeh",
+        "sense": "to screw in",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6671,8 +6791,17 @@
       {
         "traditional": "ᠡᠷᠢᠬᠦ",
         "latin": "ereh",
+        "sense": "to search",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠡᠷᠡᠬᠦ",
+        "latin": "erekü",
+        "sense": "to search",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6891,8 +7020,10 @@
       {
         "traditional": "ᠡᠷᠡᠦ",
         "latin": "eruu",
+        "sense": "chin",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7056,8 +7187,10 @@
       {
         "traditional": "ᠢᠰᠡᠭᠡᠢ",
         "latin": "esgii",
+        "sense": "felt",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7353,8 +7486,10 @@
       {
         "traditional": "ᠡᠲᠡᠭᠡᠳ",
         "latin": "etgeed",
+        "sense": "side",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7474,8 +7609,17 @@
       {
         "traditional": "ᠡᠬᠡ",
         "latin": "eh",
+        "sense": "mother",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠡᠬᠢ",
+        "latin": "eki",
+        "sense": "beginning",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7518,8 +7662,10 @@
       {
         "traditional": "ᠡᠬᠢᠯᠡᠬᠦ",
         "latin": "ehleh",
+        "sense": "to begin, to start",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7573,8 +7719,10 @@
       {
         "traditional": "ᠡᠬᠡᠨᠡᠷ",
         "latin": "ehner",
+        "sense": "wife",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7705,8 +7853,10 @@
       {
         "traditional": "ᠡᠴᠢᠭᠡ",
         "latin": "etseg",
+        "sense": "father",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8189,8 +8339,10 @@
       {
         "traditional": "ᠡᠵᠢ",
         "latin": "eej",
+        "sense": "mom",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8332,8 +8484,10 @@
       {
         "traditional": "ᠡᠭᠡᠮᠦᠭ",
         "latin": "eemeg",
+        "sense": "earring",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

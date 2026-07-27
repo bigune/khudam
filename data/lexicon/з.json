@@ -16,8 +16,10 @@
       {
         "traditional": "ᠵᠠ",
         "latin": "za",
+        "sense": "okay; alright",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -621,8 +623,16 @@
       {
         "traditional": "ᠵᠠᠭᠠᠷᠢ",
         "latin": "zaari",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠢᠭᠠᠷ",
+        "latin": "ǰiɣar",
+        "sense": "musk (odour, secretion)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -643,8 +653,10 @@
       {
         "traditional": "ᠵᠢᠭᠠᠬᠤ",
         "latin": "zaah",
+        "sense": "to teach",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -654,8 +666,16 @@
       {
         "traditional": "ᠵᠠᠪᠠ",
         "latin": "zav",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠠᠪ",
+        "latin": "ǰab",
+        "sense": "leisure, spare time, free time",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -676,8 +696,10 @@
       {
         "traditional": "ᠵᠠᠪᠠᠭᠠᠨ",
         "latin": "zavaan",
+        "sense": "dirty, tasteless, muddy",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1237,8 +1259,10 @@
       {
         "traditional": "ᠵᠠᠪᠢ",
         "latin": "zavi",
+        "sense": "a small boat",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1270,8 +1294,10 @@
       {
         "traditional": "ᠵᠠᠭ",
         "latin": "zag",
+        "sense": "saxaul",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1435,8 +1461,22 @@
       {
         "traditional": "ᠵᠢᠭᠠᠰᠤ",
         "latin": "zagas",
+        "sense": "fish",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      }
+    ]
+  },
+  {
+    "cyrillic": "загасчин",
+    "candidates": [
+      {
+        "traditional": "ᠵᠢᠭᠠᠰᠤᠴᠢᠨ",
+        "latin": "ǰiɣasučin",
+        "sense": "fisherman; fisher",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1875,8 +1915,10 @@
       {
         "traditional": "ᠵᠠᠳᠠᠭᠠᠢ",
         "latin": "zadgai",
+        "sense": "open, loose, bare, uncovered",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2304,8 +2346,10 @@
       {
         "traditional": "ᠵᠠᠢ",
         "latin": "zai",
+        "sense": "distance",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2436,8 +2480,16 @@
       {
         "traditional": "ᠵᠠᠢᠳᠠᠭᠤ",
         "latin": "zaiduu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠠᠶᠢᠳᠠᠭᠤ",
+        "latin": "ǰayidaɣu",
+        "sense": "faraway, distant",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2491,8 +2543,16 @@
       {
         "traditional": "ᠵᠠᠢᠯᠠᠰᠬᠢᠬᠤ",
         "latin": "zailshiih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠠᠶᠢᠯᠠᠰᠬᠢᠬᠦ",
+        "latin": "ǰayilaskiqü",
+        "sense": "immediative aspect in -схийх (-sxiix) of зайлах (zajlax, “to go away, to…",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2601,8 +2661,16 @@
       {
         "traditional": "ᠵᠠᠢᠷᠮᠠᠭ",
         "latin": "zairmag",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠠᠶᠢᠷᠮᠠᠭ",
+        "latin": "ǰayirmaɣ",
+        "sense": "ice cream",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2832,8 +2900,10 @@
       {
         "traditional": "ᠵᠠᠯᠠᠬᠤ",
         "latin": "zalah",
+        "sense": "to direct, to steer, to drive",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2843,8 +2913,10 @@
       {
         "traditional": "ᠵᠠᠯᠪᠠᠷᠢᠯ",
         "latin": "zalbiral",
+        "sense": "prayer",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2854,8 +2926,10 @@
       {
         "traditional": "ᠵᠠᠯᠪᠠᠷᠢᠬᠤ",
         "latin": "zalbirah",
+        "sense": "to pray",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2970,6 +3044,18 @@
     ]
   },
   {
+    "cyrillic": "залгамал",
+    "candidates": [
+      {
+        "traditional": "ᠵᠠᠯᠭᠠᠮᠠᠯ",
+        "latin": "ǰalɣamal",
+        "sense": "created through grafting",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "залгамж",
     "candidates": [
       {
@@ -3019,8 +3105,10 @@
       {
         "traditional": "ᠵᠠᠯᠭᠠᠬᠤ",
         "latin": "zalgah",
+        "sense": "to attach, to graft, to unite",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3074,8 +3162,10 @@
       {
         "traditional": "ᠵᠠᠯᠭᠢᠬᠤ",
         "latin": "zalgih",
+        "sense": "to swallow",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3096,8 +3186,10 @@
       {
         "traditional": "ᠵᠠᠯᠭᠠᠭᠤᠷ",
         "latin": "zalguur",
+        "sense": "electric plug",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3272,8 +3364,10 @@
       {
         "traditional": "ᠵᠠᠯᠠᠭᠤ",
         "latin": "zaluu",
+        "sense": "youth",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3316,8 +3410,10 @@
       {
         "traditional": "ᠵᠠᠯᠠᠭᠤᠷ",
         "latin": "zaluur",
+        "sense": "rudder, wheel",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3415,8 +3511,10 @@
       {
         "traditional": "ᠵᠠᠯᠠᠭᠤᠴᠤᠳ",
         "latin": "zaluuchuud",
+        "sense": "plural of залуу (zaluu)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3690,8 +3788,10 @@
       {
         "traditional": "ᠵᠠᠮ",
         "latin": "zam",
+        "sense": "way, road",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3822,8 +3922,10 @@
       {
         "traditional": "ᠵᠠᠮᠪᠠᠭ᠎ᠠ",
         "latin": "zambaga",
+        "sense": "magnolia (tree and flower)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4015,6 +4117,18 @@
     ]
   },
   {
+    "cyrillic": "замч",
+    "candidates": [
+      {
+        "traditional": "ᠵᠠᠮᠴᠢ",
+        "latin": "ǰamči",
+        "sense": "guide; cicerone",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "замчлах",
     "candidates": [
       {
@@ -4053,8 +4167,10 @@
       {
         "traditional": "ᠵᠠᠩ",
         "latin": "zan",
+        "sense": "character, temperament",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4119,8 +4235,10 @@
       {
         "traditional": "ᠵᠠᠨᠤᠬᠤ",
         "latin": "zanah",
+        "sense": "to hate",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4251,8 +4369,10 @@
       {
         "traditional": "ᠵᠠᠩᠭᠢᠶ᠎ᠠ",
         "latin": "zangia",
+        "sense": "necktie",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4306,8 +4426,10 @@
       {
         "traditional": "ᠵᠠᠩᠭᠢᠯᠠᠭ᠎ᠠ",
         "latin": "zangilaa",
+        "sense": "knot",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4372,8 +4494,10 @@
       {
         "traditional": "ᠵᠠᠩᠭᠤᠤ",
         "latin": "zanguu",
+        "sense": "anchor",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4460,8 +4584,10 @@
       {
         "traditional": "ᠵᠠᠩᠳᠠᠬᠤ",
         "latin": "zandah",
+        "sense": "to chide in a raised voice",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4845,8 +4971,10 @@
       {
         "traditional": "ᠵᠠᠷᠠᠭ᠎ᠠ",
         "latin": "zaraa",
+        "sense": "hedgehog",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4867,8 +4995,10 @@
       {
         "traditional": "ᠵᠠᠷᠤᠭᠳᠠᠬᠤ",
         "latin": "zaragdah",
+        "sense": "passive voice in -гдах (-gdax) of зарах (zarax, “to employ, to sell”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4955,8 +5085,10 @@
       {
         "traditional": "ᠵᠠᠷᠤᠳᠠᠯ",
         "latin": "zardal",
+        "sense": "expense, cost",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4988,8 +5120,10 @@
       {
         "traditional": "ᠵᠠᠷᠢᠮ",
         "latin": "zarim",
+        "sense": "some, a certain",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5087,8 +5221,10 @@
       {
         "traditional": "ᠵᠠᠷᠯᠠᠯ",
         "latin": "zarlal",
+        "sense": "declaration, advertisement, notification, announcement, poster, ticket, placard",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5175,8 +5311,10 @@
       {
         "traditional": "ᠵᠠᠷᠤᠴᠠ",
         "latin": "zarts",
+        "sense": "servant",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5351,8 +5489,10 @@
       {
         "traditional": "ᠵᠠᠰᠠᠭ",
         "latin": "zasag",
+        "sense": "government",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5703,8 +5843,10 @@
       {
         "traditional": "ᠵᠠᠬ᠎ᠠ",
         "latin": "zah",
+        "sense": "border, boundary, edge",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5758,8 +5900,10 @@
       {
         "traditional": "ᠵᠠᠬᠢᠶ᠎ᠠ",
         "latin": "zahia",
+        "sense": "letter (written message); message",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5846,8 +5990,10 @@
       {
         "traditional": "ᠵᠠᠬᠢᠳᠠᠯ",
         "latin": "zahidal",
+        "sense": "letter (written message)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5901,8 +6047,10 @@
       {
         "traditional": "ᠵᠠᠬᠢᠷᠬᠤ",
         "latin": "zahirah",
+        "sense": "to rule, to govern",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6022,8 +6170,10 @@
       {
         "traditional": "ᠵᠠᠬᠠᠴᠢᠨ",
         "latin": "zahchin",
+        "sense": "Zakhchin (Mongolian tribe)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6187,8 +6337,10 @@
       {
         "traditional": "ᠵᠣᠪᠠᠯᠠᠩ",
         "latin": "zovlon",
+        "sense": "suffering",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6594,8 +6746,16 @@
       {
         "traditional": "ᠵᠣᠭᠰᠣᠬᠤ",
         "latin": "zogsoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠣᠭᠰᠤᠬᠤ",
+        "latin": "ǰoɣsuqu",
+        "sense": "to stand",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6880,8 +7040,10 @@
       {
         "traditional": "ᠵᠣᠯᠪᠢᠩ",
         "latin": "zolbin",
+        "sense": "stray, feral (of animals)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6990,8 +7152,10 @@
       {
         "traditional": "ᠵᠣᠯᠭᠠᠬᠤ",
         "latin": "zolgoh",
+        "sense": "to meet, to encounter",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7135,6 +7299,18 @@
         "latin": "zomgolroh",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "зон",
+    "candidates": [
+      {
+        "traditional": "ᠵᠣᠨ",
+        "latin": "ǰon",
+        "sense": "people (as a nation or an ethnic group)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7408,8 +7584,16 @@
       {
         "traditional": "ᠵᠣᠭᠣᠰ",
         "latin": "zoos",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠣᠭᠤᠰ",
+        "latin": "ǰoɣus",
+        "sense": "coin",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7529,8 +7713,10 @@
       {
         "traditional": "ᠵᠣᠷᠢᠭ",
         "latin": "zorig",
+        "sense": "goal, intention",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7573,8 +7759,10 @@
       {
         "traditional": "ᠵᠣᠷᠢᠭᠯᠠᠬᠤ",
         "latin": "zorigloh",
+        "sense": "to dare, to venture",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7595,8 +7783,10 @@
       {
         "traditional": "ᠵᠣᠷᠢᠭᠲᠤ",
         "latin": "zorigt",
+        "sense": "brave, undaunted",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7628,8 +7818,10 @@
       {
         "traditional": "ᠵᠣᠷᠢᠯᠭ᠎ᠠ",
         "latin": "zorilgo",
+        "sense": "goal, aim",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7639,8 +7831,10 @@
       {
         "traditional": "ᠵᠣᠷᠢᠯᠲᠠ",
         "latin": "zorilt",
+        "sense": "task, objective, aim",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7661,8 +7855,10 @@
       {
         "traditional": "ᠵᠣᠷᠢᠮᠠᠭᠠᠢ",
         "latin": "zorimgoi",
+        "sense": "decisive, daring, resolute",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7694,8 +7890,10 @@
       {
         "traditional": "ᠵᠣᠷᠢᠮᠠᠭ",
         "latin": "zorimog",
+        "sense": "bold, tenacious, resolute",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7727,8 +7925,10 @@
       {
         "traditional": "ᠵᠣᠷᠢᠭᠤᠳᠠ",
         "latin": "zoriud",
+        "sense": "intentionally",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7760,8 +7960,10 @@
       {
         "traditional": "ᠵᠣᠷᠢᠭᠤᠯᠬᠤ",
         "latin": "zoriulah",
+        "sense": "causative of зорих (zorix)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7837,8 +8039,10 @@
       {
         "traditional": "ᠵᠣᠷᠴᠢᠭᠴᠢ",
         "latin": "zorchigch",
+        "sense": "passenger; traveller",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8079,8 +8283,10 @@
       {
         "traditional": "ᠵᠣᠬᠢᠶᠠᠯᠴᠢ",
         "latin": "zohiolch",
+        "sense": "author; writer",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8310,8 +8516,10 @@
       {
         "traditional": "ᠵᠣᠴᠢᠨ",
         "latin": "zochin",
+        "sense": "guest; visitor",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8431,8 +8639,10 @@
       {
         "traditional": "ᠵᠣᠴᠢᠯᠠᠬᠤ",
         "latin": "zochloh",
+        "sense": "to visit",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8761,8 +8971,16 @@
       {
         "traditional": "ᠵᠢᠭᠤᠳᠠᠬᠤ",
         "latin": "zugtah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠢᠭᠤᠲᠠᠬᠤ",
+        "latin": "ǰiɣutaqu",
+        "sense": "to run away, flee",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8816,8 +9034,10 @@
       {
         "traditional": "ᠵᠤᠳ",
         "latin": "zud",
+        "sense": "dzud",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8981,8 +9201,10 @@
       {
         "traditional": "ᠵᠤᠵᠠᠭᠠᠨ",
         "latin": "zuzaan",
+        "sense": "thick",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9190,8 +9412,10 @@
       {
         "traditional": "ᠵᠤᠯᠠ",
         "latin": "zul",
+        "sense": "lamp, torch",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9597,8 +9821,10 @@
       {
         "traditional": "ᠵᠤᠯᠵᠠᠭ᠎ᠠ",
         "latin": "zulzaga",
+        "sense": "young of a (wild) animal, cub, fledgling",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9795,8 +10021,10 @@
       {
         "traditional": "ᠵᠤᠨ",
         "latin": "zun",
+        "sense": "summer",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9938,8 +10166,10 @@
       {
         "traditional": "ᠵᠢᠷᠤᠭᠠᠴᠢ",
         "latin": "zuraach",
+        "sense": "artist; painter",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9949,8 +10179,10 @@
       {
         "traditional": "ᠵᠢᠷᠤᠭ",
         "latin": "zurag",
+        "sense": "picture",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9984,6 +10216,18 @@
         "latin": "zuragch",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "зурагчин",
+    "candidates": [
+      {
+        "traditional": "ᠵᠢᠷᠤᠭᠴᠢᠨ",
+        "latin": "ǰiruɣčin",
+        "sense": "photographer",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10026,8 +10270,16 @@
       {
         "traditional": "ᠵᠤᠷᠠᠬᠤ",
         "latin": "zurah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠢᠷᠤᠬᠤ",
+        "latin": "ǰiruqu",
+        "sense": "to draw (produce a picture)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10037,8 +10289,10 @@
       {
         "traditional": "ᠵᠤᠷᠪᠤᠰ",
         "latin": "zurvas",
+        "sense": "strip, band",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10807,8 +11061,10 @@
       {
         "traditional": "ᠵᠠᠭᠤᠨ",
         "latin": "zuun",
+        "sense": "century",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10983,8 +11239,24 @@
       {
         "traditional": "ᠵᠤᠤᠬ᠎ᠠ",
         "latin": "zuuh",
+        "sense": "hearth, oven, furnace",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠵᠠᠭᠤᠬᠤ",
+        "latin": "ǰaɣuqu",
+        "sense": "to bite (to hold in teeth, to attack with teeth)",
+        "verified": false,
+        "source": "wiktionary"
+      },
+      {
+        "traditional": "ᠵᠢᠭᠤᠬᠤ",
+        "latin": "ǰiɣuqu",
+        "sense": "only used in амь зуух (amʹ zuux, “to make a living”)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11115,8 +11387,17 @@
       {
         "traditional": "ᠵᠡᠪᠡ",
         "latin": "zev",
+        "sense": "spearhead, arrowhead",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠵᠢᠪᠡ",
+        "latin": "ǰibe",
+        "sense": "rust (corrosion of metal)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11137,8 +11418,10 @@
       {
         "traditional": "ᠵᠢᠪᠡᠷᠡᠬᠦ",
         "latin": "zevreh",
+        "sense": "to rust",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11192,8 +11475,10 @@
       {
         "traditional": "ᠵᠡᠪᠰᠡᠭ",
         "latin": "zevseg",
+        "sense": "weapon, armament",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11269,8 +11554,10 @@
       {
         "traditional": "ᠵᠢᠪᠡᠲᠦᠬᠦ",
         "latin": "zevteh",
+        "sense": "to rust",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11918,8 +12205,10 @@
       {
         "traditional": "ᠵᠡᠷᠯᠢᠭ",
         "latin": "zerleg",
+        "sense": "wild (not domesticated)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12083,8 +12372,16 @@
       {
         "traditional": "ᠵᠡᠷᠭᠡ",
         "latin": "zereg",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠠ᠊ᠷᠭᠡᠡ᠋",
+        "latin": "ǰa-rɣee",
+        "sense": "grade, degree, rank",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -12556,8 +12853,17 @@
       {
         "traditional": "ᠵᠡ",
         "latin": "zee",
+        "sense": "bulbous chamber on an arrow directly underneath the arrowhead that produces a…",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠵᠢᠭᠡ",
+        "latin": "ǰige",
+        "sense": "sister or daughter's child",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -12699,8 +13005,16 @@
       {
         "traditional": "ᠵᠡᠭᠡᠷ᠎ᠡ",
         "latin": "zeer",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠡᠭᠡᠷᠡ",
+        "latin": "ǰegere",
+        "sense": "gazelle",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -12710,8 +13024,10 @@
       {
         "traditional": "ᠵᠡᠭᠡᠷᠭᠡᠨ᠎ᠡ",
         "latin": "zeergene",
+        "sense": "ephedra",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13161,8 +13477,10 @@
       {
         "traditional": "ᠵᠦᠢ",
         "latin": "zui",
+        "sense": "rule, principle",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13183,8 +13501,16 @@
       {
         "traditional": "ᠵᠦᠢᠯ",
         "latin": "zuil",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠤᠢᠯ",
+        "latin": "ǰuil",
+        "sense": "kind, sort, variety, type, class, item, article, thing",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13293,8 +13619,10 @@
       {
         "traditional": "ᠵᠦᠢᠷ",
         "latin": "zuir",
+        "sense": "comparison",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13304,8 +13632,10 @@
       {
         "traditional": "ᠵᠦᠢᠷᠯᠡᠯ",
         "latin": "zuirlel",
+        "sense": "contrast, comparison",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13315,8 +13645,16 @@
       {
         "traditional": "ᠵᠦᠢᠴᠢᠯᠡᠬᠦ",
         "latin": "zuirleh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠦᠢᠷᠯᠡᠬᠦ",
+        "latin": "ǰüirlekü",
+        "sense": "to compare, contrast",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13689,8 +14027,10 @@
       {
         "traditional": "ᠵᠢᠷᠦᠬᠡ",
         "latin": "zurh",
+        "sense": "heart",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13777,8 +14117,16 @@
       {
         "traditional": "ᠵᠦᠷᠴᠢᠳ",
         "latin": "zurchid",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠦ᠋ᠷᠴᠢᠳ",
+        "latin": "ǰürčid",
+        "sense": "Jurchens (people)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13865,8 +14213,10 @@
       {
         "traditional": "ᠵᠢᠰᠦ",
         "latin": "zus",
+        "sense": "complexion (color of a face)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14173,8 +14523,16 @@
       {
         "traditional": "ᠵᠦ",
         "latin": "zuu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠵᠡᠭᠦᠦ",
+        "latin": "ǰegüü",
+        "sense": "needle",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -14206,8 +14564,10 @@
       {
         "traditional": "ᠵᠡᠭᠦᠳᠦ",
         "latin": "zuud",
+        "sense": "dream",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14217,8 +14577,10 @@
       {
         "traditional": "ᠵᠡᠭᠦᠳᠦᠯᠡᠬᠦ",
         "latin": "zuudleh",
+        "sense": "to dream",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14307,6 +14669,18 @@
         "latin": "zuunbayan",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "зүүнтэн",
+    "candidates": [
+      {
+        "traditional": "ᠵᠡᠭᠦᠨᠲᠡᠨ",
+        "latin": "ǰegünten",
+        "sense": "leftist",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -14426,8 +14800,10 @@
       {
         "traditional": "ᠵᠥᠪᠯᠡᠭᠴᠢ",
         "latin": "zuvlugch",
+        "sense": "advisor; consultant; counselor",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14437,8 +14813,10 @@
       {
         "traditional": "ᠵᠥᠪᠯᠡᠭᠡ",
         "latin": "zuvluguu",
+        "sense": "advice, suggestion",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14459,8 +14837,10 @@
       {
         "traditional": "ᠵᠥᠪᠯᠡᠯ",
         "latin": "zuvlul",
+        "sense": "council; board",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14668,8 +15048,10 @@
       {
         "traditional": "ᠵᠥᠪᠰᠢᠶᠡᠷᠡᠯ",
         "latin": "zuvshuurul",
+        "sense": "permission",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14681,6 +15063,18 @@
         "latin": "zuvshuurultsuh",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "зөвшөөрөх",
+    "candidates": [
+      {
+        "traditional": "ᠵᠥᠪᠰᠢᠶᠡᠷᠡᠬᠦ",
+        "latin": "ǰöbsiyerekü",
+        "sense": "to agree (to)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

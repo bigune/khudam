@@ -12,6 +12,14 @@
   },
   {
     "cyrillic": "аа",
+    "traditional": "ᠨ᠎ᠠ",
+    "latin": "n-a",
+    "sense": "Forms locational adverbs from spatial roots",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "аа",
     "traditional": "ᠪᠠᠨ",
     "latin": "ban",
     "sense": "reflexive-possessive",
@@ -54,6 +62,46 @@
     "citation": "Nadmid 1990 p. 16"
   },
   {
+    "cyrillic": "аасай",
+    "traditional": "ᠭᠠᠰᠠᠢ",
+    "latin": "ɣasai",
+    "sense": "Used to mark the desiderative mood.",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "аач",
+    "traditional": "ᠭᠠᠴᠢ",
+    "latin": "ɣači",
+    "sense": "Used to mark the precative mood.",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "вал",
+    "traditional": "ᠪᠠᠯ",
+    "latin": "bal",
+    "sense": "The conditional converb.",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "г",
+    "traditional": "ᠢᠡ᠋",
+    "latin": "ie",
+    "sense": "Forms nouns from verbs.",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "г",
+    "traditional": "ᠬ",
+    "latin": "k",
+    "sense": "Forms nouns from verbs.",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
     "cyrillic": "г",
     "traditional": "ᠶᠢ",
     "latin": "yi",
@@ -86,6 +134,14 @@
     "citation": "Nadmid 1990 p. 16"
   },
   {
+    "cyrillic": "гдах",
+    "traditional": "ᠭᠳᠠᠬᠤ",
+    "latin": "ɣdaqu",
+    "sense": "passive forming suffix.",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
     "cyrillic": "гийн",
     "traditional": "ᠶᠢᠨ",
     "latin": "yin",
@@ -116,6 +172,21 @@
     "verified": false,
     "source": "manual",
     "citation": "Nadmid 1990 p. 16"
+  },
+  {
+    "cyrillic": "гч",
+    "traditional": "ᠠᠠᠴ᠊ᠢ",
+    "latin": "aač-i",
+    "sense": "Forms agentive participles from verbs.",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "гч",
+    "traditional": "ᢉᠴ᠊ᠢ",
+    "sense": "Forms agentive participles from verbs.",
+    "verified": false,
+    "source": "wiktionary"
   },
   {
     "cyrillic": "гээ",
@@ -182,6 +253,22 @@
     "citation": "Nadmid 1990 pp. 15-16"
   },
   {
+    "cyrillic": "дах",
+    "traditional": "ᠳᠠᠬᠤ",
+    "latin": "daqu",
+    "sense": "to use (a tool, a substance)",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "дах",
+    "traditional": "ᠳᠬᠤ",
+    "latin": "dqu",
+    "sense": "to possess a quality, to possess a quality to an excessive degree, more than…",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
     "cyrillic": "ий",
     "traditional": "ᠦ",
     "latin": "ü",
@@ -235,6 +322,70 @@
     "citation": "Nadmid 1990 p. 15"
   },
   {
+    "cyrillic": "л",
+    "traditional": "ᠯ",
+    "latin": "l",
+    "sense": "forms action nouns and abstract nouns out of verbs",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "лдах",
+    "traditional": "ᠯᠳᠤᠬᠤ",
+    "latin": "lduqu",
+    "sense": "Forms the adversative voice, i.e. verbs that indicate actions happpening…",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "лдах",
+    "traditional": "ᠯᠳᠦᠬᠦ",
+    "latin": "ldükü",
+    "sense": "Forms the adversative voice, i.e. verbs that indicate actions happpening…",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "лт",
+    "traditional": "ᠯᠲᠡ",
+    "latin": "lte",
+    "sense": "forms action nouns out of verbs",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "лцах",
+    "traditional": "ᠯᠴᠠᠬᠤ",
+    "latin": "lčaqu",
+    "sense": "Forms the cooperative voice, i.e. verbs that indicating taking part in an…",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "м",
+    "traditional": "ᠮ",
+    "latin": "m",
+    "sense": "Seldom used suffix which forms nouns out of verbs",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "м",
+    "traditional": "ᠮ᠎ᠠ",
+    "latin": "m-a",
+    "sense": "Seldom used suffix which forms nouns out of verbs",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "мал",
+    "traditional": "ᠮᠠᠯ",
+    "latin": "mal",
+    "sense": "forms adjectives from verbs, denoting most commonly the manner in which a…",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
     "cyrillic": "н",
     "traditional": "ᠶᠢᠨ",
     "latin": "yin",
@@ -243,6 +394,14 @@
     "verified": false,
     "source": "manual",
     "citation": "Nadmid 1990 p. 15"
+  },
+  {
+    "cyrillic": "на",
+    "traditional": "ᠨ᠎ᠠ",
+    "latin": "n-a",
+    "sense": "Forms locational adverbs from spatial roots",
+    "verified": false,
+    "source": "wiktionary"
   },
   {
     "cyrillic": "нд",
@@ -343,6 +502,14 @@
     "citation": "Nadmid 1990 p. 16"
   },
   {
+    "cyrillic": "рь",
+    "traditional": "ᠷᠢ",
+    "latin": "ri",
+    "sense": "Forms nouns denoting places or results of an action.",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
     "cyrillic": "т",
     "traditional": "ᠲᠤ",
     "latin": "tu",
@@ -393,6 +560,14 @@
     "citation": "Nadmid 1990 p. 16"
   },
   {
+    "cyrillic": "уу",
+    "traditional": "ᠭᠤ",
+    "latin": "ɣu",
+    "sense": "Forms mostly adjectives and sometimes nouns denoting result, from verbs.",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
     "cyrillic": "ууд",
     "traditional": "ᠤᠳ",
     "latin": "ud",
@@ -402,6 +577,46 @@
     "verified": false,
     "source": "manual",
     "citation": "Nadmid 1990 pp. 14-15"
+  },
+  {
+    "cyrillic": "уулах",
+    "traditional": "ᠭᠤᠯᠬᠤ",
+    "latin": "ɣulqu",
+    "sense": "causative forming suffix.",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "уулах",
+    "traditional": "ᠭᠦᠯᠬᠦ",
+    "latin": "gülkü",
+    "sense": "causative forming suffix.",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "ц",
+    "traditional": "ᠴᠡ",
+    "latin": "če",
+    "sense": "Noun-forming suffix of indeterminable meaning",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "чин",
+    "traditional": "ᠴᠢᠨ",
+    "latin": "čin",
+    "sense": "Forms agent nouns from nouns and verbs.",
+    "verified": false,
+    "source": "wiktionary"
+  },
+  {
+    "cyrillic": "члах",
+    "traditional": "ᠴᠢᠯᠠᠬᠤ",
+    "latin": "čilaqu",
+    "sense": "-ize, to make into",
+    "verified": false,
+    "source": "wiktionary"
   },
   {
     "cyrillic": "чууд",
@@ -422,6 +637,14 @@
     "verified": false,
     "source": "manual",
     "citation": "Nadmid 1990 pp. 14-15"
+  },
+  {
+    "cyrillic": "ъя",
+    "traditional": "ᠶ᠎ᠠ",
+    "latin": "y-a",
+    "sense": "let's, let me",
+    "verified": false,
+    "source": "wiktionary"
   },
   {
     "cyrillic": "ы",

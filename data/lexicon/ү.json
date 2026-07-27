@@ -621,8 +621,17 @@
       {
         "traditional": "ᠦᠳᠡᠬᠦ",
         "latin": "udeh",
+        "sense": "to lace, to fasten (shoes, wall of a yurt, ...)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠦᠳᠦᠬᠦ",
+        "latin": "üdükü",
+        "sense": "to lace, to fasten (shoes, wall of a yurt, ...)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -632,8 +641,10 @@
       {
         "traditional": "ᠦᠳᠡᠰᠢ",
         "latin": "udesh",
+        "sense": "evening",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -709,8 +720,10 @@
       {
         "traditional": "ᠦᠶ᠎ᠡ",
         "latin": "uye",
+        "sense": "joint (connection between bones)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -775,8 +788,10 @@
       {
         "traditional": "ᠦᠶᠡᠷ",
         "latin": "uyer",
+        "sense": "flood",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1012,6 +1027,18 @@
     ]
   },
   {
+    "cyrillic": "үзбек",
+    "candidates": [
+      {
+        "traditional": "ᠦᠽᠪᠧᠺ",
+        "latin": "üzbēk",
+        "sense": "alternative form of узбек (uzbek, “Uzbek”)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "үзвэл",
     "candidates": [
       {
@@ -1028,8 +1055,10 @@
       {
         "traditional": "ᠦᠵᠡᠪᠦᠷᠢ",
         "latin": "uzver",
+        "sense": "show, entertainment, performance",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1336,8 +1365,10 @@
       {
         "traditional": "ᠦᠵᠡᠬᠦ",
         "latin": "uzeh",
+        "sense": "to see",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1468,8 +1499,10 @@
       {
         "traditional": "ᠦᠵᠦᠭᠦᠷ",
         "latin": "uzuur",
+        "sense": "point, tip",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1578,8 +1611,10 @@
       {
         "traditional": "ᠦᠢᠯᠡ",
         "latin": "uil",
+        "sense": "act, deed",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1611,8 +1646,10 @@
       {
         "traditional": "ᠦᠢᠯᠡᠳᠪᠦᠷᠢ",
         "latin": "uildver",
+        "sense": "factory, enterprise, shop",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1677,8 +1714,10 @@
       {
         "traditional": "ᠦᠢᠯᠡᠳᠪᠦᠷᠢᠯᠡᠯ",
         "latin": "uildverlel",
+        "sense": "production, manufacture, output",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1710,8 +1749,10 @@
       {
         "traditional": "ᠦᠢᠯᠡᠳᠪᠦᠷᠢᠯᠡᠬᠦ",
         "latin": "uildverleh",
+        "sense": "to produce, to manufacture",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1732,8 +1773,10 @@
       {
         "traditional": "ᠦᠢᠯᠡᠳᠪᠦᠷᠢᠴᠢᠨ",
         "latin": "uildverchin",
+        "sense": "laborer",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1776,8 +1819,10 @@
       {
         "traditional": "ᠦᠢᠯᠡᠳᠦᠯ",
         "latin": "uildel",
+        "sense": "act, deed",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1789,6 +1834,30 @@
         "latin": "uilden",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "үйлдэржилт",
+    "candidates": [
+      {
+        "traditional": "ᠦᠢᠯᠡᠳᠪᠦᠷᠢᠵᠢᠯᠲᠠ",
+        "latin": "üiledbüriǰilta",
+        "sense": "industrialization",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
+    "cyrillic": "үйлдэх",
+    "candidates": [
+      {
+        "traditional": "ᠦᠢᠯᠡᠳᠬᠦ",
+        "latin": "üiledkü",
+        "sense": "to do",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1853,8 +1922,10 @@
       {
         "traditional": "ᠦᠢᠯᠡᠴᠢᠯᠡᠭᠡ",
         "latin": "uilchilgee",
+        "sense": "service",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1897,8 +1968,10 @@
       {
         "traditional": "ᠦᠢᠯᠡᠴᠢᠯᠡᠯ",
         "latin": "uilchlel",
+        "sense": "reaction",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1925,6 +1998,18 @@
     ]
   },
   {
+    "cyrillic": "үйлчлүүлэгч",
+    "candidates": [
+      {
+        "traditional": "ᠦᠢᠯᠡᠴᠢᠯᠡᠭᠦᠯᠦᠭᠴᠢ",
+        "latin": "üilečilegülügči",
+        "sense": "client; customer",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "үйлчлүүлэн",
     "candidates": [
       {
@@ -1932,6 +2017,18 @@
         "latin": "uilchluulen",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "үйлчлүүлэх",
+    "candidates": [
+      {
+        "traditional": "ᠦᠢᠯᠡᠴᠢᠯᠡᠭᠦᠯᠬᠦ",
+        "latin": "üilečilegülkü",
+        "sense": "to be served",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2909,8 +3006,16 @@
       {
         "traditional": "ᠦᠯᠡᠭᠡᠬᠦ",
         "latin": "uleeh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠦᠯᠢᠶᠡᠬᠦ",
+        "latin": "üliyekü",
+        "sense": "to blow (of persons, wind)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3129,8 +3234,10 @@
       {
         "traditional": "ᠡᠮᠬᠦᠬᠦ",
         "latin": "umheh",
+        "sense": "to bite, to swallow, to devour in one bite",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3338,8 +3445,10 @@
       {
         "traditional": "ᠦᠨᠳᠦᠰᠦᠲᠡᠨ",
         "latin": "undesten",
+        "sense": "nation",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3360,8 +3469,10 @@
       {
         "traditional": "ᠦᠨᠡᠰᠦ",
         "latin": "uns",
+        "sense": "ash",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3448,8 +3559,10 @@
       {
         "traditional": "ᠦᠨᠦᠰᠬᠦ",
         "latin": "unseh",
+        "sense": "to kiss",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3492,8 +3605,22 @@
       {
         "traditional": "ᠦᠨ᠎ᠡ",
         "latin": "une",
+        "sense": "price, cost, estimate, rate, tariff, value, worth, charge, denomination,…",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      }
+    ]
+  },
+  {
+    "cyrillic": "үнэг",
+    "candidates": [
+      {
+        "traditional": "ᠦᠨᠡᠭᠡ",
+        "latin": "ünege",
+        "sense": "fox",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3965,8 +4092,10 @@
       {
         "traditional": "ᠦᠨᠢᠶ᠎ᠡ",
         "latin": "unee",
+        "sense": "cow",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4053,8 +4182,10 @@
       {
         "traditional": "ᠦᠷᠭᠦᠯᠵᠢ",
         "latin": "urgelj",
+        "sense": "often",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4845,8 +4976,10 @@
       {
         "traditional": "ᠦᠰᠦ",
         "latin": "us",
+        "sense": "hair (both as a single filament or collectively)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4944,8 +5077,10 @@
       {
         "traditional": "ᠦᠰᠦᠷᠬᠦ",
         "latin": "usreh",
+        "sense": "to jump",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5043,8 +5178,10 @@
       {
         "traditional": "ᠦᠰᠦᠴᠢᠨ",
         "latin": "uschin",
+        "sense": "hairdresser, coiffeur/coiffeuse",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5153,8 +5290,10 @@
       {
         "traditional": "ᠦᠲᠦᠷᠮ᠎ᠡ",
         "latin": "utrem",
+        "sense": "threshing floor",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5186,8 +5325,16 @@
       {
         "traditional": "ᠦᠲᠦᠷᠢᠶ᠎ᠡ",
         "latin": "utree",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠦᠲᠦᠷᠦᠭᠡ",
+        "latin": "ütürüge",
+        "sense": "vagina",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5395,8 +5542,10 @@
       {
         "traditional": "ᠦᠬᠦᠯ",
         "latin": "uhel",
+        "sense": "death",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5417,8 +5566,10 @@
       {
         "traditional": "ᠦᠬᠡᠷ",
         "latin": "uher",
+        "sense": "cow, ox (domestic bovine, bovine used as a beast of burden)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5780,8 +5931,16 @@
       {
         "traditional": "ᠦᠦᠷ",
         "latin": "uur",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠡᠭᠦᠷ",
+        "latin": "egür",
+        "sense": "nest",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5791,8 +5950,16 @@
       {
         "traditional": "ᠡᠭᠦᠷᠭᠡᠪᠡᠴᠦ",
         "latin": "uurgevch",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠡᠭᠦᠷᠭᠡᠪᠴᠢ",
+        "latin": "egürgebči",
+        "sense": "backpack",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5923,8 +6090,10 @@
       {
         "traditional": "ᠡᠭᠦᠷᠭᠡ",
         "latin": "uureg",
+        "sense": "role; part (in a theater or movie)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6011,8 +6180,10 @@
       {
         "traditional": "ᠡᠭᠦᠰᠬᠡᠯ",
         "latin": "uusgel",
+        "sense": "root, origin",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

@@ -137,8 +137,10 @@
       {
         "traditional": "ᠢᠪᠡᠭᠡᠯ",
         "latin": "iveel",
+        "sense": "care, aid, benevolence",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -159,8 +161,10 @@
       {
         "traditional": "ᠢᠪᠡᠭᠡᠬᠦ",
         "latin": "iveeh",
+        "sense": "to nurture, to protect",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -579,6 +583,18 @@
         "latin": "ider",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "идэх",
+    "candidates": [
+      {
+        "traditional": "ᠢᠳᠡᠬᠦ",
+        "latin": "idekü",
+        "sense": "to eat",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1127,8 +1143,24 @@
       {
         "traditional": "ᠢᠯᠡ",
         "latin": "il",
+        "sense": "clear, obvious, perceptible",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠢᠯᠢ",
+        "latin": "ili",
+        "sense": "fawn (a young deer)",
+        "verified": false,
+        "source": "wiktionary"
+      },
+      {
+        "traditional": "ᠢᠯ",
+        "latin": "il",
+        "sense": "country, territory",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1413,8 +1445,10 @@
       {
         "traditional": "ᠢᠯᠡᠭᠡᠬᠦ",
         "latin": "ilgeeh",
+        "sense": "to send",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1424,8 +1458,10 @@
       {
         "traditional": "ᠢᠯᠳᠦ",
         "latin": "ild",
+        "sense": "sword",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1525,6 +1561,18 @@
         "latin": "ilii",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "иллэг",
+    "candidates": [
+      {
+        "traditional": "ᠢᠯᠢᠯᠭᠡ",
+        "latin": "ililge",
+        "sense": "massage",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1655,8 +1703,10 @@
       {
         "traditional": "ᠢᠯᠡᠳᠬᠡᠯ",
         "latin": "iltgel",
+        "sense": "report (a written or spoken account of events or circumstances)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1677,8 +1727,16 @@
       {
         "traditional": "ᠢᠯᠡᠳᠭᠡᠬᠦ",
         "latin": "iltgeh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠢᠯᠡᠳᠬᠡᠬᠦ",
+        "latin": "iledkekü",
+        "sense": "causative of илдэх (ildex)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1710,8 +1768,10 @@
       {
         "traditional": "ᠢᠯᠡᠬᠡᠨ",
         "latin": "ilhen",
+        "sense": "quite clear, rather obvious",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2183,8 +2243,10 @@
       {
         "traditional": "ᠢᠮᠵᠢ",
         "latin": "imj",
+        "sense": "kangaroo",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2293,8 +2355,16 @@
       {
         "traditional": "ᠢᠮᠡᠷᠡᠬᠦ",
         "latin": "imreh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠢᠮᠡᠷᠬᠦ",
+        "latin": "imerkü",
+        "sense": "to twirl between the fingers (hair, paper)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2744,8 +2814,10 @@
       {
         "traditional": "ᠢᠩᠲᠣᠣᠷ",
         "latin": "intoor",
+        "sense": "cherry",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2882,13 +2954,27 @@
     ]
   },
   {
+    "cyrillic": "инээмсэглэл",
+    "candidates": [
+      {
+        "traditional": "ᠢᠨᠢᠶᠡᠮᠰᠦᠭᠯᠡᠯ",
+        "latin": "iniyemsüglel",
+        "sense": "smile",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "инээмсэглэх",
     "candidates": [
       {
         "traditional": "ᠢᠨᠢᠶᠡᠮᠰᠦᠭᠯᠡᠬᠦ",
         "latin": "ineemsegleh",
+        "sense": "to smile",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2920,8 +3006,10 @@
       {
         "traditional": "ᠢᠨᠢᠶᠡᠬᠦ",
         "latin": "ineeh",
+        "sense": "to laugh",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2997,8 +3085,10 @@
       {
         "traditional": "ᠢᠷᠪᠢᠰ",
         "latin": "irves",
+        "sense": "snow leopard",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3421,6 +3511,18 @@
     ]
   },
   {
+    "cyrillic": "ирц",
+    "candidates": [
+      {
+        "traditional": "ᠢᠷᠡᠴᠡ",
+        "latin": "ireče",
+        "sense": "attendance",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "ирчгэр",
     "candidates": [
       {
@@ -3558,8 +3660,10 @@
       {
         "traditional": "ᠢᠷᠡᠭᠡᠳᠦᠢ",
         "latin": "ireedui",
+        "sense": "future",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3712,8 +3816,10 @@
       {
         "traditional": "ᠢᠰᠯᠠᠮ",
         "latin": "islam",
+        "sense": "Islam",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3877,8 +3983,10 @@
       {
         "traditional": "ᠢᠲᠡᠭᠡᠯ",
         "latin": "itgel",
+        "sense": "faith; belief",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3987,8 +4095,10 @@
       {
         "traditional": "ᠶᠡᠬᠡ",
         "latin": "ih",
+        "sense": "big, considerable, grand, great",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4174,8 +4284,10 @@
       {
         "traditional": "ᠢᠬᠡᠷ᠎ᠡ",
         "latin": "iher",
+        "sense": "twin",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

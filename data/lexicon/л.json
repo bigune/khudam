@@ -16,8 +16,10 @@
       {
         "traditional": "ᠯᠠ",
         "latin": "laa",
+        "sense": "candle",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -137,8 +139,10 @@
       {
         "traditional": "ᠯᠠᠪ",
         "latin": "lav",
+        "sense": "wax",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -753,8 +757,10 @@
       {
         "traditional": "ᠯᠠᠯᠤ",
         "latin": "lal",
+        "sense": "Muslim",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1551,6 +1557,18 @@
     ]
   },
   {
+    "cyrillic": "лифт",
+    "candidates": [
+      {
+        "traditional": "ᠯᠢᠹᠲ᠋",
+        "latin": "lift",
+        "sense": "elevator, lift",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "лиш",
     "candidates": [
       {
@@ -1771,6 +1789,18 @@
     ]
   },
   {
+    "cyrillic": "ломбард",
+    "candidates": [
+      {
+        "traditional": "ᠯᠣᠮᠪᠠᠷᠳ᠋",
+        "latin": "lombard",
+        "sense": "pawn shop",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "ломбо",
     "candidates": [
       {
@@ -1809,8 +1839,16 @@
       {
         "traditional": "ᠯᠣᠩᠬᠣ",
         "latin": "lonh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠯᠣᠩᠬᠤ",
+        "latin": "longqu",
+        "sense": "bottle",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1919,8 +1957,16 @@
       {
         "traditional": "ᠯᠣᠽᠦ᠋ᠩ",
         "latin": "loozon",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠯᠣᠽᠦᠩ",
+        "latin": "lozüng",
+        "sense": "password",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1941,8 +1987,10 @@
       {
         "traditional": "ᠯᠣᠣᠯᠢ",
         "latin": "looli",
+        "sense": "tomato",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2216,8 +2264,10 @@
       {
         "traditional": "ᠯᠤᠤᠪᠠᠩ",
         "latin": "luuvan",
+        "sense": "radish",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2249,8 +2299,10 @@
       {
         "traditional": "ᠯᠠᠭᠤᠰᠠ",
         "latin": "luus",
+        "sense": "mule",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

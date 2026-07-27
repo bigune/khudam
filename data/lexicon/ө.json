@@ -38,8 +38,10 @@
       {
         "traditional": "ᠡᠪᠦᠭᠡᠨ",
         "latin": "uvgun",
+        "sense": "elderly man",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -60,8 +62,10 @@
       {
         "traditional": "ᠡᠪᠦᠳᠦᠭ",
         "latin": "uvdug",
+        "sense": "knee",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -225,8 +229,10 @@
       {
         "traditional": "ᠡᠪᠡᠰᠦ",
         "latin": "uvs",
+        "sense": "grass",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -555,8 +561,10 @@
       {
         "traditional": "ᠡᠪᠴᠢᠭᠦᠦ",
         "latin": "uvchuu",
+        "sense": "breastbone, sternum",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -643,8 +651,10 @@
       {
         "traditional": "ᠡᠪᠦᠯ",
         "latin": "uvul",
+        "sense": "winter",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -731,8 +741,10 @@
       {
         "traditional": "ᠥᠪᠥᠷ",
         "latin": "uvur",
+        "sense": "breast",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -841,8 +853,16 @@
       {
         "traditional": "ᠥᠪᠥᠭᠡᠯᠵᠢ",
         "latin": "uvuulj",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠡᠣ᠊᠊ᠢ᠊ᠪᠤᠭᠡ᠊ᠯ᠊ᠵ᠊ᠢ",
+        "latin": "eo--i-buɣe-l-ǰ-i",
+        "sense": "hoopoe",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -929,8 +949,16 @@
       {
         "traditional": "ᠥᠷᠯᠥᠭᠡ",
         "latin": "ugluu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠷᠯᠦᠭᠡ",
+        "latin": "örlüge",
+        "sense": "morning",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1105,8 +1133,10 @@
       {
         "traditional": "ᠥᠭᠦᠯᠡᠪᠦᠷᠢ",
         "latin": "uguulber",
+        "sense": "sentence",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1149,8 +1179,10 @@
       {
         "traditional": "ᠥᠭᠦᠯᠡᠭᠳᠡᠬᠦᠨ",
         "latin": "uguulegdehuun",
+        "sense": "subject",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1182,8 +1214,10 @@
       {
         "traditional": "ᠥᠭᠦᠯᠡᠬᠦᠨ",
         "latin": "uguulehuun",
+        "sense": "predicate",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1248,8 +1282,10 @@
       {
         "traditional": "ᠥᠭᠬᠦ",
         "latin": "uguh",
+        "sense": "to give",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1303,8 +1339,16 @@
       {
         "traditional": "ᠥᠳᠥ",
         "latin": "ud",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠳᠦ",
+        "latin": "ödü",
+        "sense": "feather",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1974,8 +2018,16 @@
       {
         "traditional": "ᠡᠯᠭᠥᠬᠦ",
         "latin": "ulguh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠯᠢᠭᠡᠬᠦ",
+        "latin": "öligekü",
+        "sense": "to hang, to suspend",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2183,8 +2235,10 @@
       {
         "traditional": "ᠥᠯᠮᠡᠢ",
         "latin": "ulmii",
+        "sense": "toes, front part of the foot",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2249,8 +2303,16 @@
       {
         "traditional": "ᠥᠯᠥᠰᠬᠦᠯᠡᠩ",
         "latin": "ulsgulun",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠯᠦᠰᠬᠦᠯᠡᠩ",
+        "latin": "ölüsküleng",
+        "sense": "hunger",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2282,8 +2344,16 @@
       {
         "traditional": "ᠥᠯᠥᠰᠬᠦ",
         "latin": "ulsuh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠯᠦᠰᠬᠦ",
+        "latin": "ölüskü",
+        "sense": "to be hungry",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2447,8 +2517,16 @@
       {
         "traditional": "ᠥᠯᠥᠨ",
         "latin": "ulun",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠯᠦᠨ",
+        "latin": "ölün",
+        "sense": "hungry",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2612,8 +2690,16 @@
       {
         "traditional": "ᠥᠮᠥᠳᠥ",
         "latin": "umd",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠮᠦᠳᠦ",
+        "latin": "ömüdü",
+        "sense": "breeches, pantaloon, pants, slacks, trousers",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2667,8 +2753,10 @@
       {
         "traditional": "ᠡᠮᠦᠨ᠎ᠡ",
         "latin": "umnu",
+        "sense": "south",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2799,8 +2887,16 @@
       {
         "traditional": "ᠡᠮᠥᠰᠬᠦ",
         "latin": "umsuh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠡᠮᠦᠰᠬᠦ",
+        "latin": "emüskü",
+        "sense": "to wear, put on (clothes).",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3437,8 +3533,10 @@
       {
         "traditional": "ᠥᠩᠭᠡᠷᠡᠬᠦ",
         "latin": "unguruh",
+        "sense": "to go by, pass by",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3624,8 +3722,10 @@
       {
         "traditional": "ᠥᠨᠳᠥᠷ",
         "latin": "undur",
+        "sense": "high, tall",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3679,8 +3779,10 @@
       {
         "traditional": "ᠥᠨᠳᠥᠷᠯᠢᠭ",
         "latin": "undurlug",
+        "sense": "plateau, hill",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3910,8 +4012,16 @@
       {
         "traditional": "ᠥᠨᠴᠥᠭ",
         "latin": "untsug",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠨᠴᠦᠭ",
+        "latin": "önčüg",
+        "sense": "angle",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3987,8 +4097,16 @@
       {
         "traditional": "ᠥᠨᠥᠴᠢᠨ",
         "latin": "unchin",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠨᠦᠴᠢᠨ",
+        "latin": "önüčin",
+        "sense": "orphan (a person or an animal whose parents have died or are otherwise…",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4163,8 +4281,16 @@
       {
         "traditional": "ᠥᠷᠥ",
         "latin": "ur",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠷᠢ",
+        "latin": "öri",
+        "sense": "debt",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4339,8 +4465,16 @@
       {
         "traditional": "ᠡᠷᠭᠦᠳᠡᠯ",
         "latin": "urgudul",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠡᠷᠭᠤᠳᠡᠯ",
+        "latin": "erɣudel",
+        "sense": "application, request, claim, petition",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4548,8 +4682,10 @@
       {
         "traditional": "ᠥᠷᠭᠡᠨ",
         "latin": "urgun",
+        "sense": "wide, broad",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4911,8 +5047,10 @@
       {
         "traditional": "ᠥᠷᠢᠰᠦᠯᠳᠦᠭᠴᠢ",
         "latin": "ursuldugch",
+        "sense": "competitor, rival, contestant",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4922,8 +5060,10 @@
       {
         "traditional": "ᠥᠷᠢᠰᠦᠯᠳᠦᠭᠡᠨ",
         "latin": "ursulduun",
+        "sense": "competition, rivalry",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4966,8 +5106,10 @@
       {
         "traditional": "ᠥᠷᠲᠡᠭ",
         "latin": "urtug",
+        "sense": "cost",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5054,8 +5196,10 @@
       {
         "traditional": "ᠥᠷᠲᠡᠭᠡ",
         "latin": "urtuu",
+        "sense": "station",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5428,8 +5572,23 @@
       {
         "traditional": "ᠥᠷᠥᠮ᠎ᠡ",
         "latin": "urum",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠷᠦᠮ᠎ᠡ",
+        "latin": "örüm-e",
+        "sense": "clotted cream (from boiled milk)",
+        "verified": false,
+        "source": "wiktionary"
+      },
+      {
+        "traditional": "ᠥᠷᠦᠮ",
+        "latin": "örüm",
+        "sense": "drill",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5527,8 +5686,23 @@
       {
         "traditional": "ᠥᠷᠥᠭᠡ",
         "latin": "uruu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠷᠦᠭᠡ",
+        "latin": "örüge",
+        "sense": "room",
+        "verified": false,
+        "source": "wiktionary"
+      },
+      {
+        "traditional": "ᠡᠷᠦᠭᠡ",
+        "latin": "erüge",
+        "sense": "room",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6000,8 +6174,16 @@
       {
         "traditional": "ᠥᠲᠥ",
         "latin": "ut",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠲᠦ",
+        "latin": "ötü",
+        "sense": "worm, maggot",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6033,8 +6215,10 @@
       {
         "traditional": "ᠥᠳᠬᠡᠨ",
         "latin": "utgun",
+        "sense": "thick, viscous",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6484,8 +6668,16 @@
       {
         "traditional": "ᠥᠴᠥᠭᠡᠳᠦᠷ",
         "latin": "uchigdur",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠴᠦᠭᠡᠳᠦᠷ",
+        "latin": "öčügedür",
+        "sense": "yesterday",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6594,8 +6786,16 @@
       {
         "traditional": "ᠥᠴᠥᠬᠡᠨ",
         "latin": "uchuuhen",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠴᠦᠬᠡᠨ",
+        "latin": "öčüken",
+        "sense": "tiny, little",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6957,8 +7157,10 @@
       {
         "traditional": "ᠥᠭᠡᠯᠡᠳ",
         "latin": "uuld",
+        "sense": "Ölöt, Eleuth",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7045,8 +7247,17 @@
       {
         "traditional": "ᠥᠭᠡᠷ᠎ᠡ",
         "latin": "uur",
+        "sense": "other than, besides",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠥᠪᠡᠷ",
+        "latin": "öber",
+        "sense": "self",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7199,8 +7410,10 @@
       {
         "traditional": "ᠥᠭᠡᠷᠡᠴᠢᠯᠡᠯᠲᠡ",
         "latin": "uurchlult",
+        "sense": "change",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7221,8 +7434,16 @@
       {
         "traditional": "ᠥᠪᠡᠷᠡᠴᠢᠯᠡᠬᠦ",
         "latin": "uurchluh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠥᠭᠡᠷᠡᠴᠢᠯᠡᠬᠦ",
+        "latin": "ögerečilekü",
+        "sense": "to alter, to transform",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7265,8 +7486,10 @@
       {
         "traditional": "ᠥᠭᠡᠬᠦ",
         "latin": "uuh",
+        "sense": "fat, grease",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7300,6 +7523,18 @@
         "latin": "uuhluuleh",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "өөхлөг",
+    "candidates": [
+      {
+        "traditional": "ᠥᠭᠡᠬᠦᠯᠢᠭ",
+        "latin": "ögekülig",
+        "sense": "fatty, greasy",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

@@ -447,3 +447,1137 @@ should carry the MVS final vowel at all. Example flagged:
   supplies `sense` labels for both (the schema requires senses once
   candidates > 1), after checking whether the two forms are sense-scoped
   meanings or orthographic variants.
+
+<!-- wiktionary-import:begin (auto-generated, do not edit between markers) -->
+
+## Wiktionary import review queue (`scripts/import-wiktionary.ts`)
+
+Extracted from English Wiktionary (CC BY-SA) via kaikki.org — see [SOURCES.md](SOURCES.md). Хүний хяналт шаардлагатай мөрүүд — туслах хүн бүрт баярлана.
+
+### Source conflicts — prioritized review queue (342)
+
+The bootstrap seed and Wiktionary disagree on these words. Each case is either a genuine homonym (keep both, write proper `sense` labels) or a wrong spelling (delete the bad candidate). Candidates marked _unlabeled_ need a human meaning label; do not trust either source blindly.
+
+- **агзайх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B3%D0%B7%D0%B0%D0%B9%D1%85#Mongolian)
+  - `ᠠᠭᠵᠠᠢᠬᠤ` (*agzaih*) — wmk-import — _unlabeled_
+  - `ᠠᠭᠵᠠᠶᠢᠬᠤ` (*aɣǰayiqu*) — wiktionary — “to shiver”
+- **айлчлах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B9%D0%BB%D1%87%D0%BB%D0%B0%D1%85#Mongolian)
+  - `ᠠᠢᠯᠴᠢᠯᠠᠬᠤ` (*ailchlah*) — wmk-import — _unlabeled_
+  - `ᠠᠶᠢᠯᠴᠢᠯᠠᠬᠤ` (*ayilčilaqu*) — wiktionary — “to visit”
+- **айраг** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B9%D1%80%D0%B0%D0%B3#Mongolian)
+  - `ᠠᠢᠷᠠᠭ` (*airag*) — wmk-import — _unlabeled_
+  - `ᠠᠶᠢᠷᠠᠭ` (*ayiraɣ*) — wiktionary — “koumiss (a popular Mongolian drink made from fermented mare’s milk).”
+- **ал** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BB#Mongolian)
+  - `ᠠᠯᠠ` (*al*) — wmk-import — _unlabeled_
+  - `ᠠᠯ` (*al*) — wiktionary — “red”
+- **алдах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BB%D0%B4%D0%B0%D1%85#Mongolian)
+  - `ᠠᠯᠠᠳᠠᠬᠤ` (*aldah*) — wmk-import — _unlabeled_
+  - `ᠠᠯᠳᠠᠬᠤ` (*aldaqu*) — wiktionary — “to lose (a thing, an ability, a quality...)”
+- **алим** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BB%D0%B8%D0%BC#Mongolian)
+  - `ᠠᠯᠢᠮ᠎ᠠ` (*alim*) — wmk-import — _unlabeled_
+  - `ᠠᠯᠢᠮ᠎᠎ᠠ` (*alim--a*) — wiktionary — “apple”
+- **амрах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BC%D1%80%D0%B0%D1%85#Mongolian)
+  - `ᠠᠮᠤᠷᠠᠬᠤ` (*amrah*) — wmk-import — _unlabeled_
+  - `ᠠᠮᠠᠷᠠᠬᠤ` (*amaraqu*) — wiktionary — “to rest”
+- **амьдрал** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BC%D1%8C%D0%B4%D1%80%D0%B0%D0%BB#Mongolian)
+  - `ᠠᠮᠢᠳᠤᠷᠠᠯ` (*amidral*) — wmk-import — _unlabeled_
+  - `ᠠᠮᠢᠳ᠋ᠤᠷᠠᠯ` (*amidural*) — wiktionary — “life”
+- **англи** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8#Mongolian)
+  - `ᠠᠩᠭᠯᠢ` (*angli*) — wmk-import — _unlabeled_
+  - `ᠠᠩᠩᠯᠢ` (*angngli*) — wiktionary — “English”
+- **аптек** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BF%D1%82%D0%B5%D0%BA#Mongolian)
+  - `ᠠᠫᠲ᠋ᠧᠺ` (*aptyek*) — wmk-import — _unlabeled_
+  - `ᠠᠫᠳᠡᠭ` (*apdeg*) — wiktionary — “drugstore, pharmacy, chemist's”
+- **асуудал** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D1%81%D1%83%D1%83%D0%B4%D0%B0%D0%BB#Mongolian)
+  - `ᠠᠰᠠᠭᠤᠳᠠᠯ` (*asuudal*) — wmk-import — _unlabeled_
+  - `ᠠᠰᠠᠭᠣᠳᠠᠯ` (*asaɣodal*) — wiktionary — “question”
+- **ачих** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D1%87%D0%B8%D1%85#Mongolian)
+  - `ᠠᠴᠢᠬ᠎ᠠ` (*achih*) — wmk-import — _unlabeled_
+  - `ᠠᠴᠢᠬᠤ` (*ačiqu*) — wiktionary — “to load, burden, pile up”
+- **аялах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D1%8F%D0%BB%D0%B0%D1%85#Mongolian)
+  - `ᠠᠶᠠᠯᠬᠤ` (*ayalah*) — wmk-import — _unlabeled_
+  - `ᠠᠶᠠᠯᠠᠬᠤ` (*ayalaqu*) — wiktionary — “to travel”
+- **баатар** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B0%D0%B0%D1%82%D0%B0%D1%80#Mongolian)
+  - `ᠪᠠᠭᠠᠲᠤᠷ` (*baatar*) — wmk-import — _unlabeled_
+  - `ᠪᠠᠭ᠋ᠠᠲᠤᠷ` (*baɣatur*) — wiktionary — “hero”
+- **багалзуур** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B0%D0%B3%D0%B0%D0%BB%D0%B7%D1%83%D1%83%D1%80#Mongolian)
+  - `ᠪᠠᠭᠠᠯᠵᠤᠷ` (*bagalzuur*) — wmk-import — _unlabeled_
+  - `ᠪᠠᠭᠠᠯᠵᠠᠭᠤᠷ` (*baɣalǰaɣur*) — wiktionary — “throat, pharynx, gizzard”
+- **байгуулалт** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B0%D0%B9%D0%B3%D1%83%D1%83%D0%BB%D0%B0%D0%BB%D1%82#Mongolian)
+  - `ᠪᠠᠢᠭᠤᠯᠤᠯᠲᠠ` (*baiguulalt*) — wmk-import — _unlabeled_
+  - `ᠪᠠᠶ᠋ᠢᠭᠤᠯᠤᠯᠲᠠ` (*bayiɣululta*) — wiktionary — “composition”
+- **байлдаан** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B0%D0%B9%D0%BB%D0%B4%D0%B0%D0%B0%D0%BD#Mongolian)
+  - `ᠪᠠᠢᠯᠳᠤᠭᠠᠨ` (*baildaan*) — wmk-import — _unlabeled_
+  - `ᠪᠠᠶ᠋ᠢᠯᠳᠤᠭᠠᠨ` (*bayilduɣan*) — wiktionary — “battle”
+- **банзал** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B0%D0%BD%D0%B7%D0%B0%D0%BB#Mongolian)
+  - `ᠪᠠᠩᠵᠠᠯ` (*banzal*) — wmk-import — _unlabeled_
+  - `ᠪᠠᠨᠵᠠᠯ` (*banǰal*) — wiktionary — “skirt”
+- **бараа** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B0%D1%80%D0%B0%D0%B0#Mongolian)
+  - `ᠪᠠᠷ᠎ᠠ` (*baraa*) — wmk-import — _unlabeled_
+  - `ᠪᠠᠷᠠᠭ᠎ᠠ` (*baraɣ-a*) — wiktionary — “contour, outline, silhouette”
+- **барамнас** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B0%D1%80%D0%B0%D0%BC%D0%BD%D0%B0%D1%81#Mongolian)
+  - `ᠪᠠᠷᠮᠠᠨᠤᠰ` (*baramnas*) — wmk-import — _unlabeled_
+  - `ᠪᠡ᠊ᠷ᠊ᠮᠠᠨ᠋ᠣᠰ` (*be-r-manos*) — wiktionary — “plural of барамна (baramna)”
+- **барга** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B0%D1%80%D0%B3%D0%B0#Mongolian)
+  - `ᠪᠠᠷᠭᠤ` (*barga*) — wmk-import — _unlabeled_
+  - `ᠪᠠᠷᠭ᠋ᠤ` (*barɣu*) — wiktionary — “crude”
+- **баяд** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B0%D1%8F%D0%B4#Mongolian)
+  - `ᠪᠠᠶᠠᠳ` (*bayad*) — wmk-import — _unlabeled_
+  - `ᠪᠠᠶ᠋ᠠᠳ` (*bayad*) — wiktionary — “Bayats (Oirat-Mongolian tribe, vassal of the Dörbets)”
+- **баялаг** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B0%D1%8F%D0%BB%D0%B0%D0%B3#Mongolian)
+  - `ᠪᠠᠶᠠᠯᠢᠭ` (*bayalag*) — wmk-import — _unlabeled_
+  - `ᠪᠠᠶ᠋ᠠᠯᠢᠭ` (*bayaliɣ*) — wiktionary — “riches, wealth”
+- **баярлалаа** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B0%D1%8F%D1%80%D0%BB%D0%B0%D0%BB%D0%B0%D0%B0#Mongolian)
+  - `ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ` (*bayarlalaa*) — wmk-import — _unlabeled_
+  - `ᠪᠠᠶᠠᠷᠯᠠᠯᠤᠭ᠎ᠠ` (*bayarlaluɣ-a*) — wiktionary — “thank you”
+- **бензин** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD#Mongolian)
+  - `ᠪᠧᠨ᠋ᠽᠢᠨ` (*byenzin*) — wmk-import — _unlabeled_
+  - `ᠪᠧᠨᠽᠢᠨ` (*bēnzin*) — wiktionary — “gasoline, petrol”
+- **бетон** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B5%D1%82%D0%BE%D0%BD#Mongolian)
+  - `ᠪᠧᠲ᠋ᠡᠨ` (*byeton*) — wmk-import — _unlabeled_
+  - `ᠪᠧᠲ᠋ᠣᠨ` (*bēton*) — wiktionary — “concrete”
+- **билет** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%B8%D0%BB%D0%B5%D1%82#Mongolian)
+  - `ᠪᠢᠯᠧᠲ` (*bilyet*) — wmk-import — _unlabeled_
+  - `ᠪᠢᠯᠧᠲ᠋` (*bilēt*) — wiktionary — “ticket”
+- **бодол** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%BE%D0%B4%D0%BE%D0%BB#Mongolian)
+  - `ᠪᠣᠳᠣᠯ` (*bodol*) — wmk-import — _unlabeled_
+  - `ᠪᠣᠳᠤᠯ` (*bodul*) — wiktionary — “thought, thinking, idea, intention, conception, opinion”
+- **бодох** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%BE%D0%B4%D0%BE%D1%85#Mongolian)
+  - `ᠪᠣᠳᠣᠬᠤ` (*bodoh*) — wmk-import — _unlabeled_
+  - `ᠪᠣᠳᠤᠬᠤ` (*boduqu*) — wiktionary — “to think”
+- **больниц** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D1%86#Mongolian)
+  - `ᠪᠣᠯᠢᠨᠢᠼ` (*bolinits*) — wmk-import — _unlabeled_
+  - `ᠪᠣᠯᠢᠨᠢᠼᠠ` (*bolinica*) — wiktionary — “hospital”
+- **боол** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%BE%D0%BE%D0%BB#Mongolian)
+  - `ᠪᠣᠭᠣᠯ` (*bool*) — wmk-import — _unlabeled_
+  - `ᠪᠣᠭᠤᠯ` (*boɣul*) — wiktionary — “slave”
+- **боолт** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%BE%D0%BE%D0%BB%D1%82#Mongolian)
+  - `ᠪᠣᠭᠣᠯᠲᠠ` (*boolt*) — wmk-import — _unlabeled_
+  - `ᠪᠣᠭᠤᠯᠲᠠ` (*boɣulta*) — wiktionary — “bolt”
+- **боорцог** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%BE%D0%BE%D1%80%D1%86%D0%BE%D0%B3#Mongolian)
+  - `ᠪᠣᠭᠣᠷᠰᠣᠭ` (*boortsog*) — wmk-import — _unlabeled_
+  - `ᠪᠣᠭᠤᠷᠰᠤᠭ` (*boɣursuɣ*) — wiktionary — “doughnut, fritter (fried sweet piece of dough)”
+- **боох** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D0%BE%D0%BE%D1%85#Mongolian)
+  - `ᠪᠣᠭᠣᠬᠤ` (*booh*) — wmk-import — _unlabeled_
+  - `ᠪᠣᠭᠤᠬᠤ` (*boɣuqu*) — wiktionary — “to bind, to bundle”
+- **буга** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D1%83%D0%B3%D0%B0#Mongolian)
+  - `ᠪᠤᠭᠤ` (*buga*) — wmk-import — _unlabeled_
+  - `ᠪᠣᠭᠣ` (*boɣo*) — wiktionary — “deer”
+- **буйл** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D1%83%D0%B9%D0%BB#Mongolian)
+  - `ᠪᠤᠢᠯᠠ` (*buil*) — wmk-import — _unlabeled_
+  - `ᠪᠤᠶᠢᠯᠠ` (*buyila*) — wiktionary — “gums (flesh around teeth)”
+- **булан** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D1%83%D0%BB%D0%B0%D0%BD#Mongolian)
+  - `ᠪᠤᠯᠤᠨ` (*bulan*) — wmk-import — _unlabeled_
+  - `ᠪᠤᠯᠤᠩ` (*bulung*) — wiktionary — “corner”
+- **буудал** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D1%83%D1%83%D0%B4%D0%B0%D0%BB#Mongolian)
+  - `ᠪᠠᠭᠤᠳᠠᠯ` (*buudal*) — wmk-import — _unlabeled_
+  - `ᠪᠠᠭᠣᠳᠠᠯ` (*baɣodal*) — wiktionary — “camp, landing, station, stay, stop, stage, landing stage, rocket stage”
+- **бууз** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D1%83%D1%83%D0%B7#Mongolian)
+  - `ᠪᠤᠤᠵᠠ` (*buuz*) — wmk-import — _unlabeled_
+  - `ᠪᠤᠤᠽ` (*buuz*) — wiktionary — “steamed meat dumpling”
+  - `ᠪᠣᠣᠵᠠ` (*booǰa*) — wiktionary — “steamed meat dumpling”
+- **бэлхүүс** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D1%8D%D0%BB%D1%85%D2%AF%D2%AF%D1%81#Mongolian)
+  - `ᠪᠡᠯᠬᠡᠭᠦᠰᠦ` (*belhuus*) — wmk-import — _unlabeled_
+  - `ᠪᠡᠯᠭᠡᠭᠦᠰᠦ` (*belgegüsü*) — wiktionary — “waist”
+- **бүр** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D2%AF%D1%80#Mongolian)
+  - `ᠪᠦᠷ` (*bur*) — wmk-import — _unlabeled_
+  - `ᠪᠦᠷᠢ` (*büri*) — wiktionary — “each, every”
+- **бүс** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D2%AF%D1%81#Mongolian)
+  - `ᠪᠥᠰᠡ` (*bus*) — wmk-import — _unlabeled_
+  - `ᠪᠦᠰᠡ` (*büse*) — wiktionary — “belt”
+- **бөгж** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D3%A9%D0%B3%D0%B6#Mongolian)
+  - `ᠪᠥᠭᠡᠵᠢ` (*bugj*) — wmk-import — _unlabeled_
+  - `ᠪᠦᠭᠡᠵᠢ` (*bügeǰi*) — wiktionary — “ring”
+- **бөднө** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D3%A9%D0%B4%D0%BD%D3%A9#Mongolian)
+  - `ᠪᠥᠲᠥᠨ᠎ᠡ` (*budnu*) — wmk-import — _unlabeled_
+  - `ᠪᠥᠳᠦᠨ᠎ᠡ` (*bödün-e*) — wiktionary — “quail”
+- **бөмбөг** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D3%A9%D0%BC%D0%B1%D3%A9%D0%B3#Mongolian)
+  - `ᠪᠥᠮᠪᠥᠭᠡ` (*bumbug*) — wmk-import — _unlabeled_
+  - `ᠪᠥᠮᠪᠦᠭᠡ` (*bömbüge*) — wiktionary — “ball”
+- **бөхөн** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D3%A9%D1%85%D3%A9%D0%BD#Mongolian)
+  - `ᠪᠥᠬᠥᠨ` (*buhun*) — wmk-import — _unlabeled_
+  - `ᠪᠥᠭᠦᠩ` (*bögüng*) — wiktionary — “saiga (antelope)”
+- **бөөлжис** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D3%A9%D3%A9%D0%BB%D0%B6%D0%B8%D1%81#Mongolian)
+  - `ᠪᠥᠭᠡᠯᠵᠢᠰᠦ` (*buuljis*) — wmk-import — _unlabeled_
+  - `ᠪᠥᠭᠡᠯᠵᠢᠰᠣᠨ` (*bögelǰison*) — wiktionary — “vomit”
+- **вандан** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B2%D0%B0%D0%BD%D0%B4%D0%B0%D0%BD#Mongolian)
+  - `ᠪᠠᠨᠳᠠᠩ` (*vandan*) — wmk-import — _unlabeled_
+  - `ᠸᠠᠩᠳᠠᠩ` (*wangdang*) — wiktionary — “bench (set)”
+- **гадил** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D0%B0%D0%B4%D0%B8%D0%BB#Mongolian)
+  - `ᠭᠠᠳᠢᠯ` (*gadil*) — wmk-import — _unlabeled_
+  - `ᠭᠠᠳᠠᠯᠢ` (*ɣadali*) — wiktionary — “banana, plantain”
+- **ган** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D0%B0%D0%BD#Mongolian)
+  - `ᠭᠠᠨ` (*gan*) — wmk-import — _unlabeled_
+  - `ᠭᠠᠩ` (*ɣang*) — wiktionary — “steel”
+- **ганжин** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D0%B0%D0%BD%D0%B6%D0%B8%D0%BD#Mongolian)
+  - `ᠭᠠᠨᠵᠢᠨ` (*ganjin*) — wmk-import — _unlabeled_
+  - `ᠭᠠᠨᠵᠢᠩ` (*ɣanǰing*) — wiktionary — “rolling pin”
+- **гийгэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D0%B8%D0%B9%D0%B3%D1%8D%D1%85#Mongolian)
+  - `ᠭᠡᠢᠭᠡᠬᠦ` (*giigeh*) — wmk-import — _unlabeled_
+  - `ᠭᠡᠶᠢᠭᠡᠬᠦ` (*geyigekü*) — wiktionary — “To become bright”
+- **гийгүүлэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D0%B8%D0%B9%D0%B3%D2%AF%D2%AF%D0%BB%D1%8D%D1%85#Mongolian)
+  - `ᠭᠡᠢᠭᠦᠯᠬᠦ` (*giiguuleh*) — wmk-import — _unlabeled_
+  - `ᠭᠡᠶᠢᠭᠦᠯᠬᠦ` (*geyigülkü*) — wiktionary — “To enlighten, illuminate”
+- **гоожих** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D0%BE%D0%BE%D0%B6%D0%B8%D1%85#Mongolian)
+  - `ᠭᠣᠣᠵᠢᠬᠤ` (*goojih*) — wmk-import — _unlabeled_
+  - `ᠭᠣᠭᠤᠵᠢᠬᠤ` (*ɣoguǰiqu*) — wiktionary — “to leak, pour out, drip, stream, sweat”
+- **горхи** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D0%BE%D1%80%D1%85%D0%B8#Mongolian)
+  - `ᠭᠣᠷᠭᠢ` (*gorhi*) — wmk-import — _unlabeled_
+  - `ᠭᠣᠷᠤᠬ᠎ᠠ` (*ɣoruq-a*) — wiktionary — “a (small) river, brook”
+- **гэлэнмаа** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D1%8D%D0%BB%D1%8D%D0%BD%D0%BC%D0%B0%D0%B0#Mongolian)
+  - `ᠭᠡᠯᠡᠩᠮ᠎ᠠ` (*gelenmaa*) — wmk-import — _unlabeled_
+  - `ᠭᠡᠯᠣᠩᠮ᠎ᠠ` (*gelongm-a*) — wiktionary — “nun, bhikkhuni”
+- **гялайлаа** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D1%8F%D0%BB%D0%B0%D0%B9%D0%BB%D0%B0%D0%B0#Mongolian)
+  - `ᠭᠢᠯᠠᠢᠯ᠎ᠠ` (*gyalailaa*) — wmk-import — _unlabeled_
+  - `ᠭᠢᠯᠠᠶᠢᠯ᠎ᠠ` (*ɣilayil-a*) — wiktionary — “thank you”
+- **гүүр** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D2%AF%D2%AF%D1%80#Mongolian)
+  - `ᠭᠦᠦᠷᠡ` (*guur*) — wmk-import — _unlabeled_
+  - `ᠭᠦᠭᠦᠷᠭᠡ` (*gügürge*) — wiktionary — “bridge”
+- **дайр** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%B0%D0%B9%D1%80#Mongolian)
+  - `ᠳᠠᠢᠷ` (*dair*) — wmk-import — _unlabeled_
+  - `ᠳᠠᠭᠠᠷᠢ` (*daɣari*) — wiktionary — “abrasion”
+  - `ᠳᠠᠶᠢᠷ` (*dayir*) — wiktionary — “abrasion”
+- **дайсан** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%B0%D0%B9%D1%81%D0%B0%D0%BD#Mongolian)
+  - `ᠳᠠᠢᠰᠤᠨ` (*daisan*) — wmk-import — _unlabeled_
+  - `ᠳᠠᠶᠢᠰᠤᠨ` (*dayisun*) — wiktionary — “enemy; foe; rival”
+- **дайх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%B0%D0%B9%D1%85#Mongolian)
+  - `ᠳᠠᠢᠬᠤ` (*daih*) — wmk-import — _unlabeled_
+  - `ᠳᠠᠶ᠋ᠢᠬᠤ` (*dayiqu*) — wiktionary — “to haul off with a vehicle”
+- **дарах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%B0%D1%80%D0%B0%D1%85#Mongolian)
+  - `ᠳᠠᠷᠠᠬᠤ` (*darah*) — wmk-import — _unlabeled_
+  - `ᠳᠠᠷᠤᠬᠤ` (*daruqu*) — wiktionary — “to repress”
+- **дийлэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%B8%D0%B9%D0%BB%D1%8D%D1%85#Mongolian)
+  - `ᠳᠡᠢᠯᠬᠦ` (*diileh*) — wmk-import — _unlabeled_
+  - `ᠳᠡᠶ᠋ᠢᠯᠬᠦ` (*deyilkü*) — wiktionary — “to defeat, to win”
+- **довтлох** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%BE%D0%B2%D1%82%D0%BB%D0%BE%D1%85#Mongolian)
+  - `ᠳᠣᠪᠲᠣᠯᠬᠤ` (*dovtloh*) — wmk-import — _unlabeled_
+  - `ᠳᠣᠪᠲᠤᠯᠬᠤ` (*dobtulqu*) — wiktionary — “to gallop (to ride swiftly)”
+- **домог** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%BE%D0%BC%D0%BE%D0%B3#Mongolian)
+  - `ᠳᠣᠮᠣᠭ` (*domog*) — wmk-import — _unlabeled_
+  - `ᠳᠣᠮᠤᠭ` (*domuɣ*) — wiktionary — “legend, myth, fable”
+- **дорой** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%BE%D1%80%D0%BE%D0%B9#Mongolian)
+  - `ᠳᠣᠷᠣᠢ` (*doroi*) — wmk-import — _unlabeled_
+  - `ᠳᠣᠷᠤᠢ` (*dorui*) — wiktionary — “weak, feeble, lax, poor, underdeveloped”
+- **доромжлол** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%BE%D1%80%D0%BE%D0%BC%D0%B6%D0%BB%D0%BE%D0%BB#Mongolian)
+  - `ᠳᠣᠷᠣᠮᠵᠢᠯᠠᠯ` (*doromjlol*) — wmk-import — _unlabeled_
+  - `ᠳᠣᠷᠤᠮᠵᠢᠯᠠᠯ` (*dorumǰilal*) — wiktionary — “humiliation, outrage, insult”
+- **доромжлох** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%BE%D1%80%D0%BE%D0%BC%D0%B6%D0%BB%D0%BE%D1%85#Mongolian)
+  - `ᠳᠤᠷᠤᠮᠵᠢᠯᠠᠬᠤ` (*doromjloh*) — wmk-import — _unlabeled_
+  - `ᠳᠣᠷᠤᠮᠵᠢᠯᠠᠬᠤ` (*dorumǰilaqu*) — wiktionary — “to insult, humiliate, belittle”
+- **дотор** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%BE%D1%82%D0%BE%D1%80#Mongolian)
+  - `ᠳᠣᠲᠣᠷ᠎ᠠ` (*dotor*) — wmk-import — _unlabeled_
+  - `ᠳᠣᠲᠤᠷ᠎ᠠ` (*dotur-a*) — wiktionary — “in, inside”
+- **дугуй** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D1%83%D0%B3%D1%83%D0%B9#Mongolian)
+  - `ᠳᠤᠭᠤᠢ` (*dugui*) — wmk-import — _unlabeled_
+  - `ᠳᠣᠭᠣᠢ` (*doɣoi*) — wiktionary — “circle”
+- **дуулах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D1%83%D1%83%D0%BB%D0%B0%D1%85#Mongolian)
+  - `ᠳᠠᠭᠤᠯᠠᠬᠤ` (*duulah*) — wmk-import — _unlabeled_
+  - `ᠳᠤᠭᠤᠯᠠᠬᠤ` (*duɣulaqu*) — wiktionary — “to hear”
+- **дэлхий** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D1%8D%D0%BB%D1%85%D0%B8%D0%B9#Mongolian)
+  - `ᠳᠡᠯᠡᠬᠡᠢ` (*delhii*) — wmk-import — _unlabeled_
+  - `ᠳᠡᠯᠡᠭᠡᠢ` (*delegei*) — wiktionary — “earth”
+- **дэлэн** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D1%8D%D0%BB%D1%8D%D0%BD#Mongolian)
+  - `ᠳᠡᠯᠡᠨ` (*delen*) — wmk-import — _unlabeled_
+  - `ᠳᠡᠯᠡᠩ` (*deleng*) — wiktionary — “udder”
+- **дэнлүү** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D1%8D%D0%BD%D0%BB%D2%AF%D2%AF#Mongolian)
+  - `ᠳ᠋ᠧᠨᠯᠦ` (*denluu*) — wmk-import — _unlabeled_
+  - `ᠳ᠋ᠧᠩᠯᠦ` (*dēnglü*) — wiktionary — “lantern”
+- **дэнслэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D1%8D%D0%BD%D1%81%D0%BB%D1%8D%D1%85#Mongolian)
+  - `ᠳᠡᠩᠰᠡᠯᠬᠦ` (*densleh*) — wmk-import — _unlabeled_
+  - `ᠳᠡᠩᠰᠡᠯᠡᠬᠦ` (*dengselekü*) — wiktionary — “to weigh”
+- **дөлгөөн** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D3%A9%D0%BB%D0%B3%D3%A9%D3%A9%D0%BD#Mongolian)
+  - `ᠳᠥᠯᠥᠭᠡᠨ` (*dulguun*) — wmk-import — _unlabeled_
+  - `ᠳᠥᠯᠦᠭᠡᠨ` (*dölügen*) — wiktionary — “calm, quiet, peaceful, gentle”
+- **дөрвөл** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D3%A9%D1%80%D0%B2%D3%A9%D0%BB#Mongolian)
+  - `ᠳᠥᠷᠪᠡᠯ` (*durvul*) — wmk-import — _unlabeled_
+  - `ᠳᠥ᠋ᠷᠪᠡᠯ` (*dörbel*) — wiktionary — “(⁓ хөгжим) quartet”
+- **дөрөө** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D3%A9%D1%80%D3%A9%D3%A9#Mongolian)
+  - `ᠳᠥᠷᠥᠭᠡ` (*duruu*) — wmk-import — _unlabeled_
+  - `ᠳᠥᠷᠦᠭᠡ` (*dörüge*) — wiktionary — “stirrup, pedal”
+- **ерөнхий** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B5%D1%80%D3%A9%D0%BD%D1%85%D0%B8%D0%B9#Mongolian)
+  - `ᠶᠡᠷᠦᠩᠬᠡᠢ` (*yerunhii*) — wmk-import — _unlabeled_
+  - `ᠶᠡᠷᠦᠩᠬᠡᠶ` (*yerüngkey*) — wiktionary — “general”
+- **ерөнхийлөгч** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B5%D1%80%D3%A9%D0%BD%D1%85%D0%B8%D0%B9%D0%BB%D3%A9%D0%B3%D1%87#Mongolian)
+  - `ᠶᠡᠷᠦᠩᠬᠡᠢᠯᠡᠭᠴᠢ` (*yerunhiilugch*) — wmk-import — _unlabeled_
+  - `ᠶᠡᠷᠦᠩᠬᠡᠶᠢᠯᠡᠭᠴᠢ` (*yerüngkeyilegči*) — wiktionary — “agentive participle in -гч (-gč) of ерөнхийлөх (jörönxiilöx)”
+- **ерөнхийлөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B5%D1%80%D3%A9%D0%BD%D1%85%D0%B8%D0%B9%D0%BB%D3%A9%D1%85#Mongolian)
+  - `ᠶᠡᠷᠦᠩᠬᠡᠢᠯᠡᠬᠦ` (*yerunhiiluh*) — wmk-import — _unlabeled_
+  - `ᠶᠡᠷᠦᠩᠬᠡᠶᠢᠯᠡᠬᠦ` (*yerüngkeyilekü*) — wiktionary — “To generalize”
+- **еэвэн** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B5%D1%8D%D0%B2%D1%8D%D0%BD#Mongolian)
+  - `ᠶᠧᠪᠡᠩ` (*yeven*) — wmk-import — _unlabeled_
+  - `ᠶᠧᠪᠢᠩ` (*yēbing*) — wiktionary — “cookie (small, sweet, flat, circular, baked good which is either crisp or soft…”
+- **живэр** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B6%D0%B8%D0%B2%D1%8D%D1%80#Mongolian)
+  - `ᠵᠢᠪᠡᠷ` (*jiver*) — wmk-import — _unlabeled_
+  - `ᠵᠢᠪᠡᠷᠢ` (*ǰiberi*) — wiktionary — “moustache”
+- **жимслэг** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B6%D0%B8%D0%BC%D1%81%D0%BB%D1%8D%D0%B3#Mongolian)
+  - `ᠵᠢᠮᠢᠰᠯᠡᠭ` (*jimsleg*) — wmk-import — _unlabeled_
+  - `ᠵᠢᠮᠢᠰᠯᠢᠭ` (*ǰimislig*) — wiktionary — “fruit-bearing, abundant in fruit”
+- **жолоо** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B6%D0%BE%D0%BB%D0%BE%D0%BE#Mongolian)
+  - `ᠵᠢᠯᠣᠭᠣ` (*joloo*) — wmk-import — _unlabeled_
+  - `ᠵᠢᠯᠤᠭᠤ` (*ǰiluɣu*) — wiktionary — “rein”
+- **жолооч** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B6%D0%BE%D0%BB%D0%BE%D0%BE%D1%87#Mongolian)
+  - `ᠵᠢᠯᠣᠭᠣᠴᠢ` (*jolooch*) — wmk-import — _unlabeled_
+  - `ᠵᠢᠯᠤᠭᠤᠴᠢ` (*ǰiluɣuči*) — wiktionary — “driver”
+- **жорлон** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B6%D0%BE%D1%80%D0%BB%D0%BE%D0%BD#Mongolian)
+  - `ᠵᠣᠷᠯᠣᠩ` (*jorlon*) — wmk-import — _unlabeled_
+  - `ᠵᠣᠷᠯᠤᠩ` (*ǰorlung*) — wiktionary — “toilet, outhouse”
+- **заарь** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%B0%D0%B0%D1%80%D1%8C#Mongolian)
+  - `ᠵᠠᠭᠠᠷᠢ` (*zaari*) — wmk-import — _unlabeled_
+  - `ᠵᠢᠭᠠᠷ` (*ǰiɣar*) — wiktionary — “musk (odour, secretion)”
+- **зав** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%B0%D0%B2#Mongolian)
+  - `ᠵᠠᠪᠠ` (*zav*) — wmk-import — _unlabeled_
+  - `ᠵᠠᠪ` (*ǰab*) — wiktionary — “leisure, spare time, free time”
+- **зайдуу** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%B0%D0%B9%D0%B4%D1%83%D1%83#Mongolian)
+  - `ᠵᠠᠢᠳᠠᠭᠤ` (*zaiduu*) — wmk-import — _unlabeled_
+  - `ᠵᠠᠶᠢᠳᠠᠭᠤ` (*ǰayidaɣu*) — wiktionary — “faraway, distant”
+- **зайлсхийх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%B0%D0%B9%D0%BB%D1%81%D1%85%D0%B8%D0%B9%D1%85#Mongolian)
+  - `ᠵᠠᠢᠯᠠᠰᠬᠢᠬᠤ` (*zailshiih*) — wmk-import — _unlabeled_
+  - `ᠵᠠᠶᠢᠯᠠᠰᠬᠢᠬᠦ` (*ǰayilaskiqü*) — wiktionary — “immediative aspect in -схийх (-sxiix) of зайлах (zajlax, “to go away, to…”
+- **зайрмаг** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%B0%D0%B9%D1%80%D0%BC%D0%B0%D0%B3#Mongolian)
+  - `ᠵᠠᠢᠷᠮᠠᠭ` (*zairmag*) — wmk-import — _unlabeled_
+  - `ᠵᠠᠶᠢᠷᠮᠠᠭ` (*ǰayirmaɣ*) — wiktionary — “ice cream”
+- **зогсох** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%BE%D0%B3%D1%81%D0%BE%D1%85#Mongolian)
+  - `ᠵᠣᠭᠰᠣᠬᠤ` (*zogsoh*) — wmk-import — _unlabeled_
+  - `ᠵᠣᠭᠰᠤᠬᠤ` (*ǰoɣsuqu*) — wiktionary — “to stand”
+- **зоос** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%BE%D0%BE%D1%81#Mongolian)
+  - `ᠵᠣᠭᠣᠰ` (*zoos*) — wmk-import — _unlabeled_
+  - `ᠵᠣᠭᠤᠰ` (*ǰoɣus*) — wiktionary — “coin”
+- **зугтах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D1%83%D0%B3%D1%82%D0%B0%D1%85#Mongolian)
+  - `ᠵᠢᠭᠤᠳᠠᠬᠤ` (*zugtah*) — wmk-import — _unlabeled_
+  - `ᠵᠢᠭᠤᠲᠠᠬᠤ` (*ǰiɣutaqu*) — wiktionary — “to run away, flee”
+- **зурах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D1%83%D1%80%D0%B0%D1%85#Mongolian)
+  - `ᠵᠤᠷᠠᠬᠤ` (*zurah*) — wmk-import — _unlabeled_
+  - `ᠵᠢᠷᠤᠬᠤ` (*ǰiruqu*) — wiktionary — “to draw (produce a picture)”
+- **зэрэг** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D1%8D%D1%80%D1%8D%D0%B3#Mongolian)
+  - `ᠵᠡᠷᠭᠡ` (*zereg*) — wmk-import — _unlabeled_
+  - `ᠵᠠ᠊ᠷᠭᠡᠡ᠋` (*ǰa-rɣee*) — wiktionary — “grade, degree, rank”
+- **зээр** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D1%8D%D1%8D%D1%80#Mongolian)
+  - `ᠵᠡᠭᠡᠷ᠎ᠡ` (*zeer*) — wmk-import — _unlabeled_
+  - `ᠵᠡᠭᠡᠷᠡ` (*ǰegere*) — wiktionary — “gazelle”
+- **зүйл** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D2%AF%D0%B9%D0%BB#Mongolian)
+  - `ᠵᠦᠢᠯ` (*zuil*) — wmk-import — _unlabeled_
+  - `ᠵᠤᠢᠯ` (*ǰuil*) — wiktionary — “kind, sort, variety, type, class, item, article, thing”
+- **зүйрлэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D2%AF%D0%B9%D1%80%D0%BB%D1%8D%D1%85#Mongolian)
+  - `ᠵᠦᠢᠴᠢᠯᠡᠬᠦ` (*zuirleh*) — wmk-import — _unlabeled_
+  - `ᠵᠦᠢᠷᠯᠡᠬᠦ` (*ǰüirlekü*) — wiktionary — “to compare, contrast”
+- **зүрчид** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D2%AF%D1%80%D1%87%D0%B8%D0%B4#Mongolian)
+  - `ᠵᠦᠷᠴᠢᠳ` (*zurchid*) — wmk-import — _unlabeled_
+  - `ᠵᠦ᠋ᠷᠴᠢᠳ` (*ǰürčid*) — wiktionary — “Jurchens (people)”
+- **зүү** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D2%AF%D2%AF#Mongolian)
+  - `ᠵᠦ` (*zuu*) — wmk-import — _unlabeled_
+  - `ᠵᠡᠭᠦᠦ` (*ǰegüü*) — wiktionary — “needle”
+- **илтгэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B8%D0%BB%D1%82%D0%B3%D1%8D%D1%85#Mongolian)
+  - `ᠢᠯᠡᠳᠭᠡᠬᠦ` (*iltgeh*) — wmk-import — _unlabeled_
+  - `ᠢᠯᠡᠳᠬᠡᠬᠦ` (*iledkekü*) — wiktionary — “causative of илдэх (ildex)”
+- **имрэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B8%D0%BC%D1%80%D1%8D%D1%85#Mongolian)
+  - `ᠢᠮᠡᠷᠡᠬᠦ` (*imreh*) — wmk-import — _unlabeled_
+  - `ᠢᠮᠡᠷᠬᠦ` (*imerkü*) — wiktionary — “to twirl between the fingers (hair, paper)”
+- **календарь** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C#Mongolian)
+  - `ᠺᠠᠯᠧᠨᠳᠠᠷᠢ` (*kalyendari*) — wmk-import — _unlabeled_
+  - `ᠻᠠᠯᠧᠨᠳᠠᠷᠢ` (*kalēndari*) — wiktionary — “calendar”
+- **карт** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BA%D0%B0%D1%80%D1%82#Mongolian)
+  - `ᠺᠠᠷᠲ` (*kart*) — wmk-import — _unlabeled_
+  - `ᠻᠠᠷᠲ᠋` (*kart*) — wiktionary — “card, map, chart”
+- **компани** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8#Mongolian)
+  - `ᠺᠣᠮᠫᠠᠨᠢ` (*kompani*) — wmk-import — _unlabeled_
+  - `ᠻᠣᠮᠫᠠᠨᠢ` (*kompani*) — wiktionary — “company; firm”
+- **консул** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB#Mongolian)
+  - `ᠺᠣᠨᠰᠤᠶᠢᠯ` (*konsul*) — wmk-import — _unlabeled_
+  - `ᠺᠣᠨᠰᠦ᠋ᠯ` (*konsül*) — wiktionary — “consul (official residing in major foreign towns to represent and protect the…”
+- **контор** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BA%D0%BE%D0%BD%D1%82%D0%BE%D1%80#Mongolian)
+  - `ᠺᠣᠨᠲ᠋ᠣᠷ` (*kontor*) — wmk-import — _unlabeled_
+  - `ᠻᠣᠨᠲ᠋ᠣᠷ` (*kontor*) — wiktionary — “office; bureau”
+- **костюм** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BA%D0%BE%D1%81%D1%82%D1%8E%D0%BC#Mongolian)
+  - `ᠺᠣᠰᠲ᠋ᠶᠤᠶᠢᠮ` (*kostyum*) — wmk-import — _unlabeled_
+  - `ᠻᠣᠰᠲ᠋ᠢᠶᠦᠮ` (*kostiyüm*) — wiktionary — “suit (suit of clothes, men’s suit or women’s suit)”
+- **лонх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BB%D0%BE%D0%BD%D1%85#Mongolian)
+  - `ᠯᠣᠩᠬᠣ` (*lonh*) — wmk-import — _unlabeled_
+  - `ᠯᠣᠩᠬᠤ` (*longqu*) — wiktionary — “bottle”
+- **лоозон** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BB%D0%BE%D0%BE%D0%B7%D0%BE%D0%BD#Mongolian)
+  - `ᠯᠣᠽᠦ᠋ᠩ` (*loozon*) — wmk-import — _unlabeled_
+  - `ᠯᠣᠽᠦᠩ` (*lozüng*) — wiktionary — “password”
+- **майхан** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%B0%D0%B9%D1%85%D0%B0%D0%BD#Mongolian)
+  - `ᠮᠠᠢᠬᠠᠨ` (*maihan*) — wmk-import — _unlabeled_
+  - `ᠮᠠᠶᠢᠬᠠᠨ` (*mayiqan*) — wiktionary — “tent”
+- **мий** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%B8%D0%B9#Mongolian)
+  - `ᠮᠢ` (*mii*) — wmk-import — _unlabeled_
+  - `ᠮᠢᠢ` (*mii*) — wiktionary — “cat”
+- **миний** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%B8%D0%BD%D0%B8%D0%B9#Mongolian)
+  - `ᠮᠢᠨᠦ` (*minii*) — wmk-import — _unlabeled_
+  - `ᠮᠢᠨᠤ` (*minu*) — wiktionary — “my”
+- **минийх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%B8%D0%BD%D0%B8%D0%B9%D1%85#Mongolian)
+  - `ᠮᠢᠨᠦᠬᠢ` (*miniih*) — wmk-import — _unlabeled_
+  - `ᠮᠢᠨᠤᠬᠢ` (*minuqi*) — wiktionary — “mine”
+- **модоч** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%BE%D0%B4%D0%BE%D1%87#Mongolian)
+  - `ᠮᠣᠳᠣᠴᠢ` (*modoch*) — wmk-import — _unlabeled_
+  - `ᠮᠣᠳᠤᠴᠢ` (*moduči*) — wiktionary — “carpenter”
+- **молтогчин** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%BE%D0%BB%D1%82%D0%BE%D0%B3%D1%87%D0%B8%D0%BD#Mongolian)
+  - `ᠮᠣᠯᠲᠣᠭᠴᠢᠨ` (*moltogchin*) — wmk-import — _unlabeled_
+  - `ᠮᠣᠯᠲᠤᠭᠴᠢᠨ` (*moltuɣčin*) — wiktionary — “hare, rabbit”
+- **мохоо** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%BE%D1%85%D0%BE%D0%BE#Mongolian)
+  - `ᠮᠣᠬᠣᠭᠣ` (*mohoo*) — wmk-import — _unlabeled_
+  - `ᠮᠣᠬᠤᠭᠠ` (*moquɣa*) — wiktionary — “blunt (not sharp)”
+- **мохох** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%BE%D1%85%D0%BE%D1%85#Mongolian)
+  - `ᠮᠣᠬᠣᠬᠤ` (*mohoh*) — wmk-import — _unlabeled_
+  - `ᠮᠣᠬᠤᠬᠤ` (*moququ*) — wiktionary — “to become blunt”
+- **мушгирах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D1%83%D1%88%D0%B3%D0%B8%D1%80%D0%B0%D1%85#Mongolian)
+  - `ᠮᠤᠰᠭᠢᠷᠠᠬᠤ` (*mushgirah*) — wmk-import — _unlabeled_
+  - `ᠮᠤᠰᠬᠢᠷᠠᠬᠤ` (*musqiraqu*) — wiktionary — “to twist (become twisted)”
+- **мэлхий** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D1%8D%D0%BB%D1%85%D0%B8%D0%B9#Mongolian)
+  - `ᠮᠡᠯᠡᠬᠡᠢ` (*melhii*) — wmk-import — _unlabeled_
+  - `ᠮᠡᠨᠡᠬᠡᠢ` (*menekei*) — wiktionary — “frog, toad”
+- **мөргөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D3%A9%D1%80%D0%B3%D3%A9%D1%85#Mongolian)
+  - `ᠮᠥᠷᠭᠥᠬᠦ` (*murguh*) — wmk-import — _unlabeled_
+  - `ᠮᠥᠷᠭᠦᠬᠦ` (*mörgükü*) — wiktionary — “to butt, to bump (with horns, forehead, ...)”
+- **мөрөвч** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D3%A9%D1%80%D3%A9%D0%B2%D1%87#Mongolian)
+  - `ᠮᠥᠷᠥᠪᠴᠢ` (*muruvch*) — wmk-import — _unlabeled_
+  - `ᠮᠥᠷᠦᠪᠴᠢ` (*mörübči*) — wiktionary — “suspenders (to hold up trousers)”
+- **мөрөөдөл** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D3%A9%D1%80%D3%A9%D3%A9%D0%B4%D3%A9%D0%BB#Mongolian)
+  - `ᠮᠥᠷᠥᠭᠡᠳᠦᠯ` (*muruudul*) — wmk-import — _unlabeled_
+  - `ᠮᠥᠷᠦᠭᠡᠳᠦᠯ` (*mörügedül*) — wiktionary — “dream (aspiration)”
+- **мөөг** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D3%A9%D3%A9%D0%B3#Mongolian)
+  - `ᠮᠥᠭᠥ` (*muug*) — wmk-import — _unlabeled_
+  - `ᠮᠥᠭᠦ` (*mögü*) — wiktionary — “mushroom, fungus”
+- **найз** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B0%D0%B9%D0%B7#Mongolian)
+  - `ᠨᠠᠢᠵᠠ` (*naiz*) — wmk-import — _unlabeled_
+  - `ᠨᠠᠶ᠋ᠢᠵᠠ` (*nayiǰa*) — wiktionary — “friend”
+- **найр** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B0%D0%B9%D1%80#Mongolian)
+  - `ᠨᠠᠢᠷ` (*nair*) — wmk-import — _unlabeled_
+  - `ᠨᠠᠶᠢᠷ` (*nayir*) — wiktionary — “feast”
+- **найрамдал** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B0%D0%B9%D1%80%D0%B0%D0%BC%D0%B4%D0%B0%D0%BB#Mongolian)
+  - `ᠨᠠᠢᠷᠠᠮᠳᠠᠯ` (*nairamdal*) — wmk-import — _unlabeled_
+  - `ᠨᠠᠶᠢᠷᠠᠮᠳᠠᠯ` (*nayiramdal*) — wiktionary — “friendship”
+- **найруулах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B0%D0%B9%D1%80%D1%83%D1%83%D0%BB%D0%B0%D1%85#Mongolian)
+  - `ᠨᠠᠢᠷᠠᠭᠤᠯᠬᠤ` (*nairuulah*) — wmk-import — _unlabeled_
+  - `ᠨᠠᠶ᠋ᠢᠷᠠᠭᠤᠯᠬᠤ` (*nayiraɣulqu*) — wiktionary — “causative of найрах (najrax)”
+- **найтаах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B0%D0%B9%D1%82%D0%B0%D0%B0%D1%85#Mongolian)
+  - `ᠨᠠᠢᠲᠠᠭᠠᠬᠤ` (*naitaah*) — wmk-import — _unlabeled_
+  - `ᠨᠠᠶ᠋ᠢᠲᠠᠭᠠᠬᠤ` (*nayitaɣaqu*) — wiktionary — “to sneeze”
+- **нийгэм** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B8%D0%B9%D0%B3%D1%8D%D0%BC#Mongolian)
+  - `ᠨᠡᠢᠭᠡᠮ` (*niigem*) — wmk-import — _unlabeled_
+  - `ᠨᠡᠶᠢᠭᠡᠮ` (*neyigem*) — wiktionary — “society”
+- **нийслэл** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B8%D0%B9%D1%81%D0%BB%D1%8D%D0%BB#Mongolian)
+  - `ᠨᠡᠢᠰᠯᠡᠯ` (*niislel*) — wmk-import — _unlabeled_
+  - `ᠨᠡᠶᠢᠰᠯᠡᠯ` (*neyislel*) — wiktionary — “capital, capital city, metropolis”
+- **нийтгэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B8%D0%B9%D1%82%D0%B3%D1%8D%D1%85#Mongolian)
+  - `ᠨᠡᠢᠳᠬᠡᠬᠦ` (*niitgeh*) — wmk-import — _unlabeled_
+  - `ᠨᠡᠶ᠋ᠢᠳᠬᠡᠬᠦ` (*neyidkekü*) — wiktionary — “to weave”
+- **ногоо** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%BE%D0%B3%D0%BE%D0%BE#Mongolian)
+  - `ᠨᠣᠭᠣᠭ᠎ᠠ` (*nogoo*) — wmk-import — _unlabeled_
+  - `ᠨᠣᠭᠤᠭ᠎ᠠ` (*noɣuɣ-a*) — wiktionary — “herbs, grass, vegetables”
+- **ногоон** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%BE%D0%B3%D0%BE%D0%BE%D0%BD#Mongolian)
+  - `ᠨᠣᠭᠣᠭᠠᠨ` (*nogoon*) — wmk-import — _unlabeled_
+  - `ᠨᠣᠭᠤᠭᠠᠨ` (*noɣuɣan*) — wiktionary — “green”
+- **нойтон** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%BE%D0%B9%D1%82%D0%BE%D0%BD#Mongolian)
+  - `ᠨᠣᠢᠲᠠᠨ` (*noiton*) — wmk-import — _unlabeled_
+  - `ᠨᠣᠶᠢᠲᠠᠨ` (*noyitan*) — wiktionary — “wet; moist”
+- **нөгөө** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D3%A9%D0%B3%D3%A9%D3%A9#Mongolian)
+  - `ᠨᠥᠭᠥᠭᠡ` (*nuguu*) — wmk-import — _unlabeled_
+  - `ᠨᠥᠭᠦᠭᠡ` (*nögüge*) — wiktionary — “that; that very one”
+- **нөлөө** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D3%A9%D0%BB%D3%A9%D3%A9#Mongolian)
+  - `ᠨᠥᠯᠥᠭᠡ` (*nuluu*) — wmk-import — _unlabeled_
+  - `ᠨᠥᠯᠦᠭᠡ` (*nölüge*) — wiktionary — “influence”
+- **нөхөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D3%A9%D1%85%D3%A9%D1%85#Mongolian)
+  - `ᠨᠥᠬᠥᠬᠥ` (*nuhuh*) — wmk-import — _unlabeled_
+  - `ᠨᠥᠬᠦᠬᠦ` (*nökükü*) — wiktionary — “to patch, act as a substitute, make up for, catch up with”
+- **нөхөөс** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D3%A9%D1%85%D3%A9%D3%A9%D1%81#Mongolian)
+  - `ᠨᠥᠬᠥᠭᠡᠰᠦ` (*nuhuus*) — wmk-import — _unlabeled_
+  - `ᠨᠥᠬᠦᠭᠡᠰᠦ` (*nökügesü*) — wiktionary — “patch, substitute, piece”
+- **огих** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%B3%D0%B8%D1%85#Mongolian)
+  - `ᠣᠬᠢᠬᠤ` (*ogih*) — wmk-import — _unlabeled_
+  - `ᠣᠭᠢᠬᠤ` (*oɣiqu*) — wiktionary — “to retch, to burp”
+- **оготно** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%B3%D0%BE%D1%82%D0%BD%D0%BE#Mongolian)
+  - `ᠣᠭᠣᠲᠣᠨ᠎ᠠ` (*ogotno*) — wmk-import — _unlabeled_
+  - `ᠣᠭᠤᠲᠤᠨ᠎ᠠ` (*oɣutun-a*) — wiktionary — “field rat, mouse”
+- **оготор** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%B3%D0%BE%D1%82%D0%BE%D1%80#Mongolian)
+  - `ᠣᠭᠣᠲᠣᠷ` (*ogotor*) — wmk-import — _unlabeled_
+  - `ᠣᠭᠤᠲᠤᠷ` (*oɣutur*) — wiktionary — “short”
+- **одоо** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%B4%D0%BE%D0%BE#Mongolian)
+  - `ᠣᠳᠣ` (*odoo*) — wmk-import — _unlabeled_
+  - `ᠣᠳᠤ` (*odu*) — wiktionary — “now”
+- **озох** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%B7%D0%BE%D1%85#Mongolian)
+  - `ᠣᠵᠣᠬᠤ` (*ozoh*) — wmk-import — _unlabeled_
+  - `ᠣᠵᠤᠬᠤ` (*oǰuqu*) — wiktionary — “to kiss”
+- **ойлгох** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%B9%D0%BB%D0%B3%D0%BE%D1%85#Mongolian)
+  - `ᠤᠢᠯᠠᠭᠠᠬᠤ` (*oilgoh*) — wmk-import — _unlabeled_
+  - `ᠣᠶ᠋ᠢᠯᠠᠭᠠᠬᠤ` (*oyilaɣaqu*) — wiktionary — “to understand (someone, something)”
+- **оймс** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%B9%D0%BC%D1%81#Mongolian)
+  - `ᠣᠢᠮᠣᠰᠤ` (*oims*) — wmk-import — _unlabeled_
+  - `ᠣᠶ᠋ᠢᠮᠤᠰᠤ` (*oyimusu*) — wiktionary — “sock, stocking”
+- **олох** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%BB%D0%BE%D1%85#Mongolian)
+  - `ᠤᠯᠬᠤ` (*oloh*) — wmk-import — _unlabeled_
+  - `ᠣᠯᠬᠤ` (*olqu*) — wiktionary — “to find, to discover”
+- **олс** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%BB%D1%81#Mongolian)
+  - `ᠣᠯᠣᠰᠣ` (*ols*) — wmk-import — _unlabeled_
+  - `ᠣᠯᠤᠰᠤ` (*olusu*) — wiktionary — “hemp, rope, chain”
+- **онол** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%BD%D0%BE%D0%BB#Mongolian)
+  - `ᠣᠨᠣᠯ` (*onol*) — wmk-import — _unlabeled_
+  - `ᠣᠨᠤᠯ` (*onul*) — wiktionary — “theory”
+- **оноо** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%BD%D0%BE%D0%BE#Mongolian)
+  - `ᠣᠨᠣᠭ᠎ᠠ` (*onoo*) — wmk-import — _unlabeled_
+  - `ᠣᠨᠤᠭ᠎ᠠ` (*onuɣ-a*) — wiktionary — “hit (a successful shot)”
+  - `ᠣᠨᠤᠭᠤ` (*onuɣu*) — wiktionary — “slit (on a garment)”
+- **ор** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D1%80#Mongolian)
+  - `ᠣᠷᠣ` (*or*) — wmk-import — _unlabeled_
+  - `ᠣᠷᠤ` (*oru*) — wiktionary — “bed”
+- **орой** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D1%80%D0%BE%D0%B9#Mongolian)
+  - `ᠣᠷᠣᠢ` (*oroi*) — wmk-import — _unlabeled_
+  - `ᠣᠷᠤᠢ` (*orui*) — wiktionary — “evening”
+- **ором** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D1%80%D0%BE%D0%BC#Mongolian)
+  - `ᠣᠷᠣᠮ` (*orom*) — wmk-import — _unlabeled_
+  - `ᠣᠷᠤᠮ` (*orum*) — wiktionary — “imprint”
+- **орчуулах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D1%80%D1%87%D1%83%D1%83%D0%BB%D0%B0%D1%85#Mongolian)
+  - `ᠤᠷᠴᠢᠭᠤᠯᠬᠤ` (*orchuulah*) — wmk-import — _unlabeled_
+  - `ᠣᠷᠴᠢᠭᠤᠯᠬᠤ` (*orčiɣulqu*) — wiktionary — “to translate”
+- **орших** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D1%80%D1%88%D0%B8%D1%85#Mongolian)
+  - `ᠤᠷᠤᠰᠢᠬᠤ` (*orshih*) — wmk-import — _unlabeled_
+  - `ᠣᠷᠤᠰᠢᠬᠤ` (*orusiqu*) — wiktionary — “entity”
+- **оёдол** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D1%91%D0%B4%D0%BE%D0%BB#Mongolian)
+  - `ᠣᠶᠣᠳᠠᠯ` (*oyodol*) — wmk-import — _unlabeled_
+  - `ᠣᠶᠤᠳᠠᠯ` (*oyudal*) — wiktionary — “sewing, stitchery”
+- **парк** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BF%D0%B0%D1%80%D0%BA#Mongolian)
+  - `ᠫᠠᠷᠺ` (*park*) — wmk-import — _unlabeled_
+  - `ᠫᠠᠷᠻ` (*park*) — wiktionary — “park”
+- **парламент** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BF%D0%B0%D1%80%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D1%82#Mongolian)
+  - `ᠫᠠᠷᠯᠠᠮᠧᠨᠲ` (*parlamyent*) — wmk-import — _unlabeled_
+  - `ᠫᠠᠷᠯᠠᠮᠧᠨᠲ᠋` (*parlamēnt*) — wiktionary — “parliament”
+- **паспорт** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BF%D0%B0%D1%81%D0%BF%D0%BE%D1%80%D1%82#Mongolian)
+  - `ᠫᠠᠰᠫᠣᠷᠲ` (*pasport*) — wmk-import — _unlabeled_
+  - `ᠫᠠᠰᠫᠣᠷᠲ᠋` (*pasport*) — wiktionary — “ID card”
+- **саатал** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%B0%D0%B0%D1%82%D0%B0%D0%BB#Mongolian)
+  - `ᠰᠠᠭᠠᠲᠠᠯ᠎ᠠ` (*saatal*) — wmk-import — _unlabeled_
+  - `ᠰᠠᠭᠠᠲᠠᠯ` (*saɣatal*) — wiktionary — “jam”
+- **сампин** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%B0%D0%BC%D0%BF%D0%B8%D0%BD#Mongolian)
+  - `ᠰᠤᠸᠠᠮᠫᠠᠨ` (*sampin*) — wmk-import — _unlabeled_
+  - `ᠰᠤᠸᠠᠨᠫᠠᠨ` (*suwanpan*) — wiktionary — “abacus”
+- **сонгогч** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%BE%D0%BD%D0%B3%D0%BE%D0%B3%D1%87#Mongolian)
+  - `ᠰᠣᠩᠭᠣᠭᠴᠢ` (*songogch*) — wmk-import — _unlabeled_
+  - `ᠰᠣᠩᠭᠤᠭᠴᠢ` (*songɣuɣči*) — wiktionary — “voter; elector; chooser”
+- **сонгох** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%BE%D0%BD%D0%B3%D0%BE%D1%85#Mongolian)
+  - `ᠰᠤᠩᠭᠤᠬᠤ` (*songoh*) — wmk-import — _unlabeled_
+  - `ᠰᠣᠩᠭᠤᠬᠤ` (*songɣuqu*) — wiktionary — “to choose”
+- **сонгууль** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%BE%D0%BD%D0%B3%D1%83%D1%83%D0%BB%D1%8C#Mongolian)
+  - `ᠰᠣᠩᠭᠣᠭᠤᠯᠢ` (*songuuli*) — wmk-import — _unlabeled_
+  - `ᠰᠣᠩᠭᠤᠭᠤᠯᠢ` (*songɣuɣuli*) — wiktionary — “election”
+- **сонсох** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%BE%D0%BD%D1%81%D0%BE%D1%85#Mongolian)
+  - `ᠰᠤᠨᠤᠰᠬᠤ` (*sonsoh*) — wmk-import — _unlabeled_
+  - `ᠰᠣᠨᠤᠰᠬᠤ` (*sonusqu*) — wiktionary — “to hear”
+- **соруул** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%BE%D1%80%D1%83%D1%83%D0%BB#Mongolian)
+  - `ᠰᠣᠷᠣᠭᠤᠯ` (*soruul*) — wmk-import — _unlabeled_
+  - `ᠰᠣᠷᠤᠭᠤᠯ` (*soruɣul*) — wiktionary — “drinking straw”
+- **социализм** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC#Mongolian)
+  - `ᠰᠣᠴᠢᠶᠠᠯᠢᠮ` (*sotsializm*) — wmk-import — _unlabeled_
+  - `ᠰᠣᠼᠢᠶᠠᠯᠢᠰᠮ` (*sociyalism*) — wiktionary — “socialism”
+- **соёо** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%BE%D1%91%D0%BE#Mongolian)
+  - `ᠰᠣᠶᠣᠭ᠎ᠠ` (*soyo*) — wmk-import — _unlabeled_
+  - `ᠰᠣᠶᠤᠭ᠎ᠠ` (*soyuɣ-a*) — wiktionary — “tusk”
+- **станц** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D1%82%D0%B0%D0%BD%D1%86#Mongolian)
+  - `ᠰᠲ᠋ᠠᠨᠼ` (*stants*) — wmk-import — _unlabeled_
+  - `ᠰᠲ᠋ᠠᠨᠼᠢ` (*stanci*) — wiktionary — “station”
+- **сэлэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D1%8D%D0%BB%D1%8D%D1%85#Mongolian)
+  - `ᠰᠡᠯᠡᠬᠦ` (*seleh*) — wmk-import — _unlabeled_
+  - `ᠰᠡᠯᠢᠬᠦ` (*selikü*) — wiktionary — “to swim (of animals, humans)”
+- **сэргийлэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D1%8D%D1%80%D0%B3%D0%B8%D0%B9%D0%BB%D1%8D%D1%85#Mongolian)
+  - `ᠰᠡᠷᠭᠡᠢᠯᠡᠬᠦ` (*sergiileh*) — wmk-import — _unlabeled_
+  - `ᠰᠡᠷᠭᠡᠶᠢᠯᠡᠬᠦ` (*sergeyilekü*) — wiktionary — “to protect”
+- **сүнс** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D2%AF%D0%BD%D1%81#Mongolian)
+  - `ᠰᠦᠨᠡᠰᠦ` (*suns*) — wmk-import — _unlabeled_
+  - `ᠰᠦ᠋ᠨ᠋ᠡᠰᠦ` (*sünesü*) — wiktionary — “soul”
+- **сүү** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D2%AF%D2%AF#Mongolian)
+  - `ᠰᠦ᠋` (*suu*) — wmk-import — _unlabeled_
+  - `ᠰᠦᠨ` (*sün*) — wiktionary — “milk”
+- **сөгдөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D3%A9%D0%B3%D0%B4%D3%A9%D1%85#Mongolian)
+  - `ᠰᠥᠭᠥᠳᠬᠦ` (*sugduh*) — wmk-import — _unlabeled_
+  - `ᠰᠥᠭᠦᠳᠬᠦ` (*sögüdkü*) — wiktionary — “to kneel”
+- **тайж** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%B0%D0%B9%D0%B6#Mongolian)
+  - `ᠲᠠᠢᠵᠢ` (*taij*) — wmk-import — _unlabeled_
+  - `ᠲᠠᠶᠢᠵᠢ` (*tayiǰi*) — wiktionary — “a nobleman”
+- **тайлбарлах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%B0%D0%B9%D0%BB%D0%B1%D0%B0%D1%80%D0%BB%D0%B0%D1%85#Mongolian)
+  - `ᠲᠠᠢᠯᠪᠤᠷᠢᠯᠠᠬᠤ` (*tailbarlah*) — wmk-import — _unlabeled_
+  - `ᠲᠠᠶᠢᠯᠪᠤᠷᠢᠯᠠᠬᠤ` (*tayilburilaqu*) — wiktionary — “to explain”
+- **такси** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%B0%D0%BA%D1%81%D0%B8#Mongolian)
+  - `ᠲᠠᠺᠰᠢ` (*taksi*) — wmk-import — _unlabeled_
+  - `ᠲ᠋ᠠᠻᠰᠢ` (*taksi*) — wiktionary — “taxi; cab”
+- **там** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%B0%D0%BC#Mongolian)
+  - `ᠲᠠᠮ` (*tam*) — wmk-import — _unlabeled_
+  - `ᠲᠠᠮᠤ` (*tamu*) — wiktionary — “hell”
+- **тамах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%B0%D0%BC%D0%B0%D1%85#Mongolian)
+  - `ᠲᠠᠮᠠᠬᠤ` (*tamah*) — wmk-import — _unlabeled_
+  - `ᠲᠠᠮᠤᠬᠤ` (*tamuqu*) — wiktionary — “alternative form of томох (tomox, “to spin (rope)”)”
+- **телефон** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD#Mongolian)
+  - `ᠲᠧᠯᠧᠹᠣᠨ` (*tyelyefon*) — wmk-import — _unlabeled_
+  - `ᠲ᠋ᠧᠯᠧᠹᠣᠨ` (*tēlēfon*) — wiktionary — “telephone”
+- **технологи** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8#Mongolian)
+  - `ᠲᠧᠭᠨᠣᠯᠣᠭᠢ` (*tyehnologi*) — wmk-import — _unlabeled_
+  - `ᠲᠧᠻᠨᠣᠯᠣᠬᠢ` (*tēknoloqi*) — wiktionary — “technology”
+- **тив** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%B8%D0%B2#Mongolian)
+  - `ᠲᠢᠪ` (*tiv*) — wmk-import — _unlabeled_
+  - `ᠲᠢᠢᠪ` (*tiib*) — wiktionary — “continent”
+- **тогоо** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D0%B3%D0%BE%D0%BE#Mongolian)
+  - `ᠲᠣᠭᠣᠭ᠎ᠠ` (*togoo*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠭᠤᠭ᠎ᠠ` (*toɣuɣ-a*) — wiktionary — “pot, saucepan”
+- **тогооч** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D0%B3%D0%BE%D0%BE%D1%87#Mongolian)
+  - `ᠲᠣᠭᠣᠭᠠᠴᠢ` (*togooch*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠭᠤᠭᠠᠴᠢ` (*toɣuɣači*) — wiktionary — “cook; chef”
+- **тогоруу** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D0%B3%D0%BE%D1%80%D1%83%D1%83#Mongolian)
+  - `ᠲᠣᠭᠣᠷᠤᠤ` (*togoruu*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠭᠤᠷᠤᠤ` (*toɣuruu*) — wiktionary — “crane”
+- **тогос** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D0%B3%D0%BE%D1%81#Mongolian)
+  - `ᠲᠣᠭᠣᠰ` (*togos*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠭᠤᠰ` (*toɣus*) — wiktionary — “peacock”
+- **тойрох** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D0%B9%D1%80%D0%BE%D1%85#Mongolian)
+  - `ᠲᠤᠭᠤᠷᠢᠬᠤ` (*toiroh*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠭᠤᠷᠢᠬᠤ` (*toɣuriqu*) — wiktionary — “to circle (to go around)”
+- **тойруу** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D0%B9%D1%80%D1%83%D1%83#Mongolian)
+  - `ᠲᠣᠭᠣᠷᠢᠭᠤ` (*toiruu*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠭᠤᠷᠢᠭᠤ` (*toɣuriɣu*) — wiktionary — “roundabout, indirect (road)”
+- **толгой** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D0%BB%D0%B3%D0%BE%D0%B9#Mongolian)
+  - `ᠲᠣᠯᠣᠭᠠᠢ` (*tolgoi*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠯᠤᠭᠠᠢ` (*toluɣai*) — wiktionary — “head”
+- **том** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D0%BC#Mongolian)
+  - `ᠲᠣᠮᠣ` (*tom*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠮᠤ` (*tomu*) — wiktionary — “big”
+- **томох** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D0%BC%D0%BE%D1%85#Mongolian)
+  - `ᠲᠣᠮᠣᠬᠤ` (*tomoh*) — wmk-import — _unlabeled_
+  - `ᠲᠠᠮᠤᠬᠤ` (*tamuqu*) — wiktionary — “to twist, to splice (a rope)”
+- **томсох** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D0%BC%D1%81%D0%BE%D1%85#Mongolian)
+  - `ᠲᠣᠮᠣᠰᠬᠤ` (*tomsoh*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠮᠤᠰᠬᠤ` (*tomusqu*) — wiktionary — “to grow bigger”
+- **тоос** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D0%BE%D1%81#Mongolian)
+  - `ᠲᠣᠭᠣᠰᠣ` (*toos*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠭᠤᠰᠤ` (*toɣusu*) — wiktionary — “dust”
+- **тор** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D1%80#Mongolian)
+  - `ᠲᠣᠷ` (*tor*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠣᠷ` (*toor*) — wiktionary — “net”
+- **торгох** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D1%85#Mongolian)
+  - `ᠲᠣᠷᠭᠣᠬᠤ` (*torgoh*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠷᠭᠠᠬᠤ` (*torɣaqu*) — wiktionary — “causative voice in -гох (-gox) of торох (torox, “to get stuck”)”
+- **тос** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D1%81#Mongolian)
+  - `ᠲᠣᠰ` (*tos*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠰᠤ` (*tosu*) — wiktionary — “fat, grease, oil, butter”
+- **тоть** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D1%82%D1%8C#Mongolian)
+  - `ᠲᠣᠳᠢ` (*toti*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠳ᠋ᠢ` (*todi*) — wiktionary — “parrot”
+- **тохой** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%BE%D1%85%D0%BE%D0%B9#Mongolian)
+  - `ᠲᠣᠬᠣᠢ` (*tohoi*) — wmk-import — _unlabeled_
+  - `ᠲᠣᠬᠤᠢ` (*toqui*) — wiktionary — “elbow”
+- **трамвай** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D1%80%D0%B0%D0%BC%D0%B2%D0%B0%D0%B9#Mongolian)
+  - `ᠲᠷᠠᠮᠸᠠᠢ` (*tramvai*) — wmk-import — _unlabeled_
+  - `ᠲ᠋ᠷᠠᠮᠸᠠᠢ` (*tramwai*) — wiktionary — “tram, tramway”
+- **тус** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D1%83%D1%81#Mongolian)
+  - `ᠲᠤᠰ` (*tus*) — wmk-import — _unlabeled_
+  - `ᠲᠤᠰᠠ` (*tusa*) — wiktionary — “avail, boost, help, helping, adjuvancy, aid, benefit, helping hand, succour”
+- **тусах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D1%83%D1%81%D0%B0%D1%85#Mongolian)
+  - `ᠲᠤᠰᠤᠬᠤ` (*tusah*) — wmk-import — _unlabeled_
+  - `ᠲᠤᠰᠬᠤ` (*tusqu*) — wiktionary — “to hit upon, strike, be hit”
+- **туслах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D1%83%D1%81%D0%BB%D0%B0%D1%85#Mongolian)
+  - `ᠲᠤᠰᠯᠠᠬᠤ` (*tuslah*) — wmk-import — _unlabeled_
+  - `ᠲᠤᠰᠠᠯᠠᠬᠤ` (*tusalaqu*) — wiktionary — “to help, assist, succour”
+- **тэвнэ** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D1%8D%D0%B2%D0%BD%D1%8D#Mongolian)
+  - `ᠲᠡᠪᠡᠨᠡ` (*tevne*) — wmk-import — _unlabeled_
+  - `ᠲᠡᠪᠡᠨ᠎ᠡ` (*teben-e*) — wiktionary — “a large needle for sewing leather or felt”
+- **тэг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D1%8D%D0%B3#Mongolian)
+  - `ᠲᠡᠭ` (*teg*) — wmk-import — _unlabeled_
+  - `ᠲᠡᠭᠡ` (*tege*) — wiktionary — “zero”
+- **тэд** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D1%8D%D0%B4#Mongolian)
+  - `ᠲᠡᠳᠡ` (*ted*) — wmk-import — _unlabeled_
+  - `ᠲᠡᠳ᠋ᠡ` (*tede*) — wiktionary — “they”
+- **түлхэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D2%AF%D0%BB%D1%85%D1%8D%D1%85#Mongolian)
+  - `ᠲᠦᠯᠬᠦᠬᠦ` (*tulheh*) — wmk-import — _unlabeled_
+  - `ᠲᠦᠯᠬᠢᠬᠦ` (*tülkikü*) — wiktionary — “to push”
+- **төлөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D3%A9%D0%BB%D3%A9%D1%85#Mongolian)
+  - `ᠤᠯᠭᠤᠬᠤ` (*tuluh*) — wmk-import — _unlabeled_
+  - `ᠲᠥᠯᠦᠬᠦ` (*tölükü*) — wiktionary — “to pay”
+- **төлөөлөгч** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D3%A9%D0%BB%D3%A9%D3%A9%D0%BB%D3%A9%D0%B3%D1%87#Mongolian)
+  - `ᠲᠥᠯᠥᠭᠡᠯᠡᠭᠴᠢ` (*tuluulugch*) — wmk-import — _unlabeled_
+  - `ᠲᠥᠯᠦᠭᠡᠯᠡᠭᠴᠢ` (*tölügelegči*) — wiktionary — “representative; agent”
+- **төмс** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D3%A9%D0%BC%D1%81#Mongolian)
+  - `ᠲᠥᠮᠥᠰᠥ` (*tums*) — wmk-import — _unlabeled_
+  - `ᠲᠥᠮᠦᠰᠦ` (*tömüsü*) — wiktionary — “potato”
+- **төр** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D3%A9%D1%80#Mongolian)
+  - `ᠲᠥᠷᠥ` (*tur*) — wmk-import — _unlabeled_
+  - `ᠲᠥ᠋ᠷᠦ` (*törü*) — wiktionary — “rule, order”
+- **төрх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D3%A9%D1%80%D1%85#Mongolian)
+  - `ᠲᠥᠷᠬᠥ` (*turh*) — wmk-import — _unlabeled_
+  - `ᠲᠥᠷᠬᠦ` (*törkü*) — wiktionary — “form, figure, character, personality”
+- **төсөвлөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D3%A9%D1%81%D3%A9%D0%B2%D0%BB%D3%A9%D1%85#Mongolian)
+  - `ᠲᠥᠰᠥᠪᠯᠡᠬᠦ` (*tusuvluh*) — wmk-import — _unlabeled_
+  - `ᠲᠥᠰᠦᠪᠯᠡᠬᠦ` (*tösüblekü*) — wiktionary — “to budget”
+- **угаах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%83%D0%B3%D0%B0%D0%B0%D1%85#Mongolian)
+  - `ᠤᠬᠢᠶᠠᠬᠤ` (*ugaah*) — wmk-import — _unlabeled_
+  - `ᠤᠭᠠᠬᠤ` (*uɣaqu*) — wiktionary — “to wash”
+- **уд** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%83%D0%B4#Mongolian)
+  - `ᠤᠳᠤ` (*ud*) — wmk-import — _unlabeled_
+  - `ᠤᠳᠠ` (*uda*) — wiktionary — “willow”
+- **хавцал** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B2%D1%86%D0%B0%D0%BB#Mongolian)
+  - `ᠬᠠᠪᠴᠢᠯ` (*havtsal*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠪᠴᠠᠯ` (*qabčal*) — wiktionary — “gorge, ravine”
+- **хайлмаг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B9%D0%BB%D0%BC%D0%B0%D0%B3#Mongolian)
+  - `ᠬᠠᠢᠯᠤᠮᠠᠭ` (*hailmag*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠶ᠋ᠢᠯᠤᠮᠠᠭ` (*qayilumaɣ*) — wiktionary — “molten”
+- **хайнаг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B9%D0%BD%D0%B0%D0%B3#Mongolian)
+  - `ᠬᠠᠢᠨᠤᠭ` (*hainag*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠶᠢᠨᠤᠭ` (*qayinuɣ*) — wiktionary — “dzo (yak–cow hybrid)”
+- **хайрлах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B9%D1%80%D0%BB%D0%B0%D1%85#Mongolian)
+  - `ᠬᠠᠢᠷᠠᠯᠠᠬᠤ` (*hairlah*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠶ᠋ᠢᠷᠠᠯᠠᠬᠤ` (*qayiralaqu*) — wiktionary — “to love”
+- **хайх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B9%D1%85#Mongolian)
+  - `ᠬᠠᠢᠬᠤ` (*haih*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠶᠢᠬᠤ` (*qayiqu*) — wiktionary — “to look for; to seek”
+- **хайч** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B9%D1%87#Mongolian)
+  - `ᠬᠠᠢᠴᠢ` (*haich*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠶ᠋ᠢᠴᠢ` (*qayiči*) — wiktionary — “scissors”
+- **хайчлах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B9%D1%87%D0%BB%D0%B0%D1%85#Mongolian)
+  - `ᠬᠠᠢᠴᠢᠯᠠᠬᠤ` (*haichlah*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠶ᠋ᠢᠴᠢᠯᠠᠬᠤ` (*qayičilaqu*) — wiktionary — “to cut with scissors”
+- **халдах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%BB%D0%B4%D0%B0%D1%85#Mongolian)
+  - `ᠬᠠᠯᠠᠳᠠᠬᠤ` (*haldah*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠯᠳᠠᠬᠤ` (*qaldaqu*) — wiktionary — “to near”
+- **хамар** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%BC%D0%B0%D1%80#Mongolian)
+  - `ᠬᠠᠮᠠᠷ` (*hamar*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠪᠠᠷ` (*qabar*) — wiktionary — “nose”
+- **харайх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D1%80%D0%B0%D0%B9%D1%85#Mongolian)
+  - `ᠬᠠᠷᠠᠢᠬᠤ` (*haraih*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠷᠠᠶᠢᠬᠤ` (*qarayiqu*) — wiktionary — “to leap; to jump”
+- **хариулах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D1%80%D0%B8%D1%83%D0%BB%D0%B0%D1%85#Mongolian)
+  - `ᠬᠠᠷᠢᠭᠤᠯᠬᠤ` (*hariulah*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠷᠢᠭᠤᠯᠠᠬᠤ` (*qarigulaqu*) — wiktionary — “to answer, to reciprocate”
+- **хатмал** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D1%82%D0%BC%D0%B0%D0%BB#Mongolian)
+  - `ᠬᠠᠳᠠᠮᠠᠯ` (*hatmal*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠲᠠᠮᠠᠯ` (*qatamal*) — wiktionary — “dried, dry”
+- **хачиг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D1%87%D0%B8%D0%B3#Mongolian)
+  - `ᠬᠠᠴᠢᠭ` (*hachig*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠴᠢᠬ` (*qačiq*) — wiktionary — “tick (bug)”
+- **хаяг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D1%8F%D0%B3#Mongolian)
+  - `ᠬᠠᠶᠠᠭ` (*hayag*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠶᠢᠭ` (*qayiɣ*) — wiktionary — “address”
+- **хийд** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B8%D0%B9%D0%B4#Mongolian)
+  - `ᠬᠡᠢᠳ` (*hiid*) — wmk-import — _unlabeled_
+  - `ᠬᠡᠶᠢᠳ` (*keyid*) — wiktionary — “monastery”
+- **хийлч** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B8%D0%B9%D0%BB%D1%87#Mongolian)
+  - `ᠬᠢᠯᠴᠡ` (*hiilch*) — wmk-import — _unlabeled_
+  - `ᠬᠢᠭᠢᠯᠢᠴᠢ` (*kigiliči*) — wiktionary — “violinist”
+- **хирс** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B8%D1%80%D1%81#Mongolian)
+  - `ᠬᠢᠷᠡᠰ` (*hirs*) — wmk-import — _unlabeled_
+  - `ᠬᠡᠷᠢᠰ` (*keris*) — wiktionary — “rhinoceros”
+- **хойг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%B9%D0%B3#Mongolian)
+  - `ᠬᠣᠢᠭ` (*hoig*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠶᠢᠭ` (*qoyiɣ*) — wiktionary — “peninsula”
+- **хойд** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%B9%D0%B4#Mongolian)
+  - `ᠬᠣᠢᠳ` (*hoid*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠶᠢᠳᠤ` (*qoyidu*) — wiktionary — “northward”
+- **хойно** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%B9%D0%BD%D0%BE#Mongolian)
+  - `ᠬᠣᠢᠨ᠎ᠠ` (*hoino*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠶᠢᠨ᠎ᠠ` (*qoyin-a*) — wiktionary — “behind”
+- **хойтон** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%B9%D1%82%D0%BE%D0%BD#Mongolian)
+  - `ᠬᠣᠢᠲᠤᠨ` (*hoiton*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠶᠢᠲᠣᠨ` (*qoyiton*) — wiktionary — “next year”
+- **холбоо** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%BB%D0%B1%D0%BE%D0%BE#Mongolian)
+  - `ᠬᠣᠯᠪᠣᠭ᠎ᠠ` (*holboo*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠯᠪᠤᠭ᠎ᠠ` (*qolbuɣ-a*) — wiktionary — “connection, link”
+- **холбоос** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%BB%D0%B1%D0%BE%D0%BE%D1%81#Mongolian)
+  - `ᠬᠣᠯᠪᠣᠭᠠᠰᠤ` (*holboos*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠯᠪᠤᠭᠠᠰᠤ` (*qolbuɣasu*) — wiktionary — “conjugation”
+- **холилдох** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%BB%D0%B8%D0%BB%D0%B4%D0%BE%D1%85#Mongolian)
+  - `ᠬᠤᠯᠢᠯᠳᠤᠭᠤᠯᠬᠤ` (*holildoh*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠯᠢᠯᠳᠤᠬᠤ` (*qolilduqu*) — wiktionary — “to mix, blend, be mixed”
+- **холих** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%BB%D0%B8%D1%85#Mongolian)
+  - `ᠬᠤᠯᠢᠬᠤ` (*holih*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠯᠢᠬᠤ` (*qoliqu*) — wiktionary — “to mix, shuffle, stir, adulterate”
+- **хоног** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%BD%D0%BE%D0%B3#Mongolian)
+  - `ᠬᠣᠨᠣᠭ` (*honog*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠨᠤᠭ` (*qonuɣ*) — wiktionary — “day”
+- **хонох** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%BD%D0%BE%D1%85#Mongolian)
+  - `ᠬᠤᠨᠤᠬᠤ` (*honoh*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠨᠤᠬᠤ` (*qonuqu*) — wiktionary — “To stay the night”
+- **хооронд** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%BE%D1%80%D0%BE%D0%BD%D0%B4#Mongolian)
+  - `ᠬᠣᠭᠣᠷᠣᠨᠳᠣ` (*hoorond*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠭᠤᠷᠤᠨᠳᠤ` (*qoɣurundu*) — wiktionary — “between”
+- **хор** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D1%80#Mongolian)
+  - `ᠬᠣᠣᠷ` (*hor*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠣᠷ᠎ᠠ` (*qoor-a*) — wiktionary — “poison”
+- **хорсох** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D1%80%D1%81%D0%BE%D1%85#Mongolian)
+  - `ᠬᠤᠷᠤᠰᠬᠤ` (*horsoh*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠷᠤᠰᠬᠤ` (*qorusqu*) — wiktionary — “to burn, to sting”
+- **хорхой** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D1%80%D1%85%D0%BE%D0%B9#Mongolian)
+  - `ᠬᠣᠷᠣᠬᠠᠢ` (*horhoi*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠷᠤᠬᠠᠢ` (*qoruqai*) — wiktionary — “maggot, insect, bug”
+- **хотон** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D1%82%D0%BE%D0%BD#Mongolian)
+  - `ᠬᠣᠲᠠᠨ` (*hoton*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠲᠤᠩ` (*qotung*) — wiktionary — “Muslim peoples”
+- **хоцрогдол** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D1%86%D1%80%D0%BE%D0%B3%D0%B4%D0%BE%D0%BB#Mongolian)
+  - `ᠬᠣᠴᠣᠷᠤᠭᠳᠠᠯ` (*hotsrogdol*) — wmk-import — _unlabeled_
+  - `ᠬᠣᠴᠤᠷᠤᠭᠳᠠᠯ` (*qočuruɣdal*) — wiktionary — “arrearage, hangover”
+- **хуасан** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D0%B0%D1%81%D0%B0%D0%BD#Mongolian)
+  - `ᠬᠤᠸᠠᠱᠧᠩ` (*huasan*) — wmk-import — _unlabeled_
+  - `ᠬᠤᠸᠠᠰᠠᠩ` (*quwasang*) — wiktionary — “peanut”
+- **хув** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D0%B2#Mongolian)
+  - `ᠬᠤᠪ` (*huv*) — wmk-import — _unlabeled_
+  - `ᠬᠤᠪᠠ` (*quba*) — wiktionary — “amber”
+- **хуванцар** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D0%B2%D0%B0%D0%BD%D1%86%D0%B0%D1%80#Mongolian)
+  - `ᠬᠤᠪᠠᠨᠴᠠᠷ` (*huvantsar*) — wmk-import — _unlabeled_
+  - `ᠬᠤᠪᠠᠨᠴᠢᠷ` (*qubančir*) — wiktionary — “plastic”
+- **худалдах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D0%B4%D0%B0%D0%BB%D0%B4%D0%B0%D1%85#Mongolian)
+  - `ᠬᠤᠳᠠᠯᠳᠤᠭᠠᠴᠢᠯᠠᠬᠤ` (*hudaldah*) — wmk-import — _unlabeled_
+  - `ᠬᠤᠳᠠᠯᠳᠤᠬᠤ` (*qudalduqu*) — wiktionary — “to trade”
+- **хулгайч** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D0%BB%D0%B3%D0%B0%D0%B9%D1%87#Mongolian)
+  - `ᠬᠤᠯᠠᠭᠠᠢᠴᠢ` (*hulgaich*) — wmk-import — _unlabeled_
+  - `ᠬᠤᠯᠠᠭᠠᠶᠢᠴᠢ` (*qulaɣayiči*) — wiktionary — “thief”
+- **хулгах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D0%BB%D0%B3%D0%B0%D1%85#Mongolian)
+  - `ᠬᠤᠯᠭᠠᠬᠤ` (*hulgah*) — wmk-import — _unlabeled_
+  - `ᠬᠤᠯᠤᠭᠠᠬᠤ` (*qulugaqu*) — wiktionary — “to steal; to rob”
+- **хулхи** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D0%BB%D1%85%D0%B8#Mongolian)
+  - `ᠬᠤᠯᠬᠢ` (*hulhi*) — wmk-import — _unlabeled_
+  - `ᠬᠤᠯᠢᠬᠢ` (*quliqi*) — wiktionary — “earwax”
+- **хуруу** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D1%80%D1%83%D1%83#Mongolian)
+  - `ᠬᠤᠷᠤᠤ` (*huruu*) — wmk-import — _unlabeled_
+  - `ᠬᠤᠷᠤᠭᠤ` (*quruɣu*) — wiktionary — “finger”
+- **хутгалдах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D1%82%D0%B3%D0%B0%D0%BB%D0%B4%D0%B0%D1%85#Mongolian)
+  - `ᠬᠤᠳᠭᠤᠯᠳᠤᠬᠤ` (*hutgaldah*) — wmk-import — _unlabeled_
+  - `ᠬᠤᠳᠬᠤᠯᠳᠤᠬᠤ` (*qudkulduqu*) — wiktionary — “to mix, mingle, scramble”
+- **хуурга** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D1%83%D1%80%D0%B3%D0%B0#Mongolian)
+  - `ᠬᠤᠤᠷᠭ᠎ᠠ` (*huurga*) — wmk-import — _unlabeled_
+  - `ᠬᠠᠭᠤᠷᠭ᠎ᠠ` (*qagurɣ-a*) — wiktionary — “stew, huurga (dish prepared by frying or simmering)”
+- **хэрэм** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%8D%D1%80%D1%8D%D0%BC#Mongolian)
+  - `ᠬᠡᠷᠡᠮ` (*herem*) — wmk-import — _unlabeled_
+  - `ᠬᠡᠷᠡᠮᠦ` (*keremü*) — wiktionary — “squirrel”
+- **хүдэр** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D2%AF%D0%B4%D1%8D%D1%80#Mongolian)
+  - `ᠬᠥᠳᠡᠷᠢ` (*huder*) — wmk-import — _unlabeled_
+  - `ᠬᠦᠳᠡᠷᠢ` (*küderi*) — wiktionary — “musk deer”
+- **хүзүү** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D2%AF%D0%B7%D2%AF%D2%AF#Mongolian)
+  - `ᠬᠥᠵᠦᠭᠦᠦ` (*huzuu*) — wmk-import — _unlabeled_
+  - `ᠬᠦᠵᠦᠭᠦᠦ` (*küǰügüü*) — wiktionary — “neck (of a person, of a bottle...)”
+- **хүрд** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D2%AF%D1%80%D0%B4#Mongolian)
+  - `ᠬᠦᠷᠳ᠋` (*hurd*) — wmk-import — _unlabeled_
+  - `ᠬᠦᠷᠳᠦ` (*kürdü*) — wiktionary — “wheel”
+- **хүртэл** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D2%AF%D1%80%D1%82%D1%8D%D0%BB#Mongolian)
+  - `ᠬᠦᠷᠲᠡᠯ᠎ᠡ` (*hurtel*) — wmk-import — _unlabeled_
+  - `ᠬᠦᠷᠲᠡᠯ` (*kürtel*) — wiktionary — “until”
+- **хүрэм** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D2%AF%D1%80%D1%8D%D0%BC#Mongolian)
+  - `ᠬᠦᠷᠮ᠎ᠡ` (*hurem*) — wmk-import — _unlabeled_
+  - `ᡴᡥᡠᡵᡝᠮ` — wiktionary — “jacket”
+- **хүрэн** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D2%AF%D1%80%D1%8D%D0%BD#Mongolian)
+  - `ᠬᠦᠷᠢᠨ` (*huren*) — wmk-import — _unlabeled_
+  - `ᠬᠦᠷᠡᠩ` (*küreng*) — wiktionary — “brown, chestnut”
+- **хүрээ** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D2%AF%D1%80%D1%8D%D1%8D#Mongolian)
+  - `ᠬᠦᠷ᠎ᠡ` (*huree*) — wmk-import — _unlabeled_
+  - `ᠬᠦᠷᠢᠶ᠎ᠡ` (*küriy-e*) — wiktionary — “enclosure”
+- **хүчил** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D2%AF%D1%87%D0%B8%D0%BB#Mongolian)
+  - `ᠬᠦᠴᠦᠯᠡ` (*huchil*) — wmk-import — _unlabeled_
+  - `ᠬᠦᠴᠢᠯ` (*küčil*) — wiktionary — “acid”
+- **хөвүүн** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D0%B2%D2%AF%D2%AF%D0%BD#Mongolian)
+  - `ᠬᠥᠪᠡᠭᠦᠨ` (*huvuun*) — wmk-import — _unlabeled_
+  - `ᠬᠥ᠋ᠪᠡᠭᠦᠨ` (*köbegün*) — wiktionary — “child”
+- **хөвөн** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D0%B2%D3%A9%D0%BD#Mongolian)
+  - `ᠬᠥᠪᠥᠨ` (*huvun*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠪᠦᠩ` (*köbüng*) — wiktionary — “cotton”
+- **хөгжим** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D0%B3%D0%B6%D0%B8%D0%BC#Mongolian)
+  - `ᠬᠥᠭᠵᠢᠮ᠎ᠡ` (*hugjim*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠭᠵᠢᠮ` (*kögǰim*) — wiktionary — “music”
+- **хөзөр** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D0%B7%D3%A9%D1%80#Mongolian)
+  - `ᠬᠥᠵᠥᠷ` (*huzur*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠵᠦᠷ` (*köǰür*) — wiktionary — “playing card”
+- **хөлрөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D0%BB%D1%80%D3%A9%D1%85#Mongolian)
+  - `ᠬᠥᠯᠥᠷᠡᠬᠦ` (*hulruh*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠯᠦᠷᠡᠬᠦ` (*kölürekü*) — wiktionary — “to sweat, chafe, perspire”
+- **хөлс** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D0%BB%D1%81#Mongolian)
+  - `ᠬᠥᠯᠰᠡ` (*huls*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠯᠦᠰᠦ` (*kölüsü*) — wiktionary — “perspiration”
+- **хөлөг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D0%BB%D3%A9%D0%B3#Mongolian)
+  - `ᠬᠥᠯᠥᠭ` (*hulug*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠯᠭᠡ` (*kölge*) — wiktionary — “ship; vessel”
+- **хөмрөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D0%BC%D1%80%D3%A9%D1%85#Mongolian)
+  - `ᠬᠥᠮᠥᠷᠢᠬᠦ` (*humruh*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠮᠦᠷᠢᠬᠦ` (*kömürikü*) — wiktionary — “to turn over”
+- **хөнөг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D0%BD%D3%A9%D0%B3#Mongolian)
+  - `ᠬᠥᠨᠥᠭ` (*hunug*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠨᠦᠭ` (*könüg*) — wiktionary — “bucket”
+- **хөрс** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D1%80%D1%81#Mongolian)
+  - `ᠬᠥᠷᠦᠰ` (*hurs*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠷᠦᠰᠦ` (*körüsü*) — wiktionary — “dirt, turf”
+- **хөрөг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D1%80%D3%A9%D0%B3#Mongolian)
+  - `ᠬᠥᠷᠥᠭ` (*hurug*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠷᠦᠭ` (*körüg*) — wiktionary — “portrait”
+- **хөтөлбөр** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D1%82%D3%A9%D0%BB%D0%B1%D3%A9%D1%80#Mongolian)
+  - `ᠬᠥᠲᠥᠯᠪᠦᠷᠢ` (*hutulbur*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠲᠦᠯᠪᠦᠷᠢ` (*kötülbüri*) — wiktionary — “program (set of structured activities)”
+- **хөхүүр** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D1%85%D2%AF%D2%AF%D1%80#Mongolian)
+  - `ᠬᠥᠬᠥᠥᠷ` (*huhuur*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠬᠦᠦᠷ` (*köküür*) — wiktionary — “a leather bag for holding liquid (usually used for fermenting dairy products)…”
+- **хөших** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D1%88%D0%B8%D1%85#Mongolian)
+  - `ᠬᠥᠰᠢᠬᠦ` (*hushih*) — wmk-import — _unlabeled_
+  - `ᠬᠥ᠊ᠰ᠊ᠢ᠊ᠬᠥ` (*kö-s-i-kö*) — wiktionary — “to become stiff”
+- **хөөрөг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D3%A9%D1%80%D3%A9%D0%B3#Mongolian)
+  - `ᠬᠥᠭᠡᠷᠭᠡ` (*huurug*) — wmk-import — _unlabeled_
+  - `ᠭᠦᠭᠦᠷᠭᠡ` (*gügürge*) — wiktionary — “bridge”
+- **хөөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D3%A9%D1%85#Mongolian)
+  - `ᠬᠥᠭᠡᠬᠦ` (*huuh*) — wmk-import — _unlabeled_
+  - `ᠬᠥᠭᠡᠭᠡᠬᠦ` (*kögegekü*) — wiktionary — “to swell”
+- **цайз** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D0%B0%D0%B9%D0%B7#Mongolian)
+  - `ᠴᠠᠢᠵᠠ` (*tsaiz*) — wmk-import — _unlabeled_
+  - `ᠴᠠᠶᠢᠵᠠ` (*čayiǰa*) — wiktionary — “castle”
+- **цайр** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D0%B0%D0%B9%D1%80#Mongolian)
+  - `ᠴᠠᠢᠷ` (*tsair*) — wmk-import — _unlabeled_
+  - `ᠴᠠᠶᠢᠷ` (*čayir*) — wiktionary — “zinc”
+- **царцаа** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D0%B0%D1%80%D1%86%D0%B0%D0%B0#Mongolian)
+  - `ᠴᠠᠷᠴᠠᠭ᠎ᠠ` (*tsartsaa*) — wmk-import — _unlabeled_
+  - `ᠴᠠᠷᠴᠠ` (*čarča*) — wiktionary — “grasshopper”
+- **цирк** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D0%B8%D1%80%D0%BA#Mongolian)
+  - `ᠼᠢᠷᠺ` (*tsirk*) — wmk-import — _unlabeled_
+  - `ᠼᠢᠷᠻ` (*cirk*) — wiktionary — “circus”
+- **цомог** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D0%BE%D0%BC%D0%BE%D0%B3#Mongolian)
+  - `ᠴᠣᠮᠣᠭ` (*tsomog*) — wmk-import — _unlabeled_
+  - `ᠴᠣᠮᠤᠭ` (*čomuɣ*) — wiktionary — “album”
+- **цох** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D0%BE%D1%85#Mongolian)
+  - `ᠴᠣᠬᠣ` (*tsoh*) — wmk-import — _unlabeled_
+  - `ᠴᠣᠬᠤ` (*čoqu*) — wiktionary — “beetle”
+- **цэнхэр** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D1%8D%D0%BD%D1%85%D1%8D%D1%80#Mongolian)
+  - `ᠴᠡᠩᠬᠡᠷ` (*tsenher*) — wmk-import — _unlabeled_
+  - `ᠴᠠᠩᠭᠡ᠊ᠷ` (*čangɣe-r*) — wiktionary — “light blue”
+- **цэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D1%8D%D1%85#Mongolian)
+  - `ᠴᠡᠬᠡ` (*tseh*) — wmk-import — _unlabeled_
+  - `ᠴᠠᠭᠡᠡ᠋` (*čaɣee*) — wiktionary — “straight (not curved or sideways)”
+- **цөм** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D3%A9%D0%BC#Mongolian)
+  - `ᠴᠥᠮ` (*tsum*) — wmk-import — _unlabeled_
+  - `ᠴᠥᠮᠡ` (*čöme*) — wiktionary — “nucleus; kernel; core”
+- **цөцгий** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D3%A9%D1%86%D0%B3%D0%B8%D0%B9#Mongolian)
+  - `ᠴᠥᠴᠥᠭᠡᠢ` (*tsutsgii*) — wmk-import — _unlabeled_
+  - `ᠴᠥᠴᠦᠭᠡᠢ` (*čöčügei*) — wiktionary — “cream (from raw or boiled milk)”
+- **чек** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%87%D0%B5%D0%BA#Mongolian)
+  - `ᠴᠧᠺ` (*chyek*) — wmk-import — _unlabeled_
+  - `ᠴᠧᠻ` (*čēk*) — wiktionary — “check/cheque”
+- **чинийх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%87%D0%B8%D0%BD%D0%B8%D0%B9%D1%85#Mongolian)
+  - `ᠴᠢᠨᠤᠬᠢ` (*chiniih*) — wmk-import — _unlabeled_
+  - `ᠴᠢᠨ᠋ᠤᠬᠢ` (*činuqi*) — wiktionary — “yours”
+- **чирэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%87%D0%B8%D1%80%D1%8D%D1%85#Mongolian)
+  - `ᠴᠢᠷᠦᠬᠦ` (*chireh*) — wmk-import — _unlabeled_
+  - `ᠴᠢᠷᠬᠦ` (*čirkü*) — wiktionary — “to drag”
+- **шавьж** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D0%B0%D0%B2%D1%8C%D0%B6#Mongolian)
+  - `ᠰᠢᠪᠠᠵᠢ` (*shavij*) — wmk-import — _unlabeled_
+  - `ᠰᠢᠪᠡᠵᠢ` (*sibeǰi*) — wiktionary — “insect, bug”
+- **шал** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D0%B0%D0%BB#Mongolian)
+  - `ᠱᠠᠯ` (*shal*) — wmk-import — _unlabeled_
+  - `ᠱᠠᠯᠠ` (*šala*) — wiktionary — “floor (bottom part of a room)”
+- **шил** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D0%B8%D0%BB#Mongolian)
+  - `ᠰᠢᠯᠢ` (*shil*) — wmk-import — _unlabeled_
+  - `ᠰᠢᠯ` (*sil*) — wiktionary — “glass”
+- **шинэс** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D0%B8%D0%BD%D1%8D%D1%81#Mongolian)
+  - `ᠰᠢᠨᠡᠰ` (*shines*) — wmk-import — _unlabeled_
+  - `ᠰᠢᠨᠠᠰᠣ` (*sinaso*) — wiktionary — “larch (Larix)”
+- **шодой** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D0%BE%D0%B4%D0%BE%D0%B9#Mongolian)
+  - `ᠱᠣᠳᠣᠢ` (*shodoi*) — wmk-import — _unlabeled_
+  - `ᠱᠣᠳᠤᠢ` (*šodui*) — wiktionary — “penis”
+- **шонхор** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D0%BE%D0%BD%D1%85%D0%BE%D1%80#Mongolian)
+  - `ᠱᠣᠩᠬᠣᠷ` (*shonhor*) — wmk-import — _unlabeled_
+  - `ᠱᠣᠩᠬᠤᠷ` (*šongqur*) — wiktionary — “falcon”
+- **шоо** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D0%BE%D0%BE#Mongolian)
+  - `ᠱᠣᠣ` (*shoo*) — wmk-import — _unlabeled_
+  - `ᠱᠣ` (*šo*) — wiktionary — “die, dice”
+- **шорон** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D0%BE%D1%80%D0%BE%D0%BD#Mongolian)
+  - `ᠱᠣᠷᠣᠩ` (*shoron*) — wmk-import — _unlabeled_
+  - `ᠱᠣᠷᠤᠩ` (*šorung*) — wiktionary — “prison; jail, gaol”
+- **шороо** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D0%BE%D1%80%D0%BE%D0%BE#Mongolian)
+  - `ᠰᠢᠷᠣᠢ` (*shoroo*) — wmk-import — _unlabeled_
+  - `ᠰᠢᠷᠤᠢ` (*sirui*) — wiktionary — “soil”
+- **шохой** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D0%BE%D1%85%D0%BE%D0%B9#Mongolian)
+  - `ᠱᠣᠬᠣᠢ` (*shohoi*) — wmk-import — _unlabeled_
+  - `ᠴᠣᠬᠤ` (*čoqu*) — wiktionary — “lime”
+- **шүүр** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D2%AF%D2%AF%D1%80#Mongolian)
+  - `ᠰᠢᠭᠦᠷ` (*shuur*) — wmk-import — _unlabeled_
+  - `ᠱᠦᠭᠦᠷ` (*šügür*) — wiktionary — “broom”
+- **шүүрдэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D2%AF%D2%AF%D1%80%D0%B4%D1%8D%D1%85#Mongolian)
+  - `ᠱᠤᠤᠷᠳᠠᠬᠤ` (*shuurdeh*) — wmk-import — _unlabeled_
+  - `ᠱᠦᠭᠦᠷᠳᠡᠬᠦ` (*šügürdekü*) — wiktionary — “to sweep (to clean using a broom or brush)”
+- **шөл** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%88%D3%A9%D0%BB#Mongolian)
+  - `ᠱᠥᠯᠥ` (*shul*) — wmk-import — _unlabeled_
+  - `ᠱᠥᠯᠦ` (*šölü*) — wiktionary — “soup”
+- **эгэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8D%D0%B3%D1%8D%D1%85#Mongolian)
+  - `ᠡᠭᠡᠬᠦ` (*egeh*) — wmk-import — _unlabeled_
+  - `ᠡᠭᠡᠬᠥ` (*egekö*) — wiktionary — “to return”
+- **эдгээр** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8D%D0%B4%D0%B3%D1%8D%D1%8D%D1%80#Mongolian)
+  - `ᠡᠳᠡᠭᠡᠷ` (*edgeer*) — wmk-import — _unlabeled_
+  - `ᠡᠳ᠋ᠡᠭᠡᠷ` (*edeger*) — wiktionary — “these”
+- **энд** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8D%D0%BD%D0%B4#Mongolian)
+  - `ᠡᠨᠳᠡ` (*end*) — wmk-import — _unlabeled_
+  - `ᠡᠨᠳ᠋ᠡ` (*ende*) — wiktionary — “here, herein, herewith, hereinto, there, therein”
+- **эрхийвч** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8D%D1%80%D1%85%D0%B8%D0%B9%D0%B2%D1%87#Mongolian)
+  - `ᠡᠷᠡᠬᠡᠢᠪᠴᠢ` (*erhiivch*) — wmk-import — _unlabeled_
+  - `ᠡᠷᠡᠬᠡᠶᠢᠪᠴᠢ` (*erekeyibči*) — wiktionary — “thumb ring”
+- **яаж** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8F%D0%B0%D0%B6#Mongolian)
+  - `ᠶᠠᠵ` (*yaj*) — wmk-import — _unlabeled_
+  - `ᠶᠠᠭᠠᠭᠢᠵᠤ` (*yaɣaɣiǰu*) — wiktionary — “how”
+- **янгир** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8F%D0%BD%D0%B3%D0%B8%D1%80#Mongolian)
+  - `ᠶᠠᠩᠭᠢᠷ` (*yangir*) — wmk-import — _unlabeled_
+  - `ᠶᠡᠩᢉᠢᠷ` — wiktionary — “mountain goat”
+- **яндан** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8F%D0%BD%D0%B4%D0%B0%D0%BD#Mongolian)
+  - `ᠶᠠᠨᠳᠠᠨ` (*yandan*) — wmk-import — _unlabeled_
+  - `ᠶᠠᠩᠳᠤᠩ` (*yangdung*) — wiktionary — “chimney, whistle, horn”
+- **ёл** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%91%D0%BB#Mongolian)
+  - `ᠶᠣᠯᠣ` (*yol*) — wmk-import — _unlabeled_
+  - `ᠶᠣᠯᠤ` (*yolu*) — wiktionary — “lammergeier, lammergeyer”
+- **ёс** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%91%D1%81#Mongolian)
+  - `ᠶᠣᠰᠣ` (*yos*) — wmk-import — _unlabeled_
+  - `ᠶᠣᠰᠤ` (*yosu*) — wiktionary — “customs, traditions, etiquette, legislation, habit, formality”
+- **үлээх** — [Wiktionary](https://en.wiktionary.org/wiki/%D2%AF%D0%BB%D1%8D%D1%8D%D1%85#Mongolian)
+  - `ᠦᠯᠡᠭᠡᠬᠦ` (*uleeh*) — wmk-import — _unlabeled_
+  - `ᠦᠯᠢᠶᠡᠬᠦ` (*üliyekü*) — wiktionary — “to blow (of persons, wind)”
+- **үтрээ** — [Wiktionary](https://en.wiktionary.org/wiki/%D2%AF%D1%82%D1%80%D1%8D%D1%8D#Mongolian)
+  - `ᠦᠲᠦᠷᠢᠶ᠎ᠡ` (*utree*) — wmk-import — _unlabeled_
+  - `ᠦᠲᠦᠷᠦᠭᠡ` (*ütürüge*) — wiktionary — “vagina”
+- **үүр** — [Wiktionary](https://en.wiktionary.org/wiki/%D2%AF%D2%AF%D1%80#Mongolian)
+  - `ᠦᠦᠷ` (*uur*) — wmk-import — _unlabeled_
+  - `ᠡᠭᠦᠷ` (*egür*) — wiktionary — “nest”
+- **үүргэвч** — [Wiktionary](https://en.wiktionary.org/wiki/%D2%AF%D2%AF%D1%80%D0%B3%D1%8D%D0%B2%D1%87#Mongolian)
+  - `ᠡᠭᠦᠷᠭᠡᠪᠡᠴᠦ` (*uurgevch*) — wmk-import — _unlabeled_
+  - `ᠡᠭᠦᠷᠭᠡᠪᠴᠢ` (*egürgebči*) — wiktionary — “backpack”
+- **өвөөлж** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D0%B2%D3%A9%D3%A9%D0%BB%D0%B6#Mongolian)
+  - `ᠥᠪᠥᠭᠡᠯᠵᠢ` (*uvuulj*) — wmk-import — _unlabeled_
+  - `ᠡᠣ᠊᠊ᠢ᠊ᠪᠤᠭᠡ᠊ᠯ᠊ᠵ᠊ᠢ` (*eo--i-buɣe-l-ǰ-i*) — wiktionary — “hoopoe”
+- **өглөө** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D0%B3%D0%BB%D3%A9%D3%A9#Mongolian)
+  - `ᠥᠷᠯᠥᠭᠡ` (*ugluu*) — wmk-import — _unlabeled_
+  - `ᠥᠷᠯᠦᠭᠡ` (*örlüge*) — wiktionary — “morning”
+- **өд** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D0%B4#Mongolian)
+  - `ᠥᠳᠥ` (*ud*) — wmk-import — _unlabeled_
+  - `ᠥᠳᠦ` (*ödü*) — wiktionary — “feather”
+- **өлгөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D0%BB%D0%B3%D3%A9%D1%85#Mongolian)
+  - `ᠡᠯᠭᠥᠬᠦ` (*ulguh*) — wmk-import — _unlabeled_
+  - `ᠥᠯᠢᠭᠡᠬᠦ` (*öligekü*) — wiktionary — “to hang, to suspend”
+- **өлсгөлөн** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D0%BB%D1%81%D0%B3%D3%A9%D0%BB%D3%A9%D0%BD#Mongolian)
+  - `ᠥᠯᠥᠰᠬᠦᠯᠡᠩ` (*ulsgulun*) — wmk-import — _unlabeled_
+  - `ᠥᠯᠦᠰᠬᠦᠯᠡᠩ` (*ölüsküleng*) — wiktionary — “hunger”
+- **өлсөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D0%BB%D1%81%D3%A9%D1%85#Mongolian)
+  - `ᠥᠯᠥᠰᠬᠦ` (*ulsuh*) — wmk-import — _unlabeled_
+  - `ᠥᠯᠦᠰᠬᠦ` (*ölüskü*) — wiktionary — “to be hungry”
+- **өлөн** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D0%BB%D3%A9%D0%BD#Mongolian)
+  - `ᠥᠯᠥᠨ` (*ulun*) — wmk-import — _unlabeled_
+  - `ᠥᠯᠦᠨ` (*ölün*) — wiktionary — “hungry”
+- **өмд** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D0%BC%D0%B4#Mongolian)
+  - `ᠥᠮᠥᠳᠥ` (*umd*) — wmk-import — _unlabeled_
+  - `ᠥᠮᠦᠳᠦ` (*ömüdü*) — wiktionary — “breeches, pantaloon, pants, slacks, trousers”
+- **өмсөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D0%BC%D1%81%D3%A9%D1%85#Mongolian)
+  - `ᠡᠮᠥᠰᠬᠦ` (*umsuh*) — wmk-import — _unlabeled_
+  - `ᠡᠮᠦᠰᠬᠦ` (*emüskü*) — wiktionary — “to wear, put on (clothes).”
+- **өнцөг** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D0%BD%D1%86%D3%A9%D0%B3#Mongolian)
+  - `ᠥᠨᠴᠥᠭ` (*untsug*) — wmk-import — _unlabeled_
+  - `ᠥᠨᠴᠦᠭ` (*önčüg*) — wiktionary — “angle”
+- **өнчин** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D0%BD%D1%87%D0%B8%D0%BD#Mongolian)
+  - `ᠥᠨᠥᠴᠢᠨ` (*unchin*) — wmk-import — _unlabeled_
+  - `ᠥᠨᠦᠴᠢᠨ` (*önüčin*) — wiktionary — “orphan (a person or an animal whose parents have died or are otherwise…”
+- **өр** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D1%80#Mongolian)
+  - `ᠥᠷᠥ` (*ur*) — wmk-import — _unlabeled_
+  - `ᠥᠷᠢ` (*öri*) — wiktionary — “debt”
+- **өргөдөл** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D1%80%D0%B3%D3%A9%D0%B4%D3%A9%D0%BB#Mongolian)
+  - `ᠡᠷᠭᠦᠳᠡᠯ` (*urgudul*) — wmk-import — _unlabeled_
+  - `ᠡᠷᠭᠤᠳᠡᠯ` (*erɣudel*) — wiktionary — “application, request, claim, petition”
+- **өрөм** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D1%80%D3%A9%D0%BC#Mongolian)
+  - `ᠥᠷᠥᠮ᠎ᠡ` (*urum*) — wmk-import — _unlabeled_
+  - `ᠥᠷᠦᠮ᠎ᠡ` (*örüm-e*) — wiktionary — “clotted cream (from boiled milk)”
+  - `ᠥᠷᠦᠮ` (*örüm*) — wiktionary — “drill”
+- **өрөө** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D1%80%D3%A9%D3%A9#Mongolian)
+  - `ᠥᠷᠥᠭᠡ` (*uruu*) — wmk-import — _unlabeled_
+  - `ᠥᠷᠦᠭᠡ` (*örüge*) — wiktionary — “room”
+  - `ᠡᠷᠦᠭᠡ` (*erüge*) — wiktionary — “room”
+- **өт** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D1%82#Mongolian)
+  - `ᠥᠲᠥ` (*ut*) — wmk-import — _unlabeled_
+  - `ᠥᠲᠦ` (*ötü*) — wiktionary — “worm, maggot”
+- **өчигдөр** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D1%87%D0%B8%D0%B3%D0%B4%D3%A9%D1%80#Mongolian)
+  - `ᠥᠴᠥᠭᠡᠳᠦᠷ` (*uchigdur*) — wmk-import — _unlabeled_
+  - `ᠥᠴᠦᠭᠡᠳᠦᠷ` (*öčügedür*) — wiktionary — “yesterday”
+- **өчүүхэн** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D1%87%D2%AF%D2%AF%D1%85%D1%8D%D0%BD#Mongolian)
+  - `ᠥᠴᠥᠬᠡᠨ` (*uchuuhen*) — wmk-import — _unlabeled_
+  - `ᠥᠴᠦᠬᠡᠨ` (*öčüken*) — wiktionary — “tiny, little”
+- **өөрчлөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A9%D3%A9%D1%80%D1%87%D0%BB%D3%A9%D1%85#Mongolian)
+  - `ᠥᠪᠡᠷᠡᠴᠢᠯᠡᠬᠦ` (*uurchluh*) — wmk-import — _unlabeled_
+  - `ᠥᠭᠡᠷᠡᠴᠢᠯᠡᠬᠦ` (*ögerečilekü*) — wiktionary — “to alter, to transform”
+
+### Forms that could not be imported automatically (33)
+
+Each needs a human decision (the stated reason says why the machine refused):
+
+- `-вч` — Wiktionary gives `ᠪᠴᠢ` — no English gloss to use as the required sense label — [Wiktionary](https://en.wiktionary.org/wiki/-%D0%B2%D1%87#Mongolian)
+- `-лаг` — Wiktionary gives `ᠯᠢᠭ` — no English gloss to use as the required sense label — [Wiktionary](https://en.wiktionary.org/wiki/-%D0%BB%D0%B0%D0%B3#Mongolian)
+- `-хай` — Wiktionary gives `ᠬᠠᠶ` — no English gloss to use as the required sense label — [Wiktionary](https://en.wiktionary.org/wiki/-%D1%85%D0%B0%D0%B9#Mongolian)
+- `-цах` — Wiktionary gives `ᠴᠠᠬᠤ` — no English gloss to use as the required sense label — [Wiktionary](https://en.wiktionary.org/wiki/-%D1%86%D0%B0%D1%85#Mongolian)
+- `авд` — Wiktionary gives `ᠠᠪᠠ ᠳᠤ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B2%D0%B4#Mongolian)
+- `аймгийн` — Wiktionary gives `ᠠᠶ᠋ᠢᠮᠠᠭ ᠤᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B9%D0%BC%D0%B3%D0%B8%D0%B9%D0%BD#Mongolian)
+- `анхны` — Wiktionary gives `ᠠᠩᠬᠠᠨ ᠤ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BD%D1%85%D0%BD%D1%8B#Mongolian)
+- `африкаанс` — Wiktionary gives `ᠠᠹᠷᠢᠺᠠ ᠪᠠᠨᠨᠰ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D1%84%D1%80%D0%B8%D0%BA%D0%B0%D0%B0%D0%BD%D1%81#Mongolian)
+- `булгийн` — Wiktionary gives `ᠪᠤᠯᠠᠭ ᠤᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D1%83%D0%BB%D0%B3%D0%B8%D0%B9%D0%BD#Mongolian)
+- `дэлхийн` — Wiktionary gives `ᠳᠡᠯᠡᠬᠡᠢ ᠶᠢᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D1%8D%D0%BB%D1%85%D0%B8%D0%B9%D0%BD#Mongolian)
+- `заримдаа` — Wiktionary gives `ᠵᠠᠷᠢᠮ ᠳᠠᠭᠠᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%B0%D1%80%D0%B8%D0%BC%D0%B4%D0%B0%D0%B0#Mongolian)
+- `зоригоор` — Wiktionary gives `ᠵᠣᠷᠢᠭ ᠢᠶᠠᠷ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%BE%D1%80%D0%B8%D0%B3%D0%BE%D0%BE%D1%80#Mongolian)
+- `кинотеатр` — Wiktionary gives `ᠻᠢᠨᠣ ᠲᠢᠶᠠᠲ᠋ᠷ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BA%D0%B8%D0%BD%D0%BE%D1%82%D0%B5%D0%B0%D1%82%D1%80#Mongolian)
+- `манайх` — Wiktionary gives `ᠮᠠᠨ ᠤ ᠬᠢ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%B0%D0%BD%D0%B0%D0%B9%D1%85#Mongolian)
+- `монголчуудаас` — Wiktionary gives `ᠮᠣᠩᠭᠣᠯᠴᠤᠳ ᠠᠴᠠ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB%D1%87%D1%83%D1%83%D0%B4%D0%B0%D0%B0%D1%81#Mongolian)
+- `монголчуудад` — Wiktionary gives `ᠮᠣᠩᠭᠣᠯᠴᠤᠳ ᠳ᠋ᠤ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB%D1%87%D1%83%D1%83%D0%B4%D0%B0%D0%B4#Mongolian)
+- `монголчуудтай` — Wiktionary gives `ᠮᠣᠩᠭᠣᠯᠴᠤᠳ ᠲᠠᠢ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB%D1%87%D1%83%D1%83%D0%B4%D1%82%D0%B0%D0%B9#Mongolian)
+- `монголчуудыг` — Wiktionary gives `ᠮᠣᠩᠭᠣᠯᠴᠤᠳ ᠢ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB%D1%87%D1%83%D1%83%D0%B4%D1%8B%D0%B3#Mongolian)
+- `монголчуудын` — Wiktionary gives `ᠮᠣᠩᠭᠣᠯᠴᠤᠳ ᠤᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB%D1%87%D1%83%D1%83%D0%B4%D1%8B%D0%BD#Mongolian)
+- `онд` — Wiktionary gives `ᠣᠨ ᠳᠤ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%BD%D0%B4#Mongolian)
+- `оны` — Wiktionary gives `ᠣᠨ ᠤ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%BD%D1%8B#Mongolian)
+- `сарын` — Wiktionary gives `ᠰᠠᠷ᠎ᠠ ᠶᠢᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%B0%D1%80%D1%8B%D0%BD#Mongolian)
+- `таны` — Wiktionary gives `ᠲᠠᠨ ᠤ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%B0%D0%BD%D1%8B#Mongolian)
+- `тухайд` — Wiktionary gives `ᠲᠤᠬᠠᠢ ᠳᠤ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D1%83%D1%85%D0%B0%D0%B9%D0%B4#Mongolian)
+- `тэдний` — Wiktionary gives `ᠲᠡᠳᠡᠨ ᠦ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D1%8D%D0%B4%D0%BD%D0%B8%D0%B9#Mongolian)
+- `түүний` — Wiktionary gives `ᠲᠡᠭᠦᠨ ᠦ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D2%AF%D2%AF%D0%BD%D0%B8%D0%B9#Mongolian)
+- `түүнийх` — Wiktionary gives `ᠲᠡᠭᠦᠨ ᠦ ᠬᠢ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D2%AF%D2%AF%D0%BD%D0%B8%D0%B9%D1%85#Mongolian)
+- `төстэй` — Wiktionary gives `ᠲᠥᠰ ᠲᠡᠢ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D3%A9%D1%81%D1%82%D1%8D%D0%B9#Mongolian)
+- `хөлбөмбөг` — Wiktionary gives `ᠬᠥᠯ ᠪᠥᠮᠪᠦᠭᠡ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D0%BB%D0%B1%D3%A9%D0%BC%D0%B1%D3%A9%D0%B3#Mongolian)
+- `эмээ` — Wiktionary gives `ᠡᠮ᠎ᠡ ᠪᠡᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8D%D0%BC%D1%8D%D1%8D#Mongolian)
+- `энгийн` — Wiktionary gives `ᠡᠩ ᠤᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8D%D0%BD%D0%B3%D0%B8%D0%B9%D0%BD#Mongolian)
+- `үгийн` — Wiktionary gives `ᠦᠭᠡ ᠶᠢᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D2%AF%D0%B3%D0%B8%D0%B9%D0%BD#Mongolian)
+- `үүний` — Wiktionary gives `ᠡᠭᠦᠨ ᠦ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D2%AF%D2%AF%D0%BD%D0%B8%D0%B9#Mongolian)
+
+### Proper names queued for names.json (43)
+
+`names.json` is the 100%-human-verified tier, so nothing is auto-imported. These Wiktionary name entries are suggestions for reviewers:
+
+- **Австри** — `ᠠᠦ᠋ᠰᠲ᠋ᠷᠢ` — “Austria (a country in Central Europe)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D0%B2%D1%81%D1%82%D1%80%D0%B8#Mongolian)
+- **Албани** — `ᠠᠯᠪᠠᠨ᠋ᠢ` — “Albania (a country in Southeastern Europe)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D0%BB%D0%B1%D0%B0%D0%BD%D0%B8#Mongolian)
+- **Алтай** — `ᠠᠯᠲᠠᠢ` — “Altai (a city, the administrative center of Govi-Altai Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D0%BB%D1%82%D0%B0%D0%B9#Mongolian)
+- **Андорра** — `ᠠᠨᠳᠣᠷᠷᠠ` — “Andorra (a microstate in Southern Europe, between Spain and France)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D0%BD%D0%B4%D0%BE%D1%80%D1%80%D0%B0#Mongolian)
+- **Арвайхээр** — `ᠠᠷᠪᠠᠶᠢᠬᠡᠭᠡᠷ` — “Arvaikheer (a city, the administrative center of Övörkhangai Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D1%80%D0%B2%D0%B0%D0%B9%D1%85%D1%8D%D1%8D%D1%80#Mongolian)
+- **Армен** — `ᠠᠷᠮᠧᠨ` — “Armenia (a country in the South Caucasus region of Asia, sometimes considered…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D1%80%D0%BC%D0%B5%D0%BD#Mongolian)
+- **Бельги** — `ᠪᠧᠯᠭᠢ` — “Belgium (a country in Western Europe that has borders with the Netherlands,…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%91%D0%B5%D0%BB%D1%8C%D0%B3%D0%B8#Mongolian)
+- **Булган** — `ᠪᠤᠯᠠᠭᠠᠨ` — “Bulgan (a city, administrative center, and province of Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%91%D1%83%D0%BB%D0%B3%D0%B0%D0%BD#Mongolian)
+- **Грек** — `ᠭᠷᠧᠻ` — “Greece (a country in Southeastern Europe)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%93%D1%80%D0%B5%D0%BA#Mongolian)
+- **Гүрж** — `ᠭᠦᠷᠵᠢ` — “Georgia (a transcontinental country in the Caucasus region of Europe and Asia,…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%93%D2%AF%D1%80%D0%B6#Mongolian)
+- **Дани** — `ᠳ᠋ᠠᠨ᠋ᠢ` — “Denmark (a country in Northern Europe; official name: Данийн Хаант Улс (Daniin…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%94%D0%B0%D0%BD%D0%B8#Mongolian)
+- **Дархан** — `ᠳᠠᠷᠬᠠᠨ` — “Darkhan (a city, the administrative center of Darkhan-Uul Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%94%D0%B0%D1%80%D1%85%D0%B0%D0%BD#Mongolian)
+- **Зуунмод** — `ᠵᠠᠭᠤᠨᠮᠣᠳᠤ` — “Zuunmod (a city, the administrative center of Töv Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%97%D1%83%D1%83%D0%BD%D0%BC%D0%BE%D0%B4#Mongolian)
+- **Зүүнгар** — `ᠵᠦ᠋ᠩᠭ᠋ᠠᠷ` · `ᠵᠡᠭᠦᠨᠭᠠᠷ` — “Dzungaria (a region in Inner Asia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%97%D2%AF%D2%AF%D0%BD%D0%B3%D0%B0%D1%80#Mongolian)
+- **Зүүнхараа** — ⚠ `ᠵᠡᠭᠦᠨ ᠢᠶᠠᠷ ᠢᠶᠠᠨ` (contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md) — “Züünkharaa (a city in Selenge Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%97%D2%AF%D2%AF%D0%BD%D1%85%D0%B0%D1%80%D0%B0%D0%B0#Mongolian)
+- **Ирак** — `ᠢᠷᠠᠺ` — “Iraq (a country in West Asia in the Middle East)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%98%D1%80%D0%B0%D0%BA#Mongolian)
+- **Испани** — `ᠢᠰᠫᠠᠨ᠋ᠢ` — “Spain (a country in Southern Europe, including most of the Iberian peninsula)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8#Mongolian)
+- **Латви** — `ᠯᠠᠲ᠋ᠸᠢ` — “Latvia (a country in northeastern Europe)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9B%D0%B0%D1%82%D0%B2%D0%B8#Mongolian)
+- **Мандалговь** — `ᠮᠠᠨᠳᠠᠯᠭᠣᠪᠢ` — “Mandalgovi (a city, the administrative center of Dundgovi Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9C%D0%B0%D0%BD%D0%B4%D0%B0%D0%BB%D0%B3%D0%BE%D0%B2%D1%8C#Mongolian)
+- **Манж** — `ᠮᠠᠨᠵᠤ` (*manǰu*) — “Manchuria (a geographic region of China)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9C%D0%B0%D0%BD%D0%B6#Mongolian)
+- **Манжуур** — `ᠮᠠᠨᠵᠤᠤᠷ` — “Manchuria (a region of northeastern China comprising the three provinces of…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9C%D0%B0%D0%BD%D0%B6%D1%83%D1%83%D1%80#Mongolian)
+- **Мөрөн** — `ᠮᠥᠷᠡᠨ` — “Mörön (a city, the administrative center of Khövsgöl Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9C%D3%A9%D1%80%D3%A9%D0%BD#Mongolian)
+- **Налайх** — `ᠨᠠᠯᠠᠶᠢᠬᠤ` — “Nalaikh (a district of Ulaanbaatar, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9D%D0%B0%D0%BB%D0%B0%D0%B9%D1%85#Mongolian)
+- **Нидерланд** — `ᠨᠢᠳ᠋ᠧᠷᠯᠠᠨᠳ᠋` — “Netherlands (the main constituent country of the Kingdom of the Netherlands,…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9D%D0%B8%D0%B4%D0%B5%D1%80%D0%BB%D0%B0%D0%BD%D0%B4#Mongolian)
+- **Сайншанд** — `ᠰᠠᠶᠢᠨᠱᠠᠩᠳᠠ` — “Sainshand (a city, the administrative center of Dornogovi Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A1%D0%B0%D0%B9%D0%BD%D1%88%D0%B0%D0%BD%D0%B4#Mongolian)
+- **Сибирь** — `ᠰᠢᠪᠢᠷᠢ` — “Siberia (the region of Russia in Asia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A1%D0%B8%D0%B1%D0%B8%D1%80%D1%8C#Mongolian)
+- **Сири** — `ᠰᠢᠷᠢ` — “Syria (a country in West Asia in the Middle East)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A1%D0%B8%D1%80%D0%B8#Mongolian)
+- **Словени** — `ᠰᠯᠤᠸᠧᠨ᠋ᠢ` — “Slovenia (a country on the Balkan Peninsula in Central Europe)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B5%D0%BD%D0%B8#Mongolian)
+- **Сүхбаатар** — `ᠰᠦᠬᠡᠪᠠᠭᠠᠲᠤᠷ` — “a male given name” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A1%D2%AF%D1%85%D0%B1%D0%B0%D0%B0%D1%82%D0%B0%D1%80#Mongolian)
+- **Тулуй** — `ᠲᠥᠯᠦᠢ` — “Tolui (fourth son of Genghis Khan)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A2%D1%83%D0%BB%D1%83%D0%B9#Mongolian)
+- **Улаангом** — `ᠤᠯᠠᠭᠠᠩᠭ᠋ᠣᠮ` — “Ulaangom (a city, the administrative center of Uvs Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A3%D0%BB%D0%B0%D0%B0%D0%BD%D0%B3%D0%BE%D0%BC#Mongolian)
+- **Улаанцав** — `ᠤᠯᠠᠭᠠᠨᠴᠠᠪ` — “Ulanqab (a city in the Inner Mongolia autonomous region, China)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A3%D0%BB%D0%B0%D0%B0%D0%BD%D1%86%D0%B0%D0%B2#Mongolian)
+- **Улиастай** — `ᠤᠯᠢᠶᠠᠰᠤᠲᠠᠢ` — “Uliastai (a city, the administrative center of Zavkhan Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A3%D0%BB%D0%B8%D0%B0%D1%81%D1%82%D0%B0%D0%B9#Mongolian)
+- **Хархорин** — `ᠬᠠᠷᠠᠬᠣᠷᠢᠨ` — “Kharkhorin (a city in Övörkhangai Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A5%D0%B0%D1%80%D1%85%D0%BE%D1%80%D0%B8%D0%BD#Mongolian)
+- **Хасаг** — `ᠬᠠᠰᠠᠭ` — “Kazakhstan (a country in Central Asia and Eastern Europe)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A5%D0%B0%D1%81%D0%B0%D0%B3#Mongolian)
+- **Хуацай** — `ᠬᠤᠸᠠᠴᠠᠢ` — “A Khori-Buryat clan” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A5%D1%83%D0%B0%D1%86%D0%B0%D0%B9#Mongolian)
+- **Хөхнуур** — ⚠ `ᠬᠥᠬᠡ ᠨᠠᠭᠤᠷ` (contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md) — “Qinghai (a province in northwestern China)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A5%D3%A9%D1%85%D0%BD%D1%83%D1%83%D1%80#Mongolian)
+- **Цэцэрлэг** — `ᠴᠡᠴᠡᠷᠯᠢᠭ` — “Tsetserleg (a city, the administrative center of Arkhangai Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A6%D1%8D%D1%86%D1%8D%D1%80%D0%BB%D1%8D%D0%B3#Mongolian)
+- **Чойбалсан** — `ᠴᠣᠶᠢᠪᠠᠯᠰᠠᠩ` — “a male given name” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A7%D0%BE%D0%B9%D0%B1%D0%B0%D0%BB%D1%81%D0%B0%D0%BD#Mongolian)
+- **Чойр** — `ᠴᠣᠶᠢᠷ` — “Choir (a city, the administrative center of Govisümber Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A7%D0%BE%D0%B9%D1%80#Mongolian)
+- **Шивэр** — `ᠱᠢᠪᠧᠷ` — “Siberia (the region of Russia in Asia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A8%D0%B8%D0%B2%D1%8D%D1%80#Mongolian)
+- **Өлгий** — `ᠥᠯᠦᠭᠡᠢ` — “Ölgii (a city, the administrative center of Bayan-Ölgii Aimag, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A8%D0%BB%D0%B3%D0%B8%D0%B9#Mongolian)
+- **Өндөрхаан** — `ᠥᠨᠳᠦᠷᠬᠠᠨ` — “Öndörkhaan (a city, the administrative center of Khentii Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D3%A8%D0%BD%D0%B4%D3%A9%D1%80%D1%85%D0%B0%D0%B0%D0%BD#Mongolian)
+
+### Suffixes
+
+Wiktionary-sourced rows in [suffixes.json](suffixes.json) (`"source": "wiktionary"`) are unverified and carry no `attach`/`gender` conditions, so the suffix engine applies them unconditionally — reviewers should add conditions from the Nadmid 1990 rulebook (see GRAMMAR.md) and verify or remove each row.
+
+<!-- wiktionary-import:end -->

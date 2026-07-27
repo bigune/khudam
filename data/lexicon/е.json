@@ -176,6 +176,18 @@
     ]
   },
   {
+    "cyrillic": "енчин",
+    "candidates": [
+      {
+        "traditional": "ᠥᠨᠦᠴᠢᠨ",
+        "latin": "önüčin",
+        "sense": "orphan",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "ер",
     "candidates": [
       {
@@ -313,8 +325,16 @@
       {
         "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠢ",
         "latin": "yerunhii",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠶ",
+        "latin": "yerüngkey",
+        "sense": "general",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -335,8 +355,16 @@
       {
         "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠢᠯᠡᠭᠴᠢ",
         "latin": "yerunhiilugch",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠶᠢᠯᠡᠭᠴᠢ",
+        "latin": "yerüngkeyilegči",
+        "sense": "agentive participle in -гч (-gč) of ерөнхийлөх (jörönxiilöx)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -346,8 +374,16 @@
       {
         "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠢᠯᠡᠬᠦ",
         "latin": "yerunhiiluh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠶᠢᠯᠡᠬᠦ",
+        "latin": "yerüngkeyilekü",
+        "sense": "To generalize",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -478,8 +514,10 @@
       {
         "traditional": "ᠶᠢᠰᠦᠨ",
         "latin": "yesun",
+        "sense": "oblique of ес (jes, “nine”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -511,8 +549,16 @@
       {
         "traditional": "ᠶᠧᠪᠡᠩ",
         "latin": "yeven",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠶᠧᠪᠢᠩ",
+        "latin": "yēbing",
+        "sense": "cookie (small, sweet, flat, circular, baked good which is either crisp or soft…",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

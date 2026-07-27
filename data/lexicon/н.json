@@ -1457,8 +1457,10 @@
       {
         "traditional": "ᠨᠠᠢ",
         "latin": "nai",
+        "sense": "friendship, trust",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1721,8 +1723,16 @@
       {
         "traditional": "ᠨᠠᠢᠵᠠ",
         "latin": "naiz",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠠᠶ᠋ᠢᠵᠠ",
+        "latin": "nayiǰa",
+        "sense": "friend",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1897,8 +1907,10 @@
       {
         "traditional": "ᠨᠠᠢᠮᠠᠯᠵᠢ",
         "latin": "naimalj",
+        "sense": "octopus",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1963,8 +1975,16 @@
       {
         "traditional": "ᠨᠠᠢᠷ",
         "latin": "nair",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠠᠶᠢᠷ",
+        "latin": "nayir",
+        "sense": "feast",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2051,8 +2071,16 @@
       {
         "traditional": "ᠨᠠᠢᠷᠠᠮᠳᠠᠯ",
         "latin": "nairamdal",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠠᠶᠢᠷᠠᠮᠳᠠᠯ",
+        "latin": "nayiramdal",
+        "sense": "friendship",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2194,8 +2222,16 @@
       {
         "traditional": "ᠨᠠᠢᠷᠠᠭᠤᠯᠬᠤ",
         "latin": "nairuulah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠠᠶ᠋ᠢᠷᠠᠭᠤᠯᠬᠤ",
+        "latin": "nayiraɣulqu",
+        "sense": "causative of найрах (najrax)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2249,8 +2285,16 @@
       {
         "traditional": "ᠨᠠᠢᠲᠠᠭᠠᠬᠤ",
         "latin": "naitaah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠠᠶ᠋ᠢᠲᠠᠭᠠᠬᠤ",
+        "latin": "nayitaɣaqu",
+        "sense": "to sneeze",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2810,8 +2854,10 @@
       {
         "traditional": "ᠨᠠᠮ",
         "latin": "nam",
+        "sense": "a (political) party",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2964,8 +3010,10 @@
       {
         "traditional": "ᠨᠠᠮᠤᠷ",
         "latin": "namar",
+        "sense": "autumn, fall",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3536,8 +3584,10 @@
       {
         "traditional": "ᠨᠠᠮᠲᠠᠷ",
         "latin": "namtar",
+        "sense": "biography",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3921,8 +3971,10 @@
       {
         "traditional": "ᠨᠠᠷᠠ",
         "latin": "nar",
+        "sense": "sun",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4009,8 +4061,10 @@
       {
         "traditional": "ᠨᠠᠷᠭᠢᠯ",
         "latin": "nargil",
+        "sense": "coconut",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4163,8 +4217,10 @@
       {
         "traditional": "ᠨᠠᠷᠢᠨ",
         "latin": "nariin",
+        "sense": "thin",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4334,6 +4390,18 @@
     ]
   },
   {
+    "cyrillic": "нарлаг",
+    "candidates": [
+      {
+        "traditional": "ᠨᠠᠷᠠᠯᠢᠭ",
+        "latin": "naraliɣ",
+        "sense": "sunny, sun-drenched, bright, sunlit",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "нарлах",
     "candidates": [
       {
@@ -4488,6 +4556,18 @@
     ]
   },
   {
+    "cyrillic": "нартай",
+    "candidates": [
+      {
+        "traditional": "ᠨᠠᠷᠠᠲᠠᠢ",
+        "latin": "naratai",
+        "sense": "sunny, fair, sun-drenched, shiny, bright, sunlit",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "нарцах",
     "candidates": [
       {
@@ -4636,8 +4716,10 @@
       {
         "traditional": "ᠨᠠᠰᠤᠲᠠᠢ",
         "latin": "nastai",
+        "sense": "old, aged (of people)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4669,8 +4751,10 @@
       {
         "traditional": "ᠨᠠᠰᠤᠲᠠᠨ",
         "latin": "nastan",
+        "sense": "aged people, elders",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4977,8 +5061,10 @@
       {
         "traditional": "ᠨᠠᠴᠢᠨ",
         "latin": "nachin",
+        "sense": "falcon",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5516,8 +5602,16 @@
       {
         "traditional": "ᠨᠡᠢᠭᠡᠮ",
         "latin": "niigem",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠡᠶᠢᠭᠡᠮ",
+        "latin": "neyigem",
+        "sense": "society",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5945,8 +6039,16 @@
       {
         "traditional": "ᠨᠡᠢᠰᠯᠡᠯ",
         "latin": "niislel",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠡᠶᠢᠰᠯᠡᠯ",
+        "latin": "neyislel",
+        "sense": "capital, capital city, metropolis",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6022,8 +6124,16 @@
       {
         "traditional": "ᠨᠡᠢᠳᠬᠡᠬᠦ",
         "latin": "niitgeh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠡᠶ᠋ᠢᠳᠬᠡᠬᠦ",
+        "latin": "neyidkekü",
+        "sense": "to weave",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6110,8 +6220,10 @@
       {
         "traditional": "ᠨᠢᠭᠢᠬᠦ",
         "latin": "niih",
+        "sense": "to blow (nose)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6253,8 +6365,10 @@
       {
         "traditional": "ᠨᠢᠯ",
         "latin": "nil",
+        "sense": "violet",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6363,8 +6477,10 @@
       {
         "traditional": "ᠨᠢᠮᠭᠡᠨ",
         "latin": "nimgen",
+        "sense": "thin",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6869,8 +6985,16 @@
       {
         "traditional": "ᠨᠣᠭᠣᠭ᠎ᠠ",
         "latin": "nogoo",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠣᠭᠤᠭ᠎ᠠ",
+        "latin": "noɣuɣ-a",
+        "sense": "herbs, grass, vegetables",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6968,8 +7092,16 @@
       {
         "traditional": "ᠨᠣᠭᠣᠭᠠᠨ",
         "latin": "nogoon",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠣᠭᠤᠭᠠᠨ",
+        "latin": "noɣuɣan",
+        "sense": "green",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7122,8 +7254,10 @@
       {
         "traditional": "ᠨᠢᠳᠤᠨᠤᠨ",
         "latin": "nodnin",
+        "sense": "last year",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7179,6 +7313,18 @@
         "latin": "nozooruulah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "нойл",
+    "candidates": [
+      {
+        "traditional": "ᠨᠣᠶᠢᠯ",
+        "latin": "noyil",
+        "sense": "bathroom; toilet",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7320,8 +7466,16 @@
       {
         "traditional": "ᠨᠣᠢᠲᠠᠨ",
         "latin": "noiton",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠣᠶᠢᠲᠠᠨ",
+        "latin": "noyitan",
+        "sense": "wet; moist",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8037,6 +8191,18 @@
         "latin": "noorhoi",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ноос",
+    "candidates": [
+      {
+        "traditional": "ᠨᠣᠣᠰᠤ",
+        "latin": "noosu",
+        "sense": "wool",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8816,8 +8982,10 @@
       {
         "traditional": "ᠨᠤᠭᠤᠯᠤᠮ᠎ᠠ",
         "latin": "nugalam",
+        "sense": "vertebra",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8959,8 +9127,10 @@
       {
         "traditional": "ᠨᠤᠭᠤᠰᠤ",
         "latin": "nugas",
+        "sense": "duck",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9126,6 +9296,18 @@
         "latin": "nud",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "нударга",
+    "candidates": [
+      {
+        "traditional": "ᠨᠢᠳᠤᠷᠭ᠎ᠠ",
+        "latin": "nidurɣ-a",
+        "sense": "fist",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9333,8 +9515,10 @@
       {
         "traditional": "ᠨᠢᠯᠪᠤᠰᠤ",
         "latin": "nulims",
+        "sense": "tear",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9652,8 +9836,10 @@
       {
         "traditional": "ᠨᠤᠷᠮ᠎ᠠ",
         "latin": "nuram",
+        "sense": "burning ashes, cinders",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9773,8 +9959,10 @@
       {
         "traditional": "ᠨᠢᠷᠤᠭᠤ",
         "latin": "nuruu",
+        "sense": "spine, back",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9938,8 +10126,10 @@
       {
         "traditional": "ᠨᠢᠰᠤ",
         "latin": "nus",
+        "sense": "snot",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10279,8 +10469,10 @@
       {
         "traditional": "ᠨᠢᠭᠤᠴᠠ",
         "latin": "nuuts",
+        "sense": "secret",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11214,8 +11406,10 @@
       {
         "traditional": "ᠨᠢᠭᠡᠨ",
         "latin": "negen",
+        "sense": "oblique of нэг (neg)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11731,8 +11925,10 @@
       {
         "traditional": "ᠨᠡᠮᠡᠷᠢ",
         "latin": "nemer",
+        "sense": "supplement, addition",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11764,8 +11960,10 @@
       {
         "traditional": "ᠨᠡᠮᠡᠬᠦ",
         "latin": "nemeh",
+        "sense": "to add, to append",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12347,8 +12545,10 @@
       {
         "traditional": "ᠨᠡᠬᠡᠮᠡᠯ",
         "latin": "nehmel",
+        "sense": "knitted",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12600,8 +12800,10 @@
       {
         "traditional": "ᠨᠡᠭᠡᠭᠡᠯᠲᠡᠲᠡᠢ",
         "latin": "neelttei",
+        "sense": "open",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12655,8 +12857,10 @@
       {
         "traditional": "ᠨᠡᠭᠡᠭᠡᠬᠦ",
         "latin": "neeh",
+        "sense": "to open",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12721,8 +12925,10 @@
       {
         "traditional": "ᠨᠢᠭᠲᠠ",
         "latin": "nyagt",
+        "sense": "tight; dense",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13161,8 +13367,10 @@
       {
         "traditional": "ᠨᠢᠯᠬ᠎ᠠ",
         "latin": "nyalh",
+        "sense": "newly-born, infant",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13381,8 +13589,10 @@
       {
         "traditional": "ᠨᠢᠮ᠎ᠠ",
         "latin": "nyam",
+        "sense": "Sunday",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14008,8 +14218,10 @@
       {
         "traditional": "ᠨᠢᠳᠦ",
         "latin": "nud",
+        "sense": "eye (organ of sight)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14096,8 +14308,10 @@
       {
         "traditional": "ᠨᠦᠳᠦᠭᠦᠷ",
         "latin": "nuduur",
+        "sense": "pestle",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14228,8 +14442,10 @@
       {
         "traditional": "ᠨᠦᠬᠡ",
         "latin": "nuh",
+        "sense": "hole",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14393,8 +14609,10 @@
       {
         "traditional": "ᠨᠡᠭᠦᠳᠡᠯᠴᠢᠨ",
         "latin": "nuudelchin",
+        "sense": "nomad",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14459,8 +14677,10 @@
       {
         "traditional": "ᠨᠢᠭᠤᠷ",
         "latin": "nuur",
+        "sense": "face; image; front; façade, facade; page; title",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14505,6 +14725,18 @@
         "latin": "nuurluuleh",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "нүүрс",
+    "candidates": [
+      {
+        "traditional": "ᠨᠡᠭᠦᠷᠡᠰᠦ",
+        "latin": "negüresü",
+        "sense": "coal",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -14657,8 +14889,16 @@
       {
         "traditional": "ᠨᠥᠭᠥᠭᠡ",
         "latin": "nuguu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠥᠭᠦᠭᠡ",
+        "latin": "nögüge",
+        "sense": "that; that very one",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -14833,8 +15073,16 @@
       {
         "traditional": "ᠨᠥᠯᠥᠭᠡ",
         "latin": "nuluu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠥᠯᠦᠭᠡ",
+        "latin": "nölüge",
+        "sense": "influence",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15317,8 +15565,16 @@
       {
         "traditional": "ᠨᠥᠬᠥᠬᠥ",
         "latin": "nuhuh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠥᠬᠦᠬᠦ",
+        "latin": "nökükü",
+        "sense": "to patch, act as a substitute, make up for, catch up with",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15328,8 +15584,16 @@
       {
         "traditional": "ᠨᠥᠬᠥᠭᠡᠰᠦ",
         "latin": "nuhuus",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠨᠥᠬᠦᠭᠡᠰᠦ",
+        "latin": "nökügesü",
+        "sense": "patch, substitute, piece",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15416,8 +15680,10 @@
       {
         "traditional": "ᠨᠥᠭᠡᠴᠡ",
         "latin": "nuuts",
+        "sense": "store, supply",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15438,8 +15704,10 @@
       {
         "traditional": "ᠨᠥᠭᠡᠴᠡᠯᠡᠬᠦ",
         "latin": "nuutsluh",
+        "sense": "to store, to stow",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

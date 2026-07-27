@@ -115,8 +115,10 @@
       {
         "traditional": "ᠮᠠᠭᠠᠵᠢᠬᠤ",
         "latin": "maajih",
+        "sense": "to scratch",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -753,8 +755,10 @@
       {
         "traditional": "ᠮᠠᠩᠨᠠᠢ",
         "latin": "magnai",
+        "sense": "forehead",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -808,8 +812,10 @@
       {
         "traditional": "ᠮᠠᠭᠲᠠᠭᠠᠯ",
         "latin": "magtaal",
+        "sense": "compliment, praise, adoration",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -841,8 +847,10 @@
       {
         "traditional": "ᠮᠠᠭᠲᠠᠬᠤ",
         "latin": "magtah",
+        "sense": "to give praise to; to applaud",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1446,8 +1454,16 @@
       {
         "traditional": "ᠮᠠᠢᠬᠠᠨ",
         "latin": "maihan",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠠᠶᠢᠬᠠᠨ",
+        "latin": "mayiqan",
+        "sense": "tent",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1468,8 +1484,10 @@
       {
         "traditional": "ᠮᠠᠯ",
         "latin": "mal",
+        "sense": "livestock, cattle",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1512,8 +1530,10 @@
       {
         "traditional": "ᠮᠠᠯᠠᠭᠠᠢ",
         "latin": "malgai",
+        "sense": "hat",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1677,8 +1697,10 @@
       {
         "traditional": "ᠮᠠᠯᠯᠠᠬᠤ",
         "latin": "mallah",
+        "sense": "to herd (cattle)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1875,8 +1897,10 @@
       {
         "traditional": "ᠮᠠᠯᠴᠢᠨ",
         "latin": "malchin",
+        "sense": "herdsman",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1996,8 +2020,17 @@
       {
         "traditional": "ᠮᠠᠨᠠᠨ",
         "latin": "manan",
+        "sense": "fog, mist",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠮᠠᠨᠠᠩ",
+        "latin": "manang",
+        "sense": "fog, mist",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2502,8 +2535,10 @@
       {
         "traditional": "ᠮᠠᠩᠯᠠᠢ",
         "latin": "manlai",
+        "sense": "forehead",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2612,8 +2647,10 @@
       {
         "traditional": "ᠮᠠᠨᠲᠠᠤ",
         "latin": "mantuu",
+        "sense": "steamed bread",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2623,8 +2660,10 @@
       {
         "traditional": "ᠮᠠᠨᠤᠤᠯ",
         "latin": "manuul",
+        "sense": "manul (wildcat)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2669,6 +2708,18 @@
         "latin": "manuh",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "манх",
+    "candidates": [
+      {
+        "traditional": "ᠮᠠᠩᠬ᠎ᠠ",
+        "latin": "mangq-a",
+        "sense": "sand dune",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2898,8 +2949,10 @@
       {
         "traditional": "ᠮᠠᠷᠠᠯ",
         "latin": "maral",
+        "sense": "hind, doe, doe of a red deer",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2964,8 +3017,22 @@
       {
         "traditional": "ᠮᠠᠷᠭᠠᠰᠢ",
         "latin": "margaash",
+        "sense": "tomorrow",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      }
+    ]
+  },
+  {
+    "cyrillic": "маргад",
+    "candidates": [
+      {
+        "traditional": "ᠮᠠᠷᠭᠠᠳ",
+        "latin": "marɣad",
+        "sense": "emerald",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3052,8 +3119,10 @@
       {
         "traditional": "ᠮᠠᠷᠭᠤᠬᠤ",
         "latin": "margah",
+        "sense": "to argue",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3239,8 +3308,10 @@
       {
         "traditional": "ᠮᠠᠷᠺ",
         "latin": "mark",
+        "sense": "stamp",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3437,8 +3508,10 @@
       {
         "traditional": "ᠮᠠᠷᠲᠠᠬᠤ",
         "latin": "martah",
+        "sense": "to forget",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3613,8 +3686,10 @@
       {
         "traditional": "ᠮᠠᠰᠰᠠᠵᠢ",
         "latin": "massaj",
+        "sense": "massage",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3701,8 +3776,10 @@
       {
         "traditional": "ᠮᠠᠲᠠᠷ",
         "latin": "matar",
+        "sense": "crocodile",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3894,6 +3971,18 @@
     ]
   },
   {
+    "cyrillic": "мах",
+    "candidates": [
+      {
+        "traditional": "ᠮᠢᠬ᠎ᠠ",
+        "latin": "miq-a",
+        "sense": "meat",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "махайцах",
     "candidates": [
       {
@@ -3976,8 +4065,10 @@
       {
         "traditional": "ᠮᠠᠬᠢᠢᠬᠤ",
         "latin": "mahiih",
+        "sense": "to become crooked, to bend",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4097,8 +4188,10 @@
       {
         "traditional": "ᠮᠢᠬᠠᠴᠢᠨ",
         "latin": "mahchin",
+        "sense": "carnivore, predator",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4218,8 +4311,10 @@
       {
         "traditional": "ᠮᠠᠰᠢ",
         "latin": "mash",
+        "sense": "very",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4231,6 +4326,18 @@
         "latin": "mashid",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "машин",
+    "candidates": [
+      {
+        "traditional": "ᠮᠠᠱᠢᠨ",
+        "latin": "mašin",
+        "sense": "car, auto, automobile",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4526,8 +4633,10 @@
       {
         "traditional": "ᠮᠧᠲ᠋ᠠᠯ",
         "latin": "myetall",
+        "sense": "metal",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4702,8 +4811,16 @@
       {
         "traditional": "ᠮᠢ",
         "latin": "mii",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠢᠢ",
+        "latin": "mii",
+        "sense": "cat",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4911,8 +5028,16 @@
       {
         "traditional": "ᠮᠢᠨᠦ",
         "latin": "minii",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠢᠨᠤ",
+        "latin": "minu",
+        "sense": "my",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4933,8 +5058,16 @@
       {
         "traditional": "ᠮᠢᠨᠦᠬᠢ",
         "latin": "miniih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠢᠨᠤᠬᠢ",
+        "latin": "minuqi",
+        "sense": "mine",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5423,6 +5556,18 @@
     ]
   },
   {
+    "cyrillic": "модлог",
+    "candidates": [
+      {
+        "traditional": "ᠮᠣᠳᠤᠯᠢᠭ",
+        "latin": "moduliɣ",
+        "sense": "abundant in trees, heavily wooded",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "модлох",
     "candidates": [
       {
@@ -5483,8 +5628,16 @@
       {
         "traditional": "ᠮᠣᠳᠣᠴᠢ",
         "latin": "modoch",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠣᠳᠤᠴᠢ",
+        "latin": "moduči",
+        "sense": "carpenter",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5529,6 +5682,18 @@
         "latin": "modchin",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "мойл",
+    "candidates": [
+      {
+        "traditional": "ᠮᠣᠶᠢᠯ",
+        "latin": "moyil",
+        "sense": "bird cherry (Prunus padus)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5615,8 +5780,16 @@
       {
         "traditional": "ᠮᠣᠯᠲᠣᠭᠴᠢᠨ",
         "latin": "moltogchin",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠣᠯᠲᠤᠭᠴᠢᠨ",
+        "latin": "moltuɣčin",
+        "sense": "hare, rabbit",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5824,8 +5997,10 @@
       {
         "traditional": "ᠮᠣᠩᠭᠣᠯᠴᠤᠳ",
         "latin": "mongolchuud",
+        "sense": "nominative plural of монгол (mongol, “a Mongol”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6275,8 +6450,10 @@
       {
         "traditional": "ᠮᠣᠷᠢᠯᠠᠬᠤ",
         "latin": "moriloh",
+        "sense": "to ride a horse",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6473,8 +6650,16 @@
       {
         "traditional": "ᠮᠣᠬᠣᠭᠣ",
         "latin": "mohoo",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠣᠬᠤᠭᠠ",
+        "latin": "moquɣa",
+        "sense": "blunt (not sharp)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6528,8 +6713,16 @@
       {
         "traditional": "ᠮᠣᠬᠣᠬᠤ",
         "latin": "mohoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠣᠬᠤᠬᠤ",
+        "latin": "moququ",
+        "sense": "to become blunt",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7711,6 +7904,18 @@
     ]
   },
   {
+    "cyrillic": "мусульман",
+    "candidates": [
+      {
+        "traditional": "ᠮᠦᠰᠦᠯᠮᠠᠨ",
+        "latin": "müsülman",
+        "sense": "Muslim",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "мутар",
     "candidates": [
       {
@@ -7870,8 +8075,10 @@
       {
         "traditional": "ᠮᠤᠤᠷ",
         "latin": "muur",
+        "sense": "cat",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8266,8 +8473,16 @@
       {
         "traditional": "ᠮᠤᠰᠭᠢᠷᠠᠬᠤ",
         "latin": "mushgirah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠤᠰᠬᠢᠷᠠᠬᠤ",
+        "latin": "musqiraqu",
+        "sense": "to twist (become twisted)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8717,8 +8932,10 @@
       {
         "traditional": "ᠮᠡᠳᠡᠷᠬᠡᠬᠦ",
         "latin": "mederheh",
+        "sense": "to boast of being knowledgeable (when one isn't)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8739,8 +8956,10 @@
       {
         "traditional": "ᠮᠡᠳᠡᠬᠦ",
         "latin": "medeh",
+        "sense": "to know (information, how to do something)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8871,8 +9090,10 @@
       {
         "traditional": "ᠮᠡᠳᠡᠭᠡᠯᠡᠯ",
         "latin": "medeelel",
+        "sense": "information, account",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9311,8 +9532,16 @@
       {
         "traditional": "ᠮᠡᠯᠡᠬᠡᠢ",
         "latin": "melhii",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠡᠨᠡᠬᠡᠢ",
+        "latin": "menekei",
+        "sense": "frog, toad",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9465,8 +9694,10 @@
       {
         "traditional": "ᠮᠡᠨᠳᠦᠯᠡᠬᠦ",
         "latin": "mendleh",
+        "sense": "to greet",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9498,8 +9729,10 @@
       {
         "traditional": "ᠮᠡᠨᠳᠦᠴᠢᠯᠡᠭᠡ",
         "latin": "mendchilgee",
+        "sense": "greeting",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9663,8 +9896,10 @@
       {
         "traditional": "ᠮᠡᠷᠭᠡᠵᠢᠯ",
         "latin": "mergejil",
+        "sense": "profession, occupation",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9685,8 +9920,10 @@
       {
         "traditional": "ᠮᠡᠷᠭᠡᠵᠢᠯᠲᠡᠨ",
         "latin": "mergejilten",
+        "sense": "expert, professional",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10004,8 +10241,10 @@
       {
         "traditional": "ᠮᠡᠰᠡ",
         "latin": "mes",
+        "sense": "knife",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10362,6 +10601,18 @@
     ]
   },
   {
+    "cyrillic": "мэхээр",
+    "candidates": [
+      {
+        "traditional": "ᠮᠡᠬᠡᠷ",
+        "latin": "meker",
+        "sense": "common bistort (Bistorta officinalis)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "мэц",
     "candidates": [
       {
@@ -10413,6 +10664,18 @@
         "latin": "meshil",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "мээм",
+    "candidates": [
+      {
+        "traditional": "ᠮᠡᠮᠦ",
+        "latin": "memü",
+        "sense": "breast",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10609,8 +10872,10 @@
       {
         "traditional": "ᠮᠢᠩᠭᠠᠨ",
         "latin": "myangan",
+        "sense": "thousand",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11192,8 +11457,10 @@
       {
         "traditional": "ᠮᠥᠨ",
         "latin": "mun",
+        "sense": "this (the same)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11286,13 +11553,27 @@
     ]
   },
   {
+    "cyrillic": "мөндөрлөх",
+    "candidates": [
+      {
+        "traditional": "ᠮᠥ᠋ᠨᠳ᠋ᠦᠷᠯᠡᠬᠦ",
+        "latin": "möndürlekü",
+        "sense": "to hail",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "мөнх",
     "candidates": [
       {
         "traditional": "ᠮᠥᠩᠬᠡ",
         "latin": "munh",
+        "sense": "eternal",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11418,6 +11699,18 @@
     ]
   },
   {
+    "cyrillic": "мөнхөд",
+    "candidates": [
+      {
+        "traditional": "ᠮᠥᠩᠬᠡᠳᠡ",
+        "latin": "möngkede",
+        "sense": "forever",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "мөнөө",
     "candidates": [
       {
@@ -11445,8 +11738,17 @@
       {
         "traditional": "ᠮᠥᠷ",
         "latin": "mur",
+        "sense": "road, path, way",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠮᠥᠷᠦ",
+        "latin": "mörü",
+        "sense": "shoulder",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11544,8 +11846,16 @@
       {
         "traditional": "ᠮᠥᠷᠭᠥᠬᠦ",
         "latin": "murguh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠥᠷᠭᠦᠬᠦ",
+        "latin": "mörgükü",
+        "sense": "to butt, to bump (with horns, forehead, ...)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11687,8 +11997,16 @@
       {
         "traditional": "ᠮᠥᠷᠥᠪᠴᠢ",
         "latin": "muruvch",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠥᠷᠦᠪᠴᠢ",
+        "latin": "mörübči",
+        "sense": "suspenders (to hold up trousers)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11841,8 +12159,16 @@
       {
         "traditional": "ᠮᠥᠷᠥᠭᠡᠳᠦᠯ",
         "latin": "muruudul",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠥᠷᠦᠭᠡᠳᠦᠯ",
+        "latin": "mörügedül",
+        "sense": "dream (aspiration)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -12111,6 +12437,18 @@
     ]
   },
   {
+    "cyrillic": "мөхөөлдөс",
+    "candidates": [
+      {
+        "traditional": "ᠮᠥᠬᠦᠭᠡᠯᠳᠦᠰᠦ",
+        "latin": "mökügeldüsü",
+        "sense": "ice cream",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "мөхөөлтөх",
     "candidates": [
       {
@@ -12226,8 +12564,10 @@
       {
         "traditional": "ᠮᠥᠴᠢᠷ",
         "latin": "muchir",
+        "sense": "branch",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12512,8 +12852,16 @@
       {
         "traditional": "ᠮᠥᠭᠥ",
         "latin": "muug",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠮᠥᠭᠦ",
+        "latin": "mögü",
+        "sense": "mushroom, fungus",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

@@ -401,8 +401,16 @@
       {
         "traditional": "ᠰᠠᠭᠠᠲᠠᠯ᠎ᠠ",
         "latin": "saatal",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠠᠭᠠᠲᠠᠯ",
+        "latin": "saɣatal",
+        "sense": "jam",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -456,8 +464,10 @@
       {
         "traditional": "ᠰᠠᠪᠠ",
         "latin": "sav",
+        "sense": "container, vessel, vase, receptacle, crockery, bag",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -467,8 +477,10 @@
       {
         "traditional": "ᠰᠠᠪᠠᠭ᠎ᠠ",
         "latin": "savaa",
+        "sense": "cane, rod (for hitting)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -544,8 +556,10 @@
       {
         "traditional": "ᠰᠠᠪᠤᠩ",
         "latin": "savan",
+        "sense": "soap",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -588,8 +602,10 @@
       {
         "traditional": "ᠰᠠᠪᠠᠷ",
         "latin": "savar",
+        "sense": "claw (a foot or paw equipped with a sharp nail)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -907,8 +923,10 @@
       {
         "traditional": "ᠰᠠᠪᠬ᠎ᠠ",
         "latin": "savh",
+        "sense": "cane, stick",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -962,8 +980,10 @@
       {
         "traditional": "ᠰᠠᠪᠢᠬᠢ",
         "latin": "savhi",
+        "sense": "leather",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2898,8 +2918,10 @@
       {
         "traditional": "ᠰᠠᠯᠢᠰᠤ",
         "latin": "sals",
+        "sense": "slime; mucus",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3173,8 +3195,10 @@
       {
         "traditional": "ᠰᠠᠮ",
         "latin": "sam",
+        "sense": "comb",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3360,8 +3384,10 @@
       {
         "traditional": "ᠰᠠᠮᠪᠠᠷ᠎ᠠ",
         "latin": "sambar",
+        "sense": "board, panel",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3525,8 +3551,16 @@
       {
         "traditional": "ᠰᠤᠸᠠᠮᠫᠠᠨ",
         "latin": "sampin",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠤᠸᠠᠨᠫᠠᠨ",
+        "latin": "suwanpan",
+        "sense": "abacus",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3767,8 +3801,10 @@
       {
         "traditional": "ᠰᠠᠩ",
         "latin": "san",
+        "sense": "treasury",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4009,8 +4045,10 @@
       {
         "traditional": "ᠰᠠᠨᠠᠯ",
         "latin": "sanal",
+        "sense": "opinion",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4108,8 +4146,10 @@
       {
         "traditional": "ᠰᠠᠨᠠᠬᠤ",
         "latin": "sanah",
+        "sense": "to think (to contemplate, to hold a belief)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4262,8 +4302,10 @@
       {
         "traditional": "ᠰᠠᠨᠳᠠᠯᠢ",
         "latin": "sandal",
+        "sense": "chair",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4548,8 +4590,10 @@
       {
         "traditional": "ᠰᠠᠨᠰᠠᠷ",
         "latin": "sansar",
+        "sense": "cosmos, space",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4658,8 +4702,10 @@
       {
         "traditional": "ᠰᠠᠩᠬᠦᠦ",
         "latin": "sanhuu",
+        "sense": "finance",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5274,8 +5320,10 @@
       {
         "traditional": "ᠰᠠᠷᠯᠤᠭ",
         "latin": "sarlag",
+        "sense": "yak",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5307,8 +5355,10 @@
       {
         "traditional": "ᠰᠠᠷᠮᠠᠭᠴᠢᠨ",
         "latin": "sarmagchin",
+        "sense": "monkey",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5967,8 +6017,10 @@
       {
         "traditional": "ᠰᠠᠬᠠᠯ",
         "latin": "sahal",
+        "sense": "facial hair, beard",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6919,6 +6971,25 @@
     ]
   },
   {
+    "cyrillic": "сияан",
+    "candidates": [
+      {
+        "traditional": "ᠰᠢᠶᠠᠨ",
+        "latin": "siyan",
+        "sense": "county",
+        "verified": false,
+        "source": "wiktionary"
+      },
+      {
+        "traditional": "ᠰᠠᠶᠠᠩ",
+        "latin": "sayang",
+        "sense": "enamel",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "скай",
     "candidates": [
       {
@@ -7287,8 +7358,10 @@
       {
         "traditional": "ᠱᠤᠸᠠᠵᠠ",
         "latin": "soiz",
+        "sense": "brush",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7826,8 +7899,10 @@
       {
         "traditional": "ᠰᠣᠯᠢᠬᠤ",
         "latin": "solih",
+        "sense": "to exchange",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8002,8 +8077,16 @@
       {
         "traditional": "ᠰᠣᠩᠭᠣᠭᠴᠢ",
         "latin": "songogch",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠣᠩᠭᠤᠭᠴᠢ",
+        "latin": "songɣuɣči",
+        "sense": "voter; elector; chooser",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8101,8 +8184,16 @@
       {
         "traditional": "ᠰᠤᠩᠭᠤᠬᠤ",
         "latin": "songoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠣᠩᠭᠤᠬᠤ",
+        "latin": "songɣuqu",
+        "sense": "to choose",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8123,8 +8214,16 @@
       {
         "traditional": "ᠰᠣᠩᠭᠣᠭᠤᠯᠢ",
         "latin": "songuuli",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠣᠩᠭᠤᠭᠤᠯᠢ",
+        "latin": "songɣuɣuli",
+        "sense": "election",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8343,8 +8442,10 @@
       {
         "traditional": "ᠰᠣᠨᠢᠨ",
         "latin": "sonin",
+        "sense": "news",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8387,8 +8488,10 @@
       {
         "traditional": "ᠰᠣᠨᠢᠷᠬᠠᠯ",
         "latin": "sonirhol",
+        "sense": "hobby",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8651,8 +8754,16 @@
       {
         "traditional": "ᠰᠤᠨᠤᠰᠬᠤ",
         "latin": "sonsoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠣᠨᠤᠰᠬᠤ",
+        "latin": "sonusqu",
+        "sense": "to hear",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8992,8 +9103,10 @@
       {
         "traditional": "ᠰᠣᠷᠢᠬᠤ",
         "latin": "sorih",
+        "sense": "to test, to try out",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9278,8 +9391,16 @@
       {
         "traditional": "ᠰᠣᠷᠣᠭᠤᠯ",
         "latin": "soruul",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠣᠷᠤᠭᠤᠯ",
+        "latin": "soruɣul",
+        "sense": "drinking straw",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9520,8 +9641,16 @@
       {
         "traditional": "ᠰᠣᠴᠢᠶᠠᠯᠢᠮ",
         "latin": "sotsializm",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠣᠼᠢᠶᠠᠯᠢᠰᠮ",
+        "latin": "sociyalism",
+        "sense": "socialism",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9685,8 +9814,16 @@
       {
         "traditional": "ᠰᠣᠶᠣᠭ᠎ᠠ",
         "latin": "soyo",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠣᠶᠤᠭ᠎ᠠ",
+        "latin": "soyuɣ-a",
+        "sense": "tusk",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9883,8 +10020,16 @@
       {
         "traditional": "ᠰᠲ᠋ᠠᠨᠼ",
         "latin": "stants",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠲ᠋ᠠᠨᠼᠢ",
+        "latin": "stanci",
+        "sense": "station",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10061,6 +10206,18 @@
         "latin": "suvairuulah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "суварга",
+    "candidates": [
+      {
+        "traditional": "ᠰᠤᠪᠤᠷᠭ᠎ᠠ",
+        "latin": "suburɣ-a",
+        "sense": "stupa, pagoda",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10257,8 +10414,10 @@
       {
         "traditional": "ᠰᠤᠪᠤᠷᠭ᠎ᠠ",
         "latin": "suvraga",
+        "sense": "alternative form of суварга (suvarga)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10719,8 +10878,10 @@
       {
         "traditional": "ᠰᠤᠳᠤᠷ",
         "latin": "sudar",
+        "sense": "scripture",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11737,6 +11898,18 @@
     ]
   },
   {
+    "cyrillic": "супермаркет",
+    "candidates": [
+      {
+        "traditional": "ᠰᠦᠫᠧᠷᠮᠠᠷᠻᠧᠲ᠋",
+        "latin": "süpērmarkēt",
+        "sense": "supermarket",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "суперфосфат",
     "candidates": [
       {
@@ -11797,8 +11970,10 @@
       {
         "traditional": "ᠰᠤᠷᠤᠭᠴᠢ",
         "latin": "suragch",
+        "sense": "apprentice, student",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11830,8 +12005,10 @@
       {
         "traditional": "ᠰᠤᠷᠤᠯᠴᠠᠬᠤ",
         "latin": "suraltsah",
+        "sense": "to learn; to study",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11863,8 +12040,17 @@
       {
         "traditional": "ᠰᠤᠷᠬᠤ",
         "latin": "surah",
+        "sense": "to learn; to study",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠰᠤᠷᠠᠬᠤ",
+        "latin": "suraqu",
+        "sense": "to ask",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11874,8 +12060,10 @@
       {
         "traditional": "ᠰᠤᠷᠪᠤᠯᠵᠢ",
         "latin": "survalj",
+        "sense": "source, origin",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12017,8 +12205,10 @@
       {
         "traditional": "ᠰᠤᠷᠭᠠᠬᠤ",
         "latin": "surgah",
+        "sense": "to teach; to train; to instruct",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12743,8 +12933,10 @@
       {
         "traditional": "ᠰᠠᠭᠤᠬᠤ",
         "latin": "suuh",
+        "sense": "to sit",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13700,8 +13892,10 @@
       {
         "traditional": "ᠰᠡᠵᠢᠭ",
         "latin": "sejig",
+        "sense": "doubt",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14173,8 +14367,10 @@
       {
         "traditional": "ᠰᠡᠯᠡᠮ᠎ᠡ",
         "latin": "selem",
+        "sense": "sword",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14206,8 +14402,16 @@
       {
         "traditional": "ᠰᠡᠯᠡᠬᠦ",
         "latin": "seleh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠡᠯᠢᠬᠦ",
+        "latin": "selikü",
+        "sense": "to swim (of animals, humans)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -14965,8 +15169,16 @@
       {
         "traditional": "ᠰᠡᠷᠭᠡᠢᠯᠡᠬᠦ",
         "latin": "sergiileh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠡᠷᠭᠡᠶᠢᠯᠡᠬᠦ",
+        "latin": "sergeyilekü",
+        "sense": "to protect",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15581,8 +15793,17 @@
       {
         "traditional": "ᠰᠡᠷᠡᠬᠦ",
         "latin": "sereh",
+        "sense": "to wake up",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠰᠡᠷᠢᠬᠦ",
+        "latin": "serikü",
+        "sense": "to wake up",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15603,8 +15824,10 @@
       {
         "traditional": "ᠰᠡᠷᠡᠭᠡ",
         "latin": "seree",
+        "sense": "fork",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15900,8 +16123,10 @@
       {
         "traditional": "ᠰᠡᠳᠬᠦᠯ",
         "latin": "setguul",
+        "sense": "magazine",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15911,8 +16136,10 @@
       {
         "traditional": "ᠰᠡᠳᠬᠦᠯᠴᠢ",
         "latin": "setguulch",
+        "sense": "journalist",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16131,8 +16358,10 @@
       {
         "traditional": "ᠰᠡᠬᠡᠭᠡᠲᠡᠨ",
         "latin": "seheeten",
+        "sense": "intelligentsia",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16978,8 +17207,10 @@
       {
         "traditional": "ᠰᠦᠯᠳᠡ",
         "latin": "suld",
+        "sense": "coat of arms",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17011,8 +17242,10 @@
       {
         "traditional": "ᠰᠦᠯᠵᠢᠬᠦ",
         "latin": "suljih",
+        "sense": "to entwine, to interweave",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17044,8 +17277,10 @@
       {
         "traditional": "ᠰᠦᠯᠵᠢᠶ᠎ᠡ",
         "latin": "suljee",
+        "sense": "chain (series of interconnected things)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17154,8 +17389,10 @@
       {
         "traditional": "ᠰᠦᠮ᠎ᠡ",
         "latin": "sum",
+        "sense": "temple, monastery",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17244,6 +17481,18 @@
         "latin": "sumiih",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "сүмс",
+    "candidates": [
+      {
+        "traditional": "ᠰᠦᠮᠦᠰᠦ",
+        "latin": "sümüsü",
+        "sense": "food, provisions",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -17352,8 +17601,16 @@
       {
         "traditional": "ᠰᠦᠨᠡᠰᠦ",
         "latin": "suns",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠦ᠋ᠨ᠋ᠡᠰᠦ",
+        "latin": "sünesü",
+        "sense": "soul",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -17528,8 +17785,10 @@
       {
         "traditional": "ᠰᠦᠷᠴᠢᠭ",
         "latin": "surchig",
+        "sense": "perfume; cologne",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17616,8 +17875,10 @@
       {
         "traditional": "ᠰᠦᠷᠦᠭ",
         "latin": "sureg",
+        "sense": "herd, flock, pack (of cattle, birds, wolves...)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17803,8 +18064,10 @@
       {
         "traditional": "ᠰᠦᠬᠡᠳᠡᠬᠦ",
         "latin": "suhdeh",
+        "sense": "to chop with an axe",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17847,8 +18110,16 @@
       {
         "traditional": "ᠰᠦ᠋",
         "latin": "suu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠦᠨ",
+        "latin": "sün",
+        "sense": "milk",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -17891,8 +18162,10 @@
       {
         "traditional": "ᠰᠡᠭᠦᠳᠡᠷ",
         "latin": "suuder",
+        "sense": "shadow, shade",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17968,8 +18241,10 @@
       {
         "traditional": "ᠰᠡᠭᠦᠵᠢ",
         "latin": "suuj",
+        "sense": "pelvis, hip, thigh",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17979,8 +18254,10 @@
       {
         "traditional": "ᠰᠡᠭᠦᠯ",
         "latin": "suul",
+        "sense": "tail, end, final",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -18276,8 +18553,16 @@
       {
         "traditional": "ᠰᠥᠭᠥᠳᠬᠦ",
         "latin": "sugduh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠰᠥᠭᠦᠳᠬᠦ",
+        "latin": "sögüdkü",
+        "sense": "to kneel",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

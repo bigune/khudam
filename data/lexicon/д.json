@@ -27,8 +27,10 @@
       {
         "traditional": "ᠳᠠᠪᠤᠤ",
         "latin": "daavuu",
+        "sense": "cloth; fabric",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -247,8 +249,10 @@
       {
         "traditional": "ᠳᠠᠭᠠᠮ",
         "latin": "daam",
+        "sense": "draughts (board game)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -434,8 +438,10 @@
       {
         "traditional": "ᠳᠠᠭᠠᠳᠬᠠᠯ",
         "latin": "daatgal",
+        "sense": "insurance",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -588,8 +594,17 @@
       {
         "traditional": "ᠳᠠᠪᠠᠭ᠎ᠠ",
         "latin": "davaa",
+        "sense": "mountain pass, mountain range",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠳᠠᠸᠠ",
+        "latin": "dawa",
+        "sense": "Monday (day of the week)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1292,8 +1307,10 @@
       {
         "traditional": "ᠳᠠᠪᠬᠤᠷ",
         "latin": "davhar",
+        "sense": "storey; floor",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1303,8 +1320,10 @@
       {
         "traditional": "ᠳᠠᠪᠬᠤᠷᠭ᠎ᠠ",
         "latin": "davharga",
+        "sense": "layer; stratum",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2574,6 +2593,18 @@
     ]
   },
   {
+    "cyrillic": "дайгдах",
+    "candidates": [
+      {
+        "traditional": "ᠳᠠᠶ᠋ᠢᠭᠳᠠᠬᠤ",
+        "latin": "dayiɣdaqu",
+        "sense": "passive voice in -гдах (-gdax) of дайх (dajx)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "дайз",
     "candidates": [
       {
@@ -2744,8 +2775,23 @@
       {
         "traditional": "ᠳᠠᠢᠷ",
         "latin": "dair",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠠᠭᠠᠷᠢ",
+        "latin": "daɣari",
+        "sense": "abrasion",
+        "verified": false,
+        "source": "wiktionary"
+      },
+      {
+        "traditional": "ᠳᠠᠶᠢᠷ",
+        "latin": "dayir",
+        "sense": "abrasion",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2920,8 +2966,16 @@
       {
         "traditional": "ᠳᠠᠢᠰᠤᠨ",
         "latin": "daisan",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠠᠶᠢᠰᠤᠨ",
+        "latin": "dayisun",
+        "sense": "enemy; foe; rival",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2964,8 +3018,16 @@
       {
         "traditional": "ᠳᠠᠢᠬᠤ",
         "latin": "daih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠠᠶ᠋ᠢᠬᠤ",
+        "latin": "dayiqu",
+        "sense": "to haul off with a vehicle",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3063,8 +3125,10 @@
       {
         "traditional": "ᠳᠠᠯᠠᠪᠴᠢ",
         "latin": "dalavch",
+        "sense": "wing",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3118,8 +3182,10 @@
       {
         "traditional": "ᠳᠠᠯᠠᠢ",
         "latin": "dalai",
+        "sense": "ocean, sea",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3201,13 +3267,27 @@
     ]
   },
   {
+    "cyrillic": "далайчин",
+    "candidates": [
+      {
+        "traditional": "ᠳᠠᠯᠠᠶᠢᠴᠢᠨ",
+        "latin": "dalayičin",
+        "sense": "sailor, seaman",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "далан",
     "candidates": [
       {
         "traditional": "ᠳᠠᠯᠠᠨ",
         "latin": "dalan",
+        "sense": "oblique of дал (dal, “seventy”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3228,8 +3308,10 @@
       {
         "traditional": "ᠳᠠᠯᠪᠠᠭ᠎ᠠ",
         "latin": "dalbaa",
+        "sense": "flag",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4438,8 +4520,10 @@
       {
         "traditional": "ᠳᠠᠮᠨᠠᠬᠤ",
         "latin": "damnah",
+        "sense": "to haul using a carrying pole",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4889,8 +4973,10 @@
       {
         "traditional": "ᠳᠠᠩᠰᠠ",
         "latin": "dans",
+        "sense": "account book",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5175,8 +5261,17 @@
       {
         "traditional": "ᠳᠠᠷᠠᠭ᠎ᠠ",
         "latin": "daraa",
+        "sense": "after, afterwards",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠳᠠᠷᠤᠭ᠎ᠠ",
+        "latin": "daruɣ-a",
+        "sense": "obstruction, encumbrance",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5186,8 +5281,10 @@
       {
         "traditional": "ᠳᠠᠷᠠᠭᠠᠯᠠᠯ",
         "latin": "daraalal",
+        "sense": "order, queue, sentence",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5489,6 +5586,18 @@
     ]
   },
   {
+    "cyrillic": "дарангуйлагч",
+    "candidates": [
+      {
+        "traditional": "ᠳᠠᠷᠤᠩᠭᠤᠢᠯᠠᠭᠴᠢ",
+        "latin": "darungɣuilaɣči",
+        "sense": "dictator",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "дарангуйлах",
     "candidates": [
       {
@@ -5527,8 +5636,16 @@
       {
         "traditional": "ᠳᠠᠷᠠᠬᠤ",
         "latin": "darah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠠᠷᠤᠬᠤ",
+        "latin": "daruqu",
+        "sense": "to repress",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6259,6 +6376,18 @@
     ]
   },
   {
+    "cyrillic": "дарсан",
+    "candidates": [
+      {
+        "traditional": "ᠳᠠᠷᠤᠭᠰᠠᠨ",
+        "latin": "daruɣsan",
+        "sense": "salted",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "дарсганах",
     "candidates": [
       {
@@ -6638,8 +6767,10 @@
       {
         "traditional": "ᠳᠠᠷᠢ",
         "latin": "dari",
+        "sense": "gunpowder",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6715,8 +6846,10 @@
       {
         "traditional": "ᠳᠠᠰᠬᠤ",
         "latin": "dasah",
+        "sense": "to get accustomed",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6726,8 +6859,10 @@
       {
         "traditional": "ᠳᠠᠰᠬᠠᠯ",
         "latin": "dasgal",
+        "sense": "exercise (mental or physical)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6836,8 +6971,10 @@
       {
         "traditional": "ᠳᠠᠬᠢᠨ",
         "latin": "dahin",
+        "sense": "again",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7370,6 +7507,18 @@
     ]
   },
   {
+    "cyrillic": "диваажин",
+    "candidates": [
+      {
+        "traditional": "ᠳ᠋ᠢᠸᠠᠵᠠᠨ",
+        "latin": "diwaǰan",
+        "sense": "paradise",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "диван",
     "candidates": [
       {
@@ -7529,8 +7678,16 @@
       {
         "traditional": "ᠳᠡᠢᠯᠬᠦ",
         "latin": "diileh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠡᠶ᠋ᠢᠯᠬᠦ",
+        "latin": "deyilkü",
+        "sense": "to defeat, to win",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7738,8 +7895,10 @@
       {
         "traditional": "ᠳᠣᠪᠣ",
         "latin": "dov",
+        "sense": "hill",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7760,8 +7919,10 @@
       {
         "traditional": "ᠳᠣᠪᠵᠢᠶ᠎ᠠ",
         "latin": "dovjoo",
+        "sense": "foundation",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7826,8 +7987,16 @@
       {
         "traditional": "ᠳᠣᠪᠲᠣᠯᠬᠤ",
         "latin": "dovtloh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠣᠪᠲᠤᠯᠬᠤ",
+        "latin": "dobtulqu",
+        "sense": "to gallop (to ride swiftly)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8343,8 +8512,10 @@
       {
         "traditional": "ᠳᠣᠭᠰᠢᠨ",
         "latin": "dogshin",
+        "sense": "wild (untamed)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8596,8 +8767,10 @@
       {
         "traditional": "ᠳᠣᠯᠭᠢᠶᠠᠨ",
         "latin": "dolgion",
+        "sense": "wave",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9157,8 +9330,10 @@
       {
         "traditional": "ᠳᠣᠯᠢᠶᠠᠬᠤ",
         "latin": "dolooh",
+        "sense": "to lick",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9278,8 +9453,16 @@
       {
         "traditional": "ᠳᠣᠮᠣᠭ",
         "latin": "domog",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠣᠮᠤᠭ",
+        "latin": "domuɣ",
+        "sense": "legend, myth, fable",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10290,8 +10473,16 @@
       {
         "traditional": "ᠳᠣᠷᠣᠢ",
         "latin": "doroi",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠣᠷᠤᠢ",
+        "latin": "dorui",
+        "sense": "weak, feeble, lax, poor, underdeveloped",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10356,8 +10547,16 @@
       {
         "traditional": "ᠳᠣᠷᠣᠮᠵᠢᠯᠠᠯ",
         "latin": "doromjlol",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠣᠷᠤᠮᠵᠢᠯᠠᠯ",
+        "latin": "dorumǰilal",
+        "sense": "humiliation, outrage, insult",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10378,8 +10577,16 @@
       {
         "traditional": "ᠳᠤᠷᠤᠮᠵᠢᠯᠠᠬᠤ",
         "latin": "doromjloh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠣᠷᠤᠮᠵᠢᠯᠠᠬᠤ",
+        "latin": "dorumǰilaqu",
+        "sense": "to insult, humiliate, belittle",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10796,8 +11003,16 @@
       {
         "traditional": "ᠳᠣᠲᠣᠷ᠎ᠠ",
         "latin": "dotor",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠣᠲᠤᠷ᠎ᠠ",
+        "latin": "dotur-a",
+        "sense": "in, inside",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11016,8 +11231,10 @@
       {
         "traditional": "ᠳᠣᠬᠢᠶ᠎ᠠ",
         "latin": "dohio",
+        "sense": "gesture, signal",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11093,8 +11310,10 @@
       {
         "traditional": "ᠳᠣᠬᠢᠬᠤ",
         "latin": "dohih",
+        "sense": "to beat (a drum)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11390,8 +11609,10 @@
       {
         "traditional": "ᠳᠤᠭᠠᠩ",
         "latin": "dugan",
+        "sense": "small temple, shrine",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11665,8 +11886,16 @@
       {
         "traditional": "ᠳᠤᠭᠤᠢ",
         "latin": "dugui",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠣᠭᠣᠢ",
+        "latin": "doɣoi",
+        "sense": "circle",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11797,8 +12026,10 @@
       {
         "traditional": "ᠳᠤᠳᠠᠷᠠᠩ",
         "latin": "dudran",
+        "sense": "donkey foal",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12149,8 +12380,10 @@
       {
         "traditional": "ᠳᠤᠩ",
         "latin": "dun",
+        "sense": "shell",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12248,8 +12481,10 @@
       {
         "traditional": "ᠳᠤᠮᠳᠠ",
         "latin": "dund",
+        "sense": "amidst, among",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12666,8 +12901,10 @@
       {
         "traditional": "ᠳᠤᠷᠠᠨ",
         "latin": "duran",
+        "sense": "binoculars; telescope",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12798,8 +13035,10 @@
       {
         "traditional": "ᠳᠤᠷᠠᠳᠬᠤ",
         "latin": "durdah",
+        "sense": "to mention, to allude",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12919,8 +13158,10 @@
       {
         "traditional": "ᠳᠤᠷᠠᠯᠠᠬᠤ",
         "latin": "durlah",
+        "sense": "to want",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13238,8 +13479,10 @@
       {
         "traditional": "ᠳᠤᠰᠤᠯ",
         "latin": "dusal",
+        "sense": "drop",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13326,8 +13569,10 @@
       {
         "traditional": "ᠳᠤᠲᠠᠬᠤ",
         "latin": "dutah",
+        "sense": "to lack",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13359,8 +13604,10 @@
       {
         "traditional": "ᠳᠤᠲᠠᠭᠤ",
         "latin": "dutuu",
+        "sense": "insufficient",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13414,8 +13661,24 @@
       {
         "traditional": "ᠳᠠᠭᠤᠤ",
         "latin": "duu",
+        "sense": "song",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠳᠠᠭᠤ",
+        "latin": "daɣu",
+        "sense": "song",
+        "verified": false,
+        "source": "wiktionary"
+      },
+      {
+        "traditional": "ᠳᠤᠤ",
+        "latin": "duu",
+        "sense": "song",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13480,8 +13743,10 @@
       {
         "traditional": "ᠳᠠᠭᠤᠳᠠᠯᠭ᠎ᠠ",
         "latin": "duudlaga",
+        "sense": "pronunciation",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13535,8 +13800,16 @@
       {
         "traditional": "ᠳᠠᠭᠤᠯᠠᠬᠤ",
         "latin": "duulah",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠤᠭᠤᠯᠠᠬᠤ",
+        "latin": "duɣulaqu",
+        "sense": "to hear",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13546,8 +13819,10 @@
       {
         "traditional": "ᠳᠤᠭᠤᠯᠠᠭ᠎ᠠ",
         "latin": "duulga",
+        "sense": "helmet",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13810,8 +14085,10 @@
       {
         "traditional": "ᠳᠠᠭᠤᠷᠢ",
         "latin": "duuri",
+        "sense": "opera",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13942,8 +14219,10 @@
       {
         "traditional": "ᠳᠠᠭᠤᠰᠬᠠᠬᠤ",
         "latin": "duusgah",
+        "sense": "to finish; to end",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14021,6 +14300,18 @@
         "latin": "duuch",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "дуучин",
+    "candidates": [
+      {
+        "traditional": "ᠳᠠᠭᠤᠴᠢᠨ",
+        "latin": "daɣučin",
+        "sense": "singer",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -14426,8 +14717,10 @@
       {
         "traditional": "ᠳᠡᠪᠲᠡᠷ",
         "latin": "devter",
+        "sense": "notebook, copybook, writing pad",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14602,8 +14895,10 @@
       {
         "traditional": "ᠳᠡᠪᠰᠢᠯᠲᠡ",
         "latin": "devshilt",
+        "sense": "promotion",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14635,8 +14930,10 @@
       {
         "traditional": "ᠳᠡᠪᠰᠢᠬᠦ",
         "latin": "devshih",
+        "sense": "to make progress",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15658,8 +15955,17 @@
       {
         "traditional": "ᠳᠡᠯ",
         "latin": "del",
+        "sense": "mane (of a horse)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠳᠡᠯᠢ",
+        "latin": "deli",
+        "sense": "only used in дэл сул (del sul)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -15812,8 +16118,10 @@
       {
         "traditional": "ᠳᠡᠯᠪᠡᠯᠬᠦ",
         "latin": "delbeleh",
+        "sense": "to explode, blow up",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15999,8 +16307,10 @@
       {
         "traditional": "ᠳᠡᠯᠭᠡᠬᠦ",
         "latin": "delgeh",
+        "sense": "to display, lay, open wide, unfold",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16010,8 +16320,10 @@
       {
         "traditional": "ᠳᠡᠯᠭᠡᠴᠡ",
         "latin": "delgets",
+        "sense": "screen, board",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16054,8 +16366,10 @@
       {
         "traditional": "ᠳᠡᠯᠭᠡᠭᠦᠷ",
         "latin": "delguur",
+        "sense": "store, shop",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16307,8 +16621,16 @@
       {
         "traditional": "ᠳᠡᠯᠡᠬᠡᠢ",
         "latin": "delhii",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠡᠯᠡᠭᠡᠢ",
+        "latin": "delegei",
+        "sense": "earth",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -16384,8 +16706,16 @@
       {
         "traditional": "ᠳᠡᠯᠡᠨ",
         "latin": "delen",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠡᠯᠡᠩ",
+        "latin": "deleng",
+        "sense": "udder",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -16439,8 +16769,10 @@
       {
         "traditional": "ᠳᠡᠯᠢᠭᠦᠦ",
         "latin": "deluu",
+        "sense": "spleen",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16901,8 +17233,16 @@
       {
         "traditional": "ᠳ᠋ᠧᠨᠯᠦ",
         "latin": "denluu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳ᠋ᠧᠩᠯᠦ",
+        "latin": "dēnglü",
+        "sense": "lantern",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -16912,8 +17252,10 @@
       {
         "traditional": "ᠳᠡᠩᠰᠡ",
         "latin": "dens",
+        "sense": "hand-held scales",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16945,8 +17287,16 @@
       {
         "traditional": "ᠳᠡᠩᠰᠡᠯᠬᠦ",
         "latin": "densleh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠡᠩᠰᠡᠯᠡᠬᠦ",
+        "latin": "dengselekü",
+        "sense": "to weigh",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -17154,8 +17504,10 @@
       {
         "traditional": "ᠳᠡᠷ᠎ᠡ",
         "latin": "der",
+        "sense": "pillow",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17495,8 +17847,10 @@
       {
         "traditional": "ᠳᠡᠷᠡᠰᠦ",
         "latin": "ders",
+        "sense": "straw",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17770,8 +18124,10 @@
       {
         "traditional": "ᠳᠡᠭᠡᠪᠦᠷ",
         "latin": "deever",
+        "sense": "roof",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17902,8 +18258,10 @@
       {
         "traditional": "ᠳᠡᠭᠡᠳᠦ",
         "latin": "deed",
+        "sense": "upper",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -18001,8 +18359,10 @@
       {
         "traditional": "ᠳᠡᠪᠡᠯ",
         "latin": "deel",
+        "sense": "deel (a traditional Mongolian cloak, traditionally worn with a sash)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -18012,8 +18372,10 @@
       {
         "traditional": "ᠳᠡᠭᠡᠷ᠎ᠡ",
         "latin": "deer",
+        "sense": "on",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -18210,8 +18572,10 @@
       {
         "traditional": "ᠳᠡᠭᠡᠷᠡᠮᠴᠢᠨ",
         "latin": "deeremchin",
+        "sense": "bandit",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -18276,8 +18640,10 @@
       {
         "traditional": "ᠳᠡᠭᠡᠭᠰᠢ",
         "latin": "deesh",
+        "sense": "up, upwards",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -19140,6 +19506,18 @@
     ]
   },
   {
+    "cyrillic": "дүпү",
+    "candidates": [
+      {
+        "traditional": "ᠳ᠋ᠧᠦᠹᠦ᠋",
+        "latin": "dēüfü",
+        "sense": "tofu",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "дүр",
     "candidates": [
       {
@@ -19332,8 +19710,10 @@
       {
         "traditional": "ᠳᠦᠷᠰᠦ",
         "latin": "durs",
+        "sense": "shape, form, figure",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -19497,8 +19877,10 @@
       {
         "traditional": "ᠳᠦᠷᠢᠮ",
         "latin": "durem",
+        "sense": "rule, charter, regulations, law, regime",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -19585,8 +19967,10 @@
       {
         "traditional": "ᠳᠡᠭᠦᠦ",
         "latin": "duu",
+        "sense": "younger sibling or cousin (often used to refer to other blood relatives and…",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20058,8 +20442,10 @@
       {
         "traditional": "ᠳᠥᠵᠢᠷᠡᠬᠦ",
         "latin": "dujruh",
+        "sense": "to grow indifferent, to stop paying attention",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20091,8 +20477,16 @@
       {
         "traditional": "ᠳᠥᠯᠥᠭᠡᠨ",
         "latin": "dulguun",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠥᠯᠦᠭᠡᠨ",
+        "latin": "dölügen",
+        "sense": "calm, quiet, peaceful, gentle",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -20493,13 +20887,33 @@
     ]
   },
   {
+    "cyrillic": "дөрвөд",
+    "candidates": [
+      {
+        "traditional": "ᠳᠥ᠋ᠷᠪᠡᠳ",
+        "latin": "dörbed",
+        "sense": "(⁓ аймаг) Dörböds, an Oirat-Mongol tribe ruled by Esen’s descendants of the…",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "дөрвөл",
     "candidates": [
       {
         "traditional": "ᠳᠥᠷᠪᠡᠯ",
         "latin": "durvul",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠥ᠋ᠷᠪᠡᠯ",
+        "latin": "dörbel",
+        "sense": "(⁓ хөгжим) quartet",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -20553,8 +20967,10 @@
       {
         "traditional": "ᠳᠥᠷᠪᠡᠨ",
         "latin": "durvun",
+        "sense": "four",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20806,8 +21222,16 @@
       {
         "traditional": "ᠳᠥᠷᠥᠭᠡ",
         "latin": "duruu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠳᠥᠷᠦᠭᠡ",
+        "latin": "dörüge",
+        "sense": "stirrup, pedal",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -21026,8 +21450,10 @@
       {
         "traditional": "ᠳᠥᠴᠢᠨ",
         "latin": "duchin",
+        "sense": "oblique of дөч (döč, “forty”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

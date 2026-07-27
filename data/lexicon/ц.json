@@ -517,6 +517,18 @@
     ]
   },
   {
+    "cyrillic": "цавуу",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠪᠠᠤ",
+        "latin": "čabau",
+        "sense": "glue",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "цавуудах",
     "candidates": [
       {
@@ -874,8 +886,10 @@
       {
         "traditional": "ᠴᠠᠭᠠᠨ",
         "latin": "tsagaan",
+        "sense": "white",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1050,8 +1064,10 @@
       {
         "traditional": "ᠴᠠᠭᠳᠠᠭ᠎ᠠ",
         "latin": "tsagdaa",
+        "sense": "police",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1085,6 +1101,18 @@
         "latin": "tsagduulah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "цаглабар",
+    "candidates": [
+      {
+        "traditional": "ᠴᠠᠭᠯᠠᠪᠤᠷᠢ",
+        "latin": "čaɣlaburi",
+        "sense": "calendar",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1237,8 +1265,10 @@
       {
         "traditional": "ᠴᠠᠳᠢᠭ",
         "latin": "tsadig",
+        "sense": "story; tale",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1347,8 +1377,16 @@
       {
         "traditional": "ᠴᠠᠢᠵᠠ",
         "latin": "tsaiz",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠠᠶᠢᠵᠠ",
+        "latin": "čayiǰa",
+        "sense": "castle",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1413,8 +1451,16 @@
       {
         "traditional": "ᠴᠠᠢᠷ",
         "latin": "tsair",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠠᠶᠢᠷ",
+        "latin": "čayir",
+        "sense": "zinc",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2040,8 +2086,10 @@
       {
         "traditional": "ᠴᠠᠮᠬᠠᠭ",
         "latin": "tsamhag",
+        "sense": "tower",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2062,8 +2110,10 @@
       {
         "traditional": "ᠴᠠᠮᠴᠠ",
         "latin": "tsamts",
+        "sense": "jacket, smock, shirt",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2095,8 +2145,10 @@
       {
         "traditional": "ᠴᠠᠨ᠎ᠠ",
         "latin": "tsana",
+        "sense": "ski",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2106,8 +2158,10 @@
       {
         "traditional": "ᠴᠠᠩᠭᠠᠭ᠎ᠠ",
         "latin": "tsangaa",
+        "sense": "thirst",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2161,8 +2215,10 @@
       {
         "traditional": "ᠴᠠᠩᠭᠠᠬᠤ",
         "latin": "tsangah",
+        "sense": "to thirst, to be thirsty",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2755,8 +2811,10 @@
       {
         "traditional": "ᠴᠠᠷᠠᠰᠤ",
         "latin": "tsars",
+        "sense": "oak",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2799,8 +2857,16 @@
       {
         "traditional": "ᠴᠠᠷᠴᠠᠭ᠎ᠠ",
         "latin": "tsartsaa",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠠᠷᠴᠠ",
+        "latin": "čarča",
+        "sense": "grasshopper",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2964,8 +3030,10 @@
       {
         "traditional": "ᠴᠠᠰᠤ",
         "latin": "tsas",
+        "sense": "snow",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3789,8 +3857,16 @@
       {
         "traditional": "ᠼᠢᠷᠺ",
         "latin": "tsirk",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠼᠢᠷᠻ",
+        "latin": "cirk",
+        "sense": "circus",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4020,8 +4096,10 @@
       {
         "traditional": "ᠴᠣᠭᠴᠠ",
         "latin": "tsogts",
+        "sense": "pile, heap",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4097,8 +4175,10 @@
       {
         "traditional": "ᠴᠣᠭᠴᠠᠰ",
         "latin": "tsogtsos",
+        "sense": "plural of цогц (cogc, “body”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4768,8 +4848,16 @@
       {
         "traditional": "ᠴᠣᠮᠣᠭ",
         "latin": "tsomog",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠣᠮᠤᠭ",
+        "latin": "čomuɣ",
+        "sense": "album",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5199,6 +5287,18 @@
         "latin": "tsonoh",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "цонх",
+    "candidates": [
+      {
+        "traditional": "ᠴᠣᠩᠬᠤ",
+        "latin": "čongqu",
+        "sense": "window",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6022,8 +6122,16 @@
       {
         "traditional": "ᠴᠣᠬᠣ",
         "latin": "tsoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠣᠬᠤ",
+        "latin": "čoqu",
+        "sense": "beetle",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6671,8 +6779,10 @@
       {
         "traditional": "ᠴᠤᠭᠯᠠᠭᠤᠯᠬᠤ",
         "latin": "tsugluulah",
+        "sense": "causative voice in -уулах (-uulax) of цуглах (cuglax, “to gather, to convene”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6721,6 +6831,18 @@
     ]
   },
   {
+    "cyrillic": "цуйван",
+    "candidates": [
+      {
+        "traditional": "ᠴᠤᠶᠢᠪᠢᠩ",
+        "latin": "čuyibing",
+        "sense": "tsuivan (noodle stew with mutton or beef and vegetables)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "цул",
     "candidates": [
       {
@@ -6737,8 +6859,10 @@
       {
         "traditional": "ᠴᠤᠯᠪᠤᠭᠤᠷ",
         "latin": "tsulbuur",
+        "sense": "rein, a thong for leading a horse",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7474,8 +7598,10 @@
       {
         "traditional": "ᠴᠢᠰᠤ",
         "latin": "tsus",
+        "sense": "blood",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7716,8 +7842,10 @@
       {
         "traditional": "ᠴᠤᠤ",
         "latin": "tsuu",
+        "sense": "vinegar",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7958,8 +8086,10 @@
       {
         "traditional": "ᠴᠤᠭᠤᠷ",
         "latin": "tsuur",
+        "sense": "fife",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8541,8 +8671,10 @@
       {
         "traditional": "ᠴᠥᠪᠦᠷᠢᠭᠦᠦ",
         "latin": "tsevruu",
+        "sense": "blister",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8640,8 +8772,10 @@
       {
         "traditional": "ᠴᠡᠪᠡᠷ",
         "latin": "tsever",
+        "sense": "clean",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8717,8 +8851,10 @@
       {
         "traditional": "ᠴᠡᠪᠡᠷᠯᠡᠬᠦ",
         "latin": "tseverleh",
+        "sense": "to clean, to tidy up",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9905,8 +10041,16 @@
       {
         "traditional": "ᠴᠡᠩᠬᠡᠷ",
         "latin": "tsenher",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠠᠩᠭᠡ᠊ᠷ",
+        "latin": "čangɣe-r",
+        "sense": "light blue",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10279,8 +10423,10 @@
       {
         "traditional": "ᠴᠡᠷᠢᠭ",
         "latin": "tsereg",
+        "sense": "soldier",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10389,8 +10535,16 @@
       {
         "traditional": "ᠴᠡᠬᠡ",
         "latin": "tseh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠠᠭᠡᠡ᠋",
+        "latin": "čaɣee",
+        "sense": "straight (not curved or sideways)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10576,8 +10730,10 @@
       {
         "traditional": "ᠴᠡᠴᠡᠷᠯᠢᠭ",
         "latin": "tsetserleg",
+        "sense": "park; garden",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10675,8 +10831,10 @@
       {
         "traditional": "ᠴᠡᠭᠡᠵᠢ",
         "latin": "tseej",
+        "sense": "chest (body part)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11665,8 +11823,10 @@
       {
         "traditional": "ᠴᠦᠴᠡ",
         "latin": "tsuuts",
+        "sense": "chisel",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11995,8 +12155,10 @@
       {
         "traditional": "ᠴᠥᠯ",
         "latin": "tsul",
+        "sense": "desert (an extremely dry area of land hostile to animal and plant life)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12089,6 +12251,18 @@
     ]
   },
   {
+    "cyrillic": "цөлхөөв",
+    "candidates": [
+      {
+        "traditional": "ᠴᠡᠯᠬᠥᠪᠦ",
+        "latin": "čelköbü",
+        "sense": "ruble",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "цөлүүлэх",
     "candidates": [
       {
@@ -12127,8 +12301,16 @@
       {
         "traditional": "ᠴᠥᠮ",
         "latin": "tsum",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠥᠮᠡ",
+        "latin": "čöme",
+        "sense": "nucleus; kernel; core",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -12666,8 +12848,16 @@
       {
         "traditional": "ᠴᠥᠴᠥᠭᠡᠢ",
         "latin": "tsutsgii",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠴᠥᠴᠦᠭᠡᠢ",
+        "latin": "čöčügei",
+        "sense": "cream (from raw or boiled milk)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -12842,8 +13032,10 @@
       {
         "traditional": "ᠴᠥᠭᠡᠨ",
         "latin": "tsuun",
+        "sense": "few (small in number)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

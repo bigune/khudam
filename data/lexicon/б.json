@@ -60,8 +60,10 @@
       {
         "traditional": "ᠪᠠᠭᠠᠪᠤᠷ",
         "latin": "baavar",
+        "sense": "\"baavar\" round plates or disks on the saddle cloth",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -71,8 +73,10 @@
       {
         "traditional": "ᠪᠠᠭᠠᠪᠠᠭᠠᠢ",
         "latin": "baavgai",
+        "sense": "bear",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -181,8 +185,10 @@
       {
         "traditional": "ᠪᠠᠭᠠᠷ",
         "latin": "baar",
+        "sense": "bar (drinking establishment)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -247,8 +253,10 @@
       {
         "traditional": "ᠪᠠᠭᠠᠰᠤ",
         "latin": "baas",
+        "sense": "excrement, manure, shit",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -258,8 +266,10 @@
       {
         "traditional": "ᠪᠠᠰᠠᠩ",
         "latin": "baasan",
+        "sense": "Friday",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -324,8 +334,16 @@
       {
         "traditional": "ᠪᠠᠭᠠᠲᠤᠷ",
         "latin": "baatar",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠠᠭ᠋ᠠᠲᠤᠷ",
+        "latin": "baɣatur",
+        "sense": "hero",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -379,8 +397,10 @@
       {
         "traditional": "ᠪᠠᠭᠠᠬᠤ",
         "latin": "baah",
+        "sense": "to defecate",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -698,8 +718,10 @@
       {
         "traditional": "ᠪᠠᠭ",
         "latin": "bag",
+        "sense": "team, group, mask, cloak, brigade, contingent, gang, troop",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -709,8 +731,10 @@
       {
         "traditional": "ᠪᠠᠭ᠎ᠠ",
         "latin": "baga",
+        "sense": "small",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -742,8 +766,10 @@
       {
         "traditional": "ᠪᠠᠭᠠᠵᠢ",
         "latin": "bagaj",
+        "sense": "device; tool",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -775,8 +801,16 @@
       {
         "traditional": "ᠪᠠᠭᠠᠯᠵᠤᠷ",
         "latin": "bagalzuur",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠠᠭᠠᠯᠵᠠᠭᠤᠷ",
+        "latin": "baɣalǰaɣur",
+        "sense": "throat, pharynx, gizzard",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -819,8 +853,10 @@
       {
         "traditional": "ᠪᠠᠭᠠᠨ᠎ᠠ",
         "latin": "bagana",
+        "sense": "column, pillar, post, pole",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1149,8 +1185,10 @@
       {
         "traditional": "ᠪᠠᠭᠰᠠ",
         "latin": "bags",
+        "sense": "brush (for applying paint, makeup, plaster, ...)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2189,6 +2227,18 @@
     ]
   },
   {
+    "cyrillic": "байгуулага",
+    "candidates": [
+      {
+        "traditional": "ᠪᠠᠢᠭᠤᠯᠭ᠎ᠠ",
+        "latin": "baiɣulɣ-a",
+        "sense": "organisation; establishment; institution",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "байгуулагдаж",
     "candidates": [
       {
@@ -2260,8 +2310,16 @@
       {
         "traditional": "ᠪᠠᠢᠭᠤᠯᠤᠯᠲᠠ",
         "latin": "baiguulalt",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠠᠶ᠋ᠢᠭᠤᠯᠤᠯᠲᠠ",
+        "latin": "bayiɣululta",
+        "sense": "composition",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2524,8 +2582,16 @@
       {
         "traditional": "ᠪᠠᠢᠯᠳᠤᠭᠠᠨ",
         "latin": "baildaan",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠠᠶ᠋ᠢᠯᠳᠤᠭᠠᠨ",
+        "latin": "bayilduɣan",
+        "sense": "battle",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2966,6 +3032,18 @@
         "latin": "baits",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "байцаа",
+    "candidates": [
+      {
+        "traditional": "ᠪᠠᠶᠢᠴᠠᠭ᠎ᠠ",
+        "latin": "bayičaɣ-a",
+        "sense": "cabbage",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3767,8 +3845,10 @@
       {
         "traditional": "ᠪᠠᠯᠠᠯᠤᠭᠤᠷ",
         "latin": "balluur",
+        "sense": "eraser",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3866,8 +3946,17 @@
       {
         "traditional": "ᠪᠠᠯᠲᠤ",
         "latin": "balt",
+        "sense": "honeyed, honey-bearing",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠪᠠᠯᠲᠠ",
+        "latin": "balta",
+        "sense": "battle axe",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4361,8 +4450,10 @@
       {
         "traditional": "ᠪᠠᠮᠪᠠᠢ",
         "latin": "bambai",
+        "sense": "shield",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4691,8 +4782,10 @@
       {
         "traditional": "ᠪᠠᠩᠵᠠ",
         "latin": "banz",
+        "sense": "board, plank, tablet",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4702,8 +4795,16 @@
       {
         "traditional": "ᠪᠠᠩᠵᠠᠯ",
         "latin": "banzal",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠠᠨᠵᠠᠯ",
+        "latin": "banǰal",
+        "sense": "skirt",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4790,8 +4891,10 @@
       {
         "traditional": "ᠪᠠᠨᠲᠠᠩ",
         "latin": "bantan",
+        "sense": "mush",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4867,8 +4970,10 @@
       {
         "traditional": "ᠪᠠᠩᠬᠤᠷ",
         "latin": "banhar",
+        "sense": "having a stocky snout or beak",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4900,8 +5005,10 @@
       {
         "traditional": "ᠪᠠᠩᠰᠢ",
         "latin": "bansh",
+        "sense": "boiled dumpling",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4911,8 +5018,10 @@
       {
         "traditional": "ᠪᠠᠷᠰ",
         "latin": "bar",
+        "sense": "tiger",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4922,8 +5031,16 @@
       {
         "traditional": "ᠪᠠᠷ᠎ᠠ",
         "latin": "baraa",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠠᠷᠠᠭ᠎ᠠ",
+        "latin": "baraɣ-a",
+        "sense": "contour, outline, silhouette",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5258,13 +5375,33 @@
     ]
   },
   {
+    "cyrillic": "барамна",
+    "candidates": [
+      {
+        "traditional": "ᠪᠡ᠊ᠷ᠊ᠮᠠᠨ᠋ᠣ",
+        "latin": "be-r-mano",
+        "sense": "atom",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "барамнас",
     "candidates": [
       {
         "traditional": "ᠪᠠᠷᠮᠠᠨᠤᠰ",
         "latin": "baramnas",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠡ᠊ᠷ᠊ᠮᠠᠨ᠋ᠣᠰ",
+        "latin": "be-r-manos",
+        "sense": "plural of барамна (baramna)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5307,8 +5444,10 @@
       {
         "traditional": "ᠪᠠᠷᠠᠬᠤ",
         "latin": "barah",
+        "sense": "to use up, exhaust, squander",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5373,8 +5512,16 @@
       {
         "traditional": "ᠪᠠᠷᠭᠤ",
         "latin": "barga",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠠᠷᠭ᠋ᠤ",
+        "latin": "barɣu",
+        "sense": "crude",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -5461,8 +5608,10 @@
       {
         "traditional": "ᠪᠠᠷᠳᠠᠮ",
         "latin": "bardam",
+        "sense": "proud, boastful",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5780,8 +5929,10 @@
       {
         "traditional": "ᠪᠠᠷᠢᠯᠳᠤᠬᠤ",
         "latin": "barildah",
+        "sense": "to wrestle",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5835,8 +5986,10 @@
       {
         "traditional": "ᠪᠠᠷᠢᠮᠠᠯ",
         "latin": "barimal",
+        "sense": "sculpture",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5890,8 +6043,10 @@
       {
         "traditional": "ᠪᠠᠷᠢᠮᠲᠠ",
         "latin": "barimt",
+        "sense": "receipt",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6088,8 +6243,10 @@
       {
         "traditional": "ᠪᠠᠷᠢᠭᠤᠯ",
         "latin": "bariul",
+        "sense": "handle, haft, hilt, grip",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6143,8 +6300,10 @@
       {
         "traditional": "ᠪᠠᠷᠢᠬᠤ",
         "latin": "barih",
+        "sense": "to hold",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6396,8 +6555,10 @@
       {
         "traditional": "ᠪᠠᠷᠠᠭᠤᠨ",
         "latin": "baruun",
+        "sense": "off",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6409,6 +6570,18 @@
         "latin": "baruunbayan",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "баруунтан",
+    "candidates": [
+      {
+        "traditional": "ᠪᠠᠷᠠᠭ᠋ᠤᠨᠲᠠᠨ",
+        "latin": "baraɣuntan",
+        "sense": "rightist",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6805,6 +6978,18 @@
         "latin": "basguulah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "бассейн",
+    "candidates": [
+      {
+        "traditional": "ᠪᠠᠰᠰᠧᠶᠢᠨ",
+        "latin": "bassēyin",
+        "sense": "swimming pool",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7223,6 +7408,18 @@
         "latin": "batrah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "батраш",
+    "candidates": [
+      {
+        "traditional": "ᠪᠠᠲᠤᠷᠠᠰᠢ",
+        "latin": "baturasi",
+        "sense": "mint",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7826,8 +8023,16 @@
       {
         "traditional": "ᠪᠠᠶᠠᠳ",
         "latin": "bayad",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠠᠶ᠋ᠠᠳ",
+        "latin": "bayad",
+        "sense": "Bayats (Oirat-Mongolian tribe, vassal of the Dörbets)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7881,8 +8086,16 @@
       {
         "traditional": "ᠪᠠᠶᠠᠯᠢᠭ",
         "latin": "bayalag",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠠᠶ᠋ᠠᠯᠢᠭ",
+        "latin": "bayaliɣ",
+        "sense": "riches, wealth",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7969,8 +8182,10 @@
       {
         "traditional": "ᠪᠠᠶᠠᠷ",
         "latin": "bayar",
+        "sense": "joy, happiness",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7980,8 +8195,16 @@
       {
         "traditional": "ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ",
         "latin": "bayarlalaa",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠠᠶᠠᠷᠯᠠᠯᠤᠭ᠎ᠠ",
+        "latin": "bayarlaluɣ-a",
+        "sense": "thank you",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8145,8 +8368,16 @@
       {
         "traditional": "ᠪᠧᠨ᠋ᠽᠢᠨ",
         "latin": "byenzin",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠧᠨᠽᠢᠨ",
+        "latin": "bēnzin",
+        "sense": "gasoline, petrol",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8211,8 +8442,16 @@
       {
         "traditional": "ᠪᠧᠲ᠋ᠡᠨ",
         "latin": "byeton",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠧᠲ᠋ᠣᠨ",
+        "latin": "bēton",
+        "sense": "concrete",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8283,6 +8522,18 @@
     ]
   },
   {
+    "cyrillic": "бид",
+    "candidates": [
+      {
+        "traditional": "ᠪᠢᠳᠡ",
+        "latin": "bide",
+        "sense": "we",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "бидвал",
     "candidates": [
       {
@@ -8290,6 +8541,18 @@
         "latin": "bidval",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "бидний",
+    "candidates": [
+      {
+        "traditional": "ᠪᠢᠳᠡᠨ᠌ᠦ",
+        "latin": "bidenü",
+        "sense": "our, ours",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -8695,8 +8958,10 @@
       {
         "traditional": "ᠪᠢᠷ",
         "latin": "biir",
+        "sense": "paintbrush",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8761,8 +9026,16 @@
       {
         "traditional": "ᠪᠢᠯᠧᠲ",
         "latin": "bilyet",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠢᠯᠧᠲ᠋",
+        "latin": "bilēt",
+        "sense": "ticket",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -9168,8 +9441,10 @@
       {
         "traditional": "ᠪᠢᠲᠡᠭᠦᠦ",
         "latin": "bituu",
+        "sense": "closed, deaf, dense, impenetrable, impermeable, recondite, solid, stuffy",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9377,8 +9652,10 @@
       {
         "traditional": "ᠪᠢᠴᠢᠬᠦ",
         "latin": "bichih",
+        "sense": "writing",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9432,8 +9709,10 @@
       {
         "traditional": "ᠪᠢᠴᠢᠭᠡᠰᠦ",
         "latin": "bichees",
+        "sense": "inscription, engraving, exergue, scripture",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10202,8 +10481,10 @@
       {
         "traditional": "ᠪᠣᠳᠠᠲᠤ",
         "latin": "bodit",
+        "sense": "material, real, concrete",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10279,8 +10560,16 @@
       {
         "traditional": "ᠪᠣᠳᠣᠯ",
         "latin": "bodol",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠣᠳᠤᠯ",
+        "latin": "bodul",
+        "sense": "thought, thinking, idea, intention, conception, opinion",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10334,8 +10623,16 @@
       {
         "traditional": "ᠪᠣᠳᠣᠬᠤ",
         "latin": "bodoh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠣᠳᠤᠬᠤ",
+        "latin": "boduqu",
+        "sense": "to think",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -10895,8 +11192,10 @@
       {
         "traditional": "ᠪᠣᠯᠢᠬᠤ",
         "latin": "bolih",
+        "sense": "to stop, cease action",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10972,8 +11271,10 @@
       {
         "traditional": "ᠪᠣᠯᠪᠠᠰᠤᠷᠠᠯ",
         "latin": "bolovsrol",
+        "sense": "education",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11093,8 +11394,10 @@
       {
         "traditional": "ᠪᠣᠯᠤᠮᠵᠢ",
         "latin": "bolomj",
+        "sense": "possibility, chance, opportunity",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11236,8 +11539,10 @@
       {
         "traditional": "ᠪᠣᠯᠬᠢ",
         "latin": "bolhi",
+        "sense": "clumsy",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11390,8 +11695,16 @@
       {
         "traditional": "ᠪᠣᠯᠢᠨᠢᠼ",
         "latin": "bolinits",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠣᠯᠢᠨᠢᠼᠠ",
+        "latin": "bolinica",
+        "sense": "hospital",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11720,8 +12033,16 @@
       {
         "traditional": "ᠪᠣᠭᠣᠯ",
         "latin": "bool",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠣᠭᠤᠯ",
+        "latin": "boɣul",
+        "sense": "slave",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11731,8 +12052,16 @@
       {
         "traditional": "ᠪᠣᠭᠣᠯᠲᠠ",
         "latin": "boolt",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠣᠭᠤᠯᠲᠠ",
+        "latin": "boɣulta",
+        "sense": "bolt",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11918,8 +12247,16 @@
       {
         "traditional": "ᠪᠣᠭᠣᠷᠰᠣᠭ",
         "latin": "boortsog",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠣᠭᠤᠷᠰᠤᠭ",
+        "latin": "boɣursuɣ",
+        "sense": "doughnut, fritter (fried sweet piece of dough)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11973,8 +12310,16 @@
       {
         "traditional": "ᠪᠣᠭᠣᠬᠤ",
         "latin": "booh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠣᠭᠤᠬᠤ",
+        "latin": "boɣuqu",
+        "sense": "to bind, to bundle",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -12331,6 +12676,18 @@
     ]
   },
   {
+    "cyrillic": "борной",
+    "candidates": [
+      {
+        "traditional": "ᠪᠣᠷᠤᠨᠠᠢ",
+        "latin": "borunai",
+        "sense": "harrow",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "боровтор",
     "candidates": [
       {
@@ -12468,8 +12825,17 @@
       {
         "traditional": "ᠪᠣᠷᠣᠭ᠎ᠠ",
         "latin": "boroo",
+        "sense": "rain",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠪᠣᠷᠣᠤ",
+        "latin": "borou",
+        "sense": "fibrocartilage callus",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -12688,8 +13054,10 @@
       {
         "traditional": "ᠪᠣᠰᠤᠯᠭ᠎ᠠ",
         "latin": "boslogo",
+        "sense": "uprising",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12721,8 +13089,10 @@
       {
         "traditional": "ᠪᠣᠰᠬᠤ",
         "latin": "bosoh",
+        "sense": "to stand up",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12842,8 +13212,10 @@
       {
         "traditional": "ᠪᠣᠲᠢ",
         "latin": "boti",
+        "sense": "tome",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12908,8 +13280,10 @@
       {
         "traditional": "ᠪᠣᠬᠢᠷ",
         "latin": "bohir",
+        "sense": "dirty, untidy, filthy",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12985,8 +13359,10 @@
       {
         "traditional": "ᠪᠣᠬᠢ",
         "latin": "bohi",
+        "sense": "dried tree resin",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13304,8 +13680,16 @@
       {
         "traditional": "ᠪᠤᠭᠤ",
         "latin": "buga",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠣᠭᠣ",
+        "latin": "boɣo",
+        "sense": "deer",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13458,8 +13842,10 @@
       {
         "traditional": "ᠪᠠᠭᠤᠤ",
         "latin": "bugui",
+        "sense": "wrist",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13469,8 +13855,10 @@
       {
         "traditional": "ᠪᠠᠭᠤᠪᠴᠢ",
         "latin": "buguivch",
+        "sense": "bracelet; wristband",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13568,8 +13956,10 @@
       {
         "traditional": "ᠪᠤᠳᠠᠭ᠎ᠠ",
         "latin": "budaa",
+        "sense": "grain",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13623,8 +14013,10 @@
       {
         "traditional": "ᠪᠤᠳᠤᠭ",
         "latin": "budag",
+        "sense": "dye; pigment; colouring, coloring; paint; antimony",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14168,6 +14560,18 @@
     ]
   },
   {
+    "cyrillic": "буйдан",
+    "candidates": [
+      {
+        "traditional": "ᠪᠤᠶᠢᠳᠠᠩ",
+        "latin": "buyidang",
+        "sense": "sofa",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "буйдах",
     "candidates": [
       {
@@ -14206,8 +14610,16 @@
       {
         "traditional": "ᠪᠤᠢᠯᠠ",
         "latin": "buil",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠤᠶᠢᠯᠠ",
+        "latin": "buyila",
+        "sense": "gums (flesh around teeth)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -14393,8 +14805,10 @@
       {
         "traditional": "ᠪᠤᠯᠠᠭ",
         "latin": "bulag",
+        "sense": "spring, origin, source",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -14448,8 +14862,16 @@
       {
         "traditional": "ᠪᠤᠯᠤᠨ",
         "latin": "bulan",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠤᠯᠤᠩ",
+        "latin": "bulung",
+        "sense": "corner",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -14591,8 +15013,10 @@
       {
         "traditional": "ᠪᠤᠯᠠᠭ᠎ᠠ",
         "latin": "bulga",
+        "sense": "sable",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15427,8 +15851,10 @@
       {
         "traditional": "ᠪᠤᠯᠴᠢᠷᠬᠠᠢ",
         "latin": "bulchirhai",
+        "sense": "gland",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15449,8 +15875,10 @@
       {
         "traditional": "ᠪᠤᠯᠠᠰᠢ",
         "latin": "bulsh",
+        "sense": "grave",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15471,8 +15899,10 @@
       {
         "traditional": "ᠪᠤᠯᠠᠰᠢᠯᠠᠬᠤ",
         "latin": "bulshlah",
+        "sense": "to bury",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15559,8 +15989,10 @@
       {
         "traditional": "ᠪᠤᠮᠪᠠ",
         "latin": "bumba",
+        "sense": "a ritual vase holding holy water, made of metal with a long neck and no handles",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -15735,8 +16167,10 @@
       {
         "traditional": "ᠪᠤᠩᠬᠤᠨ",
         "latin": "bunhan",
+        "sense": "tomb, mausoleum, vault, burial chamber, sepulcher",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16230,8 +16664,10 @@
       {
         "traditional": "ᠪᠤᠷᠤᠭᠤ",
         "latin": "buruu",
+        "sense": "wrong",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16362,8 +16798,10 @@
       {
         "traditional": "ᠪᠤᠷᠬᠠᠨ",
         "latin": "burhan",
+        "sense": "god",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16428,8 +16866,10 @@
       {
         "traditional": "ᠪᠤᠰᠤᠳ",
         "latin": "busad",
+        "sense": "miscellaneous, otherwise, another, other",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16791,8 +17231,10 @@
       {
         "traditional": "ᠪᠤᠭᠤᠳᠠᠢ",
         "latin": "buudai",
+        "sense": "wheat",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -16802,8 +17244,16 @@
       {
         "traditional": "ᠪᠠᠭᠤᠳᠠᠯ",
         "latin": "buudal",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠠᠭᠣᠳᠠᠯ",
+        "latin": "baɣodal",
+        "sense": "camp, landing, station, stay, stop, stage, landing stage, rocket stage",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -16934,8 +17384,23 @@
       {
         "traditional": "ᠪᠤᠤᠵᠠ",
         "latin": "buuz",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠤᠤᠽ",
+        "latin": "buuz",
+        "sense": "steamed meat dumpling",
+        "verified": false,
+        "source": "wiktionary"
+      },
+      {
+        "traditional": "ᠪᠣᠣᠵᠠ",
+        "latin": "booǰa",
+        "sense": "steamed meat dumpling",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -17077,8 +17542,10 @@
       {
         "traditional": "ᠪᠤᠭᠤᠷᠤᠯᠲᠤᠬᠤ",
         "latin": "buuraltah",
+        "sense": "to turn grey",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -17308,8 +17775,10 @@
       {
         "traditional": "ᠪᠤᠬ᠎ᠠ",
         "latin": "buh",
+        "sense": "bull (an uncastrated male bovine)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -18194,6 +18663,18 @@
     ]
   },
   {
+    "cyrillic": "бэлгэвч",
+    "candidates": [
+      {
+        "traditional": "ᠪᠡᠯᠭᠡᠪᠴᠢ",
+        "latin": "belgebči",
+        "sense": "condom",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "бэлдвэр",
     "candidates": [
       {
@@ -18320,8 +18801,10 @@
       {
         "traditional": "ᠪᠡᠯᠡᠳᠬᠡᠯ",
         "latin": "beltgel",
+        "sense": "preparation; training",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -18540,8 +19023,16 @@
       {
         "traditional": "ᠪᠡᠯᠬᠡᠭᠦᠰᠦ",
         "latin": "belhuus",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠡᠯᠭᠡᠭᠦᠰᠦ",
+        "latin": "belgegüsü",
+        "sense": "waist",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -18661,8 +19152,10 @@
       {
         "traditional": "ᠪᠡᠯᠴᠢᠭᠡᠷ",
         "latin": "belcheer",
+        "sense": "pasture",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -18804,8 +19297,10 @@
       {
         "traditional": "ᠪᠡᠯᠡᠨ",
         "latin": "belen",
+        "sense": "ready, at hand",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -18936,8 +19431,10 @@
       {
         "traditional": "ᠪᠡᠷᠢ",
         "latin": "ber",
+        "sense": "daughter-in-law",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -19365,8 +19862,17 @@
       {
         "traditional": "ᠪᠡᠬᠢ",
         "latin": "beh",
+        "sense": "firmness",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠪᠡᠬᠡ",
+        "latin": "beke",
+        "sense": "ink",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -19607,8 +20113,10 @@
       {
         "traditional": "ᠪᠡᠭᠡᠯᠡᠢ",
         "latin": "beelii",
+        "sense": "glove",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20025,8 +20533,10 @@
       {
         "traditional": "ᠪᠢᠯᠲᠠ",
         "latin": "byalt",
+        "sense": "fuse, percussion cap",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20372,6 +20882,18 @@
     ]
   },
   {
+    "cyrillic": "бярга",
+    "candidates": [
+      {
+        "traditional": "ᠪᠢᠷᠭ᠎ᠠ",
+        "latin": "birɣ-a",
+        "sense": "The punctuation mark (᠀)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "бярдах",
     "candidates": [
       {
@@ -20421,8 +20943,10 @@
       {
         "traditional": "ᠪᠢᠷᠠᠭᠤ",
         "latin": "byaruu",
+        "sense": "a two-year-old calf",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20432,8 +20956,10 @@
       {
         "traditional": "ᠪᠢᠰ",
         "latin": "byasaa",
+        "sense": "bedbug, bug",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20454,8 +20980,10 @@
       {
         "traditional": "ᠪᠢᠰᠢᠯᠭᠠᠯ",
         "latin": "byasalgal",
+        "sense": "contemplation, meditation",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20476,8 +21004,10 @@
       {
         "traditional": "ᠪᠢᠰᠢᠯᠭᠠᠬᠤ",
         "latin": "byasalgah",
+        "sense": "to contemplate, to reflect on",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20498,8 +21028,10 @@
       {
         "traditional": "ᠪᠢᠰᠢᠯᠠᠭ",
         "latin": "byaslag",
+        "sense": "cheese",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -20575,8 +21107,10 @@
       {
         "traditional": "ᠪᠢᠴᠢᠬᠠᠨ",
         "latin": "byatshan",
+        "sense": "diminutive, elvish, little, measly, teeny, tiny, wee, miniature, piccaninny,…",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -21169,8 +21703,10 @@
       {
         "traditional": "ᠪᠦᠳᠦᠭᠦᠨ",
         "latin": "buduun",
+        "sense": "large",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -21257,8 +21793,10 @@
       {
         "traditional": "ᠪᠦᠵᠢᠭ",
         "latin": "bujig",
+        "sense": "dance",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -21268,8 +21806,10 @@
       {
         "traditional": "ᠪᠦᠵᠢᠭᠯᠡᠬᠦ",
         "latin": "bujigleh",
+        "sense": "to dance",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -21292,6 +21832,18 @@
         "latin": "bujigch",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "бүжигчин",
+    "candidates": [
+      {
+        "traditional": "ᠪᠦᠵᠢᠭᠴᠢᠨ",
+        "latin": "büǰigčin",
+        "sense": "dancer",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -21323,8 +21875,10 @@
       {
         "traditional": "ᠪᠦᠢᠯᠡᠰᠦ",
         "latin": "buils",
+        "sense": "almond",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -21763,8 +22317,10 @@
       {
         "traditional": "ᠪᠦᠯᠦᠭ",
         "latin": "buleg",
+        "sense": "group",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -22093,8 +22649,16 @@
       {
         "traditional": "ᠪᠦᠷ",
         "latin": "bur",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠦᠷᠢ",
+        "latin": "büri",
+        "sense": "each, every",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -22115,8 +22679,10 @@
       {
         "traditional": "ᠪᠦᠷᠭᠦᠳ",
         "latin": "burged",
+        "sense": "eagle",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -22555,8 +23121,10 @@
       {
         "traditional": "ᠪᠦᠷᠬᠦᠪᠴᠢ",
         "latin": "burhevch",
+        "sense": "membrane",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -22632,8 +23200,10 @@
       {
         "traditional": "ᠪᠦᠷᠬᠦᠭᠦᠯ",
         "latin": "burhuul",
+        "sense": "covering",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -22841,8 +23411,10 @@
       {
         "traditional": "ᠪᠦᠷᠢᠶ᠎ᠡ",
         "latin": "buree",
+        "sense": "horn",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -22907,8 +23479,16 @@
       {
         "traditional": "ᠪᠥᠰᠡ",
         "latin": "bus",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠦᠰᠡ",
+        "latin": "büse",
+        "sense": "belt",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -23105,8 +23685,10 @@
       {
         "traditional": "ᠪᠦᠲᠦᠴᠡ",
         "latin": "butets",
+        "sense": "structure; frame; system",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -23149,8 +23731,10 @@
       {
         "traditional": "ᠪᠦᠲᠦᠭᠡᠯ",
         "latin": "buteel",
+        "sense": "creation, product, invention",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -23237,8 +23821,10 @@
       {
         "traditional": "ᠪᠦᠬᠦ",
         "latin": "buh",
+        "sense": "all, every",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -23270,8 +23856,10 @@
       {
         "traditional": "ᠪᠦᠬᠦᠨ",
         "latin": "buhen",
+        "sense": "every, each",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -23666,8 +24254,16 @@
       {
         "traditional": "ᠪᠥᠭᠡᠵᠢ",
         "latin": "bugj",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠦᠭᠡᠵᠢ",
+        "latin": "bügeǰi",
+        "sense": "ring",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -23754,8 +24350,10 @@
       {
         "traditional": "ᠪᠥᠭᠯᠡᠭᠡ",
         "latin": "bugluu",
+        "sense": "cork, stopper, plug",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -24007,8 +24605,16 @@
       {
         "traditional": "ᠪᠥᠲᠥᠨ᠎ᠡ",
         "latin": "budnu",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠥᠳᠦᠨ᠎ᠡ",
+        "latin": "bödün-e",
+        "sense": "quail",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -24315,8 +24921,16 @@
       {
         "traditional": "ᠪᠥᠮᠪᠥᠭᠡ",
         "latin": "bumbug",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠥᠮᠪᠦᠭᠡ",
+        "latin": "bömbüge",
+        "sense": "ball",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -24821,8 +25435,10 @@
       {
         "traditional": "ᠪᠥᠰ",
         "latin": "bus",
+        "sense": "cloth",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -24832,8 +25448,17 @@
       {
         "traditional": "ᠪᠥᠬᠡ",
         "latin": "buh",
+        "sense": "reliable, tenacious, hardy, sturdy, tough, steadfast, rooted, strong,…",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠪᠥᠬᠦ",
+        "latin": "bökü",
+        "sense": "hump, humpback",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -24997,8 +25622,16 @@
       {
         "traditional": "ᠪᠥᠬᠥᠨ",
         "latin": "buhun",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠥᠭᠦᠩ",
+        "latin": "bögüng",
+        "sense": "saiga (antelope)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -25261,8 +25894,16 @@
       {
         "traditional": "ᠪᠥᠭᠡᠯᠵᠢᠰᠦ",
         "latin": "buuljis",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠪᠥᠭᠡᠯᠵᠢᠰᠣᠨ",
+        "latin": "bögelǰison",
+        "sense": "vomit",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -25272,8 +25913,10 @@
       {
         "traditional": "ᠪᠥᠭᠡᠯᠵᠢᠬᠦ",
         "latin": "buuljih",
+        "sense": "to vomit",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -25382,8 +26025,10 @@
       {
         "traditional": "ᠪᠥᠭᠡᠷ᠎ᠡ",
         "latin": "buur",
+        "sense": "kidney",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -25492,8 +26137,10 @@
       {
         "traditional": "ᠪᠥᠭᠡᠰᠦ",
         "latin": "buus",
+        "sense": "louse",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

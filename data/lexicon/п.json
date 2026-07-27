@@ -731,8 +731,16 @@
       {
         "traditional": "ᠫᠠᠷᠺ",
         "latin": "park",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠫᠠᠷᠻ",
+        "latin": "park",
+        "sense": "park",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -742,8 +750,16 @@
       {
         "traditional": "ᠫᠠᠷᠯᠠᠮᠧᠨᠲ",
         "latin": "parlamyent",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠫᠠᠷᠯᠠᠮᠧᠨᠲ᠋",
+        "latin": "parlamēnt",
+        "sense": "parliament",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -775,8 +791,16 @@
       {
         "traditional": "ᠫᠠᠰᠫᠣᠷᠲ",
         "latin": "pasport",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠫᠠᠰᠫᠣᠷᠲ᠋",
+        "latin": "pasport",
+        "sense": "ID card",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -896,8 +920,10 @@
       {
         "traditional": "ᠫᠢᠰᠢᠩ",
         "latin": "piishin",
+        "sense": "iron stove padded with brick, furnace",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1204,8 +1230,10 @@
       {
         "traditional": "ᠫᠷᠣᠭᠷᠠᠮ",
         "latin": "program",
+        "sense": "program (set of structured activities)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1413,8 +1441,10 @@
       {
         "traditional": "ᠫᠤᠤᠵᠢᠩ",
         "latin": "puujin",
+        "sense": "missile",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1622,8 +1652,10 @@
       {
         "traditional": "ᠫᠢᠨᠽᠠ",
         "latin": "pyanz",
+        "sense": "record (vinyl disc)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

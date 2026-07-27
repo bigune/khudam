@@ -27,8 +27,10 @@
       {
         "traditional": "ᠶᠠᠭᠠᠬᠢᠭᠠᠳ",
         "latin": "yagaad",
+        "sense": "how, wherefore, why, how come, what for",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -38,8 +40,16 @@
       {
         "traditional": "ᠶᠠᠵ",
         "latin": "yaj",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠶᠠᠭᠠᠭᠢᠵᠤ",
+        "latin": "yaɣaɣiǰu",
+        "sense": "how",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -357,8 +367,10 @@
       {
         "traditional": "ᠶᠠᠪᠤᠬᠤ",
         "latin": "yavah",
+        "sense": "to go, leave",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -610,8 +622,10 @@
       {
         "traditional": "ᠶᠠᠪᠤᠴᠠ",
         "latin": "yavts",
+        "sense": "process, course",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -654,8 +668,10 @@
       {
         "traditional": "ᠢᠪᠴᠤᠤ",
         "latin": "yavtsuu",
+        "sense": "narrow",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1919,8 +1935,10 @@
       {
         "traditional": "ᠢᠯᠠᠬᠤ",
         "latin": "yalah",
+        "sense": "to defeat, to beat",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2040,8 +2058,10 @@
       {
         "traditional": "ᠢᠯᠭᠠᠯ",
         "latin": "yalgal",
+        "sense": "distinction",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2139,8 +2159,10 @@
       {
         "traditional": "ᠢᠯᠭᠠᠬᠤ",
         "latin": "yalgah",
+        "sense": "to differentiate",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2706,6 +2728,18 @@
     ]
   },
   {
+    "cyrillic": "ямаа",
+    "candidates": [
+      {
+        "traditional": "ᠢᠮᠠᠭ᠎ᠠ",
+        "latin": "imaɣ-a",
+        "sense": "goat",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "ямаажих",
     "candidates": [
       {
@@ -2843,8 +2877,10 @@
       {
         "traditional": "ᠶᠠᠮᠠᠷ",
         "latin": "yamar",
+        "sense": "what kind, what, which, how",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3250,8 +3286,15 @@
       {
         "traditional": "ᠶᠠᠩᠭᠢᠷ",
         "latin": "yangir",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠶᠡᠩᢉᠢᠷ",
+        "sense": "mountain goat",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3382,8 +3425,16 @@
       {
         "traditional": "ᠶᠠᠨᠳᠠᠨ",
         "latin": "yandan",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠶᠠᠩᠳᠤᠩ",
+        "latin": "yangdung",
+        "sense": "chimney, whistle, horn",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -3426,8 +3477,10 @@
       {
         "traditional": "ᠶᠠᠩᠵᠤᠤᠷ",
         "latin": "yanjuur",
+        "sense": "cigarette",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3437,8 +3490,10 @@
       {
         "traditional": "ᠶᠠᠩᠵᠤ",
         "latin": "yanz",
+        "sense": "shape, form",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3492,8 +3547,10 @@
       {
         "traditional": "ᠶᠠᠩᠬᠠᠨ",
         "latin": "yanhan",
+        "sense": "prostitute, whore",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4163,8 +4220,10 @@
       {
         "traditional": "ᠶᠠᠷᠢᠶ᠎ᠠ",
         "latin": "yaria",
+        "sense": "conversation, talk",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4636,8 +4695,10 @@
       {
         "traditional": "ᠶᠠᠰᠤᠲᠠᠨ",
         "latin": "yastan",
+        "sense": "tribe (social and ethnical)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4647,8 +4708,10 @@
       {
         "traditional": "ᠶᠠᠲᠤᠭ᠎ᠠ",
         "latin": "yatga",
+        "sense": "yatga, a traditional Mongolian plucked bridge zither (a stringed musical…",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4748,6 +4811,30 @@
         "latin": "yatgah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ятгач",
+    "candidates": [
+      {
+        "traditional": "ᠶᠠᠲᠤᠭᠠᠴᠢ",
+        "latin": "yatuɣači",
+        "sense": "zither player",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
+    "cyrillic": "ятгачин",
+    "candidates": [
+      {
+        "traditional": "ᠶᠠᠲᠤᠭᠠᠴᠢᠨ",
+        "latin": "yatuɣačin",
+        "sense": "zither player",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

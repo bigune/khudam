@@ -280,8 +280,16 @@
       {
         "traditional": "ᠶᠣᠯᠣ",
         "latin": "yol",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠶᠣᠯᠤ",
+        "latin": "yolu",
+        "sense": "lammergeier, lammergeyer",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -1105,8 +1113,16 @@
       {
         "traditional": "ᠶᠣᠰᠣ",
         "latin": "yos",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠶᠣᠰᠤ",
+        "latin": "yosu",
+        "sense": "customs, traditions, etiquette, legislation, habit, formality",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

@@ -22,6 +22,30 @@
     ]
   },
   {
+    "cyrillic": "файл",
+    "candidates": [
+      {
+        "traditional": "ᠹᠠᠶᠢᠯ",
+        "latin": "fayil",
+        "sense": "file",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
+    "cyrillic": "факс",
+    "candidates": [
+      {
+        "traditional": "ᠹᠠᠻᠰ",
+        "latin": "faks",
+        "sense": "fax",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "фактур",
     "candidates": [
       {
@@ -104,8 +128,10 @@
       {
         "traditional": "ᠹᠧᠷᠮ",
         "latin": "fyerm",
+        "sense": "farm",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -194,6 +220,18 @@
         "latin": "fintyek",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "фирм",
+    "candidates": [
+      {
+        "traditional": "ᠹᠢᠷᠮ",
+        "latin": "firm",
+        "sense": "company; firm",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

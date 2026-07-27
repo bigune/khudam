@@ -27,8 +27,10 @@
       {
         "traditional": "ᠭᠠ",
         "latin": "gaa",
+        "sense": "mint",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -192,8 +194,10 @@
       {
         "traditional": "ᠭᠠᠪᠠᠯᠠ",
         "latin": "gaval",
+        "sense": "skull",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -654,8 +658,10 @@
       {
         "traditional": "ᠭᠠᠳᠠᠭ᠎ᠠ",
         "latin": "gadaa",
+        "sense": "outdoors, outside, al fresco, external, exterior",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -665,8 +671,10 @@
       {
         "traditional": "ᠭᠠᠳᠠᠭᠠᠳᠤ",
         "latin": "gadaad",
+        "sense": "external, exterior, foreign, outer, outlying, extrinsic, peripheral,…",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -896,8 +904,16 @@
       {
         "traditional": "ᠭᠠᠳᠢᠯ",
         "latin": "gadil",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠭᠠᠳᠠᠯᠢ",
+        "latin": "ɣadali",
+        "sense": "banana, plantain",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -929,8 +945,10 @@
       {
         "traditional": "ᠭᠠᠳᠠᠨ᠎ᠠ",
         "latin": "gadna",
+        "sense": "outside (position)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1562,6 +1580,18 @@
     ]
   },
   {
+    "cyrillic": "галактик",
+    "candidates": [
+      {
+        "traditional": "ᠭᠠᠯᠠᠻᠲ᠋ᠢᠻ",
+        "latin": "ɣalaktik",
+        "sense": "galaxy",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "галбинга",
     "candidates": [
       {
@@ -1589,8 +1619,10 @@
       {
         "traditional": "ᠭᠠᠯᠪᠢᠷ",
         "latin": "galbir",
+        "sense": "shape, form, figure, build",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1633,8 +1665,10 @@
       {
         "traditional": "ᠭᠠᠯᠳᠠᠬᠤ",
         "latin": "galdah",
+        "sense": "to burn; to set fire to",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1710,8 +1744,10 @@
       {
         "traditional": "ᠭᠠᠯᠵᠠᠭᠤ",
         "latin": "galzuu",
+        "sense": "rabid (affected with rabies, pertaining to rabies)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1809,8 +1845,10 @@
       {
         "traditional": "ᠭᠠᠯᠲᠤ",
         "latin": "galt",
+        "sense": "fiery",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1985,8 +2023,16 @@
       {
         "traditional": "ᠭᠠᠨ",
         "latin": "gan",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠭᠠᠩ",
+        "latin": "ɣang",
+        "sense": "steel",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2414,8 +2460,16 @@
       {
         "traditional": "ᠭᠠᠨᠵᠢᠨ",
         "latin": "ganjin",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠭᠠᠨᠵᠢᠩ",
+        "latin": "ɣanǰing",
+        "sense": "rolling pin",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -2656,8 +2710,10 @@
       {
         "traditional": "ᠭᠠᠭᠴᠠ",
         "latin": "gants",
+        "sense": "single",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2799,8 +2855,10 @@
       {
         "traditional": "ᠭᠠᠷ",
         "latin": "gar",
+        "sense": "arm, hand (from the shoulder to the fingers)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2854,8 +2912,10 @@
       {
         "traditional": "ᠭᠠᠷᠤᠯ",
         "latin": "garal",
+        "sense": "origin; source",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3063,8 +3123,10 @@
       {
         "traditional": "ᠭᠠᠷᠭᠠᠬᠤ",
         "latin": "gargah",
+        "sense": "to release",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3426,8 +3488,10 @@
       {
         "traditional": "ᠭᠠᠷᠴᠠ",
         "latin": "garts",
+        "sense": "exit (way out)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3448,8 +3512,10 @@
       {
         "traditional": "ᠭᠠᠷᠴᠠᠭ",
         "latin": "garchig",
+        "sense": "table of contents, index",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3624,8 +3690,10 @@
       {
         "traditional": "ᠭᠠᠲᠤᠯᠬᠤ",
         "latin": "gatlah",
+        "sense": "to cross (a river, a desert)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3844,8 +3912,10 @@
       {
         "traditional": "ᠭᠠᠴᠢᠭᠳᠠᠯ",
         "latin": "gachigdal",
+        "sense": "lack, deficiency, difficulty, hardship, want",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3943,8 +4013,10 @@
       {
         "traditional": "ᠭᠠᠰᠢᠭᠤᠳᠠᠯ",
         "latin": "gashuudal",
+        "sense": "grief; sorrow",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4077,6 +4149,30 @@
         "latin": "gyeomyetr",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "герман",
+    "candidates": [
+      {
+        "traditional": "ᠭᠧᠷᠮᠠᠨ",
+        "latin": "gērman",
+        "sense": "German",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
+    "cyrillic": "германчууд",
+    "candidates": [
+      {
+        "traditional": "ᠭᠧᠷᠮᠠᠨᠴᠤᠳ",
+        "latin": "gērmančud",
+        "sense": "plural of герман (german)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4251,8 +4347,16 @@
       {
         "traditional": "ᠭᠡᠢᠭᠡᠬᠦ",
         "latin": "giigeh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠭᠡᠶᠢᠭᠡᠬᠦ",
+        "latin": "geyigekü",
+        "sense": "To become bright",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4273,8 +4377,16 @@
       {
         "traditional": "ᠭᠡᠢᠭᠦᠯᠬᠦ",
         "latin": "giiguuleh",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠭᠡᠶᠢᠭᠦᠯᠬᠦ",
+        "latin": "geyigülkü",
+        "sense": "To enlighten, illuminate",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4691,8 +4803,10 @@
       {
         "traditional": "ᠭᠢᠨᠵᠢ",
         "latin": "ginj",
+        "sense": "chain",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4878,8 +4992,10 @@
       {
         "traditional": "ᠭᠢᠰᠬᠢᠭᠦᠷ",
         "latin": "gishguur",
+        "sense": "step (of stairs), rung (of a ladder), pedal",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4911,8 +5027,10 @@
       {
         "traditional": "ᠭᠡᠰᠢᠭᠦᠨ",
         "latin": "gishuun",
+        "sense": "member",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5604,8 +5722,10 @@
       {
         "traditional": "ᠭᠤᠸᠠᠮᠢᠶᠠᠨ",
         "latin": "goimon",
+        "sense": "noodles (long thin strands of dough)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5995,6 +6115,18 @@
     ]
   },
   {
+    "cyrillic": "гомосекс",
+    "candidates": [
+      {
+        "traditional": "ᠾᠣᠮᠣᠰᠧᠻᠰ",
+        "latin": "homosēks",
+        "sense": "homosexual",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "гомтгох",
     "candidates": [
       {
@@ -6308,8 +6440,10 @@
       {
         "traditional": "ᠭᠣᠨᠢᠳ",
         "latin": "gonid",
+        "sense": "cumin",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6385,8 +6519,16 @@
       {
         "traditional": "ᠭᠣᠣᠵᠢᠬᠤ",
         "latin": "goojih",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠭᠣᠭᠤᠵᠢᠬᠤ",
+        "latin": "ɣoguǰiqu",
+        "sense": "to leak, pour out, drip, stream, sweat",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -6748,8 +6890,16 @@
       {
         "traditional": "ᠭᠣᠷᠭᠢ",
         "latin": "gorhi",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠭᠣᠷᠤᠬ᠎ᠠ",
+        "latin": "ɣoruq-a",
+        "sense": "a (small) river, brook",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -7628,8 +7778,10 @@
       {
         "traditional": "ᠭᠤᠳᠤᠮᠵᠢ",
         "latin": "gudamj",
+        "sense": "street",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7694,8 +7846,10 @@
       {
         "traditional": "ᠭᠤᠳᠤᠰ",
         "latin": "gudas",
+        "sense": "mattress",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8057,8 +8211,10 @@
       {
         "traditional": "ᠭᠤᠶᠤᠯᠭᠠᠴᠢᠨ",
         "latin": "guilgachin",
+        "sense": "beggar",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8068,8 +8224,10 @@
       {
         "traditional": "ᠭᠤᠶᠤᠯᠲᠠ",
         "latin": "guilt",
+        "sense": "request, demand",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8145,8 +8303,10 @@
       {
         "traditional": "ᠭᠤᠶᠤᠬᠤ",
         "latin": "guih",
+        "sense": "to ask for, to beg for",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8728,8 +8888,10 @@
       {
         "traditional": "ᠭᠤᠯᠠᠰᠬᠤ",
         "latin": "gulsah",
+        "sense": "to slide, glide, slip",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -8805,8 +8967,10 @@
       {
         "traditional": "ᠭᠤᠯᠤᠤᠵᠠ",
         "latin": "guluuz",
+        "sense": "rolling pin",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9564,8 +9728,10 @@
       {
         "traditional": "ᠭᠤᠷᠪᠠᠨ",
         "latin": "gurvan",
+        "sense": "oblique of гурав (gurav, “three”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9663,8 +9829,10 @@
       {
         "traditional": "ᠭᠤᠷᠭᠤᠤᠯᠳᠠᠢ",
         "latin": "gurgaldai",
+        "sense": "anus",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9773,8 +9941,10 @@
       {
         "traditional": "ᠭᠤᠯᠢᠷ",
         "latin": "guril",
+        "sense": "flour",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9872,8 +10042,10 @@
       {
         "traditional": "ᠭᠤᠲᠤᠭᠠᠬᠤ",
         "latin": "gutaah",
+        "sense": "causative voice in -аах (-aax) of гутах (gutax, “to be depressed”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -9894,8 +10066,10 @@
       {
         "traditional": "ᠭᠤᠲᠤᠯ",
         "latin": "gutal",
+        "sense": "boot",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10103,8 +10277,10 @@
       {
         "traditional": "ᠭᠠᠤᠯᠢ",
         "latin": "guuli",
+        "sense": "brass (metal)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10213,8 +10389,10 @@
       {
         "traditional": "ᠭᠤᠴᠢᠨ",
         "latin": "guchin",
+        "sense": "oblique of гуч (guč, “thirty”)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10697,8 +10875,10 @@
       {
         "traditional": "ᠭᠡᠳᠡᠭ",
         "latin": "gedeg",
+        "sense": "called",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10763,8 +10943,10 @@
       {
         "traditional": "ᠭᠡᠳᠡᠰᠦ",
         "latin": "gedes",
+        "sense": "abdomen, stomach, intestine",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10950,8 +11132,10 @@
       {
         "traditional": "ᠭᠡᠯᠦᠩ",
         "latin": "gelen",
+        "sense": "monk, bhikkhu",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -10961,8 +11145,16 @@
       {
         "traditional": "ᠭᠡᠯᠡᠩᠮ᠎ᠠ",
         "latin": "gelenmaa",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠭᠡᠯᠣᠩᠮ᠎ᠠ",
+        "latin": "gelongm-a",
+        "sense": "nun, bhikkhuni",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11082,8 +11274,10 @@
       {
         "traditional": "ᠭᠡᠮᠰᠢᠬᠦ",
         "latin": "gemshih",
+        "sense": "to regret, to repent",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11242,6 +11436,18 @@
     ]
   },
   {
+    "cyrillic": "гэнэт",
+    "candidates": [
+      {
+        "traditional": "ᠭᠡᠨᠡᠳᠲᠡ",
+        "latin": "genedte",
+        "sense": "suddenly",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "гэнэхэн",
     "candidates": [
       {
@@ -11269,8 +11475,10 @@
       {
         "traditional": "ᠭᠡᠷᠭᠡᠢ",
         "latin": "gergii",
+        "sense": "wife",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -11337,6 +11545,18 @@
         "latin": "gerluuleh",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "гэрсэг",
+    "candidates": [
+      {
+        "traditional": "ᠭᠡᠷᠰᠡᠭ",
+        "latin": "gerseg",
+        "sense": "homely; liking to stay home",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11445,8 +11665,10 @@
       {
         "traditional": "ᠭᠡᠷᠡᠯ",
         "latin": "gerel",
+        "sense": "light",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12072,8 +12294,16 @@
       {
         "traditional": "ᠭᠢᠯᠠᠢᠯ᠎ᠠ",
         "latin": "gyalailaa",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠭᠢᠯᠠᠶᠢᠯ᠎ᠠ",
+        "latin": "ɣilayil-a",
+        "sense": "thank you",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -12369,8 +12599,10 @@
       {
         "traditional": "ᠭᠢᠨᠳᠠᠨ",
         "latin": "gyandan",
+        "sense": "prison, jail",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12952,8 +13184,10 @@
       {
         "traditional": "ᠭᠦᠢᠯᠭᠡᠭᠡ",
         "latin": "guilgee",
+        "sense": "circulation, turnover, operation",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13051,8 +13285,10 @@
       {
         "traditional": "ᠭᠦᠶᠦᠬᠦ",
         "latin": "guih",
+        "sense": "to run",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13216,8 +13452,10 @@
       {
         "traditional": "ᠭᠦᠢᠴᠡᠬᠦ",
         "latin": "guitseh",
+        "sense": "to achieve, attain, end in, overtake",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13359,8 +13597,17 @@
       {
         "traditional": "ᠭᠦᠨ",
         "latin": "gun",
+        "sense": "deep",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
+      },
+      {
+        "traditional": "ᠭᠦ᠋ᠩ",
+        "latin": "güng",
+        "sense": "duke",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -13601,8 +13848,10 @@
       {
         "traditional": "ᠭᠦᠷᠪᠡᠯ",
         "latin": "gurvel",
+        "sense": "lizard",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13634,8 +13883,10 @@
       {
         "traditional": "ᠭᠦᠷᠭᠦᠮ",
         "latin": "gurgem",
+        "sense": "saffron",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13876,8 +14127,10 @@
       {
         "traditional": "ᠭᠡᠭᠦᠦ",
         "latin": "guu",
+        "sense": "mare (female horse)",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -13887,8 +14140,16 @@
       {
         "traditional": "ᠭᠦᠦᠷᠡ",
         "latin": "guur",
+        "sense": "unlabeled",
         "verified": false,
         "source": "wmk-import"
+      },
+      {
+        "traditional": "ᠭᠦᠭᠦᠷᠭᠡ",
+        "latin": "gügürge",
+        "sense": "bridge",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -14173,8 +14434,10 @@
       {
         "traditional": "ᠭᠥᠯᠢᠭᠡᠷ",
         "latin": "gulgur",
+        "sense": "smooth, slippery, shiny, glistening",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
