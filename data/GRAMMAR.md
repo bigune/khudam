@@ -99,6 +99,21 @@ Nadmid 1990 pp. 16–17: ᠪᠠᠨ/ᠪᠡᠨ after vowels and й; ᠢᠶᠠᠨ/�
 
 Cyrillic stems ending in ь lose it before и-initial suffixes (сургууль + ийн → сургуулийн, морь + ийг → морийг). After stripping a suffix, if the remainder misses the lexicon, the engine retries with ь appended. This is our own orthographic-surface repair, not a rule from the sources. **Status: implemented.**
 
+## Fixing a wrong composition
+
+When the suffix engine produces a wrong candidate for some word, there are two
+repair paths, both via PR:
+
+1. **The rule is wrong** (the whole class misbehaves): fix the row in
+   [`suffixes.json`](suffixes.json) — one change corrects every word the rule
+   touches.
+2. **The word is an exception** (the rule is fine, this word isn't): add the
+   full inflected form as a regular lexicon entry with the correct traditional
+   spelling. An exact lexicon match always outranks decomposition by design, so
+   the entry overrides the composed candidate immediately — no engine change
+   needed. This is the intended escape hatch; exceptions accumulating in the
+   lexicon are data, not debt.
+
 ## Known gaps (future work, roughly in value order)
 
 - **Suffix chains** — depth is 1, so гэр+т+ээ (гэртээ), ном+ууд+ыг (номуудыг) miss. Needs depth-2 decomposition with chain-order rules (Nadmid p. 13 §2).

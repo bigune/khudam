@@ -409,3 +409,36 @@ Decision 001 postvocalic-й digraph. They do not — the glide ᠶ U+1836 is cor
 in suffix-initial and intervocalic position; see ENCODING.md Decision 002
 (pinned by code-point tests). Reviewers checking these rows should read that
 decision first.
+
+## Pattern flag: MVS + NIRUGU final vowel — Decision 003 candidate (1,113 entries)
+
+Found 2026-07-27 while investigating батга. The wmk seed encodes the detached
+final vowel two different ways:
+
+| Pattern | Count | Code points | Renders as |
+| --- | --- | --- | --- |
+| MVS + NIRUGU + vowel | **1,113** | U+180E U+180A U+1820/U+1821 | stem-extender stroke + **regular connected final a** |
+| MVS + vowel (standard) | 134 | U+180E U+1820/U+1821 | consonant takes its MVS form + **detached isolated-form a** (`Aa.isol`) |
+
+Evidence that the first is a generator hack, not a spelling:
+
+- The two patterns encode the *same phenomenon* inconsistently within one dataset.
+- U+180A NIRUGU never appears in the seed outside this combination (0 other uses).
+- UTN #57 (v4, §2.3): nirugu "behaves exactly like ZWJ but is visible as a piece of
+  stem stroke"; its documented use is patronymic abbreviations — not vowel separation.
+  Inserting it after MVS *defeats* MVS's purpose, which is precisely to produce the
+  special detached final vowel (HarfBuzz + Noto v3.002 confirm: with nirugu the final
+  a renders as an ordinary connected `A.fina`; without it, as the correct `Aa.isol`).
+
+**Proposed ruling (needs human sign-off + native-speaker spot check, per Decision 001
+process):** strip U+180A from every U+180E U+180A sequence, leaving standard MVS +
+vowel. Idempotent fix script, ~1,113 entries, patch release, recorded as ENCODING.md
+Decision 003. Хүний баталгаажуулалт шаардлагатай — тогтоол гараагүй байна.
+
+Separate, per-word question (NOT covered by the pattern fix): whether a given word
+should carry the MVS final vowel at all. Example flagged:
+
+- `батга` — ours `ᠪᠠᠳᠬ᠎᠊ᠠ` (b-a-d-q + MVS+NIRUGU+a); observed elsewhere on the web
+  as `ᠪᠠᠲᠠᠭᠠ` (b-a-t-a-g-a, no MVS). These differ in the *letters themselves*
+  (ᠳᠬ vs ᠲᠠᠭ, i.e. U+1833 U+182C vs U+1832 U+1820 U+182D) — a dictionary-level
+  discrepancy no script can rule on. Needs a cited human correction.
