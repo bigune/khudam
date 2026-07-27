@@ -1585,6 +1585,17 @@
     ]
   },
   {
+    "cyrillic": "авд",
+    "candidates": [
+      {
+        "traditional": "ᠠᠪᠠ ᠳᠤ",
+        "sense": "improvised",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "авдаг",
     "candidates": [
       {
@@ -5775,6 +5786,17 @@
         "latin": "aiman",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "аймгийн",
+    "candidates": [
+      {
+        "traditional": "ᠠᠶ᠋ᠢᠮᠠᠭ ᠤᠨ",
+        "sense": "tribal",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -11373,6 +11395,17 @@
     ]
   },
   {
+    "cyrillic": "анхны",
+    "candidates": [
+      {
+        "traditional": "ᠠᠩᠬᠠᠨ ᠤ",
+        "sense": "genitive of анх (anx, “beginning”)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "анч",
     "candidates": [
       {
@@ -15265,6 +15298,17 @@
         "latin": "afrik",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "африкаанс",
+    "candidates": [
+      {
+        "traditional": "ᠠᠹᠷᠢᠺᠠ ᠪᠠᠨᠨᠰ",
+        "sense": "Afrikaans language",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

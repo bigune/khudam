@@ -99,6 +99,17 @@
     ]
   },
   {
+    "cyrillic": "үгийн",
+    "candidates": [
+      {
+        "traditional": "ᠦᠭᠡ ᠶᠢᠨ",
+        "sense": "genitive of үг (üg, “word”)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "үгийрэл",
     "candidates": [
       {
@@ -5493,6 +5504,17 @@
     ]
   },
   {
+    "cyrillic": "үхсэн",
+    "candidates": [
+      {
+        "traditional": "ᠦᠬᠦᠭᠰᠡᠨ",
+        "sense": "dead",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "үхтгэгч",
     "candidates": [
       {
@@ -5911,6 +5933,17 @@
         "latin": "uun",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "үүний",
+    "candidates": [
+      {
+        "traditional": "ᠡᠭᠦᠨ ᠦ",
+        "sense": "hereof, thereof",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

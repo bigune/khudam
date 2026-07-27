@@ -1993,6 +1993,17 @@
     ]
   },
   {
+    "cyrillic": "манайх",
+    "candidates": [
+      {
+        "traditional": "ᠮᠠᠨ ᠤ ᠬᠢ",
+        "sense": "ours",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "манайхан",
     "candidates": [
       {
@@ -6001,6 +6012,50 @@
         "verified": false,
         "source": "wiktionary",
         "corroborated": true
+      }
+    ]
+  },
+  {
+    "cyrillic": "монголчуудаас",
+    "candidates": [
+      {
+        "traditional": "ᠮᠣᠩᠭᠣᠯᠴᠤᠳ ᠠᠴᠠ",
+        "sense": "ablative plural of монгол (mongol, “Mongol”)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
+    "cyrillic": "монголчуудад",
+    "candidates": [
+      {
+        "traditional": "ᠮᠣᠩᠭᠣᠯᠴᠤᠳ ᠳ᠋ᠤ",
+        "sense": "dative plural of монгол (mongol)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
+    "cyrillic": "монголчуудыг",
+    "candidates": [
+      {
+        "traditional": "ᠮᠣᠩᠭᠣᠯᠴᠤᠳ ᠢ",
+        "sense": "accusative plural of монгол (mongol)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
+    "cyrillic": "монголчуудын",
+    "candidates": [
+      {
+        "traditional": "ᠮᠣᠩᠭᠣᠯᠴᠤᠳ ᠤᠨ",
+        "sense": "genitive plural of монгол (mongol)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

@@ -3947,6 +3947,12 @@
         "verified": false,
         "source": "wiktionary",
         "corroborated": true
+      },
+      {
+        "traditional": "ᠡᠮ᠎ᠡ ᠪᠡᠨ",
+        "sense": "reflexive accusative of эм (em, “female”)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -4041,6 +4047,17 @@
         "latin": "en",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "энгийн",
+    "candidates": [
+      {
+        "traditional": "ᠡᠩ ᠤᠨ",
+        "sense": "simple",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

@@ -5924,6 +5924,17 @@
     ]
   },
   {
+    "cyrillic": "сарын",
+    "candidates": [
+      {
+        "traditional": "ᠰᠠᠷ᠎ᠠ ᠶᠢᠨ",
+        "sense": "genitive of сар (sar)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "сарьдаг",
     "candidates": [
       {

@@ -3939,6 +3939,17 @@
     ]
   },
   {
+    "cyrillic": "онд",
+    "candidates": [
+      {
+        "traditional": "ᠣᠨ ᠳᠤ",
+        "sense": "dative of он (on)",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "ондгонох",
     "candidates": [
       {
@@ -4970,6 +4981,17 @@
         "latin": "onchtoi",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "оны",
+    "candidates": [
+      {
+        "traditional": "ᠣᠨ ᠤ",
+        "sense": "genitive of он (on)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

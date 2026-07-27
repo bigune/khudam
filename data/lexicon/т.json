@@ -4587,6 +4587,17 @@
     ]
   },
   {
+    "cyrillic": "таны",
+    "candidates": [
+      {
+        "traditional": "ᠲᠠᠨ ᠤ",
+        "sense": "your, yours",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "тар",
     "candidates": [
       {
@@ -17041,6 +17052,17 @@
     ]
   },
   {
+    "cyrillic": "тухайд",
+    "candidates": [
+      {
+        "traditional": "ᠲᠤᠬᠠᠢ ᠳᠤ",
+        "sense": "regarding, in terms of",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "тухайлагдах",
     "candidates": [
       {
@@ -18323,6 +18345,17 @@
         "latin": "tedgeer",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "тэдний",
+    "candidates": [
+      {
+        "traditional": "ᠲᠡᠳᠡᠨ ᠦ",
+        "sense": "their; theirs",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
@@ -24052,6 +24085,28 @@
     ]
   },
   {
+    "cyrillic": "түүний",
+    "candidates": [
+      {
+        "traditional": "ᠲᠡᠭᠦᠨ ᠦ",
+        "sense": "his; her, hers; its",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
+    "cyrillic": "түүнийх",
+    "candidates": [
+      {
+        "traditional": "ᠲᠡᠭᠦᠨ ᠦ ᠬᠢ",
+        "sense": "that’s",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "түүнчлэн",
     "candidates": [
       {
@@ -25690,6 +25745,12 @@
         "verified": false,
         "source": "wiktionary",
         "corroborated": true
+      },
+      {
+        "traditional": "ᠲᠥᠰ ᠲᠡᠢ",
+        "sense": "comitative case of төс (tös)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },

@@ -5128,6 +5128,17 @@
     ]
   },
   {
+    "cyrillic": "заримдаа",
+    "candidates": [
+      {
+        "traditional": "ᠵᠠᠷᠢᠮ ᠳᠠᠭᠠᠨ",
+        "sense": "sometimes, from time to time",
+        "verified": false,
+        "source": "wiktionary"
+      }
+    ]
+  },
+  {
     "cyrillic": "заримдаг",
     "candidates": [
       {
@@ -7774,6 +7785,17 @@
         "latin": "zorigluulah",
         "verified": false,
         "source": "wmk-import"
+      }
+    ]
+  },
+  {
+    "cyrillic": "зоригоор",
+    "candidates": [
+      {
+        "traditional": "ᠵᠣᠷᠢᠭ ᠢᠶᠠᠷ",
+        "sense": "instrumental of зориг (zorig)",
+        "verified": false,
+        "source": "wiktionary"
       }
     ]
   },
