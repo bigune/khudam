@@ -16,3 +16,6 @@ Thumbs.db
 
 # local planning / scratch (not committed)
 .plans/
+
+# downloaded raw data (kaikki.org dumps etc.) — never commit raw source files
+.cache/

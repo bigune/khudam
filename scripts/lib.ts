@@ -50,6 +50,23 @@ export function readSuffixesFile(path: string): SuffixRow[] {
   return JSON.parse(readFileSync(path, "utf8"));
 }
 
+/** Canonical serialization for data/suffixes.json: stable key order, 2-space
+ * indent, trailing newline — same diff-friendly conventions as the lexicon. */
+export function writeSuffixesFile(path: string, rows: SuffixRow[]): void {
+  const canonical = rows.map((s) => {
+    const out: Partial<SuffixRow> = { cyrillic: s.cyrillic, traditional: s.traditional };
+    if (s.latin !== undefined) out.latin = s.latin;
+    out.sense = s.sense;
+    if (s.attach !== undefined) out.attach = s.attach;
+    if (s.gender !== undefined) out.gender = s.gender;
+    out.verified = s.verified;
+    out.source = s.source;
+    if (s.citation !== undefined) out.citation = s.citation;
+    return out as SuffixRow;
+  });
+  writeFileSync(path, JSON.stringify(canonical, null, 2) + "\n", "utf8");
+}
+
 /** Lowercase modern Mongolian Cyrillic: а–я (U+0430–U+044F) plus ё, ө, ү. */
 export const CYRILLIC_WORD_RE = /^[а-яёүө]+$/u;
 
