@@ -46,6 +46,14 @@ deleted, so prefer correcting bad entries over deleting them.
 Entries created by maintainers by hand, each traceable through Git history and
 pull-request discussion.
 
+The seed rows of [`suffixes.json`](suffixes.json) (2026-07-27) belong to this
+layer: their *rules* come from Я. Надмид, *Монгол бичгийн зөв бичих толь бичиг*
+(Улсын хэвлэлийн газар, 1990) with per-row citations, but the Unicode
+transcription of each traditional form is maintainer/AI work and is therefore
+`verified: false` until humans confirm it (flagged in [REVIEW.md](REVIEW.md)).
+The rulebook is copyrighted: rules are restated with citation in
+[GRAMMAR.md](GRAMMAR.md), its text is not copied, and the PDF is not committed.
+
 ## `community`
 
 Entries contributed through pull requests (see [CONTRIBUTING.md](../CONTRIBUTING.md)).

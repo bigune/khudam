@@ -14,6 +14,8 @@ import {
   REPO_ROOT,
   SOURCES,
   SUFFIXES_FILE,
+  SUFFIX_ATTACH,
+  SUFFIX_GENDERS,
   TRADITIONAL_RE,
   compareWords,
   listShardFiles,
@@ -255,17 +257,72 @@ function checkSuffixesFile(file: string): void {
     report(file, "file", "The top level of this file must be a list: it should start with [ and end with ].");
     return;
   }
+  const seenVariants = new Map<string, number>();
+  let previous: { cyrillic: string; traditional: string } | undefined;
   data.forEach((item, i) => {
-    const where = `suffix #${i + 1}`;
+    const label = isPlainObject(item) && typeof item.cyrillic === "string" ? ` (“-${item.cyrillic}”)` : "";
+    const where = `suffix #${i + 1}${label}`;
     if (!isPlainObject(item)) {
       report(file, where, "Each suffix mapping must be an object wrapped in { }.");
       return;
     }
+    const allowed = ["cyrillic", "traditional", "latin", "sense", "attach", "gender", "verified", "source", "citation"];
+    for (const key of Object.keys(item)) {
+      if (!allowed.includes(key)) {
+        report(file, where, `Unknown field "${key}" — allowed fields are: ${quoteList(allowed)}. Is it a typo?`);
+      }
+    }
     if (typeof item.cyrillic !== "string" || !CYRILLIC_WORD_RE.test(item.cyrillic)) {
       report(file, where, '"cyrillic" is required: the suffix in lowercase Cyrillic letters, e.g. "ын".');
+      return;
     }
-    if (typeof item.traditional !== "string" || !TRADITIONAL_RE.test(item.traditional)) {
-      report(file, where, '"traditional" is required: the suffix in standard Unicode Mongolian script.');
+    if (typeof item.traditional !== "string" || item.traditional.length === 0) {
+      report(file, where, '"traditional" is required: the suffix in standard Unicode Mongolian script, e.g. "ᠤᠨ".');
+    } else if (item.traditional.includes(" ")) {
+      report(
+        file,
+        where,
+        '"traditional" must not contain the narrow no-break space (U+202F) — the converter ' +
+          "inserts it automatically when joining the suffix to a word, so store the suffix letters only.",
+      );
+    } else if (!TRADITIONAL_RE.test(item.traditional)) {
+      report(
+        file,
+        where,
+        '"traditional" contains characters outside standard Unicode Mongolian (U+1800–U+18AF). ' +
+          "Note that several Mongolian letters look identical — correctness can only be judged " +
+          "by code point, not by appearance.",
+      );
+    }
+    if (typeof item.sense !== "string" || item.sense.length === 0) {
+      report(
+        file,
+        where,
+        '"sense" is required: a short grammatical label such as "genitive" or "plural", ' +
+          "so users can tell suffix candidates apart.",
+      );
+    }
+    if ("latin" in item && (typeof item.latin !== "string" || item.latin.length === 0)) {
+      report(file, where, '"latin" must be a non-empty text value when present (or remove the field).');
+    }
+    if ("attach" in item && !(SUFFIX_ATTACH as readonly unknown[]).includes(item.attach)) {
+      report(
+        file,
+        where,
+        `"attach" must be one of: ${quoteList(SUFFIX_ATTACH)} — what the traditional stem must end in ` +
+          "for this variant to apply (or remove the field when the suffix attaches to anything).",
+      );
+    }
+    if ("gender" in item && !(SUFFIX_GENDERS as readonly unknown[]).includes(item.gender)) {
+      report(
+        file,
+        where,
+        `"gender" must be one of: ${quoteList(SUFFIX_GENDERS)} — the vowel-harmony class of stems ` +
+          "this variant attaches to (or remove the field).",
+      );
+    }
+    if ("citation" in item && (typeof item.citation !== "string" || item.citation.length === 0)) {
+      report(file, where, '"citation" must be a non-empty text value when present, e.g. "Nadmid 1990 p. 15".');
     }
     if (typeof item.verified !== "boolean") {
       report(file, where, '"verified" is required and must be true or false (without quotes).');
@@ -273,6 +330,29 @@ function checkSuffixesFile(file: string): void {
     if (typeof item.source !== "string" || !(SOURCES as readonly string[]).includes(item.source)) {
       report(file, where, `"source" is required and must be one of: ${quoteList(SOURCES)}.`);
     }
+    if (typeof item.traditional === "string") {
+      const variantKey = `${item.cyrillic} ${item.traditional} ${item.attach ?? ""} ${item.gender ?? ""}`;
+      const firstAt = seenVariants.get(variantKey);
+      if (firstAt !== undefined) {
+        report(file, where, `This exact suffix variant already appears as suffix #${firstAt} — please remove the duplicate.`);
+      } else {
+        seenVariants.set(variantKey, i + 1);
+      }
+      if (previous !== undefined) {
+        const cmp = compareWords(previous.cyrillic, item.cyrillic);
+        if (cmp > 0 || (cmp === 0 && compareWords(previous.traditional, item.traditional) > 0)) {
+          report(
+            file,
+            where,
+            `Suffixes must be in alphabetical (Unicode) order by "cyrillic", then by "traditional": ` +
+              `“-${item.cyrillic}” should come before “-${previous.cyrillic}”, not after it. ` +
+              "(Note: ё, ө, ү sort after я in Unicode order.)",
+          );
+        }
+      }
+      previous = { cyrillic: item.cyrillic, traditional: item.traditional };
+    }
+    checkedEntries++;
   });
 }
 

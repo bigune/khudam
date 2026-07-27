@@ -383,3 +383,23 @@ Word-initial ᠶᠢ (a legitimate е/ё/ю/я glide, e.g. `ес` → ᠶᠢᠰ�
 - `шүүгээлэх` (_shuugeeleh_) — `ᠱᠦᠬᠦᠶᠢᠯᠡᠬᠦ` → would be `ᠱᠦᠬᠦᠢᠯᠡᠬᠦ`
 - `эрээвэр` (_ereever_) — `ᠡᠶᠢᠶᠡᠪᠦᠷᠢ` → would be `ᠡᠢᠶᠡᠪᠦᠷᠢ`
 
+
+## Suffix table needs human verification (56 rows, high priority)
+
+Every row of [`suffixes.json`](suffixes.json) was transcribed into Unicode by AI from
+the rule tables in Nadmid 1990 (see [GRAMMAR.md](GRAMMAR.md) § Sources) and is
+`verified: false`. Худам бичгийн нөхцөлүүдийн Юникод бичлэгийг хүн нягтлаагүй байгаа —
+жижиг, хаалттай олонлог тул нэг дор хянаж баталгаажуулахад хялбар. This is the
+highest-leverage review in the repo: a closed set of 56 rows that the converter
+attaches to thousands of words.
+
+Least certain rows, in order:
+
+- `-чууд`/`-чүүд` → `ᠴᠤᠳ`/`ᠴᠦᠳ` (collective plural) — read from a low-resolution scan
+  of Nadmid p. 15; the vowel length in the traditional form needs checking.
+- `-ы`/`-ий` → `ᠤ`/`ᠦ` (genitive) — Nadmid p. 15 restricts these to н-final stems, but
+  the engine can only express "consonant-final" so far; confirm the approximation
+  does not misfire.
+- The comitative `ᠯᠤᠭ᠎ᠠ`/`ᠯᠦᠭᠡ` (-луга/-лүгэ) was deliberately left OUT — its MVS
+  spelling needs a code-point ruling in [ENCODING.md](ENCODING.md) before it can
+  be added.

@@ -28,6 +28,26 @@ export interface Entry {
   candidates: Candidate[];
 }
 
+export const SUFFIX_ATTACH = ["vowel", "consonant"] as const;
+export const SUFFIX_GENDERS = ["masculine", "feminine"] as const;
+
+/** One row of data/suffixes.json — see data/GRAMMAR.md for field semantics. */
+export interface SuffixRow {
+  cyrillic: string;
+  traditional: string;
+  latin?: string;
+  sense: string;
+  attach?: (typeof SUFFIX_ATTACH)[number];
+  gender?: (typeof SUFFIX_GENDERS)[number];
+  verified: boolean;
+  source: Source;
+  citation?: string;
+}
+
+export function readSuffixesFile(path: string): SuffixRow[] {
+  return JSON.parse(readFileSync(path, "utf8"));
+}
+
 /** Lowercase modern Mongolian Cyrillic: а–я (U+0430–U+044F) plus ё, ө, ү. */
 export const CYRILLIC_WORD_RE = /^[а-яёүө]+$/u;
 

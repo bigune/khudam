@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://khudam.dev/schema/suffix.schema.json",
+  "title": "Khudam suffix mapping",
+  "description": "One Cyrillic suffix mapped to one traditional written-apart suffix variant. The same cyrillic value may appear in several rows — one per traditional variant. Conditions (attach, gender) are evaluated against the TRADITIONAL stem the suffix would join, never the Cyrillic surface. Rules and citations live in data/GRAMMAR.md.",
+  "type": "object",
+  "required": ["cyrillic", "traditional", "sense", "verified", "source"],
+  "additionalProperties": false,
+  "properties": {
+    "cyrillic": {
+      "type": "string",
+      "description": "The suffix as it appears at the end of the modern Cyrillic word: lowercase а-я plus ё, ө, ү, NFC-normalized.",
+      "pattern": "^[\\u0430-\\u044f\\u0451\\u04af\\u04e9]+$"
+    },
+    "traditional": {
+      "type": "string",
+      "description": "The traditional suffix in standard Unicode (U+1800–U+18AF), logical code points only, WITHOUT the NNBSP — the converter inserts U+202F when joining stem and suffix.",
+      "pattern": "^[\\u1800-\\u18af]+$"
+    },
+    "latin": {
+      "type": "string",
+      "description": "Optional romanization of the traditional suffix.",
+      "minLength": 1
+    },
+    "sense": {
+      "type": "string",
+      "description": "Grammatical label shown to users to tell candidates apart, e.g. \"genitive\", \"plural\".",
+      "minLength": 1
+    },
+    "attach": {
+      "type": "string",
+      "description": "Optional condition: what the traditional stem must end in for this variant to apply.",
+      "enum": ["vowel", "consonant"]
+    },
+    "gender": {
+      "type": "string",
+      "description": "Optional condition: the vowel-harmony class the traditional stem must have. Stems with neither class (only ᠢ) match both variants.",
+      "enum": ["masculine", "feminine"]
+    },
+    "verified": {
+      "type": "boolean",
+      "description": "true only after a human reviewer confirmed the spelling via pull request. Machine-transcribed rows are always false."
+    },
+    "source": {
+      "type": "string",
+      "description": "Where this row came from.",
+      "enum": ["wmk-import", "manual", "community"]
+    },
+    "citation": {
+      "type": "string",
+      "description": "Reference for the rule variant, e.g. \"Nadmid 1990 p. 15\" — see data/GRAMMAR.md § Sources.",
+      "minLength": 1
+    }
+  }
+}
