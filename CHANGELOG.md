@@ -12,7 +12,7 @@ Versioning follows [Semantic Versioning](https://semver.org/): while on `0.x`, d
 
 ### Added
 
-- Second data source: English Wiktionary's Mongolian dictionary via kaikki.org (CC BY-SA, attribution in `data/SOURCES.md`). 142 new words (lexicon → 28,119), 958 candidates corroborated where the wmk seed and Wiktionary agree on the identical form (`corroborated: true`, source upgraded to the new `"wiktionary"` tier), 342 disagreements kept side-by-side and queued in `data/REVIEW.md` for human triage, 28 unverified suffix rows. `CandidateSource` gains `"wiktionary"` (minor bump when released).
+- Second data source: English Wiktionary's Mongolian dictionary via kaikki.org (CC BY-SA, attribution in `data/SOURCES.md`). 167 new words (lexicon → 28,144), 958 candidates corroborated where the wmk seed and Wiktionary agree on the identical form (`corroborated: true`, source upgraded to the new `"wiktionary"` tier), 342 disagreements kept side-by-side and queued in `data/REVIEW.md` for human triage, 28 unverified suffix rows, and review-only queues for 90 proper names and 158 Classical-etymology suggestions. `CandidateSource` gains `"wiktionary"` (minor bump when released).
 
   ⚠️ Converter output changes where Wiktionary added a second candidate: those words now return multiple candidates.
 

@@ -59,6 +59,13 @@ deleted, so prefer correcting bad entries over deleting them.
   source produced the identical traditional form, the candidate carries
   `corroborated: true`. When they disagree, both candidates are kept and the word is
   queued in the [REVIEW.md](REVIEW.md) conflict queue — the prioritized human-review list.
+- **What is read:** `forms[]` entries tagged `Mongolian`, plus Mongolian-script
+  spellings sitting untagged in headword-line template arguments (a wiktextract
+  gap — same semantic slot). Etymology templates citing **Classical Mongolian**
+  (`cmg`) are queued in [REVIEW.md](REVIEW.md) as *suggestions only*, never
+  imported: the etymon usually equals the modern бичиг spelling but is not
+  guaranteed to, and other languages of the same Unicode block (Manchu) are
+  explicitly excluded by language code.
 - The importer never modifies a `verified: true` candidate, and re-runs are idempotent
   (`bun run import:wiktionary`; kaikki.org refreshes with each Wiktionary dump, so a
   periodic re-run picks up new Wiktionary work).
@@ -68,13 +75,14 @@ deleted, so prefer correcting bad entries over deleting them.
 |                                                     |                        |
 | --------------------------------------------------- | ---------------------- |
 | Wiktionary entries read                             | 6,623                  |
-| Entries carrying a Mongolian-script form            | 1,661                  |
-| New words added                                     | 142 (lexicon → 28,119) |
+| Entries carrying a Mongolian-script form            | 1,709                  |
+| New words added                                     | 167 (lexicon → 28,144) |
 | Candidates corroborated (seed and Wiktionary agree) | 958                    |
 | Conflict words queued in REVIEW.md                  | 342                    |
 | Forms rejected (Unicode/space/gloss) → REVIEW.md    | 33                     |
 | Suffix rows added to suffixes.json (unverified)     | 28                     |
-| Proper names queued (names.json stays 100% human)   | 43                     |
+| Proper names queued (names.json stays 100% human)   | 90                     |
+| Classical-etymology suggestion words → REVIEW.md    | 158                    |
 
 ## `manual`
 

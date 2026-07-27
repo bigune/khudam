@@ -21,9 +21,10 @@
   with `apps/web`; refine with real-user feedback)
 - Recover the 286 seed rows listed in `data/REVIEW.md`
 - ✅ Second data source: English Wiktionary via kaikki.org, CC BY-SA
-  (2026-07-27) — 142 new words, 958 candidates corroborated by two
+  (2026-07-27) — 167 new words, 958 candidates corroborated by two
   independent sources, 342-word conflict queue in `data/REVIEW.md` as the
-  prioritized review list. Optional monthly chore: re-run
+  prioritized review list, plus 158 Classical-etymology suggestions and
+  90 queued proper names. Optional monthly chore: re-run
   `bun run import:wiktionary` after deleting `.cache/` — kaikki.org
   refreshes with each Wiktionary dump, and the import is idempotent.
 
