@@ -48,6 +48,22 @@ export default function Home() {
     .map((t, i) => ({ token: t, index: i }))
     .filter(({ token }) => token.candidates.length > 0);
   const hasWords = wordTokens.length > 0;
+
+  // Word cards grouped one row per sentence, so long text stacks vertically
+  // instead of one endless horizontal scroll.
+  const SENTENCE_END_RE = /[.!?…;\n]/;
+  const sentences: { token: Token; index: number }[][] = [];
+  {
+    let current: { token: Token; index: number }[] = [];
+    tokens.forEach((t, i) => {
+      if (t.candidates.length > 0) current.push({ token: t, index: i });
+      else if (SENTENCE_END_RE.test(t.input) && current.length > 0) {
+        sentences.push(current);
+        current = [];
+      }
+    });
+    if (current.length > 0) sentences.push(current);
+  }
   const hasFallback = wordTokens.some(({ token }) => token.fallback);
   const hasAmbiguous = wordTokens.some(
     ({ token }) => token.candidates.length > 1,
@@ -146,9 +162,13 @@ export default function Home() {
       {hasWords && (
         <section className="words">
           <span className="field-label">Үг тус бүрийн тайлбарууд</span>
-          <div className="words-scroll-wrap">
-            <div className="words-scroll">
-              {wordTokens.map(({ token, index }) => (
+          {sentences.map((sentence, si) => (
+            <div className="words-scroll-wrap" key={si}>
+              <div className="words-scroll">
+                {sentences.length > 1 && (
+                  <span className="sentence-num">{si + 1}</span>
+                )}
+                {sentence.map(({ token, index }) => (
                 <div className="word-card" key={index}>
                   <span className="word-input">{token.input}</span>
                   <div className="chips">
@@ -180,9 +200,10 @@ export default function Home() {
                     })}
                   </div>
                 </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          ))}
           <p className="note">
             «Баталгаажаагүй» гэдэг нь машин импортын түвшний өгөгдөл — хүн
             хянаагүй тул алдаатай байж болно. Алдаа олбол{" "}

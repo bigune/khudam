@@ -226,6 +226,17 @@ button {
   pointer-events: none;
 }
 
+/* Row marker when the text has more than one sentence. */
+.sentence-num {
+  flex: 0 0 auto;
+  align-self: center;
+  min-width: 1.2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
 .word-card {
   flex: 0 0 auto;
   min-width: 8.5rem;
