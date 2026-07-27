@@ -108,7 +108,7 @@ function checkCandidate(file: string, where: string, cand: unknown, senseRequire
     report(file, where, "Each candidate must be an object wrapped in { }.");
     return;
   }
-  const allowed = ["traditional", "latin", "sense", "verified", "source"];
+  const allowed = ["traditional", "latin", "sense", "verified", "source", "corroborated"];
   for (const key of Object.keys(cand)) {
     if (!allowed.includes(key)) {
       report(file, where, `Unknown field "${key}" — allowed fields are: ${quoteList(allowed)}. Is it a typo?`);
@@ -149,6 +149,15 @@ function checkCandidate(file: string, where: string, cand: unknown, senseRequire
   }
   if (typeof cand.verified !== "boolean") {
     report(file, where, '"verified" is required and must be true or false (without quotes).');
+  }
+  if ("corroborated" in cand && typeof cand.corroborated !== "boolean") {
+    report(
+      file,
+      where,
+      '"corroborated" must be true or false (without quotes) when present, or remove the field. ' +
+        "It marks forms that two independent sources agree on — import tooling sets it; " +
+        "contributors normally never need to.",
+    );
   }
   if (typeof cand.source !== "string" || !(SOURCES as readonly string[]).includes(cand.source)) {
     report(

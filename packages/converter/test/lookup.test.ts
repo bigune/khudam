@@ -68,6 +68,12 @@ describe("decodeCandidates (ambiguous entries)", () => {
     });
   });
 
+  test("wiktionary source code decodes to its full name", () => {
+    const [c] = decodeCandidates([["ᠬᠤᠪᠢᠶᠠᠷᠢ", "qubiyari", "schedule; timetable", 0, "k"]]);
+    expect(c.source).toBe("wiktionary");
+    expect(c.verified).toBeFalse();
+  });
+
   test("empty latin/sense fields are omitted, not empty strings", () => {
     const [c] = decodeCandidates([["ᠠᠪᠤ", "", "", 0, "w"]]);
     expect(c).toEqual({ traditional: "ᠠᠪᠤ", verified: false, source: "wmk-import" });

@@ -12,7 +12,7 @@ export const LEXICON_DIR = join(DATA_DIR, "lexicon");
 export const NAMES_FILE = join(DATA_DIR, "names.json");
 export const SUFFIXES_FILE = join(DATA_DIR, "suffixes.json");
 
-export const SOURCES = ["wmk-import", "manual", "community"] as const;
+export const SOURCES = ["wmk-import", "wiktionary", "manual", "community"] as const;
 export type Source = (typeof SOURCES)[number];
 
 export interface Candidate {
@@ -21,6 +21,8 @@ export interface Candidate {
   sense?: string;
   verified: boolean;
   source: Source;
+  /** true when two independent sources produced the identical traditional form. */
+  corroborated?: boolean;
 }
 
 export interface Entry {
@@ -110,5 +112,6 @@ function canonicalCandidate(c: Candidate): Candidate {
   if (c.sense !== undefined) out.sense = c.sense;
   out.verified = c.verified;
   out.source = c.source;
+  if (c.corroborated !== undefined) out.corroborated = c.corroborated;
   return out as Candidate;
 }

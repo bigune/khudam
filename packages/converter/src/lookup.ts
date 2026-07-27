@@ -13,6 +13,7 @@ export type CompactCandidate = [
 
 const SOURCE_NAMES: Record<string, CandidateSource> = {
   w: "wmk-import",
+  k: "wiktionary",
   m: "manual",
   c: "community",
 };

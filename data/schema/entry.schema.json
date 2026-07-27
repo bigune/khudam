@@ -60,7 +60,11 @@
         "source": {
           "type": "string",
           "description": "Where this candidate came from.",
-          "enum": ["wmk-import", "manual", "community"]
+          "enum": ["wmk-import", "wiktionary", "manual", "community"]
+        },
+        "corroborated": {
+          "type": "boolean",
+          "description": "Optional: true when two independent sources produced the identical traditional form (e.g. the wmk bootstrap and Wiktionary agree). Set by import tooling; corroboration raises confidence but is NOT human verification — verified stays false until a human confirms."
         }
       }
     }

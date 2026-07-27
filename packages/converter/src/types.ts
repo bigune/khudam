@@ -2,7 +2,7 @@
  * the suffix engine (lexicon stem + grammar rule, see data/GRAMMAR.md);
  * "fallback" marks rule-based transliteration of a word the lexicon does not
  * know — it is never dictionary data. */
-export type CandidateSource = "wmk-import" | "manual" | "community" | "suffix-rule" | "fallback";
+export type CandidateSource = "wmk-import" | "wiktionary" | "manual" | "community" | "suffix-rule" | "fallback";
 
 export interface Candidate {
   /** Traditional Mongolian script, standard Unicode logical code points. */
