@@ -240,7 +240,6 @@ button {
 .word-card {
   flex: 0 0 auto;
   min-width: 8.5rem;
-  max-width: 12rem;
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
@@ -257,9 +256,12 @@ button {
   border-bottom: 1px solid var(--border);
 }
 
+/* Candidates sit side by side; the card grows wide, never tall, so an
+   ambiguous word doesn't push the whole sentence row down. */
 .chips {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: stretch;
   gap: 0.45rem;
 }
 
@@ -268,7 +270,9 @@ button {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.4rem;
-  width: 100%;
+  flex: 1 0 auto;
+  min-width: 7rem;
+  max-width: 12rem;
   padding: 0.55rem 0.6rem;
   background: var(--bg);
   border: 1px solid transparent;
@@ -309,10 +313,12 @@ button {
 }
 
 .badge {
-  border-radius: 999px;
+  border-radius: 10px;
   padding: 0.1rem 0.55rem;
   font-weight: 600;
-  white-space: nowrap;
+  max-width: 100%;
+  text-align: left;
+  overflow-wrap: break-word;
 }
 
 .badge.verified {
