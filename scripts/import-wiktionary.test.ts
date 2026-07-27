@@ -36,7 +36,50 @@ describe("extractLine", () => {
       word: "хуваарь",
       candidates: [{ traditional: "ᠬᠤᠪᠢᠶᠠᠷᠢ", latin: "qubiyari", sense: "schedule; timetable" }],
       invalid: [],
+      suggestions: [],
     });
+  });
+
+  test("recovers untagged spellings from headword-line template arguments", () => {
+    const out = extractLine({
+      word: "говь",
+      pos: "noun",
+      forms: [],
+      head_templates: [{ name: "mn-noun", args: { "1": "ᠭᠣᠪᠢ" }, expansion: "говь • (govʹ)" }],
+      senses: [{ glosses: ["desert"] }],
+    });
+    if (out.kind !== "word") throw new Error("expected word");
+    // no classical romanization exists in head templates — latin is omitted
+    expect(out.candidates).toEqual([{ traditional: "ᠭᠣᠪᠢ", sense: "desert" }]);
+  });
+
+  test("a Classical Mongolian etymon becomes a suggestion, never a candidate", () => {
+    const out = extractLine({
+      word: "уул",
+      pos: "noun",
+      forms: [],
+      etymology_templates: [
+        { name: "inh", args: { "1": "mn", "2": "cmg", "3": "ᠠᠭᠤᠯᠠ" }, expansion: "Classical Mongolian ᠠᠭᠤᠯᠠ (aɣula)" },
+        { name: "inh", args: { "1": "mn", "2": "xgn-pro", "3": "*aɣula" }, expansion: "Proto-Mongolic *aɣula" },
+      ],
+      senses: [{ glosses: ["mountain"] }],
+    });
+    if (out.kind !== "word") throw new Error("expected word");
+    expect(out.candidates).toEqual([]);
+    expect(out.suggestions).toEqual([{ traditional: "ᠠᠭᠤᠯᠠ", latin: "aɣula", gloss: "mountain" }]);
+  });
+
+  test("etymons in other scripts of the same Unicode block (Manchu) are ignored", () => {
+    const out = extractLine({
+      word: "уул",
+      pos: "noun",
+      forms: [],
+      etymology_templates: [
+        { name: "der", args: { "1": "mn", "2": "mnc", "3": "ᡤᡡᠯᡥᠠ" }, expansion: "Manchu ᡤᡡᠯᡥᠠ (gūlha, “boot”)" },
+      ],
+      senses: [{ glosses: ["a type of boots"] }],
+    });
+    expect(out).toEqual({ kind: "skip", reason: "no-mongolian-form" });
   });
 
   test("skips an entry with no Mongolian-script form", () => {

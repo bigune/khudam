@@ -72,12 +72,19 @@ export interface RawForm {
 export interface RawSense {
   glosses?: string[];
 }
+export interface RawTemplate {
+  name?: string;
+  args?: Record<string, unknown>;
+  expansion?: string;
+}
 export interface RawLine {
   word?: string;
   pos?: string;
   lang_code?: string;
   forms?: RawForm[];
   senses?: RawSense[];
+  head_templates?: RawTemplate[];
+  etymology_templates?: RawTemplate[];
 }
 
 export interface FormOut {
@@ -93,9 +100,24 @@ export interface DraftCandidate extends FormOut {
   sense?: string;
 }
 
+/** A Classical Mongolian etymon offered for human review only — the headword
+ * line has no Mongolian spelling, so this is a hint, never a candidate. */
+export interface EtymologySuggestion {
+  traditional: string;
+  latin?: string;
+  gloss?: string;
+}
+
 export type Extracted =
   | { kind: "skip"; reason: "empty" | "other-language" | "non-cyrillic" | "multi-word" | "no-mongolian-form" }
-  | { kind: "word"; key: string; word: string; candidates: DraftCandidate[]; invalid: InvalidForm[] }
+  | {
+      kind: "word";
+      key: string;
+      word: string;
+      candidates: DraftCandidate[];
+      invalid: InvalidForm[];
+      suggestions: EtymologySuggestion[];
+    }
   | { kind: "suffix"; key: string; word: string; rows: SuffixRow[]; invalid: InvalidForm[] }
   | { kind: "name"; word: string; forms: FormOut[]; invalid: InvalidForm[]; sense?: string };
 
@@ -128,26 +150,68 @@ function invalidReason(traditional: string): string {
   return `characters outside standard Unicode Mongolian: ${[...new Set(bad)].join(" ")}`;
 }
 
-/** All forms[] entries tagged "Mongolian", NFC-normalized and range-validated. */
+const MONGOLIAN_CHAR_RE = /[᠀-᢯]/u;
+
+/**
+ * Mongolian-script spellings of the headword: forms[] entries tagged
+ * "Mongolian", plus spellings that wiktextract left untagged inside the
+ * headword-line template arguments (e.g. {{mn-proper noun|ᠪᠡᠯᠭᠦᠲᠡᠢ}}) — the
+ * same semantic slot, just a template variant the extractor missed. All
+ * NFC-normalized and range-validated.
+ */
 function mongolianForms(line: RawLine, word: string): { valid: FormOut[]; invalid: InvalidForm[] } {
   const valid: FormOut[] = [];
   const invalid: InvalidForm[] = [];
   const seen = new Set<string>();
-  for (const f of line.forms ?? []) {
-    if (!f.tags?.includes("Mongolian")) continue;
-    const traditional = (f.form ?? "").normalize("NFC").trim().replace(/^-/u, "");
-    if (!traditional || seen.has(traditional)) continue;
+  const push = (rawForm: string, roman?: string): void => {
+    const traditional = rawForm.normalize("NFC").trim().replace(/^-/u, "");
+    if (!traditional || seen.has(traditional)) return;
     seen.add(traditional);
     if (!TRADITIONAL_RE.test(traditional)) {
       invalid.push({ word, form: traditional, reason: invalidReason(traditional) });
-      continue;
+      return;
     }
     const out: FormOut = { traditional };
-    const latin = f.roman?.trim().replace(/^-/u, "");
+    const latin = roman?.trim().replace(/^-/u, "");
     if (latin) out.latin = latin;
     valid.push(out);
+  };
+  for (const f of line.forms ?? []) {
+    if (f.tags?.includes("Mongolian")) push(f.form ?? "", f.roman);
+  }
+  for (const t of line.head_templates ?? []) {
+    for (const v of Object.values(t.args ?? {})) {
+      // Head templates describe this Mongolian headword only, so any script
+      // run in their arguments is its spelling. No classical romanization is
+      // available here (the expansion's parenthesis romanizes the Cyrillic).
+      if (typeof v === "string" && MONGOLIAN_CHAR_RE.test(v)) push(v);
+    }
   }
   return { valid, invalid };
+}
+
+/**
+ * Classical Mongolian etymons, e.g. {{inh|mn|cmg|ᠠᠭᠤᠯᠠ}} "Inherited from
+ * Classical Mongolian ᠠᠭᠤᠯᠠ (aɣula)". Only templates that explicitly cite
+ * cmg count: other ancestor scripts (notably Manchu) share the same Unicode
+ * block, so matching on characters alone would import the wrong language.
+ */
+function classicalEtymons(line: RawLine, gloss: string | undefined): EtymologySuggestion[] {
+  const out: EtymologySuggestion[] = [];
+  for (const t of line.etymology_templates ?? []) {
+    const args = t.args ?? {};
+    const etymon = args["3"];
+    if (args["2"] !== "cmg" || typeof etymon !== "string") continue;
+    const traditional = etymon.normalize("NFC").trim();
+    if (!traditional || !MONGOLIAN_CHAR_RE.test(traditional)) continue;
+    if (out.some((s) => s.traditional === traditional)) continue;
+    const s: EtymologySuggestion = { traditional };
+    const roman = t.expansion?.match(/Classical Mongolian .+? \(([^)]+)\)/u)?.[1];
+    if (roman) s.latin = roman;
+    if (gloss !== undefined) s.gloss = gloss;
+    out.push(s);
+  }
+  return out;
 }
 
 /** Classify one JSONL line of the kaikki dump. */
@@ -164,8 +228,11 @@ export function extractLine(line: RawLine): Extracted {
     return { kind: "skip", reason: /[а-яёүө]/u.test(key) ? "multi-word" : "non-cyrillic" };
   }
   const { valid, invalid } = mongolianForms(line, rawWord);
-  if (valid.length === 0 && invalid.length === 0) return { kind: "skip", reason: "no-mongolian-form" };
   const sense = firstGloss(line);
+  const suggestions = line.pos === "name" || line.pos === "suffix" ? [] : classicalEtymons(line, sense);
+  if (valid.length === 0 && invalid.length === 0 && suggestions.length === 0) {
+    return { kind: "skip", reason: "no-mongolian-form" };
+  }
 
   if (line.pos === "name") return { kind: "name", word: rawWord, forms: valid, invalid, sense };
 
@@ -202,7 +269,7 @@ export function extractLine(line: RawLine): Extracted {
   }
 
   const candidates: DraftCandidate[] = valid.map((f) => (sense === undefined ? { ...f } : { ...f, sense }));
-  return { kind: "word", key, word: rawWord, candidates, invalid };
+  return { kind: "word", key, word: rawWord, candidates, invalid, suggestions };
 }
 
 // ---------------------------------------------------------------------------
@@ -380,6 +447,7 @@ function main(dump: string): void {
 
   const skips = new Map<string, number>();
   const words = new Map<string, { word: string; candidates: Map<string, DraftCandidate> }>();
+  const suggestions = new Map<string, { word: string; items: EtymologySuggestion[] }>();
   const suffixRows: SuffixRow[] = [];
   const names = new Map<string, NameQueueItem>();
   const invalid: InvalidForm[] = [];
@@ -392,7 +460,9 @@ function main(dump: string): void {
       skips.set(extracted.reason, (skips.get(extracted.reason) ?? 0) + 1);
       continue;
     }
-    linesWithForms++;
+    if (extracted.kind !== "word" || extracted.candidates.length + extracted.invalid.length > 0) {
+      linesWithForms++;
+    }
     for (const inv of extracted.kind === "name" ? [] : extracted.invalid) {
       invalid.push(inv);
       invalidWordUrls.set(inv.word, wiktionaryUrl(inv.word));
@@ -407,6 +477,14 @@ function main(dump: string): void {
       // occurrence of each distinct traditional form wins, with its own sense.
       for (const c of extracted.candidates) {
         if (!agg.candidates.has(c.traditional)) agg.candidates.set(c.traditional, c);
+      }
+      for (const s of extracted.suggestions) {
+        let sg = suggestions.get(extracted.key);
+        if (sg === undefined) {
+          sg = { word: extracted.word, items: [] };
+          suggestions.set(extracted.key, sg);
+        }
+        if (!sg.items.some((i) => i.traditional === s.traditional)) sg.items.push(s);
       }
     } else if (extracted.kind === "suffix") {
       suffixRows.push(...extracted.rows);
@@ -437,6 +515,11 @@ function main(dump: string): void {
     // A word whose every form failed validation has nothing to merge — it
     // lives in REVIEW.md only, and must not become an empty entry.
     if (agg.candidates.size > 0) mergeWord(lexicon, key, [...agg.candidates.values()], stats);
+  }
+
+  // Etymology suggestions matter only where no headword-line spelling exists.
+  for (const key of [...suggestions.keys()]) {
+    if ((words.get(key)?.candidates.size ?? 0) > 0) suggestions.delete(key);
   }
 
   // Conflict queue, computed from merged state (stable across re-runs).
@@ -473,7 +556,7 @@ function main(dump: string): void {
     writeSuffixesFile(SUFFIXES_FILE, suffixes);
   }
 
-  writeReviewSection(conflicts, stats, invalid, invalidWordUrls, [...names.values()], suffixesAdded);
+  writeReviewSection(conflicts, stats, invalid, invalidWordUrls, [...names.values()], suffixesAdded, suggestions, lexicon);
 
   // Report.
   const totalCorroborated = [...lexicon.values()].reduce(
@@ -494,6 +577,7 @@ function main(dump: string): void {
   console.log(`  invalid forms sent to review:   ${invalid.length}`);
   console.log(`  suffixes imported:              ${suffixesAdded} (of ${suffixRows.length} extracted)`);
   console.log(`  names queued (NOT imported):    ${names.size}`);
+  console.log(`  etymology suggestions queued:   ${suggestions.size} words (NOT imported)`);
   console.log(`  lexicon total:                  ${total} entries in ${shardSummary.length} shards`);
   console.log("");
   console.log("Lexicon totals per shard");
@@ -514,6 +598,8 @@ function writeReviewSection(
   invalidWordUrls: Map<string, string>,
   names: NameQueueItem[],
   suffixesAdded: number,
+  suggestions: Map<string, { word: string; items: EtymologySuggestion[] }>,
+  lexicon: Map<string, Entry>,
 ): void {
   const lines: string[] = [REVIEW_BEGIN, ""];
   lines.push("## Wiktionary import review queue (`scripts/import-wiktionary.ts`)");
@@ -585,6 +671,38 @@ function writeReviewSection(
       const bad = n.invalid.map((i) => `⚠ \`${i.form}\` (${i.reason})`);
       const sense = n.sense !== undefined ? ` — “${n.sense}”` : "";
       lines.push(`- **${n.word}** — ${[...forms, ...bad].join(" · ")}${sense} — [Wiktionary](${wiktionaryUrl(n.word)})`);
+    }
+    lines.push("");
+  }
+
+  if (suggestions.size > 0) {
+    lines.push(`### Classical Mongolian etymology suggestions (${suggestions.size} words, NOT imported)`);
+    lines.push("");
+    lines.push(
+      "These words have no Mongolian spelling on their Wiktionary headword line, but " +
+        "their etymology cites a Classical Mongolian form. Because монгол бичиг largely " +
+        "preserves classical orthography, the etymon is *usually* the correct spelling — " +
+        "but not always (it may cover a different sense or predate modern script " +
+        "convention), so it is only a hint for reviewers, never imported. " +
+        "“= lexicon” / “≠ lexicon” compares code points against the current candidate(s).",
+    );
+    lines.push("");
+    const sorted = [...suggestions.entries()].sort((a, b) => compareWords(a[0], b[0]));
+    for (const [key, sg] of sorted) {
+      const entry = lexicon.get(key);
+      for (const s of sg.items) {
+        const latin = s.latin !== undefined ? ` (*${s.latin}*)` : "";
+        const gloss = s.gloss !== undefined ? ` — “${s.gloss}”` : "";
+        let compare: string;
+        if (entry === undefined) {
+          compare = "not in lexicon yet";
+        } else if (entry.candidates.some((c) => c.traditional === s.traditional)) {
+          compare = "= lexicon (code points identical)";
+        } else {
+          compare = `≠ lexicon: ${entry.candidates.map((c) => `\`${c.traditional}\` (${c.source})`).join(", ")}`;
+        }
+        lines.push(`- **${key}** — etymology cites \`${s.traditional}\`${latin}${gloss} — ${compare} — [Wiktionary](${wiktionaryUrl(sg.word)})`);
+      }
     }
     lines.push("");
   }
