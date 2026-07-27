@@ -20,6 +20,12 @@
 - Honest ambiguity UI: show all candidates + verified badges (v0 shipped
   with `apps/web`; refine with real-user feedback)
 - Recover the 286 seed rows listed in `data/REVIEW.md`
+- ✅ Second data source: English Wiktionary via kaikki.org, CC BY-SA
+  (2026-07-27) — 142 new words, 958 candidates corroborated by two
+  independent sources, 342-word conflict queue in `data/REVIEW.md` as the
+  prioritized review list. Optional monthly chore: re-run
+  `bun run import:wiktionary` after deleting `.cache/` — kaikki.org
+  refreshes with each Wiktionary dump, and the import is idempotent.
 
 ## Phase 2 — suffix engine
 

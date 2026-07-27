@@ -35,7 +35,9 @@ Khudam бол кирилл ↔ монгол бичиг хөрвүүлэлтий�
 
 ### Эх сурвалж
 
-Анхны 28 мянга орчим бичлэгийг [sura0111/writtenMongolianKeyboard](https://github.com/sura0111/writtenMongolianKeyboard) (MIT) төслөөс импортолсон. Тэдгээрийн монгол бичгийн хэлбэрүүд нь гуравдагч машин хөрвүүлэгчээр үүссэн тул **бүгд `verified: false`** төлөвтэй. Дэлгэрэнгүйг [data/SOURCES.md](data/SOURCES.md)-с үзнэ үү.
+Анхны 28 мянга орчим бичлэгийг [sura0111/writtenMongolianKeyboard](https://github.com/sura0111/writtenMongolianKeyboard) (MIT) төслөөс импортолсон. Тэдгээрийн монгол бичгийн хэлбэрүүд нь гуравдагч машин хөрвүүлэгчээр үүссэн тул **бүгд `verified: false`** төлөвтэй.
+
+Хоёр дахь эх сурвалж: Английн [Wiktionary](https://en.wiktionary.org/)-гийн монгол үгсийг [kaikki.org](https://kaikki.org/dictionary/Mongolian/)-оор дамжуулан импортолсон (© Wiktionary contributors, CC BY-SA). Wiktionary-гийн бичлэгийг хүмүүс бичиж хянадаг тул итгэлцлийн түвшин арай өндөр ч мөн л `verified: false` хэвээр. Хоёр эх сурвалж яг ижил хэлбэр өгсөн үгс `corroborated: true` тэмдэгтэй; зөрсөн тохиолдолд хоёр хувилбарыг хоёуланг нь хадгалж, [data/REVIEW.md](data/REVIEW.md)-ийн хянан засварлах дараалалд жагсаасан. Дэлгэрэнгүйг [data/SOURCES.md](data/SOURCES.md)-с үзнэ үү.
 
 ### Ашиглах
 
@@ -85,7 +87,9 @@ The converter never hides this distinction: every result is returned with its `v
 
 ### Data provenance
 
-The initial ~28k entries were imported from [sura0111/writtenMongolianKeyboard](https://github.com/sura0111/writtenMongolianKeyboard) (MIT). Its traditional-script forms were produced by a third-party machine converter, so **everything is imported as `verified: false`**. Full provenance: [data/SOURCES.md](data/SOURCES.md).
+The initial ~28k entries were imported from [sura0111/writtenMongolianKeyboard](https://github.com/sura0111/writtenMongolianKeyboard) (MIT). Its traditional-script forms were produced by a third-party machine converter, so **everything is imported as `verified: false`**.
+
+The second layer comes from the Mongolian dictionary of English [Wiktionary](https://en.wiktionary.org/), extracted via [kaikki.org](https://kaikki.org/dictionary/Mongolian/) (© Wiktionary contributors, CC BY-SA — the same ShareAlike family as our data). Wiktionary entries are written and reviewed by human editors, so this tier is higher-trust than the bootstrap — but still `verified: false`. Where the two sources agree on the identical form, candidates carry `corroborated: true`; where they disagree, both candidates are kept and the word is queued for human review in [data/REVIEW.md](data/REVIEW.md). Full provenance and attribution: [data/SOURCES.md](data/SOURCES.md).
 
 ### Usage
 

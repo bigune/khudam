@@ -41,6 +41,41 @@ already exists in the lexicon, so re-running it cannot overwrite human work; the
 flip side is that re-running it would also restore an entry a human deliberately
 deleted, so prefer correcting bad entries over deleting them.
 
+## `wiktionary` — English Wiktionary via kaikki.org (2026-07-27)
+
+- **Source:** the Mongolian dictionary of [English Wiktionary](https://en.wiktionary.org/),
+  machine-extracted as JSONL by [kaikki.org](https://kaikki.org/dictionary/Mongolian/)
+  (enwiktionary dump of 2026-07-06). Extraction tool: wiktextract —
+  Tatu Ylonen, *"Wiktextract: Wiktionary as Machine-Readable Structured Data"*,
+  Proceedings of the 13th Conference on Language Resources and Evaluation
+  (LREC 2022), pp. 1317–1325.
+- **License:** content © Wiktionary contributors, [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) —
+  the same ShareAlike family as our data layer, so legally clean to merge with attribution.
+- **Per-word attribution pattern:** `https://en.wiktionary.org/wiki/<word>#Mongolian`
+  (nothing is stored per entry; this pattern reconstructs the source page for any word).
+- **Trust tier:** Wiktionary entries are written and reviewed by human editors, so this
+  layer is **higher trust than `wmk-import` — but still `verified: false`**: our own
+  reviewers have not confirmed the code points. When Wiktionary and an independent
+  source produced the identical traditional form, the candidate carries
+  `corroborated: true`. When they disagree, both candidates are kept and the word is
+  queued in the [REVIEW.md](REVIEW.md) conflict queue — the prioritized human-review list.
+- The importer never modifies a `verified: true` candidate, and re-runs are idempotent
+  (`bun run import:wiktionary`; kaikki.org refreshes with each Wiktionary dump, so a
+  periodic re-run picks up new Wiktionary work).
+
+### Import statistics (`scripts/import-wiktionary.ts`, dump 2026-07-06)
+
+|                                                     |                        |
+| --------------------------------------------------- | ---------------------- |
+| Wiktionary entries read                             | 6,623                  |
+| Entries carrying a Mongolian-script form            | 1,661                  |
+| New words added                                     | 142 (lexicon → 28,119) |
+| Candidates corroborated (seed and Wiktionary agree) | 958                    |
+| Conflict words queued in REVIEW.md                  | 342                    |
+| Forms rejected (Unicode/space/gloss) → REVIEW.md    | 33                     |
+| Suffix rows added to suffixes.json (unverified)     | 28                     |
+| Proper names queued (names.json stays 100% human)   | 43                     |
+
 ## `manual`
 
 Entries created by maintainers by hand, each traceable through Git history and
