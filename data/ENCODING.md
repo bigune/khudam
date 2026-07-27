@@ -42,3 +42,30 @@ Cyrillic **й** acting as a diphthong coda (after a vowel: ай, ой, уй, э�
 - New entries and corrections must encode diphthong й as single ᠢ; do not add ᠶᠢ spellings of the same word as extra candidates.
 - Text from older tools and corpora may carry ᠶᠢ: visually (near-)identical, different code points. Normalize ᠶᠢ → ᠢ before comparing khudam output against external text. (Lookup-time normalization is a possible future engine feature.)
 - Edge cases excluded from the automatic fix (word-initial glides, loanwords without й) await per-entry human rulings in [REVIEW.md](REVIEW.md).
+
+---
+
+## Decision 002 — Suffix-initial and intervocalic glide keeps ᠶ (U+1836): ᠶᠢᠨ, ᠶᠢ, ᠢᠶᠠᠷ…
+
+**Date:** 2026-07-27 · **Applies to:** [`suffixes.json`](suffixes.json) (no lexicon entries carry NNBSP suffix units yet, so no data migration)
+
+### The rule
+
+The written-apart suffixes beginning with the glide *y* — genitive **ᠶᠢᠨ** (*yin*), accusative **ᠶᠢ** (*yi*) — and the suffixes with *y* between vowels — **ᠢᠶᠠᠷ/ᠢᠶᠡᠷ** (*iyar/iyer*), **ᠢᠶᠠᠨ/ᠢᠶᠡᠨ** (*iyan/iyen*) — keep the letter **ᠶ U+1836**. This is not the Decision 001 digraph. Decision 001 removes ᠶ where Cyrillic й is a **diphthong coda inside a vowel run** (UTN #57 condition [D] "Devsger"); in these suffixes the *y* is a **true consonant glide** in suffix-initial (condition [P] "Particle") or intervocalic position — the same "true glide" case Decision 001 explicitly keeps. Diphthong codas *inside* suffixes still follow Decision 001: comitative ᠲᠠᠢ/ᠲᠡᠢ ends in a single ᠢ, never ᠶᠢ.
+
+| Suffix | Encoding | Code points | |
+| --- | --- | --- | --- |
+| genitive (багшийн) | ᠪᠠᠭᠰᠢ ᠶᠢᠨ | … U+202F **U+1836 U+1822** U+1828 | ✔ suffix-initial glide — keep ᠶ |
+| comitative (номтой) | ᠨᠣᠮ ᠲᠠᠢ | … U+202F U+1832 U+1820 **U+1822** | ✔ diphthong coda — Decision 001 applies |
+| instrumental (гэрээр) | ᠭᠡᠷ ᠢᠶᠡᠷ | … U+202F U+1822 **U+1836** U+1821 U+1837 | ✔ intervocalic glide — keep ᠶ |
+
+### Evidence
+
+1. **UTN #57 v4, Table 4** — under the letter ***y* (U+1836)**, condition **[P] "Particle: found as an auxiliary or grammatical appositive"**, the listed examples are ***huda–yin*** (genitive) and ***ger–iyar*** (instrumental): the reference shaping model itself encodes the vowel-stem genitive and the instrumental with U+1836. Under the letter *i* (U+1822), the [P] examples are ***gen–i*** (bare accusative after consonants — our ᠢ row) — while the two-teeth *medial* form belongs to *i* only under condition [D], which is Decision 001's case. <https://www.unicode.org/notes/tn57/>
+2. **Why the confusion is natural:** in particle position U+1836 takes I-shaped written forms (UTN #57 lists them as "I.init, I.medi"), so ᠶᠢᠨ renders nearly identically to a ᠢᠨ spelling. Identical appearance, different code points — exactly why rulings are made at the code-point level (ground rule 3).
+3. **Classical grammar:** the genitive after vowel-final stems is uniformly romanized *-yin* and the accusative *-yi* (vs *-un/-ün*, *-u/-ü*, *-i* elsewhere) — the glide is a real consonant of the suffix, not an artifact of й transcription.
+
+### Consequences
+
+- `suffixes.json` keeps U+1836 in ᠶᠢᠨ, ᠶᠢ, ᠢᠶᠠᠷ, ᠢᠶᠡᠷ, ᠢᠶᠠᠨ, ᠢᠶᠡᠨ; the ᠲᠠᠢ/ᠲᠡᠢ coda stays a single ᠢ. Pinned by code-point tests in `packages/converter/test/suffix.test.ts`.
+- Human review of the suffix table ([REVIEW.md](REVIEW.md)) can overturn this like any decision — with code-point-level evidence.

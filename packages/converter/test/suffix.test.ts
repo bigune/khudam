@@ -62,6 +62,24 @@ describe("decomposeWord", () => {
   });
 });
 
+describe("encoding pins (data/ENCODING.md Decision 002)", () => {
+  test("suffix-initial glide keeps U+1836: багшийн → …ᠶᠢᠨ", () => {
+    const [c] = decomposeWord("багшийн");
+    expect(c.traditional.endsWith(`${NNBSP}ᠶᠢᠨ`)).toBeTrue();
+  });
+
+  test("diphthong coda inside a suffix stays single ᠢ (Decision 001): номтой → …ᠲᠠᠢ", () => {
+    const [c] = decomposeWord("номтой");
+    expect(c.traditional.endsWith(`${NNBSP}ᠲᠠᠢ`)).toBeTrue();
+    expect(c.traditional.includes("ᠶ")).toBeFalse();
+  });
+
+  test("intervocalic glide keeps U+1836: гэрээр → …ᠢᠶᠡᠷ", () => {
+    const [c] = decomposeWord("гэрээр");
+    expect(c.traditional.endsWith(`${NNBSP}ᠢᠶᠡᠷ`)).toBeTrue();
+  });
+});
+
 describe("stemGender", () => {
   test("classifies by traditional vowels, ᠢ-only stems are neutral", () => {
     expect(stemGender("ᠨᠣᠮ")).toBe("masculine");

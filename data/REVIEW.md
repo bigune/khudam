@@ -403,3 +403,9 @@ Least certain rows, in order:
 - The comitative `ᠯᠤᠭ᠎ᠠ`/`ᠯᠦᠭᠡ` (-луга/-лүгэ) was deliberately left OUT — its MVS
   spelling needs a code-point ruling in [ENCODING.md](ENCODING.md) before it can
   be added.
+
+Already questioned and ruled on: whether `ᠶᠢᠨ`/`ᠶᠢ`/`ᠢᠶᠠᠷ` reproduce the
+Decision 001 postvocalic-й digraph. They do not — the glide ᠶ U+1836 is correct
+in suffix-initial and intervocalic position; see ENCODING.md Decision 002
+(pinned by code-point tests). Reviewers checking these rows should read that
+decision first.
