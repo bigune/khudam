@@ -8,7 +8,7 @@ Versioning follows [Semantic Versioning](https://semver.org/): while on `0.x`, d
 
 ---
 
-## [Unreleased]
+## [0.2.0] — 2026-07-27
 
 ### Added
 
@@ -48,5 +48,6 @@ Initial release.
 - Starter names file (`data/names.json`) and an empty suffix table (`data/suffixes.json`).
 - Data validation (`bun run validate`) and CI on every push and PR.
 
+[0.2.0]: https://github.com/bigune/khudam/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/bigune/khudam/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/bigune/khudam/releases/tag/v0.1.0
