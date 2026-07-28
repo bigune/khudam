@@ -122,6 +122,10 @@ Chaining splits the two attachment conditions, which at depth 1 were indistingui
 
 **Derivational suffixes are excluded from decomposition entirely.** -ч, -л, -лт and the rest build new words, and by ground rule 1 a new word is a lexicon entry with its own traditional spelling — deriving one at runtime would be the engine spelling a stem. They remain in `suffixes.json` as documentation. This was measured, not assumed: allowing them scored 99 more forms "correct" in the harness, every one of them the right stem with rubbish attached (ламууд → *ᠯᠠᠮᠠ ᠭᠤ ᠳᠤ*, where the plural should be ᠨᠤᠭᠤᠳ and ᠭᠤ ᠳᠤ is not a suffix), and nothing was lost by removing them.
 
+**Nadmid pp. 17–18 on this exact chain, read from the scan.** The rulebook does cover case + possessive, and it permits two spellings: *"Тийн ялгалын нөхцлийн дараа ерөнхийлөн хамаатуулахын нөхцөл хэрэглэхдээ тус тусд нь **саланги** бичиж болохоос гадна **нийлүүлэн** бичих ёс буй"* — besides writing them as separate units, there is also a practice of writing them together. It then splits by case: after the **genitive** the possessive is written саланги (ахынхаа, ангийнхаа, дэвтрийнхээ); after the **accusative** it may fuse as -йуган/-йүгэн (багшийгаа, эхийгээ); after the **dative-locative** as -даган/-дэгэн/-таган/-тэгэн (мөрөндөө, хөлөндөө, нутагтаа, нөхөртөө).
+
+So the engine's гэртээ → `ᠭᠡᠷ ᠲᠦ ᠪᠡᠨ` is the саланги variant, which the source allows — not wrong, but one of two attested spellings, and the fused variant is not implemented. Only the Cyrillic prose is quoted here: the traditional forms on those pages are scan images, so their code points must be typed by a human before any fused row is added (ground rule 3).
+
 The slot table is **engine policy, not transcribed from a source**: Nadmid 1990 p. 13 §2 covers chain order, and a human reading it should check this table against it. Depth 3+ (номуудынхаа) remains a gap. **Status: implemented, ordering unverified.**
 
 ### G13 — Stem repair: restored fleeting vowel (тогтворгүй эгшиг)
@@ -157,7 +161,9 @@ The suffix is a worn-down copy of a free word: English Wiktionary's `-гүй` gi
 
 The slot follows from what it combines with: after a plural (бичгүүдгүй), before a possessive (бичиггүйгээ), never alongside a case — slot 2.
 
-**Why there is no attach condition, though the lexicon suggests one.** Thirty seed entries write the privative *joined* and contracted (аальгүй → `ᠠᠭᠠᠯᠢᠭᠦᠢ`), which looked for a while like a vowel/consonant alternation of the kind governing the genitive and instrumental: vowel-final stems joining, consonant-final ones staying apart. Forms from **mongoltoli.mn** (maintainer, 2026-07-28) settled it otherwise — **ус → `ᠤᠰᠤ ᠦᠭᠡᠶ`** is vowel-final and written apart, as are `ᠨᠣᠮ ᠦᠭᠡᠶ` and `ᠲᠥᠰᠦᠷ ᠦᠭᠡᠶ`.
+**Published rule.** *Монгол бичгийн гарын авлага-I*, х. 31 places үгүй among the **сул үг** — free words, explicitly set apart from дагавар and нөхцөл — and states that it follows the preceding word *"өмнөх үгийн эр, эм эгшгийг үл харгалзан"*, without regard to its masculine/feminine vowel. That gives both halves of the row at once: written apart, and no harmony pair. It is grouped there with the directive particle руу, which is likewise written apart, and the page's script examples show the gap.
+
+**Why there is no attach condition, though the lexicon suggests one.** Thirty seed entries write the privative *joined* and contracted (аальгүй → `ᠠᠭᠠᠯᠢᠭᠦᠢ`), which looked for a while like a vowel/consonant alternation of the kind governing the genitive and instrumental, and shipped briefly as one. It is not: **ус → `ᠤᠰᠤ ᠦᠭᠡᠶ`** (mongoltoli.mn) is vowel-final and still apart, and the handbook rule above knows no such condition.
 
 The split is lexical, not phonological. Every apart form is a compositional "without X"; the joined ones — **аальгүй** "improper", **хичээнгүй** "diligent" — are lexicalized adjectives, and хичээнгүй even assimilates ᠨ → ᠩ before the ᠭ, which a written-apart unit could not cause. By ground rule 1 those are lexicon entries rather than rule output, and an exact match keeps the rule out of their way. The `joined` field briefly added to `suffixes.json` for the alternation was removed with it.
 
@@ -215,7 +221,8 @@ Two limits are load-bearing. The tables are template-expanded, so some rows are 
 
 ## Known gaps (future work, roughly in value order)
 
-- **Suffix chains beyond depth 2** — номуудынхаа (plural + genitive + substantive + possessive) still misses; G12 stops at two, and G15 makes three-suffix chains ordinary rather than exotic.
+- **Suffix chains beyond depth 2** — номуудынхаа (plural + genitive + substantive + possessive) still misses; G12 stops at two, and G15 makes three-suffix chains ordinary rather than exotic. Nadmid p. 18's ахынхаа/дэвтрийнхээ examples are exactly this shape.
+- **Fused case + possessive** — Nadmid p. 18 allows -даган/-дэгэн/-таган/-тэгэн and -йуган/-йүгэн as an alternative to the written-apart chain the engine emits (G12). Adding them needs a human to type the traditional forms off the scan.
 - **-нхан** (манайхан "our people") — the collective of G15's substantive, still absent.
 - **Genitive is the weakest case at 30.6%** — the largest single bucket and the lowest score of the core six. Worth a look at G3's conditions before adding anything new.
 - **Fleeting/doubled н** — уул + н + -аас → уулнаас; хаан + -ууд degeminates to хаанууд, which the engine currently maps to ᠤᠳ where p. 14 wants ᠨᠤᠭᠤᠳ after н.
@@ -226,5 +233,7 @@ Two limits are load-bearing. The tables are template-expanded, so some rows are 
 ## Sources
 
 - **Nadmid 1990** — Я. Надмид, *Монгол бичгийн зөв бичих толь бичиг*, Улсын хэвлэлийн газар, Улаанбаатар, 1990. Rules section available as PDF: <https://coo.mn/uploads/a/Almas/dusal2020/mongol-bichig-durem.pdf>. Copyrighted work: rules and facts are restated here with citation; the text is not copied and the PDF is not committed to this repo. Its traditional-script examples are page images — any Unicode re-entry must be typed and human-verified, never scraped.
+- **Монгол бичгийн гарын авлага-I** — Б.Золжаргал, Б.Лхагважав, Х.Гэндэнпил, М.Хүрэлтогоо, Д.Баасанбат; ред. Б.Элбэгзаяа, Ц.Бумангэрэл. *Төрийн албан хаагчдад зориулав*. <https://www.nccd.gov.mn/stat/file/u/Surgalt/mongolbichig.pdf>. Has a real text layer (legacy cp1251, ө/ү as є/ї), so its Cyrillic rule statements are quotable; its монгол бичиг examples are images and must be typed by a human like Nadmid's.
+
 - **Wiktionary, Монгол бичгийн галиглах тогтолцоо** — <https://mn.wiktionary.org/wiki/Монгол_бичгийн_галиглах_тогтолцоо> (CC BY-SA 4.0, license-compatible with our data). Letter correspondence tables and transliteration systems.
 - **Wikipedia, Монгол бичиг** — <https://mn.wikipedia.org/wiki/Монгол_бичиг>. Background reference.
