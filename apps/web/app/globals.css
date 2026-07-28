@@ -801,12 +801,20 @@ textarea,
 }
 
 /* Moving through the set. Quiet, because navigation is not the work — and
-   always both directions, so going back is as ordinary as going on. */
+   always both directions, so going back is as ordinary as going on.
+
+   It sits at the top of the section for one reason: nothing above it changes
+   height. Below the specimen, a long word or an open spelling field moved
+   these two buttons down the screen on every question, and paging through a
+   set became a hunt for the control you had just used. */
 .queue-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  /* Pulls the row up against the page's section gap: it is a control strip for
+     what follows, not a sibling of it. */
+  margin-bottom: -0.4rem;
 }
 
 .queue-step {
@@ -827,11 +835,6 @@ textarea,
 .queue-step:disabled {
   opacity: 0.4;
   cursor: default;
-}
-
-.queue-count {
-  font-size: var(--text-xs);
-  color: var(--muted);
 }
 
 /* The set before it is sent: every answer visible at once, and every row a way

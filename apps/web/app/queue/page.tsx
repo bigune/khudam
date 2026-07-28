@@ -35,6 +35,7 @@ const REPO_URL = "https://github.com/bigune/khudam";
 const DATA_LICENSE_URL = `${REPO_URL}/blob/main/data/LICENSE`;
 const ANSWERED_KEY = "khudam.answered";
 const DRAFT_KEY = "khudam.queue-draft";
+const SKIPPED_KEY = "khudam.queue-skipped";
 
 /** Questions per set. Nobody owes the lexicon more than a few minutes, and a
  *  queue that never says "that is enough" is one people leave rather than
@@ -133,6 +134,7 @@ export default function QueuePage() {
   const [sendFailed, setSendFailed] = useState(false);
   const [sent, setSent] = useState(0);
   const answered = useRef<Set<string>>(new Set());
+  const skipped = useRef<Set<string>>(new Set());
   const pool = useRef<Question[]>([]);
 
   function takeSet(remaining: Question[]): void {
@@ -144,6 +146,7 @@ export default function QueuePage() {
 
   useEffect(() => {
     answered.current = new Set(readJson<string[]>(ANSWERED_KEY, []));
+    skipped.current = new Set(readJson<string[]>(SKIPPED_KEY, []));
     let cancelled = false;
     fetch(QUEUE_URL)
       .then((r) =>
@@ -154,9 +157,16 @@ export default function QueuePage() {
         // Questions this browser has already sent are dropped here rather than
         // at the source: the file is one static artifact served to everyone,
         // and who answered what is nobody's business but the browser's.
-        const remaining = data.questions.filter(
+        const unanswered = data.questions.filter(
           (q) => !answered.current.has(q.id),
         );
+        // Sets this browser skipped sit at the back, so a fresh visit opens on
+        // questions it has not offered before. They are not discarded: once
+        // everything else is done they come round again.
+        const remaining = [
+          ...unanswered.filter((q) => !skipped.current.has(q.id)),
+          ...unanswered.filter((q) => skipped.current.has(q.id)),
+        ];
         pool.current = remaining;
         setQueue({ pool: data.pool, questions: remaining });
 
@@ -212,6 +222,17 @@ export default function QueuePage() {
     }));
 
   function answer(id: string, verdict: boolean | null): void {
+    // Clicking the answer you already gave takes it back. Every other way out
+    // of a wrong click asks you to choose something else instead, which is not
+    // the same thing — "I should not have answered this" is its own answer, and
+    // an unanswered question stays in the queue for someone else.
+    if (answers[id]?.verdict === verdict) {
+      setAnswers((a) => {
+        const { [id]: _cleared, ...rest } = a;
+        return rest;
+      });
+      return;
+    }
     setAnswers((a) => ({ ...a, [id]: { ...a[id], verdict } }));
     // Yes and don't-know are finished thoughts, so they move on. No opens the
     // spelling field, which it would be pointless to scroll past.
@@ -232,9 +253,21 @@ export default function QueuePage() {
       setSendFailed(true);
       return;
     }
-    for (const q of set) answered.current.add(q.id);
+    // Only what was actually answered is remembered as done — including "I
+    // don't know", which is a judgement and not worth asking the same person
+    // twice. A question passed over without an answer stays in the queue: it
+    // was never put to anyone, and hiding it forever would quietly shrink the
+    // pool every time someone paged through a set.
+    const done = set
+      .filter((q) => answers[q.id] !== undefined)
+      .map((q) => q.id);
+    for (const id of done) answered.current.add(id);
     writeJson(ANSWERED_KEY, [...answered.current].slice(-ANSWERED_MEMORY));
     writeJson(DRAFT_KEY, { ids: [], answers: {} });
+    writeJson(
+      SKIPPED_KEY,
+      [...skipped.current].filter((id) => !answered.current.has(id)),
+    );
     setSent((n) => n + sendable.length);
     pool.current = pool.current.filter((q) => !answered.current.has(q.id));
     setQueue((q) => (q ? { ...q, questions: pool.current } : q));
@@ -242,10 +275,14 @@ export default function QueuePage() {
   }
 
   function skipSet(): void {
-    // Walking away from a set costs nothing: its questions stay unanswered and
-    // come round again in a later one.
+    // A skipped set goes to the back of the queue rather than out of it. In
+    // memory alone this was invisible: the order is deterministic, so the next
+    // visit served the same ten again, and a set you did not want became the
+    // set you always got.
     writeJson(DRAFT_KEY, { ids: [], answers: {} });
-    const rest = pool.current.filter((q) => !set.includes(q));
+    for (const q of set) skipped.current.add(q.id);
+    writeJson(SKIPPED_KEY, [...skipped.current]);
+    const rest = [...pool.current.filter((q) => !set.includes(q)), ...set];
     pool.current = rest;
     takeSet(rest);
   }
@@ -302,12 +339,28 @@ export default function QueuePage() {
 
       {question && (
         <section className="queue">
-          <span className="field-label">
-            Хянаж буй зурлага
+          {/* Navigation lives at the top, where it does not move. Below the
+              specimen its position depended on how long the word was and
+              whether a spelling field was open, so moving quickly through a
+              set meant re-finding the same two buttons on every question. */}
+          <div className="queue-nav">
+            <button
+              className="queue-step"
+              disabled={at === 0}
+              onClick={() => setAt((i) => i - 1)}
+            >
+              ← Өмнөх
+            </button>
             <span className="queue-progress">
               {at + 1} / {set.length}
+              {answeredCount > 0 && ` · ${answeredCount} хариулсан`}
             </span>
-          </span>
+            <button className="queue-step" onClick={() => setAt((i) => i + 1)}>
+              Дараах →
+            </button>
+          </div>
+
+          <span className="field-label">Хянаж буй зурлага</span>
 
           {/* Side by side while there is exactly one other spelling — the
               comparison IS the question in that case, and it is by far the
@@ -404,23 +457,6 @@ export default function QueuePage() {
                 />
               </div>
             )}
-
-            <div className="queue-nav">
-              <button
-                className="queue-step"
-                disabled={at === 0}
-                onClick={() => setAt((i) => i - 1)}
-              >
-                ← Өмнөх
-              </button>
-              <span className="queue-count">{answeredCount} хариулсан</span>
-              <button
-                className="queue-step"
-                onClick={() => setAt((i) => i + 1)}
-              >
-                Дараах →
-              </button>
-            </div>
           </div>
 
           <p className="report-consent">
@@ -502,8 +538,21 @@ export default function QueuePage() {
         <p>
           Үгсийн сангийн дийлэнх нь машинаар үүсгэгдсэн, хүн хараахан хянаагүй
           суурь өгөгдөл. Энд асуух асуулт нэг л төрөл: тухайн үгийг{" "}
-          <strong>ямар нэг утгаар нь</strong> ингэж бичдэг эсэх. Иймд нэг үг
-          хоёр өөр зурлагатай байж болно — хоёулаа зөв бол хоёуланг нь үлдээнэ.
+          <strong>ямар нэг утгаар нь</strong> ингэж бичдэг эсэх.
+        </p>
+        {/* The old one-liner ("if both are right we keep both") assumed the
+            reader already knew why a word would have two right spellings.
+            Without the example it reads as a rule with no reason — and the
+            reason is the whole point of the page: nobody has to choose. */}
+        {/* The example is named, not shown: монгол бичиг is written downwards,
+            and a word dropped into a horizontal sentence renders on its side —
+            a specimen nobody can read is worse than none. The reader meets the
+            actual spellings in the questions, where they stand upright. */}
+        <p>
+          Нэг үг хоёр өөр зөв зурлагатай байж болно: «уул» гэдэг үгийг уулын
+          утгаар нэг янзаар, «уул нь» гэсэн утгаар өөрөөр бичдэг. Тиймээс нэгийг
+          нь сонгох шаардлагагүй — аль алинд нь «Тийм» гэж хариулж болох ба бид
+          хоёуланг нь үгсийн санд үлдээнэ.
         </p>
         <p className="en" lang="en">
           Every question asks the same thing: is this a written form of this
@@ -511,11 +560,15 @@ export default function QueuePage() {
           answers accumulate as counts a human reviewer reads, and only a merged
           pull request ever marks anything verified.
         </p>
+        {/* Three different numbers used to be blurred into one sentence: how
+            many spellings are waiting overall, how many this browser still has
+            to answer, and how many are put in front of you at once. */}
         {queue && (
           <p className="stats">
-            Хянуулахаар хүлээгдэж буй {queue.pool.toLocaleString("mn-MN")}{" "}
-            зурлагаас {queue.questions.length.toLocaleString("mn-MN")}-г энэ
-            хөтчид санал болгож байна.
+            Нийт {queue.pool.toLocaleString("mn-MN")} зурлага хянагдахаар
+            хүлээгдэж байна. Танд{" "}
+            {queue.questions.length.toLocaleString("mn-MN")} нь үлдсэн бөгөөд{" "}
+            {SET_SIZE}-аар нь санал болгоно.
           </p>
         )}
       </section>
