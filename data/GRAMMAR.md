@@ -156,7 +156,7 @@ The suffix is a worn-down copy of a free word: English Wiktionary's `-гүй` gi
 
 The slot follows from what it combines with: after a plural (бичгүүдгүй) and before a possessive (бичиггүйгээ), and never alongside a case — which is slot 2.
 
-⚠️ **Open for human review:** whether the privative is written *apart* (NNBSP, as here) or joined to the stem. The written-apart form is what G1 implies and what the ᠮᠠᠨ ᠤ ᠬᠢ precedent supports, but the lexicon's own ааггүй reads ᠠᠭᠠᠭᠦᠭᠡᠢ, joined — from the machine seed, so it settles nothing. Flagged in [REVIEW.md](REVIEW.md). **Status: implemented, data unverified.**
+⚠️ **Open for human review, and visible in output today.** The rule writes the privative apart; the lexicon writes it joined, and 30 of its 32 -гүй words use a contracted `…ᠭᠦᠢ` rather than ᠦᠭᠡᠢ at all (аальгүй → ᠠᠭᠠᠯᠢᠭᠦᠢ). Because an exact lexicon match outranks decomposition (ground rule 4), both conventions now ship: бичиггүй converts to `ᠪᠢᠴᠢᠭ ᠦᠭᠡᠢ` for want of an entry, аальгүй to `ᠠᠭᠠᠯᠢᠭᠦᠢ` because it has one. Whichever way this is ruled, one side moves — either those 30-odd entries are wrong, or this row is. Written up in [REVIEW.md](REVIEW.md). **Status: implemented, data unverified.**
 
 ### G15 — Substantive genitive: -х → ᠬᠢ, only after a genitive
 

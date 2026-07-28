@@ -412,14 +412,29 @@ Wiktionary and corroborated inside this repo, but each carries one open question
 that a dictionary entry cannot answer and a rule table could. Эдгээр хоёр мөрийг
 хүн нягтлах шаардлагатай.
 
-- **`-гүй` → `ᠦᠭᠡᠢ` (privative).** Is it written **apart** (`ᠨᠣᠮ ᠦᠭᠡᠢ`, NNBSP) or
-  joined to the stem? The engine writes it apart, which is what G1 implies for an
-  appositive unit and what the ᠮᠠᠨ ᠤ ᠬᠢ precedent supports. Against that, the
-  lexicon's own **ааггүй** reads `ᠠᠭᠠᠭᠦᠭᠡᠢ` — joined — but that form is from the
-  machine seed and settles nothing. If the joined form is right, the row should
-  leave `suffixes.json` and those words become lexicon entries instead.
-  *Sources:* en.wiktionary `-гүй` ("aphaeresed from үгүй"), `үгүй` → ᠦᠭᠡᠢ (*ügei*);
-  the wmk seed independently gives үгүй → ᠦᠭᠡᠢ.
+- **`-гүй` → `ᠦᠭᠡᠢ` (privative).** Three spellings are in play, and the lexicon and
+  the rule currently disagree:
+
+  | | Spelling | Where it comes from |
+  | --- | --- | --- |
+  | a | `ᠨᠣᠮ ᠦᠭᠡᠢ` — apart, NNBSP | the new rule: G1 for an appositive unit, the classical free word, the ᠮᠠᠨ ᠤ ᠬᠢ precedent |
+  | b | `…ᠭᠦᠢ` — joined, contracted | **30 of the 32** -гүй words in the lexicon (аальгүй → ᠠᠭᠠᠯᠢᠭᠦᠢ) |
+  | c | `…ᠦᠭᠡᠢ` — joined, full word | exactly 1 (ааггүй → ᠠᠭᠠᠭᠦᠭᠡᠢ) |
+
+  All of b and c are machine seed, and the seed contradicting itself 30-to-1 is a
+  reason to distrust it — but 30 rows is still a convention, and a reviewer should
+  weigh it rather than wave it away. **This is user-visible now:** because an exact
+  lexicon match outranks decomposition, бичиггүй (no entry) converts to `ᠪᠢᠴᠢᠭ ᠦᠭᠡᠢ`
+  while аальгүй (has an entry) converts to `ᠠᠭᠠᠯᠢᠭᠦᠢ` — the same suffix spelled two
+  ways, decided by nothing but whether the seed happened to contain the word.
+
+  If **a** is right, those 30-plus lexicon entries are wrong and should be corrected
+  or dropped so the rule handles them. If **b** is right, the row should leave
+  `suffixes.json` and -гүй words belong in the lexicon individually. Хүний шийдвэр
+  шаардлагатай — энэ хоёрын аль нь зөв болохыг тогтоовол 30 гаруй бичлэг өөрчлөгдөнө.
+
+  *Sources for a:* en.wiktionary `-гүй` ("aphaeresed from үгүй"), `үгүй` → ᠦᠭᠡᠢ
+  (*ügei*); the wmk seed independently gives үгүй → ᠦᠭᠡᠢ as a standalone word.
 - **`-х` → `ᠬᠢ` (substantive genitive).** Does ᠬᠢ have a harmony pair, i.e. a
   separate feminine form? It is stored as one invariant row because that is what
   the source shows, but the source is a dictionary entry, not a rule table, and

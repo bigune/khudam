@@ -33,7 +33,7 @@ merge.
 
   -ынх and -ийнх are deliberately **not** rows: they are the genitive plus this one, chained by G12. That is also why the substantive may never open a chain — Cyrillic -х ends every verb infinitive in the language, and without the restriction харих, явах and бичих would each acquire a substantive reading.
 
-  Both rows are `verified: false` with the open question each one leaves recorded in `data/REVIEW.md`: whether the privative is written apart or joined (our ааггүй reads ᠠᠭᠠᠭᠦᠭᠡᠢ, joined — but from the machine seed), and whether ᠬᠢ has a harmony pair. A citation is not verification; a human reading монгол бичиг still is.
+  Both rows are `verified: false` with the open question each one leaves recorded in `data/REVIEW.md`, and the privative's question is live in output rather than theoretical. The rule writes it apart; the lexicon writes it joined, and 30 of its 32 -гүй words use a contracted `…ᠭᠦᠢ` rather than ᠦᠭᠡᠢ at all. Since an exact lexicon match outranks decomposition, both conventions ship side by side — бичиггүй → `ᠪᠢᠴᠢᠭ ᠦᠭᠡᠢ` because it has no entry, аальгүй → `ᠠᠭᠠᠯᠢᠭᠦᠢ` because it has one. Ruling either way moves one side or the other. (The second question is whether ᠬᠢ has a harmony pair.) A citation is not verification; a human reading монгол бичиг still is.
 
 - `bun run measure:suffix` — a coverage harness for the suffix engine, because grammar rules can be argued about indefinitely and a number cannot. It runs the engine over Wiktionary's `mn-decl` declension tables (already in the cached kaikki dump): 12,208 inflected Cyrillic forms tagged with lemma and case, 8,840 of whose lemmas we hold, reported by case with unresolved examples on request.
 
