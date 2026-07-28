@@ -2175,16 +2175,10 @@
       {
         "traditional": "ᠲᠠᠢᠵᠢ",
         "latin": "taij",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠲᠠᠶᠢᠵᠢ",
-        "latin": "tayiǰi",
         "sense": "a nobleman",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2315,16 +2309,10 @@
       {
         "traditional": "ᠲᠠᠢᠯᠪᠤᠷᠢᠯᠠᠬᠤ",
         "latin": "tailbarlah",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠲᠠᠶᠢᠯᠪᠤᠷᠢᠯᠠᠬᠤ",
-        "latin": "tayilburilaqu",
         "sense": "to explain",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

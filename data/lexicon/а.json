@@ -2936,16 +2936,10 @@
       {
         "traditional": "ᠠᠭᠵᠠᠢᠬᠤ",
         "latin": "agzaih",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠠᠭᠵᠠᠶᠢᠬᠤ",
-        "latin": "aɣǰayiqu",
         "sense": "to shiver",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5688,16 +5682,10 @@
       {
         "traditional": "ᠠᠢᠯᠴᠢᠯᠠᠬᠤ",
         "latin": "ailchlah",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠠᠶᠢᠯᠴᠢᠯᠠᠬᠤ",
-        "latin": "ayilčilaqu",
         "sense": "to visit",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5885,16 +5873,10 @@
       {
         "traditional": "ᠠᠢᠷᠠᠭ",
         "latin": "airag",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠠᠶᠢᠷᠠᠭ",
-        "latin": "ayiraɣ",
         "sense": "koumiss (a popular Mongolian drink made from fermented mare’s milk).",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

@@ -3039,7 +3039,7 @@
     "cyrillic": "байцаа",
     "candidates": [
       {
-        "traditional": "ᠪᠠᠶᠢᠴᠠᠭ᠎ᠠ",
+        "traditional": "ᠪᠠᠢᠴᠠᠭ᠎ᠠ",
         "latin": "bayičaɣ-a",
         "sense": "cabbage",
         "verified": false,
@@ -6985,7 +6985,7 @@
     "cyrillic": "бассейн",
     "candidates": [
       {
-        "traditional": "ᠪᠠᠰᠰᠧᠶᠢᠨ",
+        "traditional": "ᠪᠠᠰᠰᠧᠢᠨ",
         "latin": "bassēyin",
         "sense": "swimming pool",
         "verified": false,
@@ -14563,7 +14563,7 @@
     "cyrillic": "буйдан",
     "candidates": [
       {
-        "traditional": "ᠪᠤᠶᠢᠳᠠᠩ",
+        "traditional": "ᠪᠤᠢᠳᠠᠩ",
         "latin": "buyidang",
         "sense": "sofa",
         "verified": false,
@@ -14610,16 +14610,10 @@
       {
         "traditional": "ᠪᠤᠢᠯᠠ",
         "latin": "buil",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠪᠤᠶᠢᠯᠠ",
-        "latin": "buyila",
         "sense": "gums (flesh around teeth)",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

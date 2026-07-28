@@ -1975,16 +1975,10 @@
       {
         "traditional": "ᠨᠠᠢᠷ",
         "latin": "nair",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠨᠠᠶᠢᠷ",
-        "latin": "nayir",
         "sense": "feast",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2071,16 +2065,10 @@
       {
         "traditional": "ᠨᠠᠢᠷᠠᠮᠳᠠᠯ",
         "latin": "nairamdal",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠨᠠᠶᠢᠷᠠᠮᠳᠠᠯ",
-        "latin": "nayiramdal",
         "sense": "friendship",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -5602,16 +5590,10 @@
       {
         "traditional": "ᠨᠡᠢᠭᠡᠮ",
         "latin": "niigem",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠨᠡᠶᠢᠭᠡᠮ",
-        "latin": "neyigem",
         "sense": "society",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6039,16 +6021,10 @@
       {
         "traditional": "ᠨᠡᠢᠰᠯᠡᠯ",
         "latin": "niislel",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠨᠡᠶᠢᠰᠯᠡᠯ",
-        "latin": "neyislel",
         "sense": "capital, capital city, metropolis",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -7320,7 +7296,7 @@
     "cyrillic": "нойл",
     "candidates": [
       {
-        "traditional": "ᠨᠣᠶᠢᠯ",
+        "traditional": "ᠨᠣᠢᠯ",
         "latin": "noyil",
         "sense": "bathroom; toilet",
         "verified": false,
@@ -7466,16 +7442,10 @@
       {
         "traditional": "ᠨᠣᠢᠲᠠᠨ",
         "latin": "noiton",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠨᠣᠶᠢᠲᠠᠨ",
-        "latin": "noyitan",
         "sense": "wet; moist",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

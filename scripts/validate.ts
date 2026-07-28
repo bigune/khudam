@@ -19,6 +19,7 @@ import {
   TRADITIONAL_RE,
   compareWords,
   listShardFiles,
+  normalizeYiDigraph,
 } from "./lib.ts";
 
 const MAX_PRINTED_ERRORS = 60;
@@ -103,7 +104,13 @@ function checkCyrillicKey(file: string, where: string, value: unknown): value is
   return true;
 }
 
-function checkCandidate(file: string, where: string, cand: unknown, senseRequired: boolean): void {
+function checkCandidate(
+  file: string,
+  where: string,
+  cand: unknown,
+  senseRequired: boolean,
+  cyrillic: string,
+): void {
   if (!isPlainObject(cand)) {
     report(file, where, "Each candidate must be an object wrapped in { }.");
     return;
@@ -132,6 +139,21 @@ function checkCandidate(file: string, where: string, cand: unknown, senseRequire
     );
   } else if (t !== t.normalize("NFC")) {
     report(file, where, '"traditional" is not NFC-normalized — please re-enter it with a standard Unicode input method.');
+  } else if (normalizeYiDigraph(cyrillic, t) !== t) {
+    // Decision 001. Checked here because the two spellings render almost
+    // identically: nobody can catch this in review, and older tools and
+    // dictionaries emit the digraph freely.
+    report(
+      file,
+      where,
+      `"traditional" (“${t}”) writes the й of “${cyrillic}” as two letters, ` +
+        "ᠶ + ᠢ (U+1836 U+1822). Khudam writes that sound as a single ᠢ (U+1822): " +
+        `“${normalizeYiDigraph(cyrillic, t)}”. The two-tooth shape you see on screen is ` +
+        "how the font draws a single ᠢ after a vowel, not a second letter — which is why " +
+        "this can only be checked by code point. See data/ENCODING.md, Decision 001, for " +
+        "the rule and its sources. (A ᠶ that begins the word, or begins a written-apart " +
+        "suffix after U+202F, is a real letter and is left alone.)",
+    );
   }
   if ("latin" in cand && (typeof cand.latin !== "string" || cand.latin.length === 0)) {
     report(file, where, '"latin" must be a non-empty text value when present (or remove the field).');
@@ -192,7 +214,7 @@ function checkEntry(file: string, index: number, entry: unknown): string | undef
   const seenTraditional = new Set<string>();
   cands.forEach((cand, i) => {
     const cwhere = `${where}, candidate #${i + 1}`;
-    checkCandidate(file, cwhere, cand, senseRequired);
+    checkCandidate(file, cwhere, cand, senseRequired, cyr);
     if (isPlainObject(cand) && typeof cand.traditional === "string") {
       if (seenTraditional.has(cand.traditional)) {
         report(file, cwhere, "This traditional form appears twice in the same entry — please remove the duplicate.");

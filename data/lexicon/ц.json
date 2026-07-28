@@ -1377,16 +1377,10 @@
       {
         "traditional": "ᠴᠠᠢᠵᠠ",
         "latin": "tsaiz",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠴᠠᠶᠢᠵᠠ",
-        "latin": "čayiǰa",
         "sense": "castle",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -1451,16 +1445,10 @@
       {
         "traditional": "ᠴᠠᠢᠷ",
         "latin": "tsair",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠴᠠᠶᠢᠷ",
-        "latin": "čayir",
         "sense": "zinc",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -6834,7 +6822,7 @@
     "cyrillic": "цуйван",
     "candidates": [
       {
-        "traditional": "ᠴᠤᠶᠢᠪᠢᠩ",
+        "traditional": "ᠴᠤᠢᠪᠢᠩ",
         "latin": "čuyibing",
         "sense": "tsuivan (noodle stew with mutton or beef and vegetables)",
         "verified": false,

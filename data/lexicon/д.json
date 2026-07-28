@@ -2775,20 +2775,14 @@
       {
         "traditional": "ᠳᠠᠢᠷ",
         "latin": "dair",
-        "sense": "unlabeled",
+        "sense": "abrasion",
         "verified": false,
-        "source": "wmk-import"
+        "source": "wiktionary",
+        "corroborated": true
       },
       {
         "traditional": "ᠳᠠᠭᠠᠷᠢ",
         "latin": "daɣari",
-        "sense": "abrasion",
-        "verified": false,
-        "source": "wiktionary"
-      },
-      {
-        "traditional": "ᠳᠠᠶᠢᠷ",
-        "latin": "dayir",
         "sense": "abrasion",
         "verified": false,
         "source": "wiktionary"
@@ -2966,16 +2960,10 @@
       {
         "traditional": "ᠳᠠᠢᠰᠤᠨ",
         "latin": "daisan",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠳᠠᠶᠢᠰᠤᠨ",
-        "latin": "dayisun",
         "sense": "enemy; foe; rival",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -3270,7 +3258,7 @@
     "cyrillic": "далайчин",
     "candidates": [
       {
-        "traditional": "ᠳᠠᠯᠠᠶᠢᠴᠢᠨ",
+        "traditional": "ᠳᠠᠯᠠᠢᠴᠢᠨ",
         "latin": "dalayičin",
         "sense": "sailor, seaman",
         "verified": false,

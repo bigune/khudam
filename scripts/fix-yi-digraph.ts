@@ -19,6 +19,11 @@
  *     excludes word-initial ᠶᠢ that spells a legitimate е/ё/ю/я glide (e.g. ес →
  *     ᠶᠢᠰᠦ) and loanword artifacts. Pass --include-no-short-i to rewrite every
  *     ᠶᠢ regardless (not recommended without per-entry human review).
+ *   - suffix-initial ᠶᠢ after NNBSP is left alone in every scope: Decision 002
+ *     keeps the glide there (дэлхийн → ᠳᠡᠯᠡᠬᠡᠢ ᠶᠢᠨ), and that decision was made
+ *     the day after this script's first run — hence the guard, and hence
+ *     normalizeYiDigraph living in lib.ts where the importer and the validator
+ *     read the same rule.
  *   - DRY-RUN by default. Pass --apply to write files.
  *
  * Usage:
@@ -29,17 +34,32 @@
 import { existsSync, writeFileSync } from "node:fs";
 import { relative } from "node:path";
 import {
+  I_SINGLE,
   NAMES_FILE,
   REPO_ROOT,
+  YI_DIGRAPH,
   listShardFiles,
+  normalizeYiDigraph,
   readEntriesFile,
   writeEntriesFile,
   type Candidate,
   type Entry,
 } from "./lib.ts";
 
-const YI = String.fromCodePoint(0x1836, 0x1822); // ᠶᠢ  (spurious ya + i)
-const I = String.fromCodePoint(0x1822); //          ᠢ   (single i — the correction)
+const YI = YI_DIGRAPH; // ᠶᠢ  (spurious ya + i)
+const I = I_SINGLE; //     ᠢ   (single i — the correction)
+
+/**
+ * The rewrite, in whichever scope this run asked for. The default defers
+ * wholesale to lib's normalizeYiDigraph — one rule, shared with the importer
+ * and the validator. --include-no-short-i forces entries whose Cyrillic has no
+ * й, and still respects the two positions where ᠶ is a real glide.
+ */
+function rewrite(cyrillic: string, traditional: string): string {
+  const scoped = normalizeYiDigraph(cyrillic, traditional);
+  if (!includeNoShortI || scoped !== traditional) return scoped;
+  return normalizeYiDigraph(`${cyrillic}й`, traditional);
+}
 
 const apply = process.argv.includes("--apply");
 const includeNoShortI = process.argv.includes("--include-no-short-i");
@@ -47,6 +67,7 @@ const csFlag = process.argv.indexOf("--changeset");
 const changesetPath = csFlag !== -1 ? process.argv[csFlag + 1] : undefined;
 
 const rel = (f: string) => relative(REPO_ROOT, f).replaceAll("\\", "/");
+const countYi = (s: string) => s.split(YI).length - 1;
 const cps = (s: string) =>
   [...s].map((ch) => "U+" + ch.codePointAt(0)!.toString(16).toUpperCase().padStart(4, "0")).join(" ");
 
@@ -60,11 +81,15 @@ interface Change {
   afterCps: string;
   cyrHasShortI: boolean; // does the Cyrillic key contain й?
   occurrences: number; // how many ᠶᠢ were replaced in this form
+  /** For a form left standing: what forcing the scope would have produced.
+   *  Equal to `before` when the ᠶ is a glide no scope would touch. */
+  wouldBe?: string;
 }
 
 const changes: Change[] = []; // rewrites that WERE applied (in scope)
 const suspicious: Change[] = []; // rewritten despite no й in the key (only with --include-no-short-i)
 const excluded: Change[] = []; // ᠶᠢ present but no й in the key — skipped by the default safe scope
+const held: Change[] = []; // in scope, but every ᠶᠢ opens a word or a suffix — a real glide, kept
 const dedups: { file: string; cyrillic: string; dropped: string; keptVerified: boolean }[] = [];
 
 const files = [...listShardFiles()];
@@ -85,9 +110,9 @@ for (const file of files) {
 
     for (const cand of entry.candidates) {
       if (cand.verified !== true && cand.traditional.includes(YI)) {
-        const occurrences = cand.traditional.split(YI).length - 1;
         const before = cand.traditional;
-        const after = before.replaceAll(YI, I);
+        const after = rewrite(entry.cyrillic, before);
+        const occurrences = countYi(before) - countYi(after);
         const change: Change = {
           file: rel(file),
           cyrillic: entry.cyrillic,
@@ -99,9 +124,13 @@ for (const file of files) {
           cyrHasShortI,
           occurrences,
         };
-        const inScope = cyrHasShortI || includeNoShortI;
-        if (!inScope) {
-          excluded.push(change);
+        if (after === before) {
+          // Two different reasons to leave a ᠶᠢ standing, and the difference
+          // matters to a reviewer: excluded means "the safe scope is holding
+          // this for a human", held means "no scope would touch it — the ᠶ is
+          // a real letter". Forcing the scope answers which one it is.
+          change.wouldBe = normalizeYiDigraph(`${entry.cyrillic}й`, before);
+          (change.wouldBe === before ? held : excluded).push(change);
         } else {
           changes.push(change);
           if (!cyrHasShortI) suspicious.push(change);
@@ -148,11 +177,17 @@ console.log(`  candidate forms rewritten:    ${candidatesRewritten}`);
 console.log(`  ᠶᠢ occurrences replaced:       ${occurrencesReplaced}`);
 console.log(`  candidates de-duplicated:     ${dedups.length}`);
 console.log(`  excluded (no й, out of scope): ${excluded.length}`);
+console.log(`  held (ᠶ is a real glide):      ${held.length}`);
 if (suspicious.length) console.log(`  rewritten WITHOUT й in key:   ${suspicious.length}  <- forced in by --include-no-short-i`);
+
+if (held.length) {
+  console.log(`\n  held — the ᠶ opens a word or a written-apart suffix, so it is a real glide (Decisions 001 & 002), all ${held.length}:`);
+  for (const c of held) console.log(`    ${c.cyrillic}${c.latin ? ` (${c.latin})` : ""}  ${c.before}   [${c.beforeCps}]`);
+}
 
 if (excluded.length) {
   console.log(`\n  excluded — ᠶᠢ but no й in the Cyrillic (held for manual review, all ${excluded.length}):`);
-  for (const c of excluded) console.log(`    ${c.cyrillic}${c.latin ? ` (${c.latin})` : ""}  ${c.before} → would be ${c.after}`);
+  for (const c of excluded) console.log(`    ${c.cyrillic}${c.latin ? ` (${c.latin})` : ""}  ${c.before} → would be ${c.wouldBe}`);
 }
 
 console.log(`\n  sample (first 12):`);
@@ -163,7 +198,7 @@ for (const c of changes.slice(0, 12)) {
 }
 
 if (changesetPath) {
-  writeFileSync(changesetPath, JSON.stringify({ changes, suspicious, excluded, dedups }, null, 2), "utf8");
+  writeFileSync(changesetPath, JSON.stringify({ changes, suspicious, excluded, held, dedups }, null, 2), "utf8");
   console.log(`\n  changeset written: ${changesetPath}`);
 }
 

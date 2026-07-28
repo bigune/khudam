@@ -165,6 +165,49 @@ describe("extractLine", () => {
     expect(out.rows[0].traditional.includes("᠊")).toBeFalse();
   });
 
+  test("applies Decision 001 to an incoming diphthong coda", () => {
+    // Wiktionary spells нийгэм with the ᠶᠢ digraph; ours is already corrected,
+    // and importing theirs verbatim would file a conflict about nothing.
+    const out = extractLine({
+      word: "нийгэм",
+      pos: "noun",
+      lang_code: "mn",
+      forms: [{ form: "ᠨᠡᠶᠢᠭᠡᠮ", roman: "neyigem", tags: ["Mongolian"] }],
+      senses: [{ glosses: ["society"] }],
+    });
+    if (out.kind !== "word") throw new Error("expected word");
+    expect(out.candidates).toEqual([{ traditional: "ᠨᠡᠢᠭᠡᠮ", latin: "neyigem", sense: "society" }]);
+  });
+
+  test("a headword offering both spellings yields one candidate, not a conflict", () => {
+    const out = extractLine({
+      word: "сайн",
+      pos: "adj",
+      lang_code: "mn",
+      forms: [
+        { form: "ᠰᠠᠶᠢᠨ", tags: ["Mongolian"] },
+        { form: "ᠰᠠᠢᠨ", tags: ["Mongolian"] },
+      ],
+      senses: [{ glosses: ["good"] }],
+    });
+    if (out.kind !== "word") throw new Error("expected word");
+    expect(out.candidates).toEqual([{ traditional: "ᠰᠠᠢᠨ", sense: "good" }]);
+  });
+
+  test("suffix rows keep their ᠶ — Decision 002, and no NNBSP left to prove it", () => {
+    // Stored without the NNBSP that marks it written-apart, -ийн's ᠶᠢᠨ would
+    // look exactly like a diphthong coda to the D1 rule. Suffixes are exempt.
+    const out = extractLine({
+      word: "-ийн",
+      pos: "suffix",
+      lang_code: "mn",
+      forms: [{ form: "᠊ᠶᠢᠨ", roman: "yin", tags: ["Mongolian"] }],
+      senses: [{ glosses: ["genitive suffix"] }],
+    });
+    if (out.kind !== "suffix") throw new Error("expected suffix");
+    expect(out.rows[0].traditional).toBe("ᠶᠢᠨ");
+  });
+
   test("proper names are queued, never imported", () => {
     const out = extractLine({
       word: "Ирак",
@@ -242,6 +285,24 @@ describe("mergeWord", () => {
     });
     expect(stats.corroborated).toBe(1);
     expect(isConflict(entry)).toBeFalse();
+  });
+
+  test("a real gloss replaces the 'unlabeled' placeholder of a candidate that is alone again", () => {
+    // Left behind when a phantom conflict is resolved: the entry is single
+    // again, so the label the schema once forced on it means nothing.
+    const lexicon = new Map<string, Entry>([
+      [
+        "найр",
+        {
+          cyrillic: "найр",
+          candidates: [
+            { traditional: "ᠨᠠᠢᠷ", latin: "nayir", sense: UNLABELED_SENSE, verified: false, source: "wmk-import" },
+          ],
+        },
+      ],
+    ]);
+    mergeWord(lexicon, "найр", [{ traditional: "ᠨᠠᠢᠷ", sense: "feast" }], newMergeStats());
+    expect(lexicon.get("найр")!.candidates[0].sense).toBe("feast");
   });
 
   test("re-running the same merge changes nothing (idempotent, no self-corroboration)", () => {

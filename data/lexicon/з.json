@@ -2480,16 +2480,10 @@
       {
         "traditional": "ᠵᠠᠢᠳᠠᠭᠤ",
         "latin": "zaiduu",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠵᠠᠶᠢᠳᠠᠭᠤ",
-        "latin": "ǰayidaɣu",
         "sense": "faraway, distant",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -2548,7 +2542,7 @@
         "source": "wmk-import"
       },
       {
-        "traditional": "ᠵᠠᠶᠢᠯᠠᠰᠬᠢᠬᠦ",
+        "traditional": "ᠵᠠᠢᠯᠠᠰᠬᠢᠬᠦ",
         "latin": "ǰayilaskiqü",
         "sense": "immediative aspect in -схийх (-sxiix) of зайлах (zajlax, “to go away, to…",
         "verified": false,
@@ -2661,16 +2655,10 @@
       {
         "traditional": "ᠵᠠᠢᠷᠮᠠᠭ",
         "latin": "zairmag",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠵᠠᠶᠢᠷᠮᠠᠭ",
-        "latin": "ǰayirmaɣ",
         "sense": "ice cream",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

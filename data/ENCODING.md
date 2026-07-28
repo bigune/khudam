@@ -17,7 +17,7 @@ Applying a decision never sets `verified: true` — a machine correction is not 
 
 ## Decision 001 — Postvocalic й: single ᠢ (U+1822), not the ᠶᠢ digraph
 
-**Date:** 2026-07-26 · **Applied by:** [`scripts/fix-yi-digraph.ts`](../scripts/fix-yi-digraph.ts) (2,780 entries, v0.1.1)
+**Date:** 2026-07-26 · **Applied by:** [`scripts/fix-yi-digraph.ts`](../scripts/fix-yi-digraph.ts) (2,780 entries, v0.1.1; second sweep 2026-07-28, 47 forms) · **Enforced by:** `normalizeYiDigraph()` in [`scripts/lib.ts`](../scripts/lib.ts)
 
 ### The rule
 
@@ -42,6 +42,22 @@ Cyrillic **й** acting as a diphthong coda (after a vowel: ай, ой, уй, э�
 - New entries and corrections must encode diphthong й as single ᠢ; do not add ᠶᠢ spellings of the same word as extra candidates.
 - Text from older tools and corpora may carry ᠶᠢ: visually (near-)identical, different code points. Normalize ᠶᠢ → ᠢ before comparing khudam output against external text. (Lookup-time normalization is a possible future engine feature.)
 - Edge cases excluded from the automatic fix (word-initial glides, loanwords without й) await per-entry human rulings in [REVIEW.md](REVIEW.md).
+
+### Enforcement — why a decision is a function, not a script
+
+The first application of this decision was a one-shot migration, and a one-shot migration only holds until the next import. The Wiktionary tier arrived the following day writing the digraph as Wiktionary writes it, and 52 forms walked straight back in. Each one landed beside our corrected spelling of the same word and registered as a *source disagreement*, which is how 19 words reached the top of the verification queue asking readers to adjudicate a question this file had already answered.
+
+So the rule now lives in one function, `normalizeYiDigraph(cyrillic, traditional)` in [`scripts/lib.ts`](../scripts/lib.ts), and three places read it:
+
+| Where | What it does |
+| --- | --- |
+| [`scripts/fix-yi-digraph.ts`](../scripts/fix-yi-digraph.ts) | corrects data already in the lexicon (dry-run by default) |
+| [`scripts/import-wiktionary.ts`](../scripts/import-wiktionary.ts) | applies it to incoming whole-word forms, so a re-import corroborates our spelling instead of disputing it |
+| [`scripts/validate.ts`](../scripts/validate.ts) | rejects a digraph in D1's scope, with the corrected form in the message — CI, and every pull request |
+
+The function also carries the two exceptions that make the rule safe, and both had teeth. A ᠶ that **opens a word** is the true glide of е/ё (ес → ᠶᠢᠰᠦ). A ᠶ that **opens a written-apart suffix**, immediately after NNBSP, is Decision 002's glide — дэлхийн → ᠳᠡᠯᠡᠬᠡᠢ ᠶᠢᠨ has й in its Cyrillic and a perfectly correct ᠶᠢᠨ. Decision 002 was made a day after the fix script's first run, so the script had never heard of it; re-running it unguarded would have corrupted exactly the spellings that decision protects.
+
+Suffix rows in [`suffixes.json`](suffixes.json) are stored **without** their NNBSP, which leaves the rule no way to see that a bare ᠶᠢᠨ is a suffix. They are exempt, and `mongolianForms()` documents that at the call site.
 
 ---
 

@@ -453,19 +453,10 @@ should carry the MVS final vowel at all. Example flagged:
 
 Extracted from English Wiktionary (CC BY-SA) via kaikki.org — see [SOURCES.md](SOURCES.md). Хүний хяналт шаардлагатай мөрүүд — туслах хүн бүрт баярлана.
 
-### Source conflicts — prioritized review queue (342)
+### Source conflicts — prioritized review queue (310)
 
 The bootstrap seed and Wiktionary disagree on these words. Each case is either a genuine homonym (keep both, write proper `sense` labels) or a wrong spelling (delete the bad candidate). Candidates marked _unlabeled_ need a human meaning label; do not trust either source blindly.
 
-- **агзайх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B3%D0%B7%D0%B0%D0%B9%D1%85#Mongolian)
-  - `ᠠᠭᠵᠠᠢᠬᠤ` (_agzaih_) — wmk-import — _unlabeled_
-  - `ᠠᠭᠵᠠᠶᠢᠬᠤ` (_aɣǰayiqu_) — wiktionary — “to shiver”
-- **айлчлах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B9%D0%BB%D1%87%D0%BB%D0%B0%D1%85#Mongolian)
-  - `ᠠᠢᠯᠴᠢᠯᠠᠬᠤ` (_ailchlah_) — wmk-import — _unlabeled_
-  - `ᠠᠶᠢᠯᠴᠢᠯᠠᠬᠤ` (_ayilčilaqu_) — wiktionary — “to visit”
-- **айраг** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B9%D1%80%D0%B0%D0%B3#Mongolian)
-  - `ᠠᠢᠷᠠᠭ` (_airag_) — wmk-import — _unlabeled_
-  - `ᠠᠶᠢᠷᠠᠭ` (_ayiraɣ_) — wiktionary — “koumiss (a popular Mongolian drink made from fermented mare’s milk).”
 - **ал** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BB#Mongolian)
   - `ᠠᠯᠠ` (_al_) — wmk-import — _unlabeled_
   - `ᠠᠯ` (_al_) — wiktionary — “red”
@@ -562,9 +553,6 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **буга** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D1%83%D0%B3%D0%B0#Mongolian)
   - `ᠪᠤᠭᠤ` (_buga_) — wmk-import — _unlabeled_
   - `ᠪᠣᠭᠣ` (_boɣo_) — wiktionary — “deer”
-- **буйл** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D1%83%D0%B9%D0%BB#Mongolian)
-  - `ᠪᠤᠢᠯᠠ` (_buil_) — wmk-import — _unlabeled_
-  - `ᠪᠤᠶᠢᠯᠠ` (_buyila_) — wiktionary — “gums (flesh around teeth)”
 - **булан** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D1%83%D0%BB%D0%B0%D0%BD#Mongolian)
   - `ᠪᠤᠯᠤᠨ` (_bulan_) — wmk-import — _unlabeled_
   - `ᠪᠤᠯᠤᠩ` (_bulung_) — wiktionary — “corner”
@@ -611,12 +599,6 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **ганжин** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D0%B0%D0%BD%D0%B6%D0%B8%D0%BD#Mongolian)
   - `ᠭᠠᠨᠵᠢᠨ` (_ganjin_) — wmk-import — _unlabeled_
   - `ᠭᠠᠨᠵᠢᠩ` (_ɣanǰing_) — wiktionary — “rolling pin”
-- **гийгэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D0%B8%D0%B9%D0%B3%D1%8D%D1%85#Mongolian)
-  - `ᠭᠡᠢᠭᠡᠬᠦ` (_giigeh_) — wmk-import — _unlabeled_
-  - `ᠭᠡᠶᠢᠭᠡᠬᠦ` (_geyigekü_) — wiktionary — “To become bright”
-- **гийгүүлэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D0%B8%D0%B9%D0%B3%D2%AF%D2%AF%D0%BB%D1%8D%D1%85#Mongolian)
-  - `ᠭᠡᠢᠭᠦᠯᠬᠦ` (_giiguuleh_) — wmk-import — _unlabeled_
-  - `ᠭᠡᠶᠢᠭᠦᠯᠬᠦ` (_geyigülkü_) — wiktionary — “To enlighten, illuminate”
 - **гоожих** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D0%BE%D0%BE%D0%B6%D0%B8%D1%85#Mongolian)
   - `ᠭᠣᠣᠵᠢᠬᠤ` (_goojih_) — wmk-import — _unlabeled_
   - `ᠭᠣᠭᠤᠵᠢᠬᠤ` (_ɣoguǰiqu_) — wiktionary — “to leak, pour out, drip, stream, sweat”
@@ -626,19 +608,9 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **гэлэнмаа** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D1%8D%D0%BB%D1%8D%D0%BD%D0%BC%D0%B0%D0%B0#Mongolian)
   - `ᠭᠡᠯᠡᠩᠮ᠎ᠠ` (_gelenmaa_) — wmk-import — _unlabeled_
   - `ᠭᠡᠯᠣᠩᠮ᠎ᠠ` (_gelongm-a_) — wiktionary — “nun, bhikkhuni”
-- **гялайлаа** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D1%8F%D0%BB%D0%B0%D0%B9%D0%BB%D0%B0%D0%B0#Mongolian)
-  - `ᠭᠢᠯᠠᠢᠯ᠎ᠠ` (_gyalailaa_) — wmk-import — _unlabeled_
-  - `ᠭᠢᠯᠠᠶᠢᠯ᠎ᠠ` (_ɣilayil-a_) — wiktionary — “thank you”
 - **гүүр** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B3%D2%AF%D2%AF%D1%80#Mongolian)
   - `ᠭᠦᠦᠷᠡ` (_guur_) — wmk-import — _unlabeled_
   - `ᠭᠦᠭᠦᠷᠭᠡ` (_gügürge_) — wiktionary — “bridge”
-- **дайр** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%B0%D0%B9%D1%80#Mongolian)
-  - `ᠳᠠᠢᠷ` (_dair_) — wmk-import — _unlabeled_
-  - `ᠳᠠᠭᠠᠷᠢ` (_daɣari_) — wiktionary — “abrasion”
-  - `ᠳᠠᠶᠢᠷ` (_dayir_) — wiktionary — “abrasion”
-- **дайсан** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%B0%D0%B9%D1%81%D0%B0%D0%BD#Mongolian)
-  - `ᠳᠠᠢᠰᠤᠨ` (_daisan_) — wmk-import — _unlabeled_
-  - `ᠳᠠᠶᠢᠰᠤᠨ` (_dayisun_) — wiktionary — “enemy; foe; rival”
 - **дайх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D0%B0%D0%B9%D1%85#Mongolian)
   - `ᠳᠠᠢᠬᠤ` (_daih_) — wmk-import — _unlabeled_
   - `ᠳᠠᠶ᠋ᠢᠬᠤ` (_dayiqu_) — wiktionary — “to haul off with a vehicle”
@@ -696,12 +668,6 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **ерөнхий** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B5%D1%80%D3%A9%D0%BD%D1%85%D0%B8%D0%B9#Mongolian)
   - `ᠶᠡᠷᠦᠩᠬᠡᠢ` (_yerunhii_) — wmk-import — _unlabeled_
   - `ᠶᠡᠷᠦᠩᠬᠡᠶ` (_yerüngkey_) — wiktionary — “general”
-- **ерөнхийлөгч** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B5%D1%80%D3%A9%D0%BD%D1%85%D0%B8%D0%B9%D0%BB%D3%A9%D0%B3%D1%87#Mongolian)
-  - `ᠶᠡᠷᠦᠩᠬᠡᠢᠯᠡᠭᠴᠢ` (_yerunhiilugch_) — wmk-import — _unlabeled_
-  - `ᠶᠡᠷᠦᠩᠬᠡᠶᠢᠯᠡᠭᠴᠢ` (_yerüngkeyilegči_) — wiktionary — “agentive participle in -гч (-gč) of ерөнхийлөх (jörönxiilöx)”
-- **ерөнхийлөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B5%D1%80%D3%A9%D0%BD%D1%85%D0%B8%D0%B9%D0%BB%D3%A9%D1%85#Mongolian)
-  - `ᠶᠡᠷᠦᠩᠬᠡᠢᠯᠡᠬᠦ` (_yerunhiiluh_) — wmk-import — _unlabeled_
-  - `ᠶᠡᠷᠦᠩᠬᠡᠶᠢᠯᠡᠬᠦ` (_yerüngkeyilekü_) — wiktionary — “To generalize”
 - **еэвэн** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B5%D1%8D%D0%B2%D1%8D%D0%BD#Mongolian)
   - `ᠶᠧᠪᠡᠩ` (_yeven_) — wmk-import — _unlabeled_
   - `ᠶᠧᠪᠢᠩ` (_yēbing_) — wiktionary — “cookie (small, sweet, flat, circular, baked good which is either crisp or soft…”
@@ -726,15 +692,9 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **зав** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%B0%D0%B2#Mongolian)
   - `ᠵᠠᠪᠠ` (_zav_) — wmk-import — _unlabeled_
   - `ᠵᠠᠪ` (_ǰab_) — wiktionary — “leisure, spare time, free time”
-- **зайдуу** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%B0%D0%B9%D0%B4%D1%83%D1%83#Mongolian)
-  - `ᠵᠠᠢᠳᠠᠭᠤ` (_zaiduu_) — wmk-import — _unlabeled_
-  - `ᠵᠠᠶᠢᠳᠠᠭᠤ` (_ǰayidaɣu_) — wiktionary — “faraway, distant”
 - **зайлсхийх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%B0%D0%B9%D0%BB%D1%81%D1%85%D0%B8%D0%B9%D1%85#Mongolian)
   - `ᠵᠠᠢᠯᠠᠰᠬᠢᠬᠤ` (_zailshiih_) — wmk-import — _unlabeled_
-  - `ᠵᠠᠶᠢᠯᠠᠰᠬᠢᠬᠦ` (_ǰayilaskiqü_) — wiktionary — “immediative aspect in -схийх (-sxiix) of зайлах (zajlax, “to go away, to…”
-- **зайрмаг** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%B0%D0%B9%D1%80%D0%BC%D0%B0%D0%B3#Mongolian)
-  - `ᠵᠠᠢᠷᠮᠠᠭ` (_zairmag_) — wmk-import — _unlabeled_
-  - `ᠵᠠᠶᠢᠷᠮᠠᠭ` (_ǰayirmaɣ_) — wiktionary — “ice cream”
+  - `ᠵᠠᠢᠯᠠᠰᠬᠢᠬᠦ` (_ǰayilaskiqü_) — wiktionary — “immediative aspect in -схийх (-sxiix) of зайлах (zajlax, “to go away, to…”
 - **зогсох** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%BE%D0%B3%D1%81%D0%BE%D1%85#Mongolian)
   - `ᠵᠣᠭᠰᠣᠬᠤ` (_zogsoh_) — wmk-import — _unlabeled_
   - `ᠵᠣᠭᠰᠤᠬᠤ` (_ǰoɣsuqu_) — wiktionary — “to stand”
@@ -795,9 +755,6 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **лоозон** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BB%D0%BE%D0%BE%D0%B7%D0%BE%D0%BD#Mongolian)
   - `ᠯᠣᠽᠦ᠋ᠩ` (_loozon_) — wmk-import — _unlabeled_
   - `ᠯᠣᠽᠦᠩ` (_lozüng_) — wiktionary — “password”
-- **майхан** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%B0%D0%B9%D1%85%D0%B0%D0%BD#Mongolian)
-  - `ᠮᠠᠢᠬᠠᠨ` (_maihan_) — wmk-import — _unlabeled_
-  - `ᠮᠠᠶᠢᠬᠠᠨ` (_mayiqan_) — wiktionary — “tent”
 - **мий** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BC%D0%B8%D0%B9#Mongolian)
   - `ᠮᠢ` (_mii_) — wmk-import — _unlabeled_
   - `ᠮᠢᠢ` (_mii_) — wiktionary — “cat”
@@ -840,24 +797,12 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **найз** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B0%D0%B9%D0%B7#Mongolian)
   - `ᠨᠠᠢᠵᠠ` (_naiz_) — wmk-import — _unlabeled_
   - `ᠨᠠᠶ᠋ᠢᠵᠠ` (_nayiǰa_) — wiktionary — “friend”
-- **найр** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B0%D0%B9%D1%80#Mongolian)
-  - `ᠨᠠᠢᠷ` (_nair_) — wmk-import — _unlabeled_
-  - `ᠨᠠᠶᠢᠷ` (_nayir_) — wiktionary — “feast”
-- **найрамдал** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B0%D0%B9%D1%80%D0%B0%D0%BC%D0%B4%D0%B0%D0%BB#Mongolian)
-  - `ᠨᠠᠢᠷᠠᠮᠳᠠᠯ` (_nairamdal_) — wmk-import — _unlabeled_
-  - `ᠨᠠᠶᠢᠷᠠᠮᠳᠠᠯ` (_nayiramdal_) — wiktionary — “friendship”
 - **найруулах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B0%D0%B9%D1%80%D1%83%D1%83%D0%BB%D0%B0%D1%85#Mongolian)
   - `ᠨᠠᠢᠷᠠᠭᠤᠯᠬᠤ` (_nairuulah_) — wmk-import — _unlabeled_
   - `ᠨᠠᠶ᠋ᠢᠷᠠᠭᠤᠯᠬᠤ` (_nayiraɣulqu_) — wiktionary — “causative of найрах (najrax)”
 - **найтаах** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B0%D0%B9%D1%82%D0%B0%D0%B0%D1%85#Mongolian)
   - `ᠨᠠᠢᠲᠠᠭᠠᠬᠤ` (_naitaah_) — wmk-import — _unlabeled_
   - `ᠨᠠᠶ᠋ᠢᠲᠠᠭᠠᠬᠤ` (_nayitaɣaqu_) — wiktionary — “to sneeze”
-- **нийгэм** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B8%D0%B9%D0%B3%D1%8D%D0%BC#Mongolian)
-  - `ᠨᠡᠢᠭᠡᠮ` (_niigem_) — wmk-import — _unlabeled_
-  - `ᠨᠡᠶᠢᠭᠡᠮ` (_neyigem_) — wiktionary — “society”
-- **нийслэл** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B8%D0%B9%D1%81%D0%BB%D1%8D%D0%BB#Mongolian)
-  - `ᠨᠡᠢᠰᠯᠡᠯ` (_niislel_) — wmk-import — _unlabeled_
-  - `ᠨᠡᠶᠢᠰᠯᠡᠯ` (_neyislel_) — wiktionary — “capital, capital city, metropolis”
 - **нийтгэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%B8%D0%B9%D1%82%D0%B3%D1%8D%D1%85#Mongolian)
   - `ᠨᠡᠢᠳᠬᠡᠬᠦ` (_niitgeh_) — wmk-import — _unlabeled_
   - `ᠨᠡᠶ᠋ᠢᠳᠬᠡᠬᠦ` (_neyidkekü_) — wiktionary — “to weave”
@@ -867,9 +812,6 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **ногоон** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%BE%D0%B3%D0%BE%D0%BE%D0%BD#Mongolian)
   - `ᠨᠣᠭᠣᠭᠠᠨ` (_nogoon_) — wmk-import — _unlabeled_
   - `ᠨᠣᠭᠤᠭᠠᠨ` (_noɣuɣan_) — wiktionary — “green”
-- **нойтон** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D0%BE%D0%B9%D1%82%D0%BE%D0%BD#Mongolian)
-  - `ᠨᠣᠢᠲᠠᠨ` (_noiton_) — wmk-import — _unlabeled_
-  - `ᠨᠣᠶᠢᠲᠠᠨ` (_noyitan_) — wiktionary — “wet; moist”
 - **нөгөө** — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D3%A9%D0%B3%D3%A9%D3%A9#Mongolian)
   - `ᠨᠥᠭᠥᠭᠡ` (_nuguu_) — wmk-import — _unlabeled_
   - `ᠨᠥᠭᠦᠭᠡ` (_nögüge_) — wiktionary — “that; that very one”
@@ -976,9 +918,6 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **сэлэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D1%8D%D0%BB%D1%8D%D1%85#Mongolian)
   - `ᠰᠡᠯᠡᠬᠦ` (_seleh_) — wmk-import — _unlabeled_
   - `ᠰᠡᠯᠢᠬᠦ` (_selikü_) — wiktionary — “to swim (of animals, humans)”
-- **сэргийлэх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D1%8D%D1%80%D0%B3%D0%B8%D0%B9%D0%BB%D1%8D%D1%85#Mongolian)
-  - `ᠰᠡᠷᠭᠡᠢᠯᠡᠬᠦ` (_sergiileh_) — wmk-import — _unlabeled_
-  - `ᠰᠡᠷᠭᠡᠶᠢᠯᠡᠬᠦ` (_sergeyilekü_) — wiktionary — “to protect”
 - **сүнс** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D2%AF%D0%BD%D1%81#Mongolian)
   - `ᠰᠦᠨᠡᠰᠦ` (_suns_) — wmk-import — _unlabeled_
   - `ᠰᠦ᠋ᠨ᠋ᠡᠰᠦ` (_sünesü_) — wiktionary — “soul”
@@ -988,12 +927,6 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **сөгдөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D3%A9%D0%B3%D0%B4%D3%A9%D1%85#Mongolian)
   - `ᠰᠥᠭᠥᠳᠬᠦ` (_sugduh_) — wmk-import — _unlabeled_
   - `ᠰᠥᠭᠦᠳᠬᠦ` (_sögüdkü_) — wiktionary — “to kneel”
-- **тайж** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%B0%D0%B9%D0%B6#Mongolian)
-  - `ᠲᠠᠢᠵᠢ` (_taij_) — wmk-import — _unlabeled_
-  - `ᠲᠠᠶᠢᠵᠢ` (_tayiǰi_) — wiktionary — “a nobleman”
-- **тайлбарлах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%B0%D0%B9%D0%BB%D0%B1%D0%B0%D1%80%D0%BB%D0%B0%D1%85#Mongolian)
-  - `ᠲᠠᠢᠯᠪᠤᠷᠢᠯᠠᠬᠤ` (_tailbarlah_) — wmk-import — _unlabeled_
-  - `ᠲᠠᠶᠢᠯᠪᠤᠷᠢᠯᠠᠬᠤ` (_tayilburilaqu_) — wiktionary — “to explain”
 - **такси** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%82%D0%B0%D0%BA%D1%81%D0%B8#Mongolian)
   - `ᠲᠠᠺᠰᠢ` (_taksi_) — wmk-import — _unlabeled_
   - `ᠲ᠋ᠠᠻᠰᠢ` (_taksi_) — wiktionary — “taxi; cab”
@@ -1114,15 +1047,9 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **хайлмаг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B9%D0%BB%D0%BC%D0%B0%D0%B3#Mongolian)
   - `ᠬᠠᠢᠯᠤᠮᠠᠭ` (_hailmag_) — wmk-import — _unlabeled_
   - `ᠬᠠᠶ᠋ᠢᠯᠤᠮᠠᠭ` (_qayilumaɣ_) — wiktionary — “molten”
-- **хайнаг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B9%D0%BD%D0%B0%D0%B3#Mongolian)
-  - `ᠬᠠᠢᠨᠤᠭ` (_hainag_) — wmk-import — _unlabeled_
-  - `ᠬᠠᠶᠢᠨᠤᠭ` (_qayinuɣ_) — wiktionary — “dzo (yak–cow hybrid)”
 - **хайрлах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B9%D1%80%D0%BB%D0%B0%D1%85#Mongolian)
   - `ᠬᠠᠢᠷᠠᠯᠠᠬᠤ` (_hairlah_) — wmk-import — _unlabeled_
   - `ᠬᠠᠶ᠋ᠢᠷᠠᠯᠠᠬᠤ` (_qayiralaqu_) — wiktionary — “to love”
-- **хайх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B9%D1%85#Mongolian)
-  - `ᠬᠠᠢᠬᠤ` (_haih_) — wmk-import — _unlabeled_
-  - `ᠬᠠᠶᠢᠬᠤ` (_qayiqu_) — wiktionary — “to look for; to seek”
 - **хайч** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B9%D1%87#Mongolian)
   - `ᠬᠠᠢᠴᠢ` (_haich_) — wmk-import — _unlabeled_
   - `ᠬᠠᠶ᠋ᠢᠴᠢ` (_qayiči_) — wiktionary — “scissors”
@@ -1135,9 +1062,6 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **хамар** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%BC%D0%B0%D1%80#Mongolian)
   - `ᠬᠠᠮᠠᠷ` (_hamar_) — wmk-import — _unlabeled_
   - `ᠬᠠᠪᠠᠷ` (_qabar_) — wiktionary — “nose”
-- **харайх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D1%80%D0%B0%D0%B9%D1%85#Mongolian)
-  - `ᠬᠠᠷᠠᠢᠬᠤ` (_haraih_) — wmk-import — _unlabeled_
-  - `ᠬᠠᠷᠠᠶᠢᠬᠤ` (_qarayiqu_) — wiktionary — “to leap; to jump”
 - **хариулах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D1%80%D0%B8%D1%83%D0%BB%D0%B0%D1%85#Mongolian)
   - `ᠬᠠᠷᠢᠭᠤᠯᠬᠤ` (_hariulah_) — wmk-import — _unlabeled_
   - `ᠬᠠᠷᠢᠭᠤᠯᠠᠬᠤ` (_qarigulaqu_) — wiktionary — “to answer, to reciprocate”
@@ -1150,27 +1074,18 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **хаяг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D1%8F%D0%B3#Mongolian)
   - `ᠬᠠᠶᠠᠭ` (_hayag_) — wmk-import — _unlabeled_
   - `ᠬᠠᠶᠢᠭ` (_qayiɣ_) — wiktionary — “address”
-- **хийд** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B8%D0%B9%D0%B4#Mongolian)
-  - `ᠬᠡᠢᠳ` (_hiid_) — wmk-import — _unlabeled_
-  - `ᠬᠡᠶᠢᠳ` (_keyid_) — wiktionary — “monastery”
 - **хийлч** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B8%D0%B9%D0%BB%D1%87#Mongolian)
   - `ᠬᠢᠯᠴᠡ` (_hiilch_) — wmk-import — _unlabeled_
   - `ᠬᠢᠭᠢᠯᠢᠴᠢ` (_kigiliči_) — wiktionary — “violinist”
 - **хирс** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B8%D1%80%D1%81#Mongolian)
   - `ᠬᠢᠷᠡᠰ` (_hirs_) — wmk-import — _unlabeled_
   - `ᠬᠡᠷᠢᠰ` (_keris_) — wiktionary — “rhinoceros”
-- **хойг** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%B9%D0%B3#Mongolian)
-  - `ᠬᠣᠢᠭ` (_hoig_) — wmk-import — _unlabeled_
-  - `ᠬᠣᠶᠢᠭ` (_qoyiɣ_) — wiktionary — “peninsula”
 - **хойд** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%B9%D0%B4#Mongolian)
   - `ᠬᠣᠢᠳ` (_hoid_) — wmk-import — _unlabeled_
-  - `ᠬᠣᠶᠢᠳᠤ` (_qoyidu_) — wiktionary — “northward”
-- **хойно** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%B9%D0%BD%D0%BE#Mongolian)
-  - `ᠬᠣᠢᠨ᠎ᠠ` (_hoino_) — wmk-import — _unlabeled_
-  - `ᠬᠣᠶᠢᠨ᠎ᠠ` (_qoyin-a_) — wiktionary — “behind”
+  - `ᠬᠣᠢᠳᠤ` (_qoyidu_) — wiktionary — “northward”
 - **хойтон** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%B9%D1%82%D0%BE%D0%BD#Mongolian)
   - `ᠬᠣᠢᠲᠤᠨ` (_hoiton_) — wmk-import — _unlabeled_
-  - `ᠬᠣᠶᠢᠲᠣᠨ` (_qoyiton_) — wiktionary — “next year”
+  - `ᠬᠣᠢᠲᠣᠨ` (_qoyiton_) — wiktionary — “next year”
 - **холбоо** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%BE%D0%BB%D0%B1%D0%BE%D0%BE#Mongolian)
   - `ᠬᠣᠯᠪᠣᠭ᠎ᠠ` (_holboo_) — wmk-import — _unlabeled_
   - `ᠬᠣᠯᠪᠤᠭ᠎ᠠ` (_qolbuɣ-a_) — wiktionary — “connection, link”
@@ -1219,9 +1134,6 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **худалдах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D0%B4%D0%B0%D0%BB%D0%B4%D0%B0%D1%85#Mongolian)
   - `ᠬᠤᠳᠠᠯᠳᠤᠭᠠᠴᠢᠯᠠᠬᠤ` (_hudaldah_) — wmk-import — _unlabeled_
   - `ᠬᠤᠳᠠᠯᠳᠤᠬᠤ` (_qudalduqu_) — wiktionary — “to trade”
-- **хулгайч** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D0%BB%D0%B3%D0%B0%D0%B9%D1%87#Mongolian)
-  - `ᠬᠤᠯᠠᠭᠠᠢᠴᠢ` (_hulgaich_) — wmk-import — _unlabeled_
-  - `ᠬᠤᠯᠠᠭᠠᠶᠢᠴᠢ` (_qulaɣayiči_) — wiktionary — “thief”
 - **хулгах** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D1%83%D0%BB%D0%B3%D0%B0%D1%85#Mongolian)
   - `ᠬᠤᠯᠭᠠᠬᠤ` (_hulgah_) — wmk-import — _unlabeled_
   - `ᠬᠤᠯᠤᠭᠠᠬᠤ` (_qulugaqu_) — wiktionary — “to steal; to rob”
@@ -1312,12 +1224,6 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **хөөх** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D3%A9%D1%85#Mongolian)
   - `ᠬᠥᠭᠡᠬᠦ` (_huuh_) — wmk-import — _unlabeled_
   - `ᠬᠥᠭᠡᠭᠡᠬᠦ` (_kögegekü_) — wiktionary — “to swell”
-- **цайз** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D0%B0%D0%B9%D0%B7#Mongolian)
-  - `ᠴᠠᠢᠵᠠ` (_tsaiz_) — wmk-import — _unlabeled_
-  - `ᠴᠠᠶᠢᠵᠠ` (_čayiǰa_) — wiktionary — “castle”
-- **цайр** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D0%B0%D0%B9%D1%80#Mongolian)
-  - `ᠴᠠᠢᠷ` (_tsair_) — wmk-import — _unlabeled_
-  - `ᠴᠠᠶᠢᠷ` (_čayir_) — wiktionary — “zinc”
 - **царцаа** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%86%D0%B0%D1%80%D1%86%D0%B0%D0%B0#Mongolian)
   - `ᠴᠠᠷᠴᠠᠭ᠎ᠠ` (_tsartsaa_) — wmk-import — _unlabeled_
   - `ᠴᠠᠷᠴᠠ` (_čarča_) — wiktionary — “grasshopper”
@@ -1399,9 +1305,6 @@ The bootstrap seed and Wiktionary disagree on these words. Each case is either a
 - **энд** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8D%D0%BD%D0%B4#Mongolian)
   - `ᠡᠨᠳᠡ` (_end_) — wmk-import — _unlabeled_
   - `ᠡᠨᠳ᠋ᠡ` (_ende_) — wiktionary — “here, herein, herewith, hereinto, there, therein”
-- **эрхийвч** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8D%D1%80%D1%85%D0%B8%D0%B9%D0%B2%D1%87#Mongolian)
-  - `ᠡᠷᠡᠬᠡᠢᠪᠴᠢ` (_erhiivch_) — wmk-import — _unlabeled_
-  - `ᠡᠷᠡᠬᠡᠶᠢᠪᠴᠢ` (_erekeyibči_) — wiktionary — “thumb ring”
 - **яаж** — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8F%D0%B0%D0%B6#Mongolian)
   - `ᠶᠠᠵ` (_yaj_) — wmk-import — _unlabeled_
   - `ᠶᠠᠭᠠᠭᠢᠵᠤ` (_yaɣaɣiǰu_) — wiktionary — “how”
@@ -1502,7 +1405,7 @@ Each needs a human decision (the stated reason says why the machine refused):
 - `анхны` — Wiktionary gives `ᠠᠩᠬᠠᠨ ᠤ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BD%D1%85%D0%BD%D1%8B#Mongolian)
 - `африкаанс` — Wiktionary gives `ᠠᠹᠷᠢᠺᠠ ᠪᠠᠨᠨᠰ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D1%84%D1%80%D0%B8%D0%BA%D0%B0%D0%B0%D0%BD%D1%81#Mongolian)
 - `булгийн` — Wiktionary gives `ᠪᠤᠯᠠᠭ ᠤᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B1%D1%83%D0%BB%D0%B3%D0%B8%D0%B9%D0%BD#Mongolian)
-- `дэлхийн` — Wiktionary gives `ᠳᠡᠯᠡᠬᠡᠢ ᠶᠢᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D1%8D%D0%BB%D1%85%D0%B8%D0%B9%D0%BD#Mongolian)
+- `дэлхийн` — Wiktionary gives `ᠳᠡᠯᠡᠬᠡᠢ ᠢᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B4%D1%8D%D0%BB%D1%85%D0%B8%D0%B9%D0%BD#Mongolian)
 - `заримдаа` — Wiktionary gives `ᠵᠠᠷᠢᠮ ᠳᠠᠭᠠᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%B0%D1%80%D0%B8%D0%BC%D0%B4%D0%B0%D0%B0#Mongolian)
 - `зоригоор` — Wiktionary gives `ᠵᠣᠷᠢᠭ ᠢᠶᠠᠷ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B7%D0%BE%D1%80%D0%B8%D0%B3%D0%BE%D0%BE%D1%80#Mongolian)
 - `кинотеатр` — Wiktionary gives `ᠻᠢᠨᠣ ᠲᠢᠶᠠᠲ᠋ᠷ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BA%D0%B8%D0%BD%D0%BE%D1%82%D0%B5%D0%B0%D1%82%D1%80#Mongolian)
@@ -1524,7 +1427,7 @@ Each needs a human decision (the stated reason says why the machine refused):
 - `хөлбөмбөг` — Wiktionary gives `ᠬᠥᠯ ᠪᠥᠮᠪᠦᠭᠡ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D3%A9%D0%BB%D0%B1%D3%A9%D0%BC%D0%B1%D3%A9%D0%B3#Mongolian)
 - `эмээ` — Wiktionary gives `ᠡᠮ᠎ᠡ ᠪᠡᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8D%D0%BC%D1%8D%D1%8D#Mongolian)
 - `энгийн` — Wiktionary gives `ᠡᠩ ᠤᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D1%8D%D0%BD%D0%B3%D0%B8%D0%B9%D0%BD#Mongolian)
-- `үгийн` — Wiktionary gives `ᠦᠭᠡ ᠶᠢᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D2%AF%D0%B3%D0%B8%D0%B9%D0%BD#Mongolian)
+- `үгийн` — Wiktionary gives `ᠦᠭᠡ ᠢᠨ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D2%AF%D0%B3%D0%B8%D0%B9%D0%BD#Mongolian)
 - `үүний` — Wiktionary gives `ᠡᠭᠦᠨ ᠦ` — contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md — [Wiktionary](https://en.wiktionary.org/wiki/%D2%AF%D2%AF%D0%BD%D0%B8%D0%B9#Mongolian)
 
 ### Proper names queued for names.json (90)
@@ -1537,7 +1440,7 @@ Each needs a human decision (the stated reason says why the machine refused):
 - **Алжир** — `ᠠᠯᠵᠢᠷ` — “Algeria (a country in North Africa)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D0%BB%D0%B6%D0%B8%D1%80#Mongolian)
 - **Алтай** — `ᠠᠯᠲᠠᠢ` — “Altai (a city, the administrative center of Govi-Altai Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D0%BB%D1%82%D0%B0%D0%B9#Mongolian)
 - **Андорра** — `ᠠᠨᠳᠣᠷᠷᠠ` — “Andorra (a microstate in Southern Europe, between Spain and France)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D0%BD%D0%B4%D0%BE%D1%80%D1%80%D0%B0#Mongolian)
-- **Арвайхээр** — `ᠠᠷᠪᠠᠶᠢᠬᠡᠭᠡᠷ` — “Arvaikheer (a city, the administrative center of Övörkhangai Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D1%80%D0%B2%D0%B0%D0%B9%D1%85%D1%8D%D1%8D%D1%80#Mongolian)
+- **Арвайхээр** — `ᠠᠷᠪᠠᠢᠬᠡᠭᠡᠷ` — “Arvaikheer (a city, the administrative center of Övörkhangai Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D1%80%D0%B2%D0%B0%D0%B9%D1%85%D1%8D%D1%8D%D1%80#Mongolian)
 - **Аргентин** — `ᠠᠷᠭᠧᠨ᠋ᠲ᠋ᠢᠨ` — “Argentina (a country in South America)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D1%80%D0%B3%D0%B5%D0%BD%D1%82%D0%B8%D0%BD#Mongolian)
 - **Армен** — `ᠠᠷᠮᠧᠨ` — “Armenia (a country in the South Caucasus region of Asia, sometimes considered…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D1%80%D0%BC%D0%B5%D0%BD#Mongolian)
 - **Афганистан** — `ᠠᠹᠭᠠᠨᠢᠰᠲ᠋ᠠᠨ` — “Afghanistan (a landlocked country between Central Asia and South Asia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%90%D1%84%D0%B3%D0%B0%D0%BD%D0%B8%D1%81%D1%82%D0%B0%D0%BD#Mongolian)
@@ -1561,7 +1464,7 @@ Each needs a human decision (the stated reason says why the machine refused):
 - **Зүүнгар** — `ᠵᠦ᠋ᠩᠭ᠋ᠠᠷ` · `ᠵᠡᠭᠦᠨᠭᠠᠷ` — “Dzungaria (a region in Inner Asia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%97%D2%AF%D2%AF%D0%BD%D0%B3%D0%B0%D1%80#Mongolian)
 - **Зүүнхараа** — `ᠵᠡᠭᠦᠨ ᠢᠶᠠᠷ ᠢᠶᠠᠨ` · ⚠ `ᠵᠡᠭᠦᠨ ᠢᠶᠠᠷ ᠢᠶᠠᠨ` (contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md) — “Züünkharaa (a city in Selenge Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%97%D2%AF%D2%AF%D0%BD%D1%85%D0%B0%D1%80%D0%B0%D0%B0#Mongolian)
 - **Израиль** — `ᠢᠰᠷᠠᠶᠢᠯ` — “Israel (a country in Western Asia in the Middle East, at the eastern shore of…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%98%D0%B7%D1%80%D0%B0%D0%B8%D0%BB%D1%8C#Mongolian)
-- **Израйль** — `ᠢᠰᠷᠠᠶᠢᠯ` — “alternative form of Израиль (Izrailʹ): Israel (a country in Western Asia in…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%98%D0%B7%D1%80%D0%B0%D0%B9%D0%BB%D1%8C#Mongolian)
+- **Израйль** — `ᠢᠰᠷᠠᠢᠯ` — “alternative form of Израиль (Izrailʹ): Israel (a country in Western Asia in…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%98%D0%B7%D1%80%D0%B0%D0%B9%D0%BB%D1%8C#Mongolian)
 - **Индонез** — `ᠢᠨᠳ᠋ᠣᠨᠧᠽ` — “Indonesia (a country and archipelago in maritime Southeast Asia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%98%D0%BD%D0%B4%D0%BE%D0%BD%D0%B5%D0%B7#Mongolian)
 - **Ирак** — `ᠢᠷᠠᠺ` — “Iraq (a country in West Asia in the Middle East)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%98%D1%80%D0%B0%D0%BA#Mongolian)
 - **Иран** — `ᠢᠷᠠᠨ` — “Iran (a country in West Asia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%98%D1%80%D0%B0%D0%BD#Mongolian)
@@ -1579,7 +1482,7 @@ Each needs a human decision (the stated reason says why the machine refused):
 - **Мисир** — `ᠮᠢᠰᠢᠷ᠋` — “Egypt (a country in North Africa and West Asia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9C%D0%B8%D1%81%D0%B8%D1%80#Mongolian)
 - **Москва** — `ᠮᠣᠰᠻᠸᠠ` — “Moscow (a federal city, the capital of Russia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0#Mongolian)
 - **Мөрөн** — `ᠮᠥᠷᠡᠨ` — “Mörön (a city, the administrative center of Khövsgöl Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9C%D3%A9%D1%80%D3%A9%D0%BD#Mongolian)
-- **Налайх** — `ᠨᠠᠯᠠᠶᠢᠬᠤ` — “Nalaikh (a district of Ulaanbaatar, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9D%D0%B0%D0%BB%D0%B0%D0%B9%D1%85#Mongolian)
+- **Налайх** — `ᠨᠠᠯᠠᠢᠬᠤ` — “Nalaikh (a district of Ulaanbaatar, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9D%D0%B0%D0%BB%D0%B0%D0%B9%D1%85#Mongolian)
 - **Непал** — `ᠨᠧᠫᠠᠯ` — “Nepal (a country in South Asia, located between China and India)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9D%D0%B5%D0%BF%D0%B0%D0%BB#Mongolian)
 - **Нидерланд** — `ᠨᠢᠳ᠋ᠧᠷᠯᠠᠨᠳ᠋` — “Netherlands (the main constituent country of the Kingdom of the Netherlands,…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9D%D0%B8%D0%B4%D0%B5%D1%80%D0%BB%D0%B0%D0%BD%D0%B4#Mongolian)
 - **Охайо** — `ᠣᠾᠠᠶᠣ` — “Ohio (a state of the United States)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9E%D1%85%D0%B0%D0%B9%D0%BE#Mongolian)
@@ -1587,7 +1490,7 @@ Each needs a human decision (the stated reason says why the machine refused):
 - **Перс** — `ᠫᠧᠷᠰ` — “Persia” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9F%D0%B5%D1%80%D1%81#Mongolian)
 - **Португал** — `ᠫᠣᠷᠲ᠋ᠦᠭᠠᠯ` — “Portugal (a country in Europe)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%9F%D0%BE%D1%80%D1%82%D1%83%D0%B3%D0%B0%D0%BB#Mongolian)
 - **Ром** — `ᠷᠣᠮᠠ` — “Rome (a major city, the capital of Italy and the Italian region of Lazio,…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A0%D0%BE%D0%BC#Mongolian)
-- **Сайншанд** — `ᠰᠠᠶᠢᠨᠱᠠᠩᠳᠠ` — “Sainshand (a city, the administrative center of Dornogovi Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A1%D0%B0%D0%B9%D0%BD%D1%88%D0%B0%D0%BD%D0%B4#Mongolian)
+- **Сайншанд** — `ᠰᠠᠢᠨᠱᠠᠩᠳᠠ` — “Sainshand (a city, the administrative center of Dornogovi Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A1%D0%B0%D0%B9%D0%BD%D1%88%D0%B0%D0%BD%D0%B4#Mongolian)
 - **Сахалин** — `ᠰᠠᠬᠠᠯᠢᠨ` — “Sakhalin” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A1%D0%B0%D1%85%D0%B0%D0%BB%D0%B8%D0%BD#Mongolian)
 - **Сибирь** — `ᠰᠢᠪᠢᠷᠢ` — “Siberia (the region of Russia in Asia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A1%D0%B8%D0%B1%D0%B8%D1%80%D1%8C#Mongolian)
 - **Сири** — `ᠰᠢᠷᠢ` — “Syria (a country in West Asia in the Middle East)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A1%D0%B8%D1%80%D0%B8#Mongolian)
@@ -1596,7 +1499,7 @@ Each needs a human decision (the stated reason says why the machine refused):
 - **Тегеран** — `ᠲ᠋ᠧᠾᠷᠠᠨ` — “alternative form of Техран (Texran, “Tehran”)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A2%D0%B5%D0%B3%D0%B5%D1%80%D0%B0%D0%BD#Mongolian)
 - **Техран** — `ᠲ᠋ᠧᠾᠷᠠᠨ` — “Tehran (the capital and largest city of Iran)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A2%D0%B5%D1%85%D1%80%D0%B0%D0%BD#Mongolian)
 - **Тулуй** — `ᠲᠥᠯᠦᠢ` — “Tolui (fourth son of Genghis Khan)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A2%D1%83%D0%BB%D1%83%D0%B9#Mongolian)
-- **Украйн** — `ᠤᠻᠷᠠᠶᠢᠨ` — “Ukraine (a country in Eastern Europe, bordering on the north shore of the…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A3%D0%BA%D1%80%D0%B0%D0%B9%D0%BD#Mongolian)
+- **Украйн** — `ᠤᠻᠷᠠᠢᠨ` — “Ukraine (a country in Eastern Europe, bordering on the north shore of the…” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A3%D0%BA%D1%80%D0%B0%D0%B9%D0%BD#Mongolian)
 - **Улаангом** — `ᠤᠯᠠᠭᠠᠩᠭ᠋ᠣᠮ` — “Ulaangom (a city, the administrative center of Uvs Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A3%D0%BB%D0%B0%D0%B0%D0%BD%D0%B3%D0%BE%D0%BC#Mongolian)
 - **Улаанцав** — `ᠤᠯᠠᠭᠠᠨᠴᠠᠪ` — “Ulanqab (a city in the Inner Mongolia autonomous region, China)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A3%D0%BB%D0%B0%D0%B0%D0%BD%D1%86%D0%B0%D0%B2#Mongolian)
 - **Улиастай** — `ᠤᠯᠢᠶᠠᠰᠤᠲᠠᠢ` — “Uliastai (a city, the administrative center of Zavkhan Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A3%D0%BB%D0%B8%D0%B0%D1%81%D1%82%D0%B0%D0%B9#Mongolian)
@@ -1612,8 +1515,8 @@ Each needs a human decision (the stated reason says why the machine refused):
 - **Хөхнуур** — ⚠ `ᠬᠥᠬᠡ ᠨᠠᠭᠤᠷ` (contains a plain space (U+0020) — written-apart units need the NNBSP policy in data/ENCODING.md) — “Qinghai (a province in northwestern China)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A5%D3%A9%D1%85%D0%BD%D1%83%D1%83%D1%80#Mongolian)
 - **Цэцэрлэг** — `ᠴᠡᠴᠡᠷᠯᠢᠭ` — “Tsetserleg (a city, the administrative center of Arkhangai Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A6%D1%8D%D1%86%D1%8D%D1%80%D0%BB%D1%8D%D0%B3#Mongolian)
 - **Чех** — `ᠴᠧᠬᠣ᠋` — “Czechia (a country in Central Europe)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A7%D0%B5%D1%85#Mongolian)
-- **Чойбалсан** — `ᠴᠣᠶᠢᠪᠠᠯᠰᠠᠩ` — “a male given name” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A7%D0%BE%D0%B9%D0%B1%D0%B0%D0%BB%D1%81%D0%B0%D0%BD#Mongolian)
-- **Чойр** — `ᠴᠣᠶᠢᠷ` — “Choir (a city, the administrative center of Govisümber Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A7%D0%BE%D0%B9%D1%80#Mongolian)
+- **Чойбалсан** — `ᠴᠣᠢᠪᠠᠯᠰᠠᠩ` — “a male given name” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A7%D0%BE%D0%B9%D0%B1%D0%B0%D0%BB%D1%81%D0%B0%D0%BD#Mongolian)
+- **Чойр** — `ᠴᠣᠢᠷ` — “Choir (a city, the administrative center of Govisümber Province, Mongolia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A7%D0%BE%D0%B9%D1%80#Mongolian)
 - **Швед** — `ᠱᠸᠧᠳ᠋` — “Sweden (a country in Scandinavia in Northern Europe)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A8%D0%B2%D0%B5%D0%B4#Mongolian)
 - **Швейцари** — `ᠱᠸᠢᠼᠠᠷᠢ` — “nonstandard form of Швейцар (Švejcar, “Switzerland”)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A8%D0%B2%D0%B5%D0%B9%D1%86%D0%B0%D1%80%D0%B8#Mongolian)
 - **Шивэр** — `ᠱᠢᠪᠧᠷ` — “Siberia (the region of Russia in Asia)” — [Wiktionary](https://en.wiktionary.org/wiki/%D0%A8%D0%B8%D0%B2%D1%8D%D1%80#Mongolian)
@@ -1631,7 +1534,7 @@ These words have no Mongolian spelling on their Wiktionary headword line, but th
 - **авга** — etymology cites `ᠠᠪᠠᠭ᠎ᠠ` (_abaɣ-a_) — “synonym of авга ах (avga ax, “paternal uncle”)” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B2%D0%B3%D0%B0#Mongolian)
 - **агаар** — etymology cites `ᠠᠭᠤᠷ` (_aɣur_) — “air” — ≠ lexicon: `ᠠᠭᠠᠷ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B3%D0%B0%D0%B0%D1%80#Mongolian)
 - **агшин** — etymology cites `ᠭᠱᠠᠨ` (_ɣšan_) — “moment; instant” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B3%D1%88%D0%B8%D0%BD#Mongolian)
-- **аймаг** — etymology cites `ᠠᠶᠢᠮᠠᠭ` (_ayimaɣ, “tribe”_) — “tribe” — ≠ lexicon: `ᠠᠢᠮᠠᠭ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B9%D0%BC%D0%B0%D0%B3#Mongolian)
+- **аймаг** — etymology cites `ᠠᠢᠮᠠᠭ` (_ayimaɣ, “tribe”_) — “tribe” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%B9%D0%BC%D0%B0%D0%B3#Mongolian)
 - **алба** — etymology cites `ᠠᠯᠪᠠ` (_alba, “public affair”_) — “service, work, duty, job” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BB%D0%B1%D0%B0#Mongolian)
 - **албан** — etymology cites `ᠠᠯᠪᠠᠨ` (_alban, “public affair”_) — “ministerial, official” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BB%D0%B1%D0%B0%D0%BD#Mongolian)
 - **алт** — etymology cites `ᠠᠯᠲᠠ` (_alta_) — “gold” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%B0%D0%BB%D1%82#Mongolian)
@@ -1711,7 +1614,7 @@ These words have no Mongolian spelling on their Wiktionary headword line, but th
 - **нөхөр** — etymology cites `ᠨᠥᠬᠦᠷ` (_nökür_) — “companion” — ≠ lexicon: `ᠨᠥᠬᠥᠷ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BD%D3%A9%D1%85%D3%A9%D1%80#Mongolian)
 - **овог** — etymology cites `ᠣᠪᠤᠭ` (_obuɣ_) — “clan” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%B2%D0%BE%D0%B3#Mongolian)
 - **од** — etymology cites `ᠣᠳᠤᠨ` (_odun_) — “star” — ≠ lexicon: `ᠣᠳᠣ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%B4#Mongolian)
-- **ойрад** — etymology cites `ᠣᠶᠢᠷᠠᠳ` (_oyirad_) — “the Oirats (Mongolic people)” — not in lexicon yet — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%B9%D1%80%D0%B0%D0%B4#Mongolian)
+- **ойрад** — etymology cites `ᠣᠢᠷᠠᠳ` (_oyirad_) — “the Oirats (Mongolic people)” — not in lexicon yet — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%B9%D1%80%D0%B0%D0%B4#Mongolian)
 - **олон** — etymology cites `ᠣᠯᠠᠨ` (_olan_) — “many, much” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%BB%D0%BE%D0%BD#Mongolian)
 - **он** — etymology cites `ᠣᠨ` (_on, “year”_) — “year” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%BD#Mongolian)
 - **онгоц** — etymology cites `ᠣᠩᠭᠣᠴᠠᠰ` (_ongɣočas_) — “trough (container for watering or feeding animals)” — ≠ lexicon: `ᠣᠩᠭᠣᠴᠠ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D0%BD%D0%B3%D0%BE%D1%86#Mongolian)
@@ -1720,7 +1623,7 @@ These words have no Mongolian spelling on their Wiktionary headword line, but th
 - **орох** — etymology cites `ᠣᠷᠣᠬᠤ` (_oroqu_) — “to enter, to go in” — ≠ lexicon: `ᠤᠷᠤᠬᠤ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D1%80%D0%BE%D1%85#Mongolian)
 - **оршвой** — etymology cites `ᠣᠷᠣᠰᠢᠪᠠᠢ` (_orosibai_) — “archaic ambivalent terminative of орших (oršix)” — not in lexicon yet — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BE%D1%80%D1%88%D0%B2%D0%BE%D0%B9#Mongolian)
 - **пүрэв** — etymology cites `ᠹᠦᠷᠪᠦ` (_phürbü_) — “Thursday” — ≠ lexicon: `ᠫᠦᠷᠪᠦ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D0%BF%D2%AF%D1%80%D1%8D%D0%B2#Mongolian)
-- **сайд** — etymology cites `ᠰᠠᠶᠢᠳ` (_sayid, “minister”_) — “minister, secretary” — ≠ lexicon: `ᠰᠠᠢᠳ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%B0%D0%B9%D0%B4#Mongolian)
+- **сайд** — etymology cites `ᠰᠠᠢᠳ` (_sayid, “minister”_) — “minister, secretary” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%B0%D0%B9%D0%B4#Mongolian)
 - **сайхан** — etymology cites `ᠰᠠᠶ᠋ᠢᠬᠠᠨ` (_sayiqan_) — “beautiful, nice, handsome, pretty, fine” — ≠ lexicon: `ᠰᠠᠢᠬᠠᠨ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%B0%D0%B9%D1%85%D0%B0%D0%BD#Mongolian)
 - **сартуул** — etymology cites `ᠰᠠᠷᠲᠠᠭᠤᠯ` (_sartaɣul_) — “A subgroup of the Khalkha people, who lives in Western Mongolia” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%B0%D1%80%D1%82%D1%83%D1%83%D0%BB#Mongolian)
 - **сая** — etymology cites `ᠰᠠᠶ᠎ᠠ` (_say-a, “million”_) — “million” — ≠ lexicon: `ᠰᠠᠶ᠋ᠢ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%81%D0%B0%D1%8F#Mongolian)
@@ -1744,7 +1647,7 @@ These words have no Mongolian spelling on their Wiktionary headword line, but th
 - **угсаа** — etymology cites `ᠤᠭᠰᠠᠭ᠎ᠠ` (_uɣsaɣ-a, “royal family”_) — “ancestry, origin, descent” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%83%D0%B3%D1%81%D0%B0%D0%B0#Mongolian)
 - **улс** — etymology cites `ᠤᠯᠤᠰ᠋` (_ulus_) — “state, country, nation, polity, commonwealth” — ≠ lexicon: `ᠤᠯᠤᠰ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%83%D0%BB%D1%81#Mongolian)
 - **ус** — etymology cites `ᠤᠰᠤ` (_usu_) — “water” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%83%D1%81#Mongolian)
-- **уул** — etymology cites `ᠠᠭᠤᠯᠠ` (_aɣula_) — “mountain” — ≠ lexicon: `ᠤᠤᠯ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%83%D1%83%D0%BB#Mongolian)
+- **уул** — etymology cites `ᠠᠭᠤᠯᠠ` (_aɣula_) — “mountain” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%83%D1%83%D0%BB#Mongolian)
 - **хаан** — etymology cites `ᠬᠠᠭᠠᠨ` (_qaɣan_) — “royal or imperial khan; king; monarch ; sovereign ; emperor” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%B0%D0%BD#Mongolian)
 - **хамаг** — etymology cites `ᠬᠠᠮᠤᠭ` (_qamuɣ_) — “all” — = lexicon (code points identical) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D0%BC%D0%B0%D0%B3#Mongolian)
 - **хас** — etymology cites `ᠬᠠᠰ᠋` (_qas_) — “alternative form of хаш (xaš, “jade”)” — ≠ lexicon: `ᠬᠠᠰ` (wmk-import) — [Wiktionary](https://en.wiktionary.org/wiki/%D1%85%D0%B0%D1%81#Mongolian)

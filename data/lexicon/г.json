@@ -4347,16 +4347,10 @@
       {
         "traditional": "ᠭᠡᠢᠭᠡᠬᠦ",
         "latin": "giigeh",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠭᠡᠶᠢᠭᠡᠬᠦ",
-        "latin": "geyigekü",
         "sense": "To become bright",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -4377,16 +4371,10 @@
       {
         "traditional": "ᠭᠡᠢᠭᠦᠯᠬᠦ",
         "latin": "giiguuleh",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠭᠡᠶᠢᠭᠦᠯᠬᠦ",
-        "latin": "geyigülkü",
         "sense": "To enlighten, illuminate",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -12294,16 +12282,10 @@
       {
         "traditional": "ᠭᠢᠯᠠᠢᠯ᠎ᠠ",
         "latin": "gyalailaa",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠭᠢᠯᠠᠶᠢᠯ᠎ᠠ",
-        "latin": "ɣilayil-a",
         "sense": "thank you",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

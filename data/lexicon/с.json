@@ -15180,16 +15180,10 @@
       {
         "traditional": "ᠰᠡᠷᠭᠡᠢᠯᠡᠬᠦ",
         "latin": "sergiileh",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠰᠡᠷᠭᠡᠶᠢᠯᠡᠬᠦ",
-        "latin": "sergeyilekü",
         "sense": "to protect",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

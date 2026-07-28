@@ -10,8 +10,8 @@ Versioning follows [Semantic Versioning](https://semver.org/): while on `0.x`, d
 
 ## [Unreleased]
 
-The engine is untouched, but the lexicon is not: one data correction below
-changes converter output and so needs an npm patch release. Everything else
+The engine is untouched, but the lexicon is not: two data corrections below
+change converter output and so need an npm patch release. Everything else
 ships to khudam.suray.mn on merge.
 
 ### Changed
@@ -59,6 +59,14 @@ ships to khudam.suray.mn on merge.
   Collection is off unless `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` are set at build time; without them the converter hides the affordances and behaves exactly as before. Setup runbook: `supabase/README.md`.
 
 ### Fixed
+
+- Decision 001 is enforced instead of remembered. 47 candidate forms still spelled the diphthong coda as the ᠶᠢ digraph (U+1836 U+1822) and are now a single ᠢ, and 32 of them turned out to be duplicates of a spelling the entry already had — **нийгэм, найр, дайсан, айраг, нийслэл, сэргийлэх and 26 more were each carrying two candidates that differ by nothing a reader can see.** Those entries are single again, `corroborated: true`, and holding Wiktionary's real gloss rather than the `unlabeled` placeholder a phantom second candidate had forced on them.
+
+  They came back because the decision was a script that ran once: the Wiktionary tier imported the next day, wrote the digraph as Wiktionary writes it, and every reimported form registered as a *source disagreement* with our own corrected spelling. The verification queue ranks disagreements first, so 38 of the 300 questions on [khudam.suray.mn/queue](https://khudam.suray.mn/queue) — one in eight — were asking readers to choose between two identical-looking spellings of the same word. The review queue in `data/REVIEW.md` is down from 342 conflicts to 310, and the queue's question pool from 687 to 622.
+
+  The rule is now one function (`normalizeYiDigraph` in `scripts/lib.ts`) read by the fix script, the Wiktionary importer, and `validate.ts` — so CI rejects the digraph on any pull request, with the corrected form in the error message. It carries the two exceptions with it: a ᠶ opening a word is the glide of е/ё (ес → ᠶᠢᠰᠦ), and a ᠶ opening a written-apart suffix after NNBSP is Decision 002's glide (дэлхийн → ᠳᠡᠯᠡᠬᠡᠢ ᠶᠢᠨ). Re-running the old script without that second guard would have corrupted them, since Decision 002 was made the day after the script last ran. The 67 forms that still contain a ᠶᠢ now split cleanly: 14 are real glides the rule protects, and 53 are loanword artifacts like клуб → ᠺᠯᠤᠶᠢᠪ that no script may touch — out of scope and waiting for human rulings, as they have from the start.
+
+  ⚠️ Converter output changes for the 32 words that had a duplicate candidate: they now return one candidate instead of two. No API changes.
 
 - Community signals: one browser saying the same thing twice now files it once. Copying the same text again, reloading and re-reporting the same candidate, or re-sending an identical proposal produced a row indistinguishable from one already in the mailbox, and a reviewer learned nothing from reading it twice. A `BEFORE INSERT` trigger skips a row the same session has already filed, with a unique index over the whole content of a signal as the floor beneath it.
 

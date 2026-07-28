@@ -5890,16 +5890,10 @@
       {
         "traditional": "ᠡᠷᠡᠬᠡᠢᠪᠴᠢ",
         "latin": "erhiivch",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠡᠷᠡᠬᠡᠶᠢᠪᠴᠢ",
-        "latin": "erekeyibči",
         "sense": "thumb ring",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

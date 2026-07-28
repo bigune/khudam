@@ -81,6 +81,51 @@ export function normalizeCyrillic(raw: string): string {
   return raw.normalize("NFC").toLowerCase().trim().normalize("NFC");
 }
 
+/** NNBSP U+202F — joins a written-apart suffix to its stem. */
+export const NNBSP = " ";
+/** ᠶᠢ — the ya+i digraph Decision 001 rules out for a diphthong coda. */
+export const YI_DIGRAPH = "ᠶᠢ";
+/** ᠢ — the single i that spells that coda. */
+export const I_SINGLE = "ᠢ";
+
+/**
+ * Decision 001, as a function: drop the spurious ᠶ before ᠢ where Cyrillic й
+ * is a diphthong coda. See data/ENCODING.md for the rule and its evidence.
+ *
+ * Three conditions, each protecting a spelling that looks identical and is
+ * correct:
+ *   - the Cyrillic key must contain **й**. This is D1's safe scope. It keeps
+ *     the true word-initial glide of е/ё (ес → ᠶᠢᠰᠦ, ертөнц → ᠶᠢᠷᠲᠢᠨᠴᠦ) and the
+ *     loanword artifacts of the wmk converter (клуб → ᠺᠯᠤᠶᠢᠪ) out of reach of
+ *     any script — those need per-entry human rulings, not a rewrite rule.
+ *   - the ᠶ must not open the word, where it is that same glide.
+ *   - the ᠶ must not follow NNBSP, where it opens a written-apart suffix and
+ *     Decision 002 keeps it: дэлхийн → ᠳᠡᠯᠡᠬᠡᠢ ᠶᠢᠨ has й in the key and a
+ *     perfectly correct ᠶᠢᠨ.
+ *
+ * The scope is a heuristic and knows it: a key holding both я and й could
+ * still hide a real intervocalic glide. That is the price of never touching
+ * the 65 out-of-scope forms without a human, and it is the right way round.
+ *
+ * Whole-word lexicon forms only. Suffix rows in data/suffixes.json are stored
+ * without their NNBSP, so a bare ᠶᠢᠨ there is Decision 002's glide with no
+ * separator left to recognize it by — never run this over them.
+ */
+export function normalizeYiDigraph(cyrillic: string, traditional: string): string {
+  if (!cyrillic.includes("й") || !traditional.includes(YI_DIGRAPH)) return traditional;
+  let out = "";
+  for (let i = 0; i < traditional.length; i++) {
+    const opensUnit = i === 0 || traditional[i - 1] === NNBSP;
+    if (traditional.startsWith(YI_DIGRAPH, i) && !opensUnit) {
+      out += I_SINGLE;
+      i++; // the ᠢ of the digraph is what we just emitted
+      continue;
+    }
+    out += traditional[i];
+  }
+  return out;
+}
+
 /**
  * Deterministic Unicode code-point order (plain string comparison — correct
  * for our ranges, locale-independent). ё, ө, ү deliberately sort after я.

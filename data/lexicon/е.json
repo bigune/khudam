@@ -355,16 +355,10 @@
       {
         "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠢᠯᠡᠭᠴᠢ",
         "latin": "yerunhiilugch",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠶᠢᠯᠡᠭᠴᠢ",
-        "latin": "yerüngkeyilegči",
         "sense": "agentive participle in -гч (-gč) of ерөнхийлөх (jörönxiilöx)",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },
@@ -374,16 +368,10 @@
       {
         "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠢᠯᠡᠬᠦ",
         "latin": "yerunhiiluh",
-        "sense": "unlabeled",
-        "verified": false,
-        "source": "wmk-import"
-      },
-      {
-        "traditional": "ᠶᠡᠷᠦᠩᠬᠡᠶᠢᠯᠡᠬᠦ",
-        "latin": "yerüngkeyilekü",
         "sense": "To generalize",
         "verified": false,
-        "source": "wiktionary"
+        "source": "wiktionary",
+        "corroborated": true
       }
     ]
   },

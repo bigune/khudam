@@ -8,6 +8,10 @@
  * Behaviour:
  *   - every imported candidate is { verified: false, source: "wiktionary" } —
  *     machine imports are never marked verified;
+ *   - incoming whole-word forms pass through Decision 001 (data/ENCODING.md):
+ *     Wiktionary writes the diphthong coda as the ᠶᠢ digraph, so importing it
+ *     verbatim would file a conflict against our own corrected spelling of the
+ *     same word. Suffix rows are exempt — see mongolianForms;
  *   - when Wiktionary and an existing independent source agree on the
  *     identical (NFC) traditional form, the candidate stays single and gains
  *     corroborated: true; wmk-import candidates are also upgraded to
@@ -39,6 +43,7 @@ import {
   compareWords,
   loadLexicon,
   normalizeCyrillic,
+  normalizeYiDigraph,
   readSuffixesFile,
   writeEntriesFile,
   writeSuffixesFile,
@@ -158,13 +163,27 @@ const MONGOLIAN_CHAR_RE = /[᠀-᢯]/u;
  * headword-line template arguments (e.g. {{mn-proper noun|ᠪᠡᠯᠭᠦᠲᠡᠢ}}) — the
  * same semantic slot, just a template variant the extractor missed. All
  * NFC-normalized and range-validated.
+ *
+ * Pass `cyrillicKey` for whole-word forms and Decision 001 is applied on the
+ * way in: Wiktionary writes the diphthong coda as the ᠶᠢ digraph, and importing
+ * that verbatim files a conflict against our own corrected spelling of the same
+ * word — a disagreement about nothing, sent to readers to adjudicate. Omit the
+ * key for suffix rows, which are stored without their NNBSP and so give the
+ * rule no way to see that their ᠶ is Decision 002's glide.
  */
-function mongolianForms(line: RawLine, word: string): { valid: FormOut[]; invalid: InvalidForm[] } {
+function mongolianForms(
+  line: RawLine,
+  word: string,
+  cyrillicKey?: string,
+): { valid: FormOut[]; invalid: InvalidForm[] } {
   const valid: FormOut[] = [];
   const invalid: InvalidForm[] = [];
   const seen = new Set<string>();
   const push = (rawForm: string, roman?: string): void => {
-    const traditional = rawForm.normalize("NFC").trim().replace(/^-/u, "");
+    const cleaned = rawForm.normalize("NFC").trim().replace(/^-/u, "");
+    // Normalize before the dedup, so a headword offering both spellings of one
+    // word collapses to the single candidate it always was.
+    const traditional = cyrillicKey === undefined ? cleaned : normalizeYiDigraph(cyrillicKey, cleaned);
     if (!traditional || seen.has(traditional)) return;
     seen.add(traditional);
     if (!TRADITIONAL_RE.test(traditional)) {
@@ -196,13 +215,20 @@ function mongolianForms(line: RawLine, word: string): { valid: FormOut[]; invali
  * cmg count: other ancestor scripts (notably Manchu) share the same Unicode
  * block, so matching on characters alone would import the wrong language.
  */
-function classicalEtymons(line: RawLine, gloss: string | undefined): EtymologySuggestion[] {
+function classicalEtymons(
+  line: RawLine,
+  gloss: string | undefined,
+  cyrillicKey: string,
+): EtymologySuggestion[] {
   const out: EtymologySuggestion[] = [];
   for (const t of line.etymology_templates ?? []) {
     const args = t.args ?? {};
     const etymon = args["3"];
     if (args["2"] !== "cmg" || typeof etymon !== "string") continue;
-    const traditional = etymon.normalize("NFC").trim();
+    // Decision 001 too: these are whole-word spellings a reviewer may adopt
+    // into the lexicon, and queueing one in the digraph would queue a form
+    // that cannot pass validation.
+    const traditional = normalizeYiDigraph(cyrillicKey, etymon.normalize("NFC").trim());
     if (!traditional || !MONGOLIAN_CHAR_RE.test(traditional)) continue;
     if (out.some((s) => s.traditional === traditional)) continue;
     const s: EtymologySuggestion = { traditional };
@@ -227,9 +253,9 @@ export function extractLine(line: RawLine): Extracted {
   if (!CYRILLIC_WORD_RE.test(key)) {
     return { kind: "skip", reason: /[а-яёүө]/u.test(key) ? "multi-word" : "non-cyrillic" };
   }
-  const { valid, invalid } = mongolianForms(line, rawWord);
+  const { valid, invalid } = mongolianForms(line, rawWord, line.pos === "suffix" ? undefined : key);
   const sense = firstGloss(line);
-  const suggestions = line.pos === "name" || line.pos === "suffix" ? [] : classicalEtymons(line, sense);
+  const suggestions = line.pos === "name" || line.pos === "suffix" ? [] : classicalEtymons(line, sense, key);
   if (valid.length === 0 && invalid.length === 0 && suggestions.length === 0) {
     return { kind: "skip", reason: "no-mongolian-form" };
   }
@@ -323,7 +349,13 @@ export function mergeWord(lexicon: Map<string, Entry>, key: string, drafts: Draf
       }
       if (existing.source === "wmk-import") existing.source = "wiktionary";
       if (existing.latin === undefined && d.latin !== undefined) existing.latin = d.latin;
-      if (existing.sense === undefined && d.sense !== undefined) existing.sense = d.sense;
+      // "unlabeled" is not a meaning, it is the placeholder a previous merge
+      // stamped on to satisfy the multi-candidate schema rule. A real gloss
+      // always beats it — otherwise a candidate that stops being ambiguous
+      // keeps the scar of having once been.
+      if ((existing.sense === undefined || existing.sense === UNLABELED_SENSE) && d.sense !== undefined) {
+        existing.sense = d.sense;
+      }
     } else {
       // Growing an entry to 2+ candidates forces a sense on every candidate.
       // We may label an unverified one "unlabeled", but a verified candidate
