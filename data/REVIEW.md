@@ -1791,3 +1791,28 @@ These words have no Mongolian spelling on their Wiktionary headword line, but th
 Wiktionary-sourced rows in [suffixes.json](suffixes.json) (`"source": "wiktionary"`) are unverified and carry no `attach`/`gender` conditions, so the suffix engine applies them unconditionally — reviewers should add conditions from the Nadmid 1990 rulebook (see GRAMMAR.md) and verify or remove each row.
 
 <!-- wiktionary-import:end -->
+
+<!-- community-signals:begin (auto-generated, do not edit between markers) -->
+
+## Community signals (`scripts/aggregate-signals.ts`)
+
+Хөрвүүлэгчээс ирсэн дохио — баталгаа биш, хаана харахыг заасан дараалал. Reports filed from the converter, through 2026-07-28. A signal is not verification: it says where to look, and every change below is a human decision. Counts are distinct browser sessions — the mailbox drops a repeat from the same browser, so two sessions means two people said the same thing. To dismiss a report, delete its object from [stats/reports.json](stats/reports.json); if the signal is real it will be filed again.
+
+### Spellings reported wrong (0)
+
+Nothing open. 🎉
+
+### Meanings reported missing (1)
+
+The stored spelling is fine; the meaning the visitor wanted is not listed. The fix is an added candidate, never a replaced one — and because the schema requires a `sense` once an entry has two candidates, the existing candidate needs a label too.
+
+- **уул** — 1 session — [Wiktionary](https://en.wiktionary.org/wiki/%D1%83%D1%83%D0%BB#Mongolian)
+  - reported: `ᠤᠤᠯ` (_uul_) — wmk-import — _no sense_
+  - **proposed spelling**: `ᠠᠭᠤᠯᠠ`
+  - **proposed meaning**: “mountain”
+
+### Words the lexicon does not know (0)
+
+Nothing open. 🎉
+
+<!-- community-signals:end -->
