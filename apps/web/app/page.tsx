@@ -296,7 +296,7 @@ export default function Home() {
                         <div className="word-card-foot">
                           <button
                             className="card-action"
-                            aria-label={`${token.input} — хайсан утга минь жагсаалтад алга`}
+                            aria-label={`${token.input} — хайсан салаа утга минь жагсаалтад алга`}
                             onClick={() => {
                               const picked = chosen(token, index)!;
                               setReport({
