@@ -12,8 +12,6 @@ export type CompactSuffix = [
   attach: "" | "vowel" | "consonant",
   gender: "" | "masculine" | "feminine",
   verified: 0 | 1,
-  /** 1 when the suffix is written together with the stem, with no NNBSP. */
-  joined: 0 | 1,
 ];
 
 /** NNBSP U+202F joins written-apart suffixes to their stem (data/GRAMMAR.md G1). */
@@ -168,7 +166,7 @@ export function decomposeWord(word: string): Candidate[] {
     for (const stem of stemsFor(split.base)) {
       for (const rows of variants(split.suffixes, stem.traditional, suffixTable)) {
         let composed = stem.traditional;
-        for (const row of rows) composed += (row[7] === 1 ? "" : NNBSP) + row[1];
+        for (const [, traditional] of rows) composed += NNBSP + traditional;
         if (seen.has(composed)) continue;
         seen.add(composed);
         const candidate: Candidate = {

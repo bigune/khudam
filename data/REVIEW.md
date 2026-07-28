@@ -455,6 +455,61 @@ in suffix-initial and intervocalic position; see ENCODING.md Decision 002
 (pinned by code-point tests). Reviewers checking these rows should read that
 decision first.
 
+## Open encoding question: word-final ᠢ (U+1822) or ᠶ (U+1836)? — 1,372 candidates
+
+**Not a decision. This needs a maintainer ruling in [ENCODING.md](ENCODING.md), and
+until it has one nothing has been changed.**
+
+Forms supplied from **mongoltoli.mn** (maintainer, 2026-07-28) spell the privative's
+final letter as **ᠶ U+1836**, where every one of ours uses **ᠢ U+1822**:
+
+| Word | mongoltoli.mn | final letter | ours |
+| --- | --- | --- | --- |
+| номгүй | `ᠨᠣᠮ ᠦᠭᠡᠶ` | U+1836 | `ᠦᠭᠡᠢ` U+1822 |
+| усгүй | `ᠤᠰᠤ ᠦᠭᠡᠶ` | U+1836 | — |
+| төсөргүй | `ᠲᠥᠰᠦᠷ ᠦᠭᠡᠶ` | U+1836 | — |
+| хичээнгүй | `ᠬᠢᠴᠢᠶᠡᠩᠭᠦᠶ` | U+1836 | `ᠬᠢᠴᠢᠶᠡᠩᠭᠦᠢ` U+1822 |
+
+Four for four, so it is a convention rather than a slip. **The scope is far wider
+than one suffix:**
+
+- **1,372 lexicon candidates** end in vowel + ᠢ (аатай `ᠠᠭᠠᠲᠠᠢ`, аанай `ᠠᠨᠠᠢ`, …).
+  Exactly **1** ends in vowel + ᠶ.
+- **8 suffix rows**, including the comitative `ᠲᠠᠢ`/`ᠲᠡᠢ` — which
+  [ENCODING.md](ENCODING.md) Decision 002 states outright ends "in a single ᠢ, never
+  ᠶᠢ", pinned by code-point tests.
+
+So a ruling here revises Decisions 001 and 002 rather than sitting beside them.
+Note the question is **narrower than Decision 001**: that one removed the *digraph*
+ᠶᠢ (U+1836 U+1822) in medial position, citing UTN #57's [D] Devsger condition. This
+is about which **single** letter spells a **word-final** postvocalic i — a position
+Decision 001 never examined, so the two are not necessarily in conflict.
+
+What a ruling needs, and what this repo cannot supply on its own:
+
+1. What UTN #57 Table 4 lists for the **final** written form — under *i* (U+1822),
+   under *y* (U+1836), or both.
+2. Whether mongoltoli.mn's convention is the modern standard or one house style.
+3. Whether it applies to every word-final postvocalic i (all 1,372) or only after
+   certain vowels.
+
+If adopted it is a mechanical sweep like Decision 001 — one script, one patch
+release — but it must be decided at code-point level first. Хүн шийдэх ёстой.
+
+### Two lexicon entries mongoltoli.mn contradicts
+
+Separate from the letter question, and unblocked by it:
+
+- **төсөргүй** is stored `ᠲᠥᠰᠥᠷᠭᠦᠢ` (joined); mongoltoli gives `ᠲᠥᠰᠦᠷ ᠦᠭᠡᠶ` (apart).
+  The stem also differs in its second vowel — ours `ᠲᠥᠰᠥᠷ` (U+1825), theirs `ᠲᠥᠰᠦᠷ`
+  (U+1826). Both are seed forms and both look wrong.
+- **ааггүй** is stored `ᠠᠭᠠᠭᠦᠭᠡᠢ` (joined); two converters and the G14 rule agree it
+  is written apart.
+
+Under G14 the rule already produces the apart form for both; these entries override
+it only because an exact lexicon match outranks decomposition. Correcting or
+removing them is a data change for a human.
+
 ## Pattern flag: MVS + NIRUGU final vowel — Decision 003 candidate (1,113 entries)
 
 Found 2026-07-27 while investigating батга. The wmk seed encodes the detached

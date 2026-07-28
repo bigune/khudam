@@ -38,7 +38,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { decomposeWord, lookupWord } from "../packages/converter/src/index.ts";
-import { REPO_ROOT, SUFFIXES_FILE, readSuffixesFile } from "./lib.ts";
+import { REPO_ROOT } from "./lib.ts";
 
 const CACHE_FILE = join(REPO_ROOT, ".cache", "kaikki.org-dictionary-Mongolian.jsonl");
 const NNBSP = " ";
@@ -113,29 +113,27 @@ export function readTestSet(dump: string): Row[] {
   return rows;
 }
 
-/** Traditional forms of suffixes written together with the stem. Needed to read
- *  a composed candidate: most suffixes are preceded by NNBSP and so can be found
- *  by splitting, but a joined one (the privative after a vowel stem, G14) leaves
- *  no separator at all — ᠠᠭᠠᠯᠢᠭᠦᠢ is one run of letters. */
-const JOINED_SUFFIXES = readSuffixesFile(SUFFIXES_FILE)
-  .filter((s) => s.joined === true)
-  .map((s) => s.traditional);
-
-/** Did decomposition find this form's actual lemma, or some other stem? */
+/**
+ * Did decomposition find this form's actual lemma, or some other stem?
+ *
+ * A candidate is credited to the lemma when it *starts with* one of the lemma's
+ * traditional forms and a suffix boundary follows. Matching the first
+ * NNBSP-separated unit instead would be wrong for lemmas that are themselves
+ * written in several units — манайх is ᠮᠠᠨ ᠤ ᠬᠢ, whose first unit is only ᠮᠠᠨ.
+ *
+ * Every suffix is written apart (G1), which is what makes the boundary test
+ * sound. That assumption once broke this harness: a briefly shipped joined form
+ * of the privative had no separator, so every correct answer scored as a wrong
+ * stem and a good change looked like a regression. If a genuinely joined suffix
+ * is ever added, this is the code that has to learn about it.
+ */
 export function judge(row: Row): "unresolved" | "correct" | "wrong-stem" {
   const composed = decomposeWord(row.form);
   if (composed.length === 0) return "unresolved";
   const lemmaForms = lookupWord(row.lemma).map((c) => c.traditional);
-  const startsWithLemma = (candidate: string): boolean =>
-    lemmaForms.some(
-      (lemma) =>
-        candidate === lemma ||
-        candidate.startsWith(lemma + NNBSP) ||
-        // A joined suffix must follow immediately; a bare prefix match would
-        // credit ᠨᠣᠮᠣᠬᠠᠨ ᠦᠨ to the lemma ᠨᠣᠮ.
-        JOINED_SUFFIXES.some((j) => candidate.startsWith(lemma + j)),
-    );
-  return composed.some((c) => startsWithLemma(c.traditional)) ? "correct" : "wrong-stem";
+  const creditsLemma = (candidate: string): boolean =>
+    lemmaForms.some((lemma) => candidate === lemma || candidate.startsWith(lemma + NNBSP));
+  return composed.some((c) => creditsLemma(c.traditional)) ? "correct" : "wrong-stem";
 }
 
 function pct(a: number, b: number): string {

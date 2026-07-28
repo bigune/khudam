@@ -102,25 +102,21 @@ describe("decomposeWord", () => {
     expect(decomposeWord("ааггүй").map((c) => c.traditional)).toContain(`ᠠᠭᠠᠭ${NNBSP}ᠦᠭᠡᠢ`);
   });
 
-  test("privative after a vowel-final stem is the JOINED ᠭᠦᠢ, no NNBSP (G14)", () => {
-    // The condition reads the traditional stem, not the Cyrillic surface:
-    // ааль and ус both end in a consonant in Cyrillic, ᠠᠭᠠᠯᠢ and ᠤᠰᠤ do not.
-    for (const [word, expected] of [
-      ["аальгүй", "ᠠᠭᠠᠯᠢᠭᠦᠢ"],
-      ["ашгүй", "ᠠᠰᠢᠭᠦᠢ"],
-      ["усгүй", "ᠤᠰᠤᠭᠦᠢ"],
-    ] as const) {
-      const forms = decomposeWord(word).map((c) => c.traditional);
-      expect(forms).toContain(expected);
-      for (const f of forms) expect(f.includes(NNBSP)).toBeFalse();
-    }
+  test("privative is written apart after a vowel-final stem too (G14)", () => {
+    // mongoltoli.mn writes ус as ᠤᠰᠤ ᠦᠭᠡᠶ — vowel-final and still apart, which
+    // is why the rule carries no attach condition.
+    expect(decomposeWord("усгүй").map((c) => c.traditional)).toContain(`ᠤᠰᠤ${NNBSP}ᠦᠭᠡᠢ`);
   });
 
-  test("the joined privative reproduces the seed's own spelling exactly", () => {
-    // Independent corroboration: the rule and the wmk bootstrap, which never
-    // saw each other, land on the same code points for аальгүй.
-    const [composed] = decomposeWord("аальгүй");
-    expect(composed.traditional).toBe(lookupWord("аальгүй")[0].traditional);
+  test("lexicalized privatives come from the lexicon, not the rule (G14)", () => {
+    // аальгүй "improper" and хичээнгүй "diligent" are written joined because
+    // they are words, not compositions. An exact match keeps the rule out.
+    for (const word of ["аальгүй", "хичээнгүй"]) {
+      const [entry] = lookupWord(word);
+      expect(entry).toBeDefined();
+      expect(entry.traditional.includes(NNBSP)).toBeFalse();
+      expect(convertText(word)[0].candidates[0].source).not.toBe("suffix-rule");
+    }
   });
 
   test("privative sits between plural and possessive (G14)", () => {
