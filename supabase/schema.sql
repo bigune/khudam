@@ -29,14 +29,13 @@ create table if not exists public.signals (
   created_at    timestamptz not null default now(),
 
   -- Which surface produced the signal. 'queue' is Phase B.
-  context       text not null check (context in ('converter', 'queue')),
+  context       text not null,
 
   -- selection : implicit "this is the candidate I meant" (copy/export)
   -- flag      : explicit "something is wrong here"
-  -- proposal  : a typed traditional form (Phase A2)
+  -- proposal  : a spelling or meaning the contributor typed
   -- verdict   : queue yes/no answer (Phase B)
-  signal_type   text not null check (signal_type in
-                  ('selection', 'flag', 'proposal', 'verdict')),
+  signal_type   text not null,
 
   -- Candidate anchor. `cyrillic` is NFC, lowercase, as normalized by the
   -- engine; for a composed suffix candidate it is the full inflected surface
@@ -49,8 +48,13 @@ create table if not exists public.signals (
   -- rows, where it records which branch of the wrong-spelling vs
   -- different-meaning question the contributor chose -- that answer is the
   -- whole point of asking, and it needs no column of its own.
-  proposal_kind text check (proposal_kind in
-                  ('correction', 'missing_sense', 'new_word')),
+  proposal_kind text,
+
+  -- What a contributor typed. `proposal_traditional` is a spelling they say
+  -- is right; `proposal_sense` is a meaning they say is missing. Neither is
+  -- data -- both are things for a reviewer to check. They are independent:
+  -- someone may know the meaning that is missing without knowing how it is
+  -- written, and that is still a useful thing to be told.
   proposal_traditional text,
   proposal_sense       text,
 
@@ -63,49 +67,112 @@ create table if not exists public.signals (
 
   -- Random per-browser UUID. Dedup and rate-capping only -- not an account,
   -- not PII, never resolved to a person.
-  session_id    uuid not null,
-
-  -- Length caps. Generous enough for real words, tight enough that the
-  -- mailbox cannot be used as free storage.
-  constraint signals_cyrillic_len    check (char_length(cyrillic) between 1 and 64),
-  constraint signals_traditional_len check (char_length(traditional) <= 128),
-  constraint signals_sense_len       check (char_length(sense) <= 200),
-  constraint signals_proposal_traditional_len
-                                     check (char_length(proposal_traditional) <= 128),
-  constraint signals_proposal_sense_len
-                                     check (char_length(proposal_sense) <= 200),
-  constraint signals_question_id_len check (char_length(question_id) <= 64),
-
-  -- Code-point validation, mirroring the client-side check in
-  -- apps/web/lib/signals.ts and the validator in scripts/validate.ts.
-  -- Correctness of a traditional spelling cannot be judged visually or
-  -- mechanically, but garbage can be rejected by code point: the Mongolian
-  -- block U+1800-U+18AF (which already contains FVS1-3 and MVS) plus NNBSP
-  -- U+202F, which joins a suffix to its stem.
-  --
-  -- Deliberately written with Postgres U&'' Unicode-escape literals rather
-  -- than the characters themselves. Two reasons: a literal range inside a
-  -- bracket expression is documented as collation-dependent, and NNBSP is
-  -- invisible -- a maintainer pasting this file through an editor that
-  -- normalizes whitespace would silently break every suffix candidate.
-  -- Escapes keep the whole file pure ASCII.
-  --
-  -- Cyrillic: a-ya (U+0430-U+044F) plus yo (U+0451), u (U+04AF), o (U+04E9).
-  constraint signals_cyrillic_charset check (
-    cyrillic ~ U&'^[\0430-\044F\0451\04AF\04E9]+$'
-  ),
-  constraint signals_traditional_charset check (
-    traditional is null or
-    traditional ~ U&'^[\1800-\18AF\202F]+$'
-  ),
-  constraint signals_proposal_traditional_charset check (
-    proposal_traditional is null or
-    proposal_traditional ~ U&'^[\1800-\18AF\202F]+$'
-  )
+  session_id    uuid not null
 );
 
 comment on table public.signals is
   'Disposable community-signal mailbox. Drained weekly into a PR; git is the database of record.';
+
+-- ---------------------------------------------------------------------------
+-- Constraints
+-- ---------------------------------------------------------------------------
+
+-- Kept out of the create table above so that re-running this file actually
+-- re-applies them. `create table if not exists` is a no-op once the table
+-- exists, which would silently skip every constraint added or tightened after
+-- the first apply -- exactly the sort of quiet drift that is only discovered
+-- by a weekly export choking on data the schema was supposed to reject.
+-- Dropping by name and re-adding converges a fresh project and a live one to
+-- the same state, and existing rows that violate a new rule fail loudly here.
+--
+-- The names match what Postgres generates for an inline column check, so a
+-- project created from an earlier version of this file is picked up cleanly.
+
+-- Enumerations.
+alter table public.signals drop constraint if exists signals_context_check;
+alter table public.signals add  constraint signals_context_check
+  check (context in ('converter', 'queue'));
+
+alter table public.signals drop constraint if exists signals_signal_type_check;
+alter table public.signals add  constraint signals_signal_type_check
+  check (signal_type in ('selection', 'flag', 'proposal', 'verdict'));
+
+alter table public.signals drop constraint if exists signals_proposal_kind_check;
+alter table public.signals add  constraint signals_proposal_kind_check
+  check (proposal_kind in ('correction', 'missing_sense', 'new_word'));
+
+-- Length caps. Generous enough for real words, tight enough that the mailbox
+-- cannot be used as free storage.
+alter table public.signals drop constraint if exists signals_cyrillic_len;
+alter table public.signals add  constraint signals_cyrillic_len
+  check (char_length(cyrillic) between 1 and 64);
+
+alter table public.signals drop constraint if exists signals_traditional_len;
+alter table public.signals add  constraint signals_traditional_len
+  check (char_length(traditional) <= 128);
+
+alter table public.signals drop constraint if exists signals_sense_len;
+alter table public.signals add  constraint signals_sense_len
+  check (char_length(sense) <= 200);
+
+alter table public.signals drop constraint if exists signals_proposal_traditional_len;
+alter table public.signals add  constraint signals_proposal_traditional_len
+  check (char_length(proposal_traditional) <= 128);
+
+alter table public.signals drop constraint if exists signals_proposal_sense_len;
+alter table public.signals add  constraint signals_proposal_sense_len
+  check (char_length(proposal_sense) <= 200);
+
+alter table public.signals drop constraint if exists signals_question_id_len;
+alter table public.signals add  constraint signals_question_id_len
+  check (char_length(question_id) <= 64);
+
+-- Code-point validation, mirroring the client-side checks in
+-- apps/web/lib/signals.ts and the validator in scripts/validate.ts.
+-- Correctness of a traditional spelling cannot be judged visually or
+-- mechanically -- that is the reviewer's job -- but garbage can be rejected by
+-- code point: the Mongolian block U+1800-U+18AF (which already contains
+-- FVS1-3 and MVS) plus NNBSP U+202F, which joins a suffix to its stem.
+--
+-- Deliberately written with Postgres U&'' Unicode-escape literals rather than
+-- the characters themselves. Two reasons: a literal range inside a bracket
+-- expression is documented as collation-dependent, and NNBSP is invisible --
+-- a maintainer pasting this file through an editor that normalizes whitespace
+-- would silently break every suffix candidate. Escapes keep the file ASCII.
+--
+-- Cyrillic: a-ya (U+0430-U+044F) plus yo (U+0451), u (U+04AF), o (U+04E9).
+alter table public.signals drop constraint if exists signals_cyrillic_charset;
+alter table public.signals add  constraint signals_cyrillic_charset
+  check (cyrillic ~ U&'^[\0430-\044F\0451\04AF\04E9]+$');
+
+alter table public.signals drop constraint if exists signals_traditional_charset;
+alter table public.signals add  constraint signals_traditional_charset
+  check (traditional is null or traditional ~ U&'^[\1800-\18AF\202F]+$');
+
+alter table public.signals drop constraint if exists signals_proposal_traditional_charset;
+alter table public.signals add  constraint signals_proposal_traditional_charset
+  check (proposal_traditional is null or
+         proposal_traditional ~ U&'^[\1800-\18AF\202F]+$');
+
+-- A meaning label is free text in whichever script the contributor thinks in
+-- -- Mongolian or English, both readable by a reviewer -- so it cannot be
+-- restricted by charset. What it can be is non-blank and free of control
+-- characters, which only ever arrive from a paste. [[:cntrl:]] is preferred
+-- over a U&'' range here for the collation reason above: a named class is not
+-- collation-dependent, a range of code points is.
+alter table public.signals drop constraint if exists signals_proposal_sense_clean;
+alter table public.signals add  constraint signals_proposal_sense_clean
+  check (proposal_sense is null or
+         (btrim(proposal_sense) <> '' and proposal_sense !~ '[[:cntrl:]]'));
+
+-- A proposal has to propose something. Either half is enough on its own:
+-- "the meaning X is missing" is worth filing even by someone who does not know
+-- how X is written.
+alter table public.signals drop constraint if exists signals_proposal_shape;
+alter table public.signals add  constraint signals_proposal_shape
+  check (signal_type <> 'proposal' or
+         (proposal_kind is not null and
+          (proposal_traditional is not null or proposal_sense is not null)));
 
 -- The export job pulls by watermark and deletes what it took.
 create index if not exists signals_created_at_idx
@@ -144,6 +211,24 @@ begin
   if recent >= 500 then
     raise exception 'khudam: signal rate limit reached for this session'
       using errcode = 'check_violation';
+  end if;
+
+  -- Free text gets a much tighter cap than clicks. Selections and flags are
+  -- bounded by how fast a person can convert and read; a proposal carries
+  -- text a reviewer has to read, so it is the expensive row and the one worth
+  -- flooding. Fifty an hour is far more than any real contributor produces
+  -- and far less than a script would.
+  if new.signal_type = 'proposal' then
+    select count(*) into recent
+      from public.signals
+     where session_id = new.session_id
+       and signal_type = 'proposal'
+       and created_at > now() - interval '1 hour';
+
+    if recent >= 50 then
+      raise exception 'khudam: proposal rate limit reached for this session'
+        using errcode = 'check_violation';
+    end if;
   end if;
 
   return new;

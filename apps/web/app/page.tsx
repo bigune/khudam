@@ -3,8 +3,13 @@
 import { convertText, LEXICON_ENTRY_COUNT } from "khudam";
 import type { Candidate, Token } from "khudam";
 import { useMemo, useState } from "react";
-import { displaySense, recordSelections, signalsEnabled } from "../lib/signals";
-import { FlagDialog, type FlagTarget } from "./flag-dialog";
+import {
+  displaySense,
+  isLexiconCandidate,
+  recordSelections,
+  signalsEnabled,
+} from "../lib/signals";
+import { ReportDialog, type ReportTarget } from "./report-dialog";
 
 const SAMPLES = ["монгол бичиг", "сайн байна уу", "уул ус"];
 
@@ -20,8 +25,14 @@ function badgeOf(c: Candidate): { className: string; label: string } {
     return { className: "badge fallback", label: "галиг · таамаг" };
   if (c.source === "suffix-rule")
     return c.verified
-      ? { className: "badge verified", label: "үндэс + нөхцөл · баталгаажсан ✓" }
-      : { className: "badge unverified", label: "үндэс + нөхцөл · баталгаажаагүй" };
+      ? {
+          className: "badge verified",
+          label: "үндэс + нөхцөл · баталгаажсан ✓",
+        }
+      : {
+          className: "badge unverified",
+          label: "үндэс + нөхцөл · баталгаажаагүй",
+        };
   if (c.verified)
     return { className: "badge verified", label: "баталгаажсан ✓" };
   return { className: "badge unverified", label: "баталгаажаагүй" };
@@ -32,7 +43,7 @@ export default function Home() {
   const [picks, setPicks] = useState<Record<number, number>>({});
   const [copied, setCopied] = useState(false);
   const [copyFailed, setCopyFailed] = useState(false);
-  const [flagTarget, setFlagTarget] = useState<FlagTarget | null>(null);
+  const [report, setReport] = useState<ReportTarget | null>(null);
 
   const tokens = useMemo(() => convertText(text), [text]);
 
@@ -183,7 +194,7 @@ export default function Home() {
                 {hasAmbiguous &&
                   "Доогуур зураастай үг олон хувилбартай — доороос сонгоно уу. "}
                 {hasFallback &&
-                  "Шар үг толь бичигт байхгүй тул галиглаж бичив — алдаатай байж болно."}
+                  "Шар үг толь бичигт байхгүй тул дүрмийн дагуу галиглаж бичив — алдаатай байж болно."}
               </p>
             )}
           </div>
@@ -200,49 +211,106 @@ export default function Home() {
                   <span className="sentence-num">{si + 1}</span>
                 )}
                 {sentence.map(({ token, index }) => (
-                <div className="word-card" key={index}>
-                  <span className="word-input">{token.input}</span>
-                  <div className="chips">
-                    {token.candidates.map((c, ci) => {
-                      const badge = badgeOf(c);
-                      const isPicked = (picks[index] ?? 0) === ci;
-                      return (
-                        <div className="chip-wrap" key={ci}>
-                          <button
-                            className={isPicked ? "chip picked" : "chip"}
-                            onClick={() => pick(index, ci)}
-                          >
-                            <span className="chip-trad mongolian" lang="mn-Mong">
-                              {c.traditional}
-                            </span>
-                            <span className="chip-meta">
-                              {c.latin && (
-                                <span className="latin">{c.latin}</span>
-                              )}
-                              {displaySense(c) && (
-                                <span className="sense">{displaySense(c)}</span>
-                              )}
-                              <span className={badge.className}>
-                                {badge.label}
-                              </span>
-                            </span>
-                          </button>
-                          {signalsEnabled && (
+                  <div className="word-card" key={index}>
+                    <span className="word-input">{token.input}</span>
+                    <div className="chips">
+                      {token.candidates.map((c, ci) => {
+                        const badge = badgeOf(c);
+                        const isPicked = (picks[index] ?? 0) === ci;
+                        return (
+                          <div className="chip-wrap" key={ci}>
                             <button
-                              className="chip-flag"
-                              aria-label={`${token.input} — энэ хувилбарын алдааг мэдэгдэх`}
-                              onClick={() =>
-                                setFlagTarget({ input: token.input, candidate: c })
-                              }
+                              className={isPicked ? "chip picked" : "chip"}
+                              onClick={() => pick(index, ci)}
                             >
-                              ⚑ алдаа
+                              <span
+                                className="chip-trad mongolian"
+                                lang="mn-Mong"
+                              >
+                                {c.traditional}
+                              </span>
+                              <span className="chip-meta">
+                                {c.latin && (
+                                  <span className="latin">{c.latin}</span>
+                                )}
+                                {displaySense(c) && (
+                                  <span className="sense">
+                                    {displaySense(c)}
+                                  </span>
+                                )}
+                                <span className={badge.className}>
+                                  {badge.label}
+                                </span>
+                              </span>
                             </button>
-                          )}
+                            {signalsEnabled &&
+                              // A fallback candidate is a guess we already
+                              // labelled as one, so "is this wrong?" is the
+                              // wrong question — the useful one is whether the
+                              // reader knows the real spelling.
+                              (c.source === "fallback" ? (
+                                <button
+                                  className="card-action"
+                                  aria-label={`${token.input} — зөв зурлагыг нь санал болгох`}
+                                  onClick={() =>
+                                    setReport({
+                                      door: "unknown_word",
+                                      input: token.input,
+                                      candidate: c,
+                                    })
+                                  }
+                                >
+                                  ✎ зөв зурлага
+                                </button>
+                              ) : (
+                                <button
+                                  className="card-action"
+                                  aria-label={`${token.input} — энэ хувилбарын алдааг мэдэгдэх`}
+                                  onClick={() =>
+                                    setReport({
+                                      door: "flag",
+                                      input: token.input,
+                                      candidate: c,
+                                    })
+                                  }
+                                >
+                                  ⚑ алдаа
+                                </button>
+                              ))}
+                          </div>
+                        );
+                      })}
+                    </div>
+                    {/* The completeness door: a meaning missing from the entry
+                      is invisible in a candidate list, so it needs its own
+                      affordance. It sits below a rule because its scope is the
+                      whole word, not the candidate above it — but it is the
+                      same kind of button, so it looks like one. Only offered
+                      where there is a lexicon entry to add a sense to; composed
+                      and fallback candidates are machine output with one
+                      meaning each. */}
+                    {signalsEnabled &&
+                      token.candidates.some(isLexiconCandidate) && (
+                        <div className="word-card-foot">
+                          <button
+                            className="card-action"
+                            aria-label={`${token.input} — хайсан утга минь жагсаалтад алга`}
+                            onClick={() => {
+                              const picked = chosen(token, index)!;
+                              setReport({
+                                door: "missing_sense",
+                                input: token.input,
+                                candidate: isLexiconCandidate(picked)
+                                  ? picked
+                                  : token.candidates.find(isLexiconCandidate)!,
+                              });
+                            }}
+                          >
+                            ⊕ утга дутуу
+                          </button>
                         </div>
-                      );
-                    })}
+                      )}
                   </div>
-                </div>
                 ))}
               </div>
             </div>
@@ -252,8 +320,9 @@ export default function Home() {
             хянаагүй тул алдаатай байж болно.{" "}
             {signalsEnabled ? (
               <>
-                Алдаа олбол хувилбар бүрийн «⚑ алдаа» товчоор шууд мэдэгдээрэй —
-                бүртгэл шаардахгүй.
+                Алдаа олбол «⚑ алдаа», хайсан утга нь жагсаалтад байхгүй бол «⊕
+                утга дутуу» товчийг дарна уу. Зөв зурлагыг нь мэдэж байвал
+                тухайн цонхонд бичиж үлдээж болно — бүртгэл шаардахгүй.
               </>
             ) : (
               <>
@@ -300,10 +369,10 @@ export default function Home() {
         {signalsEnabled && (
           <>
             <p>
-              Хуулах товч дарахад аль хувилбарыг сонгосныг тань нэргүйгээр
-              тэмдэглэдэг. Үүнийг зөвхөн хувилбаруудыг эрэмбэлэх, юуг эхэлж
-              хянахыг тогтооход ашиглана — бүртгэл ч, хувийн мэдээлэл ч
-              цуглуулдаггүй.
+              Хуулах товч дарахад олон утгатай үгийн аль хувилбарыг сонгосныг
+              тань тэмдэглэж авдаг. Үүнийг зөвхөн хувилбаруудыг эрэмбэлэх, ямар
+              үгийг эхэлж хянахаа шийдвэрлэхэд ашиглана — ямар нэг хувийн
+              мэдээлэл цуглуулдаггүй.
             </p>
             <p className="en" lang="en">
               Copying anonymously records which variant you chose. It is used
@@ -321,10 +390,30 @@ export default function Home() {
 
       <section className="info">
         <h2>Хувь нэмэр</h2>
+        {signalsEnabled && (
+          <>
+            <p>
+              Үг тус бүрийн тайлбар хэсгээс буруу зурлагыг «⚑», дутуу утгыг «⊕»,
+              толь бичигт байхгүй үгийн зөв зурлагыг «✎» товчоор тус тус шууд
+              мэдэгдэх, илгээх боломжтой. Ирүүлсэн санал бүрийг хүн хянаж,
+              зөвшөөрсний дараа нээлттэй үгсийн санд{" "}
+              <a href={DATA_LICENSE_URL} target="_blank" rel="noreferrer">
+                CC BY-SA 4.0
+              </a>{" "}
+              лицензтэйгээр нэмдэг.
+            </p>
+            <p className="en" lang="en">
+              You can contribute straight from the converter — report a wrong
+              spelling, a missing meaning, or the real spelling of a word we do
+              not know. Every submission is reviewed by a human before it
+              reaches the lexicon, and is licensed CC BY-SA 4.0.
+            </p>
+          </>
+        )}
         <p>
-          Алдаа мэдэгдэх, эсвэл шинэ үг, нэр нэмэхийг хүсвэл GitHub дээр засвар
-          оруулаарай — програмчлал мэдэхгүй байсан ч болно. Хөгжүүлэгч нар
-          khudam package-ийг npm-ээс суулгаж болно.
+          Алдаа мэдэгдэх, эсвэл шинэ үг, нэр нэмэхийг хүсвэл GitHub дээр мөн
+          засвар оруулах боломжтой — програмчлал мэдэхгүй байсан ч болно.
+          Хөгжүүлэгч нар khudam package-ийг npm-ээс суулгаарай.
         </p>
         <p className="en" lang="en">
           Found an error, or want to add a word or name? Contribute on GitHub —
@@ -361,7 +450,7 @@ export default function Home() {
         </span>
       </footer>
 
-      <FlagDialog target={flagTarget} onClose={() => setFlagTarget(null)} />
+      <ReportDialog target={report} onClose={() => setReport(null)} />
     </main>
   );
 }

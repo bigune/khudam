@@ -15,7 +15,13 @@ nothing here needs an npm release. These ship to khudam.suray.mn on merge.
 
 ### Added
 
-- Community contribution pipeline, Phase A1 — the first door into the lexicon that is not GitHub. Every converter candidate gets a ⚑ report button, and copying records which candidate was chosen for each word. Signals land in a disposable Supabase mailbox (`supabase/schema.sql`, anonymous insert-only under RLS); a weekly job will drain them into a triaged PR. **Signals are not verification**: they direct reviewer attention, and only a human merging a PR ever changes the lexicon.
+- Community contribution pipeline, Phase A2 — the report flow now takes an answer, not just a complaint. After flagging a candidate the contributor is offered a field to type the correct монгол бичиг; each word card offers «⊕ утга дутуу» for a meaning the entry is missing; and a word the lexicon does not know asks «✎ зөв зурлага» rather than showing a report button — nothing is wrong with a guess already labelled as one. Every field is optional: the flag is filed the moment the branching question is answered, so someone who can tell that a spelling is wrong without knowing the right one still leaves the signal.
+
+  Proposals are checked at the door by code point (the Mongolian block U+1800–U+18AF plus NNBSP) and again by database constraint. Whitespace collapses to the NNBSP that joins a written-apart suffix to its stem, since no ordinary keyboard produces it, and a vertical preview shows what will actually be sent. A correction on a composed suffix candidate is filed as a new-word proposal — per `data/GRAMMAR.md` § Fixing a wrong composition there is no stored entry to replace, and an exact lexicon match outranks the composition anyway. **Proposals are still not verification**: they reach the lexicon only through the weekly PR a human merges.
+
+  `supabase/schema.sql` now declares its constraints as drop-and-add statements instead of inline in `create table`, so re-running the file re-applies them to a project that already exists rather than silently skipping past the table.
+
+- Community contribution pipeline, Phase A1 — the first door into the lexicon that is not GitHub. Converter candidates get a ⚑ report button, and copying records which candidate was chosen for each word. Signals land in a disposable Supabase mailbox (`supabase/schema.sql`, anonymous insert-only under RLS); a weekly job will drain them into a triaged PR. **Signals are not verification**: they direct reviewer attention, and only a human merging a PR ever changes the lexicon.
 
   Reporting a sense-less candidate — which is most of the lexicon, since the seed layer carries no meaning labels — first asks whether the spelling is wrong or the wanted meaning is missing. The two answers resolve to different data operations (replace the form vs. add a candidate beside it), and only the contributor can tell them apart.
 
@@ -43,6 +49,7 @@ nothing here needs an npm release. These ship to khudam.suray.mn on merge.
 - Removed the spurious NIRUGU (U+180A) between MVS and the detached final vowel in 1,113 candidates (ENCODING.md Decision 003) — a wmk generator hack that forced an ordinary connected final a instead of the correct detached form. Affects only `verified: false` candidates.
 
   ⚠️ Converter output for those words differs from earlier builds. No API changes.
+
 - Web app: suffix shaping (e.g. ᠶᠢᠨ after NNBSP taking its I-shaped form) never rendered, because Google Fonts serves Noto Sans Mongolian sliced into unicode-range pieces that separate U+202F from the Mongolian letters, splitting the font run. The app now self-hosts the full Noto Sans Mongolian v3.002 (OFL) via `next/font/local`. Verified at the HarfBuzz level: ᠪᠠᠭᠰᠢ + NNBSP + ᠶᠢᠨ shapes ᠶ as `I.init` with the full font.
 
 ## [0.1.1] — 2026-07-26

@@ -30,7 +30,12 @@ Signals are not verification. Nothing written here may set `verified: true`.
    psql "$SUPABASE_DB_URL" -f supabase/schema.sql
    ```
 
-   The script is idempotent — re-running it after an edit is safe.
+   The script is idempotent — re-running it after an edit is safe, and is how
+   schema changes reach a project that already exists. Constraints are dropped
+   and re-added by name rather than declared inline, precisely so that a
+   re-run applies them instead of skipping past an existing table. A re-run
+   that fails on a constraint is telling you the truth: rows already in the
+   table violate the rule you just tightened.
 
 3. **Collect the keys** from Project Settings → API:
    - Project URL and the **anon** key are public by design (see below).
@@ -50,7 +55,10 @@ Signals are not verification. Nothing written here may set `verified: true`.
    existed. That is the intended state for local development and for forks.
 
 5. **Verify.** Open the site, convert a word, use the ⚑ button on a candidate,
-   and confirm a row appears in the `signals` table.
+   and confirm a row appears in the `signals` table. Then type a spelling into
+   the proposal step and confirm a second row arrives with `signal_type =
+   'proposal'` — the flag is filed as soon as the question is answered, so a
+   contributor who stops before proposing still leaves a signal.
 
 ## Why publishing the anon key is safe
 
@@ -75,9 +83,11 @@ curl -X DELETE "$URL/rest/v1/signals?cyrillic=eq.test" \
 non-zero means a write policy was added by mistake. Reads are less subtle —
 `GET` simply returns `[]`.
 
-Backstops, in order: the `check` constraints (code points, lengths, enums),
-the per-session insert cap in the `signals_rate_limit` trigger, and human
-review of the weekly PR, which is the real firewall. If organized spam ever
+Backstops, in order: the `check` constraints (code points, lengths, enums,
+and the rule that a proposal must actually propose something), the per-session
+insert caps in the `signals_rate_limit` trigger — 500 signals an hour, but
+only 50 of them free-text proposals, since text is what a reviewer has to read
+— and human review of the weekly PR, which is the real firewall. If organized spam ever
 appears, add Cloudflare Turnstile verified in an Edge Function — the
 siteverify call needs a secret, so a purely client-side check cannot work.
 Do not build that before it is needed.

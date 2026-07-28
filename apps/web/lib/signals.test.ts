@@ -2,11 +2,18 @@ import { describe, expect, test } from "bun:test";
 import type { Candidate } from "khudam";
 import {
   buildFlagRow,
+  buildProposalRow,
   buildSelectionRows,
+  checkProposal,
+  cleanSense,
   displaySense,
+  isLexiconCandidate,
   isTraditionalForm,
+  MAX_PROPOSAL_LENGTH,
   MAX_SELECTIONS_PER_COPY,
+  MAX_SENSE_LENGTH,
   needsSenseBranch,
+  proposalKindFor,
   UNLABELED_SENSE,
 } from "./signals";
 
@@ -164,5 +171,171 @@ describe("buildFlagRow", () => {
     const row = buildFlagRow({ cyrillic: "уул", traditional: "ᠤᠤᠯ" }, "correction", SESSION);
     expect("sense" in row).toBe(false);
     expect(row.proposal_kind).toBe("correction");
+  });
+});
+
+describe("checkProposal", () => {
+  test("accepts монгол бичиг and returns what will be sent", () => {
+    const result = checkProposal("ᠠᠭᠤᠯᠠ");
+    expect(result).toEqual({ ok: true, value: "ᠠᠭᠤᠯᠠ" });
+  });
+
+  test("joins a written-apart suffix with NNBSP, which no keyboard types", () => {
+    const result = checkProposal("ᠨᠣᠮ ᠤᠨ");
+    expect(result).toEqual({ ok: true, value: `ᠨᠣᠮ${NNBSP}ᠤᠨ` });
+  });
+
+  test("leaves an already-NNBSP-joined paste alone", () => {
+    expect(checkProposal(`ᠨᠣᠮ${NNBSP}ᠤᠨ`)).toEqual({ ok: true, value: `ᠨᠣᠮ${NNBSP}ᠤᠨ` });
+  });
+
+  test("trims surrounding whitespace instead of rejecting it", () => {
+    expect(checkProposal("  ᠠᠭᠤᠯᠠ\n")).toEqual({ ok: true, value: "ᠠᠭᠤᠯᠠ" });
+  });
+
+  test("keeps MVS, which is a shaping control rather than a space", () => {
+    const mvs = String.fromCodePoint(0x180e);
+    expect(checkProposal(`ᠠᠭᠤᠯᠠ${mvs}ᠠ`).ok).toBe(true);
+  });
+
+  test("drops the zero-width characters a paste carries in", () => {
+    const zwsp = String.fromCodePoint(0x200b);
+    const bom = String.fromCodePoint(0xfeff);
+    const lrm = String.fromCodePoint(0x200e);
+    expect(checkProposal(`${bom}ᠠᠭᠤ${zwsp}ᠯᠠ${lrm}`)).toEqual({
+      ok: true,
+      value: "ᠠᠭᠤᠯᠠ",
+    });
+  });
+
+  test("does not leave a joiner stranded at the edge after stripping", () => {
+    const zwsp = String.fromCodePoint(0x200b);
+    expect(checkProposal(`${zwsp} ᠠᠭᠤᠯᠠ`)).toEqual({ ok: true, value: "ᠠᠭᠤᠯᠠ" });
+  });
+
+  test("a tab between stem and suffix joins them, it does not glue them", () => {
+    expect(checkProposal("ᠨᠣᠮ\tᠤᠨ")).toEqual({ ok: true, value: `ᠨᠣᠮ${NNBSP}ᠤᠨ` });
+  });
+
+  test("names Cyrillic specifically — the mistake this site invites", () => {
+    expect(checkProposal("уул")).toEqual({ ok: false, problem: "cyrillic" });
+  });
+
+  test("reports blank input as empty rather than as bad characters", () => {
+    expect(checkProposal("   ")).toEqual({ ok: false, problem: "empty" });
+  });
+
+  test("rejects anything outside the Mongolian block", () => {
+    expect(checkProposal("agula")).toEqual({ ok: false, problem: "not_mongolian" });
+    expect(checkProposal("ᠠᠭᠤᠯᠠ!")).toEqual({ ok: false, problem: "not_mongolian" });
+  });
+
+  test("rejects what the length constraint would reject", () => {
+    const long = "ᠠ".repeat(MAX_PROPOSAL_LENGTH + 1);
+    expect(checkProposal(long)).toEqual({ ok: false, problem: "too_long" });
+    expect(checkProposal("ᠠ".repeat(MAX_PROPOSAL_LENGTH)).ok).toBe(true);
+  });
+});
+
+describe("cleanSense", () => {
+  test("keeps a label in either script", () => {
+    expect(cleanSense("mountain")).toBe("mountain");
+    expect(cleanSense("уул, өндөрлөг")).toBe("уул, өндөрлөг");
+  });
+
+  test("collapses whitespace and returns nothing for a blank label", () => {
+    expect(cleanSense("  the   mountain ")).toBe("the mountain");
+    expect(cleanSense("   ")).toBeUndefined();
+    expect(cleanSense("")).toBeUndefined();
+  });
+
+  test("strips control characters instead of rejecting the label", () => {
+    // A zero-width space and a tab: the sort of thing a paste carries in and
+    // nobody can see. Built from code points — a test file that contains them
+    // literally is a test nobody can review.
+    const zwsp = String.fromCodePoint(0x200b);
+    expect(cleanSense(`mountain${zwsp}\tзөв`)).toBe("mountain зөв");
+  });
+
+  test("caps at the length the column accepts", () => {
+    expect(cleanSense("a".repeat(MAX_SENSE_LENGTH + 50))).toHaveLength(MAX_SENSE_LENGTH);
+  });
+});
+
+describe("proposalKindFor", () => {
+  test("a wrong lexicon spelling is a correction", () => {
+    expect(proposalKindFor(candidate(), "correction")).toBe("correction");
+  });
+
+  test("a composed candidate is repaired by a new entry, not by a replacement", () => {
+    // data/GRAMMAR.md § Fixing a wrong composition: an exact lexicon match
+    // outranks decomposition, so the fix for a mis-composed word is an entry
+    // of its own. There is nothing in any shard to correct.
+    expect(proposalKindFor(candidate({ source: "suffix-rule" }), "correction")).toBe("new_word");
+  });
+
+  test("a word the lexicon does not know is a new word", () => {
+    expect(proposalKindFor(candidate({ source: "fallback" }), "correction")).toBe("new_word");
+  });
+
+  test("a missing meaning stays a missing meaning whatever it was flagged on", () => {
+    expect(proposalKindFor(candidate(), "missing_sense")).toBe("missing_sense");
+    expect(proposalKindFor(candidate({ source: "suffix-rule" }), "missing_sense")).toBe(
+      "missing_sense",
+    );
+  });
+});
+
+describe("isLexiconCandidate", () => {
+  test("separates stored entries from runtime machine output", () => {
+    expect(isLexiconCandidate(candidate())).toBe(true);
+    expect(isLexiconCandidate(candidate({ source: "wiktionary" }))).toBe(true);
+    expect(isLexiconCandidate(candidate({ source: "suffix-rule" }))).toBe(false);
+    expect(isLexiconCandidate(candidate({ source: "fallback" }))).toBe(false);
+  });
+});
+
+describe("buildProposalRow", () => {
+  test("keeps the candidate's own sense apart from the proposed one", () => {
+    const row = buildProposalRow(
+      { cyrillic: "Уул", traditional: "ᠤᠤᠯ", sense: "original" },
+      "missing_sense",
+      { traditional: "ᠠᠭᠤᠯᠠ", sense: "mountain" },
+      SESSION,
+    );
+    expect(row).toEqual({
+      context: "converter",
+      signal_type: "proposal",
+      cyrillic: "уул",
+      traditional: "ᠤᠤᠯ",
+      sense: "original",
+      proposal_kind: "missing_sense",
+      proposal_traditional: "ᠠᠭᠤᠯᠠ",
+      proposal_sense: "mountain",
+      session_id: SESSION,
+    });
+  });
+
+  test("anchors a new word to the word alone, since no candidate exists", () => {
+    const row = buildProposalRow(
+      { cyrillic: "уул" },
+      "new_word",
+      { traditional: "ᠠᠭᠤᠯᠠ" },
+      SESSION,
+    );
+    expect("traditional" in row).toBe(false);
+    expect("proposal_sense" in row).toBe(false);
+    expect(row.proposal_traditional).toBe("ᠠᠭᠤᠯᠠ");
+  });
+
+  test("carries a meaning with no spelling — the constraint allows either half", () => {
+    const row = buildProposalRow(
+      { cyrillic: "уул", traditional: "ᠤᠤᠯ" },
+      "missing_sense",
+      { sense: "mountain" },
+      SESSION,
+    );
+    expect("proposal_traditional" in row).toBe(false);
+    expect(row.proposal_sense).toBe("mountain");
   });
 });
