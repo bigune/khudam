@@ -8,6 +8,23 @@ Versioning follows [Semantic Versioning](https://semver.org/): while on `0.x`, d
 
 ---
 
+## [Unreleased]
+
+No `khudam` package changes — the engine and the lexicon are untouched, so
+nothing here needs an npm release. These ship to khudam.suray.mn on merge.
+
+### Added
+
+- Community contribution pipeline, Phase A1 — the first door into the lexicon that is not GitHub. Every converter candidate gets a ⚑ report button, and copying records which candidate was chosen for each word. Signals land in a disposable Supabase mailbox (`supabase/schema.sql`, anonymous insert-only under RLS); a weekly job will drain them into a triaged PR. **Signals are not verification**: they direct reviewer attention, and only a human merging a PR ever changes the lexicon.
+
+  Reporting a sense-less candidate — which is most of the lexicon, since the seed layer carries no meaning labels — first asks whether the spelling is wrong or the wanted meaning is missing. The two answers resolve to different data operations (replace the form vs. add a candidate beside it), and only the contributor can tell them apart.
+
+  Collection is off unless `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` are set at build time; without them the converter hides the affordances and behaves exactly as before. Setup runbook: `supabase/README.md`.
+
+### Fixed
+
+- Web app: candidates whose only meaning label is the importer's `unlabeled` placeholder no longer display it as if it were a meaning — including inside the suffix engine's composed labels (`unlabeled + genitive` now reads `genitive`). The placeholder is a marker for reviewers, not a sense.
+
 ## [0.2.0] — 2026-07-27
 
 ### Added

@@ -9,6 +9,12 @@ apps/web/out/
 apps/web/next-env.d.ts
 .vercel/
 
+# local env — apps/web/.env.example is the tracked template and stays tracked.
+# The anon key is public by design, but a service_role key must never reach a
+# file that git can see.
+.env
+.env*.local
+
 # logs & OS noise
 *.log
 .DS_Store

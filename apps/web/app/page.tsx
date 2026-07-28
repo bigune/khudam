@@ -3,6 +3,8 @@
 import { convertText, LEXICON_ENTRY_COUNT } from "khudam";
 import type { Candidate, Token } from "khudam";
 import { useMemo, useState } from "react";
+import { displaySense, recordSelections, signalsEnabled } from "../lib/signals";
+import { FlagDialog, type FlagTarget } from "./flag-dialog";
 
 const SAMPLES = ["монгол бичиг", "сайн байна уу", "уул ус"];
 
@@ -29,6 +31,8 @@ export default function Home() {
   const [text, setText] = useState("");
   const [picks, setPicks] = useState<Record<number, number>>({});
   const [copied, setCopied] = useState(false);
+  const [copyFailed, setCopyFailed] = useState(false);
+  const [flagTarget, setFlagTarget] = useState<FlagTarget | null>(null);
 
   const tokens = useMemo(() => convertText(text), [text]);
 
@@ -36,11 +40,13 @@ export default function Home() {
     setText(next);
     setPicks({});
     setCopied(false);
+    setCopyFailed(false);
   }
 
   function pick(tokenIndex: number, candidateIndex: number) {
     setPicks((p) => ({ ...p, [tokenIndex]: candidateIndex }));
     setCopied(false);
+    setCopyFailed(false);
   }
 
   const chosen = (t: Token, i: number): Candidate | undefined =>
@@ -78,8 +84,27 @@ export default function Home() {
     .join("");
 
   async function copy() {
-    await navigator.clipboard.writeText(output);
-    setCopied(true);
+    // Recorded before the clipboard call, and never gated on it: pressing the
+    // button is the commitment, and the Clipboard API is the flaky part —
+    // absent entirely outside a secure context, and able to reject on
+    // permissions or focus. A failed copy must not also cost us the signal.
+    // `copied` is reset by any edit or pick, so copying the same output twice
+    // does not count twice.
+    if (!copied) {
+      recordSelections(
+        wordTokens.map(({ token, index }) => ({
+          input: token.input,
+          candidate: chosen(token, index)!,
+        })),
+      );
+    }
+    try {
+      await navigator.clipboard.writeText(output);
+      setCopied(true);
+    } catch {
+      // Nothing was copied — say so instead of leaving a dead button.
+      setCopyFailed(true);
+    }
   }
 
   return (
@@ -129,7 +154,11 @@ export default function Home() {
             <span className="field-label">
               Монгол бичиг
               <button className="copy" onClick={copy}>
-                {copied ? "Хуулагдлаа ✓" : "Хуулах"}
+                {copyFailed
+                  ? "Хуулж чадсангүй — гараар сонгоно уу"
+                  : copied
+                    ? "Хуулагдлаа ✓"
+                    : "Хуулах"}
               </button>
             </span>
             <div className="vertical mongolian" lang="mn-Mong">
@@ -178,26 +207,38 @@ export default function Home() {
                       const badge = badgeOf(c);
                       const isPicked = (picks[index] ?? 0) === ci;
                       return (
-                        <button
-                          key={ci}
-                          className={isPicked ? "chip picked" : "chip"}
-                          onClick={() => pick(index, ci)}
-                        >
-                          <span className="chip-trad mongolian" lang="mn-Mong">
-                            {c.traditional}
-                          </span>
-                          <span className="chip-meta">
-                            {c.latin && (
-                              <span className="latin">{c.latin}</span>
-                            )}
-                            {c.sense && (
-                              <span className="sense">{c.sense}</span>
-                            )}
-                            <span className={badge.className}>
-                              {badge.label}
+                        <div className="chip-wrap" key={ci}>
+                          <button
+                            className={isPicked ? "chip picked" : "chip"}
+                            onClick={() => pick(index, ci)}
+                          >
+                            <span className="chip-trad mongolian" lang="mn-Mong">
+                              {c.traditional}
                             </span>
-                          </span>
-                        </button>
+                            <span className="chip-meta">
+                              {c.latin && (
+                                <span className="latin">{c.latin}</span>
+                              )}
+                              {displaySense(c) && (
+                                <span className="sense">{displaySense(c)}</span>
+                              )}
+                              <span className={badge.className}>
+                                {badge.label}
+                              </span>
+                            </span>
+                          </button>
+                          {signalsEnabled && (
+                            <button
+                              className="chip-flag"
+                              aria-label={`${token.input} — энэ хувилбарын алдааг мэдэгдэх`}
+                              onClick={() =>
+                                setFlagTarget({ input: token.input, candidate: c })
+                              }
+                            >
+                              ⚑ алдаа
+                            </button>
+                          )}
+                        </div>
                       );
                     })}
                   </div>
@@ -208,11 +249,21 @@ export default function Home() {
           ))}
           <p className="note">
             «Баталгаажаагүй» гэдэг нь машин импортын түвшний өгөгдөл — хүн
-            хянаагүй тул алдаатай байж болно. Алдаа олбол{" "}
-            <a href={ISSUES_URL} target="_blank" rel="noreferrer">
-              GitHub дээр мэдээллээрэй
-            </a>
-            .
+            хянаагүй тул алдаатай байж болно.{" "}
+            {signalsEnabled ? (
+              <>
+                Алдаа олбол хувилбар бүрийн «⚑ алдаа» товчоор шууд мэдэгдээрэй —
+                бүртгэл шаардахгүй.
+              </>
+            ) : (
+              <>
+                Алдаа олбол{" "}
+                <a href={ISSUES_URL} target="_blank" rel="noreferrer">
+                  GitHub дээр мэдээллээрэй
+                </a>
+                .
+              </>
+            )}
           </p>
         </section>
       )}
@@ -246,6 +297,21 @@ export default function Home() {
           reviewed yet, so it is unverified. Human-checked spellings are marked
           ✓. We correct and verify it gradually through community contributions.
         </p>
+        {signalsEnabled && (
+          <>
+            <p>
+              Хуулах товч дарахад аль хувилбарыг сонгосныг тань нэргүйгээр
+              тэмдэглэдэг. Үүнийг зөвхөн хувилбаруудыг эрэмбэлэх, юуг эхэлж
+              хянахыг тогтооход ашиглана — бүртгэл ч, хувийн мэдээлэл ч
+              цуглуулдаггүй.
+            </p>
+            <p className="en" lang="en">
+              Copying anonymously records which variant you chose. It is used
+              only to order candidates and to decide what to review first — no
+              accounts, no personal data.
+            </p>
+          </>
+        )}
         <p>
           <a href={SOURCES_URL} target="_blank" rel="noreferrer">
             Өгөгдлийн эх сурвалж →
@@ -294,6 +360,8 @@ export default function Home() {
           </a>
         </span>
       </footer>
+
+      <FlagDialog target={flagTarget} onClose={() => setFlagTarget(null)} />
     </main>
   );
 }

@@ -38,6 +38,12 @@
 
 - Governance docs, reviewer guidelines, verified-tier statistics page
 - Web-based correction flow that files PRs for non-GitHub users (still zero-ops)
+  - ✅ First slice (2026-07-28): in-converter error reporting and implicit
+    selection counting, landing in a disposable Supabase mailbox
+    (`supabase/README.md`). Signals direct reviewer attention; they are never
+    verification, and only a human merging a PR changes the lexicon.
+  - Next: proposal input widget, then the weekly export job + PR generator +
+    verification queue page
 - Watchlist sources (see `data/SOURCES.md`) if licensing clears
 
 ## Decisions made during scaffold
