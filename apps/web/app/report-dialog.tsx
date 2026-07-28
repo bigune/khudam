@@ -34,7 +34,7 @@ export interface ReportTarget {
 
 const TITLES: Record<ReportDoor, string> = {
   flag: "Алдаа мэдэгдэх",
-  missing_sense: "Дутуу утга нэмэх",
+  missing_sense: "Дутуу салаа утга нэмэх",
   unknown_word: "Зөв зурлага санал болгох",
 };
 
@@ -251,9 +251,9 @@ export function ReportDialog({
                   <span className="report-receipt-mark" aria-hidden="true">
                     ✓
                   </span>
-                  Энэ үгэнд утга дутуу байгаа мэдэгдлийг хүлээн авлаа. Доорх
-                  талбарууд нь заавал биш бөгөөд мэддэг хэсгээ л бөглөж илгээхэд
-                  болно.
+                  Энэ үгэнд салаа утга дутуу байгаа мэдэгдлийг хүлээн авлаа.
+                  Доорх талбарууд нь заавал биш бөгөөд мэддэг хэсгээ л бөглөж
+                  илгээхэд болно.
                 </p>
               )}
               <div className={filed ? "report-optional" : undefined}>
