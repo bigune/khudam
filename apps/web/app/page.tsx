@@ -17,7 +17,9 @@ function badgeOf(c: Candidate): { className: string; label: string } {
   if (c.source === "fallback")
     return { className: "badge fallback", label: "галиг · таамаг" };
   if (c.source === "suffix-rule")
-    return { className: "badge unverified", label: "үндэс + нөхцөл · баталгаажаагүй" };
+    return c.verified
+      ? { className: "badge verified", label: "үндэс + нөхцөл · баталгаажсан ✓" }
+      : { className: "badge unverified", label: "үндэс + нөхцөл · баталгаажаагүй" };
   if (c.verified)
     return { className: "badge verified", label: "баталгаажсан ✓" };
   return { className: "badge unverified", label: "баталгаажаагүй" };
