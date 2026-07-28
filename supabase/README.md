@@ -62,15 +62,36 @@ Signals are not verification. Nothing written here may set `verified: true`.
 
 ## Removing duplicates
 
-One session saying the same thing twice says it once. The
-`signals_session_content_uniq` index enforces that, and the converter asks for
-`resolution=ignore-duplicates`, so a repeat report is dropped silently rather
-than refused — the contributor is told it was filed, which is true: it was, the
-first time.
+One session saying the same thing twice says it once. A BEFORE INSERT trigger
+(`signals_dedup`) skips a row this session has already filed, and
+`signals_session_content_uniq` is the floor beneath it — nothing should reach
+the index, and an insert that does fails loudly rather than storing the same
+opinion twice.
 
 The scope is one browser, not one signal. Two different sessions filing the
 identical proposal stay two rows, because that agreement is the corroboration
 signal the weekly PR ranks highest.
+
+**Do not move this to PostgREST's upsert.** `on_conflict=<columns>` with
+`Prefer: resolution=ignore-duplicates` is the obvious-looking way to ask for
+the same behaviour and it breaks all collection: the upsert path needs more
+than an INSERT policy, so with an insert-only anon role *every* insert returns
+
+```json
+{"code":"42501","message":"new row violates row-level security policy for table \"signals\""}
+```
+
+— duplicates and first-time reports alike. It was shipped once and reads like a
+policy bug rather than a client bug, which is what made it expensive to find.
+A one-line probe tells the two apart: send a deliberately invalid row (e.g.
+`"cyrillic":"test123"`) with the anon key and nothing else. `23514` means RLS
+let it through and a CHECK caught it, which is healthy. `42501` means the
+request never got past the policy.
+
+The trigger also handles what a unique index cannot: the converter sends one
+copy's selections as a single array, so a repeated word would fail the whole
+batch and take the new words with it. The trigger drops that row and stores its
+neighbours.
 
 Applying the schema to a project that already collected duplicates **fails on
 this index**, which is the file telling the truth: it cannot enforce a rule the

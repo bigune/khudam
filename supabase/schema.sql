@@ -204,12 +204,17 @@ create index if not exists signals_session_recent_idx
 -- `question_id` are included so a Phase B answer to a different question, or a
 -- changed mind about the same one, still counts as something new to read.
 --
--- Enforced rather than prevented client-side: apps/web asks for
--- `on_conflict=<these columns>` with `Prefer: resolution=ignore-duplicates`,
--- so a duplicate is dropped silently instead of answered with an error. The
--- contributor is still told their report was filed, which is true -- it was,
--- the first time. Keep that column list in sync with this one
--- (apps/web/lib/signals.ts, DEDUP_COLUMNS).
+-- Enforced by the trigger below rather than by the client. PostgREST's upsert
+-- (`on_conflict` + `Prefer: resolution=ignore-duplicates`) looks like the
+-- obvious way to ask for this, and it is a trap here: the upsert path needs
+-- more than an INSERT policy, so with an insert-only anon role EVERY insert
+-- comes back 42501 "new row violates row-level security policy" -- including
+-- the ones that are not duplicates at all. Loosening RLS to satisfy it would
+-- trade the property that makes publishing the anon key safe for a nicety.
+--
+-- This index is therefore the floor, not the mechanism: nothing should ever
+-- reach it, and if something does, the insert fails loudly instead of quietly
+-- storing the same opinion twice.
 --
 -- Dedup reaches back only to the last drain, not forever: the weekly export
 -- empties the table, so the same person reporting the same thing next month
@@ -224,6 +229,53 @@ create unique index signals_session_content_uniq
                      proposal_kind, proposal_traditional, proposal_sense,
                      question_id, verdict)
   nulls not distinct;
+
+-- The mechanism: skip a duplicate row instead of rejecting it.
+--
+-- A BEFORE INSERT trigger returning NULL drops that ONE row and lets the rest
+-- of the statement proceed. That matters because the converter sends a copy's
+-- selections as a single array: with the unique index alone, one word repeated
+-- from an earlier copy would fail the whole batch and take the new words with
+-- it. Here the repeat is skipped and its neighbours are stored.
+--
+-- Runs before signals_rate_limit_trg -- triggers fire in name order, and
+-- "dedup" sorts before "rate_limit" -- so a skipped row costs nothing against
+-- the caps. That ordering is load-bearing; renaming either trigger changes it.
+--
+-- SECURITY DEFINER so it can read rows the anon role cannot select.
+create or replace function public.signals_dedup()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  -- `is not distinct from` treats null as a value, matching the index's
+  -- NULLS NOT DISTINCT. Plain `=` would be null for every unused column and
+  -- the row would never match anything.
+  if exists (
+    select 1 from public.signals s
+     where s.session_id           =              new.session_id
+       and s.signal_type          =              new.signal_type
+       and s.cyrillic             =              new.cyrillic
+       and s.traditional          is not distinct from new.traditional
+       and s.sense                is not distinct from new.sense
+       and s.proposal_kind        is not distinct from new.proposal_kind
+       and s.proposal_traditional is not distinct from new.proposal_traditional
+       and s.proposal_sense       is not distinct from new.proposal_sense
+       and s.question_id          is not distinct from new.question_id
+       and s.verdict              is not distinct from new.verdict
+  ) then
+    return null;
+  end if;
+  return new;
+end;
+$$;
+
+drop trigger if exists signals_dedup_trg on public.signals;
+create trigger signals_dedup_trg
+  before insert on public.signals
+  for each row execute function public.signals_dedup();
 
 -- ---------------------------------------------------------------------------
 -- Rate limiting

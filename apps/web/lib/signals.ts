@@ -378,42 +378,29 @@ export function buildProposalRow(
 }
 
 /**
- * The columns that make one signal the same signal as another, matching the
- * `signals_session_content_uniq` index in supabase/schema.sql — keep the two
- * lists in sync.
+ * A plain insert, and it must stay one.
  *
- * Because `session_id` leads the list, this asks Postgres to drop a row only
- * when the same browser has already said exactly that. Two different sessions
- * filing the identical proposal stay two rows: that agreement is the
- * corroboration signal the weekly PR ranks highest.
+ * Deduplication lives in the database (`signals_dedup` in supabase/schema.sql),
+ * where a BEFORE INSERT trigger silently skips a row this session has already
+ * filed. Asking PostgREST for it instead — `on_conflict=<columns>` with
+ * `Prefer: resolution=ignore-duplicates` — reads like the obvious way to do the
+ * same thing and breaks everything: the upsert path needs more than an INSERT
+ * policy, and the anon role has exactly one, so every insert comes back
+ * `42501 new row violates row-level security policy`, duplicate or not. It
+ * looks like a policy bug rather than a client bug, which is what made it
+ * expensive. Do not reintroduce it.
  */
-const DEDUP_COLUMNS = [
-  "session_id",
-  "signal_type",
-  "cyrillic",
-  "traditional",
-  "sense",
-  "proposal_kind",
-  "proposal_traditional",
-  "proposal_sense",
-  "question_id",
-  "verdict",
-].join(",");
-
 async function insert(rows: SignalRow[]): Promise<boolean> {
   if (!signalsEnabled || rows.length === 0) return false;
   try {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/signals?on_conflict=${DEDUP_COLUMNS}`, {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/signals`, {
       method: "POST",
       headers: {
         apikey: SUPABASE_ANON_KEY!,
         Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
         "Content-Type": "application/json",
         // Nothing is read back — the anon role has no select policy anyway.
-        // `ignore-duplicates` turns the unique index into a silent no-op
-        // instead of a 409: re-reporting something is not an error the
-        // contributor should be shown, and the report really was filed.
-        Prefer: "return=minimal,resolution=ignore-duplicates",
+        Prefer: "return=minimal",
       },
       body: JSON.stringify(rows),
       // Survives the user navigating away right after copying.

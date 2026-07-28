@@ -41,9 +41,11 @@ nothing here needs an npm release. These ship to khudam.suray.mn on merge.
 
 ### Fixed
 
-- Community signals: one browser saying the same thing twice now files it once. Copying the same text again, reloading and re-reporting the same candidate, or re-sending an identical proposal produced a row indistinguishable from one already in the mailbox, and a reviewer learned nothing from reading it twice. A unique index over the whole content of a signal enforces it, and the converter asks Postgres to drop the repeat silently rather than answer with an error — the contributor is still told the report was filed, which is true: it was, the first time.
+- Community signals: one browser saying the same thing twice now files it once. Copying the same text again, reloading and re-reporting the same candidate, or re-sending an identical proposal produced a row indistinguishable from one already in the mailbox, and a reviewer learned nothing from reading it twice. A `BEFORE INSERT` trigger skips a row the same session has already filed, with a unique index over the whole content of a signal as the floor beneath it.
 
   The scope is one browser, not one signal: two different sessions filing the identical proposal stay two rows, because that agreement is exactly the corroboration the weekly PR ranks highest. Applying the schema to a project that already collected duplicates fails on the new index; `supabase/README.md` § Removing duplicates has the one-time cleanup.
+
+  The first attempt at this asked PostgREST for the deduplication (`on_conflict` + `Prefer: resolution=ignore-duplicates`) and **broke all signal collection while it was deployed**: that path needs more than an INSERT policy, and the anon role has exactly one, so every insert — duplicate or not — came back `42501 new row violates row-level security policy`. Reports, selections and queue answers filed during that window were refused by the database and are lost. Deduplication now happens in a trigger, where the anon role stays insert-only, and `supabase/README.md` records the probe that tells a policy bug from a client bug in one request.
 
 - Web app: candidates whose only meaning label is the importer's `unlabeled` placeholder no longer display it as if it were a meaning — including inside the suffix engine's composed labels (`unlabeled + genitive` now reads `genitive`). The placeholder is a marker for reviewers, not a sense.
 
