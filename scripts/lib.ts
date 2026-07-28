@@ -41,6 +41,9 @@ export interface SuffixRow {
   sense: string;
   attach?: (typeof SUFFIX_ATTACH)[number];
   gender?: (typeof SUFFIX_GENDERS)[number];
+  /** Written together with the stem instead of apart after NNBSP (GRAMMAR.md
+   *  G1 is the default; the privative's vowel-stem form is the exception). */
+  joined?: boolean;
   verified: boolean;
   source: Source;
   citation?: string;
@@ -59,6 +62,7 @@ export function writeSuffixesFile(path: string, rows: SuffixRow[]): void {
     out.sense = s.sense;
     if (s.attach !== undefined) out.attach = s.attach;
     if (s.gender !== undefined) out.gender = s.gender;
+    if (s.joined !== undefined) out.joined = s.joined;
     out.verified = s.verified;
     out.source = s.source;
     if (s.citation !== undefined) out.citation = s.citation;

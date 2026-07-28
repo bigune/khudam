@@ -96,9 +96,31 @@ describe("decomposeWord", () => {
     expect(new Set(forms).size).toBeGreaterThan(1);
   });
 
-  test("privative -гүй is the written-apart ᠦᠭᠡᠢ (G14)", () => {
+  test("privative after a consonant-final stem is the written-apart ᠦᠭᠡᠢ (G14)", () => {
     expect(decomposeWord("номгүй").map((c) => c.traditional)).toContain(`ᠨᠣᠮ${NNBSP}ᠦᠭᠡᠢ`);
     expect(decomposeWord("бичиггүй").map((c) => c.traditional)).toContain(`ᠪᠢᠴᠢᠭ${NNBSP}ᠦᠭᠡᠢ`);
+    expect(decomposeWord("ааггүй").map((c) => c.traditional)).toContain(`ᠠᠭᠠᠭ${NNBSP}ᠦᠭᠡᠢ`);
+  });
+
+  test("privative after a vowel-final stem is the JOINED ᠭᠦᠢ, no NNBSP (G14)", () => {
+    // The condition reads the traditional stem, not the Cyrillic surface:
+    // ааль and ус both end in a consonant in Cyrillic, ᠠᠭᠠᠯᠢ and ᠤᠰᠤ do not.
+    for (const [word, expected] of [
+      ["аальгүй", "ᠠᠭᠠᠯᠢᠭᠦᠢ"],
+      ["ашгүй", "ᠠᠰᠢᠭᠦᠢ"],
+      ["усгүй", "ᠤᠰᠤᠭᠦᠢ"],
+    ] as const) {
+      const forms = decomposeWord(word).map((c) => c.traditional);
+      expect(forms).toContain(expected);
+      for (const f of forms) expect(f.includes(NNBSP)).toBeFalse();
+    }
+  });
+
+  test("the joined privative reproduces the seed's own spelling exactly", () => {
+    // Independent corroboration: the rule and the wmk bootstrap, which never
+    // saw each other, land on the same code points for аальгүй.
+    const [composed] = decomposeWord("аальгүй");
+    expect(composed.traditional).toBe(lookupWord("аальгүй")[0].traditional);
   });
 
   test("privative sits between plural and possessive (G14)", () => {

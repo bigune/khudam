@@ -215,9 +215,21 @@
     "traditional": "ᠦᠭᠡᠢ",
     "latin": "ügei",
     "sense": "privative",
+    "attach": "consonant",
     "verified": false,
     "source": "wiktionary",
-    "citation": "en.wiktionary.org “-гүй”: aphaeresed from үгүй; “үгүй”: Mongolian script ᠦᠭᠡᠢ (ügei)"
+    "citation": "en.wiktionary.org “-гүй”: aphaeresed from үгүй; “үгүй”: Mongolian script ᠦᠭᠡᠢ (ügei); written apart after a consonant-final stem — maintainer check of two online converters, 2026-07-28: ааггүй (consonant stem ᠠᠭᠠᠭ) written apart, аальгүй (vowel stem ᠠᠭᠠᠯᠢ) written joined; 29 wmk seed entries use the joined ᠭᠦᠢ after vowel stems"
+  },
+  {
+    "cyrillic": "гүй",
+    "traditional": "ᠭᠦᠢ",
+    "latin": "güi",
+    "sense": "privative",
+    "attach": "vowel",
+    "joined": true,
+    "verified": false,
+    "source": "manual",
+    "citation": "maintainer check of two online converters, 2026-07-28: ааггүй (consonant stem ᠠᠭᠠᠭ) written apart, аальгүй (vowel stem ᠠᠭᠠᠯᠢ) written joined; 29 wmk seed entries use the joined ᠭᠦᠢ after vowel stems"
   },
   {
     "cyrillic": "гөө",

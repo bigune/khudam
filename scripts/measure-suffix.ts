@@ -38,7 +38,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { decomposeWord, lookupWord } from "../packages/converter/src/index.ts";
-import { REPO_ROOT } from "./lib.ts";
+import { REPO_ROOT, SUFFIXES_FILE, readSuffixesFile } from "./lib.ts";
 
 const CACHE_FILE = join(REPO_ROOT, ".cache", "kaikki.org-dictionary-Mongolian.jsonl");
 const NNBSP = " ";
@@ -113,12 +113,29 @@ export function readTestSet(dump: string): Row[] {
   return rows;
 }
 
+/** Traditional forms of suffixes written together with the stem. Needed to read
+ *  a composed candidate: most suffixes are preceded by NNBSP and so can be found
+ *  by splitting, but a joined one (the privative after a vowel stem, G14) leaves
+ *  no separator at all — ᠠᠭᠠᠯᠢᠭᠦᠢ is one run of letters. */
+const JOINED_SUFFIXES = readSuffixesFile(SUFFIXES_FILE)
+  .filter((s) => s.joined === true)
+  .map((s) => s.traditional);
+
 /** Did decomposition find this form's actual lemma, or some other stem? */
 export function judge(row: Row): "unresolved" | "correct" | "wrong-stem" {
   const composed = decomposeWord(row.form);
   if (composed.length === 0) return "unresolved";
-  const lemmaForms = new Set(lookupWord(row.lemma).map((c) => c.traditional));
-  return composed.some((c) => lemmaForms.has(c.traditional.split(NNBSP)[0])) ? "correct" : "wrong-stem";
+  const lemmaForms = lookupWord(row.lemma).map((c) => c.traditional);
+  const startsWithLemma = (candidate: string): boolean =>
+    lemmaForms.some(
+      (lemma) =>
+        candidate === lemma ||
+        candidate.startsWith(lemma + NNBSP) ||
+        // A joined suffix must follow immediately; a bare prefix match would
+        // credit ᠨᠣᠮᠣᠬᠠᠨ ᠦᠨ to the lemma ᠨᠣᠮ.
+        JOINED_SUFFIXES.some((j) => candidate.startsWith(lemma + j)),
+    );
+  return composed.some((c) => startsWithLemma(c.traditional)) ? "correct" : "wrong-stem";
 }
 
 function pct(a: number, b: number): string {

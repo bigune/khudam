@@ -33,11 +33,17 @@ merge.
 
   -ынх and -ийнх are deliberately **not** rows: they are the genitive plus this one, chained by G12. That is also why the substantive may never open a chain — Cyrillic -х ends every verb infinitive in the language, and without the restriction харих, явах and бичих would each acquire a substantive reading.
 
-  Both rows are `verified: false` with the open question each one leaves recorded in `data/REVIEW.md`, and the privative's question is live in output rather than theoretical. The rule writes it apart; the lexicon writes it joined, and 30 of its 32 -гүй words use a contracted `…ᠭᠦᠢ` rather than ᠦᠭᠡᠢ at all. Since an exact lexicon match outranks decomposition, both conventions ship side by side — бичиггүй → `ᠪᠢᠴᠢᠭ ᠦᠭᠡᠢ` because it has no entry, аальгүй → `ᠠᠭᠠᠯᠢᠭᠦᠢ` because it has one. Ruling either way moves one side or the other. (The second question is whether ᠬᠢ has a harmony pair.) A citation is not verification; a human reading монгол бичиг still is.
+  **The privative alternates, and it is the one suffix in the table not written apart.** It splits on the traditional stem's final letter: `ᠦᠭᠡᠢ` written apart after a consonant (ааг → `ᠠᠭᠠᠭ ᠦᠭᠡᠢ`), `ᠭᠦᠢ` written **joined, with no NNBSP at all**, after a vowel (ааль → `ᠠᠭᠠᠯᠢᠭᠦᠢ`). Ground rule 2 does the work: ааль and ус end in a consonant in Cyrillic and in a vowel in монгол бичиг, and only the traditional stem decides.
+
+  This began as an apparent contradiction — the rule writing apart, the lexicon writing joined — and resolved into a conditioning factor when a maintainer checked two online converters, which agreed with each other. The lexicon corroborates the joined half independently: 29 seed entries write ᠭᠦᠢ after vowel stems, and the engine's composition of аальгүй now equals the seed's stored spelling code point for code point, though neither saw the other. `suffixes.json` gains a `joined` field for it, the first suffix that needs one.
+
+  Both rows stay `verified: false`, with what is still open recorded in `data/REVIEW.md`: two seed words join ᠭᠦᠢ to a consonant-final stem (хичээнгүй, төсөргүй — both look lexicalized rather than productive), one stray masculine ᠭᠤᠢ against 28 invariant ᠭᠦᠢ, and whether ᠬᠢ has a harmony pair. A citation is not verification; a human reading монгол бичиг still is.
 
 - `bun run measure:suffix` — a coverage harness for the suffix engine, because grammar rules can be argued about indefinitely and a number cannot. It runs the engine over Wiktionary's `mn-decl` declension tables (already in the cached kaikki dump): 12,208 inflected Cyrillic forms tagged with lemma and case, 8,840 of whose lemmas we hold, reported by case with unresolved examples on request.
 
   It is honest about what it cannot see. The tables are template-expanded and contain rows no one checked (азот declines as *азтон*), and **"correct" means only that the right stem was found** — the test set never gives the traditional spelling, so whether the suffixes are right still takes a human reader. That limit has already earned its keep: allowing derivational suffixes scored 99 more forms "correct", every one of them the right stem with rubbish attached, which is how they came to be excluded.
+
+  It has also been wrong once. It read a candidate's stem by splitting on NNBSP, so the joined privative — which has no separator — scored as the wrong stem every single time, and the correct alternation looked like a 2-point regression. Fixed to recognize a joined suffix following the stem directly; the lesson is that a harness is code, and code that nothing checks is code that drifts.
 
 ### Changed
 

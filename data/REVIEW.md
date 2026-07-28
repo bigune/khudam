@@ -412,29 +412,35 @@ Wiktionary and corroborated inside this repo, but each carries one open question
 that a dictionary entry cannot answer and a rule table could. Эдгээр хоёр мөрийг
 хүн нягтлах шаардлагатай.
 
-- **`-гүй` → `ᠦᠭᠡᠢ` (privative).** Three spellings are in play, and the lexicon and
-  the rule currently disagree:
+- **`-гүй` (privative) — the apart/joined split is settled; two words are not.**
+  What looked like the lexicon and the rule contradicting each other turned out to
+  be a conditioned alternation, now implemented as GRAMMAR.md G14: **ᠦᠭᠡᠢ written
+  apart after a consonant-final traditional stem, ᠭᠦᠢ written joined after a
+  vowel-final one.** A maintainer checked two online converters (2026-07-28) and
+  both agreed — ааггүй apart, аальгүй joined — and the split matches 11 of the 13
+  seed words whose stem we can find. The engine's аальгүй now equals the seed's own
+  spelling code point for code point.
 
-  | | Spelling | Where it comes from |
-  | --- | --- | --- |
-  | a | `ᠨᠣᠮ ᠦᠭᠡᠢ` — apart, NNBSP | the new rule: G1 for an appositive unit, the classical free word, the ᠮᠠᠨ ᠤ ᠬᠢ precedent |
-  | b | `…ᠭᠦᠢ` — joined, contracted | **30 of the 32** -гүй words in the lexicon (аальгүй → ᠠᠭᠠᠯᠢᠭᠦᠢ) |
-  | c | `…ᠦᠭᠡᠢ` — joined, full word | exactly 1 (ааггүй → ᠠᠭᠠᠭᠦᠭᠡᠢ) |
+  Two seed words still join ᠭᠦᠢ to a **consonant**-final stem, and want a ruling:
 
-  All of b and c are machine seed, and the seed contradicting itself 30-to-1 is a
-  reason to distrust it — but 30 rows is still a convention, and a reviewer should
-  weigh it rather than wave it away. **This is user-visible now:** because an exact
-  lexicon match outranks decomposition, бичиггүй (no entry) converts to `ᠪᠢᠴᠢᠭ ᠦᠭᠡᠢ`
-  while аальгүй (has an entry) converts to `ᠠᠭᠠᠯᠢᠭᠦᠢ` — the same suffix spelled two
-  ways, decided by nothing but whether the seed happened to contain the word.
+  | Word | Seed spelling | Stem | Ends in |
+  | --- | --- | --- | --- |
+  | хичээнгүй | `ᠬᠢᠴᠢᠶᠡᠩᠭᠦᠢ` | ᠬᠢᠴᠢᠶᠡᠨ | ᠨ (consonant) |
+  | төсөргүй | `ᠲᠥᠰᠥᠷᠭᠦᠢ` | ᠲᠥᠰᠥᠷ | ᠷ (consonant) |
 
-  If **a** is right, those 30-plus lexicon entries are wrong and should be corrected
-  or dropped so the rule handles them. If **b** is right, the row should leave
-  `suffixes.json` and -гүй words belong in the lexicon individually. Хүний шийдвэр
-  шаардлагатай — энэ хоёрын аль нь зөв болохыг тогтоовол 30 гаруй бичлэг өөрчлөгдөнө.
+  Both read as **lexicalized adjectives** rather than productive privatives —
+  хичээнгүй is "diligent", not "without хичээн" — and хичээнгүй assimilates ᠨ → ᠩ
+  before the ᠭ, which a written-apart unit could not cause. If that is right they
+  are simply lexicon entries and G14 needs no change. Хүн уншиж баталгаажуулна уу.
 
-  *Sources for a:* en.wiktionary `-гүй` ("aphaeresed from үгүй"), `үгүй` → ᠦᠭᠡᠢ
-  (*ügei*); the wmk seed independently gives үгүй → ᠦᠭᠡᠢ as a standalone word.
+  Also open: **гайгүй → `ᠭᠠᠢᠭᠤᠢ`** is the only masculine ᠭᠤᠢ against 28 invariant
+  ᠭᠦᠢ (used after masculine stems 11 times and feminine 17). ᠭᠦᠢ is stored
+  invariant on the grounds that a contraction of the invariant word *ügei* should
+  be; if ᠭᠤᠢ is real, G14 needs a harmony pair and гайгүй is its evidence.
+
+  *Sources:* en.wiktionary `-гүй` ("aphaeresed from үгүй"), `үгүй` → ᠦᠭᠡᠢ (*ügei*);
+  the wmk seed independently gives үгүй → ᠦᠭᠡᠢ as a standalone word; the
+  alternation from the two-converter check above.
 - **`-х` → `ᠬᠢ` (substantive genitive).** Does ᠬᠢ have a harmony pair, i.e. a
   separate feminine form? It is stored as one invariant row because that is what
   the source shows, but the source is a dictionary entry, not a rule table, and

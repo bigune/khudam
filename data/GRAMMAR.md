@@ -140,23 +140,36 @@ Two stems sometimes both exist (сандл → сандал "chair" / санди
 
 Like G11 this is an orthographic-surface repair of our own, not a rule transcribed from Nadmid. **Status: implemented.**
 
-### G14 — Privative (хэрэглэхгүй нөхцөл): -гүй → ᠦᠭᠡᠢ
+### G14 — Privative (үгүйсгэх нөхцөл): -гүй, written apart or joined by the stem
 
-| Cyrillic | Traditional | Conditions |
-| --- | --- | --- |
-| -гүй | ᠦᠭᠡᠢ | none — attaches after anything |
+**This is the only suffix in the table that is not written apart.** It alternates on the traditional stem's final letter — the same vowel/consonant split that governs the genitive, instrumental and reflexive (G3, G7, G10), but here it decides *whether there is an NNBSP at all*:
+
+| Cyrillic | Traditional | Written | Condition |
+| --- | --- | --- | --- |
+| -гүй | ᠦᠭᠡᠢ | apart (NNBSP) | traditional stem ends in a **consonant** |
+| -гүй | ᠭᠦᠢ | **joined** — no separator | traditional stem ends in a **vowel** |
 
 ```
-номгүй      → ᠨᠣᠮ ᠦᠭᠡᠢ
-бичгүүдгүй  → ᠪᠢᠴᠢᠭ ᠦᠳ ᠦᠭᠡᠢ      (plural, then privative)
-бичиггүйгээ → ᠪᠢᠴᠢᠭ ᠦᠭᠡᠢ ᠪᠡᠨ     (privative, then possessive)
+ааг    → ᠠᠭᠠᠭ    consonant-final → ᠠᠭᠠᠭ ᠦᠭᠡᠢ
+ааль   → ᠠᠭᠠᠯᠢ   vowel-final     → ᠠᠭᠠᠯᠢᠭᠦᠢ
+ном    → ᠨᠣᠮ     consonant-final → ᠨᠣᠮ ᠦᠭᠡᠢ
+ус     → ᠤᠰᠤ     vowel-final     → ᠤᠰᠤᠭᠦᠢ
+
+бичгүүдгүй  → ᠪᠢᠴᠢᠭ ᠦᠳ ᠦᠭᠡᠢ    (plural, then privative — ᠦᠳ ends in a consonant)
+бичиггүйгээ → ᠪᠢᠴᠢᠭ ᠦᠭᠡᠢ ᠪᠡᠨ   (privative, then possessive)
 ```
 
-The suffix is a worn-down copy of a free word: English Wiktionary's `-гүй` gives the etymology as *"aphaeresed from үгүй"*, and its entry for **үгүй** gives the Mongolian-script form **ᠦᠭᠡᠢ** (*ügei*) — corroborated inside this repo, where the lexicon's own `үгүй` entry reads ᠦᠭᠡᠢ from the independent wmk bootstrap. It takes no harmony variants because Cyrillic has none: there is no *-гуй.
+Ground rule 2 earns its keep here: ааль and ус both end in a consonant in *Cyrillic*, and in a vowel in монгол бичиг. Only the traditional stem decides.
 
-The slot follows from what it combines with: after a plural (бичгүүдгүй) and before a possessive (бичиггүйгээ), and never alongside a case — which is slot 2.
+**The apart form** is a worn-down copy of a free word. English Wiktionary's `-гүй` gives the etymology as *"aphaeresed from үгүй"*, and its **үгүй** entry gives **ᠦᠭᠡᠢ** (*ügei*) — corroborated in this repo, where the lexicon's `үгүй` reads ᠦᠭᠡᠢ from the independent wmk bootstrap.
 
-⚠️ **Open for human review, and visible in output today.** The rule writes the privative apart; the lexicon writes it joined, and 30 of its 32 -гүй words use a contracted `…ᠭᠦᠢ` rather than ᠦᠭᠡᠢ at all (аальгүй → ᠠᠭᠠᠯᠢᠭᠦᠢ). Because an exact lexicon match outranks decomposition (ground rule 4), both conventions now ship: бичиггүй converts to `ᠪᠢᠴᠢᠭ ᠦᠭᠡᠢ` for want of an entry, аальгүй to `ᠠᠭᠠᠯᠢᠭᠦᠢ` because it has one. Whichever way this is ruled, one side moves — either those 30-odd entries are wrong, or this row is. Written up in [REVIEW.md](REVIEW.md). **Status: implemented, data unverified.**
+**The alternation and the joined form** come from a maintainer check of two online converters (2026-07-28), which agreed with each other: ааггүй apart, аальгүй joined. The lexicon corroborates the joined half independently — 29 seed entries write ᠭᠦᠢ after vowel-final stems, and the engine's composition of аальгүй now equals the seed's stored spelling code point for code point, though the two never saw each other. Pinned by a test.
+
+ᠭᠦᠢ is stored **invariant**, with no harmony pair: the seed writes it after masculine stems 11 times and feminine 17, which is what a contraction of the invariant word *ügei* should do.
+
+The slot follows from what it combines with: after a plural (бичгүүдгүй), before a possessive (бичиггүйгээ), never alongside a case — slot 2.
+
+⚠️ **Still open:** two seed words join ᠭᠦᠢ to a *consonant*-final stem — хичээнгүй → ᠬᠢᠴᠢᠶᠡᠩᠭᠦᠢ, төсөргүй → ᠲᠥᠰᠥᠷᠭᠦᠢ. Both look like lexicalized adjectives rather than productive privatives ("diligent", not "without хичээн"), and the first even assimilates ᠨ → ᠩ before the ᠭ, which a written-apart unit could not cause. If that reading is right they are lexicon entries and no rule change is needed; a reader of монгол бичиг should confirm. The stray masculine ᠭᠤᠢ (гайгүй → ᠭᠠᠢᠭᠤᠢ, 1 of 29) needs the same look. Written up in [REVIEW.md](REVIEW.md). **Status: implemented, data unverified.**
 
 ### G15 — Substantive genitive: -х → ᠬᠢ, only after a genitive
 
@@ -200,7 +213,10 @@ Grammar rules can be argued about indefinitely, because every rule has a convinc
 | + G12 suffix chains | 42.3% | 38.4% | 90.9% |
 | + G13 fleeting vowel | 50.0% | 46.6% | 93.1% |
 | − derivational suffixes (G12) | 48.5% | 45.4% | 93.8% |
-| + G14 privative, G15 substantive | **55.1%** | **51.8%** | **94.1%** |
+| + G14 privative, G15 substantive | 55.1% | 51.8% | 94.1% |
+| + G14 apart/joined alternation | **55.1%** | **52.0%** | **94.4%** |
+
+The last row also fixed the harness: it read a candidate's stem by splitting on NNBSP, so a *joined* suffix — which has none — scored as the wrong stem every time. `judge()` now recognizes a joined suffix following the stem directly.
 
 Two limits are load-bearing. The tables are template-expanded, so some rows are junk no one checked (азот declines as *азтон*, the template eliding a vowel a loanword does not drop). And **"right stem" is all it measures** — the test set gives the Cyrillic form, never its traditional spelling, so whether the suffixes hung off that stem are correct takes a reader of монгол бичиг. A rise is evidence, not proof. The measurement needs the cached dump, so it is a maintainer tool; the regression tests that run in CI live in `packages/converter/test/suffix.test.ts`.
 

@@ -297,7 +297,7 @@ function checkSuffixesFile(file: string): void {
       report(file, where, "Each suffix mapping must be an object wrapped in { }.");
       return;
     }
-    const allowed = ["cyrillic", "traditional", "latin", "sense", "attach", "gender", "verified", "source", "citation"];
+    const allowed = ["cyrillic", "traditional", "latin", "sense", "attach", "gender", "joined", "verified", "source", "citation"];
     for (const key of Object.keys(item)) {
       if (!allowed.includes(key)) {
         report(file, where, `Unknown field "${key}" — allowed fields are: ${quoteList(allowed)}. Is it a typo?`);
@@ -335,6 +335,15 @@ function checkSuffixesFile(file: string): void {
     }
     if ("latin" in item && (typeof item.latin !== "string" || item.latin.length === 0)) {
       report(file, where, '"latin" must be a non-empty text value when present (or remove the field).');
+    }
+    if ("joined" in item && typeof item.joined !== "boolean") {
+      report(
+        file,
+        where,
+        '"joined" must be true or false (without quotes) when present, or remove the field. ' +
+          "Set it to true only for a suffix written together with the stem, with no narrow " +
+          "no-break space between them — most suffixes are written apart, which is the default.",
+      );
     }
     if ("attach" in item && !(SUFFIX_ATTACH as readonly unknown[]).includes(item.attach)) {
       report(
