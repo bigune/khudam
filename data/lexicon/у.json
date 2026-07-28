@@ -7183,8 +7183,16 @@
     "cyrillic": "уул",
     "candidates": [
       {
+        "traditional": "ᠠᠭᠤᠯᠠ",
+        "latin": "agula",
+        "sense": "mountain",
+        "verified": true,
+        "source": "community"
+      },
+      {
         "traditional": "ᠤᠤᠯ",
         "latin": "uul",
+        "sense": "original",
         "verified": false,
         "source": "wmk-import"
       }

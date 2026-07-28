@@ -10,8 +10,27 @@ Versioning follows [Semantic Versioning](https://semver.org/): while on `0.x`, d
 
 ## [Unreleased]
 
-No `khudam` package changes — the engine and the lexicon are untouched, so
-nothing here needs an npm release. These ship to khudam.suray.mn on merge.
+The engine is untouched, but the lexicon is not: one data correction below
+changes converter output and so needs an npm patch release. Everything else
+ships to khudam.suray.mn on merge.
+
+### Changed
+
+- **уул** now returns two candidates: `ᠠᠭᠤᠯᠠ` (_agula_, "mountain") beside the
+  existing `ᠤᠤᠯ` (_uul_, "original", as in уул нь). This is the wmk seed's
+  known one-to-many collapse — the flagship example of it, and the first entry
+  fixed through the community pipeline rather than by hand: someone reported
+  the missing meaning from the converter, the weekly job wrote it up, and a
+  human made the change.
+
+  `ᠠᠭᠤᠯᠠ` is also **the first `verified: true` candidate in the lexicon** — one
+  of 28,538. The maintainer read it and said so; that is the only thing that
+  flag has ever meant, and no script may set it. `ᠤᠤᠯ` keeps
+  `verified: false`: it came from the machine seed and nobody has checked it.
+
+  ⚠️ Converter output for уул changes. `ᠠᠭᠤᠯᠠ` is listed first and is now the
+  default, on the grounds that the mountain sense is the common one; frequency
+  data can reorder it later.
 
 ### Added
 

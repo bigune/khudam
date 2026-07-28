@@ -45,7 +45,10 @@ describe("lookupWord", () => {
 describe("decodeCandidates (ambiguous entries)", () => {
   test("a one-to-many entry decodes into multiple labeled candidates", () => {
     // Synthetic fixture in the compiled format: the уул homonym pair from
-    // README. The imported data does not carry it yet — this pins the shape.
+    // README, which the lexicon now carries for real. It stays synthetic so
+    // the decoder's contract is pinned by the test rather than by data a
+    // reviewer may relabel — including the verified flag, which the real
+    // entry does not have.
     const rows: CompactCandidate[] = [
       ["ᠠᠭᠤᠯᠠ", "agula", "mountain", 1, "m"],
       ["ᠤᠤᠯ", "uul", "original", 0, "w"],
