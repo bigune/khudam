@@ -73,7 +73,7 @@ Nadmid 1990 pp. 15–16: ᠳᠤ/ᠳᠦ generally; ᠲᠤ/ᠲᠦ after the hard f
 | -д, -нд | ᠳᠤ / ᠳᠦ | masculine / feminine |
 | -т | ᠲᠤ / ᠲᠦ | masculine / feminine |
 
-**Status: implemented, data unverified.**
+**Status: implemented, data unverified — and the rows disagree with the cited page.** Nadmid p. 15 gives **-тур/-түр** and **-дур/-дүр**, adding that they may be written short as -т/-д *"ярианы хэлний дагуу"*; our `ᠲᠤ`/`ᠳᠤ` (*tu/du*) is neither. He also records a further dative **-а/-э** after н- and р-final words (танаа, модноо, газраа, өдрөө) that the table lacks entirely. Both written up in [REVIEW.md](REVIEW.md).
 
 ### G6 — Ablative (гарах)
 
@@ -89,7 +89,9 @@ Nadmid 1990 p. 16: ᠲᠠᠢ/ᠲᠡᠢ after anything (-тай/-той → ᠲ�
 
 ### G9 — Plural
 
-Nadmid 1990 pp. 14–15: ᠨᠤᠭᠤᠳ/ᠨᠦᠭᠦᠳ after vowels and н/й; ᠤᠳ/ᠦᠳ after other consonants; ᠴᠤᠳ/ᠴᠦᠳ (collective) after some human-related nouns. Cyrillic -нууд/-нүүд, -ууд/-үүд, -чууд/-чүүд respectively. ᠨᠠᠷ/ᠨᠡᠷ is excluded: Cyrillic writes нар as a separate word, so it never reaches the suffix engine — it belongs in the lexicon. **Status: implemented, data unverified.**
+Nadmid 1990 pp. 14–15: ᠨᠤᠭᠤᠳ/ᠨᠦᠭᠦᠳ after vowels and н/й; ᠤᠳ/ᠦᠳ after other consonants; ᠴᠤᠳ/ᠴᠦᠳ (collective) after some human-related nouns. Cyrillic -нууд/-нүүд, -ууд/-үүд, -чууд/-чүүд respectively. ᠨᠠᠷ/ᠨᠡᠷ is excluded: Cyrillic writes нар as a separate word, so it never reaches the suffix engine — it belongs in the lexicon. Nadmid confirms the two main plurals are **тусгай бичнэ**, i.e. our NNBSP treatment.
+
+⚠️ **Missing: the -д plural**, which he writes **залгаж** — joined to the noun, deleting a stem-final н/й/р/л (сурагчид, морьд, эзэд, ноход, нөхөд, түшмэд). Adding it needs the joined-suffix capability the engine does not currently have. **Status: implemented, data unverified.**
 
 ### G10 — Reflexive-possessive (хамаатуулах)
 
@@ -222,6 +224,9 @@ Two limits are load-bearing. The tables are template-expanded, so some rows are 
 ## Known gaps (future work, roughly in value order)
 
 - **Suffix chains beyond depth 2** — номуудынхаа (plural + genitive + substantive + possessive) still misses; G12 stops at two, and G15 makes three-suffix chains ordinary rather than exotic. Nadmid p. 18's ахынхаа/дэвтрийнхээ examples are exactly this shape.
+- **Dative-locative rows disagree with Nadmid p. 15** (see G5) — his -тур/-дур, or his short -т/-д, against our ᠲᠤ/ᠳᠤ. Highest-value correction in the table, since the dative is 1,137 forms in the measurement set.
+- **Dative -а/-э after н/р** (танаа, газраа) — absent from the table (Nadmid p. 16).
+- **The -д plural** — absent, and written joined (Nadmid p. 15).
 - **Fused case + possessive** — Nadmid p. 18 allows -даган/-дэгэн/-таган/-тэгэн and -йуган/-йүгэн as an alternative to the written-apart chain the engine emits (G12). Adding them needs a human to type the traditional forms off the scan.
 - **-нхан** (манайхан "our people") — the collective of G15's substantive, still absent.
 - **Genitive is the weakest case at 30.6%** — the largest single bucket and the lowest score of the core six. Worth a look at G3's conditions before adding anything new.

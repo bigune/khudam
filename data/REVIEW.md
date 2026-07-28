@@ -394,6 +394,52 @@ last of these have their own questions below. Худам бичгийн нөхц
 баталгаажуулахад хялбар. This is the highest-leverage review in the repo: a closed
 set of 86 rows that the converter attaches to thousands of words.
 
+### Nadmid sweep, 2026-07-28 — G3–G13 checked against the digital edition
+
+Now that the rulebook's Cyrillic text extracts, every rule row was compared with what
+Nadmid actually says. **Only his Cyrillic rule statements and romanizations are used**
+— his монгол бичиг is a PUA font, so no traditional spelling below is verified, and
+the sweep can confirm a rule's *conditions* but never its code points.
+
+**Confirmed, no action:** G3 genitive (-ун/-үн, -у/-ү, -йин), G4 accusative (-и, -йи),
+G6 ablative (-ача/-эчэ after anything), G7 instrumental (-бар/-бэр after vowel and й,
+-ийар/-ийэр after other consonants), G8 comitative (-тай/-тэй after anything, -луга/
+-лүгэ the alternative he says was preferred for the "together with" sense), G10
+reflexive-possessive (-бан/-бэн after vowel and й, -ийан/-ийэн otherwise), and the
+two main plurals. His plurals are explicitly **тусгай бичнэ**, which is our NNBSP
+treatment (G1).
+
+**Three disagreements, all needing a human:**
+
+1. **G5 dative-locative — our form matches neither of his.** Nadmid p. 15 gives
+   **-тур/-түр** (after hard дэвсгэр) and **-дур/-дүр** (after vowel and soft
+   дэвсгэр), with the note that *"ярианы хэлний дагуу «–т, -д» гэж бичиж болдог"* —
+   they may be written short, as -т/-д, following speech. Our rows are `ᠲᠤ`/`ᠲᠦ`
+   (*tu/tü*) and `ᠳᠤ`/`ᠳᠦ` (*du/dü*): neither his long form nor his short one. They
+   are cited to "Nadmid 1990 pp. 15-16", so either the citation or the rows are
+   wrong. His hard-дэвсгэр list (б, г, эг, р, с, д) does match ours.
+
+2. **G5 — a whole dative variant is missing.** *"Дээрхээс гадна өгөх оршихын тийн
+   ялгалын «–а, -э» нөхцөл байдаг"*, used after words ending in **н** and **р**:
+   танаа (танд), модноо (модонд), газраа (газарт), өдрөө (өдөрт). No such row exists.
+
+3. **G9 — the -д plural is missing, and it is written joined.** *"нэр үгэнд **залгаж**
+   бичих бөгөөд харин «-н, -й, -р, -л» гийгүүлэгчийг хасч залгамуй"* — attached to the
+   noun, deleting a stem-final н/й/р/л: сурагчид, морьд, эзэд, ноход, нөхөд, түшмэд.
+   He contrasts this explicitly with the тусгай plurals. The engine cannot express a
+   joined suffix at all (the `joined` field was added and then removed with the
+   privative alternation), so adding this means bringing that capability back.
+
+**One flag downgraded:** the `-чууд`/`-чүүд` row below was suspected of being misread
+from a low-resolution scan. The Cyrillic side is confirmed — Nadmid gives it for
+human-related nouns, with эхчүүд, эмэгтэйчүүд, залуучууд, монголчууд, багачууд. Only
+its traditional spelling remains unverified, like every other row.
+
+**G14 corroborated from a second direction:** Nadmid has a **§ Үгүйсгэх сул үг**,
+classing the negators as **сул үг** — the same category *Монгол бичгийн гарын авлага-I*
+puts үгүй in. Its forms are PUA-only, so no code points, but two independent sources
+now agree on the category, which is what decides written-apart.
+
 Least certain rows, in order:
 
 - `-чууд`/`-чүүд` → `ᠴᠤᠳ`/`ᠴᠦᠳ` (collective plural) — read from a low-resolution scan
