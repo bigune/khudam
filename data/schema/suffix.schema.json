@@ -44,7 +44,7 @@
     "source": {
       "type": "string",
       "description": "Where this row came from.",
-      "enum": ["wmk-import", "manual", "community"]
+      "enum": ["wmk-import", "wiktionary", "manual", "community"]
     },
     "citation": {
       "type": "string",
