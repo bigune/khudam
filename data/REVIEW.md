@@ -438,9 +438,20 @@ that a dictionary entry cannot answer and a rule table could. Эдгээр хо�
   invariant on the grounds that a contraction of the invariant word *ügei* should
   be; if ᠭᠤᠢ is real, G14 needs a harmony pair and гайгүй is its evidence.
 
-  *Sources:* en.wiktionary `-гүй` ("aphaeresed from үгүй"), `үгүй` → ᠦᠭᠡᠢ (*ügei*);
-  the wmk seed independently gives үгүй → ᠦᠭᠡᠢ as a standalone word; the
-  alternation from the two-converter check above.
+  **Now backed by a published rule, so this half is no longer open.** *Монгол
+  бичгийн гарын авлага-I* (nccd.gov.mn), х. 31 lists үгүй among the **сул үг** —
+  free words, explicitly separated from дагавар/нөхцөл — and says it follows the
+  preceding word *"өмнөх үгийн эр, эм эгшгийг үл харгалзан"*. That settles both
+  written-apart and no-harmony-pair, and groups it with the directive руу.
+
+  Checked and unhelpful: **toli.gov.mn** covers Cyrillic orthography only and says
+  so; **Nadmid 1990** is 45 pages of scan images with no text layer — sampled, no
+  privative section found, though absence here is not evidence of absence.
+
+  *Sources:* the handbook above; en.wiktionary `-гүй` ("aphaeresed from үгүй"),
+  `үгүй` → ᠦᠭᠡᠢ (*ügei*); the wmk seed independently gives үгүй → ᠦᠭᠡᠢ as a
+  standalone word; mongoltoli.mn via maintainer for the apart-after-vowel-stem
+  check that killed the alternation.
 - **`-х` → `ᠬᠢ` (substantive genitive).** Does ᠬᠢ have a harmony pair, i.e. a
   separate feminine form? It is stored as one invariant row because that is what
   the source shows, but the source is a dictionary entry, not a rule table, and
