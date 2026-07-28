@@ -507,6 +507,61 @@ What a ruling needs, and what this repo cannot supply on its own:
 If adopted it is a mechanical sweep like Decision 001 — one script, one patch
 release — but it must be decided at code-point level first. Хүн шийдэх ёстой.
 
+### What Nadmid 1990 says — and why it also challenges Decision 001
+
+A **digitally typeset** Nadmid (Acrobat Distiller, 2009, from `Durem.doc`) turns out
+to have an extractable text layer, unlike the coo.mn scan. Its монгол бичиг is a
+legacy Private-Use-Area font (~13,000 PUA characters) so **script code points are
+still not usable**, but its Cyrillic rule text and its romanizations are, and §
+*Хос эгшгийг тэмдэглэхүй* is directly on point.
+
+**Solid, and independent of any encoding question** — the romanizations:
+
+| Nadmid's structure | Examples he gives |
+| --- | --- |
+| ай = **айи**, ой = **ойи**, уй = **уйи**, үй = **үйи** | аймаг → **айимаг**, ойр → **ойира**, туйлах → **туйилаху**, хүйтэн → **хүйитэн**, түймэр → **түйимэр** |
+| word-final: vowel + **й** | нохой → **нохай**, балай → **балай**, **үгүй → үгэй** |
+
+He also classes **й as a дэвсгэр consonant** — one of the five soft codas, listed
+beside н, л, м, ң — and devotes a paragraph to the two-long-teeth ambiguity itself
+(*"энэ хоёр урт шүд юуг тэмдэглэсэн бэ гэдэг асуулт гардаг"*), which is the same
+debate ENCODING.md Decision 001 records from Liang Hai.
+
+**Suggestive, but NOT usable as a code-point ruling.** Where the digitizer happened
+to type standard Unicode instead of PUA, the two rules differ:
+
+| Rule | As extracted | Reading |
+| --- | --- | --- |
+| medial diphthong | `эгшиг + (ᠶ , й) гийгүүлэгч + (U+E01C , и) эгшиг` | vowel + **U+1836** + и |
+| word-final | `эгшиг + (U+E01C, й) гийгүүлэгч` | vowel + **U+E01C** |
+| soft coda list | `ᠨ - н, ᠯ - л, ᠮ - м, U+E01C - й, ᠩ - ң` | й is U+E01C, the others standard |
+
+U+E01C is glossed as **и** in the first row and **й** in the other two, which reads
+as "the letter ᠢ, spelling the vowel и and the coda й" — while the medial diphthong
+gets a real **ᠶ U+1836**. If that holds, Nadmid's system is *medial* ᠶ + ᠢ but
+*word-final* ᠢ alone.
+
+⚠️ **Do not act on that paragraph.** The PDF mixes a Unicode font with a PUA font
+inconsistently — four of five soft codas came out standard and the fifth did not —
+so the stray ᠶ may be the 2009 digitizer's choice rather than the 1990 print, and
+mapping PUA → Unicode is exactly the presentation-form-to-logical-letter inference
+ground rule 3 forbids. It needs the font's mapping table, or a human with the book.
+
+**If it does hold, the consequences run in both directions:**
+
+- Word-final ᠢ would be *confirmed*, and mongoltoli.mn's ᠦᠭᠡᠶ would be the house
+  style rather than the standard — the 1,372 candidates stay as they are.
+- **Decision 001 would be contradicted**, because Nadmid's medial structure (айимаг,
+  хүйитэн) is exactly the ᠶᠢ digraph that decision removed from 2,780 entries. That
+  decision cites UTN #57's modern shaping model; Nadmid describes the traditional
+  orthography. They may be answering different questions, or they may genuinely
+  conflict — and per ground rule 4 a decision is reversible with evidence, so this
+  belongs in front of a human either way.
+
+*Source: Я. Надмид, Монгол бичгийн зөв бичих толь бичиг, Улсын хэвлэлийн газар,
+1990 — digital edition, § Хос эгшгийг тэмдэглэхүй and § Дэвсгэр үсэг. Copyrighted:
+restated with citation, never copied into this repo.*
+
 ### Two lexicon entries mongoltoli.mn contradicts
 
 Separate from the letter question, and unblocked by it:
