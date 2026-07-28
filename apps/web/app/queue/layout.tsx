@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 // and read as the same page in a tab strip, in history, and in a shared link —
 // which is the opposite of what this page is asking someone to do.
 export const metadata: Metadata = {
-  title: "Хянах дараалал — Худам",
+  title: "Хянагдахаар хүлээгдэж буй үгс — Худам",
   description:
     "Монгол бичгийн зурлагыг хянаж, баталгаажуулахад туслах дараалал. " +
     "Help verify traditional Mongolian spellings, one question at a time.",

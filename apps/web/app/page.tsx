@@ -131,20 +131,20 @@ export default function Home() {
         <p className="en" lang="en">
           open-source Cyrillic → Traditional Mongolian Script converter
         </p>
-        {/* The queue's only way in used to be a sentence buried in the
-            contribute section, which is a page-length scroll from here — so in
-            practice nobody found it who did not already know it existed. It
-            belongs beside the invitation that is already in the header. */}
+        {/* "Let's improve it together" points at the queue, not at GitHub.
+            This line is read by people who came to convert a word, and for
+            them the queue is the only door that needs neither an account nor
+            an error to have gone wrong first. Anyone who wants the repository
+            finds it in the footer and in the contribute section below — that
+            audience is good at finding repositories. */}
         <p className="stats">
           Үгсийн санд {LEXICON_ENTRY_COUNT.toLocaleString("mn-MN")} үг ·{" "}
-          <a href={REPO_URL} target="_blank" rel="noreferrer">
-            хамтдаа сайжруулъя
-          </a>
-          {signalsEnabled && (
-            <>
-              {" · "}
-              <Link href="/queue">хянах дараалал</Link>
-            </>
+          {signalsEnabled ? (
+            <Link href="/queue">хамтдаа сайжруулъя</Link>
+          ) : (
+            <a href={REPO_URL} target="_blank" rel="noreferrer">
+              хамтдаа сайжруулъя
+            </a>
           )}
         </p>
       </header>
@@ -395,8 +395,8 @@ export default function Home() {
                 script can help without having come here with a problem. */}
             <p>
               Монгол бичиг уншдаг бол{" "}
-              <Link href="/queue">хянах дараалалд</Link> нэг минут зарж, хэдэн
-              зурлагыг зөв эсэхийг хэлж өгөөрэй. Хариулт бүр аль үгийг эхэлж
+              <Link href="/queue">хянагдахаар хүлээгдэж буй үгсээс</Link> хэдэн
+              зурлагыг нь зөв эсэхийг хэлж өгөөрэй. Хариулт бүр аль үгийг эхэлж
               хянахыг зааж өгдөг.
             </p>
             <p className="en" lang="en">
@@ -444,7 +444,9 @@ export default function Home() {
       </section>
 
       <footer>
-        {signalsEnabled && <Link href="/queue">Хянах дараалал</Link>}
+        {signalsEnabled && (
+          <Link href="/queue">Хянагдахаар хүлээгдэж буй үгс</Link>
+        )}
         <a href={SURAY_URL} target="_blank" rel="noopener">
           Үндсэн вебсайт
         </a>

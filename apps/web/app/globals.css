@@ -189,7 +189,9 @@ textarea,
 .report-x,
 .proposal-input,
 .proposal-submit,
-.queue-alt {
+.queue-alt,
+.queue-step,
+.queue-review-row {
   transition:
     border-color var(--ease),
     background-color var(--ease),
@@ -657,6 +659,43 @@ textarea,
   color: var(--muted);
 }
 
+/* One other spelling sits beside the specimen rather than under it: with
+   exactly two forms the comparison IS the question, and vertical script is
+   read side by side or not at all. The ratio is the hierarchy — the specimen
+   is what you answer about, the aside is only context. */
+.queue-compare {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
+.queue-compare > .queue-card {
+  flex: 3 1 0;
+  min-width: 0;
+}
+
+.queue-aside {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.queue-aside .queue-alt {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Below this the two cards would each be too narrow for a column of Mongolian,
+   so they stack — and the aside keeps its label, which is what stops it from
+   reading as a second thing to answer. */
+@media (max-width: 34rem) {
+  .queue-compare {
+    flex-direction: column;
+  }
+}
+
 /* The specimen under review. Centred like a chip on the converter, and given
    more room than one: on this page the spelling is not a choice among several,
    it is the whole question. */
@@ -746,6 +785,122 @@ textarea,
   max-height: 7rem;
   font-size: var(--text-mong);
   line-height: 1.35;
+}
+
+/* An answer already given, shown as a state rather than an action — the same
+   accent border the converter uses for a picked chip, because it means the
+   same thing: this is the one you chose, and you may choose again. */
+.choice.chosen {
+  border-color: var(--accent);
+  background: var(--panel);
+}
+
+.choice.chosen .choice-title::after {
+  content: " ✓";
+  color: var(--accent);
+}
+
+/* Moving through the set. Quiet, because navigation is not the work — and
+   always both directions, so going back is as ordinary as going on. */
+.queue-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.queue-step {
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.queue-step:hover:not(:disabled),
+.queue-step:focus-visible:not(:disabled) {
+  color: var(--ink);
+  background: var(--neutral-bg);
+}
+
+.queue-step:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.queue-count {
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+/* The set before it is sent: every answer visible at once, and every row a way
+   back to the question it came from. This is the page that makes a misclick
+   survivable. */
+.queue-review {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.queue-review-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--ink);
+  text-align: left;
+}
+
+.queue-review-row:hover,
+.queue-review-row:focus-visible {
+  border-color: var(--accent);
+}
+
+.queue-review-word {
+  flex: 1;
+  font-weight: 600;
+}
+
+/* Horizontal here on purpose: a row is an index entry, not a specimen, and a
+   vertical column would make every row three lines tall. */
+.queue-review-trad {
+  flex: 2;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--muted);
+}
+
+.queue-review-answer {
+  flex: 0 0 auto;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  padding: 0.1rem 0.55rem;
+}
+
+.queue-review-answer.yes {
+  color: var(--verified);
+  background: var(--verified-bg);
+}
+
+.queue-review-answer.no {
+  color: var(--warn);
+  background: var(--warn-bg);
+}
+
+.queue-review-answer.none {
+  color: var(--neutral);
+  background: var(--neutral-bg);
 }
 
 .report-status {

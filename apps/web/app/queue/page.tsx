@@ -3,15 +3,15 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import {
-  recordProposal,
-  recordVerdict,
+  recordQueueAnswers,
   signalsEnabled,
   type ProposalText,
+  type QueueAnswer,
 } from "../../lib/signals";
 import { ProposalForm } from "../proposal-form";
 
 /**
- * The verification queue: one question at a time, answered by people who read
+ * The verification queue: one spelling at a time, answered by people who read
  * монгол бичиг.
  *
  * Every question has the same shape, and it is the weakest one that still
@@ -21,6 +21,11 @@ import { ProposalForm } from "../proposal-form";
  * delete. Asking "which of these is right?" would force a choice where the
  * honest answer is often "both".
  *
+ * Answers are held in a local draft and stay editable until the set is sent.
+ * That is the difference between a form and an interrogation: a misclick on
+ * question two is fixable from question seven, and closing the tab loses
+ * nothing — the draft stays on the device until it is sent or skipped.
+ *
  * An answer is not verification. It is a count a reviewer reads beside the
  * candidate; `verified: true` is still one human and one merged pull request.
  */
@@ -29,13 +34,14 @@ const QUEUE_URL = "/queue.json";
 const REPO_URL = "https://github.com/bigune/khudam";
 const DATA_LICENSE_URL = `${REPO_URL}/blob/main/data/LICENSE`;
 const ANSWERED_KEY = "khudam.answered";
+const DRAFT_KEY = "khudam.queue-draft";
 
-/** Questions per sitting. Nobody owes the lexicon more than a few minutes, and
- *  a queue that never says "that's enough" is one people leave rather than
+/** Questions per set. Nobody owes the lexicon more than a few minutes, and a
+ *  queue that never says "that is enough" is one people leave rather than
  *  finish. Continuing is one button. */
-const BATCH = 10;
+const SET_SIZE = 10;
 
-/** How many answered ids to remember. Enough to never repeat a question in
+/** How many answered ids to remember. Enough never to repeat a question in
  *  practice; bounded so localStorage cannot grow without limit. */
 const ANSWERED_MEMORY = 5000;
 
@@ -63,50 +69,81 @@ interface Queue {
   questions: Question[];
 }
 
-function readAnswered(): Set<string> {
-  if (typeof window === "undefined") return new Set();
+/** `verdict: null` is "I don't know" — a question visited and left alone. It is
+ *  never sent: silence is not evidence. */
+interface Answer {
+  verdict: boolean | null;
+  proposal?: ProposalText;
+}
+
+type Answers = Record<string, Answer>;
+
+function readJson<T>(key: string, fallback: T): T {
+  if (typeof window === "undefined") return fallback;
   try {
-    const raw = window.localStorage.getItem(ANSWERED_KEY);
-    return new Set(raw ? (JSON.parse(raw) as string[]) : []);
+    const raw = window.localStorage.getItem(key);
+    return raw ? (JSON.parse(raw) as T) : fallback;
   } catch {
-    return new Set();
+    return fallback;
   }
 }
 
-function rememberAnswered(ids: Set<string>): void {
+function writeJson(key: string, value: unknown): void {
   try {
-    window.localStorage.setItem(
-      ANSWERED_KEY,
-      JSON.stringify([...ids].slice(-ANSWERED_MEMORY)),
-    );
+    window.localStorage.setItem(key, JSON.stringify(value));
   } catch {
-    // Private modes throw on write. Losing the memory only means a question
-    // may be asked twice, which is not worth failing an answer over.
+    // Private modes throw on write. The cost is a question asked twice, or a
+    // draft that does not survive a reload — never a failed answer.
   }
 }
 
-/** Why this candidate is being asked about — said plainly, because it changes
- *  how much weight the reader should give their own uncertainty. */
-const REASON_NOTE: Record<Question["reason"], string> = {
-  flagged: "Үүнийг хэн нэгэн буруу гэж мэдэгдсэн.",
-  conflict:
-    "Хоёр өөр эх сурвалж энэ үгийг өөр өөрөөр бичсэн — хоёулаа зөв ч байж болно.",
-  traffic: "Энэ хувилбарыг олон хүн сонгосон ч хүн хараахан хянаагүй байна.",
-};
+/** Why this candidate is being asked about, said plainly: it changes how much
+ *  weight a reader should give their own uncertainty. */
+function reasonNote(question: Question): string {
+  if (question.reason === "flagged")
+    return "Үүнийг хэн нэгэн буруу гэж мэдэгдсэн.";
+  if (question.reason === "traffic")
+    return "Энэ хувилбарыг олон хүн сонгосон ч хүн хараахан хянаагүй байна.";
+  // Wording follows the count rather than assuming two: entries with three and
+  // four recorded spellings already exist, and more sources are planned.
+  return (question.alternatives?.length ?? 0) > 1
+    ? "Энэ үгийн хэд хэдэн өөр зурлага бүртгэгдсэн — нэгээс олон нь зөв байж болно."
+    : "Хоёр өөр эх сурвалж энэ үгийг өөр өөрөөр бичсэн — хоёулаа зөв ч байж болно.";
+}
+
+function AlternativeCard({ alt }: { alt: Alternative }) {
+  return (
+    <span className="queue-alt">
+      <span className="queue-alt-trad mongolian" lang="mn-Mong">
+        {alt.traditional}
+      </span>
+      {alt.sense && <span className="sense">{alt.sense}</span>}
+      {alt.verified && <span className="badge verified">баталгаажсан ✓</span>}
+    </span>
+  );
+}
 
 export default function QueuePage() {
   const [queue, setQueue] = useState<Queue | null>(null);
   const [failed, setFailed] = useState(false);
+  const [set, setSet] = useState<Question[]>([]);
   const [at, setAt] = useState(0);
-  const [answeredThisVisit, setAnsweredThisVisit] = useState(0);
-  const [batchDone, setBatchDone] = useState(false);
+  const [answers, setAnswers] = useState<Answers>({});
   const [busy, setBusy] = useState(false);
   const [sendFailed, setSendFailed] = useState(false);
-  const [proposing, setProposing] = useState(false);
+  const [sent, setSent] = useState(0);
   const answered = useRef<Set<string>>(new Set());
+  const pool = useRef<Question[]>([]);
+
+  function takeSet(remaining: Question[]): void {
+    setSet(remaining.slice(0, SET_SIZE));
+    setAnswers({});
+    setAt(0);
+    setSendFailed(false);
+  }
 
   useEffect(() => {
-    answered.current = readAnswered();
+    answered.current = new Set(readJson<string[]>(ANSWERED_KEY, []));
     let cancelled = false;
     fetch(QUEUE_URL)
       .then((r) =>
@@ -114,14 +151,32 @@ export default function QueuePage() {
       )
       .then((data: Queue) => {
         if (cancelled) return;
-        // Questions this browser has already answered are dropped here rather
-        // than at the source: the file is one static artifact served to
-        // everyone, and who answered what is nobody's business but the
-        // browser's.
-        setQueue({
-          pool: data.pool,
-          questions: data.questions.filter((q) => !answered.current.has(q.id)),
+        // Questions this browser has already sent are dropped here rather than
+        // at the source: the file is one static artifact served to everyone,
+        // and who answered what is nobody's business but the browser's.
+        const remaining = data.questions.filter(
+          (q) => !answered.current.has(q.id),
+        );
+        pool.current = remaining;
+        setQueue({ pool: data.pool, questions: remaining });
+
+        // An unsent draft resumes as it was left, in its original order —
+        // otherwise stopping mid-set would quietly discard the work.
+        const draft = readJson<{ ids: string[]; answers: Answers }>(DRAFT_KEY, {
+          ids: [],
+          answers: {},
         });
+        const byId = new Map(remaining.map((q) => [q.id, q]));
+        const resumed = draft.ids
+          .map((id) => byId.get(id))
+          .filter((q): q is Question => !!q);
+        if (resumed.length > 0) {
+          setSet(resumed);
+          setAnswers(draft.answers);
+          setAt(0);
+        } else {
+          takeSet(remaining);
+        }
       })
       .catch(() => {
         if (!cancelled) setFailed(true);
@@ -131,73 +186,74 @@ export default function QueuePage() {
     };
   }, []);
 
-  const question = queue?.questions[at];
+  // The draft is written on every change, so "stop" needs no button: closing
+  // the tab is stopping, and coming back is continuing.
+  useEffect(() => {
+    if (set.length > 0)
+      writeJson(DRAFT_KEY, { ids: set.map((q) => q.id), answers });
+  }, [set, answers]);
 
-  function advance(): void {
-    setProposing(false);
-    setSendFailed(false);
+  const question = set[at];
+  const reviewing = set.length > 0 && at >= set.length;
+  const answeredCount = set.filter(
+    (q) => answers[q.id]?.verdict != null,
+  ).length;
+  const sendable: QueueAnswer[] = set
+    .filter((q) => answers[q.id]?.verdict != null)
+    .map((q) => ({
+      anchor: {
+        cyrillic: q.cyrillic,
+        traditional: q.traditional,
+        sense: q.sense,
+      },
+      questionId: q.id,
+      verdict: answers[q.id]!.verdict as boolean,
+      proposal: answers[q.id]!.proposal,
+    }));
+
+  function answer(id: string, verdict: boolean | null): void {
+    setAnswers((a) => ({ ...a, [id]: { ...a[id], verdict } }));
+    // Yes and don't-know are finished thoughts, so they move on. No opens the
+    // spelling field, which it would be pointless to scroll past.
+    if (verdict !== false) setAt((i) => i + 1);
+  }
+
+  function saveProposal(id: string, proposal: ProposalText): void {
+    setAnswers((a) => ({ ...a, [id]: { ...a[id]!, proposal } }));
     setAt((i) => i + 1);
   }
 
-  async function answer(verdict: boolean): Promise<void> {
-    if (!question || busy) return;
+  async function send(): Promise<void> {
     setBusy(true);
     setSendFailed(false);
-    const ok = await recordVerdict(
-      {
-        cyrillic: question.cyrillic,
-        traditional: question.traditional,
-        sense: question.sense,
-      },
-      verdict,
-      question.id,
-    );
+    const ok = await recordQueueAnswers(sendable);
     setBusy(false);
     if (!ok) {
       setSendFailed(true);
       return;
     }
-    answered.current.add(question.id);
-    rememberAnswered(answered.current);
-    const count = answeredThisVisit + 1;
-    setAnsweredThisVisit(count);
-    // "No" is the answer worth following up: someone who can tell a spelling is
-    // wrong sometimes knows the right one, and this is the moment to ask.
-    if (verdict) {
-      if (count % BATCH === 0) setBatchDone(true);
-      advance();
-    } else {
-      setProposing(true);
-    }
+    for (const q of set) answered.current.add(q.id);
+    writeJson(ANSWERED_KEY, [...answered.current].slice(-ANSWERED_MEMORY));
+    writeJson(DRAFT_KEY, { ids: [], answers: {} });
+    setSent((n) => n + sendable.length);
+    pool.current = pool.current.filter((q) => !answered.current.has(q.id));
+    setQueue((q) => (q ? { ...q, questions: pool.current } : q));
+    takeSet(pool.current);
   }
 
-  async function propose(text: ProposalText): Promise<void> {
-    if (!question) return;
-    setBusy(true);
-    setSendFailed(false);
-    const ok = await recordProposal(
-      {
-        cyrillic: question.cyrillic,
-        traditional: question.traditional,
-        sense: question.sense,
-      },
-      "correction",
-      text,
-      "queue",
-    );
-    setBusy(false);
-    if (!ok) {
-      setSendFailed(true);
-      return;
-    }
-    if (answeredThisVisit % BATCH === 0) setBatchDone(true);
-    advance();
+  function skipSet(): void {
+    // Walking away from a set costs nothing: its questions stay unanswered and
+    // come round again in a later one.
+    writeJson(DRAFT_KEY, { ids: [], answers: {} });
+    const rest = pool.current.filter((q) => !set.includes(q));
+    pool.current = rest;
+    takeSet(rest);
   }
 
   return (
     <main>
       <header>
-        <h1>Хянах дараалал</h1>
+        <h1>Хянагдахаар хүлээгдэж буй үгс</h1>
         <p className="subtitle">
           Монгол бичиг уншдаг хүн бүрийн нэг минут хэрэгтэй
         </p>
@@ -221,20 +277,18 @@ export default function QueuePage() {
       {failed && (
         <section className="info">
           <p>
-            Дарааллыг ачаалж чадсангүй. Сүлжээгээ шалгаад хуудсыг дахин ачаална
+            Жагсаалтыг ачаалж чадсангүй. Сүлжээгээ шалгаад хуудсыг дахин ачаална
             уу.
           </p>
         </section>
       )}
 
-      {queue && !question && (
+      {queue && set.length === 0 && (
         <section className="info">
           <h2>Одоохондоо энэ л байна</h2>
           <p>
-            {answeredThisVisit > 0
-              ? `Баярлалаа — та ${answeredThisVisit} асуултад хариуллаа. `
-              : ""}
-            Энэ хөтчөөр хариулах асуулт үлдсэнгүй. Дараалал долоо хоног тутам
+            {sent > 0 ? `Баярлалаа — та ${sent} хариулт илгээлээ. ` : ""}
+            Энэ хөтчөөр хариулах үг үлдсэнгүй. Жагсаалт долоо хоног тутам
             шинэчлэгддэг тул дараа дахин ирээрэй.
           </p>
           <p className="links-row">
@@ -246,75 +300,62 @@ export default function QueuePage() {
         </section>
       )}
 
-      {question && batchDone && (
-        <section className="info">
-          <h2>Баярлалаа</h2>
-          <p>
-            Та энэ удаад {answeredThisVisit} асуултад хариуллаа. Хариулт бүр
-            хянагчид хаана харахыг зааж өгдөг — баталгаажуулах эцсийн шийдвэрийг
-            хүн гаргана.
-          </p>
-          <div className="choices">
-            <button className="choice" onClick={() => setBatchDone(false)}>
-              <span className="choice-title">Үргэлжлүүлэх</span>
-              <span className="choice-hint">Дахин {BATCH} асуулт</span>
-            </button>
-          </div>
-        </section>
-      )}
-
-      {question && !batchDone && (
+      {question && (
         <section className="queue">
-          {/* Naming the specimen rather than the step. "Асуулт" left the reader
-              to work out which of the spellings on screen was the one being
-              asked about — and the alternatives below it made that a real
-              question. */}
           <span className="field-label">
             Хянаж буй зурлага
             <span className="queue-progress">
-              {(answeredThisVisit % BATCH) + 1} / {BATCH}
+              {at + 1} / {set.length}
             </span>
           </span>
 
-          <div className="queue-card">
-            <span className="queue-word">{question.cyrillic}</span>
-            <span className="queue-trad mongolian" lang="mn-Mong">
-              {question.traditional}
-            </span>
-            <span className="queue-meta">
-              {question.latin && (
-                <span className="latin">{question.latin}</span>
-              )}
-              {question.sense && (
-                <span className="sense">{question.sense}</span>
-              )}
-              <span className="badge unverified">
-                {question.corroborated
-                  ? "хоёр эх сурвалж таарсан"
-                  : "баталгаажаагүй"}
+          {/* Side by side while there is exactly one other spelling — the
+              comparison IS the question in that case, and it is by far the
+              common one (375 of the 384 entries with more than one candidate).
+              Three or more stack below instead: at that width the vertical
+              script becomes unreadable, and "both" stops being the shape of
+              the answer anyway. */}
+          <div
+            className={
+              question.alternatives?.length === 1 ? "queue-compare" : undefined
+            }
+          >
+            <div className="queue-card">
+              <span className="queue-word">{question.cyrillic}</span>
+              <span className="queue-trad mongolian" lang="mn-Mong">
+                {question.traditional}
               </span>
-            </span>
+              <span className="queue-meta">
+                {question.latin && (
+                  <span className="latin">{question.latin}</span>
+                )}
+                {question.sense && (
+                  <span className="sense">{question.sense}</span>
+                )}
+                <span className="badge unverified">
+                  {question.corroborated
+                    ? "хоёр эх сурвалж таарсан"
+                    : "баталгаажаагүй"}
+                </span>
+              </span>
+            </div>
+
+            {question.alternatives?.length === 1 && (
+              <div className="queue-aside">
+                <span className="field-label">Бусад</span>
+                <AlternativeCard alt={question.alternatives[0]!} />
+              </div>
+            )}
           </div>
 
-          {/* Context sits with the specimen, above the rule — never between the
-              question and its answers. Down there it read as a second thing to
-              judge, and "ингэж" ("like this") stopped having one referent. */}
-          {question.alternatives && question.alternatives.length > 0 && (
+          {(question.alternatives?.length ?? 0) > 1 && (
             <div className="queue-alts">
               <span className="field-label">
                 Энэ үгийн бусад хувилбар — зөвхөн харьцуулахад
               </span>
               <div className="queue-alt-row">
-                {question.alternatives.map((alt) => (
-                  <span className="queue-alt" key={alt.traditional}>
-                    <span className="queue-alt-trad mongolian" lang="mn-Mong">
-                      {alt.traditional}
-                    </span>
-                    {alt.sense && <span className="sense">{alt.sense}</span>}
-                    {alt.verified && (
-                      <span className="badge verified">баталгаажсан ✓</span>
-                    )}
-                  </span>
+                {question.alternatives!.map((alt) => (
+                  <AlternativeCard alt={alt} key={alt.traditional} />
                 ))}
               </div>
             </div>
@@ -325,72 +366,134 @@ export default function QueuePage() {
               Дээрх «<strong>{question.cyrillic}</strong>» үгийн зурлагыг монгол
               бичгээр <strong>ямар нэг утгаар нь</strong> ингэж бичдэг үү?
             </p>
-            <p className="queue-reason">{REASON_NOTE[question.reason]}</p>
+            <p className="queue-reason">{reasonNote(question)}</p>
 
-            {sendFailed && (
-              <p className="report-status report-status-error">
-                Уучлаарай, хариултыг илгээж чадсангүй. Дахин оролдоно уу.
-              </p>
-            )}
-
-            {!proposing && (
-              <div className="choices">
+            <div className="choices">
+              {(
+                [
+                  [true, "Тийм, ингэж бичдэг"],
+                  [false, "Үгүй, ингэж бичдэггүй"],
+                  [null, "Мэдэхгүй"],
+                ] as const
+              ).map(([value, label]) => (
                 <button
-                  className="choice"
-                  disabled={busy}
-                  onClick={() => answer(true)}
+                  key={label}
+                  className={
+                    answers[question.id]?.verdict === value
+                      ? "choice chosen"
+                      : "choice"
+                  }
+                  onClick={() => answer(question.id, value)}
                 >
-                  <span className="choice-title">Тийм, ингэж бичдэг</span>
+                  <span className="choice-title">{label}</span>
                 </button>
-                <button
-                  className="choice"
-                  disabled={busy}
-                  onClick={() => answer(false)}
-                >
-                  <span className="choice-title">Үгүй, ингэж бичдэггүй</span>
-                </button>
-                {/* No hint under this one: three answers to one question should
-                    be three buttons of the same height, and "I don't know" needs
-                    no explaining. */}
-                <button className="choice" disabled={busy} onClick={advance}>
-                  <span className="choice-title">Мэдэхгүй</span>
-                </button>
-              </div>
-            )}
+              ))}
+            </div>
 
-            {proposing && (
+            {answers[question.id]?.verdict === false && (
               <div className="report-optional">
-                <p className="report-receipt">
-                  <span className="report-receipt-mark" aria-hidden="true">
-                    ✓
-                  </span>
-                  Хариултыг тань хүлээн авлаа. Зөв зурлагыг нь мэддэг бол доор
-                  бичиж болно — заавал биш.
-                </p>
                 <ProposalForm
                   key={question.id}
                   kind="correction"
                   word={question.cyrillic}
-                  busy={busy}
+                  busy={false}
                   focusOnMount={false}
-                  onSubmit={propose}
+                  initial={answers[question.id]?.proposal}
+                  submitLabel="Хадгалаад цааш"
+                  onSubmit={(text) => saveProposal(question.id, text)}
                 />
-                <div className="choices">
-                  <button className="choice" disabled={busy} onClick={advance}>
-                    <span className="choice-title">Алгасах</span>
-                  </button>
-                </div>
               </div>
             )}
+
+            <div className="queue-nav">
+              <button
+                className="queue-step"
+                disabled={at === 0}
+                onClick={() => setAt((i) => i - 1)}
+              >
+                ← Өмнөх
+              </button>
+              <span className="queue-count">{answeredCount} хариулсан</span>
+              <button
+                className="queue-step"
+                onClick={() => setAt((i) => i + 1)}
+              >
+                Дараах →
+              </button>
+            </div>
           </div>
 
           <p className="report-consent">
+            Хариултууд илгээх хүртэл зөвхөн энэ төхөөрөмж дээр хадгалагдана.
             Хувь нэмэр{" "}
             <a href={DATA_LICENSE_URL} target="_blank" rel="noreferrer">
               CC BY-SA 4.0
             </a>{" "}
             лицензтэй
           </p>
+        </section>
+      )}
+
+      {reviewing && (
+        <section className="queue">
+          <span className="field-label">Илгээхийн өмнө</span>
+          <ol className="queue-review">
+            {set.map((q, i) => {
+              const verdict = answers[q.id]?.verdict;
+              const state =
+                verdict === true ? "yes" : verdict === false ? "no" : "none";
+              return (
+                <li key={q.id}>
+                  <button className="queue-review-row" onClick={() => setAt(i)}>
+                    <span className="queue-review-word">{q.cyrillic}</span>
+                    <span
+                      className="queue-review-trad mongolian"
+                      lang="mn-Mong"
+                    >
+                      {q.traditional}
+                    </span>
+                    <span className={`queue-review-answer ${state}`}>
+                      {verdict === true
+                        ? "Тийм"
+                        : verdict === false
+                          ? "Үгүй"
+                          : "—"}
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ol>
+
+          {sendFailed && (
+            <p className="report-status report-status-error">
+              Уучлаарай, илгээж чадсангүй. Хариултууд тань хэвээр байгаа — дахин
+              оролдоно уу.
+            </p>
+          )}
+
+          <div className="choices">
+            <button
+              className="proposal-submit"
+              disabled={busy || answeredCount === 0}
+              onClick={send}
+            >
+              {busy
+                ? "Илгээж байна…"
+                : answeredCount === 0
+                  ? "Хариулсан зүйл алга"
+                  : `${answeredCount} хариулт илгээх`}
+            </button>
+            <button className="choice" disabled={busy} onClick={() => setAt(0)}>
+              <span className="choice-title">← Буцаж хянах</span>
+            </button>
+            <button className="choice" disabled={busy} onClick={skipSet}>
+              <span className="choice-title">
+                Эдгээрийг алгасаад дараагийн {SET_SIZE}
+              </span>
+              <span className="choice-hint">Хариултууд илгээгдэхгүй</span>
+            </button>
+          </div>
         </section>
       )}
 
@@ -412,7 +515,7 @@ export default function QueuePage() {
           <p className="stats">
             Хянуулахаар хүлээгдэж буй {queue.pool.toLocaleString("mn-MN")}{" "}
             зурлагаас {queue.questions.length.toLocaleString("mn-MN")}-г энэ
-            удаад санал болгож байна.
+            хөтчид санал болгож байна.
           </p>
         )}
       </section>

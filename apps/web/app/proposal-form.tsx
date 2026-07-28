@@ -61,12 +61,23 @@ export function ProposalForm({
   word,
   busy,
   focusOnMount,
+  initial,
+  submitLabel,
   onSubmit,
 }: {
   kind: ProposalKind;
   /** The Cyrillic word under discussion, shown in the prompt. */
   word: string;
   busy: boolean;
+  /**
+   * What the fields start with. The converter opens them empty; the queue
+   * passes back what was typed earlier, because there a proposal is held in a
+   * draft and can be revisited until the set is sent.
+   */
+  initial?: ProposalText;
+  /** Overrides the button when submitting does not send — the queue saves into
+   *  its draft and sends the whole set later, and the button has to say so. */
+  submitLabel?: string;
   /**
    * Whether to put the cursor in the first field straight away. True only
    * where typing is the point of the dialog — after a flag has been filed the
@@ -76,8 +87,8 @@ export function ProposalForm({
   focusOnMount: boolean;
   onSubmit: (proposal: ProposalText) => void;
 }) {
-  const [traditional, setTraditional] = useState("");
-  const [sense, setSense] = useState("");
+  const [traditional, setTraditional] = useState(initial?.traditional ?? "");
+  const [sense, setSense] = useState(initial?.sense ?? "");
   const [error, setError] = useState<string | null>(null);
 
   const asksSense = kind === "missing_sense";
@@ -175,7 +186,7 @@ export function ProposalForm({
 
       <div className="proposal-actions">
         <button className="proposal-submit" type="submit" disabled={busy}>
-          {busy ? "Илгээж байна…" : "Илгээх"}
+          {busy ? "Илгээж байна…" : (submitLabel ?? "Илгээх")}
         </button>
       </div>
     </form>

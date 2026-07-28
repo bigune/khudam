@@ -160,7 +160,8 @@ export function displaySense(candidate: Candidate): string | undefined {
  * choice the user has.
  */
 export function needsSenseBranch(candidate: Candidate): boolean {
-  if (candidate.source === "suffix-rule" || candidate.source === "fallback") return false;
+  if (candidate.source === "suffix-rule" || candidate.source === "fallback")
+    return false;
   return displaySense(candidate) === undefined;
 }
 
@@ -185,17 +186,20 @@ export function isLexiconCandidate(candidate: Candidate): boolean {
  * can make; it falls out of aggregation, where many words flagged with the
  * same suffix variant indict the suffixes.json row.)
  */
-export function proposalKindFor(candidate: Candidate, flagKind: FlagKind): ProposalKind {
+export function proposalKindFor(
+  candidate: Candidate,
+  flagKind: FlagKind,
+): ProposalKind {
   if (flagKind === "missing_sense") return "missing_sense";
   return isLexiconCandidate(candidate) ? "correction" : "new_word";
 }
 
 /** Why a typed proposal cannot be sent, in the order the checks run. */
-export type ProposalProblem = "empty" | "too_long" | "cyrillic" | "not_mongolian";
+export type ProposalProblem =
+  "empty" | "too_long" | "cyrillic" | "not_mongolian";
 
 export type ProposalCheck =
-  | { ok: true; value: string }
-  | { ok: false; problem: ProposalProblem };
+  { ok: true; value: string } | { ok: false; problem: ProposalProblem };
 
 /**
  * Validation at the door: what the contributor typed, cleaned up, or the
@@ -241,7 +245,8 @@ export function checkProposal(raw: string): ProposalCheck {
   // Cyrillic gets its own answer: this is a Cyrillic-input site, so typing
   // Cyrillic into the монгол бичиг field is the mistake to expect, and
   // "unexpected character" would be a useless thing to say about it.
-  if (/\p{Script=Cyrillic}/u.test(value)) return { ok: false, problem: "cyrillic" };
+  if (/\p{Script=Cyrillic}/u.test(value))
+    return { ok: false, problem: "cyrillic" };
   if (!isTraditionalForm(value)) return { ok: false, problem: "not_mongolian" };
   return { ok: true, value };
 }
@@ -371,7 +376,9 @@ export function buildProposalRow(
     ...(anchor.traditional ? { traditional: anchor.traditional } : {}),
     ...(anchor.sense ? { sense: anchor.sense } : {}),
     proposal_kind: kind,
-    ...(proposal.traditional ? { proposal_traditional: proposal.traditional } : {}),
+    ...(proposal.traditional
+      ? { proposal_traditional: proposal.traditional }
+      : {}),
     ...(proposal.sense ? { proposal_sense: proposal.sense } : {}),
     session_id: sessionId,
   };
@@ -416,7 +423,9 @@ async function insert(rows: SignalRow[]): Promise<boolean> {
  * Records which candidate the user copied, for every converted word.
  * Fire-and-forget: frequency data is never worth delaying or breaking a copy.
  */
-export function recordSelections(chosen: { input: string; candidate: Candidate }[]): void {
+export function recordSelections(
+  chosen: { input: string; candidate: Candidate }[],
+): void {
   if (!signalsEnabled) return;
   const sessionId = getSessionId();
   if (!sessionId) return;
@@ -427,7 +436,10 @@ export function recordSelections(chosen: { input: string; candidate: Candidate }
  * Records a flag. Awaited, unlike selections, because the contributor is
  * waiting on an answer and deserves an honest one.
  */
-export async function recordFlag(anchor: CandidateAnchor, kind: FlagKind): Promise<boolean> {
+export async function recordFlag(
+  anchor: CandidateAnchor,
+  kind: FlagKind,
+): Promise<boolean> {
   const sessionId = getSessionId();
   if (!sessionId) return false;
   return insert([buildFlagRow(anchor, kind, sessionId)]);
@@ -449,7 +461,8 @@ export async function recordProposal(
   context: SignalContext = "converter",
 ): Promise<boolean> {
   if (!proposal.traditional && !proposal.sense) return false;
-  if (proposal.traditional && !isTraditionalForm(proposal.traditional)) return false;
+  if (proposal.traditional && !isTraditionalForm(proposal.traditional))
+    return false;
   const sessionId = getSessionId();
   if (!sessionId) return false;
   return insert([buildProposalRow(anchor, kind, proposal, sessionId, context)]);
@@ -482,20 +495,44 @@ export function buildVerdictRow(
   };
 }
 
+/** One answered question, as the queue page holds it in its draft. */
+export interface QueueAnswer {
+  anchor: CandidateAnchor;
+  questionId: string;
+  verdict: boolean;
+  /** Optionally, the spelling they say is right — offered after a “no”. */
+  proposal?: ProposalText;
+}
+
 /**
- * Records a queue answer. Awaited: the page moves to the next question only
- * once this one is filed, so nobody answers ten questions into a dead network
- * and finds out at the end.
+ * Sends a whole set of queue answers as one insert.
+ *
+ * A set rather than a row at a time, because the queue lets people change
+ * their mind: answers live in a local draft and stay editable until this runs.
+ * Sending is the moment an answer becomes a claim, and doing it in one request
+ * means a set is filed completely or not at all — a half-sent set would leave
+ * the contributor unable to tell which half to answer again.
  *
  * A verdict is not verification. Answers accumulate as counts a reviewer reads
  * beside the candidate; `verified: true` is still one human, one pull request.
  */
-export async function recordVerdict(
-  anchor: CandidateAnchor,
-  verdict: boolean,
-  questionId: string,
+export async function recordQueueAnswers(
+  answers: QueueAnswer[],
 ): Promise<boolean> {
   const sessionId = getSessionId();
-  if (!sessionId) return false;
-  return insert([buildVerdictRow(anchor, verdict, questionId, sessionId)]);
+  if (!sessionId || answers.length === 0) return false;
+  const rows: SignalRow[] = [];
+  for (const { anchor, questionId, verdict, proposal } of answers) {
+    rows.push(buildVerdictRow(anchor, verdict, questionId, sessionId));
+    // A proposal belongs beside a “no”, and only if something was typed —
+    // the same guards `recordProposal` applies, in batch form.
+    if (verdict || !proposal) continue;
+    if (!proposal.traditional && !proposal.sense) continue;
+    if (proposal.traditional && !isTraditionalForm(proposal.traditional))
+      continue;
+    rows.push(
+      buildProposalRow(anchor, "correction", proposal, sessionId, "queue"),
+    );
+  }
+  return insert(rows);
 }
