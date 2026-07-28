@@ -10,6 +10,8 @@
     "validate": "bun scripts/validate.ts",
     "import:wmk": "bun scripts/import-wmk.ts",
     "import:wiktionary": "bun scripts/import-wiktionary.ts",
+    "signals:export": "bun scripts/export-signals.ts",
+    "signals:aggregate": "bun scripts/aggregate-signals.ts",
     "build:data": "bun scripts/build-data.ts",
     "build": "bun run build:data && tsc -p packages/converter/tsconfig.build.json",
     "test": "bun run build:data && bun test"

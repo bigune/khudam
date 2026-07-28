@@ -39,6 +39,8 @@ data/
   lexicon/а.json … я.json    # sharded by first Cyrillic letter, sorted by `cyrillic`
   names.json                 # personal names — target: 100% verified, this is the flagship subset
   suffixes.json              # common Cyrillic suffix → traditional suffix mappings
+  stats/frequency.json       # how often each candidate was copied — ordering signal, never truth
+  stats/reports.json         # open community reports; the weekly job's memory
   schema/entry.schema.json   # JSON Schema for lexicon entries
   LICENSE                    # CC BY 4.0
 ```
@@ -61,6 +63,7 @@ Rules:
 - `source` values so far: `"wmk-import"`, `"wiktionary"` (see provenance below), `"manual"`, `"community"`.
 - `corroborated: true` (optional) marks a candidate whose traditional form was produced identically by two independent sources (e.g. wmk bootstrap + Wiktionary). Set by import tooling only; it raises confidence but is NOT verification.
 - `sense` is optional for single-candidate entries, required when candidates > 1.
+- Community signals never edit or remove an existing candidate — "this spelling is wrong" and "this is a correct spelling of a meaning I did not want" arrive through the same button. The weekly job (`scripts/aggregate-signals.ts`) may add one candidate in exactly one case: a word with no entry at all, one proposed spelling, typed identically by two independent sessions. Everything else is a reviewer decision written up in `data/REVIEW.md`.
 - Files must stay sorted and diff-friendly (2-space indent, one entry object per logical block). Every data mutation goes through scripts in `scripts/` — never hand-edit formatting conventions.
 
 ## Seed data provenance (important, do not misrepresent)
@@ -83,12 +86,19 @@ packages/converter/     # TypeScript npm package: khudam
     lookup.ts           # word → candidates (data compiled in at build)
     convert.ts          # tokenizes text, converts word-by-word, returns per-token candidates
   test/
+supabase/              # disposable community-signal mailbox (schema.sql + runbook);
+                       #   never a source of truth — losing it loses at most a week
 scripts/
   import-wmk.ts         # one-time bootstrap import (idempotent)
+  import-wiktionary.ts  # second-tier import via kaikki.org (idempotent, re-runnable)
   validate.ts           # schema + Unicode-range + duplicate + sort checks; exits non-zero on failure
   build-data.ts         # compiles data/ into a compact artifact bundled with the package
+  export-signals.ts     # drains the mailbox to JSONL; deletes by row id, never by timestamp
+  aggregate-signals.ts  # JSONL → data/stats/ + REVIEW.md queue + the weekly PR body
 .github/workflows/
   validate.yml          # runs scripts/validate.ts on every PR and push
+  signals.yml           # weekly: drain → archive → aggregate → validate → one PR → delete
+  keepalive.yml         # mid-week ping so the free-tier mailbox never pauses
 ```
 
 Engine principles:
@@ -102,6 +112,8 @@ Engine principles:
 - `bun run build` — compile data + build the package
 - `bun test` — engine unit tests (bun's built-in test runner)
 - `bun run import:wmk` — bootstrap import (idempotent; refuses to overwrite `verified: true` candidates)
+- `bun run signals:export <file>` — drain the community mailbox (`--delete <file>` removes what it drained); needs `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY`
+- `bun run signals:aggregate <file>` — turn a drain into `data/stats/` + the review queue in `data/REVIEW.md`
 
 ## Working agreements for Claude
 

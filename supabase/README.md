@@ -136,19 +136,67 @@ cadence is weekly — exactly on the edge. Two mitigations, both required:
   like a quiet week; silently dropping contributions is the one failure mode
   that would cost real community trust.
 
-Neither job exists yet — they land with the weekly pipeline (Phase B).
+Both are in place: `.github/workflows/keepalive.yml` (Thursdays) and the
+health check at the top of `scripts/export-signals.ts`.
 
 ## Draining the mailbox
 
-Not built yet (Phase B). The shape it must have, so the table is designed for
-it:
+`.github/workflows/signals.yml` runs every Monday and needs two repository
+secrets — `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` — plus **Settings →
+Actions → General → Allow GitHub Actions to create and approve pull
+requests**. Without that setting the branch is pushed and `gh pr create` fails:
+nothing is lost, but nobody is told.
 
-1. Capture a timestamp watermark, select all rows with
-   `created_at <= watermark`, and attach the raw JSONL as a workflow artifact
-   (90-day retention — this is the audit trail).
-2. Only then delete rows within the watermark. Aggregation dedupes by row
-   `id`, so a crash between upload and delete cannot double-process.
-3. Aggregate into a triaged PR; run `bun run validate` before opening it, so
-   broken output never reaches a reviewer.
+The order of the steps is the design, not an accident:
 
-Until that exists, export manually while volume is small.
+1. **Health check, then read.** Unreachable fails the run; empty does not.
+2. **Archive `signals.jsonl` as a workflow artifact** (90 days — the audit
+   trail). Everything after this can be redone from that one file.
+3. **Aggregate** into `data/stats/`, `data/REVIEW.md`, and — in the single
+   unambiguous case described below — a new lexicon entry.
+4. **Validate**, so broken output never reaches a reviewer.
+5. **Open one pull request.** Merging it is the review.
+6. **Delete, last.** Every step above can fail and be re-run next week against
+   a mailbox that still holds its rows. Deletion is by explicit row id, so
+   signals filed *while the job was running* are untouched and become next
+   week's mail.
+
+Only one signals pull request is open at a time. If last week's is still
+waiting, the job says so in its summary and stands down without draining —
+leaving the mail in the mailbox is the safe state, and the open pull request is
+already the reminder.
+
+Re-running is safe. `data/stats/reports.json` carries a `through` watermark and
+the aggregator ignores anything at or before it, so a re-run — or a week whose
+delete failed and re-exported the same rows — counts nothing twice.
+
+### Draining by hand
+
+```sh
+export SUPABASE_URL=https://<project-ref>.supabase.co
+export SUPABASE_SERVICE_ROLE_KEY=<service_role key>
+
+bun run signals:export signals.jsonl              # read, never deletes
+bun run signals:aggregate signals.jsonl           # writes data/, review it
+bun run validate
+bun run signals:export --delete signals.jsonl     # only once the rest is committed
+```
+
+### What the aggregator may decide by itself
+
+It never sets `verified: true`, and never edits or removes an existing
+candidate — "this spelling is wrong" and "this is a correct spelling of a
+meaning I did not want" arrive through the same button, and only a human tells
+them apart.
+
+It adds a lexicon entry in exactly one case: a word with **no entry at all**,
+one proposed spelling, typed identically by **two independent sessions**.
+Nothing existing is touched, no `sense` is invented, and the result is an
+ordinary `verified: false` community candidate that a reviewer can delete in
+one line. Everything else is written up in `data/REVIEW.md` § Community signals
+for a human to decide.
+
+Reports close themselves: the aggregator re-reads the lexicon each run and
+drops a report whose flagged form is gone or whose proposed form is now a
+candidate. To dismiss one you disagree with, delete its object from
+`data/stats/reports.json` — if the signal is real it will be filed again.

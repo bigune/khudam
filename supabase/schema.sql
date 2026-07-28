@@ -320,3 +320,8 @@ $$;
 
 revoke all on function public.keepalive() from public;
 grant execute on function public.keepalive() to anon;
+-- Explicit rather than inherited: the keepalive workflow authenticates with
+-- the service_role key (the one secret the export job already needs), and
+-- whether that role would reach this function through Supabase's default
+-- privileges is not something a schema file should leave to chance.
+grant execute on function public.keepalive() to service_role;

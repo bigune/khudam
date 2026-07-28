@@ -1,0 +1,149 @@
+# Weekly drain of the community signal mailbox into a triaged pull request.
+#
+# Git is the database of record; the Supabase project is a disposable mailbox.
+# This job is what moves contributions from the second into the first, and a
+# human merging its pull request is the only thing that changes the lexicon.
+#
+# Secrets (see supabase/README.md):
+#   SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
+# Without them the job fails loudly rather than reporting a quiet week.
+#
+# It also needs "Allow GitHub Actions to create and approve pull requests" in
+# Settings → Actions → General. Without it the push succeeds and `gh pr create`
+# fails — the work is not lost, but nobody is told about it.
+name: signals
+
+on:
+  schedule:
+    # Mondays 03:00 UTC (11:00 Ulaanbaatar). The keepalive job runs mid-week so
+    # a free-tier project never sits idle for the seven days that pause it.
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+
+# Draining twice at once would export the same rows into two pull requests.
+concurrency:
+  group: signals
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  drain:
+    runs-on: ubuntu-latest
+    # Forks have no mailbox of their own, and would drain ours if they had the
+    # secrets. They do not, so this only saves them a failed run.
+    if: github.repository == 'bigune/khudam'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      # At most one open signals pull request at a time. Rows are deleted from
+      # the mailbox only once a run reaches its pull request, so a week nobody
+      # merged must not be followed by a week that drains on top of it: the
+      # earlier signals would exist only in an abandoned branch. Leaving the
+      # mail in the mailbox is the safe state, and the open pull request is
+      # already the reminder — so this exits quietly rather than failing.
+      - name: Wait for the open review, if there is one
+        id: guard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          open=$(gh pr list --state open --json headRefName \
+                   --jq '[.[] | select(.headRefName | startswith("signals/"))] | length')
+          if [ "$open" -gt 0 ]; then
+            echo "Skipped: a signals pull request is still open. The mailbox keeps its rows" \
+              "until it is merged or closed — nothing is lost." >> "$GITHUB_STEP_SUMMARY"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Reads only. A paused or unreachable project fails the run here, before
+      # anything is deleted or written.
+      - name: Drain the mailbox
+        if: steps.guard.outputs.skip == 'false'
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: bun run signals:export signals.jsonl
+
+      # The audit trail, uploaded before anything is deleted. Everything below
+      # can be redone from this file alone.
+      - name: Archive the raw signals
+        if: steps.guard.outputs.skip == 'false'
+        uses: actions/upload-artifact@v4
+        with:
+          name: signals-${{ github.run_id }}
+          path: signals.jsonl
+          retention-days: 90
+          if-no-files-found: error
+
+      # A skipped step has no outputs, so every step below reads its condition
+      # as false and stands down with it.
+      - name: Stop here on a quiet week
+        id: mail
+        if: steps.guard.outputs.skip == 'false'
+        run: |
+          if [ -s signals.jsonl ]; then
+            echo "empty=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "empty=true" >> "$GITHUB_OUTPUT"
+            echo "The mailbox was empty. Nothing to triage." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Aggregate into the review queue
+        if: steps.mail.outputs.empty == 'false'
+        run: bun run signals:aggregate signals.jsonl --pr-body pr-body.md
+
+      # Broken output must never reach a reviewer. This is the same check every
+      # human pull request passes.
+      - name: Validate data
+        if: steps.mail.outputs.empty == 'false'
+        run: bun run validate
+
+      - name: Open the pull request
+        id: pr
+        if: steps.mail.outputs.empty == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- data/; then
+            echo "Signals arrived but nothing changed in data/ — already processed." \
+              >> "$GITHUB_STEP_SUMMARY"
+            echo "opened=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          branch="signals/$(date -u +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add data/
+          git commit -m "chore(data): community signals through $(date -u +%Y-%m-%d)" \
+                     -m "Generated by .github/workflows/signals.yml. Signals are not verification."
+          git push -f origin "HEAD:$branch"
+          gh pr view "$branch" >/dev/null 2>&1 || \
+            gh pr create --base main --head "$branch" \
+              --title "Community signals — $(date -u +%Y-%m-%d)" \
+              --body-file pr-body.md
+          cat pr-body.md >> "$GITHUB_STEP_SUMMARY"
+          echo "opened=true" >> "$GITHUB_OUTPUT"
+
+      # Last, deliberately. Everything above can fail and be re-run next week
+      # from a mailbox that still holds its rows; a delete that ran first would
+      # leave the artifact as the only copy. Rows are deleted by id, so signals
+      # filed while this job was running are untouched and become next week's
+      # mail.
+      - name: Delete what was archived
+        if: steps.mail.outputs.empty == 'false' && steps.pr.outcome == 'success'
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: bun run signals:export --delete signals.jsonl

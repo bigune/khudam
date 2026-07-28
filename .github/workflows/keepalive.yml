@@ -1,0 +1,43 @@
+# Mid-week ping so the signal mailbox never pauses between drains.
+#
+# Supabase free-tier projects pause after roughly 7 days without activity and
+# the export runs weekly — exactly on the edge. A paused project is not a
+# disaster (the export job fails loudly rather than reporting a quiet week),
+# but resuming it is manual, and contributions filed while it is down are lost
+# before they are ever written. One request every Thursday costs nothing and
+# keeps the week from ever reaching seven idle days.
+#
+# It calls the `keepalive()` function rather than touching the table, so the
+# ping returns a timestamp and writes nothing that could be mistaken for a
+# signal.
+name: keepalive
+
+on:
+  schedule:
+    # Thursdays 03:00 UTC — the middle of the gap between Monday drains.
+    - cron: "0 3 * * 4"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    if: github.repository == 'bigune/khudam'
+    steps:
+      - name: Ping the signals project
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          set -euo pipefail
+          code=$(curl -sS -o response.txt -w '%{http_code}' \
+            -X POST "$SUPABASE_URL/rest/v1/rpc/keepalive" \
+            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "Content-Type: application/json" -d '{}')
+          echo "HTTP $code — $(cat response.txt)"
+          if [ "$code" != "200" ]; then
+            echo "::error::The signals project did not answer the keepalive ping." \
+              "It may already be paused — resume it in the Supabase dashboard," \
+              "then re-run this job. See supabase/README.md."
+            exit 1
+          fi
