@@ -529,9 +529,12 @@ function renderReview(
   const lines: string[] = [REVIEW_BEGIN, ""];
   lines.push("## Community signals (`scripts/aggregate-signals.ts`)");
   lines.push("");
+  // English only, like the rest of this file's generated sections. The
+  // Mongolian sentence that used to open this paragraph said exactly what the
+  // English says next — a translation of the sentence beside it is noise, not
+  // bilingualism.
   lines.push(
-    "Хөрвүүлэгчээс ирсэн дохио — баталгаа биш, хаана харахыг заасан дараалал. " +
-      "Reports filed from the converter" +
+    "Reports filed from the converter" +
       (through !== null ? `, through ${through.slice(0, 10)}` : "") +
       ". A signal is not verification: it says where to look, and every change " +
       "below is a human decision. Counts are distinct browser sessions — the " +

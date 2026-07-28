@@ -691,6 +691,18 @@ textarea,
   font-size: var(--text-xs);
 }
 
+/* Everything above this rule is what you are looking at; everything below it
+   is what is being asked. The question and its answers have to be one block
+   with nothing between them — when the sibling candidates sat in that gap,
+   readers could not tell which spelling the buttons applied to. */
+.queue-ask {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border);
+}
+
 .queue-question {
   margin: 0;
   font-size: var(--text-md);

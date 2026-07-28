@@ -131,11 +131,21 @@ export default function Home() {
         <p className="en" lang="en">
           open-source Cyrillic → Traditional Mongolian Script converter
         </p>
+        {/* The queue's only way in used to be a sentence buried in the
+            contribute section, which is a page-length scroll from here — so in
+            practice nobody found it who did not already know it existed. It
+            belongs beside the invitation that is already in the header. */}
         <p className="stats">
           Үгсийн санд {LEXICON_ENTRY_COUNT.toLocaleString("mn-MN")} үг ·{" "}
           <a href={REPO_URL} target="_blank" rel="noreferrer">
             хамтдаа сайжруулъя
           </a>
+          {signalsEnabled && (
+            <>
+              {" · "}
+              <Link href="/queue">хянах дараалал</Link>
+            </>
+          )}
         </p>
       </header>
 
@@ -434,6 +444,7 @@ export default function Home() {
       </section>
 
       <footer>
+        {signalsEnabled && <Link href="/queue">Хянах дараалал</Link>}
         <a href={SURAY_URL} target="_blank" rel="noopener">
           Үндсэн вебсайт
         </a>
