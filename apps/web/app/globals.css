@@ -185,10 +185,11 @@ textarea,
 .copy,
 .chip,
 .card-action,
-.report-choice,
+.choice,
 .report-x,
 .proposal-input,
-.proposal-submit {
+.proposal-submit,
+.queue-alt {
   transition:
     border-color var(--ease),
     background-color var(--ease),
@@ -602,13 +603,17 @@ textarea,
   margin: 0;
 }
 
-.report-choices {
+/* A stack of full-width answers, in the dialog and on the queue page alike.
+   Named for what it is rather than where it first appeared: asking someone a
+   question and offering them the answers is one act, and it should not look
+   like two different products depending on which page it happens on. */
+.choices {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.report-choice {
+.choice {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
@@ -620,18 +625,115 @@ textarea,
   color: var(--ink);
 }
 
-.report-choice:hover,
-.report-choice:focus-visible {
+.choice:hover,
+.choice:focus-visible {
   border-color: var(--accent);
 }
 
-.report-choice-title {
+.choice-title {
   font-weight: 600;
 }
 
-.report-choice-hint {
+.choice-hint {
   font-size: var(--text-sm);
   color: var(--muted);
+}
+
+.choice:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* ---- verification queue ---- */
+
+.queue {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.queue-progress {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* The specimen under review. Centred like a chip on the converter, and given
+   more room than one: on this page the spelling is not a choice among several,
+   it is the whole question. */
+.queue-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.queue-word {
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+.queue-trad {
+  writing-mode: vertical-lr;
+  max-height: 12rem;
+  font-size: var(--text-mong-lg);
+  line-height: 1.35;
+}
+
+.queue-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: var(--text-xs);
+}
+
+.queue-question {
+  margin: 0;
+  font-size: var(--text-md);
+}
+
+.queue-reason {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.queue-alts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Siblings are context, not options: they are shown so a reader can see what
+   the entry already offers, and they are deliberately smaller and unclickable
+   so nobody reads them as the answer. */
+.queue-alt-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.queue-alt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.5rem 0.7rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+}
+
+.queue-alt-trad {
+  writing-mode: vertical-lr;
+  max-height: 7rem;
+  font-size: var(--text-mong);
+  line-height: 1.35;
 }
 
 .report-status {
@@ -766,7 +868,7 @@ textarea,
 }
 
 /* Full width: it is the one action of the form, and on a phone it is the
-   easiest thing to hit. Vertical padding matches .report-choice so the
+   easiest thing to hit. Vertical padding matches .choice so the
    dialog's full-width controls line up.
 
    Ink rather than accent: --accent is the link colour and appears everywhere

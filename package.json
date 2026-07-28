@@ -13,6 +13,7 @@
     "signals:export": "bun scripts/export-signals.ts",
     "signals:aggregate": "bun scripts/aggregate-signals.ts",
     "build:data": "bun scripts/build-data.ts",
+    "build:queue": "bun scripts/build-queue.ts",
     "build": "bun run build:data && tsc -p packages/converter/tsconfig.build.json",
     "test": "bun run build:data && bun test"
   },

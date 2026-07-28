@@ -100,12 +100,29 @@ export interface Report {
   last_seen: string;
 }
 
+/**
+ * Answers to one verification-queue question, tallied.
+ *
+ * A tally is evidence, never a verdict of ours: `yes` and `no` are counts of
+ * people who said this is, or is not, a written form of the word. A reviewer
+ * reads them beside the candidate and decides. Nothing here sets `verified`.
+ */
+export interface VerdictTally {
+  cyrillic: string;
+  traditional: string;
+  yes: number;
+  no: number;
+  first_seen: string;
+  last_seen: string;
+}
+
 export interface Ledger {
   /** Latest `created_at` already folded in. Rows at or before it are ignored,
    *  so a re-run — or a week whose delete failed and re-exported the same
    *  rows — cannot count anything twice. */
   through: string | null;
   reports: Report[];
+  verdicts?: VerdictTally[];
 }
 
 // ---------------------------------------------------------------------------
@@ -218,6 +235,59 @@ export function addReports(ledger: Ledger, rows: SignalRow[]): number {
     }
   }
   return added;
+}
+
+/**
+ * Fold queue answers into the running tallies.
+ *
+ * Keyed by the candidate rather than by `question_id`: a question is something
+ * the page showed and may stop showing, while the candidate it was about is
+ * data. Rebuilding the queue must never orphan the answers already given about
+ * a spelling.
+ */
+export function addVerdicts(ledger: Ledger, rows: SignalRow[]): number {
+  const tallies = (ledger.verdicts ??= []);
+  const byKey = new Map(tallies.map((v) => [`${v.cyrillic}|${v.traditional}`, v]));
+  let counted = 0;
+  for (const row of rows) {
+    if (row.signal_type !== "verdict" || !row.traditional || row.verdict === null) continue;
+    const key = `${row.cyrillic}|${row.traditional}`;
+    let tally = byKey.get(key);
+    if (tally === undefined) {
+      tally = {
+        cyrillic: row.cyrillic,
+        traditional: row.traditional,
+        yes: 0,
+        no: 0,
+        first_seen: row.created_at,
+        last_seen: row.created_at,
+      };
+      byKey.set(key, tally);
+      tallies.push(tally);
+    }
+    if (row.verdict) tally.yes++;
+    else tally.no++;
+    if (row.created_at < tally.first_seen) tally.first_seen = row.created_at;
+    if (row.created_at > tally.last_seen) tally.last_seen = row.created_at;
+    counted++;
+  }
+  return counted;
+}
+
+/**
+ * Whether a tally still has anything to tell a reviewer.
+ *
+ * It stops when the answer is in the lexicon: the candidate was verified (a
+ * human settled it) or the form is gone (someone acted on the no). Unlike
+ * reports, tallies do not age out — a count of what people said is not a task
+ * anyone forgot to do, and throwing away votes because they were slow to
+ * arrive would only make the next reviewer start over.
+ */
+export function verdictIsOpen(tally: VerdictTally, lexicon: Map<string, Entry>): boolean {
+  const candidate = lexicon
+    .get(tally.cyrillic)
+    ?.candidates.find((c) => c.traditional === tally.traditional);
+  return candidate !== undefined && !candidate.verified;
 }
 
 export type Resolution = "open" | "resolved" | "stale";
@@ -343,6 +413,9 @@ function writeFrequency(frequency: Frequency): void {
 
 /** Stable key order and sort, so a weekly commit reads as what arrived. */
 function writeLedger(ledger: Ledger): void {
+  const verdicts = [...(ledger.verdicts ?? [])].sort(
+    (a, b) => compareWords(a.cyrillic, b.cyrillic) || compareWords(a.traditional, b.traditional),
+  );
   const reports = [...ledger.reports]
     .sort((a, b) => compareWords(a.cyrillic, b.cyrillic) || compareWords(reportKey(a), reportKey(b)))
     .map((r) => {
@@ -356,7 +429,11 @@ function writeLedger(ledger: Ledger): void {
       out.last_seen = r.last_seen;
       return out as Report;
     });
-  writeFileSync(REPORTS_FILE, JSON.stringify({ through: ledger.through, reports }, null, 2) + "\n", "utf8");
+  writeFileSync(
+    REPORTS_FILE,
+    JSON.stringify({ through: ledger.through, reports, verdicts }, null, 2) + "\n",
+    "utf8",
+  );
 }
 
 // ---------------------------------------------------------------------------
@@ -436,6 +513,7 @@ function renderReview(
   openReports: Report[],
   suspects: SuffixSuspect[],
   added: { report: Report; entry: Entry }[],
+  tallies: VerdictTally[],
   lexicon: Map<string, Entry>,
   frequency: Frequency,
   through: string | null,
@@ -521,6 +599,35 @@ function renderReview(
     lines.push("");
   }
 
+  if (tallies.length > 0) {
+    lines.push(`### Queue answers (${tallies.length})`);
+    lines.push("");
+    lines.push(
+      "Answers from [the verification queue](https://khudam.suray.mn/queue) to one " +
+        "question: *is this a written form of this word, for any meaning?* Two " +
+        "spellings of one word can both be right, so a yes on each is a homonym, not " +
+        "a contradiction — a yes and a no name the form to delete. **These counts are " +
+        "not verification**: `verified: true` is still one human reading монгол бичиг " +
+        "and one merged pull request. Unanimous tallies are listed first because they " +
+        "are the quickest to check, not because they are settled.",
+    );
+    lines.push("");
+    const ordered = [...tallies].sort(
+      (a, b) =>
+        b.yes + b.no - (a.yes + a.no) ||
+        Math.abs(b.yes - b.no) - Math.abs(a.yes - a.no) ||
+        compareWords(a.cyrillic, b.cyrillic),
+    );
+    for (const tally of ordered) {
+      const split = tally.yes > 0 && tally.no > 0 ? " — ⚠ readers disagree" : "";
+      lines.push(
+        `- **${tally.cyrillic}** — \`${tally.traditional}\` — ` +
+          `${tally.yes} ✓ / ${tally.no} ✗${split}`,
+      );
+    }
+    lines.push("");
+  }
+
   if (added.length > 0) {
     lines.push(`### Added to the lexicon by this run (${added.length})`);
     lines.push("");
@@ -580,6 +687,7 @@ function main(): void {
 
   const selections = addSelections(frequency, fresh);
   const newReports = addReports(ledger, fresh);
+  const verdicts = addVerdicts(ledger, fresh);
   ledger.through = latestTimestamp(fresh, ledger.through);
 
   // Resolution is recomputed against the lexicon as it stands right now, so a
@@ -614,11 +722,17 @@ function main(): void {
     writeEntriesFile(file, entries);
   }
 
+  const openTallies = (ledger.verdicts ?? []).filter((v) => verdictIsOpen(v, lexicon));
+  const settledTallies = (ledger.verdicts ?? []).length - openTallies.length;
+
   ledger.reports = stillOpen;
+  ledger.verdicts = openTallies;
   mkdirSync(STATS_DIR, { recursive: true });
   writeLedger(ledger);
   writeFrequency(frequency);
-  writeReviewSection(renderReview(stillOpen, suffixSuspects(stillOpen), additions, lexicon, frequency, ledger.through));
+  writeReviewSection(
+    renderReview(stillOpen, suffixSuspects(stillOpen), additions, openTallies, lexicon, frequency, ledger.through),
+  );
 
   const suspects = suffixSuspects(stillOpen);
   const summary = [
@@ -626,6 +740,8 @@ function main(): void {
     "",
     `- **${selections}** selections folded into \`data/stats/frequency.json\``,
     `- **${newReports}** new reports, **${stillOpen.length}** open in total`,
+    `- **${verdicts}** queue answers, **${openTallies.length}** candidates with a tally` +
+      (settledTallies > 0 ? ` (${settledTallies} settled and dropped)` : ""),
     `- **${additions.length}** unknown ${additions.length === 1 ? "word" : "words"} added mechanically ` +
       `(${CORROBORATION_THRESHOLD}+ sessions agreeing, \`verified: false\`)`,
     `- **${resolved.length}** reports closed — the lexicon already answers them`,

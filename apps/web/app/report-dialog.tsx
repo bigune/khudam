@@ -185,26 +185,26 @@ export function ReportDialog({
                 Энэ үгийн <strong>зурлага буруу</strong> байна уу, эсвэл та{" "}
                 <strong>өөр салаа утгыг</strong> нь хайж байна уу?
               </p>
-              <div className="report-choices">
+              <div className="choices">
                 <button
-                  className="report-choice"
+                  className="choice"
                   onClick={() => flag(target, "correction")}
                 >
-                  <span className="report-choice-title">
+                  <span className="choice-title">
                     Зурлага нь буруу байна
                   </span>
-                  <span className="report-choice-hint">
+                  <span className="choice-hint">
                     Энэ үгийг ямар ч утгаар нь ингэж бичдэггүй
                   </span>
                 </button>
                 <button
-                  className="report-choice"
+                  className="choice"
                   onClick={() => flag(target, "missing_sense")}
                 >
-                  <span className="report-choice-title">
+                  <span className="choice-title">
                     Өөр салаа утгыг нь хайж байна
                   </span>
-                  <span className="report-choice-hint">
+                  <span className="choice-hint">
                     Энэ зурлага зөв ч миний хайж буй утга жагсаалтад алга
                   </span>
                 </button>
@@ -224,12 +224,12 @@ export function ReportDialog({
                   <>Энэ зурлага буруу байна уу?</>
                 )}
               </p>
-              <div className="report-choices">
+              <div className="choices">
                 <button
-                  className="report-choice"
+                  className="choice"
                   onClick={() => flag(target, "correction")}
                 >
-                  <span className="report-choice-title">Тийм, буруу байна</span>
+                  <span className="choice-title">Тийм, буруу байна</span>
                 </button>
               </div>
             </>

@@ -95,6 +95,7 @@ scripts/
   build-data.ts         # compiles data/ into a compact artifact bundled with the package
   export-signals.ts     # drains the mailbox to JSONL; deletes by row id, never by timestamp
   aggregate-signals.ts  # JSONL → data/stats/ + REVIEW.md queue + the weekly PR body
+  build-queue.ts        # data/ → apps/web/public/queue.json (verification questions)
 .github/workflows/
   validate.yml          # runs scripts/validate.ts on every PR and push
   signals.yml           # weekly: drain → archive → aggregate → validate → one PR → delete
@@ -114,6 +115,7 @@ Engine principles:
 - `bun run import:wmk` — bootstrap import (idempotent; refuses to overwrite `verified: true` candidates)
 - `bun run signals:export <file>` — drain the community mailbox (`--delete <file>` removes what it drained); needs `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY`
 - `bun run signals:aggregate <file>` — turn a drain into `data/stats/` + the review queue in `data/REVIEW.md`
+- `bun run build:queue` — compile `apps/web/public/queue.json` (gitignored; the web build runs it)
 
 ## Working agreements for Claude
 

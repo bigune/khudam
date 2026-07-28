@@ -92,9 +92,13 @@ export interface ProposalText {
   sense?: string;
 }
 
+/** Which surface a signal came from. The converter is where someone met a
+ *  candidate by accident; the queue is where they came to answer questions. */
+export type SignalContext = "converter" | "queue";
+
 /** One row of the `signals` table; unused columns are simply absent. */
 export interface SignalRow {
-  context: "converter" | "queue";
+  context: SignalContext;
   signal_type: SignalType;
   cyrillic: string;
   traditional?: string;
@@ -102,6 +106,8 @@ export interface SignalRow {
   proposal_kind?: ProposalKind;
   proposal_traditional?: string;
   proposal_sense?: string;
+  verdict?: boolean;
+  question_id?: string;
   session_id: string;
 }
 
@@ -356,9 +362,10 @@ export function buildProposalRow(
   kind: ProposalKind,
   proposal: ProposalText,
   sessionId: string,
+  context: SignalContext = "converter",
 ): SignalRow {
   return {
-    context: "converter",
+    context,
     signal_type: "proposal",
     cyrillic: normalizeWord(anchor.cyrillic),
     ...(anchor.traditional ? { traditional: anchor.traditional } : {}),
@@ -452,10 +459,56 @@ export async function recordProposal(
   anchor: ProposalAnchor,
   kind: ProposalKind,
   proposal: ProposalText,
+  context: SignalContext = "converter",
 ): Promise<boolean> {
   if (!proposal.traditional && !proposal.sense) return false;
   if (proposal.traditional && !isTraditionalForm(proposal.traditional)) return false;
   const sessionId = getSessionId();
   if (!sessionId) return false;
-  return insert([buildProposalRow(anchor, kind, proposal, sessionId)]);
+  return insert([buildProposalRow(anchor, kind, proposal, sessionId, context)]);
+}
+
+/**
+ * Builds one queue answer: yes or no to "is this a written form of this word?"
+ *
+ * The anchor is carried in full rather than left to `question_id` alone. A
+ * question is a thing the page showed and may stop showing; the candidate it
+ * was about is data, and aggregation has to find it weeks later without
+ * needing the queue file that produced it. `question_id` records which
+ * question was shown, never which candidate was meant.
+ */
+export function buildVerdictRow(
+  anchor: CandidateAnchor,
+  verdict: boolean,
+  questionId: string,
+  sessionId: string,
+): SignalRow {
+  return {
+    context: "queue",
+    signal_type: "verdict",
+    cyrillic: normalizeWord(anchor.cyrillic),
+    traditional: anchor.traditional,
+    ...(anchor.sense ? { sense: anchor.sense } : {}),
+    verdict,
+    question_id: questionId,
+    session_id: sessionId,
+  };
+}
+
+/**
+ * Records a queue answer. Awaited: the page moves to the next question only
+ * once this one is filed, so nobody answers ten questions into a dead network
+ * and finds out at the end.
+ *
+ * A verdict is not verification. Answers accumulate as counts a reviewer reads
+ * beside the candidate; `verified: true` is still one human, one pull request.
+ */
+export async function recordVerdict(
+  anchor: CandidateAnchor,
+  verdict: boolean,
+  questionId: string,
+): Promise<boolean> {
+  const sessionId = getSessionId();
+  if (!sessionId) return false;
+  return insert([buildVerdictRow(anchor, verdict, questionId, sessionId)]);
 }

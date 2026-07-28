@@ -9,14 +9,17 @@ import {
   STALE_DAYS,
   addReports,
   addSelections,
+  addVerdicts,
   freshRows,
   latestTimestamp,
   mechanicalAdditions,
   reportKey,
   resolutionOf,
   suffixSuspects,
+  verdictIsOpen,
   type Ledger,
   type Report,
+  type VerdictTally,
 } from "./aggregate-signals.ts";
 import type { SignalRow } from "./export-signals.ts";
 import type { Entry } from "./lib.ts";
@@ -153,6 +156,88 @@ describe("addReports", () => {
     const l = ledger();
     addReports(l, [row({}), row({ signal_type: "flag", proposal_kind: null })]);
     expect(l.reports).toEqual([]);
+  });
+});
+
+describe("addVerdicts", () => {
+  function ledger(): Ledger {
+    return { through: null, reports: [] };
+  }
+
+  function vote(verdict: boolean, over: Partial<SignalRow> = {}): SignalRow {
+    return row({
+      signal_type: "verdict",
+      context: "queue",
+      verdict,
+      question_id: "e-1a2b3c4d",
+      ...over,
+    });
+  }
+
+  test("tallies yes and no per candidate", () => {
+    const l = ledger();
+    const counted = addVerdicts(l, [
+      vote(true),
+      vote(true, { session_id: "session-b" }),
+      vote(false, { session_id: "session-c" }),
+    ]);
+    expect(counted).toBe(3);
+    expect(l.verdicts).toEqual([
+      {
+        cyrillic: "уул",
+        traditional: "ᠤᠤᠯ",
+        yes: 2,
+        no: 1,
+        first_seen: "2026-08-01T00:00:00Z",
+        last_seen: "2026-08-01T00:00:00Z",
+      },
+    ]);
+  });
+
+  test("keeps candidates apart and accumulates across drains", () => {
+    const l = ledger();
+    addVerdicts(l, [vote(true), vote(true, { traditional: "ᠠᠭᠤᠯᠠ" })]);
+    addVerdicts(l, [vote(true, { session_id: "session-b" })]);
+    expect(l.verdicts).toHaveLength(2);
+    expect(l.verdicts![0]!.yes).toBe(2);
+    expect(l.verdicts![1]!.yes).toBe(1);
+  });
+
+  test("ignores every other kind of signal", () => {
+    const l = ledger();
+    expect(addVerdicts(l, [row({}), row({ signal_type: "flag", proposal_kind: "correction" })])).toBe(0);
+    expect(l.verdicts).toEqual([]);
+  });
+});
+
+describe("verdictIsOpen", () => {
+  const tally: VerdictTally = {
+    cyrillic: "уул",
+    traditional: "ᠤᠤᠯ",
+    yes: 3,
+    no: 0,
+    first_seen: "2026-08-01T00:00:00Z",
+    last_seen: "2026-08-01T00:00:00Z",
+  };
+
+  test("stays open while the candidate is unverified", () => {
+    expect(verdictIsOpen(tally, lexiconOf(UUL))).toBe(true);
+  });
+
+  test("closes once a human verified the candidate", () => {
+    const verified: Entry = {
+      cyrillic: "уул",
+      candidates: [{ traditional: "ᠤᠤᠯ", verified: true, source: "community" }],
+    };
+    expect(verdictIsOpen(tally, lexiconOf(verified))).toBe(false);
+  });
+
+  test("closes once the form is gone", () => {
+    const replaced: Entry = {
+      cyrillic: "уул",
+      candidates: [{ traditional: "ᠠᠭᠤᠯᠠ", verified: false, source: "community" }],
+    };
+    expect(verdictIsOpen(tally, lexiconOf(replaced))).toBe(false);
   });
 });
 

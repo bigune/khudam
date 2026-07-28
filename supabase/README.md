@@ -200,3 +200,22 @@ Reports close themselves: the aggregator re-reads the lexicon each run and
 drops a report whose flagged form is gone or whose proposed form is now a
 candidate. To dismiss one you disagree with, delete its object from
 `data/stats/reports.json` — if the signal is real it will be filed again.
+
+### Queue answers
+
+The verification queue at `/queue` files `verdict` rows: yes or no to *is this
+a written form of this word, for any meaning?* They are tallied per candidate
+into `data/stats/reports.json` and rendered in the weekly pull request as
+`N ✓ / M ✗`. Two spellings of one word can both be answered yes — that is a
+homonym, not a contradiction.
+
+A tally is evidence, not a verdict of ours. Nothing in this pipeline sets
+`verified: true`; a tally is a number to read while you check the spelling
+yourself. Tallies do not age out — a count of what people said is not a task
+anyone forgot to do — and stop being carried once the candidate is verified or
+the form is gone.
+
+The questions themselves are compiled from `data/` on every site build
+(`bun run build:queue` → `apps/web/public/queue.json`, gitignored). Nothing to
+schedule and nothing to commit: merging the weekly pull request deploys the
+site, and the deploy rebuilds the queue from the data as merged.

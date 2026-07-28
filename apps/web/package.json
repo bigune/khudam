@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "bun run --cwd ../.. build && next dev",
-    "build": "bun run --cwd ../.. build && next build"
+    "dev": "bun run --cwd ../.. build && bun run --cwd ../.. build:queue && next dev",
+    "build": "bun run --cwd ../.. build && bun run --cwd ../.. build:queue && next build"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

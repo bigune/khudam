@@ -4,6 +4,11 @@ node_modules/
 # build artifacts
 dist/
 packages/converter/src/generated/
+# The verification queue is compiled from data/ on every build, exactly like the
+# lexicon artifact above it. Committing it would only add a large generated diff
+# to every pull request and let the questions drift behind the data they came
+# from — a deploy always regenerates them.
+apps/web/public/queue.json
 apps/web/.next/
 apps/web/out/
 apps/web/next-env.d.ts

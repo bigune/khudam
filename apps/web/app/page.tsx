@@ -2,6 +2,7 @@
 
 import { convertText, LEXICON_ENTRY_COUNT } from "khudam";
 import type { Candidate, Token } from "khudam";
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
   displaySense,
@@ -378,6 +379,20 @@ export default function Home() {
         <h2>Хувь нэмэр</h2>
         {signalsEnabled && (
           <>
+            {/* The queue is the one door that asks for nothing but a minute:
+                no word to look up, no error to have noticed. It goes first
+                because it is the only place a reader who simply knows the
+                script can help without having come here with a problem. */}
+            <p>
+              Монгол бичиг уншдаг бол{" "}
+              <Link href="/queue">хянах дараалалд</Link> нэг минут зарж, хэдэн
+              зурлагыг зөв эсэхийг хэлж өгөөрэй. Хариулт бүр аль үгийг эхэлж
+              хянахыг зааж өгдөг.
+            </p>
+            <p className="en" lang="en">
+              If you read монгол бичиг, the verification queue takes a minute
+              and needs no error to have gone wrong first.
+            </p>
             <p>
               Үг тус бүрийн тайлбар хэсгээс буруу зурлагыг «⚑», дутуу салаа
               утгыг «⊕», толь бичигт байхгүй үгийн зөв зурлагыг «✎» товчоор тус
