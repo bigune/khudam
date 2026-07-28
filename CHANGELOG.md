@@ -10,9 +10,26 @@ Versioning follows [Semantic Versioning](https://semver.org/): while on `0.x`, d
 
 ## [Unreleased]
 
-The engine is untouched, but the lexicon is not: two data corrections below
-change converter output and so need an npm patch release. Everything else
-ships to khudam.suray.mn on merge.
+Both the engine and the lexicon changed here: the suffix engine now reads
+inflection it used to miss, and two data corrections change converter output.
+Together they need an npm release. Everything else ships to khudam.suray.mn on
+merge.
+
+### Added
+
+- The suffix engine handles **suffix chains and mutated stems** — two of the three gaps that made it miss most real inflected Mongolian. Coverage over Wiktionary's own declension tables went from **16.9% to 45.4%** of forms resolved to the right stem, at higher precision than before (90.4% → 93.8%).
+
+  **Chains, depth 2 (`GRAMMAR.md` G12).** гэртээ → `ᠭᠡᠷ ᠲᠦ ᠪᠡᠨ`, номуудыг → `ᠨᠣᠮ ᠤᠳ ᠢ`. Suffixes must climb a slot order — plural, then case, then possessive — which is what stops номын also being read as ном + ы + н. Chaining splits the two attachment conditions that looked alike at depth 1: `attach` tests the unit the suffix actually follows (гэртээ takes ᠪᠡᠨ, not ᠢᠶᠡᠨ, because ᠲᠦ ends in a vowel even though ᠭᠡᠷ does not), while `gender` keeps testing the stem, which governs harmony for the whole word.
+
+  **Fleeting vowel (`GRAMMAR.md` G13).** бичгийн → `ᠪᠢᠴᠢᠭ ᠦᠨ`, ажлаа → `ᠠᠵᠢᠯ ᠢᠶᠠᠨ`, хаврын → `ᠬᠠᠪᠤᠷ ᠤᠨ`. A Cyrillic stem drops its last short vowel under suffixation while **traditional script keeps the stem whole** — the same split that makes уул → ᠠᠭᠤᠯᠠ — so this is purely about recovering the lookup key. The engine does not guess which vowel was lost: vowel harmony narrows the candidates and the lexicon decides which stem exists, which means the rule improves on its own as the lexicon grows. Where two real stems exist (сандл → сандал / сандил) both are offered.
+
+  **Derivational suffixes no longer decompose.** -ч, -л, -лт build new words, and by ground rule 1 a new word is a lexicon entry with its own spelling — deriving one at runtime is the engine spelling a stem. Removing them cost nothing and removed visible nonsense (өвлийн had been offered as ᠥᠪ + -л + genitive beside the correct ᠡᠪᠦᠯ ᠦᠨ).
+
+  ⚠️ Converter output changes for inflected words: many that previously fell back to letter-by-letter transliteration now return composed candidates, and some gain a second reading. No API changes.
+
+- `bun run measure:suffix` — a coverage harness for the suffix engine, because grammar rules can be argued about indefinitely and a number cannot. It runs the engine over Wiktionary's `mn-decl` declension tables (already in the cached kaikki dump): 12,208 inflected Cyrillic forms tagged with lemma and case, 8,840 of whose lemmas we hold, reported by case with unresolved examples on request.
+
+  It is honest about what it cannot see. The tables are template-expanded and contain rows no one checked (азот declines as *азтон*), and **"correct" means only that the right stem was found** — the test set never gives the traditional spelling, so whether the suffixes are right still takes a human reader. That limit has already earned its keep: allowing derivational suffixes scored 99 more forms "correct", every one of them the right stem with rubbish attached, which is how they came to be excluded.
 
 ### Changed
 

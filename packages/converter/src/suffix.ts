@@ -58,10 +58,23 @@ export function stemGender(traditional: string): "masculine" | "feminine" | "neu
   return "neutral";
 }
 
-/** Whether a traditional stem satisfies a suffix variant's conditions. */
-function conditionsMatch(stemTraditional: string, [, , , , attach, gender]: CompactSuffix): boolean {
+/**
+ * Whether a suffix variant may attach here.
+ *
+ * The two conditions read different things, which matters once suffixes chain
+ * (GRAMMAR.md G12): `attach` is about what the suffix physically follows, so it
+ * tests the unit immediately before it — the stem for the first suffix, the
+ * previous suffix for the second (гэр + ᠲᠦ + ᠪᠡᠨ: the reflexive takes its
+ * vowel-form because ᠲᠦ ends in a vowel, not because ᠭᠡᠷ does). `gender` is
+ * vowel harmony, which the stem governs for the whole word.
+ */
+function conditionsMatch(
+  precedingUnit: string,
+  stemTraditional: string,
+  [, , , , attach, gender]: CompactSuffix,
+): boolean {
   if (attach !== "") {
-    const isVowel = VOWELS.test(finalLetter(stemTraditional));
+    const isVowel = VOWELS.test(finalLetter(precedingUnit));
     if (attach === "vowel" ? !isVowel : isVowel) return false;
   }
   if (gender !== "") {
@@ -72,45 +85,198 @@ function conditionsMatch(stemTraditional: string, [, , , , attach, gender]: Comp
 }
 
 /**
- * Splits an inflected Cyrillic word into lexicon stem + known suffix and
+ * Attachment order for chained suffixes (GRAMMAR.md G12). A Mongolian nominal
+ * builds outward in fixed slots — stem, plural, case, possessive — and a chain
+ * is only well-formed if each suffix sits in a strictly later slot than the one
+ * before it. This is what stops ном + ы + н being offered as a second reading
+ * of номын: two case suffixes cannot stack.
+ *
+ * Senses not listed here are derivational (the Wiktionary-imported rows carry
+ * free-text glosses, not grammatical labels) and take slot 0 — they attach
+ * directly to the stem and nothing may precede them.
+ */
+const SLOTS: Record<string, number> = {
+  plural: 1,
+  "collective plural": 1,
+  genitive: 2,
+  accusative: 2,
+  "dative-locative": 2,
+  ablative: 2,
+  instrumental: 2,
+  comitative: 2,
+  "reflexive-possessive": 3,
+};
+
+function slotOf([, , , sense]: CompactSuffix): number {
+  return SLOTS[sense] ?? 0;
+}
+
+/**
+ * Derivational suffixes are excluded from decomposition (ground rule 1:
+ * rules never spell stems). -ч, -л, -лт and friends build new words, and a new
+ * word is a lexicon entry with its own traditional spelling — deriving it at
+ * runtime would be the engine inventing a stem, which is the one thing it must
+ * not do. They stay in suffixes.json as grammatical documentation.
+ */
+function isInflectional(row: CompactSuffix): boolean {
+  return SLOTS[row[3]] !== undefined;
+}
+
+/** How many suffixes may be peeled off one word (GRAMMAR.md G12). */
+const MAX_DEPTH = 2;
+
+/**
+ * Splits an inflected Cyrillic word into lexicon stem + known suffixes and
  * returns the composed traditional candidates, or [] when no split works.
  *
- * - Depth 1: exactly one suffix is stripped (chains like гэр+т+ээ are a
- *   known gap — see data/GRAMMAR.md).
+ * - Up to two suffixes are stripped, in slot order (номууд+ыг, гэр+т+ээ) —
+ *   GRAMMAR.md G12. Deeper chains are still a gap.
+ * - Only inflectional suffixes take part; derivation builds stems, and stems
+ *   come from the lexicon (ground rule 1).
  * - A stem that misses the lexicon is retried with a restored final ь
- *   (сургуулийн → сургууль, GRAMMAR.md G11).
+ *   (сургуулийн → сургууль, G11) and then with a restored fleeting vowel
+ *   (бичгийн → бичиг, G13).
  * - Conditions are evaluated against each TRADITIONAL stem candidate, never
  *   the Cyrillic surface (багшийг → ᠪᠠᠭᠰᠢ ᠶᠢ because ᠪᠠᠭᠰᠢ ends in a vowel).
  * - Every match is returned (`source: "suffix-rule"`), never a silent pick;
- *   verified only when both stem and suffix row are human-verified.
+ *   verified only when stem and every suffix row are human-verified.
  */
 export function decomposeWord(word: string): Candidate[] {
   const w = normalizeWord(word);
   const suffixTable = getTable();
   const results: Candidate[] = [];
   const seen = new Set<string>();
-  for (const suffix of suffixesLongestFirst!) {
-    if (w.length <= suffix.length || !w.endsWith(suffix)) continue;
-    const base = w.slice(0, -suffix.length);
-    let stems = lookupWord(base);
-    if (stems.length === 0 && !base.endsWith("ь")) stems = lookupWord(base + "ь");
-    for (const stem of stems) {
-      for (const row of suffixTable.get(suffix)!) {
-        if (!conditionsMatch(stem.traditional, row)) continue;
-        const [, traditional, latin, sense, , , verified] = row;
-        const composed = stem.traditional + NNBSP + traditional;
+
+  for (const split of peel(w, MAX_DEPTH)) {
+    for (const stem of stemsFor(split.base)) {
+      for (const rows of variants(split.suffixes, stem.traditional, suffixTable)) {
+        let composed = stem.traditional;
+        for (const [, traditional] of rows) composed += NNBSP + traditional;
         if (seen.has(composed)) continue;
         seen.add(composed);
         const candidate: Candidate = {
           traditional: composed,
-          verified: stem.verified && verified === 1,
+          verified: stem.verified && rows.every(([, , , , , , verified]) => verified === 1),
           source: "suffix-rule",
-          sense: stem.sense ? `${stem.sense} + ${sense}` : sense,
+          sense: [stem.sense, ...rows.map(([, , , sense]) => sense)].filter(Boolean).join(" + "),
         };
-        if (stem.latin && latin) candidate.latin = `${stem.latin}-${latin}`;
+        const latins = rows.map(([, , latin]) => latin);
+        if (stem.latin && latins.every(Boolean)) candidate.latin = [stem.latin, ...latins].join("-");
         results.push(candidate);
       }
     }
   }
-  return results;
+  // Shorter chains first: гэрт read as гэр+т is a likelier answer than any
+  // two-suffix reading of the same string, and the UI shows candidates in order.
+  return results.sort((a, b) => countUnits(a.traditional) - countUnits(b.traditional));
+}
+
+function countUnits(traditional: string): number {
+  return traditional.split(NNBSP).length;
+}
+
+/** Ways to cut a Cyrillic surface into stem + up to `depth` trailing suffixes,
+ *  each `suffixes` listed stem-outward. */
+function peel(word: string, depth: number): { base: string; suffixes: string[] }[] {
+  const out: { base: string; suffixes: string[] }[] = [];
+  const walk = (rest: string, left: number, outer: string[]): void => {
+    if (left === 0) return;
+    for (const suffix of suffixesLongestFirst!) {
+      if (rest.length <= suffix.length || !rest.endsWith(suffix)) continue;
+      const base = rest.slice(0, -suffix.length);
+      const chain = [suffix, ...outer];
+      out.push({ base, suffixes: chain });
+      walk(base, left - 1, chain);
+    }
+  };
+  walk(word, depth, []);
+  return out;
+}
+
+/** Lexicon stems for a stripped Cyrillic base, with the orthographic repairs
+ *  that modern spelling makes necessary (GRAMMAR.md G11, G13). */
+function stemsFor(base: string): Candidate[] {
+  const exact = lookupWord(base);
+  if (exact.length > 0) return exact;
+  if (!base.endsWith("ь")) {
+    const restored = lookupWord(base + "ь");
+    if (restored.length > 0) return restored;
+  }
+  return restoreFleetingVowel(base);
+}
+
+/** Cyrillic vowels, for reading the surface shape of a Mongolian word. */
+const CYRILLIC_VOWELS = "аеёиоуүөэюя";
+/** Back (эрэгтэй) and front (эмэгтэй) vowels; и and ы belong to neither. */
+const BACK_VOWELS = "аоуяё";
+const FRONT_VOWELS = "эөүе";
+/**
+ * Which vowel can be the elided one, in the order we try them. Short vowels
+ * only, and ы is excluded: it spells suffixes, never a stem's final syllable.
+ * The restored vowel must harmonize with the rest of the stem (G2), so the
+ * candidate list depends on what class the stem is already in — and и, which
+ * harmonizes with everything, comes last unless nothing else can decide.
+ */
+const FLEETING_BACK = ["а", "о", "у", "и"];
+const FLEETING_FRONT = ["э", "ө", "ү", "и"];
+const FLEETING_NEUTRAL = ["и", "а", "э", "о", "ө", "у", "ү"];
+
+function fleetingCandidates(base: string): string[] {
+  const back = [...base].some((ch) => BACK_VOWELS.includes(ch));
+  const front = [...base].some((ch) => FRONT_VOWELS.includes(ch));
+  if (back && !front) return FLEETING_BACK;
+  if (front && !back) return FLEETING_FRONT;
+  return FLEETING_NEUTRAL;
+}
+
+/**
+ * Fleeting vowel (тогтворгүй эгшиг), reversed — GRAMMAR.md G13.
+ *
+ * A polysyllabic Cyrillic stem drops the short vowel of its last syllable when
+ * a suffix follows: бичиг + ийн → бичгийн, ажил + аа → ажлаа. Traditional
+ * script keeps the stem whole (ᠪᠢᠴᠢᠭ ᠦᠨ), so this is purely a matter of
+ * recovering the Cyrillic lookup key — nothing about the composition changes.
+ *
+ * We do not predict which vowel was dropped. Vowel harmony narrows the
+ * candidates, and then the lexicon decides: it is the authority on which stems
+ * exist, and this improves on its own as the lexicon grows. Measured against
+ * Wiktionary's declension tables, exactly one stem exists 94% of the time;
+ * where two do (сандл → сандал / сандил) both are returned, because choosing
+ * between real words is the reader's job, not a rule's.
+ */
+function restoreFleetingVowel(base: string): Candidate[] {
+  const n = base.length;
+  if (n < 3) return []; // a monosyllable has no last-syllable vowel to lose
+  if (CYRILLIC_VOWELS.includes(base[n - 1]) || CYRILLIC_VOWELS.includes(base[n - 2])) return [];
+  const out: Candidate[] = [];
+  for (const vowel of fleetingCandidates(base)) {
+    out.push(...lookupWord(base.slice(0, n - 1) + vowel + base[n - 1]));
+  }
+  return out;
+}
+
+/** Every assignment of suffix rows to the chain whose conditions and slot
+ *  order all hold. */
+function variants(
+  suffixes: string[],
+  stemTraditional: string,
+  table: Map<string, CompactSuffix[]>,
+): CompactSuffix[][] {
+  let chains: CompactSuffix[][] = [[]];
+  for (const suffix of suffixes) {
+    const next: CompactSuffix[][] = [];
+    for (const chain of chains) {
+      const previous = chain[chain.length - 1];
+      const precedingUnit = previous === undefined ? stemTraditional : previous[1];
+      for (const row of table.get(suffix)!) {
+        if (!isInflectional(row)) continue;
+        if (previous !== undefined && slotOf(row) <= slotOf(previous)) continue;
+        if (!conditionsMatch(precedingUnit, stemTraditional, row)) continue;
+        next.push([...chain, row]);
+      }
+    }
+    chains = next;
+    if (chains.length === 0) break;
+  }
+  return chains;
 }

@@ -18,7 +18,7 @@ Toolchain: **bun** (runtime, package manager, script runner, and test runner). T
 
 **One-to-many is fundamental.** A single Cyrillic word can map to multiple traditional words with different meanings. уул itself: ᠠᠭᠤᠯᠠ (*agula*, mountain) vs ᠤᠤᠯ (*uul*, original — as in уул нь). The schema stores an ARRAY of candidates per Cyrillic form; the engine returns all candidates and lets the UI/user choose. Never silently collapse to one candidate.
 
-**Mongolian is agglutinative.** Words = stem + chain of suffixes. Suffix inventories differ between scripts, and in traditional script many suffixes are written as separate units joined by NNBSP (U+202F). Full morphological handling is a later phase; v0 handles whole-word lookup plus a curated common-suffix table (`data/suffixes.json`) applied by the suffix engine (`packages/converter/src/suffix.ts`) — depth 1, conditions evaluated on the traditional stem. Grammar rules are recorded with citations in `data/GRAMMAR.md`; route new morphology-rule questions through that file (code-point questions still go to `data/ENCODING.md`).
+**Mongolian is agglutinative.** Words = stem + chain of suffixes. Suffix inventories differ between scripts, and in traditional script many suffixes are written as separate units joined by NNBSP (U+202F). Full morphological handling is a later phase; v0 handles whole-word lookup plus a curated common-suffix table (`data/suffixes.json`) applied by the suffix engine (`packages/converter/src/suffix.ts`) — chains up to depth 2 in slot order, inflection only, conditions evaluated on the traditional stem, with Cyrillic stem repairs (final ь, fleeting vowel) to recover a lookup key the mutated surface hides. Grammar rules are recorded with citations in `data/GRAMMAR.md`; route new morphology-rule questions through that file (code-point questions still go to `data/ENCODING.md`). Coverage is measurable — `bun run measure:suffix` — so a rule change is an experiment, not an opinion.
 
 **Unicode gotchas (traditional Mongolian is notoriously hard):**
 - Main block: U+1800–U+18AF. Also uses FVS1–FVS3 (U+180B–U+180D) free variation selectors, MVS (U+180E), and NNBSP (U+202F) before suffixes.
@@ -92,6 +92,7 @@ scripts/
   import-wmk.ts         # one-time bootstrap import (idempotent)
   import-wiktionary.ts  # second-tier import via kaikki.org (idempotent, re-runnable)
   validate.ts           # schema + Unicode-range + duplicate + sort checks; exits non-zero on failure
+  measure-suffix.ts     # suffix-engine coverage vs. Wiktionary declension tables (reports only)
   build-data.ts         # compiles data/ into a compact artifact bundled with the package
   export-signals.ts     # drains the mailbox to JSONL; deletes by row id, never by timestamp
   aggregate-signals.ts  # JSONL → data/stats/ + REVIEW.md queue + the weekly PR body
@@ -116,6 +117,7 @@ Engine principles:
 - `bun run signals:export <file>` — drain the community mailbox (`--delete <file>` removes what it drained); needs `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY`
 - `bun run signals:aggregate <file>` — turn a drain into `data/stats/` + the review queue in `data/REVIEW.md`
 - `bun run build:queue` — compile `apps/web/public/queue.json` (gitignored; the web build runs it)
+- `bun run measure:suffix` — suffix-engine coverage against Wiktionary's declension tables (needs the cached kaikki dump; maintainer tool, not CI)
 
 ## Working agreements for Claude
 

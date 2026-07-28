@@ -45,6 +45,64 @@ describe("decomposeWord", () => {
     expect(forms).toBeArrayOfSize(2);
   });
 
+  test("chains two suffixes in slot order (G12)", () => {
+    expect(decomposeWord("гэртээ").map((c) => c.traditional)).toContain(`ᠭᠡᠷ${NNBSP}ᠲᠦ${NNBSP}ᠪᠡᠨ`);
+    expect(decomposeWord("номуудыг").map((c) => c.traditional)).toContain(`ᠨᠣᠮ${NNBSP}ᠤᠳ${NNBSP}ᠢ`);
+  });
+
+  test("the second suffix's attach condition reads the first suffix, not the stem (G12)", () => {
+    // ᠭᠡᠷ ends in a consonant, but the reflexive follows ᠲᠦ, which ends in a
+    // vowel — so it takes the vowel form ᠪᠡᠨ and never the consonant form ᠢᠶᠡᠨ.
+    const forms = decomposeWord("гэртээ").map((c) => c.traditional);
+    expect(forms).toContain(`ᠭᠡᠷ${NNBSP}ᠲᠦ${NNBSP}ᠪᠡᠨ`);
+    expect(forms).not.toContain(`ᠭᠡᠷ${NNBSP}ᠲᠦ${NNBSP}ᠢᠶᠡᠨ`);
+  });
+
+  test("two suffixes from the same slot never stack (G12)", () => {
+    // номын must not also be offered as ном + ы + н, two genitives in a row.
+    for (const c of decomposeWord("номын")) {
+      expect(c.traditional.split(NNBSP)).toBeArrayOfSize(2);
+    }
+  });
+
+  test("one-suffix readings are offered before two-suffix ones", () => {
+    const units = decomposeWord("гэртээ").map((c) => c.traditional.split(NNBSP).length);
+    expect(units).toEqual([...units].sort((a, b) => a - b));
+  });
+
+  test("restores a fleeting vowel to find the stem (G13)", () => {
+    expect(decomposeWord("бичгийн").map((c) => c.traditional)).toEqual([`ᠪᠢᠴᠢᠭ${NNBSP}ᠦᠨ`]);
+    expect(decomposeWord("бичгээр").map((c) => c.traditional)).toEqual([`ᠪᠢᠴᠢᠭ${NNBSP}ᠢᠶᠡᠷ`]);
+    expect(decomposeWord("ажлаа").map((c) => c.traditional)).toContain(`ᠠᠵᠢᠯ${NNBSP}ᠢᠶᠠᠨ`);
+  });
+
+  test("the restored vowel must harmonize with the stem (G13)", () => {
+    // хавр is a back-vowel stem, so хавар is reachable and хавир is not the
+    // first answer — harmony decides the order, the lexicon decides existence.
+    const [first] = decomposeWord("хаврын");
+    expect(first.traditional).toBe(`ᠬᠠᠪᠤᠷ${NNBSP}ᠤᠨ`);
+    expect(decomposeWord("өвлийн")[0].traditional).toBe(`ᠡᠪᠦᠯ${NNBSP}ᠦᠨ`);
+  });
+
+  test("a fleeting vowel and a chain compose (G12 + G13)", () => {
+    expect(decomposeWord("бичгүүдийн").map((c) => c.traditional)).toContain(
+      `ᠪᠢᠴᠢᠭ${NNBSP}ᠦᠳ${NNBSP}ᠦᠨ`,
+    );
+  });
+
+  test("two real stems behind one mutated surface are both offered (G13)", () => {
+    // сандл is сандал (chair) or сандил — the reader chooses, not the rule.
+    const forms = decomposeWord("сандлын").map((c) => c.traditional.split(NNBSP)[0]);
+    expect(new Set(forms).size).toBeGreaterThan(1);
+  });
+
+  test("derivational suffixes never decompose — rules do not spell stems", () => {
+    // өвлийн is ᠡᠪᠦᠯ + genitive, never ᠥᠪ + the noun-forming -л + genitive.
+    for (const c of decomposeWord("өвлийн")) {
+      expect(c.traditional.startsWith("ᠡᠪᠦᠯ")).toBeTrue();
+    }
+  });
+
   test("unknown stems produce nothing — decomposition never guesses stems", () => {
     expect(decomposeWord("бвгджзын")).toEqual([]);
     expect(decomposeWord("ын")).toEqual([]); // a bare suffix is not a split

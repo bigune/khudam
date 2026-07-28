@@ -99,6 +99,46 @@ Nadmid 1990 pp. 16–17: ᠪᠠᠨ/ᠪᠡᠨ after vowels and й; ᠢᠶᠠᠨ/�
 
 Cyrillic stems ending in ь lose it before и-initial suffixes (сургууль + ийн → сургуулийн, морь + ийг → морийг). After stripping a suffix, if the remainder misses the lexicon, the engine retries with ь appended. This is our own orthographic-surface repair, not a rule from the sources. **Status: implemented.**
 
+### G12 — Suffix chains: depth 2, in slot order (engine policy, needs human review)
+
+A Mongolian nominal builds outward in fixed slots, and the engine peels up to two suffixes back off, requiring each to sit in a strictly later slot than the one before it:
+
+| Slot | Contents |
+| --- | --- |
+| 0 | derivational (word-forming) — **excluded from decomposition**, see below |
+| 1 | plural, collective plural |
+| 2 | case: genitive, accusative, dative-locative, ablative, instrumental, comitative |
+| 3 | reflexive-possessive |
+
+```
+гэртээ    → ᠭᠡᠷ ᠲᠦ ᠪᠡᠨ    (stem + case + possessive)
+номуудыг  → ᠨᠣᠮ ᠤᠳ ᠢ      (stem + plural + case)
+```
+
+Each unit takes its own NNBSP (G1). The strict-increase requirement is what stops номын also being offered as ном + ы + н: two case suffixes cannot stack.
+
+Chaining splits the two attachment conditions, which at depth 1 were indistinguishable. **`attach` tests the unit the suffix physically follows** — the stem for the first suffix, the preceding suffix for the second: гэртээ takes ᠪᠡᠨ rather than ᠢᠶᠡᠨ because ᠲᠦ ends in a vowel, though ᠭᠡᠷ does not. **`gender` tests the stem**, which governs harmony for the whole word (G2).
+
+**Derivational suffixes are excluded from decomposition entirely.** -ч, -л, -лт and the rest build new words, and by ground rule 1 a new word is a lexicon entry with its own traditional spelling — deriving one at runtime would be the engine spelling a stem. They remain in `suffixes.json` as documentation. This was measured, not assumed: allowing them scored 99 more forms "correct" in the harness, every one of them the right stem with rubbish attached (ламууд → *ᠯᠠᠮᠠ ᠭᠤ ᠳᠤ*, where the plural should be ᠨᠤᠭᠤᠳ and ᠭᠤ ᠳᠤ is not a suffix), and nothing was lost by removing them.
+
+The slot table is **engine policy, not transcribed from a source**: Nadmid 1990 p. 13 §2 covers chain order, and a human reading it should check this table against it. Depth 3+ (номуудынхаа) remains a gap. **Status: implemented, ordering unverified.**
+
+### G13 — Stem repair: restored fleeting vowel (тогтворгүй эгшиг)
+
+A polysyllabic Cyrillic stem drops the short vowel of its final syllable when a suffix follows:
+
+```
+бичиг + ийн → бичгийн        ажил + аа → ажлаа        хавар + ын → хаврын
+```
+
+**Traditional script keeps the stem whole** — ᠪᠢᠴᠢᠭ ᠦᠨ, not *ᠪᠢᠴᠭ ᠦᠨ. Cyrillic follows modern pronunciation while бичиг preserves the older full form, the same split that makes уул → ᠠᠭᠤᠯᠠ. So this is purely about recovering the Cyrillic lookup key; nothing about composition changes.
+
+The engine does not predict which vowel was dropped. After stripping a suffix, if the remainder misses the lexicon and ends in two consonants, it puts each candidate vowel back and asks the lexicon which stem exists. Vowel harmony (G2) narrows the candidates — а/о/у for a back-vowel stem, э/ө/ү for a front-vowel one, plus neutral и — and the lexicon decides the rest. ы is excluded: it spells suffixes, never a stem's final syllable.
+
+Two stems sometimes both exist (сандл → сандал "chair" / сандил). Both are returned, per ground rule 4 — choosing between two real words is a reader's job, not a rule's. Measured against the harness below, exactly one stem exists 94% of the time.
+
+Like G11 this is an orthographic-surface repair of our own, not a rule transcribed from Nadmid. **Status: implemented.**
+
 ## Fixing a wrong composition
 
 When the suffix engine produces a wrong candidate for some word, there are two
@@ -114,10 +154,24 @@ repair paths, both via PR:
    needed. This is the intended escape hatch; exceptions accumulating in the
    lexicon are data, not debt.
 
+## Measuring coverage
+
+Grammar rules can be argued about indefinitely, because every rule has a convincing example and a convincing counter-example. `bun run measure:suffix` replaces the argument with a number: it runs the engine over Wiktionary's own `mn-decl` declension tables (already in the kaikki dump cached for the lexicon import) — 12,208 inflected Cyrillic forms, each tagged with its lemma and case, 8,840 of whose lemmas we hold.
+
+| | resolved | right stem | precision |
+| --- | --- | --- | --- |
+| depth 1, no stem repair (before G12/G13) | 18.6% | 16.9% | 90.4% |
+| + G12 suffix chains | 42.3% | 38.4% | 90.9% |
+| + G13 fleeting vowel | 50.0% | 46.6% | 93.1% |
+| − derivational suffixes (G12) | **48.5%** | **45.4%** | **93.8%** |
+
+Two limits are load-bearing. The tables are template-expanded, so some rows are junk no one checked (азот declines as *азтон*, the template eliding a vowel a loanword does not drop). And **"right stem" is all it measures** — the test set gives the Cyrillic form, never its traditional spelling, so whether the suffixes hung off that stem are correct takes a reader of монгол бичиг. A rise is evidence, not proof. The measurement needs the cached dump, so it is a maintainer tool; the regression tests that run in CI live in `packages/converter/test/suffix.test.ts`.
+
 ## Known gaps (future work, roughly in value order)
 
-- **Suffix chains** — depth is 1, so гэр+т+ээ (гэртээ), ном+ууд+ыг (номуудыг) miss. Needs depth-2 decomposition with chain-order rules (Nadmid p. 13 §2).
-- **Fleeting vowels** — ажил + -аа → ажлаа changes the stem string; no repair rule yet.
+- **Privative -гүй** — 1,114 forms in the test set, 0.2% resolved: the suffix simply is not in `suffixes.json` yet. Cheapest remaining win, and it needs a cited rule row, not code.
+- **Suffix chains beyond depth 2** — номуудынхаа (plural + genitive + possessive) still misses; G12 stops at two.
+- **-нх / -нхан** (номынх, багшийнх) — a productive nominal-forming ending absent from the table.
 - **Fleeting/doubled н** — уул + н + -аас → уулнаас; хаан + -ууд degeminates to хаанууд, which the engine currently maps to ᠤᠳ where p. 14 wants ᠨᠤᠭᠤᠳ after н.
 - **-чууд → ᠴᠤᠳ transcription** is the least certain row in the table (read from a low-resolution scan) — flagged in [REVIEW.md](REVIEW.md).
 - **ᠤ/ᠦ genitive "only after н"** is approximated by consonant-final; a dedicated attach value (e.g. `"n"`) would be exact.
