@@ -29,6 +29,10 @@ nothing here needs an npm release. These ship to khudam.suray.mn on merge.
 
 ### Fixed
 
+- Community signals: one browser saying the same thing twice now files it once. Copying the same text again, reloading and re-reporting the same candidate, or re-sending an identical proposal produced a row indistinguishable from one already in the mailbox, and a reviewer learned nothing from reading it twice. A unique index over the whole content of a signal enforces it, and the converter asks Postgres to drop the repeat silently rather than answer with an error — the contributor is still told the report was filed, which is true: it was, the first time.
+
+  The scope is one browser, not one signal: two different sessions filing the identical proposal stay two rows, because that agreement is exactly the corroboration the weekly PR ranks highest. Applying the schema to a project that already collected duplicates fails on the new index; `supabase/README.md` § Removing duplicates has the one-time cleanup.
+
 - Web app: candidates whose only meaning label is the importer's `unlabeled` placeholder no longer display it as if it were a meaning — including inside the suffix engine's composed labels (`unlabeled + genitive` now reads `genitive`). The placeholder is a marker for reviewers, not a sense.
 
 ## [0.2.0] — 2026-07-27

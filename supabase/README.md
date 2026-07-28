@@ -60,6 +60,37 @@ Signals are not verification. Nothing written here may set `verified: true`.
    'proposal'` — the flag is filed as soon as the question is answered, so a
    contributor who stops before proposing still leaves a signal.
 
+## Removing duplicates
+
+One session saying the same thing twice says it once. The
+`signals_session_content_uniq` index enforces that, and the converter asks for
+`resolution=ignore-duplicates`, so a repeat report is dropped silently rather
+than refused — the contributor is told it was filed, which is true: it was, the
+first time.
+
+The scope is one browser, not one signal. Two different sessions filing the
+identical proposal stay two rows, because that agreement is the corroboration
+signal the weekly PR ranks highest.
+
+Applying the schema to a project that already collected duplicates **fails on
+this index**, which is the file telling the truth: it cannot enforce a rule the
+existing rows break. Run this once first, then re-apply the schema. It keeps
+the earliest row of each identical group and deletes the rest — `partition by`
+treats nulls as equal, which is what the index's `nulls not distinct` means:
+
+```sql
+delete from public.signals
+ where id in (
+   select id from (
+     select id, row_number() over (
+              partition by session_id, signal_type, cyrillic, traditional, sense,
+                           proposal_kind, proposal_traditional, proposal_sense,
+                           question_id, verdict
+              order by created_at, id) as n
+       from public.signals) ranked
+    where ranked.n > 1);
+```
+
 ## Why publishing the anon key is safe
 
 RLS is on and the anon role has exactly one policy: `insert`. With no select

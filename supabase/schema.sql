@@ -174,13 +174,56 @@ alter table public.signals add  constraint signals_proposal_shape
          (proposal_kind is not null and
           (proposal_traditional is not null or proposal_sense is not null)));
 
--- The export job pulls by watermark and deletes what it took.
+-- The export job reads the mailbox oldest-first and deletes what it took.
 create index if not exists signals_created_at_idx
   on public.signals (created_at);
 
 -- Supports the per-session rate-limit trigger below.
 create index if not exists signals_session_recent_idx
   on public.signals (session_id, created_at);
+
+-- ---------------------------------------------------------------------------
+-- Deduplication
+-- ---------------------------------------------------------------------------
+
+-- One person saying the same thing twice has said it once. Copying the same
+-- text again, reloading and re-flagging the same candidate, re-sending an
+-- identical proposal -- each files a row indistinguishable from one already in
+-- the mailbox, and a reviewer learns nothing from reading it a second time.
+--
+-- Scoped to session_id deliberately. Two DIFFERENT sessions filing the
+-- identical proposal is the corroboration signal the weekly PR ranks highest,
+-- and collapsing that would destroy the one thing anonymous signals are good
+-- for. The rule is "not twice from the same browser", never "not twice".
+--
+-- NULLS NOT DISTINCT (Postgres 15+) is what makes this work at all: every
+-- column but the first three is null for some signal type, and by default
+-- Postgres treats each null as unique -- so a plain unique index over these
+-- columns would collapse almost nothing. Every column that carries meaning is
+-- in the key, so only a genuinely identical row is dropped; `verdict` and
+-- `question_id` are included so a Phase B answer to a different question, or a
+-- changed mind about the same one, still counts as something new to read.
+--
+-- Enforced rather than prevented client-side: apps/web asks for
+-- `on_conflict=<these columns>` with `Prefer: resolution=ignore-duplicates`,
+-- so a duplicate is dropped silently instead of answered with an error. The
+-- contributor is still told their report was filed, which is true -- it was,
+-- the first time. Keep that column list in sync with this one
+-- (apps/web/lib/signals.ts, DEDUP_COLUMNS).
+--
+-- Dedup reaches back only to the last drain, not forever: the weekly export
+-- empties the table, so the same person reporting the same thing next month
+-- files it again -- correctly, since by then the earlier row is in a merged PR.
+--
+-- Applying this to a project that already holds duplicates fails, loudly and
+-- correctly. See supabase/README.md § Removing duplicates for the one-time
+-- cleanup query to run first.
+drop index if exists public.signals_session_content_uniq;
+create unique index signals_session_content_uniq
+  on public.signals (session_id, signal_type, cyrillic, traditional, sense,
+                     proposal_kind, proposal_traditional, proposal_sense,
+                     question_id, verdict)
+  nulls not distinct;
 
 -- ---------------------------------------------------------------------------
 -- Rate limiting
