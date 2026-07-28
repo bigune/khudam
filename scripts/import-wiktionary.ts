@@ -542,10 +542,14 @@ function main(dump: string): void {
 
   // Merge suffixes (dedup by cyrillic+traditional against any existing source).
   const suffixes = existsSync(SUFFIXES_FILE) ? readSuffixesFile(SUFFIXES_FILE) : [];
-  const haveSuffix = new Set(suffixes.map((s) => `${s.cyrillic} ${s.traditional}`));
+  // A visible separator, and one that cannot occur in either half. The
+  // invisible one used here before (U+0000) made the whole file read as binary
+  // to grep and ripgrep — a search for this script's own exports came back
+  // empty, and was believed.
+  const haveSuffix = new Set(suffixes.map((s) => `${s.cyrillic}|${s.traditional}`));
   let suffixesAdded = 0;
   for (const row of suffixRows) {
-    const k = `${row.cyrillic} ${row.traditional}`;
+    const k = `${row.cyrillic}|${row.traditional}`;
     if (haveSuffix.has(k)) continue;
     haveSuffix.add(k);
     suffixes.push(row);
@@ -584,8 +588,16 @@ function main(dump: string): void {
   for (const [letter, count] of shardSummary) console.log(`  ${letter}.json — ${count}`);
 }
 
+/**
+ * Emphasis is written with underscores, never asterisks, everywhere in the
+ * generated section. Prettier rewrites `*x*` to `_x_`, so a formatting pass
+ * over REVIEW.md — which happened once — silently rewrites 847 lines inside
+ * the "do not edit between markers" block, and the next import run reverts
+ * them all. Matching Prettier's normalization keeps the generator idempotent
+ * against the committed file.
+ */
 function fmtCandidate(c: Candidate): string {
-  const latin = c.latin !== undefined ? ` (*${c.latin}*)` : "";
+  const latin = c.latin !== undefined ? ` (_${c.latin}_)` : "";
   const sense = c.sense === UNLABELED_SENSE ? `_${UNLABELED_SENSE}_` : c.sense !== undefined ? `“${c.sense}”` : "_no sense_";
   const marks = [c.verified ? "verified ✓" : null, c.corroborated ? "corroborated" : null].filter(Boolean).join(", ");
   return `\`${c.traditional}\`${latin} — ${c.source}${marks ? ` (${marks})` : ""} — ${sense}`;
@@ -667,7 +679,7 @@ function writeReviewSection(
     lines.push("");
     const sorted = [...names].sort((a, b) => compareWords(a.word.toLowerCase(), b.word.toLowerCase()));
     for (const n of sorted) {
-      const forms = n.forms.map((f) => `\`${f.traditional}\`${f.latin !== undefined ? ` (*${f.latin}*)` : ""}`);
+      const forms = n.forms.map((f) => `\`${f.traditional}\`${f.latin !== undefined ? ` (_${f.latin}_)` : ""}`);
       const bad = n.invalid.map((i) => `⚠ \`${i.form}\` (${i.reason})`);
       const sense = n.sense !== undefined ? ` — “${n.sense}”` : "";
       lines.push(`- **${n.word}** — ${[...forms, ...bad].join(" · ")}${sense} — [Wiktionary](${wiktionaryUrl(n.word)})`);
@@ -681,7 +693,7 @@ function writeReviewSection(
     lines.push(
       "These words have no Mongolian spelling on their Wiktionary headword line, but " +
         "their etymology cites a Classical Mongolian form. Because монгол бичиг largely " +
-        "preserves classical orthography, the etymon is *usually* the correct spelling — " +
+        "preserves classical orthography, the etymon is _usually_ the correct spelling — " +
         "but not always (it may cover a different sense or predate modern script " +
         "convention), so it is only a hint for reviewers, never imported. " +
         "“= lexicon” / “≠ lexicon” compares code points against the current candidate(s).",
@@ -691,7 +703,7 @@ function writeReviewSection(
     for (const [key, sg] of sorted) {
       const entry = lexicon.get(key);
       for (const s of sg.items) {
-        const latin = s.latin !== undefined ? ` (*${s.latin}*)` : "";
+        const latin = s.latin !== undefined ? ` (_${s.latin}_)` : "";
         const gloss = s.gloss !== undefined ? ` — “${s.gloss}”` : "";
         let compare: string;
         if (entry === undefined) {
