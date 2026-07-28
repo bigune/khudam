@@ -27,6 +27,14 @@ merge.
 
   ⚠️ Converter output changes for inflected words: many that previously fell back to letter-by-letter transliteration now return composed candidates, and some gain a second reading. No API changes.
 
+- Two suffix rows the table had been missing, both cited: **privative -гүй → ᠦᠭᠡᠢ** (`GRAMMAR.md` G14) and the **substantive genitive -х → ᠬᠢ** (G15). номгүй → `ᠨᠣᠮ ᠦᠭᠡᠢ`, номынх → `ᠨᠣᠮ ᠤᠨ ᠬᠢ`, багшийнх → `ᠪᠠᠭᠰᠢ ᠶᠢᠨ ᠬᠢ`. The privative was the single largest hole left in the engine — 1,114 forms in the measurement set, 0.2% of them resolved; it now reads 52.2%, and overall coverage goes from 45.4% to **51.8%** at 94.1% precision.
+
+  Both forms come from English Wiktionary and are corroborated inside the repo rather than taken on trust: `-гүй` is "aphaeresed from үгүй", whose script form ᠦᠭᠡᠢ the wmk bootstrap gives independently; `-х` (etymology 3, "converts a genitive to a substantive genitive") is spelled ᠬᠢ, and our манайх entry stores exactly `ᠮᠠᠨ ᠤ ᠬᠢ` — stem, NNBSP, genitive, NNBSP, ᠬᠢ.
+
+  -ынх and -ийнх are deliberately **not** rows: they are the genitive plus this one, chained by G12. That is also why the substantive may never open a chain — Cyrillic -х ends every verb infinitive in the language, and without the restriction харих, явах and бичих would each acquire a substantive reading.
+
+  Both rows are `verified: false` with the open question each one leaves recorded in `data/REVIEW.md`: whether the privative is written apart or joined (our ааггүй reads ᠠᠭᠠᠭᠦᠭᠡᠢ, joined — but from the machine seed), and whether ᠬᠢ has a harmony pair. A citation is not verification; a human reading монгол бичиг still is.
+
 - `bun run measure:suffix` — a coverage harness for the suffix engine, because grammar rules can be argued about indefinitely and a number cannot. It runs the engine over Wiktionary's `mn-decl` declension tables (already in the cached kaikki dump): 12,208 inflected Cyrillic forms tagged with lemma and case, 8,840 of whose lemmas we hold, reported by case with unresolved examples on request.
 
   It is honest about what it cannot see. The tables are template-expanded and contain rows no one checked (азот declines as *азтон*), and **"correct" means only that the right stem was found** — the test set never gives the traditional spelling, so whether the suffixes are right still takes a human reader. That limit has already earned its keep: allowing derivational suffixes scored 99 more forms "correct", every one of them the right stem with rubbish attached, which is how they came to be excluded.

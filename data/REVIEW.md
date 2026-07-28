@@ -383,14 +383,16 @@ Word-initial ᠶᠢ (a legitimate е/ё/ю/я glide, e.g. `ес` → ᠶᠢᠰ�
 - `шүүгээлэх` (_shuugeeleh_) — `ᠱᠦᠬᠦᠶᠢᠯᠡᠬᠦ` → would be `ᠱᠦᠬᠦᠢᠯᠡᠬᠦ`
 - `эрээвэр` (_ereever_) — `ᠡᠶᠢᠶᠡᠪᠦᠷᠢ` → would be `ᠡᠢᠶᠡᠪᠦᠷᠢ`
 
-## Suffix table needs human verification (56 rows, high priority)
+## Suffix table needs human verification (86 rows, high priority)
 
-Every row of [`suffixes.json`](suffixes.json) was transcribed into Unicode by AI from
-the rule tables in Nadmid 1990 (see [GRAMMAR.md](GRAMMAR.md) § Sources) and is
-`verified: false`. Худам бичгийн нөхцөлүүдийн Юникод зурлагыг хүн нягтлаагүй байгаа —
-жижиг, хаалттай олонлог тул нэг дор хянаж баталгаажуулахад хялбар. This is the
-highest-leverage review in the repo: a closed set of 56 rows that the converter
-attaches to thousands of words.
+Every row of [`suffixes.json`](suffixes.json) is `verified: false`, and none of the
+three tiers is human-checked: 56 rows transcribed into Unicode by AI from the rule
+tables in Nadmid 1990 (see [GRAMMAR.md](GRAMMAR.md) § Sources), 28 machine-imported
+from Wiktionary, and 2 added by hand from Wiktionary evidence for G14/G15 — the
+last of these have their own questions below. Худам бичгийн нөхцөлүүдийн Юникод
+зурлагыг хүн нягтлаагүй байгаа — жижиг, хаалттай олонлог тул нэг дор хянаж
+баталгаажуулахад хялбар. This is the highest-leverage review in the repo: a closed
+set of 86 rows that the converter attaches to thousands of words.
 
 Least certain rows, in order:
 
@@ -402,6 +404,29 @@ Least certain rows, in order:
 - The comitative `ᠯᠤᠭ᠎ᠠ`/`ᠯᠦᠭᠡ` (-луга/-лүгэ) was deliberately left OUT — its MVS
   spelling needs a code-point ruling in [ENCODING.md](ENCODING.md) before it can
   be added.
+
+### Two rows sourced from Wiktionary, not Nadmid — both need a ruling
+
+Added for GRAMMAR.md G14 and G15. Their traditional forms are cited from English
+Wiktionary and corroborated inside this repo, but each carries one open question
+that a dictionary entry cannot answer and a rule table could. Эдгээр хоёр мөрийг
+хүн нягтлах шаардлагатай.
+
+- **`-гүй` → `ᠦᠭᠡᠢ` (privative).** Is it written **apart** (`ᠨᠣᠮ ᠦᠭᠡᠢ`, NNBSP) or
+  joined to the stem? The engine writes it apart, which is what G1 implies for an
+  appositive unit and what the ᠮᠠᠨ ᠤ ᠬᠢ precedent supports. Against that, the
+  lexicon's own **ааггүй** reads `ᠠᠭᠠᠭᠦᠭᠡᠢ` — joined — but that form is from the
+  machine seed and settles nothing. If the joined form is right, the row should
+  leave `suffixes.json` and those words become lexicon entries instead.
+  *Sources:* en.wiktionary `-гүй` ("aphaeresed from үгүй"), `үгүй` → ᠦᠭᠡᠢ (*ügei*);
+  the wmk seed independently gives үгүй → ᠦᠭᠡᠢ.
+- **`-х` → `ᠬᠢ` (substantive genitive).** Does ᠬᠢ have a harmony pair, i.e. a
+  separate feminine form? It is stored as one invariant row because that is what
+  the source shows, but the source is a dictionary entry, not a rule table, and
+  every other suffix in G2's system has two variants.
+  *Sources:* en.wiktionary `-х` etymology 3 ("converts a genitive to a substantive
+  genitive"), Mongolian script ᠬᠢ; lexicon **манайх** → `ᠮᠠᠨ ᠤ ᠬᠢ` (Wiktionary tier),
+  NNBSP-separated at code-point level.
 
 Already questioned and ruled on: whether `ᠶᠢᠨ`/`ᠶᠢ`/`ᠢᠶᠠᠷ` reproduce the
 Decision 001 postvocalic-й digraph. They do not — the glide ᠶ U+1836 is correct

@@ -104,12 +104,27 @@ const SLOTS: Record<string, number> = {
   ablative: 2,
   instrumental: 2,
   comitative: 2,
-  "reflexive-possessive": 3,
+  // privative sits with the cases: it follows a plural (бичгүүдгүй) and
+  // precedes a possessive (бичиггүйгээ), and never co-occurs with a case.
+  privative: 2,
+  substantive: 3,
+  "reflexive-possessive": 4,
 };
 
 function slotOf([, , , sense]: CompactSuffix): number {
   return SLOTS[sense] ?? 0;
 }
+
+/**
+ * Suffixes that cannot open a chain, because they convert another suffix
+ * rather than attach to a stem. ᠬᠢ is Wiktionary's "converts a genitive to a
+ * substantive genitive": номынх is ном + ын + х, and there is no номх.
+ *
+ * This is also what keeps the row harmless. Cyrillic -х ends every verb
+ * infinitive in the language (харих, явах, бичих); without the restriction the
+ * engine would offer a substantive reading of all of them.
+ */
+const NEVER_FIRST = new Set(["substantive"]);
 
 /**
  * Derivational suffixes are excluded from decomposition (ground rule 1:
@@ -270,6 +285,7 @@ function variants(
       const precedingUnit = previous === undefined ? stemTraditional : previous[1];
       for (const row of table.get(suffix)!) {
         if (!isInflectional(row)) continue;
+        if (previous === undefined && NEVER_FIRST.has(row[3])) continue;
         if (previous !== undefined && slotOf(row) <= slotOf(previous)) continue;
         if (!conditionsMatch(precedingUnit, stemTraditional, row)) continue;
         next.push([...chain, row]);

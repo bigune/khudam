@@ -211,6 +211,15 @@
     "citation": "Nadmid 1990 p. 16"
   },
   {
+    "cyrillic": "гүй",
+    "traditional": "ᠦᠭᠡᠢ",
+    "latin": "ügei",
+    "sense": "privative",
+    "verified": false,
+    "source": "wiktionary",
+    "citation": "en.wiktionary.org “-гүй”: aphaeresed from үгүй; “үгүй”: Mongolian script ᠦᠭᠡᠢ (ügei)"
+  },
+  {
     "cyrillic": "гөө",
     "traditional": "ᠪᠡᠨ",
     "latin": "ben",
@@ -593,6 +602,15 @@
     "sense": "causative forming suffix.",
     "verified": false,
     "source": "wiktionary"
+  },
+  {
+    "cyrillic": "х",
+    "traditional": "ᠬᠢ",
+    "latin": "ki",
+    "sense": "substantive",
+    "verified": false,
+    "source": "wiktionary",
+    "citation": "en.wiktionary.org “-х” etymology 3: converts a genitive to a substantive genitive, Mongolian script ᠬᠢ; манайх → ᠮᠠᠨ ᠤ ᠬᠢ"
   },
   {
     "cyrillic": "ц",

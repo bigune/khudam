@@ -96,6 +96,34 @@ describe("decomposeWord", () => {
     expect(new Set(forms).size).toBeGreaterThan(1);
   });
 
+  test("privative -гүй is the written-apart ᠦᠭᠡᠢ (G14)", () => {
+    expect(decomposeWord("номгүй").map((c) => c.traditional)).toContain(`ᠨᠣᠮ${NNBSP}ᠦᠭᠡᠢ`);
+    expect(decomposeWord("бичиггүй").map((c) => c.traditional)).toContain(`ᠪᠢᠴᠢᠭ${NNBSP}ᠦᠭᠡᠢ`);
+  });
+
+  test("privative sits between plural and possessive (G14)", () => {
+    expect(decomposeWord("бичгүүдгүй").map((c) => c.traditional)).toContain(
+      `ᠪᠢᠴᠢᠭ${NNBSP}ᠦᠳ${NNBSP}ᠦᠭᠡᠢ`,
+    );
+    expect(decomposeWord("бичиггүйгээ").map((c) => c.traditional)).toContain(
+      `ᠪᠢᠴᠢᠭ${NNBSP}ᠦᠭᠡᠢ${NNBSP}ᠪᠡᠨ`,
+    );
+  });
+
+  test("substantive -х follows a genitive as ᠬᠢ (G15)", () => {
+    expect(decomposeWord("номынх").map((c) => c.traditional)).toContain(`ᠨᠣᠮ${NNBSP}ᠤᠨ${NNBSP}ᠬᠢ`);
+    expect(decomposeWord("багшийнх").map((c) => c.traditional)).toContain(
+      `ᠪᠠᠭᠰᠢ${NNBSP}ᠶᠢᠨ${NNBSP}ᠬᠢ`,
+    );
+  });
+
+  test("substantive -х never opens a chain, so verbs in -х stay whole (G15)", () => {
+    // Every Mongolian infinitive ends in -х. None of them is a substantive.
+    for (const verb of ["харих", "явах", "бичих", "сурах"]) {
+      expect(decomposeWord(verb)).toEqual([]);
+    }
+  });
+
   test("derivational suffixes never decompose — rules do not spell stems", () => {
     // өвлийн is ᠡᠪᠦᠯ + genitive, never ᠥᠪ + the noun-forming -л + genitive.
     for (const c of decomposeWord("өвлийн")) {

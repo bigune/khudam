@@ -107,8 +107,9 @@ A Mongolian nominal builds outward in fixed slots, and the engine peels up to tw
 | --- | --- |
 | 0 | derivational (word-forming) — **excluded from decomposition**, see below |
 | 1 | plural, collective plural |
-| 2 | case: genitive, accusative, dative-locative, ablative, instrumental, comitative |
-| 3 | reflexive-possessive |
+| 2 | case: genitive, accusative, dative-locative, ablative, instrumental, comitative; privative (G14) |
+| 3 | substantive (G15) — may never open a chain |
+| 4 | reflexive-possessive |
 
 ```
 гэртээ    → ᠭᠡᠷ ᠲᠦ ᠪᠡᠨ    (stem + case + possessive)
@@ -139,6 +140,41 @@ Two stems sometimes both exist (сандл → сандал "chair" / санди
 
 Like G11 this is an orthographic-surface repair of our own, not a rule transcribed from Nadmid. **Status: implemented.**
 
+### G14 — Privative (хэрэглэхгүй нөхцөл): -гүй → ᠦᠭᠡᠢ
+
+| Cyrillic | Traditional | Conditions |
+| --- | --- | --- |
+| -гүй | ᠦᠭᠡᠢ | none — attaches after anything |
+
+```
+номгүй      → ᠨᠣᠮ ᠦᠭᠡᠢ
+бичгүүдгүй  → ᠪᠢᠴᠢᠭ ᠦᠳ ᠦᠭᠡᠢ      (plural, then privative)
+бичиггүйгээ → ᠪᠢᠴᠢᠭ ᠦᠭᠡᠢ ᠪᠡᠨ     (privative, then possessive)
+```
+
+The suffix is a worn-down copy of a free word: English Wiktionary's `-гүй` gives the etymology as *"aphaeresed from үгүй"*, and its entry for **үгүй** gives the Mongolian-script form **ᠦᠭᠡᠢ** (*ügei*) — corroborated inside this repo, where the lexicon's own `үгүй` entry reads ᠦᠭᠡᠢ from the independent wmk bootstrap. It takes no harmony variants because Cyrillic has none: there is no *-гуй.
+
+The slot follows from what it combines with: after a plural (бичгүүдгүй) and before a possessive (бичиггүйгээ), and never alongside a case — which is slot 2.
+
+⚠️ **Open for human review:** whether the privative is written *apart* (NNBSP, as here) or joined to the stem. The written-apart form is what G1 implies and what the ᠮᠠᠨ ᠤ ᠬᠢ precedent supports, but the lexicon's own ааггүй reads ᠠᠭᠠᠭᠦᠭᠡᠢ, joined — from the machine seed, so it settles nothing. Flagged in [REVIEW.md](REVIEW.md). **Status: implemented, data unverified.**
+
+### G15 — Substantive genitive: -х → ᠬᠢ, only after a genitive
+
+| Cyrillic | Traditional | Conditions |
+| --- | --- | --- |
+| -х | ᠬᠢ | must follow another suffix; in practice the genitive |
+
+```
+номынх   → ᠨᠣᠮ ᠤᠨ ᠬᠢ
+багшийнх → ᠪᠠᠭᠰᠢ ᠶᠢᠨ ᠬᠢ
+```
+
+English Wiktionary's `-х` (etymology 3) is defined as *"converts a genitive to a substantive genitive"* and gives the Mongolian script form **ᠬᠢ** (*-ki*). Our lexicon corroborates the shape independently: манайх is stored as ᠮᠠᠨ ᠤ ᠬᠢ — stem, NNBSP, genitive, NNBSP, ᠬᠢ — which is exactly what the engine now composes.
+
+Cyrillic -ынх/-ийнх are not separate rows: they are the genitive rows plus this one, chained by G12. That is also why **this suffix may never open a chain** (`NEVER_FIRST` in `suffix.ts`). The definition demands a genitive to convert, and the restriction is what makes the row safe to ship at all — Cyrillic -х ends every verb infinitive in the language, so an unrestricted row would offer a substantive reading of харих, явах and бичих alike.
+
+⚠️ **Open for human review:** whether ᠬᠢ has a harmony pair (a masculine ᠬᠢ / feminine variant) — one invariant row is what the source shows, but the source is a dictionary entry, not a rule table. Flagged in [REVIEW.md](REVIEW.md). **Status: implemented, data unverified.**
+
 ## Fixing a wrong composition
 
 When the suffix engine produces a wrong candidate for some word, there are two
@@ -163,15 +199,16 @@ Grammar rules can be argued about indefinitely, because every rule has a convinc
 | depth 1, no stem repair (before G12/G13) | 18.6% | 16.9% | 90.4% |
 | + G12 suffix chains | 42.3% | 38.4% | 90.9% |
 | + G13 fleeting vowel | 50.0% | 46.6% | 93.1% |
-| − derivational suffixes (G12) | **48.5%** | **45.4%** | **93.8%** |
+| − derivational suffixes (G12) | 48.5% | 45.4% | 93.8% |
+| + G14 privative, G15 substantive | **55.1%** | **51.8%** | **94.1%** |
 
 Two limits are load-bearing. The tables are template-expanded, so some rows are junk no one checked (азот declines as *азтон*, the template eliding a vowel a loanword does not drop). And **"right stem" is all it measures** — the test set gives the Cyrillic form, never its traditional spelling, so whether the suffixes hung off that stem are correct takes a reader of монгол бичиг. A rise is evidence, not proof. The measurement needs the cached dump, so it is a maintainer tool; the regression tests that run in CI live in `packages/converter/test/suffix.test.ts`.
 
 ## Known gaps (future work, roughly in value order)
 
-- **Privative -гүй** — 1,114 forms in the test set, 0.2% resolved: the suffix simply is not in `suffixes.json` yet. Cheapest remaining win, and it needs a cited rule row, not code.
-- **Suffix chains beyond depth 2** — номуудынхаа (plural + genitive + possessive) still misses; G12 stops at two.
-- **-нх / -нхан** (номынх, багшийнх) — a productive nominal-forming ending absent from the table.
+- **Suffix chains beyond depth 2** — номуудынхаа (plural + genitive + substantive + possessive) still misses; G12 stops at two, and G15 makes three-suffix chains ordinary rather than exotic.
+- **-нхан** (манайхан "our people") — the collective of G15's substantive, still absent.
+- **Genitive is the weakest case at 30.6%** — the largest single bucket and the lowest score of the core six. Worth a look at G3's conditions before adding anything new.
 - **Fleeting/doubled н** — уул + н + -аас → уулнаас; хаан + -ууд degeminates to хаанууд, which the engine currently maps to ᠤᠳ where p. 14 wants ᠨᠤᠭᠤᠳ after н.
 - **-чууд → ᠴᠤᠳ transcription** is the least certain row in the table (read from a low-resolution scan) — flagged in [REVIEW.md](REVIEW.md).
 - **ᠤ/ᠦ genitive "only after н"** is approximated by consonant-final; a dedicated attach value (e.g. `"n"`) would be exact.
