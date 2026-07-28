@@ -449,7 +449,14 @@ function fmtCandidate(c: Candidate): string {
 }
 
 function fmtSessions(n: number): string {
-  return n === 1 ? "1 session" : `${n} sessions`;
+  return plural(n, "session");
+}
+
+/** English plural for the weekly summary. The PR body is read by a human every
+ *  week; "1 new reports" is the kind of seam that makes generated prose feel
+ *  like output rather than a message. */
+function plural(n: number, word: string): string {
+  return `${n} ${word}${n === 1 ? "" : "s"}`;
 }
 
 function chosenCount(frequency: Frequency, cyrillic: string, traditional?: string): number {
@@ -736,18 +743,18 @@ function main(): void {
 
   const suspects = suffixSuspects(stillOpen);
   const summary = [
-    `Drained **${rows.length}** signals (${fresh.length} new, ${rows.length - fresh.length} already processed).`,
+    `Drained **${plural(rows.length, "signal")}** (${fresh.length} new, ${rows.length - fresh.length} already processed).`,
     "",
-    `- **${selections}** selections folded into \`data/stats/frequency.json\``,
-    `- **${newReports}** new reports, **${stillOpen.length}** open in total`,
-    `- **${verdicts}** queue answers, **${openTallies.length}** candidates with a tally` +
+    `- **${plural(selections, "selection")}** folded into \`data/stats/frequency.json\``,
+    `- **${plural(newReports, "new report")}**, **${stillOpen.length}** open in total`,
+    `- **${plural(verdicts, "queue answer")}**, **${plural(openTallies.length, "candidate")}** with a tally` +
       (settledTallies > 0 ? ` (${settledTallies} settled and dropped)` : ""),
-    `- **${additions.length}** unknown ${additions.length === 1 ? "word" : "words"} added mechanically ` +
+    `- **${plural(additions.length, "unknown word")}** added mechanically ` +
       `(${CORROBORATION_THRESHOLD}+ sessions agreeing, \`verified: false\`)`,
-    `- **${resolved.length}** reports closed — the lexicon already answers them`,
+    `- **${plural(resolved.length, "report")}** closed — the lexicon already answers them`,
     `- **${stale.length}** aged out after ${STALE_DAYS} days without action`,
     suspects.length > 0
-      ? `- ⚠ **${suspects.length}** suffix ${suspects.length === 1 ? "rule" : "rules"} flagged across several words each`
+      ? `- ⚠ **${plural(suspects.length, "suffix rule")}** flagged across several words each`
       : "",
     "",
     "Nothing here is verified. Every entry added or referenced is `verified: false`;",
