@@ -10,6 +10,16 @@
 # It calls the `keepalive()` function rather than touching the table, so the
 # ping returns a timestamp and writes nothing that could be mistaken for a
 # signal.
+#
+# Authenticated with the ANON key, not the service_role one: `keepalive()` is
+# granted to anon precisely so a ping needs no privilege, and the anon key is
+# public by design (it is compiled into the site). The service_role key is for
+# the one job that has to read and delete rows.
+#
+# Secrets: SUPABASE_URL (or NEXT_PUBLIC_SUPABASE_URL) and SUPABASE_ANON_KEY
+# (or NEXT_PUBLIC_SUPABASE_ANON_KEY) — the NEXT_PUBLIC_ names are what the
+# Vercel project already calls the same two public values, so a repository that
+# sets either pair works.
 name: keepalive
 
 on:
@@ -25,14 +35,20 @@ jobs:
     steps:
       - name: Ping the signals project
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL || secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY || secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
         run: |
           set -euo pipefail
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "::error::Missing secrets. Set SUPABASE_URL and SUPABASE_ANON_KEY" \
+              "(or the NEXT_PUBLIC_ names the site uses) under Settings → Secrets" \
+              "and variables → Actions. See supabase/README.md."
+            exit 1
+          fi
           code=$(curl -sS -o response.txt -w '%{http_code}' \
             -X POST "$SUPABASE_URL/rest/v1/rpc/keepalive" \
-            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
-            -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            -H "Authorization: Bearer $SUPABASE_ANON_KEY" \
             -H "Content-Type: application/json" -d '{}')
           echo "HTTP $code — $(cat response.txt)"
           if [ "$code" != "200" ]; then

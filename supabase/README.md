@@ -141,10 +141,21 @@ health check at the top of `scripts/export-signals.ts`.
 
 ## Draining the mailbox
 
-`.github/workflows/signals.yml` runs every Monday and needs two repository
-secrets — `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` — plus **Settings →
-Actions → General → Allow GitHub Actions to create and approve pull
-requests**. Without that setting the branch is pushed and `gh pr create` fails:
+`.github/workflows/signals.yml` runs every Monday. Under **Settings → Secrets
+and variables → Actions**, as *repository* secrets (not environment secrets —
+the job declares no environment and cannot see those):
+
+| Secret | Used by | Notes |
+| --- | --- | --- |
+| `SUPABASE_URL` | both workflows | `NEXT_PUBLIC_SUPABASE_URL` is accepted instead — same public value, the name Vercel already uses |
+| `SUPABASE_ANON_KEY` | keepalive | `NEXT_PUBLIC_SUPABASE_ANON_KEY` accepted instead. A ping needs no privilege, so it uses the public key |
+| `SUPABASE_SERVICE_ROLE_KEY` | the weekly drain | Not interchangeable: reading and deleting rows is exactly what RLS forbids the anon key |
+
+Also tick **Settings → Actions → General → Allow GitHub Actions to create and
+approve pull requests**. Leave *Workflow permissions* on the restricted
+default — `signals.yml` grants itself `contents: write` and
+`pull-requests: write`, which the checkbox is the one thing a workflow file
+cannot grant itself. Without it the branch is pushed and `gh pr create` fails:
 nothing is lost, but nobody is told.
 
 The order of the steps is the design, not an accident:

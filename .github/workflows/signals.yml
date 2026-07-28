@@ -5,7 +5,10 @@
 # human merging its pull request is the only thing that changes the lexicon.
 #
 # Secrets (see supabase/README.md):
-#   SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
+#   SUPABASE_URL — or NEXT_PUBLIC_SUPABASE_URL, the name the Vercel project
+#     already gives the same public value
+#   SUPABASE_SERVICE_ROLE_KEY — required and not interchangeable: this job
+#     reads and deletes rows, which RLS forbids the anon key entirely
 # Without them the job fails loudly rather than reporting a quiet week.
 #
 # It also needs "Allow GitHub Actions to create and approve pull requests" in
@@ -70,7 +73,7 @@ jobs:
       - name: Drain the mailbox
         if: steps.guard.outputs.skip == 'false'
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL || secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: bun run signals:export signals.jsonl
 
@@ -144,6 +147,6 @@ jobs:
       - name: Delete what was archived
         if: steps.mail.outputs.empty == 'false' && steps.pr.outcome == 'success'
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL || secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: bun run signals:export --delete signals.jsonl
