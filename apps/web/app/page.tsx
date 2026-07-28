@@ -14,8 +14,12 @@ import { ReportDialog, type ReportTarget } from "./report-dialog";
 const SAMPLES = ["монгол бичиг", "сайн байна уу", "уул ус"];
 
 const REPO_URL = "https://github.com/bigune/khudam";
+// The parent site links here as one of its tools; this is the link back.
+// rel="noopener" rather than the "noreferrer" the other footer links carry —
+// it is our own site, and the referrer is what lets suray.mn see the traffic
+// came from the converter.
+const SURAY_URL = "https://suray.mn";
 const NPM_URL = "https://www.npmjs.com/package/khudam";
-const ISSUES_URL = `${REPO_URL}/issues`;
 const CONTRIBUTING_URL = `${REPO_URL}/blob/main/CONTRIBUTING.md`;
 const SOURCES_URL = `${REPO_URL}/blob/main/data/SOURCES.md`;
 const DATA_LICENSE_URL = `${REPO_URL}/blob/main/data/LICENSE`;
@@ -122,11 +126,9 @@ export default function Home() {
     <main>
       <header>
         <h1>Худам</h1>
-        <p className="subtitle">
-          Нээлттэй монгол бичиг хөрвүүлэгч ·{" "}
-          <span lang="en">
-            open-source Cyrillic → Traditional Mongolian Script converter
-          </span>
+        <p className="subtitle">Нээлттэй монгол бичиг хөрвүүлэгч</p>
+        <p className="en" lang="en">
+          open-source Cyrillic → Traditional Mongolian Script converter
         </p>
         <p className="stats">
           Үгсийн санд {LEXICON_ENTRY_COUNT.toLocaleString("mn-MN")} үг ·{" "}
@@ -315,25 +317,9 @@ export default function Home() {
               </div>
             </div>
           ))}
-          <p className="note">
-            «Баталгаажаагүй» гэдэг нь машин импортын түвшний өгөгдөл — хүн
-            хянаагүй тул алдаатай байж болно.{" "}
-            {signalsEnabled ? (
-              <>
-                Алдаа олбол «⚑ алдаа», хайсан утга нь жагсаалтад байхгүй бол «⊕
-                утга дутуу» товчийг дарна уу. Зөв зурлагыг нь мэдэж байвал
-                тухайн цонхонд бичиж үлдээж болно — бүртгэл шаардахгүй.
-              </>
-            ) : (
-              <>
-                Алдаа олбол{" "}
-                <a href={ISSUES_URL} target="_blank" rel="noreferrer">
-                  GitHub дээр мэдээллээрэй
-                </a>
-                .
-              </>
-            )}
-          </p>
+          {/* No caption here: what «баталгаажаагүй» means and which button
+              does what are both explained in the sections directly below,
+              and saying it twice on one screen only crowded the cards. */}
         </section>
       )}
 
@@ -433,6 +419,9 @@ export default function Home() {
       </section>
 
       <footer>
+        <a href={SURAY_URL} target="_blank" rel="noopener">
+          Үндсэн вебсайт
+        </a>
         <a href={REPO_URL} target="_blank" rel="noreferrer">
           GitHub
         </a>

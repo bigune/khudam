@@ -32,15 +32,14 @@ const PROBLEM_MESSAGES: Record<ProposalProblem, string> = {
     "Монгол бичгийн үсэг биш тэмдэгт орсон байна. Зөвхөн монгол бичгээр бичнэ үү.",
 };
 
-const NOTHING_TYPED =
-  "Утга эсвэл түүний зурлага талбаруудын ядаж нэгийг бөглөнө үү.";
+const NOTHING_TYPED = "Илгээхийн тулд 2 талбарын ядаж нэгийг бөглөнө үү.";
 
 function promptFor(kind: ProposalKind, word: string) {
   if (kind === "missing_sense")
     return (
       <>
-        «<strong>{word}</strong>» үгийн ямар утгыг хайсан бэ? Хэрэв та зурлагыг
-        нь мэддэг бол хувь нэмрээ оруулаарай.
+        Хэрэв та «<strong>{word}</strong>» үгийн салаа утга, түүний зурлагыг нь
+        мэддэг бол хувь нэмрээ оруулаарай.
       </>
     );
   if (kind === "new_word")
@@ -164,9 +163,12 @@ export function ProposalForm({
         </div>
       )}
 
+      {/* Only the part a contributor cannot get anywhere else. That every
+          submission is reviewed by a human is said in the page's info
+          section; repeating it over every field made the form look like a
+          disclaimer. */}
       <p className="proposal-hint">
         Монгол бичгийн гар байхгүй бол өөр эх сурвалжаас хуулж буулгаж болно.
-        Зурлага зөв эсэхийг хүн хянаж байж үгсийн санд нэмдэг.
       </p>
 
       {error && <p className="proposal-error">{error}</p>}

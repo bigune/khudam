@@ -230,9 +230,6 @@ export function ReportDialog({
                   onClick={() => flag(target, "correction")}
                 >
                   <span className="report-choice-title">Тийм, буруу байна</span>
-                  <span className="report-choice-hint">
-                    Хянагчийн жагсаалтад нэмэгдэнэ
-                  </span>
                 </button>
               </div>
             </>
@@ -246,23 +243,20 @@ export function ReportDialog({
             <>
               {/* Two things happen in this dialog and they must not blur
                   together: what has already been sent, and what is optional.
-                  The receipt closes the first; the rule and the caption below
-                  open the second. */}
+                  The receipt closes the first, the rule below opens the
+                  second — and only the rule, because a caption saying
+                  "optional" over an optional form is a line nobody reads. */}
               {filed && (
                 <p className="report-receipt">
                   <span className="report-receipt-mark" aria-hidden="true">
                     ✓
                   </span>
-                  Мэдэгдлийг тань хүлээн авлаа. Зурлагыг нь мэдэхгүй бол
-                  үргэлжлүүлэхгүй байж болно.
+                  Энэ үгэнд утга дутуу байгаа мэдэгдлийг хүлээн авлаа. Доорх
+                  талбарууд нь заавал биш бөгөөд мэддэг хэсгээ л бөглөж илгээхэд
+                  болно.
                 </p>
               )}
               <div className={filed ? "report-optional" : undefined}>
-                {filed && (
-                  <span className="report-optional-label">
-                    Нэмэлт · заавал биш
-                  </span>
-                )}
                 {sendFailed && (
                   <p className="report-status report-status-error">
                     Уучлаарай, илгээж чадсангүй. Дахин оролдоно уу.
@@ -287,8 +281,7 @@ export function ReportDialog({
               <span className="report-receipt-mark" aria-hidden="true">
                 ✓
               </span>
-              Баярлалаа — саналыг тань хүлээн авлаа. Ирүүлсэн саналуудыг долоо
-              хоног бүр эмхэтгэж, хүн хянаж байж үгсийн санд өөрчлөлт ордог.
+              Баярлалаа — саналыг тань хүлээн авлаа.
             </p>
           )}
 
@@ -302,8 +295,11 @@ export function ReportDialog({
             </p>
           )}
 
+          {/* The one line in this dialog that is not repeated below on the
+              page, and the only one that has to be here: the contributor
+              grants this licence by pressing the button above it. */}
           <p className="report-consent">
-            Бүртгэл шаардахгүй · хувь нэмэр{" "}
+            Хувь нэмэр{" "}
             <a href={DATA_LICENSE_URL} target="_blank" rel="noreferrer">
               CC BY-SA 4.0
             </a>{" "}
