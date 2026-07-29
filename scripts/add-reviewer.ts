@@ -26,8 +26,16 @@ import {
   type Reviewer,
 } from "./lib.ts";
 
-/** Where the reader will open the link. The queue is the page a grant is for. */
-const DEFAULT_SITE = "https://khudam.suray.mn/queue";
+/**
+ * Where the reader will open the link.
+ *
+ * The review page rather than the queue: the queue asks one question at a time
+ * of anyone passing, while this page is the one written for somebody holding a
+ * grant — it shows every spelling by code point, groups what is waiting, and
+ * files decisions rather than votes. The grant works on every page either way;
+ * this only decides which one they land on first.
+ */
+const DEFAULT_SITE = "https://khudam.suray.mn/review";
 
 /**
  * The grant travels in a URL **fragment**, never a query string.
@@ -59,7 +67,7 @@ function main(): void {
   const siteAt = args.indexOf("--site");
   const site = siteAt === -1 ? DEFAULT_SITE : args[siteAt + 1];
   if (!site) {
-    console.error("Usage: bun scripts/add-reviewer.ts [--site https://khudam.suray.mn/queue]");
+    console.error("Usage: bun scripts/add-reviewer.ts [--site https://khudam.suray.mn/review]");
     process.exit(1);
   }
 

@@ -487,7 +487,7 @@ export function buildProposalRow(
 }
 
 /**
- * A plain insert, and it must stay one.
+ * A plain insert into a mailbox table, and it must stay one.
  *
  * Deduplication lives in the database (`signals_dedup` in supabase/schema.sql),
  * where a BEFORE INSERT trigger silently skips a row this session has already
@@ -498,14 +498,16 @@ export function buildProposalRow(
  * `42501 new row violates row-level security policy`, duplicate or not. It
  * looks like a policy bug rather than a client bug, which is what made it
  * expensive. Do not reintroduce it.
+ *
+ * Exported because `decisions` is a second table with the same posture and the
+ * same one operation. It stamps nothing: what a row must carry differs per
+ * table — a signal's grant is optional, a decision's is the whole point — so
+ * each caller says what it is sending and this only sends it.
  */
-async function insert(rows: SignalRow[]): Promise<boolean> {
+export async function postRows(table: string, rows: unknown[]): Promise<boolean> {
   if (!signalsEnabled || rows.length === 0) return false;
-  // Stamped here rather than in the row builders, so that every path into the
-  // mailbox carries the grant and none of them has to remember to.
-  const stamped = stampReviewer(rows, getReviewerId());
   try {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/signals`, {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
       method: "POST",
       headers: {
         apikey: SUPABASE_ANON_KEY!,
@@ -514,7 +516,7 @@ async function insert(rows: SignalRow[]): Promise<boolean> {
         // Nothing is read back — the anon role has no select policy anyway.
         Prefer: "return=minimal",
       },
-      body: JSON.stringify(stamped),
+      body: JSON.stringify(rows),
       // Survives the user navigating away right after copying.
       keepalive: true,
     });
@@ -522,6 +524,13 @@ async function insert(rows: SignalRow[]): Promise<boolean> {
   } catch {
     return false;
   }
+}
+
+/** Signals, stamped with whatever grant this browser holds. Stamping happens
+ *  here rather than in the row builders, so that every path into the mailbox
+ *  carries the grant and none of them has to remember to. */
+async function insert(rows: SignalRow[]): Promise<boolean> {
+  return postRows("signals", stampReviewer(rows, getReviewerId()));
 }
 
 /**

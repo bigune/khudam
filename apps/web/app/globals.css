@@ -1117,6 +1117,204 @@ textarea,
   cursor: default;
 }
 
+/* ---- expert review ---- */
+
+/* Present to a screen reader, absent to everything else. The one thing on the
+   review page that needs it: the code-point breakdown renders as columns,
+   which reads aloud as an unpunctuated stream, so the same information is
+   also emitted once as a sentence. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* A spelling and the letters it is made of, as one object.
+
+   The layout is the argument. The script sits above its own breakdown, sharing
+   a centre line, because they are two views of one thing and a reviewer has to
+   read them together — several distinct Mongolian letters share identical
+   glyphs, so the rendered form alone cannot be judged. Putting the breakdown
+   in a tooltip, an accordion, or a smaller column beside would make the
+   checkable half optional, and the checkable half is the point. */
+.spell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 0.5rem;
+}
+
+.spell-script {
+  writing-mode: vertical-lr;
+  max-height: 11rem;
+  font-size: var(--text-mong-lg);
+  line-height: 1.35;
+}
+
+/* Wraps rather than scrolls: a spelling long enough to overflow is exactly
+   the one worth reading carefully, and a horizontal scroller hides its tail
+   behind a gesture nobody makes on a page they are concentrating on. */
+.spell-points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.05rem;
+  min-width: 3.2rem;
+  padding: 0.25rem 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  font-size: var(--text-xs);
+  line-height: 1.25;
+}
+
+/* The invisible ones — the free variation selectors, the vowel separator, the
+   joiner that makes a written-apart suffix a suffix. Two spellings differing
+   only in one of these are identical on screen, so this is where a wrong
+   encoding hides. Dashed, because the border is standing in for a glyph that
+   does not exist rather than framing one that does. */
+.point.invisible {
+  border-style: dashed;
+  background: var(--neutral-bg);
+}
+
+.point-name {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.point-code {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.review-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.review-count {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.review-blurb {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  max-width: 46rem;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.review-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+/* The Cyrillic and its labels stay on the page's left axis. Only the specimen
+   below centres — it is a display object, not text to read. */
+.review-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.review-word {
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+.review-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-size: var(--text-xs);
+}
+
+.review-evidence {
+  color: var(--muted);
+  font-size: var(--text-xs);
+}
+
+.review-labels {
+  font-variant-numeric: tabular-nums;
+}
+
+.review-siblings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.review-sibling {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Smaller than the row's own specimen, and deliberately so: a sibling is
+   context for the decision, never a second thing to decide. Same reason it is
+   below a hairline rather than beside the buttons. */
+.review-sibling .spell-script {
+  max-height: 8rem;
+  font-size: var(--text-mong);
+}
+
+.review-sense {
+  padding-top: 0.3rem;
+}
+
+.review-send {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: sticky;
+  /* Sticks to the bottom because the list is long and the decision to send is
+     made repeatedly while working down it. A send button that lives only at
+     the end of four hundred rows is one a reviewer has to go looking for. */
+  bottom: 0;
+  padding: 0.9rem 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.review-held {
+  color: var(--muted);
+  font-size: var(--text-xs);
+}
+
 /* ---- footer ---- */
 
 footer {

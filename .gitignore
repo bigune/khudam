@@ -9,6 +9,10 @@ packages/converter/src/generated/
 # to every pull request and let the questions drift behind the data they came
 # from — a deploy always regenerates them.
 apps/web/public/queue.json
+# Same story for the expert review page's bundle, and one more reason: it is
+# compiled from data/stats/reports.json, so committing it would put the same
+# content in the repository twice and let the two disagree.
+apps/web/public/review-bundle.json
 apps/web/.next/
 apps/web/out/
 apps/web/next-env.d.ts

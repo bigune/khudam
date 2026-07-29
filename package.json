@@ -15,6 +15,7 @@
     "signals:aggregate": "bun scripts/aggregate-signals.ts",
     "build:data": "bun scripts/build-data.ts",
     "build:queue": "bun scripts/build-queue.ts",
+    "build:review-bundle": "bun scripts/build-review-bundle.ts",
     "measure:suffix": "bun run build:data && bun scripts/measure-suffix.ts",
     "build": "bun run build:data && tsc -p packages/converter/tsconfig.build.json",
     "test": "bun run build:data && bun test"

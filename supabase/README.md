@@ -278,8 +278,12 @@ the next opaque label (`r1`, `r2`, …) to `data/reviewers.json`, and prints one
 link:
 
 ```
-https://khudam.suray.mn/queue#r=<uuid>
+https://khudam.suray.mn/review#r=<uuid>
 ```
+
+The grant works on every page — a reviewer flagging a spelling in the converter
+is telling us the same quality of thing. The link points at `/review` because
+that is the page written for somebody holding one.
 
 It is printed once and stored nowhere. Send it privately to one person, commit
 the roster, and keep your own note of who that label is — that note must never
