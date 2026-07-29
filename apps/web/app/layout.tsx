@@ -66,6 +66,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="mn"
       className={`${notoMongolian.variable} ${ptSans.variable} ${ptSerif.variable}`}
+      // The boot script writes data-theme onto this element before React
+      // hydrates, so the attribute legitimately differs from the export
+      // build's HTML. Suppression reaches exactly one element deep —
+      // children are still checked.
+      suppressHydrationWarning
     >
       <body>
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOT }} />
