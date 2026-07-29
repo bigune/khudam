@@ -82,8 +82,8 @@ export function writeSuffixesFile(path: string, rows: SuffixRow[]): void {
  *
  * `label` is deliberately opaque (r1, r2, …). Which person holds which grant is
  * the maintainer's private note and belongs in no repository and no database —
- * the weekly pull request needs to say *that two different trusted people
- * answered*, never who they are.
+ * the pull request needs to say *which labels stand behind a spelling*, so that
+ * a revocation can find them again, never who those people are.
  */
 export interface Reviewer {
   label: string;

@@ -7,11 +7,13 @@
  * issue another one and delete the stranded line; there is no recovery, and
  * that is the property that makes the roster safe to commit.
  *
- * What a grant buys: answers from that browser are stamped `reviewer_id`, and
- * the weekly job counts them as attestations rather than as anonymous votes.
- * Two different grants answering yes on one spelling, with none answering no,
- * is what lets the job stage `verified: true` for a human to merge. Nothing is
- * verified by a script alone — see CLAUDE.md and data/REVIEW.md.
+ * What a grant buys: the expert review page, and answers from that browser
+ * stamped `reviewer_id` so the job counts them as attestations rather than as
+ * anonymous votes. Enough attestations on one spelling, with none against, is
+ * what lets the job stage `verified: true` for a human to merge — how many is
+ * `ATTESTATION_THRESHOLD` in scripts/aggregate-signals.ts. Nothing is verified
+ * by a script alone, and nothing a grant can do deletes anything: a rejection
+ * is written up for a human. See CLAUDE.md and data/REVIEW.md.
  *
  * Grants are handed to people the maintainer knows read монгол бичиг. Who holds
  * which label is a private note; it must not be written into this repository.
@@ -90,7 +92,7 @@ function main(): void {
     "This is the only time it will be shown — data/reviewers.json holds the hash,\n" +
       "not the link. Send it privately; anyone who opens it becomes " + label + ".\n\n" +
       "Keep your own note of who " + label + " is. That mapping must not be committed:\n" +
-      "the repo says two trusted people agreed, never which two.\n\n" +
+      "the repo says which labels stand behind a spelling, never who they are.\n\n" +
       `Commit ${REVIEWERS_FILE.split("/").slice(-2).join("/")} to activate the grant — ` +
       "the weekly job reads the roster\nfrom the merged repository. To revoke, delete the " +
       `object labelled ${label}: that also\ndrops their past attestations, which is how a ` +

@@ -83,14 +83,31 @@ export const STALE_DAYS = 90;
  * How many *different* trusted reviewers must call a spelling right before this
  * script stages `verified: true` for the maintainer to merge.
  *
- * Two, and they are counted by roster label rather than by session, so one
- * reviewer answering from their phone and their laptop is still one reviewer.
- * One would be enough on the merits — a grant is handed to somebody the
- * maintainer knows reads монгол бичиг — but two is what makes a leaked or
- * careless link unable to verify anything by itself, and the cost of the second
- * opinion is one more person answering one more question.
+ * Counted by roster label rather than by session, so one reviewer answering
+ * from their phone and their laptop is still one reviewer.
+ *
+ * **One, deliberately and in the open.** Two is the better number and this
+ * project does not have two people; a threshold nobody can reach verifies
+ * nothing, and a lexicon that stays 100% unverified because the rule was
+ * admirable is not a better outcome than one verified by the person who
+ * actually reads the script. What keeps this honest rather than sloppy:
+ *
+ *   - every flip records its reviewer's opaque label in data/stats/reports.json,
+ *     so the single-reviewer era stays auditable and revoking a grant still
+ *     mechanically un-verifies everything it ever attested;
+ *   - the veto stays live — any later trusted "no" reopens the entry, and with
+ *     one reviewer that is the safety valve;
+ *   - the maintainer still merges, still reads the fast-track section, and
+ *     `MAX_FAST_TRACK` still keeps it short enough to read;
+ *   - a rejection remains outside all of this. One grant can verify a spelling;
+ *     no grant can delete one.
+ *
+ * **Raise it back to 2 when there are two reviewers.** It is this line and the
+ * documents that quote it. Entries verified under the old rule are not
+ * retroactively un-verified: they were valid under the rule that applied, they
+ * are auditable by label, and a dispute reopens them one at a time.
  */
-export const ATTESTATION_THRESHOLD = 2;
+export const ATTESTATION_THRESHOLD = 1;
 
 /**
  * How many staged flips one pull request may carry.
@@ -683,8 +700,8 @@ export interface Staged {
 }
 
 /**
- * The fast track: candidates two different trusted reviewers called right, with
- * no trusted reviewer calling them wrong.
+ * The fast track: candidates enough trusted reviewers called right — see
+ * `ATTESTATION_THRESHOLD` — with no trusted reviewer calling them wrong.
  *
  * This is the one place a script writes `verified: true`, and it is worth being
  * exact about what that flag then means. It has always meant "a human read this
@@ -824,6 +841,14 @@ function fmtLabels(labels: readonly string[]): string {
   return `trusted ${[...labels].sort(compareWords).join(", ")}`;
 }
 
+/** The threshold said in prose that stays grammatical when the constant moves,
+ *  because it will: this is one reviewer today and two when there are two. */
+function fmtThreshold(): string {
+  return ATTESTATION_THRESHOLD === 1
+    ? "a trusted reviewer"
+    : `${ATTESTATION_THRESHOLD} different trusted reviewers`;
+}
+
 /** An absolute data file path as REVIEW.md should show it: `data/lexicon/у.json`.
  *  Backslashes normalized so a maintainer running this on Windows does not
  *  commit a link nobody can follow. */
@@ -961,12 +986,16 @@ function renderReview({
     lines.push(`### Verified by attestation this run (${staged.length})`);
     lines.push("");
     lines.push(
-      `Each spelling below was called right by ${ATTESTATION_THRESHOLD} **different trusted ` +
-        "reviewers**, with none calling it wrong, so this pull request sets `verified: true` " +
-        "on it. Merging is the decision, and it is yours: read the spellings, and drop any " +
-        "flip you are not willing to stand behind — deleting the tally from " +
-        "[stats/reports.json](stats/reports.json) stops it being staged again. Labels are " +
-        "opaque on purpose; what the queue needs to say is that they are different people.",
+      `Each spelling below was called right by **${fmtThreshold()}**, with none calling it ` +
+        "wrong, so this pull request sets `verified: true` on it. Merging is the decision, and " +
+        "it is yours: read the spellings, and drop any flip you are not willing to stand " +
+        "behind — deleting the tally from [stats/reports.json](stats/reports.json) stops it " +
+        "being staged again. Labels are opaque on purpose; what the queue needs to say is who " +
+        "stands behind a spelling, never who they are." +
+        (ATTESTATION_THRESHOLD === 1
+          ? " The threshold is one reviewer while there is one reviewer — see " +
+            "`ATTESTATION_THRESHOLD`, and raise it when there are two."
+          : ""),
     );
     lines.push("");
     for (const { tally, file, candidate } of staged) {
@@ -1166,10 +1195,9 @@ function renderReview({
         "a contradiction — a yes and a no name the form to delete. **A count of " +
         "strangers agreeing is not verification**, however large: a spelling becomes " +
         "`verified: true` only through a human editing the entry, or through the " +
-        `attestations of ${ATTESTATION_THRESHOLD} trusted reviewers above. Where a ` +
-        "tally names reviewers, it is short of that threshold — one more answer would " +
-        "settle it. Unanimous tallies are listed first because they are the quickest " +
-        "to check, not because they are settled.",
+        `attestation of ${fmtThreshold()} above. Where a tally names reviewers, it is short ` +
+        "of that threshold — one more answer would settle it. Unanimous tallies are listed " +
+        "first because they are the quickest to check, not because they are settled.",
     );
     lines.push("");
     const ordered = [...counted].sort(
@@ -1412,12 +1440,12 @@ function main(): void {
     "",
     staged.length > 0
       ? `- ✓ **${plural(staged.length, "candidate")}** staged \`verified: true\` — ` +
-        `${ATTESTATION_THRESHOLD} trusted reviewers each, none disagreeing` +
+        `${fmtThreshold()} each, none disagreeing` +
         (heldBack > 0 ? ` (${heldBack} more qualified, held for next week)` : "")
       : "",
     writtenCount > 0
       ? `- ✓ **${plural(writtenCount, "proposed spelling")}** a trusted reviewer accepted, ` +
-        "added as candidates"
+        "and added to the lexicon"
       : "",
     stuckCount > 0
       ? `- ⚠ **${plural(stuckCount, "acceptance")}** the schema would not take — each needs a ` +

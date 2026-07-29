@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { claimGrant, clearReviewer, signalsEnabled } from "../lib/signals";
 
@@ -33,9 +34,16 @@ export function ReviewerBadge() {
       <span className="badge verified">итгэмжлэгдсэн хянагч ✓</span>
       <p>
         Энэ төхөөрөмжөөс өгсөн хариултууд тань{" "}
-        <strong>баталгаа болж тэмдэглэгдэнэ</strong>. Хоёр өөр хянагч нэг
-        зурлагыг зөв гэвэл долоо хоног тутмын хүсэлтэд түүнийг «баталгаажсан»
-        болгох санал ордог — эцсийн шийдвэрийг хүн гаргана.
+        <strong>баталгаа болж тэмдэглэгдэнэ</strong>: таны зөв гэсэн зурлагыг
+        «баталгаажсан» болгох санал хүсэлтэд ордог — эцсийн шийдвэрийг хүн
+        нэгтгэж гаргана. Буруу гэсэн зурлагыг автоматаар устгадаггүй, хүн
+        шийдэхээр тэмдэглэдэг.
+      </p>
+      {/* The page written for somebody holding a grant, and the only one that
+          shows a spelling by code point. Named here because the badge is the
+          moment a reviewer learns what they now have. */}
+      <p>
+        <Link href="/review">Хянагчийн хуудас →</Link>
       </p>
       {!signalsEnabled && (
         <p>
@@ -44,9 +52,10 @@ export function ReviewerBadge() {
         </p>
       )}
       <p className="en" lang="en">
-        Answers from this device are recorded as attestations. Two different
-        reviewers agreeing on a spelling stages it as verified in the weekly
-        pull request, where a human merges it.
+        Answers from this device are recorded as attestations: a spelling you
+        call right is staged as verified in a pull request, where a human merges
+        it. One you call wrong is written up for a human, never deleted
+        automatically.
       </p>
       <button
         className="card-action"

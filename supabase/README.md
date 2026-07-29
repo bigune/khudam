@@ -238,10 +238,10 @@ one line. Everything else is written up in `data/REVIEW.md` § Community signals
 for a human to decide.
 
 It writes `verified: true` in one case, and it is not deciding anything when it
-does: two **different trusted reviewers** answered yes about the spelling and
-none answered no, so the flip is staged into the weekly pull request's diff with
-their labels printed beside it, and the maintainer merges it. See § Trusted
-reviewer grants.
+does: enough **trusted reviewers** answered yes about the spelling and none
+answered no, so the flip is staged into the pull request's diff with their
+labels printed beside it, and the maintainer merges it. How many is enough is
+one constant — see § Trusted reviewer grants, *The quorum*.
 
 Reports close themselves: the aggregator re-reads the lexicon each run and
 drops a report whose flagged form is gone or whose proposed form is now a
@@ -310,11 +310,24 @@ from the next run, *including answers it already gave* — attestations are stor
 by label and matched against the roster on every aggregation, never baked in.
 That is what makes a leaked link recoverable.
 
-**The quorum.** Two different labels answering yes, none answering no, and the
-flip is staged. One trusted no vetoes it however many yeses there are, and opens
-a "trusted reviewers disagree" section that no amount of time closes. One
-reviewer answering from two browsers is still one label, which is why the quorum
-counts labels rather than sessions.
+**The quorum.** `ATTESTATION_THRESHOLD` in `scripts/aggregate-signals.ts`, and
+it is **1** today — deliberately, because one trusted reviewer is who this
+project has and a threshold nobody can reach verifies nothing. One trusted no
+still vetoes however many yeses there are, and opens a section that no amount of
+time closes. One reviewer answering from two browsers is still one label, which
+is why the quorum counts labels rather than sessions.
+
+Raise it to 2 when there are two reviewers: the constant, plus the documents
+that quote it (`CLAUDE.md`, `CONTRIBUTING.md`, this file, the reviewer badge in
+`apps/web`). Entries verified under the old rule are not retroactively
+un-verified — they were valid under the rule that applied, they are auditable by
+label, and a dispute reopens them one at a time.
+
+**What one grant cannot do.** Delete anything. A rejection is written into
+`data/REVIEW.md` with the file and the line, for a human to act on. That is the
+asymmetry the whole threshold decision rests on: a wrong verification is one
+line in a diff a maintainer reads and one revocation away from being undone; a
+wrong deletion is data nobody can get back.
 
 ## Expert review
 

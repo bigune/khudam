@@ -60,15 +60,29 @@
     one person; the repo holds only its SHA-256 hash beside an opaque label, so
     `data/reviewers.json` is safe in public and revoking a leaked link is
     deleting one line — which also drops that reviewer's past attestations.
-    Answers from a granted browser are stamped `reviewer_id`, and **two
-    different trusted reviewers agreeing, with none disagreeing, stages
-    `verified: true` in the weekly pull request** for a human to merge. A single
-    trusted "no" vetoes the flip and opens a "trusted reviewers disagree"
-    section that never closes on its own — two people who read the script
-    contradicting each other is the one thing this pipeline must not average
-    away. Staged flips are capped per pull request and the held-back count is
-    printed, because a fast-track section too long to read is one that gets
-    merged unread.
+    Answers from a granted browser are stamped `reviewer_id`, and **a trusted
+    reviewer calling a spelling right, with none disagreeing, stages
+    `verified: true` in the pull request** for a human to merge. How many
+    attestations it takes is one constant (`ATTESTATION_THRESHOLD`), and it is
+    1 today — deliberately, because one trusted expert is who this project has
+    and a threshold nobody can reach verifies nothing. A single trusted "no"
+    vetoes the flip and opens a section that never closes on its own — two
+    people who read the script contradicting each other is the one thing this
+    pipeline must not average away. Staged flips are capped per pull request and
+    the held-back count is printed, because a fast-track section too long to
+    read is one that gets merged unread.
+  - ✅ Expert review page (2026-07-29): khudam.suray.mn/review, the page a grant
+    is actually for. Every spelling rendered **and** broken down by code point,
+    because several distinct Mongolian letters share identical glyphs — shown
+    only the rendered form, a reviewer can confirm a wrong encoding in perfect
+    good faith and nothing downstream would catch it. It reads a bundle built
+    from `data/` at deploy time rather than querying the mailbox, so it needs no
+    read access to Supabase at all; send inserts rows a workflow run then
+    hash-checks against the roster in git and transcribes into one pull request.
+    A rejection is the one decision never applied automatically: removing a
+    candidate is the only edit that loses data, so a leaked grant cannot cause
+    it. The converter grew a matching ✓ button, so the commonest true thing a
+    reader knows finally has somewhere to go.
   - Next: nothing scheduled here. The pipeline's remaining work is people —
     issuing grants to reviewers who read монгол бичиг — not code.
 - Watchlist sources (see `data/SOURCES.md`) if licensing clears
@@ -107,5 +121,5 @@
    contribution pipeline began delivering human work by machine: what is
    forbidden is a **machine-generated** sense, not a human-written one a script
    carried into a pull request. The same distinction is what makes the fast
-   track legitimate — a script transcribing two reviewers' answers is not a
-   script deciding anything.
+   track legitimate — a script transcribing a reviewer's answer is not a script
+   deciding anything.

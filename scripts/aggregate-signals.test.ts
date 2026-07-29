@@ -5,6 +5,7 @@
  */
 import { describe, expect, test } from "bun:test";
 import {
+  ATTESTATION_THRESHOLD,
   CORROBORATION_THRESHOLD,
   STALE_DAYS,
   addReports,
@@ -446,6 +447,16 @@ describe("reportKey", () => {
 const GRANT_A = "c51f2be7-6ba8-47d0-9a1c-9334dfc8338b";
 const GRANT_B = "9a1c9334-dfc8-4338-b6ba-847d0c51f2be";
 const GRANT_C = "11111111-2222-4333-8444-555555555555";
+/** A minimal tally, for assertions about the quorum rather than about a word. */
+const BASE_TALLY: VerdictTally = {
+  cyrillic: "уул",
+  traditional: "ᠤᠤᠯ",
+  yes: 0,
+  no: 0,
+  first_seen: "2026-08-01T00:00:00Z",
+  last_seen: "2026-08-01T00:00:00Z",
+};
+
 const ROSTER = [
   { label: "r1", hash: hashGrant(GRANT_A), granted: "2026-07-29" },
   { label: "r2", hash: hashGrant(GRANT_B), granted: "2026-07-29" },
@@ -481,15 +492,33 @@ describe("addVerdicts — attestations", () => {
       ],
       ROSTER,
     );
+    // One person is one label however many devices they answer from. Asserted
+    // as the label list rather than as `isAttested`, which is a question about
+    // the threshold and would change meaning every time the threshold moved.
     expect(l.verdicts![0]!.attested).toEqual(["r1"]);
-    expect(isAttested(l.verdicts![0]!)).toBe(false);
   });
 
-  test("two different reviewers agreeing is the threshold", () => {
+  test("two different reviewers are two labels", () => {
     const l = ledger();
     addVerdicts(l, [verdictRow(true, { reviewer_id: GRANT_A }), verdictRow(true, { reviewer_id: GRANT_B })], ROSTER);
     expect(l.verdicts![0]!.attested).toEqual(["r1", "r2"]);
     expect(isAttested(l.verdicts![0]!)).toBe(true);
+  });
+
+  test("the quorum is however many labels ATTESTATION_THRESHOLD names", () => {
+    // Written against the constant so it stays true when the constant moves,
+    // which it is meant to: one reviewer today, two when there are two.
+    const enough = Array.from({ length: ATTESTATION_THRESHOLD }, (_, i) => `r${i + 1}`);
+    expect(isAttested({ ...BASE_TALLY, attested: enough })).toBe(true);
+    expect(isAttested({ ...BASE_TALLY, attested: enough.slice(0, -1) })).toBe(false);
+  });
+
+  test("the threshold is 1 today, and lowering it was a documented decision", () => {
+    // A tripwire, not a tautology. This number is quoted in CLAUDE.md,
+    // CONTRIBUTING.md, ROADMAP.md, supabase/README.md and the reviewer badge
+    // in apps/web; changing it here without changing those leaves the project
+    // telling contributors something untrue about what their answers do.
+    expect(ATTESTATION_THRESHOLD).toBe(1);
   });
 
   test("a single trusted no vetoes any number of trusted yeses", () => {
@@ -523,17 +552,25 @@ describe("addVerdicts — attestations", () => {
   });
 
   test("revoking a grant drops the attestations it already gave", () => {
+    // What makes a leaked link recoverable: the roster is consulted on every
+    // aggregation, never baked into the ledger. Revoking both grants rather
+    // than one, so the `isAttested` assertion means the same thing at any
+    // threshold — with one revoked and the threshold at 1, the other still
+    // attests, which is correct and would make this test say nothing.
     const l = ledger();
-    addVerdicts(l, [verdictRow(true, { reviewer_id: GRANT_A }), verdictRow(true, { reviewer_id: GRANT_B })], ROSTER);
-    const afterRevoke: Ledger = { through: null, reports: [] };
-    addVerdicts(
-      afterRevoke,
-      [verdictRow(true, { reviewer_id: GRANT_A }), verdictRow(true, { reviewer_id: GRANT_B })],
-      ROSTER.filter((r) => r.label !== "r2"),
-    );
-    expect(isAttested(l.verdicts![0]!)).toBe(true);
-    expect(isAttested(afterRevoke.verdicts![0]!)).toBe(false);
-    expect(afterRevoke.verdicts![0]!.yes).toBe(2);
+    const stamps = [verdictRow(true, { reviewer_id: GRANT_A }), verdictRow(true, { reviewer_id: GRANT_B })];
+    addVerdicts(l, stamps, ROSTER);
+    const partly: Ledger = { through: null, reports: [] };
+    addVerdicts(partly, stamps, ROSTER.filter((r) => r.label !== "r2"));
+    const fully: Ledger = { through: null, reports: [] };
+    addVerdicts(fully, stamps, []);
+
+    expect(l.verdicts![0]!.attested).toEqual(["r1", "r2"]);
+    expect(partly.verdicts![0]!.attested).toEqual(["r1"]);
+    expect(isAttested(fully.verdicts![0]!)).toBe(false);
+    // The votes themselves survive. A revoked reviewer was still a person who
+    // answered; what they lose is the weight of the grant, not the answer.
+    expect(fully.verdicts![0]!.yes).toBe(2);
   });
 
   test("with no roster at all, nothing is trusted", () => {
@@ -578,16 +615,24 @@ describe("fastTrack", () => {
     return new Map(entries.map((e) => [e.cyrillic, { entry: e, file: "/repo/data/lexicon/у.json" }]));
   }
 
-  test("stages a candidate two trusted reviewers attested", () => {
+  test("stages a candidate trusted reviewers attested", () => {
     const staged = fastTrack([tally()], index(structuredClone(UUL)));
     expect(staged).toHaveLength(1);
     expect(staged[0]!.candidate.traditional).toBe("ᠤᠤᠯ");
     expect(staged[0]!.file).toBe("/repo/data/lexicon/у.json");
   });
 
-  test("stages nothing on one attestation, or on anonymous agreement alone", () => {
-    expect(fastTrack([tally({ attested: ["r1"] })], index(structuredClone(UUL)))).toEqual([]);
+  test("stages nothing on anonymous agreement, however much of it there is", () => {
+    // The sentence this whole pipeline rests on, and the one thing no
+    // threshold change may ever touch: a count of strangers agreeing is
+    // evidence about where to look, never verification.
     expect(fastTrack([tally({ attested: undefined, yes: 40 })], index(structuredClone(UUL)))).toEqual([]);
+    expect(fastTrack([tally({ attested: [] })], index(structuredClone(UUL)))).toEqual([]);
+  });
+
+  test("stages nothing one attestation short of the threshold", () => {
+    const short = Array.from({ length: ATTESTATION_THRESHOLD - 1 }, (_, i) => `r${i + 1}`);
+    expect(fastTrack([tally({ attested: short })], index(structuredClone(UUL)))).toEqual([]);
   });
 
   test("stages nothing when a trusted reviewer disagrees", () => {

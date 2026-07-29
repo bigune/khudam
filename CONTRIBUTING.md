@@ -24,7 +24,7 @@ Khudam-д ямар ч төрлийн дэмжлэг нээлттэй хэдий 
 
 Ирүүлсэн бүхэн долоо хоног тутам нэг pull request болж, хүн хянаж байж үгсийн санд ордог. Хариулт өөрөө баталгаа биш — аль үгийг эхэлж хянахыг зааж өгдөг.
 
-Монгол бичгийг сайн уншдаг, тогтмол хянахад бэлэн бол **итгэмжлэгдсэн хянагчийн холбоос** хүсээрэй (issue нээх, эсвэл шууд холбогдох): ийм холбоостой **хоёр өөр хянагч** нэг зурлагыг зөв гэвэл, түүнийг «баталгаажсан» болгох санал тэр долоо хоногийн PR-д ордог. Холбоос нэг хүнд өгөгддөг ба хэн болохыг репод бичдэггүй.
+Монгол бичгийг сайн уншдаг, тогтмол хянахад бэлэн бол **итгэмжлэгдсэн хянагчийн холбоос** хүсээрэй (issue нээх, эсвэл шууд холбогдох). Тийм холбоостой бол таны хувьд **[хянагчийн хуудас](https://khudam.suray.mn/review)** нээгдэнэ: зурлага бүрийг монгол бичгээр нь болон үсэг тус бүрийн Юникод кодоор нь зэрэг харуулна — монгол бичигт хэд хэдэн өөр үсэг яг ижил дүрстэй байдаг тул зөвхөн харагдах байдлаар нь шийдэх боломжгүй. Тэндээс «зөв» гэсэн зурлагыг «баталгаажсан» болгох санал PR-д ордог ба эцсийн шийдвэрийг хүн нэгтгэнэ. Холбоос нэг хүнд өгөгддөг ба хэн болохыг репод бичдэггүй.
 
 ### Вэб хуудаснаас үг засах алхмууд
 
@@ -104,7 +104,7 @@ Khudam welcomes every kind of help, but the most valuable is **lexicon correctio
 
 Everything filed becomes one pull request a week, which a human merges. An answer is never verification by itself; it directs a reviewer's attention.
 
-If you read the script well and are willing to review regularly, ask for a **trusted reviewer link** (open an issue, or get in touch): when **two different** trusted reviewers agree on a spelling and none disagrees, that weekly pull request stages it as `verified: true` for the maintainer to merge. A link is given to one person, and who holds it is never recorded in the repository.
+If you read the script well and are willing to review regularly, ask for a **trusted reviewer link** (open an issue, or get in touch). It opens the **[review page](https://khudam.suray.mn/review)**, which shows every spelling as script *and* as code points — several distinct Mongolian letters share identical glyphs, so appearance alone cannot tell a right encoding from a wrong one. A spelling you call right is staged as `verified: true` in a pull request for the maintainer to merge; one you call wrong is written up for a human, never deleted automatically. A link is given to one person, and who holds it is never recorded in the repository.
 
 ### Fixing a word from the web UI — step by step
 
