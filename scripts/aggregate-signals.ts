@@ -53,7 +53,7 @@ import {
   type Entry,
   type Reviewer,
 } from "./lib.ts";
-import type { SignalRow } from "./export-signals.ts";
+import type { DecisionRow, SignalRow } from "./export-signals.ts";
 import { wiktionaryUrl } from "./import-wiktionary.ts";
 
 const STATS_DIR = join(DATA_DIR, "stats");
@@ -166,6 +166,17 @@ export interface Ledger {
    *  so a re-run — or a week whose delete failed and re-exported the same
    *  rows — cannot count anything twice. */
   through: string | null;
+  /**
+   * Highest `decisions.id` already transcribed.
+   *
+   * Its own watermark, and by row id rather than by timestamp. The two tables
+   * are drained on the same run but represent different clocks — a decision
+   * sent today may be judged against a bundle built weeks ago — so folding
+   * decisions into `through` would make one late review session hide every
+   * signal filed before it. An identity column is also exact where a timestamp
+   * is not: `now()` is transaction time, so a whole review session shares one.
+   */
+  decisions_through?: number | null;
   reports: Report[];
   verdicts?: VerdictTally[];
 }
@@ -485,6 +496,181 @@ export function mechanicalAdditions(
   return additions.sort((a, b) => compareWords(a.entry.cyrillic, b.entry.cyrillic));
 }
 
+// ---------------------------------------------------------------------------
+// Expert review decisions
+
+/**
+ * The decisions that still stand, newest per reviewer and spelling.
+ *
+ * A reviewer who changes their mind before the drain sends again rather than
+ * editing anything, so the mailbox holds both rows and the later one wins.
+ * Rows arrive ordered by `created_at, id`, and `id` is what makes that
+ * reliable: `now()` is transaction time, so every row of one insert shares a
+ * timestamp and only the identity column can order them.
+ *
+ * Keyed on the grant rather than the roster label because that is the identity
+ * the browser actually sent. The roster forbids two labels sharing a hash, so
+ * the two are one-to-one anyway — but this way a decision supersedes correctly
+ * even before anything has been checked against the roster at all.
+ */
+export function supersede(decisions: readonly DecisionRow[]): DecisionRow[] {
+  const latest = new Map<string, DecisionRow>();
+  for (const d of decisions) {
+    latest.set(`${d.reviewer_id}|${d.cyrillic}|${d.traditional}`, d);
+  }
+  return [...latest.values()];
+}
+
+/** Decisions this run has not already transcribed. See `Ledger.decisions_through`. */
+export function freshDecisions(
+  decisions: readonly DecisionRow[],
+  through: number | null | undefined,
+): DecisionRow[] {
+  return through === null || through === undefined
+    ? [...decisions]
+    : decisions.filter((d) => d.id > through);
+}
+
+export function latestDecisionId(
+  decisions: readonly DecisionRow[],
+  through: number | null | undefined,
+): number | null {
+  let latest = through ?? null;
+  for (const d of decisions) if (latest === null || d.id > latest) latest = d.id;
+  return latest;
+}
+
+/**
+ * Decisions as verdict rows, so they flow through the machinery that already
+ * exists rather than a second one built beside it.
+ *
+ * `verify` and `accept_proposal` are both "this is a written form of this
+ * word"; `reject` is its negation. Feeding them to `addVerdicts` means a
+ * decision and a queue answer from the same reviewer supersede each other for
+ * free, the single-trusted-no veto applies unchanged, and every `verified:
+ * true` this repository ever writes still comes out of exactly one place —
+ * `fastTrack`, under one threshold, under one per-pull-request cap.
+ *
+ * `context` is `queue` with the decision's row id as `question_id`: these rows
+ * exist only in memory, never in the mailbox, and nothing downstream reads
+ * either field — but writing something true is cheaper than explaining a
+ * placeholder later.
+ */
+export function decisionVerdicts(decisions: readonly DecisionRow[]): SignalRow[] {
+  return decisions.map((d) => ({
+    id: `decision-${d.id}`,
+    created_at: d.created_at,
+    context: "queue",
+    signal_type: "verdict",
+    cyrillic: d.cyrillic,
+    traditional: d.traditional,
+    sense: null,
+    proposal_kind: null,
+    proposal_traditional: null,
+    proposal_sense: null,
+    verdict: d.action !== "reject",
+    question_id: `decision-${d.id}`,
+    reviewer_id: d.reviewer_id,
+    session_id: d.reviewer_id,
+  }));
+}
+
+/** A proposal trusted reviewers accepted, and what became of it. */
+export interface Acceptance {
+  cyrillic: string;
+  traditional: string;
+  /** The meaning label to write, where one was given. */
+  sense?: string;
+  /** Every reviewer who accepted this spelling. One spelling is one candidate
+   *  however many people said so — the agreement is in the labels, not in a
+   *  second copy of the same form. */
+  labels: string[];
+  /** Why it could not be written, if it could not. */
+  blocked?: string;
+}
+
+/**
+ * Proposals a trusted reviewer accepted, turned into candidates.
+ *
+ * The candidate is added `verified: false` and left for `fastTrack` to flip on
+ * the strength of the same reviewer's attestation. That looks like a detour and
+ * is the point: one mechanism writes every `verified: true` in this repository,
+ * so the threshold, the veto and the per-pull-request cap apply to a spelling
+ * that was just added exactly as they apply to one that was already stored.
+ *
+ * Two things stop an acceptance, and neither loses it — both are written up in
+ * data/REVIEW.md with the missing piece named, which is a far smaller ask of a
+ * maintainer than judging the spelling would have been:
+ *
+ *   - no meaning label, where the entry will end up holding more than one
+ *     candidate; and
+ *   - an existing candidate that has no label either, since the schema
+ *     requires one on *every* candidate of such an entry and this pipeline
+ *     does not edit a candidate that already exists.
+ */
+export function acceptances(
+  decisions: readonly DecisionRow[],
+  roster: readonly Reviewer[],
+  index: EntryIndex,
+): Acceptance[] {
+  // Grouped by the spelling, not by the decision. Two reviewers accepting the
+  // same proposal are agreeing about one candidate, and treating them as two
+  // acceptances writes the form into the entry twice — which the schema
+  // forbids, so the whole pull request fails validation in CI and the
+  // maintainer is handed a broken diff instead of a judgement.
+  const byKey = new Map<string, Acceptance>();
+  for (const decision of decisions) {
+    if (decision.action !== "accept_proposal") continue;
+    const label = reviewerLabelOf(decision.reviewer_id, roster as Reviewer[]);
+    if (label === undefined) continue;
+    const found = index.get(decision.cyrillic);
+    // Already a candidate — accepted by hand, or by an earlier run. The
+    // attestation still counts; there is simply nothing to add.
+    if (found?.entry.candidates.some((c) => c.traditional === decision.traditional)) continue;
+    // The database checked these too. Checking again costs nothing and keeps a
+    // schema drift from writing something the validator would reject.
+    if (!CYRILLIC_WORD_RE.test(decision.cyrillic) || !TRADITIONAL_RE.test(decision.traditional)) {
+      continue;
+    }
+    if (decision.traditional !== decision.traditional.normalize("NFC")) continue;
+
+    const key = `${decision.cyrillic}|${decision.traditional}`;
+    const sense =
+      decision.sense !== null && decision.sense.trim() !== "" ? decision.sense.trim() : undefined;
+    const existing = byKey.get(key);
+    if (existing !== undefined) {
+      if (!existing.labels.includes(label)) existing.labels.push(label);
+      // A label from a second reviewer can unblock what the first left
+      // unlabelled — the schema wanted a meaning, and somebody supplied one.
+      if (existing.sense === undefined && sense !== undefined) {
+        existing.sense = sense;
+        if (existing.blocked?.includes("carries none")) delete existing.blocked;
+      }
+      continue;
+    }
+
+    const accepted: Acceptance = { cyrillic: decision.cyrillic, traditional: decision.traditional, labels: [label] };
+    if (sense !== undefined) accepted.sense = sense;
+    const candidates = found?.entry.candidates ?? [];
+    if (candidates.length > 0) {
+      const unlabelled = candidates.filter((c) => c.sense === undefined).map((c) => c.traditional);
+      if (unlabelled.length > 0) {
+        accepted.blocked =
+          "the candidate already stored carries no `sense`, and adding a second requires one " +
+          `on both: ${unlabelled.map((t) => `\`${t}\``).join(", ")}`;
+      } else if (sense === undefined) {
+        accepted.blocked =
+          "the entry will hold more than one candidate, and the schema requires a `sense` " +
+          "on each — this acceptance carries none";
+      }
+    }
+    byKey.set(key, accepted);
+  }
+  return [...byKey.values()].sort(
+    (a, b) => compareWords(a.cyrillic, b.cyrillic) || compareWords(a.traditional, b.traditional),
+  );
+}
+
 /** Where an entry lives, so a staged flip can be written back to its file. */
 export type EntryIndex = Map<string, { entry: Entry; file: string }>;
 
@@ -606,11 +792,13 @@ function writeLedger(ledger: Ledger): void {
       out.last_seen = r.last_seen;
       return out as Report;
     });
-  writeFileSync(
-    REPORTS_FILE,
-    JSON.stringify({ through: ledger.through, reports, verdicts }, null, 2) + "\n",
-    "utf8",
-  );
+  const head: { through: string | null; decisions_through?: number } = { through: ledger.through };
+  // Omitted entirely until a decision has ever been transcribed, so a project
+  // that has not used the review page yet has no field to explain.
+  if (ledger.decisions_through !== null && ledger.decisions_through !== undefined) {
+    head.decisions_through = ledger.decisions_through;
+  }
+  writeFileSync(REPORTS_FILE, JSON.stringify({ ...head, reports, verdicts }, null, 2) + "\n", "utf8");
 }
 
 // ---------------------------------------------------------------------------
@@ -718,8 +906,12 @@ interface Review {
   staged: Staged[];
   /** Eligible flips left for next week by the per-pull-request cap. */
   heldBack: number;
+  /** Proposals a trusted reviewer accepted — written, and not written. */
+  accepted: Acceptance[];
   tallies: VerdictTally[];
   lexicon: Map<string, Entry>;
+  /** Which file each entry lives in, so a rejection can name the line to delete. */
+  index: EntryIndex;
   frequency: Frequency;
   through: string | null;
 }
@@ -730,8 +922,10 @@ function renderReview({
   added,
   staged,
   heldBack,
+  accepted,
   tallies,
   lexicon,
+  index,
   frequency,
   through,
 }: Review): string {
@@ -755,7 +949,13 @@ function renderReview({
   );
   lines.push("");
 
-  const disputed = tallies.filter(isDisputed);
+  // Two very different things wear the same `disputed` flag, and blurring them
+  // would waste the maintainer's attention on the wrong one. A spelling with
+  // yeses *and* noes from trusted reviewers is a disagreement nothing can
+  // settle but a person. A spelling with only noes is not a disagreement at
+  // all — it is a decision, and what it needs is a line deleted.
+  const contested = tallies.filter((t) => isDisputed(t) && (t.attested ?? []).length > 0);
+  const rejected = tallies.filter((t) => isDisputed(t) && (t.attested ?? []).length === 0);
 
   if (staged.length > 0) {
     lines.push(`### Verified by attestation this run (${staged.length})`);
@@ -787,8 +987,40 @@ function renderReview({
     lines.push("");
   }
 
-  if (disputed.length > 0) {
-    lines.push(`### Trusted reviewers disagree (${disputed.length})`);
+  if (rejected.length > 0) {
+    lines.push(`### Rejected by a trusted reviewer (${rejected.length})`);
+    lines.push("");
+    lines.push(
+      "Somebody who reads монгол бичиг said each of these is not a written form of its word, " +
+        "for any meaning, and no trusted reviewer disagreed. **Nothing below has been changed.** " +
+        "Removing a candidate is the one edit that can lose data and cannot be undone by merging " +
+        "something else, so it is the one thing no grant can cause on its own — a leaked link " +
+        "must not be able to empty the lexicon. Deleting the candidate object from the file " +
+        "named beside it is the whole of the work, and the tally goes with the form.",
+    );
+    lines.push("");
+    for (const tally of [...rejected].sort(
+      (a, b) => compareWords(a.cyrillic, b.cyrillic) || compareWords(a.traditional, b.traditional),
+    )) {
+      const candidate = lexicon
+        .get(tally.cyrillic)
+        ?.candidates.find((c) => c.traditional === tally.traditional);
+      const verified = candidate?.verified ? " — ⚠ this candidate is `verified: true`" : "";
+      // The file, because the paragraph above promises one: "delete the
+      // candidate object from the file named beside it" is only an instruction
+      // if the name is there.
+      const file = index.get(tally.cyrillic)?.file;
+      const where = file === undefined ? "" : ` — [${dataPath(file)}](${dataPath(file).replace(/^data\//u, "")})`;
+      lines.push(
+        `- **${tally.cyrillic}** — \`${tally.traditional}\` — ${fmtLabels(tally.disputed!)} — ` +
+          `${tally.yes} ✓ / ${tally.no} ✗${verified}${where}`,
+      );
+    }
+    lines.push("");
+  }
+
+  if (contested.length > 0) {
+    lines.push(`### Trusted reviewers disagree (${contested.length})`);
     lines.push("");
     lines.push(
       "Two people who read монгол бичиг gave opposite answers about the same spelling. This is " +
@@ -798,18 +1030,56 @@ function renderReview({
         "[stats/reports.json](stats/reports.json), or by asking the reviewers.",
     );
     lines.push("");
-    for (const tally of [...disputed].sort(
+    for (const tally of [...contested].sort(
       (a, b) => compareWords(a.cyrillic, b.cyrillic) || compareWords(a.traditional, b.traditional),
     )) {
       const candidate = lexicon
         .get(tally.cyrillic)
         ?.candidates.find((c) => c.traditional === tally.traditional);
       const verified = candidate?.verified ? " — ⚠ this candidate is already `verified: true`" : "";
-      const yes = (tally.attested ?? []).length > 0 ? `yes: ${fmtLabels(tally.attested!)} — ` : "";
       lines.push(
-        `- **${tally.cyrillic}** — \`${tally.traditional}\` — ${yes}` +
+        `- **${tally.cyrillic}** — \`${tally.traditional}\` — yes: ${fmtLabels(tally.attested!)} — ` +
           `no: ${fmtLabels(tally.disputed!)} — ${tally.yes} ✓ / ${tally.no} ✗${verified}`,
       );
+    }
+    lines.push("");
+  }
+
+  const written = accepted.filter((a) => a.blocked === undefined);
+  const stuck = accepted.filter((a) => a.blocked !== undefined);
+
+  if (written.length > 0) {
+    lines.push(`### Proposals a trusted reviewer accepted (${written.length})`);
+    lines.push("");
+    lines.push(
+      "Spellings a contributor typed that the lexicon did not hold, which a trusted reviewer " +
+        "read on the review page — script and code points side by side — and said are right. " +
+        "Each is added here as an ordinary candidate; the attestation that came with it is what " +
+        "carries it into the fast-track section above, under the same threshold and the same cap " +
+        "as any other verification.",
+    );
+    lines.push("");
+    for (const { cyrillic, traditional, sense, labels } of written) {
+      const label = sense !== undefined ? ` — “${sense}”` : "";
+      lines.push(
+        `- **${cyrillic}** — \`${traditional}\`${label} — ${fmtLabels(labels)} — ` +
+          `[Wiktionary](${wiktionaryUrl(cyrillic)})`,
+      );
+    }
+    lines.push("");
+  }
+
+  if (stuck.length > 0) {
+    lines.push(`### Accepted, but not written (${stuck.length})`);
+    lines.push("");
+    lines.push(
+      "A trusted reviewer accepted each of these and the schema would not let it through. The " +
+        "judgement is not lost — it is these lines — and what each needs is named beside it. " +
+        "Adding it by hand is a smaller ask than the judgement was: the hard part is done.",
+    );
+    lines.push("");
+    for (const { cyrillic, traditional, labels, blocked } of stuck) {
+      lines.push(`- **${cyrillic}** — \`${traditional}\` — ${fmtLabels(labels)} — ⚠ ${blocked}`);
     }
     lines.push("");
   }
@@ -968,13 +1238,16 @@ function main(): void {
   const args = process.argv.slice(2);
   const bodyAt = args.indexOf("--pr-body");
   const titleAt = args.indexOf("--pr-title");
+  const decisionsAt = args.indexOf("--decisions");
   const bodyFile = bodyAt === -1 ? undefined : args[bodyAt + 1];
   const titleFile = titleAt === -1 ? undefined : args[titleAt + 1];
-  const consumed = new Set([bodyAt + 1, titleAt + 1].filter((i) => i > 0));
+  const decisionsFile = decisionsAt === -1 ? undefined : args[decisionsAt + 1];
+  const consumed = new Set([bodyAt + 1, titleAt + 1, decisionsAt + 1].filter((i) => i > 0));
   const input = args.find((a, i) => !a.startsWith("--") && !consumed.has(i));
   if (input === undefined) {
     console.error(
-      "Usage: bun scripts/aggregate-signals.ts <file.jsonl> [--pr-body <file.md>] [--pr-title <file.txt>]",
+      "Usage: bun scripts/aggregate-signals.ts <file.jsonl> [--decisions <file.jsonl>] " +
+        "[--pr-body <file.md>] [--pr-title <file.txt>]",
     );
     process.exit(1);
   }
@@ -992,6 +1265,32 @@ function main(): void {
   const verdicts = addVerdicts(ledger, fresh, roster);
   ledger.through = latestTimestamp(fresh, ledger.through);
 
+  // Decisions from the expert review page, folded in as verdicts so that they
+  // travel the same road as every other answer: the same threshold, the same
+  // single-trusted-no veto, the same per-pull-request cap, and one place where
+  // `verified: true` is ever written. What makes them different is only that
+  // every one carries a stamp, and that the newest per reviewer and spelling
+  // supersedes the rest — a reviewer changing their mind sends again.
+  const allDecisions =
+    decisionsFile === undefined || !existsSync(decisionsFile)
+      ? []
+      : (parseJsonl(readFileSync(decisionsFile, "utf8")) as unknown as DecisionRow[]);
+  const standing = supersede(freshDecisions(allDecisions, ledger.decisions_through));
+  // A decision whose stamp is on no roster is dropped outright rather than
+  // degraded to an anonymous vote, which is what happens to an unmatched
+  // *signal*. The two differ because of what each contributor was told: the
+  // converter and the queue take anonymous answers and say so, while the review
+  // page tells a browser without a grant that its decisions will not be
+  // counted. Quietly counting them anyway would make that sentence a lie.
+  const trustedDecisions = standing.filter(
+    (d) => reviewerLabelOf(d.reviewer_id, roster) !== undefined,
+  );
+  const decided = addVerdicts(ledger, decisionVerdicts(trustedDecisions), roster);
+  ledger.decisions_through = latestDecisionId(allDecisions, ledger.decisions_through);
+  const strangers = new Set(
+    standing.filter((d) => !trustedDecisions.includes(d)).map((d) => d.reviewer_id),
+  );
+
   // Stamped rows nobody on the roster could have sent. Usually a revoked grant
   // still sitting in somebody's browser; worth printing either way, because the
   // alternative reading is that someone is guessing at grants.
@@ -1003,6 +1302,38 @@ function main(): void {
   // Resolution is recomputed against the data as it stands right now, so a
   // report a reviewer answered by hand between runs closes itself.
   const { index, files } = loadEntryFiles();
+
+  // Accepted proposals are written into the entries before anything reads them
+  // again, and that ordering is the design rather than convenience. It is what
+  // lets the report that carried the proposal close itself below, and what
+  // lets `fastTrack` see a candidate that did not exist a moment ago — the
+  // acceptance adds the spelling, the attestation that came with it verifies
+  // the spelling, and neither step has to know about the other.
+  const accepted = acceptances(trustedDecisions, roster, index);
+  // Files an acceptance wrote to, and among them the ones that gained a whole
+  // new entry and therefore need re-sorting. Appending a candidate to an entry
+  // that already exists does not move anything.
+  const acceptedFiles = new Set<string>();
+  const acceptedResorted = new Set<string>();
+  for (const { cyrillic, traditional, sense, blocked } of accepted) {
+    if (blocked !== undefined) continue;
+    const candidate: Candidate = { traditional, verified: false, source: "community" };
+    if (sense !== undefined) candidate.sense = sense;
+    const found = index.get(cyrillic);
+    if (found !== undefined) {
+      found.entry.candidates.push(candidate);
+      acceptedFiles.add(found.file);
+      continue;
+    }
+    const file = shardFileFor(cyrillic);
+    if (!files.has(file)) files.set(file, existsSync(file) ? readEntriesFile(file) : []);
+    const entry: Entry = { cyrillic, candidates: [candidate] };
+    files.get(file)!.push(entry);
+    index.set(cyrillic, { entry, file });
+    acceptedFiles.add(file);
+    acceptedResorted.add(file);
+  }
+
   const lexicon = new Map([...index].map(([cyrillic, { entry }]) => [cyrillic, entry]));
   const known = new Set(index.keys());
   const now = new Date();
@@ -1029,8 +1360,8 @@ function main(): void {
 
   // New entries go into their shards, which stay sorted; the flips above are in
   // files already loaded and need no reordering.
-  const touched = new Set(staged.map((s) => s.file));
-  const resorted = new Set<string>();
+  const touched = new Set([...staged.map((s) => s.file), ...acceptedFiles]);
+  const resorted = new Set(acceptedResorted);
   for (const { entry } of additions) {
     const file = shardFileFor(entry.cyrillic);
     if (!files.has(file)) files.set(file, existsSync(file) ? readEntriesFile(file) : []);
@@ -1060,24 +1391,44 @@ function main(): void {
       added: additions,
       staged,
       heldBack,
+      accepted,
       tallies: openTallies,
       lexicon,
+      index,
       frequency,
       through: ledger.through,
     }),
   );
 
   const disputes = openTallies.filter(isDisputed);
+  const contestedCount = disputes.filter((t) => (t.attested ?? []).length > 0).length;
+  const rejectedCount = disputes.length - contestedCount;
+  const writtenCount = accepted.filter((a) => a.blocked === undefined).length;
+  const stuckCount = accepted.length - writtenCount;
   const summary = [
-    `Drained **${plural(rows.length, "signal")}** (${fresh.length} new, ${rows.length - fresh.length} already processed).`,
+    `Drained **${plural(rows.length, "signal")}** (${fresh.length} new, ${rows.length - fresh.length} already processed)` +
+      (standing.length > 0 ? ` and **${plural(standing.length, "reviewer decision")}**` : "") +
+      ".",
     "",
     staged.length > 0
       ? `- ✓ **${plural(staged.length, "candidate")}** staged \`verified: true\` — ` +
         `${ATTESTATION_THRESHOLD} trusted reviewers each, none disagreeing` +
         (heldBack > 0 ? ` (${heldBack} more qualified, held for next week)` : "")
       : "",
-    disputes.length > 0
-      ? `- ⚠ **${plural(disputes.length, "spelling")}** where trusted reviewers disagree — nothing staged`
+    writtenCount > 0
+      ? `- ✓ **${plural(writtenCount, "proposed spelling")}** a trusted reviewer accepted, ` +
+        "added as candidates"
+      : "",
+    stuckCount > 0
+      ? `- ⚠ **${plural(stuckCount, "acceptance")}** the schema would not take — each needs a ` +
+        "`sense`, and says which; the judgement is recorded, not lost"
+      : "",
+    rejectedCount > 0
+      ? `- ⚠ **${plural(rejectedCount, "spelling")}** a trusted reviewer rejected — **nothing was ` +
+        "deleted**; removing a candidate stays a human's edit"
+      : "",
+    contestedCount > 0
+      ? `- ⚠ **${plural(contestedCount, "spelling")}** where trusted reviewers disagree — nothing staged`
       : "",
     `- **${plural(selections, "selection")}** folded into \`data/stats/frequency.json\``,
     `- **${plural(newReports, "new report")}**, **${stillOpen.length}** open in total`,
@@ -1094,6 +1445,15 @@ function main(): void {
       ? `- **${plural(unmatched.size, "reviewer stamp")}** matched no grant on the roster ` +
         `(${plural(stamped.length, "stamped row")} in total) — most likely a revoked link ` +
         "still in someone's browser; those rows counted as anonymous"
+      : "",
+    // Worth its own line rather than folded into the one above: a signal with
+    // an unknown stamp degrades to an anonymous vote and still says something,
+    // while a decision with one is discarded outright. Somebody spent an
+    // evening on those and nothing came of it, which the maintainer should
+    // know — the usual cause is a grant revoked since the link was sent.
+    strangers.size > 0
+      ? `- **${plural(strangers.size, "decision stamp")}** matched no grant on the roster; ` +
+        "those decisions were discarded"
       : "",
     // Leading newline rather than a "" entry: the filter below drops empty
     // strings, which is what lets the conditional lines above disappear when

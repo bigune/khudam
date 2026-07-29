@@ -3,8 +3,12 @@
  * what was drained. Run with: bun run signals:export
  *
  * Usage:
- *   bun scripts/export-signals.ts <out.jsonl>            # read (never deletes)
- *   bun scripts/export-signals.ts --delete <out.jsonl>   # delete what it read
+ *   bun scripts/export-signals.ts <signals.jsonl> [decisions.jsonl]
+ *   bun scripts/export-signals.ts --delete <signals.jsonl> [decisions.jsonl]
+ *
+ * The second file is the trusted-reviewer decisions from the expert review
+ * page. Optional so that a maintainer draining by hand can ignore it, and so
+ * that a project created before that table existed does not fail here.
  *
  * Environment (see supabase/README.md):
  *   SUPABASE_URL                — project URL, public
@@ -22,7 +26,7 @@
  * pipeline must not have. Ids delete precisely what the artifact records;
  * anything filed mid-run is simply next week's mail.
  */
-import { writeFileSync, readFileSync } from "node:fs";
+import { existsSync, writeFileSync, readFileSync } from "node:fs";
 
 /** Rows per read request. PostgREST may cap this lower (Supabase's db-max-rows
  *  defaults to 1000); paging stops on an empty page, not on a short one, so a
@@ -57,6 +61,27 @@ export interface SignalRow {
   session_id: string;
 }
 
+/**
+ * One row of the `decisions` table — what a trusted reviewer concluded about
+ * one spelling on the expert review page.
+ *
+ * `traditional` is always the spelling being judged: a stored candidate for
+ * `verify` and `reject`, a proposed one for `accept_proposal`. Unlike a signal
+ * these are not deduplicated in the database — the newest row per reviewer and
+ * spelling supersedes, because changing your mind before the drain is a thing
+ * a reviewer must be able to do. `id` is a bigint identity, so newest is
+ * simply highest, which no timestamp can promise inside one insert.
+ */
+export interface DecisionRow {
+  id: number;
+  created_at: string;
+  cyrillic: string;
+  traditional: string;
+  action: string;
+  sense: string | null;
+  reviewer_id: string;
+}
+
 function env(): { url: string; key: string } {
   // The public alias is accepted so a maintainer can drain by hand with the
   // same .env they use to build the site locally.
@@ -87,10 +112,10 @@ function headers(key: string, extra: Record<string, string> = {}): Record<string
  * looks exactly like a week nobody contributed, and silently dropping
  * contributions is what would cost real community trust.
  */
-async function healthCheck(url: string, key: string): Promise<void> {
+async function healthCheck(url: string, key: string, table: string): Promise<void> {
   let response: Response;
   try {
-    response = await fetch(`${url}/rest/v1/signals?select=id&limit=1`, { headers: headers(key) });
+    response = await fetch(`${url}/rest/v1/${table}?select=id&limit=1`, { headers: headers(key) });
   } catch (err) {
     console.error(
       `Cannot reach ${url} — ${err instanceof Error ? err.message : String(err)}\n\n` +
@@ -103,7 +128,7 @@ async function healthCheck(url: string, key: string): Promise<void> {
   }
   if (!response.ok) {
     console.error(
-      `The signals table answered ${response.status} ${response.statusText}.\n` +
+      `The ${table} table answered ${response.status} ${response.statusText}.\n` +
         (await response.text()).slice(0, 500) +
         "\n\nCommon causes: the project is paused or restoring, the service_role key " +
         "was rotated, or supabase/schema.sql has not been applied to this project.",
@@ -112,18 +137,25 @@ async function healthCheck(url: string, key: string): Promise<void> {
   }
 }
 
-/** Every row currently in the mailbox, oldest first. */
-async function readAll(url: string, key: string): Promise<SignalRow[]> {
-  const rows: SignalRow[] = [];
+/**
+ * Every row currently in one mailbox table, oldest first.
+ *
+ * Ordered by `created_at, id` for both tables, which is what makes the
+ * decisions supersede rule work: `id` is a bigint identity there, so within
+ * one insert — where every row shares a timestamp, because `now()` is
+ * transaction time — the later row still sorts later.
+ */
+async function readAll<T>(url: string, key: string, table: string): Promise<T[]> {
+  const rows: T[] = [];
   for (let page = 0; page < MAX_PAGES; page++) {
     const query =
       `select=*&order=created_at.asc,id.asc&limit=${PAGE_SIZE}&offset=${rows.length}`;
-    const response = await fetch(`${url}/rest/v1/signals?${query}`, { headers: headers(key) });
+    const response = await fetch(`${url}/rest/v1/${table}?${query}`, { headers: headers(key) });
     if (!response.ok) {
       console.error(`Read failed at offset ${rows.length}: ${response.status} ${await response.text()}`);
       process.exit(1);
     }
-    const batch = (await response.json()) as SignalRow[];
+    const batch = (await response.json()) as T[];
     if (batch.length === 0) return rows;
     rows.push(...batch);
   }
@@ -135,11 +167,16 @@ async function readAll(url: string, key: string): Promise<SignalRow[]> {
 }
 
 /** Delete exactly these ids, in chunks; returns how many rows the server removed. */
-async function deleteIds(url: string, key: string, ids: string[]): Promise<number> {
+async function deleteIds(
+  url: string,
+  key: string,
+  table: string,
+  ids: (string | number)[],
+): Promise<number> {
   let deleted = 0;
   for (let i = 0; i < ids.length; i += DELETE_CHUNK) {
     const chunk = ids.slice(i, i + DELETE_CHUNK);
-    const response = await fetch(`${url}/rest/v1/signals?id=in.(${chunk.join(",")})`, {
+    const response = await fetch(`${url}/rest/v1/${table}?id=in.(${chunk.join(",")})`, {
       method: "DELETE",
       // count=exact makes the response say how many rows were actually
       // removed. Without it a DELETE that matched nothing returns 204 exactly
@@ -159,42 +196,56 @@ async function deleteIds(url: string, key: string, ids: string[]): Promise<numbe
   return deleted;
 }
 
-function readJsonl(path: string): SignalRow[] {
+function readJsonl<T extends { id: string | number }>(path: string): T[] {
+  if (!existsSync(path)) return [];
   return readFileSync(path, "utf8")
     .split("\n")
     .filter((line) => line.trim().length > 0)
-    .map((line) => JSON.parse(line) as SignalRow);
+    .map((line) => JSON.parse(line) as T);
+}
+
+function writeJsonl(path: string, rows: unknown[]): void {
+  writeFileSync(path, rows.map((r) => JSON.stringify(r)).join("\n") + (rows.length > 0 ? "\n" : ""), "utf8");
 }
 
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
   const deleteMode = args[0] === "--delete";
-  const file = deleteMode ? args[1] : args[0];
+  const [file, decisionsFile] = deleteMode ? [args[1], args[2]] : [args[0], args[1]];
   if (!file) {
-    console.error("Usage: bun scripts/export-signals.ts [--delete] <file.jsonl>");
+    console.error("Usage: bun scripts/export-signals.ts [--delete] <signals.jsonl> [decisions.jsonl]");
     process.exit(1);
   }
   const { url, key } = env();
 
   if (deleteMode) {
-    const rows = readJsonl(file);
-    if (rows.length === 0) {
-      console.log("Nothing to delete.");
-      return;
-    }
-    const deleted = await deleteIds(url, key, rows.map((r) => r.id));
-    console.log(`Deleted ${deleted} of ${rows.length} exported rows.`);
-    if (deleted < rows.length) {
-      // Not an error: a re-run of a job whose delete already succeeded lands
-      // here, and so does any row a maintainer removed by hand.
-      console.log("Rows already gone are counted as deleted — the mailbox holds no duplicates.");
+    // Signals first, decisions second, each reporting on its own. A failure
+    // in either exits, and the undeleted rows come back next run — where
+    // aggregation skips what it has already processed.
+    for (const [table, path] of [
+      ["signals", file],
+      ["decisions", decisionsFile],
+    ] as const) {
+      if (path === undefined) continue;
+      const rows = readJsonl<{ id: string | number }>(path);
+      if (rows.length === 0) {
+        console.log(`Nothing to delete in ${table}.`);
+        continue;
+      }
+      const deleted = await deleteIds(url, key, table, rows.map((r) => r.id));
+      console.log(`Deleted ${deleted} of ${rows.length} exported ${table} rows.`);
+      if (deleted < rows.length) {
+        // Not an error: a re-run of a job whose delete already succeeded lands
+        // here, and so does any row a maintainer removed by hand.
+        console.log("Rows already gone are counted as deleted — the mailbox holds no duplicates.");
+      }
     }
     return;
   }
 
-  await healthCheck(url, key);
-  const rows = await readAll(url, key);
-  writeFileSync(file, rows.map((r) => JSON.stringify(r)).join("\n") + (rows.length > 0 ? "\n" : ""), "utf8");
+  await healthCheck(url, key, "signals");
+  const rows = await readAll<SignalRow>(url, key, "signals");
+  writeJsonl(file, rows);
 
   const byType = new Map<string, number>();
   for (const row of rows) byType.set(row.signal_type, (byType.get(row.signal_type) ?? 0) + 1);
@@ -204,6 +255,19 @@ async function main(): Promise<void> {
   if (rows.length === 0) {
     console.log("The mailbox is empty. The project answered, so this is a quiet week, not an outage.");
   }
+
+  if (decisionsFile === undefined) return;
+  await healthCheck(url, key, "decisions");
+  const decisions = await readAll<DecisionRow>(url, key, "decisions");
+  writeJsonl(decisionsFile, decisions);
+  const byAction = new Map<string, number>();
+  for (const row of decisions) byAction.set(row.action, (byAction.get(row.action) ?? 0) + 1);
+  // Grants, not labels: this script has no roster and must not pretend to.
+  // Whether a stamp is worth anything is decided by the aggregator, against
+  // data/reviewers.json in the merged repository.
+  const stamps = new Set(decisions.map((r) => r.reviewer_id)).size;
+  console.log(`Exported ${decisions.length} decisions from ${stamps} stamps to ${decisionsFile}`);
+  for (const [action, count] of [...byAction].sort()) console.log(`  ${action}: ${count}`);
 }
 
 if (import.meta.main) {

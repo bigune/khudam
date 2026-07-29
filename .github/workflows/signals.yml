@@ -4,6 +4,13 @@
 # This job is what moves contributions from the second into the first, and a
 # human merging its pull request is the only thing that changes the lexicon.
 #
+# It drains two tables. `signals` is the anonymous traffic and arrives on the
+# weekly schedule. `decisions` is what a trusted reviewer concluded on the
+# expert review page, and is the reason for `workflow_dispatch`: after a review
+# session, run this by hand rather than waiting until Monday. The review page
+# stands down while this job's pull request is open, so merging it is also what
+# lets the next session begin.
+#
 # Secrets (see supabase/README.md):
 #   SUPABASE_URL — or NEXT_PUBLIC_SUPABASE_URL, the name the Vercel project
 #     already gives the same public value
@@ -75,16 +82,19 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL || secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-        run: bun run signals:export signals.jsonl
+        run: bun run signals:export signals.jsonl decisions.jsonl
 
       # The audit trail, uploaded before anything is deleted. Everything below
-      # can be redone from this file alone.
+      # can be redone from these two files alone — including a review session
+      # whose pull request was closed rather than merged.
       - name: Archive the raw signals
         if: steps.guard.outputs.skip == 'false'
         uses: actions/upload-artifact@v4
         with:
           name: signals-${{ github.run_id }}
-          path: signals.jsonl
+          path: |
+            signals.jsonl
+            decisions.jsonl
           retention-days: 90
           if-no-files-found: error
 
@@ -94,16 +104,18 @@ jobs:
         id: mail
         if: steps.guard.outputs.skip == 'false'
         run: |
-          if [ -s signals.jsonl ]; then
+          if [ -s signals.jsonl ] || [ -s decisions.jsonl ]; then
             echo "empty=false" >> "$GITHUB_OUTPUT"
           else
             echo "empty=true" >> "$GITHUB_OUTPUT"
-            echo "The mailbox was empty. Nothing to triage." >> "$GITHUB_STEP_SUMMARY"
+            echo "Both mailboxes were empty. Nothing to triage." >> "$GITHUB_STEP_SUMMARY"
           fi
 
       - name: Aggregate into the review queue
         if: steps.mail.outputs.empty == 'false'
-        run: bun run signals:aggregate signals.jsonl --pr-body pr-body.md --pr-title pr-title.txt
+        run: |
+          bun run signals:aggregate signals.jsonl --decisions decisions.jsonl \
+            --pr-body pr-body.md --pr-title pr-title.txt
 
       # Broken output must never reach a reviewer. This is the same check every
       # human pull request passes.
@@ -155,4 +167,4 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL || secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-        run: bun run signals:export --delete signals.jsonl
+        run: bun run signals:export --delete signals.jsonl decisions.jsonl
