@@ -13,16 +13,12 @@ import {
 } from "../lib/signals";
 import { ReportDialog, type ReportTarget } from "./report-dialog";
 import { ReviewerBadge } from "./reviewer-badge";
+import { SiteFooter } from "./site-footer";
 import { ThemeToggle } from "./theme-toggle";
 
 const SAMPLES = ["монгол бичиг", "сайн байна уу", "уул ус"];
 
 const REPO_URL = "https://github.com/bigune/khudam";
-// The parent site links here as one of its tools; this is the link back.
-// rel="noopener" rather than the "noreferrer" the other footer links carry —
-// it is our own site, and the referrer is what lets suray.mn see the traffic
-// came from the converter.
-const SURAY_URL = "https://suray.mn";
 const NPM_URL = "https://www.npmjs.com/package/khudam";
 const CONTRIBUTING_URL = `${REPO_URL}/blob/main/CONTRIBUTING.md`;
 const SOURCES_URL = `${REPO_URL}/blob/main/data/SOURCES.md`;
@@ -527,51 +523,28 @@ export default function Home() {
             </p>
           </>
         )}
+        {/* The links these sentences point at live in the prose itself; the
+            row of bare links that used to follow said the same thing again a
+            centimetre above the footer that now says it for every page. */}
         <p>
-          Алдаа мэдэгдэх, эсвэл шинэ үг, нэр нэмэхийг хүсвэл GitHub дээр мөн
-          засвар оруулах боломжтой — програмчлал мэдэхгүй байсан ч болно.
-          Хөгжүүлэгч нар khudam package-ийг npm-ээс суулгаарай.
+          Алдаа мэдэгдэх, эсвэл шинэ үг, нэр нэмэхийг хүсвэл{" "}
+          <a href={CONTRIBUTING_URL} target="_blank" rel="noreferrer">
+            GitHub дээр
+          </a>{" "}
+          мөн засвар оруулах боломжтой — програмчлал мэдэхгүй байсан ч болно.
+          Хөгжүүлэгч нар khudam package-ийг{" "}
+          <a href={NPM_URL} target="_blank" rel="noreferrer">
+            npm-ээс
+          </a>{" "}
+          суулгаарай.
         </p>
         <p className="en" lang="en">
           Found an error, or want to add a word or name? Contribute on GitHub —
           no coding needed. Developers can install the khudam package from npm.
         </p>
-        <p className="links-row">
-          <a href={CONTRIBUTING_URL} target="_blank" rel="noreferrer">
-            Хувь нэмрээ оруулах заавар
-          </a>
-          <a href={REPO_URL} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          <a href={NPM_URL} target="_blank" rel="noreferrer">
-            npm
-          </a>
-        </p>
       </section>
 
-      <footer>
-        {signalsEnabled && (
-          <Link href="/queue">Хянагдахаар хүлээгдэж буй үгс</Link>
-        )}
-        <a href={SURAY_URL} target="_blank" rel="noopener">
-          Үндсэн вебсайт
-        </a>
-        <a href={REPO_URL} target="_blank" rel="noreferrer">
-          GitHub
-        </a>
-        <a href={NPM_URL} target="_blank" rel="noreferrer">
-          npm
-        </a>
-        <a href={SOURCES_URL} target="_blank" rel="noreferrer">
-          Эх сурвалж
-        </a>
-        <span>
-          Код MIT ·{" "}
-          <a href={DATA_LICENSE_URL} target="_blank" rel="noreferrer">
-            Өгөгдөл CC BY-SA 4.0
-          </a>
-        </span>
-      </footer>
+      <SiteFooter />
 
       <ReportDialog target={report} onClose={() => setReport(null)} />
     </main>

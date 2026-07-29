@@ -10,6 +10,7 @@ import {
 } from "../../lib/signals";
 import { ProposalForm } from "../proposal-form";
 import { ReviewerBadge } from "../reviewer-badge";
+import { SiteFooter } from "../site-footer";
 import { ThemeToggle } from "../theme-toggle";
 
 /**
@@ -579,6 +580,8 @@ export default function QueuePage() {
           </p>
         )}
       </section>
+
+      <SiteFooter />
     </main>
   );
 }

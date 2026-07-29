@@ -11,6 +11,7 @@ import {
   type DecisionAction,
 } from "../../lib/decisions";
 import { claimGrant, signalsEnabled } from "../../lib/signals";
+import { SiteFooter } from "../site-footer";
 import { ThemeToggle } from "../theme-toggle";
 
 /**
@@ -634,13 +635,9 @@ export default function ReviewPage() {
           in git and transcribes what survives into one pull request, which a
           human merges.
         </p>
-        <p className="links-row">
-          <Link href="/queue">Хянагдахаар хүлээгдэж буй үгс</Link>
-          <a href={REPO_URL} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        </p>
       </section>
+
+      <SiteFooter />
     </main>
   );
 }
