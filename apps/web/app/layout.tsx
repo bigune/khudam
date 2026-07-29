@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { PT_Sans, PT_Serif } from "next/font/google";
 import localFont from "next/font/local";
+import { THEME_BG, THEME_KEY } from "../lib/theme";
 import "./globals.css";
 
 // Self-hosted FULL Noto Sans Mongolian (v3.002, OFL — see fonts/OFL.txt).
@@ -44,14 +45,21 @@ export const metadata: Metadata = {
     "Free open-source Cyrillic → traditional Mongolian script (Mongol bichig) converter.",
 };
 
-// The browser chrome around the page matches the paper it shows. The two
-// values are --bg from globals.css; change them together.
+// The browser chrome around the page matches the paper it shows. The theme
+// toggle rewrites these metas when a reader forces a theme.
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#faf9f7" },
-    { media: "(prefers-color-scheme: dark)", color: "#101214" },
+    { media: "(prefers-color-scheme: light)", color: THEME_BG.light },
+    { media: "(prefers-color-scheme: dark)", color: THEME_BG.dark },
   ],
 };
+
+// A forced theme must be on <html> before anything paints, or every visit
+// opens with a flash of the OS theme. Inline and first in <body>, because a
+// component effect runs after first paint by definition.
+const THEME_BOOT =
+  `try{var t=localStorage.getItem(${JSON.stringify(THEME_KEY)});` +
+  `if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -60,6 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${notoMongolian.variable} ${ptSans.variable} ${ptSerif.variable}`}
     >
       <body>
+        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT }} />
         {children}
         <Analytics />
       </body>

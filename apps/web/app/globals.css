@@ -1,25 +1,30 @@
 :root {
-  /* Native widgets — scrollbars, the textarea's resize grip, form controls —
-     follow the OS theme instead of staying light inside a dark page. */
+  /* Every colour carries both of its themes, and color-scheme picks which one
+     is live — for the tokens and for native widgets (scrollbars, the
+     textarea's resize grip) in the same stroke. This is also the entire
+     switching mechanism: the toggle only ever flips color-scheme via
+     data-theme below, so there is exactly one palette to maintain. */
   color-scheme: light dark;
 
-  --bg: #faf9f7;
-  --panel: #ffffff;
-  --ink: #1a1c1e;
-  --muted: #6b7280;
-  --border: #e3e1dc;
-  --accent: #2456a6;
-  --verified: #1a7f4b;
-  --verified-bg: #e6f4ec;
-  --warn: #9a6700;
-  --warn-bg: #fff3d6;
-  --neutral: #56606b;
-  --neutral-bg: #eef0f2;
+  /* --bg is also THEME_BG in lib/theme.ts (the address-bar colour); change
+     them together. */
+  --bg: light-dark(#faf9f7, #101214);
+  --panel: light-dark(#ffffff, #181b1e);
+  --ink: light-dark(#1a1c1e, #e8e6e3);
+  --muted: light-dark(#6b7280, #9aa0a6);
+  --border: light-dark(#e3e1dc, #2a2e33);
+  --accent: light-dark(#2456a6, #7aa5e8);
+  --verified: light-dark(#1a7f4b, #57c98a);
+  --verified-bg: light-dark(#e6f4ec, #12301f);
+  --warn: light-dark(#9a6700, #e3b341);
+  --warn-bg: light-dark(#fff3d6, #33290f);
+  --neutral: light-dark(#56606b, #aab2ba);
+  --neutral-bg: light-dark(#eef0f2, #23272c);
   /* Distinct from --warn: amber means "this is a machine guess, not dictionary
      data", which is a property of the answer. Red means "what you typed cannot
      be sent", which is a property of the input. One colour for both made the
      converter look like it was scolding the reader. */
-  --error: #b42318;
+  --error: light-dark(#b42318, #f97066);
 
   /* One scale each, so nothing drifts. Five text steps carry the whole page;
      the two Mongolian display sizes are their own rhythm because vertical
@@ -47,22 +52,15 @@
   --font-display: var(--font-serif), "PT Serif", Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #101214;
-    --panel: #181b1e;
-    --ink: #e8e6e3;
-    --muted: #9aa0a6;
-    --border: #2a2e33;
-    --accent: #7aa5e8;
-    --verified: #57c98a;
-    --verified-bg: #12301f;
-    --warn: #e3b341;
-    --warn-bg: #33290f;
-    --neutral: #aab2ba;
-    --neutral-bg: #23272c;
-    --error: #f97066;
-  }
+/* A reader's choice outranks the OS. Set before first paint by the boot
+   script in layout.tsx, owned by the theme toggle after that; absent means
+   follow the system. */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 * {
@@ -132,6 +130,24 @@ h1 {
   /* The queue and review pages title in a full phrase; on a phone it breaks
      into one long line and one orphaned word without this. */
   text-wrap: balance;
+}
+
+/* The title's line, with the theme toggle at its far end — the same shape as
+   the output label carrying the copy button: one left-axis text, one quiet
+   utility on the right. The h1 keeps first claim on the width, so on a phone
+   a long title wraps beside the button rather than under it. */
+.header-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  /* Optically on the h1's first line rather than the header's edge. */
+  margin-top: 0.3rem;
 }
 
 .subtitle {

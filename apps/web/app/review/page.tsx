@@ -11,6 +11,7 @@ import {
   type DecisionAction,
 } from "../../lib/decisions";
 import { claimGrant, signalsEnabled } from "../../lib/signals";
+import { ThemeToggle } from "../theme-toggle";
 
 /**
  * The expert review page.
@@ -377,7 +378,10 @@ export default function ReviewPage() {
   return (
     <main>
       <header>
-        <h1>Хянагчийн хуудас</h1>
+        <div className="header-bar">
+          <h1>Хянагчийн хуудас</h1>
+          <ThemeToggle />
+        </div>
         <p className="subtitle">Зурлага бүрийг үсэг үсгээр нь харуулав</p>
         <p className="en" lang="en">
           Trusted-reviewer decisions, every spelling shown letter by letter

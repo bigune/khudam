@@ -13,6 +13,7 @@ import {
 } from "../lib/signals";
 import { ReportDialog, type ReportTarget } from "./report-dialog";
 import { ReviewerBadge } from "./reviewer-badge";
+import { ThemeToggle } from "./theme-toggle";
 
 const SAMPLES = ["монгол бичиг", "сайн байна уу", "уул ус"];
 
@@ -205,7 +206,10 @@ export default function Home() {
   return (
     <main>
       <header>
-        <h1>Худам</h1>
+        <div className="header-bar">
+          <h1>Худам</h1>
+          <ThemeToggle />
+        </div>
         <p className="subtitle">Нээлттэй монгол бичиг хөрвүүлэгч</p>
         <p className="en" lang="en">
           open-source Cyrillic → Traditional Mongolian Script converter
