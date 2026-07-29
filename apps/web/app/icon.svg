@@ -1,22 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Not a letter. Every Mongol bichig word hangs off one vertical spine and
-       opens with a crown stroke; this is that shape and nothing more specific,
-       because a real glyph drawn by hand here would be an encoding claim the
-       data does not make. Colours mirror the bg/panel and ink tokens in
+  <!-- The Cyrillic initial of the name, nothing cleverer. The two diagonals
+       carry serif-style contrast (one thick, one thin, flat ends) so the
+       letter reads as type rather than as a close button; uniform rounded
+       strokes made it one. Colours mirror the bg/panel and ink tokens in
        globals.css. (No double hyphen may appear in this comment: SVG is
        strict XML, and one broke the whole favicon once.) -->
   <style>
     .paper { fill: #faf9f7 }
-    .ink { fill: #1a1c1e }
+    .ink { stroke: #1a1c1e }
     @media (prefers-color-scheme: dark) {
       .paper { fill: #181b1e }
-      .ink { fill: #e8e6e3 }
+      .ink { stroke: #e8e6e3 }
     }
   </style>
   <rect class="paper" width="64" height="64" rx="14"/>
-  <!-- The titem is a pennant, not a bar: a pointed tip at the left, the
-       stroke thickening as it rises into the head of the spine. Drawn as a
-       perpendicular rectangle it read as the digit 1. -->
-  <path class="ink" d="M14 19 L33 11 L41 11 L41 22 L33 23 Z"/>
-  <rect class="ink" x="33" y="11" width="8" height="43" rx="3"/>
+  <path class="ink" d="M21 19 L43 45" fill="none" stroke-width="9"/>
+  <path class="ink" d="M43 19 L21 45" fill="none" stroke-width="4"/>
 </svg>
