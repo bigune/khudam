@@ -39,10 +39,24 @@ const ptSerif = PT_Serif({
 });
 
 export const metadata: Metadata = {
+  // Absolute URLs for the social tags below; app/opengraph-image.png rides
+  // along automatically as og:image and twitter:image.
+  metadataBase: new URL("https://khudam.suray.mn"),
   title: "Худам — монгол бичиг хөрвүүлэгч",
   description:
     "Кирилл үгийг монгол бичиг рүү шууд хөрвүүлэх үнэгүй, нээлттэй эхийн хөрвүүлэгч. " +
     "Free open-source Cyrillic → traditional Mongolian script (Mongol bichig) converter.",
+  openGraph: {
+    title: "Худам — монгол бичиг хөрвүүлэгч",
+    description:
+      "Кирилл үгийг монгол бичиг рүү шууд хөрвүүлэх үнэгүй, нээлттэй эхийн хөрвүүлэгч.",
+    type: "website",
+    locale: "mn_MN",
+    siteName: "Худам",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 // The browser chrome around the page matches the paper it shows. The theme
