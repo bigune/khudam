@@ -49,6 +49,7 @@ export const MAX_PROPOSAL_LENGTH = 128;
 export const MAX_SENSE_LENGTH = 200;
 
 const SESSION_STORAGE_KEY = "khudam.session";
+const REVIEWER_STORAGE_KEY = "khudam.reviewer";
 
 /**
  * NNBSP U+202F, which joins a written-apart suffix to its stem. Built from its
@@ -108,6 +109,8 @@ export interface SignalRow {
   proposal_sense?: string;
   verdict?: boolean;
   question_id?: string;
+  /** The trusted-reviewer grant this browser holds, if any. See `claimGrant`. */
+  reviewer_id?: string;
   session_id: string;
 }
 
@@ -291,6 +294,105 @@ export function getSessionId(): string | null {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Trusted reviewer grants (contribution pipeline, Phase C)
+
+/**
+ * A grant, as `crypto.randomUUID()` prints it.
+ *
+ * Checked before anything is stored or sent, and that check is load-bearing
+ * rather than tidy: `reviewer_id` is a `uuid` column, so one malformed value
+ * makes Postgres reject the whole insert — including, for a queue set, nine
+ * good answers filed alongside it.
+ */
+export const GRANT_RE =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+
+/**
+ * The grant inside a link, or null.
+ *
+ * It travels in the URL **fragment** — `…/queue#r=<uuid>` — and never in a
+ * query string. A fragment is not sent to the server, so it cannot reach an
+ * access log, a `Referer` header, or the analytics this site loads on every
+ * page; `?r=` would be all three, and a secret written down in three places by
+ * being clicked once is not a secret.
+ */
+export function grantInFragment(fragment: string): string | null {
+  const value = fragment.replace(/^#/u, "").match(/(?:^|&)r=([^&]+)/u)?.[1];
+  if (value === undefined) return null;
+  const grant = decodeURIComponent(value).trim().toLowerCase();
+  return GRANT_RE.test(grant) ? grant : null;
+}
+
+/**
+ * Take the grant out of the address bar and keep it on the device.
+ *
+ * Clearing the fragment afterwards is part of the design, not tidiness: the
+ * link stays valid forever and identifies one person, so leaving it in the URL
+ * would put it into every screenshot, every shared link and every browser
+ * history that follows. `replaceState` also means the back button cannot walk
+ * back into it.
+ *
+ * Returns the grant now in force, so a page can render its badge without a
+ * second read.
+ */
+export function claimGrant(): string | null {
+  if (typeof window === "undefined") return null;
+  const fromLink = grantInFragment(window.location.hash);
+  if (fromLink !== null) {
+    try {
+      window.localStorage.setItem(REVIEWER_STORAGE_KEY, fromLink);
+    } catch {
+      // Private modes throw. The grant still works for this page load; it just
+      // has to be opened again next time.
+    }
+    window.history.replaceState(
+      null,
+      "",
+      window.location.pathname + window.location.search,
+    );
+    return fromLink;
+  }
+  return getReviewerId();
+}
+
+/** The grant this browser holds, or null for an ordinary anonymous visitor. */
+export function getReviewerId(): string | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const stored = window.localStorage.getItem(REVIEWER_STORAGE_KEY);
+    return stored !== null && GRANT_RE.test(stored) ? stored : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Hand the grant back — a shared computer, a borrowed phone, a reviewer who
+ *  wants to answer as an ordinary visitor. Signals already sent stay sent. */
+export function clearReviewer(): void {
+  try {
+    window.localStorage.removeItem(REVIEWER_STORAGE_KEY);
+  } catch {
+    // Nothing was stored, so nothing needs removing.
+  }
+}
+
+/**
+ * Stamp a batch with the grant in force.
+ *
+ * Applied to every signal type rather than to queue answers alone: a trusted
+ * reviewer flagging a spelling in the converter is telling us the same quality
+ * of thing they would tell us in the queue, and the weekly pull request should
+ * be able to say so.
+ */
+export function stampReviewer(
+  rows: SignalRow[],
+  reviewerId: string | null,
+): SignalRow[] {
+  if (reviewerId === null || !GRANT_RE.test(reviewerId)) return rows;
+  return rows.map((row) => ({ ...row, reviewer_id: reviewerId }));
+}
+
 /**
  * Builds the rows for one copy action: the candidate the user ended up with
  * for each converted word.
@@ -399,6 +501,9 @@ export function buildProposalRow(
  */
 async function insert(rows: SignalRow[]): Promise<boolean> {
   if (!signalsEnabled || rows.length === 0) return false;
+  // Stamped here rather than in the row builders, so that every path into the
+  // mailbox carries the grant and none of them has to remember to.
+  const stamped = stampReviewer(rows, getReviewerId());
   try {
     const response = await fetch(`${SUPABASE_URL}/rest/v1/signals`, {
       method: "POST",
@@ -409,7 +514,7 @@ async function insert(rows: SignalRow[]): Promise<boolean> {
         // Nothing is read back — the anon role has no select policy anyway.
         Prefer: "return=minimal",
       },
-      body: JSON.stringify(rows),
+      body: JSON.stringify(stamped),
       // Survives the user navigating away right after copying.
       keepalive: true,
     });

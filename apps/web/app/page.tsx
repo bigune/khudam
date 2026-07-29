@@ -11,6 +11,7 @@ import {
   signalsEnabled,
 } from "../lib/signals";
 import { ReportDialog, type ReportTarget } from "./report-dialog";
+import { ReviewerBadge } from "./reviewer-badge";
 
 const SAMPLES = ["монгол бичиг", "сайн байна уу", "уул ус"];
 
@@ -148,6 +149,8 @@ export default function Home() {
           )}
         </p>
       </header>
+
+      <ReviewerBadge />
 
       <section className="io">
         <label className="field">

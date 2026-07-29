@@ -9,6 +9,7 @@ import {
   type QueueAnswer,
 } from "../../lib/signals";
 import { ProposalForm } from "../proposal-form";
+import { ReviewerBadge } from "../reviewer-badge";
 
 /**
  * The verification queue: one spelling at a time, answered by people who read
@@ -301,6 +302,8 @@ export default function QueuePage() {
           <Link href="/">← Хөрвүүлэгч рүү буцах</Link>
         </p>
       </header>
+
+      <ReviewerBadge />
 
       {!signalsEnabled && (
         <section className="info">

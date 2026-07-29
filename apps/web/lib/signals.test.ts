@@ -7,6 +7,7 @@ import {
   checkProposal,
   cleanSense,
   displaySense,
+  grantInFragment,
   isLexiconCandidate,
   isTraditionalForm,
   MAX_PROPOSAL_LENGTH,
@@ -14,6 +15,7 @@ import {
   MAX_SENSE_LENGTH,
   needsSenseBranch,
   proposalKindFor,
+  stampReviewer,
   UNLABELED_SENSE,
 } from "./signals";
 
@@ -337,5 +339,73 @@ describe("buildProposalRow", () => {
     );
     expect("proposal_traditional" in row).toBe(false);
     expect(row.proposal_sense).toBe("mountain");
+  });
+});
+
+describe("grantInFragment", () => {
+  const GRANT = "c51f2be7-6ba8-47d0-9a1c-9334dfc8338b";
+
+  test("reads a grant out of the fragment a reviewer link carries", () => {
+    expect(grantInFragment(`#r=${GRANT}`)).toBe(GRANT);
+    expect(grantInFragment(`r=${GRANT}`)).toBe(GRANT);
+  });
+
+  test("finds it beside other fragment parameters, in either order", () => {
+    expect(grantInFragment(`#from=mail&r=${GRANT}`)).toBe(GRANT);
+    expect(grantInFragment(`#r=${GRANT}&from=mail`)).toBe(GRANT);
+  });
+
+  test("accepts a link that survived a mail client's case mangling", () => {
+    expect(grantInFragment(`#r=${GRANT.toUpperCase()}`)).toBe(GRANT);
+    expect(grantInFragment(`#r=%20${GRANT}%20`)).toBe(GRANT);
+  });
+
+  test("rejects anything that is not a uuid", () => {
+    // Load-bearing rather than tidy: reviewer_id is a uuid column, so one
+    // malformed value makes Postgres reject the whole insert — for a queue set,
+    // that is nine good answers thrown away with it.
+    expect(grantInFragment("#r=trust-me")).toBeNull();
+    expect(grantInFragment(`#r=${GRANT}';drop table signals;--`)).toBeNull();
+    expect(grantInFragment("#r=")).toBeNull();
+    expect(grantInFragment("")).toBeNull();
+  });
+
+  test("ignores a fragment that is about something else", () => {
+    expect(grantInFragment("#section-2")).toBeNull();
+    // The parameter is `r`, not any parameter ending in r.
+    expect(grantInFragment(`#other=${GRANT}`)).toBeNull();
+    expect(grantInFragment(`#referrer=${GRANT}`)).toBeNull();
+  });
+});
+
+describe("stampReviewer", () => {
+  const GRANT = "c51f2be7-6ba8-47d0-9a1c-9334dfc8338b";
+  const rows = () => [
+    buildFlagRow({ cyrillic: "уул", traditional: "ᠤᠤᠯ" }, "correction", SESSION),
+    buildFlagRow({ cyrillic: "ном", traditional: "ᠨᠣᠮ" }, "correction", SESSION),
+  ];
+
+  test("stamps every row in the batch", () => {
+    const stamped = stampReviewer(rows(), GRANT);
+    expect(stamped.map((r) => r.reviewer_id)).toEqual([GRANT, GRANT]);
+  });
+
+  test("leaves an anonymous batch alone rather than sending a null", () => {
+    const stamped = stampReviewer(rows(), null);
+    expect(stamped.every((r) => !("reviewer_id" in r))).toBe(true);
+  });
+
+  test("refuses a stored value that is not a uuid", () => {
+    // A grant only ever arrives through grantInFragment, but localStorage is
+    // writable by anything that runs on the page, and one bad value here would
+    // cost every signal the browser tries to send afterwards.
+    const stamped = stampReviewer(rows(), "trust-me");
+    expect(stamped.every((r) => !("reviewer_id" in r))).toBe(true);
+  });
+
+  test("does not mutate the rows it was given", () => {
+    const original = rows();
+    stampReviewer(original, GRANT);
+    expect(original.every((r) => !("reviewer_id" in r))).toBe(true);
   });
 });

@@ -62,7 +62,15 @@ create table if not exists public.signals (
   verdict       boolean,
   question_id   text,
 
-  -- Trusted reviewer stamp (Phase C); null means anonymous.
+  -- Trusted reviewer stamp; null means anonymous, which is nearly every row.
+  --
+  -- The value is a grant the maintainer handed to one person in a link. This
+  -- database holds no roster and cannot tell a real grant from an invented
+  -- one -- deliberately: the roster lives in git as SHA-256 hashes
+  -- (data/reviewers.json), so a stamp is only worth anything after the weekly
+  -- job matches it, and a revoked grant stops counting the moment its line is
+  -- deleted from the repository. An unmatched stamp is simply an anonymous
+  -- row, and the weekly pull request reports how many arrived.
   reviewer_id   uuid,
 
   -- Random per-browser UUID. Dedup and rate-capping only -- not an account,
@@ -204,6 +212,11 @@ create index if not exists signals_session_recent_idx
 -- `question_id` are included so a Phase B answer to a different question, or a
 -- changed mind about the same one, still counts as something new to read.
 --
+-- `reviewer_id` is in the key for a narrow but costly case: somebody who
+-- answers a question, then opens their reviewer link and answers it again. The
+-- second row is the attestation and the first is an anonymous vote, and without
+-- this column the trusted one would be dropped as a duplicate of the vote.
+--
 -- Enforced by the trigger below rather than by the client. PostgREST's upsert
 -- (`on_conflict` + `Prefer: resolution=ignore-duplicates`) looks like the
 -- obvious way to ask for this, and it is a trap here: the upsert path needs
@@ -227,7 +240,7 @@ drop index if exists public.signals_session_content_uniq;
 create unique index signals_session_content_uniq
   on public.signals (session_id, signal_type, cyrillic, traditional, sense,
                      proposal_kind, proposal_traditional, proposal_sense,
-                     question_id, verdict)
+                     question_id, verdict, reviewer_id)
   nulls not distinct;
 
 -- The mechanism: skip a duplicate row instead of rejecting it.
@@ -265,6 +278,7 @@ begin
        and s.proposal_sense       is not distinct from new.proposal_sense
        and s.question_id          is not distinct from new.question_id
        and s.verdict              is not distinct from new.verdict
+       and s.reviewer_id          is not distinct from new.reviewer_id
   ) then
     return null;
   end if;
