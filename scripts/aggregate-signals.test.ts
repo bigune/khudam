@@ -21,7 +21,9 @@ import {
   reportKey,
   resolutionOf,
   revokedFlips,
+  acceptanceClaims,
   acceptances,
+  carriedClaims,
   decisionVerdicts,
   declinedProposals,
   freshDecisions,
@@ -947,9 +949,10 @@ describe("acceptances", () => {
   };
   const accept = (over: Partial<DecisionRow> = {}) =>
     decision({ cyrillic: "хур", traditional: "ᠬᠤᠷᠠ", action: "accept_proposal", ...over });
+  const claims = (...decisions: DecisionRow[]) => acceptanceClaims(decisions, ROSTER);
 
   test("a word with no entry needs no meaning label", () => {
-    const got = acceptances([accept()], ROSTER, indexOf());
+    const got = acceptances(claims(accept()), indexOf());
     expect(got).toHaveLength(1);
     expect(got[0]!.blocked).toBeUndefined();
     expect(got[0]!.labels).toEqual(["r1"]);
@@ -959,19 +962,14 @@ describe("acceptances", () => {
     // Writing it twice puts a duplicate form in the entry, which the schema
     // forbids — so the whole pull request fails validation in CI and the
     // maintainer gets a broken diff instead of a judgement.
-    const got = acceptances(
-      [accept({ reviewer_id: GRANT_A }), accept({ reviewer_id: GRANT_B })],
-      ROSTER,
-      indexOf(),
-    );
+    const got = acceptances(claims(accept({ reviewer_id: GRANT_A }), accept({ reviewer_id: GRANT_B })), indexOf());
     expect(got).toHaveLength(1);
     expect(got[0]!.labels).toEqual(["r1", "r2"]);
   });
 
   test("a second reviewer's label unblocks what the first left unlabelled", () => {
     const got = acceptances(
-      [accept({ reviewer_id: GRANT_A }), accept({ reviewer_id: GRANT_B, sense: "rain" })],
-      ROSTER,
+      claims(accept({ reviewer_id: GRANT_A }), accept({ reviewer_id: GRANT_B, sense: "rain" })),
       indexOf(HUR),
     );
     expect(got).toHaveLength(1);
@@ -983,12 +981,12 @@ describe("acceptances", () => {
     // The entry schema requires a `sense` on every candidate once there are
     // two. Writing this without one would fail `bun run validate` in CI, where
     // nobody would connect the failure back to a reviewer's judgement.
-    const got = acceptances([accept()], ROSTER, indexOf(HUR));
+    const got = acceptances(claims(accept()), indexOf(HUR));
     expect(got[0]!.blocked).toContain("`sense`");
   });
 
   test("a labelled acceptance beside a labelled candidate goes through", () => {
-    const got = acceptances([accept({ sense: "rain" })], ROSTER, indexOf(HUR));
+    const got = acceptances(claims(accept({ sense: "rain" })), indexOf(HUR));
     expect(got[0]!.blocked).toBeUndefined();
   });
 
@@ -999,28 +997,75 @@ describe("acceptances", () => {
       cyrillic: "хур",
       candidates: [{ traditional: "ᠬᠤᠷ", verified: false, source: "wmk-import" }],
     };
-    const got = acceptances([accept({ sense: "rain" })], ROSTER, indexOf(bare));
+    const got = acceptances(claims(accept({ sense: "rain" })), indexOf(bare));
     expect(got[0]!.blocked).toContain("ᠬᠤᠷ");
   });
 
   test("ignores a stamp nobody was granted", () => {
     const stranger = "00000000-0000-4000-8000-000000000000";
-    expect(acceptances([accept({ reviewer_id: stranger })], ROSTER, indexOf())).toEqual([]);
+    expect(claims(accept({ reviewer_id: stranger }))).toEqual([]);
   });
 
   test("ignores a spelling the entry already holds — there is nothing to add", () => {
     // The attestation that came with it still counts; only the write is moot.
-    expect(acceptances([accept({ traditional: "ᠬᠤᠷ" })], ROSTER, indexOf(HUR))).toEqual([]);
+    expect(acceptances(claims(accept({ traditional: "ᠬᠤᠷ" })), indexOf(HUR))).toEqual([]);
   });
 
   test("ignores anything that is not an acceptance", () => {
-    expect(acceptances([decision({ action: "verify" })], ROSTER, indexOf())).toEqual([]);
-    expect(acceptances([decision({ action: "reject" })], ROSTER, indexOf())).toEqual([]);
+    expect(claims(decision({ action: "verify" }))).toEqual([]);
+    expect(claims(decision({ action: "reject" }))).toEqual([]);
   });
 
   test("refuses what the validator would refuse", () => {
-    expect(acceptances([accept({ traditional: "hura" })], ROSTER, indexOf())).toEqual([]);
-    expect(acceptances([accept({ cyrillic: "hur" })], ROSTER, indexOf())).toEqual([]);
+    expect(acceptances(claims(accept({ traditional: "hura" })), indexOf())).toEqual([]);
+    expect(acceptances(claims(accept({ cyrillic: "hur" })), indexOf())).toEqual([]);
+  });
+
+  test("a carried acceptance is a claim again, and writes once unblocked", () => {
+    // The lifecycle the ledger exists for: accepted last week, blocked on a
+    // missing `sense`, carried — then somebody labels the stored candidate by
+    // hand, and this run the same judgement goes through, no re-review asked.
+    const l: Ledger = {
+      through: null,
+      reports: [],
+      blocked_acceptances: [{ cyrillic: "хур", traditional: "ᠬᠤᠷᠠ", sense: "rain", labels: ["r1"] }],
+    };
+    const blockedRun = acceptances(carriedClaims(l), indexOf({
+      cyrillic: "хур",
+      candidates: [{ traditional: "ᠬᠤᠷ", verified: false, source: "wmk-import" }],
+    }));
+    expect(blockedRun[0]!.blocked).toContain("ᠬᠤᠷ");
+    const unblockedRun = acceptances(carriedClaims(l), indexOf(HUR));
+    expect(unblockedRun).toHaveLength(1);
+    expect(unblockedRun[0]!.blocked).toBeUndefined();
+    expect(unblockedRun[0]!.labels).toEqual(["r1"]);
+  });
+
+  test("a tally about a still-pending spelling stays open", () => {
+    // Its attestation is what will flip the candidate the run the acceptance
+    // finally writes it; dropping the tally would strand that candidate
+    // verified: false with its verification lost.
+    const tally: VerdictTally = {
+      cyrillic: "хур",
+      traditional: "ᠬᠤᠷᠠ",
+      yes: 1,
+      no: 0,
+      attested: ["r1"],
+      first_seen: "2026-08-01T00:00:00Z",
+      last_seen: "2026-08-01T00:00:00Z",
+    };
+    expect(verdictIsOpen(tally, lexiconOf())).toBe(false);
+    expect(verdictIsOpen(tally, lexiconOf(), new Set(["хур|ᠬᠤᠷᠠ"]))).toBe(true);
+  });
+
+  test("pruneRevoked drops a carried acceptance with nobody left behind it", () => {
+    const l: Ledger = {
+      through: null,
+      reports: [],
+      blocked_acceptances: [{ cyrillic: "хур", traditional: "ᠬᠤᠷᠠ", labels: ["r2"] }],
+    };
+    pruneRevoked(l, ROSTER.map((r) => (r.label === "r2" ? { ...r, revoked: "2026-08-02" } : r)));
+    expect(l.blocked_acceptances).toBeUndefined();
   });
 });
 

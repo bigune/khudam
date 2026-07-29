@@ -219,6 +219,28 @@ export interface Ledger {
   verdicts?: VerdictTally[];
   /** Every fast-track flip ever staged, one record each. See `Flip`. */
   flips?: Flip[];
+  /** Acceptances the schema would not let through yet, carried until the
+   *  entry can take them. See `CarriedAcceptance`. */
+  blocked_acceptances?: CarriedAcceptance[];
+}
+
+/**
+ * A blocked acceptance as the ledger carries it between runs.
+ *
+ * A trusted reviewer accepted this spelling and the schema refused the write —
+ * a `sense` was missing somewhere. The decision rows are deleted with the
+ * drain, so without this record the judgement would survive exactly one week
+ * of REVIEW.md and then silently vanish, leaving the reviewer to answer the
+ * same question again. Each run rebuilds its claims from here and re-evaluates
+ * them against the lexicon as it now stands: fix what the write-up names — or
+ * add the candidate by hand — and the next run writes it, attestation
+ * included. Only the judgement is stored; the blocking reason is recomputed.
+ */
+export interface CarriedAcceptance {
+  cyrillic: string;
+  traditional: string;
+  sense?: string;
+  labels: string[];
 }
 
 // ---------------------------------------------------------------------------
@@ -451,6 +473,19 @@ export function pruneRevoked(ledger: Ledger, roster: readonly Reviewer[]): numbe
     if (reviewers !== undefined) report.reviewers = reviewers;
     else delete report.reviewers;
   }
+  // A carried acceptance with nobody left behind it is no longer an
+  // acceptance at all — unlike a tally, whose anonymous counts still stand.
+  if (ledger.blocked_acceptances !== undefined) {
+    const carried: CarriedAcceptance[] = [];
+    for (const acceptance of ledger.blocked_acceptances) {
+      const labels = keep(acceptance.labels);
+      if (labels === undefined) continue;
+      acceptance.labels = labels;
+      carried.push(acceptance);
+    }
+    if (carried.length > 0) ledger.blocked_acceptances = carried;
+    else delete ledger.blocked_acceptances;
+  }
   return pruned;
 }
 
@@ -469,12 +504,22 @@ export function pruneRevoked(ledger: Ledger, roster: readonly Reviewer[]): numbe
  * settles it — by unverifying the candidate, by removing the form, or by
  * deleting the tally from data/stats/reports.json, which is how a maintainer
  * says "I have read this and I disagree".
+ *
+ * And one thing outlives absence: a tally about a spelling in no shard that a
+ * blocked acceptance still promises (`pending` carries those keys). The
+ * attestation in that tally is what will flip the candidate the run the
+ * acceptance finally writes it — dropping the tally now would leave that
+ * future candidate `verified: false` with its verification lost.
  */
-export function verdictIsOpen(tally: VerdictTally, lexicon: Map<string, Entry>): boolean {
+export function verdictIsOpen(
+  tally: VerdictTally,
+  lexicon: Map<string, Entry>,
+  pending: ReadonlySet<string> = new Set(),
+): boolean {
   const candidate = lexicon
     .get(tally.cyrillic)
     ?.candidates.find((c) => c.traditional === tally.traditional);
-  if (candidate === undefined) return false;
+  if (candidate === undefined) return pending.has(`${tally.cyrillic}|${tally.traditional}`);
   return !candidate.verified || isDisputed(tally);
 }
 
@@ -672,6 +717,58 @@ export interface Acceptance {
 }
 
 /**
+ * One reviewer standing behind one proposed spelling — the unit `acceptances`
+ * aggregates. Built from a fresh decision by `acceptanceClaims`, or carried
+ * from an earlier run's blocked acceptance by `carriedClaims`; once built,
+ * the two are indistinguishable, which is the point: a judgement does not
+ * weaken by having waited a week for a `sense`.
+ */
+export interface AcceptanceClaim {
+  cyrillic: string;
+  traditional: string;
+  /** The meaning label, already trimmed; absent when none was given. */
+  sense?: string;
+  label: string;
+}
+
+/** Fresh accept decisions as claims. A stamp matching no active grant makes
+ *  no claim at all — the review page says so to the browser that holds one. */
+export function acceptanceClaims(
+  decisions: readonly DecisionRow[],
+  roster: readonly Reviewer[],
+): AcceptanceClaim[] {
+  const claims: AcceptanceClaim[] = [];
+  for (const decision of decisions) {
+    if (decision.action !== "accept_proposal") continue;
+    const label = reviewerLabelOf(decision.reviewer_id, roster as Reviewer[]);
+    if (label === undefined) continue;
+    const sense =
+      decision.sense !== null && decision.sense.trim() !== "" ? decision.sense.trim() : undefined;
+    claims.push({
+      cyrillic: decision.cyrillic,
+      traditional: decision.traditional,
+      ...(sense !== undefined ? { sense } : {}),
+      label,
+    });
+  }
+  return claims;
+}
+
+/** Blocked acceptances from earlier runs as claims, one per label, so the
+ *  judgement is re-evaluated each week against the lexicon as it now stands.
+ *  Runs after `pruneRevoked`, which is what drops a revoked label here. */
+export function carriedClaims(ledger: Ledger): AcceptanceClaim[] {
+  return (ledger.blocked_acceptances ?? []).flatMap((a) =>
+    a.labels.map((label) => ({
+      cyrillic: a.cyrillic,
+      traditional: a.traditional,
+      ...(a.sense !== undefined ? { sense: a.sense } : {}),
+      label,
+    })),
+  );
+}
+
+/**
  * Proposals a trusted reviewer accepted, turned into candidates.
  *
  * The candidate is added `verified: false` and left for `fastTrack` to flip on
@@ -681,8 +778,8 @@ export interface Acceptance {
  * that was just added exactly as they apply to one that was already stored.
  *
  * Two things stop an acceptance, and neither loses it — both are written up in
- * data/REVIEW.md with the missing piece named, which is a far smaller ask of a
- * maintainer than judging the spelling would have been:
+ * data/REVIEW.md with the missing piece named, and both are carried in the
+ * ledger (`blocked_acceptances`) until the lexicon can take them:
  *
  *   - no meaning label, where the entry will end up holding more than one
  *     candidate; and
@@ -690,35 +787,27 @@ export interface Acceptance {
  *     requires one on *every* candidate of such an entry and this pipeline
  *     does not edit a candidate that already exists.
  */
-export function acceptances(
-  decisions: readonly DecisionRow[],
-  roster: readonly Reviewer[],
-  index: EntryIndex,
-): Acceptance[] {
-  // Grouped by the spelling, not by the decision. Two reviewers accepting the
+export function acceptances(claims: readonly AcceptanceClaim[], index: EntryIndex): Acceptance[] {
+  // Grouped by the spelling, not by the claim. Two reviewers accepting the
   // same proposal are agreeing about one candidate, and treating them as two
   // acceptances writes the form into the entry twice — which the schema
   // forbids, so the whole pull request fails validation in CI and the
   // maintainer is handed a broken diff instead of a judgement.
   const byKey = new Map<string, Acceptance>();
-  for (const decision of decisions) {
-    if (decision.action !== "accept_proposal") continue;
-    const label = reviewerLabelOf(decision.reviewer_id, roster as Reviewer[]);
-    if (label === undefined) continue;
-    const found = index.get(decision.cyrillic);
+  for (const claim of claims) {
+    const { label, sense } = claim;
+    const found = index.get(claim.cyrillic);
     // Already a candidate — accepted by hand, or by an earlier run. The
     // attestation still counts; there is simply nothing to add.
-    if (found?.entry.candidates.some((c) => c.traditional === decision.traditional)) continue;
+    if (found?.entry.candidates.some((c) => c.traditional === claim.traditional)) continue;
     // The database checked these too. Checking again costs nothing and keeps a
     // schema drift from writing something the validator would reject.
-    if (!CYRILLIC_WORD_RE.test(decision.cyrillic) || !TRADITIONAL_RE.test(decision.traditional)) {
+    if (!CYRILLIC_WORD_RE.test(claim.cyrillic) || !TRADITIONAL_RE.test(claim.traditional)) {
       continue;
     }
-    if (decision.traditional !== decision.traditional.normalize("NFC")) continue;
+    if (claim.traditional !== claim.traditional.normalize("NFC")) continue;
 
-    const key = `${decision.cyrillic}|${decision.traditional}`;
-    const sense =
-      decision.sense !== null && decision.sense.trim() !== "" ? decision.sense.trim() : undefined;
+    const key = `${claim.cyrillic}|${claim.traditional}`;
     const existing = byKey.get(key);
     if (existing !== undefined) {
       if (!existing.labels.includes(label)) existing.labels.push(label);
@@ -731,7 +820,7 @@ export function acceptances(
       continue;
     }
 
-    const accepted: Acceptance = { cyrillic: decision.cyrillic, traditional: decision.traditional, labels: [label] };
+    const accepted: Acceptance = { cyrillic: claim.cyrillic, traditional: claim.traditional, labels: [label] };
     if (sense !== undefined) accepted.sense = sense;
     const candidates = found?.entry.candidates ?? [];
     if (candidates.length > 0) {
@@ -1002,16 +1091,35 @@ function writeLedger(ledger: Ledger): void {
   const flips = [...(ledger.flips ?? [])]
     .sort((a, b) => compareWords(a.cyrillic, b.cyrillic) || compareWords(a.traditional, b.traditional))
     .map((f) => ({ cyrillic: f.cyrillic, traditional: f.traditional, labels: f.labels, date: f.date }));
+  const blocked = [...(ledger.blocked_acceptances ?? [])]
+    .sort((a, b) => compareWords(a.cyrillic, b.cyrillic) || compareWords(a.traditional, b.traditional))
+    .map((a) => ({
+      cyrillic: a.cyrillic,
+      traditional: a.traditional,
+      ...(a.sense !== undefined ? { sense: a.sense } : {}),
+      labels: a.labels,
+    }));
   const head: { through: string | null; decisions_through?: number } = { through: ledger.through };
   // Omitted entirely until a decision has ever been transcribed, so a project
   // that has not used the review page yet has no field to explain.
   if (ledger.decisions_through !== null && ledger.decisions_through !== undefined) {
     head.decisions_through = ledger.decisions_through;
   }
-  // `flips` likewise appears only once the fast track has ever staged one.
+  // `flips` and `blocked_acceptances` likewise appear only once they have
+  // ever held something.
   writeFileSync(
     REPORTS_FILE,
-    JSON.stringify({ ...head, reports, verdicts, ...(flips.length > 0 ? { flips } : {}) }, null, 2) + "\n",
+    JSON.stringify(
+      {
+        ...head,
+        reports,
+        verdicts,
+        ...(flips.length > 0 ? { flips } : {}),
+        ...(blocked.length > 0 ? { blocked_acceptances: blocked } : {}),
+      },
+      null,
+      2,
+    ) + "\n",
     "utf8",
   );
 }
@@ -1328,8 +1436,9 @@ function renderReview({
     lines.push("");
     lines.push(
       "A trusted reviewer accepted each of these and the schema would not let it through. The " +
-        "judgement is not lost — it is these lines — and what each needs is named beside it. " +
-        "Adding it by hand is a smaller ask than the judgement was: the hard part is done.",
+        "judgement is not lost: it is carried in [stats/reports.json](stats/reports.json) and " +
+        "re-tried every run, so fixing what each line names — or adding the candidate by hand — " +
+        "is enough, and the next run writes it, attestation included. The hard part is done.",
     );
     lines.push("");
     for (const { cyrillic, traditional, labels, blocked } of stuck) {
@@ -1585,13 +1694,20 @@ function main(): void {
   // lets `fastTrack` see a candidate that did not exist a moment ago — the
   // acceptance adds the spelling, the attestation that came with it verifies
   // the spelling, and neither step has to know about the other.
-  const accepted = acceptances(trustedDecisions, roster, index);
+  // Two sources of claims, one evaluation: decisions from this drain, and
+  // blocked acceptances the ledger carried from earlier runs — re-judged
+  // against the lexicon as it stands now, so a `sense` somebody added by hand
+  // during the week unblocks last week's judgement here, this run.
+  const acceptedAll = acceptances(
+    [...carriedClaims(ledger), ...acceptanceClaims(trustedDecisions, roster)],
+    index,
+  );
   // Files an acceptance wrote to, and among them the ones that gained a whole
   // new entry and therefore need re-sorting. Appending a candidate to an entry
   // that already exists does not move anything.
   const acceptedFiles = new Set<string>();
   const acceptedResorted = new Set<string>();
-  for (const { cyrillic, traditional, sense, blocked } of accepted) {
+  for (const { cyrillic, traditional, sense, blocked } of acceptedAll) {
     if (blocked !== undefined) continue;
     const candidate: Candidate = { traditional, verified: false, source: "community" };
     if (sense !== undefined) candidate.sense = sense;
@@ -1617,6 +1733,16 @@ function main(): void {
   // same run a trusted reviewer said its spelling is wrong.
   const declined = declinedProposals(trustedDecisions, roster, index);
   const declinedReports = removeDeclinedReports(ledger, declined);
+
+  // A decline also supersedes a blocked acceptance of the same spelling — a
+  // reviewer who accepted one week and rejected a later one has changed their
+  // mind, and the mind that stands is the last one. A *written* acceptance
+  // cannot be superseded here: its spelling is stored, so a reject of it is a
+  // rejection with the disagreement machinery behind it, never a decline.
+  const declinedKeys = new Set(declined.map((d) => `${d.cyrillic}|${d.traditional}`));
+  const accepted = acceptedAll.filter(
+    (a) => a.blocked === undefined || !declinedKeys.has(`${a.cyrillic}|${a.traditional}`),
+  );
 
   const lexicon = new Map([...index].map(([cyrillic, { entry }]) => [cyrillic, entry]));
   const known = new Set(index.keys());
@@ -1675,11 +1801,26 @@ function main(): void {
     writeEntriesFile(file, entries);
   }
 
-  const openTallies = (ledger.verdicts ?? []).filter((v) => verdictIsOpen(v, lexicon));
+  // Acceptances the schema still refuses are carried, and the tallies about
+  // their spellings — attestations included — stay open with them: the run
+  // that finally writes one needs its tally alive to fast-track the flip.
+  const stuckAcceptances = accepted.filter((a) => a.blocked !== undefined);
+  const pendingKeys = new Set(stuckAcceptances.map((a) => `${a.cyrillic}|${a.traditional}`));
+  const openTallies = (ledger.verdicts ?? []).filter((v) => verdictIsOpen(v, lexicon, pendingKeys));
   const settledTallies = (ledger.verdicts ?? []).length - openTallies.length;
 
   ledger.reports = stillOpen;
   ledger.verdicts = openTallies;
+  if (stuckAcceptances.length > 0) {
+    ledger.blocked_acceptances = stuckAcceptances.map(({ cyrillic, traditional, sense, labels }) => ({
+      cyrillic,
+      traditional,
+      ...(sense !== undefined ? { sense } : {}),
+      labels,
+    }));
+  } else {
+    delete ledger.blocked_acceptances;
+  }
   mkdirSync(STATS_DIR, { recursive: true });
   writeLedger(ledger);
   writeFrequency(frequency);
@@ -1727,7 +1868,7 @@ function main(): void {
       : "",
     stuckCount > 0
       ? `- ⚠ **${plural(stuckCount, "acceptance")}** the schema would not take — each needs a ` +
-        "`sense`, and says which; the judgement is recorded, not lost"
+        "`sense`, and says which; carried in `stats/reports.json` and re-tried next run"
       : "",
     declined.length > 0
       ? `- ✗ **${plural(declined.length, "proposed spelling")}** a trusted reviewer declined — ` +

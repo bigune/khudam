@@ -188,6 +188,14 @@ describe("proposalItems", () => {
     expect(proposalItems([proposed], lexiconOf(UUL), NO_TRAFFIC)).toEqual([]);
   });
 
+  test("drops a proposal already accepted and waiting on a sense", () => {
+    // A blocked acceptance is an answered question: asking the reviewer to
+    // judge the same spelling again would spend their time on nothing.
+    const proposed = report({ cyrillic: "хур", kind: "new_word", proposal_traditional: "ᠬᠤᠷ" });
+    expect(proposalItems([proposed], lexiconOf(), NO_TRAFFIC, new Set(["хур|ᠬᠤᠷ"]))).toEqual([]);
+    expect(proposalItems([proposed], lexiconOf(), NO_TRAFFIC, new Set())).toHaveLength(1);
+  });
+
   test("leaves a meaning-only proposal out — that is an edit, not an addition", () => {
     // "This candidate is missing the meaning X" asks for a label on a
     // candidate that already exists. This pipeline never edits a candidate

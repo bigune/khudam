@@ -298,6 +298,7 @@ export function proposalItems(
   reports: readonly Report[],
   lexicon: Map<string, Entry>,
   frequency: Frequency,
+  pending: ReadonlySet<string> = new Set(),
 ): ReviewItem[] {
   const byKey = new Map<string, ReviewItem>();
   for (const report of reports) {
@@ -306,6 +307,11 @@ export function proposalItems(
     const entry = lexicon.get(report.cyrillic);
     // Already accepted by somebody, by hand or by an earlier run of this.
     if (entry?.candidates.some((c) => c.traditional === traditional)) continue;
+    // Accepted and carried as blocked — what it waits on is a `sense` in the
+    // data, not another judgement. Asking the reviewer again would spend the
+    // one resource this pipeline cannot afford to waste on a question that
+    // is already answered.
+    if (pending.has(`${report.cyrillic}|${traditional}`)) continue;
     const key = `${report.cyrillic}|${traditional}`;
     const existing = byKey.get(key);
     if (existing !== undefined) {
@@ -363,10 +369,13 @@ function main(): void {
   const frequency = readJson<Frequency>(FREQUENCY_FILE, { words: {} });
   const ledger = readJson<Ledger>(REPORTS_FILE, { through: null, reports: [] });
 
+  const pending = new Set(
+    (ledger.blocked_acceptances ?? []).map((a) => `${a.cyrillic}|${a.traditional}`),
+  );
   const bundle: ReviewBundle = {
     verifications: group(verificationItems(ledger.verdicts ?? [], lexicon, frequency)),
     wrong: group(wrongItems(ledger.reports, lexicon, frequency)),
-    proposals: group(proposalItems(ledger.reports, lexicon, frequency)),
+    proposals: group(proposalItems(ledger.reports, lexicon, frequency, pending)),
   };
 
   mkdirSync(join(REPO_ROOT, "apps", "web", "public"), { recursive: true });
