@@ -329,7 +329,19 @@ export default function ReviewPage() {
     if (found === undefined) continue;
     const { item, groupIndex } = found;
     const action = GROUPS[groupIndex]!.action(given.verdict);
-    if (action === "accept_proposal" && item.senseRequired && !cleanLabel(given.sense)) {
+    // The label that will be sent: what the reviewer typed, or the
+    // contributor's suggestion the field was visibly prefilled with. The
+    // fallback is load-bearing — the input shows `proposedSense` before
+    // anything is typed, so a reviewer who accepts and leaves the filled
+    // field alone has approved that text, and holding the acceptance back
+    // over a "missing" label would contradict what the page shows. It
+    // applies only where the field was actually on screen (`senseRequired`);
+    // a suggestion the reviewer never saw is not one they approved.
+    const sense =
+      action === "accept_proposal"
+        ? (cleanLabel(given.sense) ?? (item.senseRequired ? cleanLabel(item.proposedSense) : undefined))
+        : undefined;
+    if (action === "accept_proposal" && item.senseRequired && sense === undefined) {
       incomplete.push(item);
       continue;
     }
@@ -337,7 +349,7 @@ export default function ReviewPage() {
       cyrillic: item.cyrillic,
       traditional: item.traditional,
       action,
-      ...(action === "accept_proposal" ? { sense: cleanLabel(given.sense) } : {}),
+      ...(sense !== undefined ? { sense } : {}),
     });
   }
 
