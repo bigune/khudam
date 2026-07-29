@@ -10,6 +10,7 @@
     "validate": "bun scripts/validate.ts",
     "import:wmk": "bun scripts/import-wmk.ts",
     "import:wiktionary": "bun scripts/import-wiktionary.ts",
+    "reviewer:add": "bun scripts/add-reviewer.ts",
     "signals:export": "bun scripts/export-signals.ts",
     "signals:aggregate": "bun scripts/aggregate-signals.ts",
     "build:data": "bun scripts/build-data.ts",

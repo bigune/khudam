@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://khudam.dev/schema/reviewer.schema.json",
+  "title": "Khudam trusted reviewer grant",
+  "description": "One trusted-reviewer grant. A grant is a UUID inside a link the maintainer hands to one person; this file stores only its SHA-256 hash, so the roster is safe in a public repository — a hash cannot be turned back into the grant. Two grants attesting the same candidate are what let the weekly job stage verified: true for a human to merge (see CLAUDE.md). Revoking a grant is deleting its object from data/reviewers.json, which also drops that reviewer's past attestations.",
+  "type": "object",
+  "required": ["label", "hash", "granted"],
+  "additionalProperties": false,
+  "properties": {
+    "label": {
+      "type": "string",
+      "description": "Opaque sequential label (r1, r2, …). Deliberately not a name: which person holds which grant is the maintainer's private note, and belongs in no repository and no database. The pull request needs to say that two DIFFERENT trusted people answered, never who they are.",
+      "pattern": "^r[1-9][0-9]*$"
+    },
+    "hash": {
+      "type": "string",
+      "description": "Lowercase hex SHA-256 of the grant UUID. Written by scripts/add-reviewer.ts, which prints the link once and never stores it. A value shaped like a UUID here means the grant itself was committed — rotate it immediately.",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "granted": {
+      "type": "string",
+      "description": "ISO date (YYYY-MM-DD) the grant was issued. Audit context; nothing reads it.",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    }
+  }
+}

@@ -2,6 +2,7 @@
  * Shared helpers for Khudam data tooling (import / validate / build).
  * Everything here must stay dependency-free and deterministic.
  */
+import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -11,6 +12,7 @@ export const DATA_DIR = join(REPO_ROOT, "data");
 export const LEXICON_DIR = join(DATA_DIR, "lexicon");
 export const NAMES_FILE = join(DATA_DIR, "names.json");
 export const SUFFIXES_FILE = join(DATA_DIR, "suffixes.json");
+export const REVIEWERS_FILE = join(DATA_DIR, "reviewers.json");
 
 export const SOURCES = ["wmk-import", "wiktionary", "manual", "community"] as const;
 export type Source = (typeof SOURCES)[number];
@@ -65,6 +67,76 @@ export function writeSuffixesFile(path: string, rows: SuffixRow[]): void {
     return out as SuffixRow;
   });
   writeFileSync(path, JSON.stringify(canonical, null, 2) + "\n", "utf8");
+}
+
+// ---------------------------------------------------------------------------
+// Trusted reviewer grants (contribution pipeline, Phase C)
+
+/**
+ * One trusted-reviewer grant, as data/reviewers.json stores it.
+ *
+ * A grant is a UUID inside a link the maintainer hands to one person. The repo
+ * stores only its SHA-256 hash, so the file can sit in a public repository
+ * without giving anyone the ability to stamp their own answers as trusted: a
+ * hash cannot be turned back into the 122 bits of randomness it came from.
+ *
+ * `label` is deliberately opaque (r1, r2, …). Which person holds which grant is
+ * the maintainer's private note and belongs in no repository and no database —
+ * the weekly pull request needs to say *that two different trusted people
+ * answered*, never who they are.
+ */
+export interface Reviewer {
+  label: string;
+  hash: string;
+  /** ISO date the grant was issued. Audit context; nothing reads it. */
+  granted: string;
+}
+
+/** Opaque sequential labels. The pattern is enforced rather than suggested:
+ *  a free-text label is an invitation to write somebody's name in it. */
+export const REVIEWER_LABEL_RE = /^r[1-9][0-9]*$/;
+
+/** The grant itself — a v4 UUID as `crypto.randomUUID()` prints it. This must
+ *  never appear in the repo; the validator rejects one that does. */
+export const GRANT_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+
+/** Hex SHA-256, which is what the roster stores instead. */
+export const GRANT_HASH_RE = /^[0-9a-f]{64}$/;
+
+/**
+ * The stored form of a grant. Unsalted on purpose: the input is 122 bits of
+ * randomness, so there is no dictionary to attack and a salt would only add a
+ * second secret to keep. Both sides lowercase and trim first, because the grant
+ * makes a round trip through a link somebody may have retyped.
+ */
+export function hashGrant(grant: string): string {
+  return createHash("sha256").update(grant.trim().toLowerCase(), "utf8").digest("hex");
+}
+
+export function readReviewers(): Reviewer[] {
+  if (!existsSync(REVIEWERS_FILE)) return [];
+  return JSON.parse(readFileSync(REVIEWERS_FILE, "utf8")) as Reviewer[];
+}
+
+/** Canonical serialization, matching the other data files. */
+export function writeReviewers(reviewers: Reviewer[]): void {
+  const canonical = reviewers.map((r) => ({ label: r.label, hash: r.hash, granted: r.granted }));
+  writeFileSync(REVIEWERS_FILE, JSON.stringify(canonical, null, 2) + "\n", "utf8");
+}
+
+/**
+ * Turn a `reviewer_id` from the mailbox into a roster label, or undefined.
+ *
+ * Undefined covers three cases that all mean the same thing downstream — treat
+ * the row as anonymous: no stamp at all, a stamp nobody was ever granted, and a
+ * grant that has since been revoked. Revocation therefore reaches backwards:
+ * deleting a line from data/reviewers.json drops that reviewer's past
+ * attestations too, which is what makes a leaked link recoverable.
+ */
+export function reviewerLabelOf(reviewerId: string | null | undefined, roster: Reviewer[]): string | undefined {
+  if (!reviewerId || !GRANT_RE.test(reviewerId.trim().toLowerCase())) return undefined;
+  const hash = hashGrant(reviewerId);
+  return roster.find((r) => r.hash === hash)?.label;
 }
 
 /** Lowercase modern Mongolian Cyrillic: а–я (U+0430–U+044F) plus ё, ө, ү. */

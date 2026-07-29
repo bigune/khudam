@@ -6,7 +6,7 @@
  * of this file would pass while the data went wrong.
  */
 import { describe, expect, test } from "bun:test";
-import { normalizeYiDigraph } from "./lib.ts";
+import { hashGrant, normalizeYiDigraph, reviewerLabelOf } from "./lib.ts";
 
 const cps = (s: string) =>
   [...s].map((ch) => "U+" + ch.codePointAt(0)!.toString(16).toUpperCase().padStart(4, "0")).join(" ");
@@ -58,5 +58,48 @@ describe("normalizeYiDigraph — Decision 001", () => {
   test("is idempotent", () => {
     const once = normalizeYiDigraph("нийслэл", "ᠨᠡᠶᠢᠰᠯᠡᠯ");
     expect(normalizeYiDigraph("нийслэл", once)).toBe(once);
+  });
+});
+
+describe("reviewer grants", () => {
+  const GRANT = "c51f2be7-6ba8-47d0-9a1c-9334dfc8338b";
+  const roster = [{ label: "r1", hash: hashGrant(GRANT), granted: "2026-07-29" }];
+
+  test("a grant hashes to 64 hex characters, and never back", () => {
+    expect(hashGrant(GRANT)).toMatch(/^[0-9a-f]{64}$/);
+    expect(hashGrant(GRANT)).not.toContain(GRANT);
+  });
+
+  test("the same grant always hashes the same, whatever the link did to its case", () => {
+    expect(hashGrant(GRANT.toUpperCase())).toBe(hashGrant(GRANT));
+    expect(hashGrant(` ${GRANT}\n`)).toBe(hashGrant(GRANT));
+  });
+
+  test("two grants do not collide", () => {
+    expect(hashGrant("c51f2be7-6ba8-47d0-9a1c-9334dfc8338c")).not.toBe(hashGrant(GRANT));
+  });
+
+  test("a grant on the roster resolves to its label", () => {
+    expect(reviewerLabelOf(GRANT, roster)).toBe("r1");
+  });
+
+  test("an unstamped row is anonymous", () => {
+    expect(reviewerLabelOf(null, roster)).toBeUndefined();
+    expect(reviewerLabelOf(undefined, roster)).toBeUndefined();
+  });
+
+  test("a stamp nobody was granted is anonymous, not trusted", () => {
+    expect(reviewerLabelOf("c51f2be7-6ba8-47d0-9a1c-000000000000", roster)).toBeUndefined();
+  });
+
+  test("a revoked grant stops counting the moment its line is deleted", () => {
+    // This is what makes a leaked link recoverable: revocation reaches
+    // backwards through the ledger, not just forwards.
+    expect(reviewerLabelOf(GRANT, [])).toBeUndefined();
+  });
+
+  test("a stamp that is not a uuid is rejected before it is hashed", () => {
+    expect(reviewerLabelOf("trust-me", roster)).toBeUndefined();
+    expect(reviewerLabelOf("", roster)).toBeUndefined();
   });
 });

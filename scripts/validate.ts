@@ -10,8 +10,12 @@ import { existsSync, readFileSync } from "node:fs";
 import { basename, relative } from "node:path";
 import {
   CYRILLIC_WORD_RE,
+  GRANT_HASH_RE,
+  GRANT_RE,
   NAMES_FILE,
   REPO_ROOT,
+  REVIEWERS_FILE,
+  REVIEWER_LABEL_RE,
   SOURCES,
   SUFFIXES_FILE,
   SUFFIX_ATTACH,
@@ -280,6 +284,99 @@ function checkEntriesFile(file: string, shardLetter?: string): number {
   return data.length;
 }
 
+/**
+ * The trusted-reviewer roster (contribution pipeline, Phase C).
+ *
+ * These grants are the only thing in the repository that can lead a script to
+ * write `verified: true`, so the checks are stricter than elsewhere and one of
+ * them is a safety catch rather than a schema rule: a value shaped like the
+ * grant itself must never be committed.
+ */
+function checkReviewersFile(file: string): void {
+  checkedFiles++;
+  const data = parseJsonFile(file);
+  if (data === undefined) return;
+  if (!Array.isArray(data)) {
+    report(file, "file", "The top level of this file must be a list: it should start with [ and end with ].");
+    return;
+  }
+  const seenLabels = new Map<string, number>();
+  const seenHashes = new Map<string, string>();
+  data.forEach((item, i) => {
+    const label = isPlainObject(item) && typeof item.label === "string" ? ` (“${item.label}”)` : "";
+    const where = `reviewer #${i + 1}${label}`;
+    if (!isPlainObject(item)) {
+      report(file, where, "Each reviewer grant must be an object wrapped in { }.");
+      return;
+    }
+    const allowed = ["label", "hash", "granted"];
+    for (const key of Object.keys(item)) {
+      if (!allowed.includes(key)) {
+        report(
+          file,
+          where,
+          `Unknown field "${key}" — allowed fields are: ${quoteList(allowed)}. ` +
+            "In particular there is no field for a name: who holds which grant is a private " +
+            "note, never repository data.",
+        );
+      }
+    }
+    if (typeof item.label !== "string" || !REVIEWER_LABEL_RE.test(item.label)) {
+      report(
+        file,
+        where,
+        '"label" is required and must be an opaque sequential label such as "r1" or "r12". ' +
+          "Labels are deliberately not names — the pull request says that two different trusted " +
+          "people agreed, never which two.",
+      );
+    } else {
+      const firstAt = seenLabels.get(item.label);
+      if (firstAt !== undefined) {
+        report(
+          file,
+          where,
+          `“${item.label}” is already used by grant #${firstAt}. Two grants sharing a label would ` +
+            "count as one reviewer agreeing with themselves — give this one the next unused number.",
+        );
+      } else {
+        seenLabels.set(item.label, i + 1);
+      }
+    }
+    if (typeof item.hash !== "string" || !GRANT_HASH_RE.test(item.hash)) {
+      // The catch that matters: a committed grant is a grant anyone reading the
+      // repository can use, and it would not fail any other check.
+      const looksLikeGrant = typeof item.hash === "string" && GRANT_RE.test(item.hash.trim().toLowerCase());
+      report(
+        file,
+        where,
+        looksLikeGrant
+          ? '"hash" holds what looks like the grant itself, not its hash. Anyone reading this ' +
+              "repository could now stamp their answers as this reviewer. Delete this grant, run " +
+              "`bun run reviewer:add` to issue a replacement, and send the new link privately."
+          : '"hash" is required and must be a 64-character lowercase hex SHA-256, as written by ' +
+              "`bun run reviewer:add`. Do not write this file by hand — the script is what keeps " +
+              "the grant itself out of the repository.",
+      );
+    } else {
+      const firstLabel = seenHashes.get(item.hash);
+      if (firstLabel !== undefined) {
+        report(
+          file,
+          where,
+          `This hash is already listed as “${firstLabel}”. One grant cannot be two reviewers — ` +
+            "issue a separate grant per person with `bun run reviewer:add`.",
+        );
+      } else if (typeof item.label === "string") {
+        seenHashes.set(item.hash, item.label);
+      }
+    }
+    if (typeof item.granted !== "string" || !/^\d{4}-\d{2}-\d{2}$/u.test(item.granted)) {
+      report(file, where, '"granted" is required and must be an ISO date, e.g. "2026-07-29".');
+    }
+    checkedEntries++;
+  });
+}
+
 function checkSuffixesFile(file: string): void {
   checkedFiles++;
   const data = parseJsonFile(file);
@@ -405,6 +502,7 @@ for (const file of shardFiles) {
 }
 if (existsSync(NAMES_FILE)) checkEntriesFile(NAMES_FILE);
 if (existsSync(SUFFIXES_FILE)) checkSuffixesFile(SUFFIXES_FILE);
+if (existsSync(REVIEWERS_FILE)) checkReviewersFile(REVIEWERS_FILE);
 
 if (problems.length > 0) {
   console.error(`Found ${problems.length} problem${problems.length === 1 ? "" : "s"}:\n`);
