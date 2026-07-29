@@ -39,6 +39,7 @@ data/
   lexicon/а.json … я.json    # sharded by first Cyrillic letter, sorted by `cyrillic`
   names.json                 # personal names — target: 100% verified, this is the flagship subset
   suffixes.json              # common Cyrillic suffix → traditional suffix mappings
+  reviewers.json             # trusted-reviewer grants: SHA-256 hashes + opaque labels, never names
   stats/frequency.json       # how often each candidate was copied — ordering signal, never truth
   stats/reports.json         # open community reports; the weekly job's memory
   schema/entry.schema.json   # JSON Schema for lexicon entries
@@ -59,11 +60,12 @@ Entry shape:
 
 Rules:
 - `cyrillic` is the unique key within the whole lexicon (lowercase, NFC-normalized).
-- `verified: true` may only be set by a human reviewer via PR — never by scripts. Machine imports are always `verified: false`.
+- `verified: true` means a human who reads монгол бичиг read this spelling and said it is right. It reaches the data two ways and no others: a reviewer editing the entry in a PR, or the weekly job transcribing the attestations of **two different trusted reviewers** into that PR's diff, where the maintainer merges it (the fast track, below). No script ever decides it, and a single trusted "no" vetoes the fast track and escalates instead. Machine imports are always `verified: false`.
+- **Trusted reviewers** are people the maintainer knows read the script. A grant is a UUID inside a link (`bun run reviewer:add`), and the repo stores only its SHA-256 hash beside an opaque label — `r1`, `r2`. Who holds which grant is a private note and must never be committed; the pull request says two different trusted people agreed, never which two. Revoking is deleting the line from `data/reviewers.json`, which also drops that reviewer's past attestations — that is what makes a leaked link recoverable.
 - `source` values so far: `"wmk-import"`, `"wiktionary"` (see provenance below), `"manual"`, `"community"`.
 - `corroborated: true` (optional) marks a candidate whose traditional form was produced identically by two independent sources (e.g. wmk bootstrap + Wiktionary). Set by import tooling only; it raises confidence but is NOT verification.
 - `sense` is optional for single-candidate entries, required when candidates > 1.
-- Community signals never edit or remove an existing candidate — "this spelling is wrong" and "this is a correct spelling of a meaning I did not want" arrive through the same button. The weekly job (`scripts/aggregate-signals.ts`) may add one candidate in exactly one case: a word with no entry at all, one proposed spelling, typed identically by two independent sessions. Everything else is a reviewer decision written up in `data/REVIEW.md`.
+- Community signals never edit or remove an existing candidate — "this spelling is wrong" and "this is a correct spelling of a meaning I did not want" arrive through the same button. The weekly job (`scripts/aggregate-signals.ts`) writes to the lexicon in exactly two cases: it **adds** a candidate for a word with no entry at all, one proposed spelling, typed identically by two independent sessions; and it **flips `verified: true`** on a candidate two different trusted reviewers attested and none disputed, capped per pull request so the fast-track section stays short enough to actually read. Everything else is a reviewer decision written up in `data/REVIEW.md`.
 - Files must stay sorted and diff-friendly (2-space indent, one entry object per logical block). Every data mutation goes through scripts in `scripts/` — never hand-edit formatting conventions.
 
 ## Seed data provenance (important, do not misrepresent)
@@ -89,6 +91,7 @@ packages/converter/     # TypeScript npm package: khudam
 supabase/              # disposable community-signal mailbox (schema.sql + runbook);
                        #   never a source of truth — losing it loses at most a week
 scripts/
+  add-reviewer.ts       # issue a trusted-reviewer grant; prints the link once, stores only its hash
   import-wmk.ts         # one-time bootstrap import (idempotent)
   import-wiktionary.ts  # second-tier import via kaikki.org (idempotent, re-runnable)
   validate.ts           # schema + Unicode-range + duplicate + sort checks; exits non-zero on failure
@@ -114,6 +117,7 @@ Engine principles:
 - `bun run build` — compile data + build the package
 - `bun test` — engine unit tests (bun's built-in test runner)
 - `bun run import:wmk` — bootstrap import (idempotent; refuses to overwrite `verified: true` candidates)
+- `bun run reviewer:add` — issue a trusted-reviewer grant; prints one link, once, and writes only its hash to `data/reviewers.json`
 - `bun run signals:export <file>` — drain the community mailbox (`--delete <file>` removes what it drained); needs `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY`
 - `bun run signals:aggregate <file>` — turn a drain into `data/stats/` + the review queue in `data/REVIEW.md`
 - `bun run build:queue` — compile `apps/web/public/queue.json` (gitignored; the web build runs it)
@@ -121,7 +125,7 @@ Engine principles:
 
 ## Working agreements for Claude
 
-- Never mark data `verified: true` yourself, and never "fix" a traditional spelling from your own knowledge — your training data on монгол бичиг orthography is unreliable. Data corrections come from humans via PRs; you may flag suspicious entries in `data/REVIEW.md`.
+- Never mark data `verified: true` yourself, and never "fix" a traditional spelling from your own knowledge — your training data on монгол бичиг orthography is unreliable. Data corrections come from humans via PRs; you may flag suspicious entries in `data/REVIEW.md`. The fast track is not an exception you may borrow: it transcribes what trusted human reviewers answered, and you are not one of them.
 - Keep every piece zero-ops: static data, build-time compilation, GitHub Actions only. No databases, no APIs, no servers.
 - Contributor experience is a feature: error messages from `validate.ts` must be beginner-friendly (contributors include non-programmer teachers editing JSON in the GitHub web UI).
 - Tests accompany any engine change. Validation must pass before any commit touching `data/`.

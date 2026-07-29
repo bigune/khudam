@@ -55,8 +55,22 @@
     (flags first, then the 342 source conflicts, then traffic); answers land
     as `verdict` signals and are tallied per candidate in the weekly PR.
     Tallies are evidence, never verification.
-  - Next: trusted reviewer links (`reviewer_id`), a fast-track PR section, and
-    the staged `verified: true` policy that comes with it
+  - ✅ Trust layer (2026-07-29): the contribution pipeline is complete. A grant
+    is a UUID in a link (`bun run reviewer:add`) that the maintainer hands to
+    one person; the repo holds only its SHA-256 hash beside an opaque label, so
+    `data/reviewers.json` is safe in public and revoking a leaked link is
+    deleting one line — which also drops that reviewer's past attestations.
+    Answers from a granted browser are stamped `reviewer_id`, and **two
+    different trusted reviewers agreeing, with none disagreeing, stages
+    `verified: true` in the weekly pull request** for a human to merge. A single
+    trusted "no" vetoes the flip and opens a "trusted reviewers disagree"
+    section that never closes on its own — two people who read the script
+    contradicting each other is the one thing this pipeline must not average
+    away. Staged flips are capped per pull request and the held-back count is
+    printed, because a fast-track section too long to read is one that gets
+    merged unread.
+  - Next: nothing scheduled here. The pipeline's remaining work is people —
+    issuing grants to reviewers who read монгол бичиг — not code.
 - Watchlist sources (see `data/SOURCES.md`) if licensing clears
 
 ## Decisions made during scaffold
@@ -89,4 +103,9 @@
 9. **Multi-candidate entries produced by machine import are forbidden** — when
    the seed had conflicting traditional forms for one word, only the first was
    kept and the rest flagged for review, because `sense` labels (required for
-   ambiguous entries) must be human-written.
+   ambiguous entries) must be human-written. Clarified 2026-07-29, when the
+   contribution pipeline began delivering human work by machine: what is
+   forbidden is a **machine-generated** sense, not a human-written one a script
+   carried into a pull request. The same distinction is what makes the fast
+   track legitimate — a script transcribing two reviewers' answers is not a
+   script deciding anything.

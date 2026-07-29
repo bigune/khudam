@@ -216,10 +216,9 @@ bun run signals:export --delete signals.jsonl     # only once the rest is commit
 
 ### What the aggregator may decide by itself
 
-It never sets `verified: true`, and never edits or removes an existing
-candidate — "this spelling is wrong" and "this is a correct spelling of a
-meaning I did not want" arrive through the same button, and only a human tells
-them apart.
+It never edits or removes an existing candidate — "this spelling is wrong" and
+"this is a correct spelling of a meaning I did not want" arrive through the same
+button, and only a human tells them apart.
 
 It adds a lexicon entry in exactly one case: a word with **no entry at all**,
 one proposed spelling, typed identically by **two independent sessions**.
@@ -227,6 +226,12 @@ Nothing existing is touched, no `sense` is invented, and the result is an
 ordinary `verified: false` community candidate that a reviewer can delete in
 one line. Everything else is written up in `data/REVIEW.md` § Community signals
 for a human to decide.
+
+It writes `verified: true` in one case, and it is not deciding anything when it
+does: two **different trusted reviewers** answered yes about the spelling and
+none answered no, so the flip is staged into the weekly pull request's diff with
+their labels printed beside it, and the maintainer merges it. See § Trusted
+reviewer grants.
 
 Reports close themselves: the aggregator re-reads the lexicon each run and
 drops a report whose flagged form is gone or whose proposed form is now a
@@ -251,3 +256,48 @@ The questions themselves are compiled from `data/` on every site build
 (`bun run build:queue` → `apps/web/public/queue.json`, gitignored). Nothing to
 schedule and nothing to commit: merging the weekly pull request deploys the
 site, and the deploy rebuilds the queue from the data as merged.
+
+## Trusted reviewer grants
+
+A grant turns one person's answers into attestations. It is the only path by
+which a script writes `verified: true`, so the mechanism is deliberately small
+and its secrets are deliberately outside this database.
+
+**Issuing.** `bun run reviewer:add` mints a UUID, appends its SHA-256 hash and
+the next opaque label (`r1`, `r2`, …) to `data/reviewers.json`, and prints one
+link:
+
+```
+https://khudam.suray.mn/queue#r=<uuid>
+```
+
+It is printed once and stored nowhere. Send it privately to one person, commit
+the roster, and keep your own note of who that label is — that note must never
+be committed. Losing the link before it arrives costs nothing: delete the
+stranded line and issue another.
+
+**Why a fragment and not `?r=`.** A URL fragment is never sent to a server, so
+the grant cannot land in an access log, a `Referer` header, or the analytics the
+site loads on every page. The page reads it on load, stores it in
+`localStorage`, and clears it from the address bar so it stays out of
+screenshots, shared links and browser history.
+
+**Why the roster is in git, not here.** Git is the database of record and this
+project is disposable; a roster that lived only in the mailbox would be lost
+with it. Hashes are safe to publish — a grant is 122 bits of randomness, so a
+hash cannot be walked back to it — and keeping them in the repo means the weekly
+job reads the roster it merged. This database therefore cannot tell a real grant
+from an invented one, and does not try: an unmatched stamp is counted as an
+anonymous row, and the pull request reports how many arrived. A handful usually
+means a revoked link still sitting in somebody's browser.
+
+**Revoking.** Delete the object from `data/reviewers.json`. It stops counting
+from the next run, *including answers it already gave* — attestations are stored
+by label and matched against the roster on every aggregation, never baked in.
+That is what makes a leaked link recoverable.
+
+**The quorum.** Two different labels answering yes, none answering no, and the
+flip is staged. One trusted no vetoes it however many yeses there are, and opens
+a "trusted reviewers disagree" section that no amount of time closes. One
+reviewer answering from two browsers is still one label, which is why the quorum
+counts labels rather than sessions.

@@ -15,6 +15,17 @@ Khudam-д ямар ч төрлийн дэмжлэг нээлттэй хэдий 
 - `sense` (утгын тайлбар) нэмэх
 - Орхигдсон үг, нэрсийг нэмэх
 
+### GitHub-гүйгээр — хөрвүүлэгч дээрээсээ шууд
+
+[khudam.suray.mn](https://khudam.suray.mn) дээрээс бүртгэлгүйгээр хувь нэмэр оруулж болно:
+
+- **[Хянагдахаар хүлээгдэж буй үгс](https://khudam.suray.mn/queue)** — асуулт нэг л төрөл: тухайн үгийг монгол бичгээр **ямар нэг утгаар нь** ингэж бичдэг үү? Монгол бичиг уншдаг хүнд нэг минут л зарцуулна.
+- Үг тус бүрийн тайлбар хэсгээс: **⚑ алдаа** (буруу зурлага), **⊕ салаа утга** (дутуу утга), **✎ зөв зурлага** (толь бичигт байхгүй үгийн зөв бичлэг).
+
+Ирүүлсэн бүхэн долоо хоног тутам нэг pull request болж, хүн хянаж байж үгсийн санд ордог. Хариулт өөрөө баталгаа биш — аль үгийг эхэлж хянахыг зааж өгдөг.
+
+Монгол бичгийг сайн уншдаг, тогтмол хянахад бэлэн бол **итгэмжлэгдсэн хянагчийн холбоос** хүсээрэй (issue нээх, эсвэл шууд холбогдох): ийм холбоостой **хоёр өөр хянагч** нэг зурлагыг зөв гэвэл, түүнийг «баталгаажсан» болгох санал тэр долоо хоногийн PR-д ордог. Холбоос нэг хүнд өгөгддөг ба хэн болохыг репод бичдэггүй.
+
 ### Вэб хуудаснаас үг засах алхмууд
 
 1. **Файлаа олох.** Үгийн эхний үсгээр нь `data/lexicon/` доторх файлыг нээнэ. Жишээ: «уул» гэдэг үг `data/lexicon/у.json` дотор бий. Хүний нэр бол `data/names.json`.
@@ -83,6 +94,17 @@ Khudam welcomes every kind of help, but the most valuable is **lexicon correctio
 - Missing candidates where one Cyrillic word maps to several traditional words (e.g. **уул** can be ᠠᠭᠤᠯᠠ “mountain” or ᠤᠤᠯ “original”)
 - Missing `sense` labels
 - Missing words and names
+
+### Without GitHub — straight from the converter
+
+[khudam.suray.mn](https://khudam.suray.mn) takes contributions with no account at all:
+
+- **[The verification queue](https://khudam.suray.mn/queue)** asks one question — is this a written form of this word, **for any meaning**? It takes a minute from anyone who reads монгол бичиг.
+- In the per-word panel: **⚑** a wrong spelling, **⊕** a missing meaning, **✎** the real spelling of a word the lexicon does not know.
+
+Everything filed becomes one pull request a week, which a human merges. An answer is never verification by itself; it directs a reviewer's attention.
+
+If you read the script well and are willing to review regularly, ask for a **trusted reviewer link** (open an issue, or get in touch): when **two different** trusted reviewers agree on a spelling and none disagrees, that weekly pull request stages it as `verified: true` for the maintainer to merge. A link is given to one person, and who holds it is never recorded in the repository.
 
 ### Fixing a word from the web UI — step by step
 
