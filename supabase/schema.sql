@@ -189,6 +189,23 @@ alter table public.signals add  constraint signals_proposal_shape
          (proposal_kind is not null and
           (proposal_traditional is not null or proposal_sense is not null)));
 
+-- A verdict has to be about a spelling. Aggregation keys tallies on
+-- (cyrillic, traditional) rather than on the question -- a question is
+-- something a page showed and may stop showing, while the candidate it was
+-- about is data -- so a verdict arriving without `traditional` is dropped on
+-- the floor at transcription time, which is the worst way to lose a signal.
+-- Rejecting it at the door turns that silence into an error somebody sees.
+--
+-- `question_id` is required only where a question was actually shown. The
+-- queue shows one; the converter's "this spelling is right" button is a
+-- verdict about the candidate already in front of the reader, and inventing a
+-- question id to satisfy a constraint would be recording something untrue.
+alter table public.signals drop constraint if exists signals_verdict_shape;
+alter table public.signals add  constraint signals_verdict_shape
+  check (signal_type <> 'verdict' or
+         (traditional is not null and
+          (context <> 'queue' or question_id is not null)));
+
 -- The export job reads the mailbox oldest-first and deletes what it took.
 create index if not exists signals_created_at_idx
   on public.signals (created_at);

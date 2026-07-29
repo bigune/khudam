@@ -1,6 +1,6 @@
 "use client";
 
-import { convertText, LEXICON_ENTRY_COUNT } from "khudam";
+import { convertText, LEXICON_ENTRY_COUNT, normalizeWord } from "khudam";
 import type { Candidate, Token } from "khudam";
 import Link from "next/link";
 import { useMemo, useState } from "react";
@@ -8,6 +8,7 @@ import {
   displaySense,
   isLexiconCandidate,
   recordSelections,
+  recordSupport,
   signalsEnabled,
 } from "../lib/signals";
 import { ReportDialog, type ReportTarget } from "./report-dialog";
@@ -44,12 +45,69 @@ function badgeOf(c: Candidate): { className: string; label: string } {
   return { className: "badge unverified", label: "баталгаажаагүй" };
 }
 
+/** How far a support vote has got. Keyed by candidate rather than by position,
+ *  so a word that appears twice in one text shows as answered in both places —
+ *  it is one opinion about one spelling, and the mailbox would drop the
+ *  second row as a duplicate anyway. */
+type SupportState = "sending" | "sent" | "failed";
+
+function supportKey(input: string, traditional: string): string {
+  // The same visible separator the signal rows use: neither half can contain a
+  // pipe, and an invisible one would make this file read as binary to git.
+  return `${normalizeWord(input)}|${traditional}`;
+}
+
+/**
+ * The affirming half of the pair under a chip.
+ *
+ * Deliberately says nothing about what the vote is worth. To a stranger it is
+ * ordering and corroboration; to a browser holding a reviewer grant it is an
+ * attestation — and that browser is already told so, once, by the badge at the
+ * top of the page. Repeating it on every candidate would be both noise and a
+ * promise this button cannot keep: whether a stamp counts is decided in the
+ * repository, by a hash check this page cannot run.
+ */
+function SupportButton({
+  state,
+  word,
+  onClick,
+}: {
+  state: SupportState | undefined;
+  word: string;
+  onClick: () => void;
+}) {
+  const label =
+    state === "sent"
+      ? "✓ баярлалаа"
+      : state === "failed"
+        ? "↻ дахин"
+        : "✓ зөв";
+  return (
+    <button
+      className="card-action"
+      // "sending" is disabled to stop a double-send, but keeps the resting
+      // label: swapping in "илгээж байна…" for the ~200 ms this takes reads as
+      // a flicker rather than as feedback.
+      disabled={state === "sending" || state === "sent"}
+      aria-label={
+        state === "failed"
+          ? `${word} — илгээж чадсангүй, дахин оролдох`
+          : `${word} — энэ зурлагыг зөв гэж мэдэгдэх`
+      }
+      onClick={onClick}
+    >
+      {label}
+    </button>
+  );
+}
+
 export default function Home() {
   const [text, setText] = useState("");
   const [picks, setPicks] = useState<Record<number, number>>({});
   const [copied, setCopied] = useState(false);
   const [copyFailed, setCopyFailed] = useState(false);
   const [report, setReport] = useState<ReportTarget | null>(null);
+  const [support, setSupport] = useState<Record<string, SupportState>>({});
 
   const tokens = useMemo(() => convertText(text), [text]);
 
@@ -64,6 +122,26 @@ export default function Home() {
     setPicks((p) => ({ ...p, [tokenIndex]: candidateIndex }));
     setCopied(false);
     setCopyFailed(false);
+  }
+
+  /**
+   * "This spelling is right", from someone who happened to be converting.
+   *
+   * The cheap half of the pair below the chip, and cheap on purpose: saying a
+   * spelling is right is the commonest true thing a reader of монгол бичиг can
+   * tell us, and the old UI had no way to say it — only ⚑, which asks them to
+   * have found something wrong first. A dialog here would cost the click that
+   * makes it worth having.
+   */
+  async function affirm(input: string, candidate: Candidate) {
+    const key = supportKey(input, candidate.traditional);
+    setSupport((s) => ({ ...s, [key]: "sending" }));
+    const ok = await recordSupport({
+      cyrillic: input,
+      traditional: candidate.traditional,
+      sense: candidate.sense,
+    });
+    setSupport((s) => ({ ...s, [key]: ok ? "sent" : "failed" }));
   }
 
   const chosen = (t: Token, i: number): Candidate | undefined =>
@@ -279,19 +357,40 @@ export default function Home() {
                                   ✎ зөв зурлага
                                 </button>
                               ) : (
-                                <button
-                                  className="card-action"
-                                  aria-label={`${token.input} — энэ хувилбарын алдааг мэдэгдэх`}
-                                  onClick={() =>
-                                    setReport({
-                                      door: "flag",
-                                      input: token.input,
-                                      candidate: c,
-                                    })
-                                  }
-                                >
-                                  ⚑ алдаа
-                                </button>
+                                /* Right and wrong are two answers to one
+                                   question, so they sit on one line rather
+                                   than stacking as if they were separate
+                                   doors. The pair is only offered on stored
+                                   candidates: a composed suffix form lives in
+                                   no shard, so a vote about it has nothing to
+                                   accumulate against and would be discarded
+                                   in silence. */
+                                <div className="chip-actions">
+                                  {isLexiconCandidate(c) && (
+                                    <SupportButton
+                                      state={
+                                        support[
+                                          supportKey(token.input, c.traditional)
+                                        ]
+                                      }
+                                      word={token.input}
+                                      onClick={() => affirm(token.input, c)}
+                                    />
+                                  )}
+                                  <button
+                                    className="card-action"
+                                    aria-label={`${token.input} — энэ хувилбарын алдааг мэдэгдэх`}
+                                    onClick={() =>
+                                      setReport({
+                                        door: "flag",
+                                        input: token.input,
+                                        candidate: c,
+                                      })
+                                    }
+                                  >
+                                    ⚑ алдаа
+                                  </button>
+                                </div>
                               ))}
                           </div>
                         );

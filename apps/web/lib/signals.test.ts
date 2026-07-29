@@ -4,6 +4,7 @@ import {
   buildFlagRow,
   buildProposalRow,
   buildSelectionRows,
+  buildVerdictRow,
   checkProposal,
   cleanSense,
   displaySense,
@@ -339,6 +340,40 @@ describe("buildProposalRow", () => {
     );
     expect("proposal_traditional" in row).toBe(false);
     expect(row.proposal_sense).toBe("mountain");
+  });
+});
+
+describe("buildVerdictRow", () => {
+  const anchor = { cyrillic: "Уул", traditional: "ᠤᠤᠯ", sense: "original" };
+
+  test("a queue answer carries the question that was shown", () => {
+    expect(buildVerdictRow(anchor, false, SESSION, "e-1234abcd")).toEqual({
+      context: "queue",
+      signal_type: "verdict",
+      cyrillic: "уул",
+      traditional: "ᠤᠤᠯ",
+      sense: "original",
+      verdict: false,
+      question_id: "e-1234abcd",
+      session_id: SESSION,
+    });
+  });
+
+  test("a converter answer has no question behind it, and says so by omission", () => {
+    // Not an invented id and not an explicit null: `signals_verdict_shape`
+    // requires a question_id only where context is 'queue', precisely so that
+    // this row can be honest about there having been no question.
+    const row = buildVerdictRow(anchor, true, SESSION);
+    expect(row.context).toBe("converter");
+    expect("question_id" in row).toBe(false);
+    expect(row.verdict).toBe(true);
+  });
+
+  test("anchors on the candidate either way, which is what aggregation keys on", () => {
+    const fromQueue = buildVerdictRow(anchor, true, SESSION, "e-1234abcd");
+    const fromConverter = buildVerdictRow(anchor, true, SESSION);
+    expect(fromConverter.cyrillic).toBe(fromQueue.cyrillic);
+    expect(fromConverter.traditional).toBe(fromQueue.traditional);
   });
 });
 

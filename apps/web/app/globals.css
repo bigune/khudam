@@ -417,6 +417,35 @@ textarea,
   margin-top: -0.45rem;
 }
 
+/* Right and wrong are two answers to one question, so they share a line. The
+   column below the chip is for doors that lead somewhere different from each
+   other; these two lead to the same place with opposite content, and stacking
+   them made the card a third taller for no reader's benefit. Wrapping is
+   allowed rather than prevented: at the card's narrowest they stack, which is
+   still the right shape when there is no room for the row. */
+.chip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  /* No gap: each button already carries 0.4rem of tap padding on the side it
+     meets its neighbour, so a gap on top of that reads as two separate
+     controls rather than as a pair. */
+  gap: 0;
+}
+
+/* A sent vote is a receipt, not a disabled control, so it does not dim the way
+   a real disabled button should — the label already changed, and greying the
+   one line that says "thank you" is a strange thing to do to somebody who just
+   helped. Only the cursor says it is finished. */
+.card-action:disabled {
+  cursor: default;
+}
+
+.card-action:disabled:hover {
+  color: var(--muted);
+  background: none;
+}
+
 .chip:hover {
   border-color: var(--accent);
 }

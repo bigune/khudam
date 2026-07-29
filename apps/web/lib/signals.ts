@@ -574,30 +574,63 @@ export async function recordProposal(
 }
 
 /**
- * Builds one queue answer: yes or no to "is this a written form of this word?"
+ * Builds one answer to "is this a written form of this word?" — the only
+ * question this project asks about a spelling, wherever it is asked.
  *
  * The anchor is carried in full rather than left to `question_id` alone. A
- * question is a thing the page showed and may stop showing; the candidate it
- * was about is data, and aggregation has to find it weeks later without
- * needing the queue file that produced it. `question_id` records which
- * question was shown, never which candidate was meant.
+ * question is a thing a page showed and may stop showing; the candidate it was
+ * about is data, and aggregation has to find it weeks later without needing the
+ * queue file that produced it. `question_id` records which question was shown,
+ * never which candidate was meant.
+ *
+ * Which is why it is optional, and why `context` is derived from it rather than
+ * passed separately: the queue puts a question in front of someone, the
+ * converter does not — its “this spelling is right” button answers about the
+ * candidate already on screen. Deriving the two together means they cannot
+ * drift apart, and the database says the same thing in `signals_verdict_shape`.
  */
 export function buildVerdictRow(
   anchor: CandidateAnchor,
   verdict: boolean,
-  questionId: string,
   sessionId: string,
+  questionId?: string,
 ): SignalRow {
   return {
-    context: "queue",
+    context: questionId === undefined ? "converter" : "queue",
     signal_type: "verdict",
     cyrillic: normalizeWord(anchor.cyrillic),
     traditional: anchor.traditional,
     ...(anchor.sense ? { sense: anchor.sense } : {}),
     verdict,
-    question_id: questionId,
+    ...(questionId === undefined ? {} : { question_id: questionId }),
     session_id: sessionId,
   };
+}
+
+/**
+ * Records "this spelling is right" from the converter.
+ *
+ * For an anonymous visitor this is corroboration and ordering, nothing more: it
+ * says which candidates readers stand behind, so the expert review page can put
+ * those first and show the support beside them. It is **not** verification, and
+ * no number of these ever becomes verification.
+ *
+ * For a browser holding a trusted-reviewer grant it is an attestation, through
+ * the same machinery that already carries queue answers — `insert` stamps every
+ * row with the grant in force, and `aggregate-signals.ts` decides what a stamp
+ * is worth by hashing it against the roster in git. Nothing here needs to know
+ * which kind of reader pressed the button, and deliberately does not: the page
+ * cannot tell a real grant from an invented one either.
+ *
+ * Awaited rather than fire-and-forget, unlike a selection. Somebody who went
+ * out of their way to say a spelling is right is owed an honest answer about
+ * whether it arrived.
+ */
+export async function recordSupport(anchor: CandidateAnchor): Promise<boolean> {
+  if (!isTraditionalForm(anchor.traditional)) return false;
+  const sessionId = getSessionId();
+  if (!sessionId) return false;
+  return insert([buildVerdictRow(anchor, true, sessionId)]);
 }
 
 /** One answered question, as the queue page holds it in its draft. */
@@ -628,7 +661,7 @@ export async function recordQueueAnswers(
   if (!sessionId || answers.length === 0) return false;
   const rows: SignalRow[] = [];
   for (const { anchor, questionId, verdict, proposal } of answers) {
-    rows.push(buildVerdictRow(anchor, verdict, questionId, sessionId));
+    rows.push(buildVerdictRow(anchor, verdict, sessionId, questionId));
     // A proposal belongs beside a “no”, and only if something was typed —
     // the same guards `recordProposal` applies, in batch form.
     if (verdict || !proposal) continue;

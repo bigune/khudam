@@ -20,7 +20,7 @@ Khudam-д ямар ч төрлийн дэмжлэг нээлттэй хэдий 
 [khudam.suray.mn](https://khudam.suray.mn) дээрээс бүртгэлгүйгээр хувь нэмэр оруулж болно:
 
 - **[Хянагдахаар хүлээгдэж буй үгс](https://khudam.suray.mn/queue)** — асуулт нэг л төрөл: тухайн үгийг монгол бичгээр **ямар нэг утгаар нь** ингэж бичдэг үү? Монгол бичиг уншдаг хүнд нэг минут л зарцуулна.
-- Үг тус бүрийн тайлбар хэсгээс: **⚑ алдаа** (буруу зурлага), **⊕ салаа утга** (дутуу утга), **✎ зөв зурлага** (толь бичигт байхгүй үгийн зөв бичлэг).
+- Үг тус бүрийн тайлбар хэсгээс: **✓ зөв** (зурлага нь зөв байна), **⚑ алдаа** (буруу зурлага), **⊕ салаа утга** (дутуу утга), **✎ зөв зурлага** (толь бичигт байхгүй үгийн зөв бичлэг).
 
 Ирүүлсэн бүхэн долоо хоног тутам нэг pull request болж, хүн хянаж байж үгсийн санд ордог. Хариулт өөрөө баталгаа биш — аль үгийг эхэлж хянахыг зааж өгдөг.
 
@@ -100,7 +100,7 @@ Khudam welcomes every kind of help, but the most valuable is **lexicon correctio
 [khudam.suray.mn](https://khudam.suray.mn) takes contributions with no account at all:
 
 - **[The verification queue](https://khudam.suray.mn/queue)** asks one question — is this a written form of this word, **for any meaning**? It takes a minute from anyone who reads монгол бичиг.
-- In the per-word panel: **⚑** a wrong spelling, **⊕** a missing meaning, **✎** the real spelling of a word the lexicon does not know.
+- In the per-word panel: **✓** the spelling is right, **⚑** it is wrong, **⊕** a missing meaning, **✎** the real spelling of a word the lexicon does not know.
 
 Everything filed becomes one pull request a week, which a human merges. An answer is never verification by itself; it directs a reviewer's attention.
 
