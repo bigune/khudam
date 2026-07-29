@@ -1656,6 +1656,12 @@ function main(): void {
   // `verified: true` is ever written. What makes them different is only that
   // every one carries a stamp, and that the newest per reviewer and spelling
   // supersedes the rest — a reviewer changing their mind sends again.
+  //
+  // Folded after this drain's queue answers regardless of timestamps, so when
+  // one reviewer answers the same spelling both ways in one week, the review
+  // page wins. That is a choice, not an accident: the two tables share no
+  // clock worth comparing at this grain, and the page — spelling and code
+  // points side by side — is where the considered judgement happens.
   const allDecisions =
     decisionsFile === undefined || !existsSync(decisionsFile)
       ? []

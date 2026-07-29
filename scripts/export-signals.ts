@@ -41,6 +41,19 @@ const DELETE_CHUNK = 100;
  *  it means paging is looping, not that the mailbox is full. */
 const MAX_PAGES = 5000;
 
+/**
+ * How far behind "now" the export reads.
+ *
+ * `created_at` is transaction start time, so an insert that commits just
+ * after this export's read can carry a timestamp *earlier* than rows already
+ * exported. Next week that row would be exported below the aggregator's
+ * watermark — skipped as already-processed — while the drain deletes it: a
+ * contribution silently lost, which is the one failure this pipeline must not
+ * have. Real inserts commit in milliseconds; a minute of margin makes the
+ * race unlosable, and everything inside the margin is simply next week's mail.
+ */
+const EXPORT_GRACE_MS = 60_000;
+
 /** One row of the `signals` table, exactly as PostgREST returns it. Written to
  *  the artifact unchanged — the audit trail should record what the database
  *  held, not what this script found interesting. */
@@ -145,11 +158,12 @@ async function healthCheck(url: string, key: string, table: string): Promise<voi
  * one insert — where every row shares a timestamp, because `now()` is
  * transaction time — the later row still sorts later.
  */
-async function readAll<T>(url: string, key: string, table: string): Promise<T[]> {
+async function readAll<T>(url: string, key: string, table: string, before: string): Promise<T[]> {
   const rows: T[] = [];
   for (let page = 0; page < MAX_PAGES; page++) {
     const query =
-      `select=*&order=created_at.asc,id.asc&limit=${PAGE_SIZE}&offset=${rows.length}`;
+      `select=*&created_at=lt.${encodeURIComponent(before)}` +
+      `&order=created_at.asc,id.asc&limit=${PAGE_SIZE}&offset=${rows.length}`;
     const response = await fetch(`${url}/rest/v1/${table}?${query}`, { headers: headers(key) });
     if (!response.ok) {
       console.error(`Read failed at offset ${rows.length}: ${response.status} ${await response.text()}`);
@@ -243,8 +257,11 @@ async function main(): Promise<void> {
     return;
   }
 
+  // One cutoff for both tables, taken once: rows younger than the grace
+  // margin stay in the mailbox and become next week's mail.
+  const before = new Date(Date.now() - EXPORT_GRACE_MS).toISOString();
   await healthCheck(url, key, "signals");
-  const rows = await readAll<SignalRow>(url, key, "signals");
+  const rows = await readAll<SignalRow>(url, key, "signals", before);
   writeJsonl(file, rows);
 
   const byType = new Map<string, number>();
@@ -258,7 +275,7 @@ async function main(): Promise<void> {
 
   if (decisionsFile === undefined) return;
   await healthCheck(url, key, "decisions");
-  const decisions = await readAll<DecisionRow>(url, key, "decisions");
+  const decisions = await readAll<DecisionRow>(url, key, "decisions", before);
   writeJsonl(decisionsFile, decisions);
   const byAction = new Map<string, number>();
   for (const row of decisions) byAction.set(row.action, (byAction.get(row.action) ?? 0) + 1);

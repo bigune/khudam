@@ -58,8 +58,9 @@
   - ✅ Trust layer (2026-07-29): the contribution pipeline is complete. A grant
     is a UUID in a link (`bun run reviewer:add`) that the maintainer hands to
     one person; the repo holds only its SHA-256 hash beside an opaque label, so
-    `data/reviewers.json` is safe in public and revoking a leaked link is
-    deleting one line — which also drops that reviewer's past attestations.
+    `data/reviewers.json` is safe in public and revoking a leaked link is one
+    command (`bun run reviewer:revoke`) — which also drops that reviewer's
+    past attestations and unwinds the verifications that rested on them alone.
     Answers from a granted browser are stamped `reviewer_id`, and **a trusted
     reviewer calling a spelling right, with none disagreeing, stages
     `verified: true` in the pull request** for a human to merge. How many

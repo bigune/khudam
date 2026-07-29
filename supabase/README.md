@@ -370,7 +370,19 @@ bun run signals:export --delete signals.jsonl decisions.jsonl # once committed
 ```
 
 **What a decision may do to the data.** `verify` flips a stored candidate to
-`verified: true`. `accept_proposal` adds a proposed spelling as a new
-`verified: true` candidate. `reject` changes nothing — it is written up in
+`verified: true`. `accept_proposal` adds a proposed spelling as a new candidate
+and the attestation it carries verifies it in the same run — or, where the
+schema wants a `sense` first, the acceptance is carried in
+`data/stats/reports.json` and re-tried each week until the entry can take it.
+`reject` on a stored candidate changes nothing — it is written up in
 `data/REVIEW.md` for a human, because removing a candidate is the one edit that
-can lose data and a leaked grant must not be able to cause it.
+can lose data and a leaked grant must not be able to cause it. `reject` on a
+proposed spelling declines the proposal: its report is closed, and there was
+nothing stored to remove.
+
+**If a session's stamps matched no grant** — usually a review done before the
+roster line was merged — the pull request says how many decisions were
+discarded. They are not gone: the drain's artifact keeps `decisions.jsonl` for
+90 days. To recover, merge the roster line first, then download the artifact,
+set `decisions_through` in `data/stats/reports.json` lower than the artifact's
+lowest `id`, and run `bun run signals:aggregate` with `--decisions` by hand.
