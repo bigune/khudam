@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- The Cyrillic initial of the name, nothing cleverer. The two diagonals
-       carry serif-style contrast (one thick, one thin, flat ends) so the
-       letter reads as type rather than as a close button; uniform rounded
-       strokes made it one. Colours mirror the bg/panel and ink tokens in
+  <!-- An open book: the site is a lexicon before it is anything else. Glyph
+       adapted from SVG Repo (svgrepo.com, "library" icon), set into the
+       64-unit tile. Colours mirror the bg/panel and ink tokens in
        globals.css. (No double hyphen may appear in this comment: SVG is
        strict XML, and one broke the whole favicon once.) -->
   <style>
     .paper { fill: #faf9f7 }
-    .ink { stroke: #1a1c1e }
+    .ink { fill: #1a1c1e }
     @media (prefers-color-scheme: dark) {
       .paper { fill: #181b1e }
-      .ink { stroke: #e8e6e3 }
+      .ink { fill: #e8e6e3 }
     }
   </style>
   <rect class="paper" width="64" height="64" rx="14"/>
-  <path class="ink" d="M21 19 L43 45" fill="none" stroke-width="9"/>
-  <path class="ink" d="M43 19 L21 45" fill="none" stroke-width="4"/>
+  <g transform="translate(13 13) scale(2.7143)">
+    <path class="ink" d="m 0,0 0,10 c 2,3 5.24979,2.039143 5.24979,4 L 6.25,14 6.25,4 C 6.25,1.0168774 2,3 0,0 z M 14,0 C 12,3 7.75,1.0449388 7.75,4 l 0,10 1,0 C 8.75,12.020266 12,13 14,10 z"/>
+  </g>
 </svg>
