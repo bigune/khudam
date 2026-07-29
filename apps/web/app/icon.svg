@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Not a letter. Every Mongol bichig word hangs off one vertical spine and
+       opens with a crown stroke; this is that shape and nothing more specific,
+       because a real glyph drawn by hand here would be an encoding claim the
+       data does not make. Colours are --bg/--panel and --ink from globals.css. -->
+  <style>
+    .paper { fill: #faf9f7 }
+    .ink { fill: #1a1c1e }
+    @media (prefers-color-scheme: dark) {
+      .paper { fill: #181b1e }
+      .ink { fill: #e8e6e3 }
+    }
+  </style>
+  <rect class="paper" width="64" height="64" rx="14"/>
+  <rect class="ink" x="20" y="12" width="22" height="8" rx="3"/>
+  <rect class="ink" x="34" y="12" width="8" height="42" rx="3"/>
+</svg>

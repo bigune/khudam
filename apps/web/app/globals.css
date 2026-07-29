@@ -1,4 +1,8 @@
 :root {
+  /* Native widgets — scrollbars, the textarea's resize grip, form controls —
+     follow the OS theme instead of staying light inside a dark page. */
+  color-scheme: light dark;
+
   --bg: #faf9f7;
   --panel: #ffffff;
   --ink: #1a1c1e;
@@ -34,6 +38,13 @@
 
   /* Felt, not seen. */
   --ease: 120ms ease;
+
+  /* Two Latin faces designed Cyrillic-first (loaded in layout.tsx): a serif
+     for headings, a sans for everything else. The fallbacks matter on the
+     first paint before the webfonts arrive — closest system metrics first. */
+  --font-body:
+    var(--font-sans), "PT Sans", system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-serif), "PT Serif", Georgia, serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,12 +69,39 @@
   box-sizing: border-box;
 }
 
+/* One focus ring for every control on every page. Browser defaults differ
+   per element and per engine, so leaving them native made keyboard focus
+   look like six different products. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
 body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.55;
+  /* Tapping a button already answers with a colour ease; the grey flash
+     mobile Safari and Chrome add on top of it is a second, louder answer. */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Headings are the one place the page speaks in its own voice, and a serif
+   is how a dictionary speaks: the headword bold and bookish, the entry
+   beneath it plain. Everything below h2 stays in the body face — a serif
+   caption would be decoration, not hierarchy. */
+h1,
+h2 {
+  font-family: var(--font-display);
+}
+
+/* Selected text is the reader acting on the page, so it takes the one
+   interaction colour — as a wash, since a solid accent behind text is a
+   fill, and the accent only ever appears as a line. */
+::selection {
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
 }
 
 .mongolian {
@@ -91,6 +129,9 @@ h1 {
   margin: 0;
   font-size: var(--text-display);
   line-height: 1.15;
+  /* The queue and review pages title in a full phrase; on a phone it breaks
+     into one long line and one orphaned word without this. */
+  text-wrap: balance;
 }
 
 .subtitle {
@@ -157,11 +198,6 @@ textarea {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 0.85rem 1rem;
-}
-
-textarea:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 1px;
 }
 
 .samples {
@@ -554,9 +590,11 @@ textarea,
 .report-dialog {
   width: min(28rem, calc(100vw - 2rem));
   /* The proposal form makes this dialog tall; on a phone it scrolls rather
-     than pushing its own content off the screen. */
+     than pushing its own content off the screen — and reaching its end must
+     not hand the scroll to the page behind it. */
   max-height: calc(100dvh - 2rem);
   overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 0;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -709,6 +747,9 @@ textarea,
 .queue-progress {
   font-weight: 600;
   color: var(--muted);
+  /* "3 / 10" ticks up on every answer; proportional digits make the whole
+     row shiver as 1 becomes 4. */
+  font-variant-numeric: tabular-nums;
 }
 
 /* One other spelling sits beside the specimen rather than under it: with
@@ -1039,11 +1080,6 @@ textarea,
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 0.5rem 0.65rem;
-}
-
-.proposal-input:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 1px;
 }
 
 .proposal-input:disabled {
