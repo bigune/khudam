@@ -4,7 +4,7 @@
  * Prints one link, once. The link contains the grant — a random UUID — and
  * this script deliberately keeps no copy of it: data/reviewers.json receives
  * only its SHA-256 hash. If the link is lost before it reaches its reader,
- * issue another one and delete the stranded line; there is no recovery, and
+ * revoke the stranded grant and issue another; there is no recovery, and
  * that is the property that makes the roster safe to commit.
  *
  * What a grant buys: the expert review page, and answers from that browser
@@ -52,9 +52,11 @@ function grantLink(site: string, grant: string): string {
   return `${site.replace(/#.*$/u, "").replace(/\/+$/u, "")}#r=${grant}`;
 }
 
-/** r1, r2, … — the next unused number, so a revoked label is never reissued to
- *  a different person (which would silently merge two people's attestations in
- *  the ledger). Git history remembers the numbers that have been used. */
+/** r1, r2, … — the next number no grant has ever worn, so a revoked label is
+ *  never reissued to a different person (which would silently merge two
+ *  people's attestations in the ledger). This only works because revocation
+ *  tombstones a line rather than deleting it — the roster itself remembers
+ *  every number that has been used, revoked grants included. */
 export function nextLabel(existing: readonly Reviewer[]): string {
   let highest = 0;
   for (const r of existing) {
@@ -94,9 +96,10 @@ function main(): void {
       "Keep your own note of who " + label + " is. That mapping must not be committed:\n" +
       "the repo says which labels stand behind a spelling, never who they are.\n\n" +
       `Commit ${REVIEWERS_FILE.split("/").slice(-2).join("/")} to activate the grant — ` +
-      "the weekly job reads the roster\nfrom the merged repository. To revoke, delete the " +
-      `object labelled ${label}: that also\ndrops their past attestations, which is how a ` +
-      "leaked link is made harmless.\n",
+      "the weekly job reads the roster\nfrom the merged repository. To revoke: " +
+      `bun run reviewer:revoke ${label} — the line stays\nas a tombstone (so the label is ` +
+      "never reissued) and their attestations stop\ncounting, including ones already " +
+      "recorded. That is how a leaked link is made harmless.\n",
   );
 }
 

@@ -92,9 +92,15 @@ describe("reviewer grants", () => {
     expect(reviewerLabelOf("c51f2be7-6ba8-47d0-9a1c-000000000000", roster)).toBeUndefined();
   });
 
-  test("a revoked grant stops counting the moment its line is deleted", () => {
-    // This is what makes a leaked link recoverable: revocation reaches
-    // backwards through the ledger, not just forwards.
+  test("a revoked grant stops counting the moment its tombstone is written", () => {
+    // Half of what makes a leaked link recoverable — no new stamp of a revoked
+    // grant matches. The other half, dropping attestations the ledger already
+    // holds, is pruneRevoked in aggregate-signals.ts.
+    const revoked = [{ ...roster[0]!, revoked: "2026-08-01" }];
+    expect(reviewerLabelOf(GRANT, revoked)).toBeUndefined();
+  });
+
+  test("a grant whose line is gone entirely does not count either", () => {
     expect(reviewerLabelOf(GRANT, [])).toBeUndefined();
   });
 

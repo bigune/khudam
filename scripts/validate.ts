@@ -309,7 +309,7 @@ function checkReviewersFile(file: string): void {
       report(file, where, "Each reviewer grant must be an object wrapped in { }.");
       return;
     }
-    const allowed = ["label", "hash", "granted"];
+    const allowed = ["label", "hash", "granted", "revoked"];
     for (const key of Object.keys(item)) {
       if (!allowed.includes(key)) {
         report(
@@ -372,6 +372,15 @@ function checkReviewersFile(file: string): void {
     }
     if (typeof item.granted !== "string" || !/^\d{4}-\d{2}-\d{2}$/u.test(item.granted)) {
       report(file, where, '"granted" is required and must be an ISO date, e.g. "2026-07-29".');
+    }
+    if ("revoked" in item && (typeof item.revoked !== "string" || !/^\d{4}-\d{2}-\d{2}$/u.test(item.revoked))) {
+      report(
+        file,
+        where,
+        '"revoked" must be an ISO date, e.g. "2026-07-29", as written by `bun run reviewer:revoke`. ' +
+          "A revoked grant keeps its line as a tombstone — do not delete it, or its label could be " +
+          "reissued to a different person.",
+      );
     }
     checkedEntries++;
   });

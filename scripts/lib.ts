@@ -90,6 +90,14 @@ export interface Reviewer {
   hash: string;
   /** ISO date the grant was issued. Audit context; nothing reads it. */
   granted: string;
+  /**
+   * ISO date the grant was revoked, set by `bun run reviewer:revoke`. A revoked
+   * grant keeps its line as a tombstone: the object stays so `nextLabel` can
+   * never hand this label to a different person — which would silently merge
+   * two people's attestations in the ledger — while `reviewerLabelOf` stops
+   * matching it, which is what makes the revocation take effect.
+   */
+  revoked?: string;
 }
 
 /** Opaque sequential labels. The pattern is enforced rather than suggested:
@@ -120,7 +128,12 @@ export function readReviewers(): Reviewer[] {
 
 /** Canonical serialization, matching the other data files. */
 export function writeReviewers(reviewers: Reviewer[]): void {
-  const canonical = reviewers.map((r) => ({ label: r.label, hash: r.hash, granted: r.granted }));
+  const canonical = reviewers.map((r) => ({
+    label: r.label,
+    hash: r.hash,
+    granted: r.granted,
+    ...(r.revoked !== undefined ? { revoked: r.revoked } : {}),
+  }));
   writeFileSync(REVIEWERS_FILE, JSON.stringify(canonical, null, 2) + "\n", "utf8");
 }
 
@@ -129,14 +142,15 @@ export function writeReviewers(reviewers: Reviewer[]): void {
  *
  * Undefined covers three cases that all mean the same thing downstream — treat
  * the row as anonymous: no stamp at all, a stamp nobody was ever granted, and a
- * grant that has since been revoked. Revocation therefore reaches backwards:
- * deleting a line from data/reviewers.json drops that reviewer's past
- * attestations too, which is what makes a leaked link recoverable.
+ * grant whose tombstone says it was revoked. This is half of what makes a
+ * leaked link recoverable — no *new* row of a revoked grant counts. The other
+ * half is `pruneRevoked` in scripts/aggregate-signals.ts, which drops the
+ * attestations earlier runs already folded into the ledger.
  */
 export function reviewerLabelOf(reviewerId: string | null | undefined, roster: Reviewer[]): string | undefined {
   if (!reviewerId || !GRANT_RE.test(reviewerId.trim().toLowerCase())) return undefined;
   const hash = hashGrant(reviewerId);
-  return roster.find((r) => r.hash === hash)?.label;
+  return roster.find((r) => r.hash === hash && r.revoked === undefined)?.label;
 }
 
 /** Lowercase modern Mongolian Cyrillic: а–я (U+0430–U+044F) plus ё, ө, ү. */

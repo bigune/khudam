@@ -17,6 +17,7 @@ import {
   isDisputed,
   latestTimestamp,
   mechanicalAdditions,
+  pruneRevoked,
   reportKey,
   resolutionOf,
   acceptances,
@@ -551,32 +552,100 @@ describe("addVerdicts — attestations", () => {
     expect(l.verdicts![0]!.attested).toBeUndefined();
   });
 
-  test("revoking a grant drops the attestations it already gave", () => {
-    // What makes a leaked link recoverable: the roster is consulted on every
-    // aggregation, never baked into the ledger. Revoking both grants rather
-    // than one, so the `isAttested` assertion means the same thing at any
-    // threshold — with one revoked and the threshold at 1, the other still
-    // attests, which is correct and would make this test say nothing.
+  test("a stamp of a grant revoked before the fold counts as anonymous", () => {
+    // The fold-time half of revocation: reviewerLabelOf skips tombstones, so
+    // a row arriving after the revocation merges never earns a label. The
+    // other half — attestations already folded in — is pruneRevoked, below.
     const l = ledger();
     const stamps = [verdictRow(true, { reviewer_id: GRANT_A }), verdictRow(true, { reviewer_id: GRANT_B })];
-    addVerdicts(l, stamps, ROSTER);
-    const partly: Ledger = { through: null, reports: [] };
-    addVerdicts(partly, stamps, ROSTER.filter((r) => r.label !== "r2"));
-    const fully: Ledger = { through: null, reports: [] };
-    addVerdicts(fully, stamps, []);
-
-    expect(l.verdicts![0]!.attested).toEqual(["r1", "r2"]);
-    expect(partly.verdicts![0]!.attested).toEqual(["r1"]);
-    expect(isAttested(fully.verdicts![0]!)).toBe(false);
+    addVerdicts(l, stamps, ROSTER.map((r) => (r.label === "r2" ? { ...r, revoked: "2026-08-02" } : r)));
+    expect(l.verdicts![0]!.attested).toEqual(["r1"]);
     // The votes themselves survive. A revoked reviewer was still a person who
     // answered; what they lose is the weight of the grant, not the answer.
-    expect(fully.verdicts![0]!.yes).toBe(2);
+    expect(l.verdicts![0]!.yes).toBe(2);
   });
 
   test("with no roster at all, nothing is trusted", () => {
     const l = ledger();
     addVerdicts(l, [verdictRow(true, { reviewer_id: GRANT_A })]);
     expect(l.verdicts![0]!.attested).toBeUndefined();
+  });
+});
+
+describe("pruneRevoked", () => {
+  // The scenario that makes this function necessary: labels live in the
+  // ledger across weeks — a flip the cap held back, a dispute, a report's
+  // filers — and the raw rows that earned them are deleted after one drain.
+  // Without this pass, a revoked grant would keep verifying spellings from
+  // the file long after its tombstone was written.
+  function revoked(...labels: string[]) {
+    return ROSTER.map((r) => (labels.includes(r.label) ? { ...r, revoked: "2026-08-02" } : r));
+  }
+
+  test("drops attestations the ledger already holds for a tombstoned grant", () => {
+    const l: Ledger = {
+      through: null,
+      reports: [],
+      verdicts: [{ ...BASE_TALLY, yes: 2, no: 0, attested: ["r1", "r2"] }],
+    };
+    const pruned = pruneRevoked(l, revoked("r2"));
+    expect(pruned).toBe(1);
+    expect(l.verdicts![0]!.attested).toEqual(["r1"]);
+    // The anonymous count is the answer, not the grant; it stays.
+    expect(l.verdicts![0]!.yes).toBe(2);
+  });
+
+  test("a fully pruned tally is no longer attested and cannot reach the fast track", () => {
+    const l: Ledger = {
+      through: null,
+      reports: [],
+      verdicts: [{ ...BASE_TALLY, yes: 1, no: 0, attested: ["r2"] }],
+    };
+    pruneRevoked(l, revoked("r2"));
+    expect(l.verdicts![0]!.attested).toBeUndefined();
+    expect(isAttested(l.verdicts![0]!)).toBe(false);
+  });
+
+  test("a revoked no stops vetoing", () => {
+    // Symmetry matters: a veto is trust in the other direction, and a grant
+    // that lost one loses both.
+    const l: Ledger = {
+      through: null,
+      reports: [],
+      verdicts: [{ ...BASE_TALLY, yes: 1, no: 1, attested: ["r1"], disputed: ["r2"] }],
+    };
+    pruneRevoked(l, revoked("r2"));
+    expect(l.verdicts![0]!.disputed).toBeUndefined();
+    expect(isAttested(l.verdicts![0]!)).toBe(true);
+  });
+
+  test("a report's filers are pruned the same way", () => {
+    const l: Ledger = {
+      through: null,
+      reports: [
+        {
+          cyrillic: "уул",
+          kind: "correction",
+          sessions: 2,
+          reviewers: ["r1", "r2"],
+          first_seen: "2026-08-01T00:00:00Z",
+          last_seen: "2026-08-01T00:00:00Z",
+        },
+      ],
+    };
+    pruneRevoked(l, revoked("r1", "r2"));
+    expect(l.reports[0]!.reviewers).toBeUndefined();
+    expect(l.reports[0]!.sessions).toBe(2);
+  });
+
+  test("an intact roster prunes nothing", () => {
+    const l: Ledger = {
+      through: null,
+      reports: [],
+      verdicts: [{ ...BASE_TALLY, yes: 1, no: 0, attested: ["r1"] }],
+    };
+    expect(pruneRevoked(l, ROSTER)).toBe(0);
+    expect(l.verdicts![0]!.attested).toEqual(["r1"]);
   });
 });
 

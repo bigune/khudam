@@ -305,10 +305,14 @@ from an invented one, and does not try: an unmatched stamp is counted as an
 anonymous row, and the pull request reports how many arrived. A handful usually
 means a revoked link still sitting in somebody's browser.
 
-**Revoking.** Delete the object from `data/reviewers.json`. It stops counting
-from the next run, *including answers it already gave* — attestations are stored
-by label and matched against the roster on every aggregation, never baked in.
-That is what makes a leaked link recoverable.
+**Revoking.** `bun run reviewer:revoke r2`, then commit. The object stays in
+`data/reviewers.json` with a `revoked` date on it — a tombstone, because
+deleting the line would let `reviewer:add` hand the same label to a different
+person and silently merge two people's attestations. The grant stops counting
+from the next run, *including answers it already gave*: attestations are stored
+by label, and every aggregation re-checks the recorded labels against the
+roster before reading them (`pruneRevoked`). That is what makes a leaked link
+recoverable.
 
 **The quorum.** `ATTESTATION_THRESHOLD` in `scripts/aggregate-signals.ts`, and
 it is **1** today — deliberately, because one trusted reviewer is who this

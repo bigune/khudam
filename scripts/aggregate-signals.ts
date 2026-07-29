@@ -390,6 +390,48 @@ export function isDisputed(tally: VerdictTally): boolean {
 }
 
 /**
+ * Drop revoked reviewers' weight from what earlier runs already folded in.
+ *
+ * A grant is resolved to its label once, when the row is folded — and the
+ * label then lives in the ledger, carried across weeks by exactly the flows
+ * this pipeline is built around: a flip the weekly cap held back, a dispute
+ * waiting on a human, a report's filers. Checking the roster only for new
+ * rows would let a revoked grant go on verifying spellings *from the file*,
+ * so every persisted label list is re-checked here, against the roster as the
+ * merged repository holds it, at the top of every run. This is what makes
+ * "revoking stops it counting, including answers it already gave" true.
+ *
+ * The anonymous counts stay untouched: a revoked reviewer was still a person
+ * who answered. What they lose is the weight of the grant, not the answer.
+ *
+ * Returns how many recorded labels stopped counting, for the run summary.
+ */
+export function pruneRevoked(ledger: Ledger, roster: readonly Reviewer[]): number {
+  const active = new Set(roster.filter((r) => r.revoked === undefined).map((r) => r.label));
+  let pruned = 0;
+  const keep = (labels: readonly string[] | undefined): string[] | undefined => {
+    if (labels === undefined) return undefined;
+    const kept = labels.filter((l) => active.has(l));
+    pruned += labels.length - kept.length;
+    return kept.length > 0 ? kept : undefined;
+  };
+  for (const tally of ledger.verdicts ?? []) {
+    const attested = keep(tally.attested);
+    if (attested !== undefined) tally.attested = attested;
+    else delete tally.attested;
+    const disputed = keep(tally.disputed);
+    if (disputed !== undefined) tally.disputed = disputed;
+    else delete tally.disputed;
+  }
+  for (const report of ledger.reports) {
+    const reviewers = keep(report.reviewers);
+    if (reviewers !== undefined) report.reviewers = reviewers;
+    else delete report.reviewers;
+  }
+  return pruned;
+}
+
+/**
  * Whether a tally still has anything to tell a reviewer.
  *
  * It stops when the answer is in the lexicon: the candidate was verified (a
@@ -1286,8 +1328,11 @@ function main(): void {
   const fresh = freshRows(rows, ledger.through);
 
   // The roster as the merged repository holds it, so a grant revoked last week
-  // carries no weight this week — including on answers it already gave.
+  // carries no weight this week — including on answers it already gave, which
+  // is the pruning pass: labels folded into the ledger by earlier runs are
+  // re-checked before anything else reads them.
   const roster = readReviewers();
+  const prunedLabels = pruneRevoked(ledger, roster);
   const selections = addSelections(frequency, fresh);
   const newReports = addReports(ledger, fresh, roster);
   const verdicts = addVerdicts(ledger, fresh, roster);
@@ -1468,6 +1513,10 @@ function main(): void {
     `- **${stale.length}** aged out after ${STALE_DAYS} days without action`,
     suspects.length > 0
       ? `- ⚠ **${plural(suspects.length, "suffix rule")}** flagged across several words each`
+      : "",
+    prunedLabels > 0
+      ? `- **${plural(prunedLabels, "recorded attestation")}** stopped counting — the grant behind ` +
+        "each was revoked since it was folded in"
       : "",
     unmatched.size > 0
       ? `- **${plural(unmatched.size, "reviewer stamp")}** matched no grant on the roster ` +
