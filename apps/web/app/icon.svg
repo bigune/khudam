@@ -14,6 +14,9 @@
     }
   </style>
   <rect class="paper" width="64" height="64" rx="14"/>
-  <rect class="ink" x="20" y="12" width="22" height="8" rx="3"/>
-  <rect class="ink" x="34" y="12" width="8" height="42" rx="3"/>
+  <!-- The titem is a pennant, not a bar: a pointed tip at the left, the
+       stroke thickening as it rises into the head of the spine. Drawn as a
+       perpendicular rectangle it read as the digit 1. -->
+  <path class="ink" d="M14 19 L33 11 L41 11 L41 22 L33 23 Z"/>
+  <rect class="ink" x="33" y="11" width="8" height="43" rx="3"/>
 </svg>
