@@ -753,6 +753,78 @@ export function acceptances(
   );
 }
 
+/** A proposed spelling a trusted reviewer declined, and who declined it. */
+export interface Declined {
+  cyrillic: string;
+  traditional: string;
+  labels: string[];
+}
+
+/**
+ * Proposals a trusted reviewer said no to.
+ *
+ * A reject about a spelling the lexicon holds is a *rejection*: it stays in
+ * the ledger as a dispute, is listed with the file to edit, and removing the
+ * candidate stays a human's decision. A reject about a spelling the lexicon
+ * does not hold is a *decline*: the spelling was never data, only a
+ * suggestion, so saying no closes the report — without this, the proposal
+ * would resurface on the review page every deploy and the reviewer's answer
+ * would vanish without a trace, which re-asks the one person this pipeline
+ * cannot afford to waste.
+ *
+ * Checked against the index after acceptances are written, so one reviewer
+ * accepting and another rejecting the same spelling is a stored candidate
+ * plus a dispute — the disagreement machinery — not a decline.
+ *
+ * If somebody proposes the same spelling again later it returns as a fresh
+ * report, which is the right way for a disagreement to come back.
+ */
+export function declinedProposals(
+  decisions: readonly DecisionRow[],
+  roster: readonly Reviewer[],
+  index: EntryIndex,
+): Declined[] {
+  const byKey = new Map<string, Declined>();
+  for (const decision of decisions) {
+    if (decision.action !== "reject") continue;
+    const label = reviewerLabelOf(decision.reviewer_id, roster as Reviewer[]);
+    if (label === undefined) continue;
+    const found = index.get(decision.cyrillic);
+    if (found?.entry.candidates.some((c) => c.traditional === decision.traditional)) continue;
+    const key = `${decision.cyrillic}|${decision.traditional}`;
+    const existing = byKey.get(key);
+    if (existing !== undefined) {
+      if (!existing.labels.includes(label)) existing.labels.push(label);
+      continue;
+    }
+    byKey.set(key, { cyrillic: decision.cyrillic, traditional: decision.traditional, labels: [label] });
+  }
+  return [...byKey.values()].sort(
+    (a, b) => compareWords(a.cyrillic, b.cyrillic) || compareWords(a.traditional, b.traditional),
+  );
+}
+
+/**
+ * Close the reports a decline answers. Removing them is also the veto: a
+ * report that is gone cannot reach `mechanicalAdditions`, so two anonymous
+ * sessions cannot add a spelling in the same run a trusted reviewer said it
+ * is wrong. Returns how many report objects were closed, for the summary.
+ */
+export function removeDeclinedReports(ledger: Ledger, declined: readonly Declined[]): number {
+  const keys = new Set(declined.map((d) => `${d.cyrillic}|${d.traditional}`));
+  const kept: Report[] = [];
+  let removed = 0;
+  for (const report of ledger.reports) {
+    if (report.proposal_traditional !== undefined && keys.has(`${report.cyrillic}|${report.proposal_traditional}`)) {
+      removed++;
+      continue;
+    }
+    kept.push(report);
+  }
+  ledger.reports = kept;
+  return removed;
+}
+
 /** Where an entry lives, so a staged flip can be written back to its file. */
 export type EntryIndex = Map<string, { entry: Entry; file: string }>;
 
@@ -1061,6 +1133,8 @@ interface Review {
   reverts: RevertedFlip[];
   /** Proposals a trusted reviewer accepted — written, and not written. */
   accepted: Acceptance[];
+  /** Proposals a trusted reviewer declined — reports closed, nothing stored. */
+  declined: Declined[];
   tallies: VerdictTally[];
   lexicon: Map<string, Entry>;
   /** Which file each entry lives in, so a rejection can name the line to delete. */
@@ -1077,6 +1151,7 @@ function renderReview({
   heldBack,
   reverts,
   accepted,
+  declined,
   tallies,
   lexicon,
   index,
@@ -1259,6 +1334,26 @@ function renderReview({
     lines.push("");
     for (const { cyrillic, traditional, labels, blocked } of stuck) {
       lines.push(`- **${cyrillic}** — \`${traditional}\` — ${fmtLabels(labels)} — ⚠ ${blocked}`);
+    }
+    lines.push("");
+  }
+
+  if (declined.length > 0) {
+    lines.push(`### Proposals a trusted reviewer declined (${declined.length})`);
+    lines.push("");
+    lines.push(
+      "Spellings a contributor typed that somebody who reads монгол бичиг looked at — script " +
+        "and code points side by side — and said are not a written form of the word. A proposal " +
+        "is a suggestion, not data, so declining one closes its report and touches nothing else: " +
+        "**there was nothing in the lexicon to remove.** If the same spelling is proposed again " +
+        "it returns as a fresh report, which is the right way for a disagreement to come back.",
+    );
+    lines.push("");
+    for (const { cyrillic, traditional, labels } of declined) {
+      lines.push(
+        `- **${cyrillic}** — \`${traditional}\` — ${fmtLabels(labels)} — ` +
+          `[Wiktionary](${wiktionaryUrl(cyrillic)})`,
+      );
     }
     lines.push("");
   }
@@ -1515,6 +1610,14 @@ function main(): void {
     acceptedResorted.add(file);
   }
 
+  // A trusted no to a proposal closes it — computed now that acceptances are
+  // in the index, so a spelling still unstored after them was declined rather
+  // than disputed. Closing the reports before the triage below is also the
+  // veto: a report that is gone cannot become a mechanical addition in the
+  // same run a trusted reviewer said its spelling is wrong.
+  const declined = declinedProposals(trustedDecisions, roster, index);
+  const declinedReports = removeDeclinedReports(ledger, declined);
+
   const lexicon = new Map([...index].map(([cyrillic, { entry }]) => [cyrillic, entry]));
   const known = new Set(index.keys());
   const now = new Date();
@@ -1590,6 +1693,7 @@ function main(): void {
       heldBack,
       reverts,
       accepted,
+      declined,
       tallies: openTallies,
       lexicon,
       index,
@@ -1624,6 +1728,10 @@ function main(): void {
     stuckCount > 0
       ? `- ⚠ **${plural(stuckCount, "acceptance")}** the schema would not take — each needs a ` +
         "`sense`, and says which; the judgement is recorded, not lost"
+      : "",
+    declined.length > 0
+      ? `- ✗ **${plural(declined.length, "proposed spelling")}** a trusted reviewer declined — ` +
+        `${plural(declinedReports, "report")} closed; nothing was in the lexicon to remove`
       : "",
     rejectedCount > 0
       ? `- ⚠ **${plural(rejectedCount, "spelling")}** a trusted reviewer rejected — **nothing was ` +

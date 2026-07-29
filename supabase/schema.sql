@@ -408,11 +408,14 @@ create policy "anon inserts signals"
 --
 --   verify           `traditional` is a stored candidate of `cyrillic`, and it
 --                    is right. This is the row that becomes `verified: true`.
---   reject           `traditional` is a stored candidate, and it is not a
---                    written form of this word for any meaning. Nothing is
---                    deleted mechanically -- removing a candidate is the one
---                    edit that can lose data, so a rejection is written into
---                    data/REVIEW.md for a human to act on.
+--   reject           `traditional` is not a written form of this word for any
+--                    meaning. For a stored candidate nothing is deleted
+--                    mechanically -- removing a candidate is the one edit that
+--                    can lose data, so the rejection is written into
+--                    data/REVIEW.md for a human to act on. For a proposed
+--                    spelling the lexicon does not hold, the reject declines
+--                    the proposal: its report is closed, and there was nothing
+--                    stored to remove.
 --   accept_proposal  `traditional` is a spelling somebody PROPOSED and the
 --                    lexicon does not hold, and it should be added.
 --

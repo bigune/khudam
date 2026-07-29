@@ -23,8 +23,10 @@ import {
   revokedFlips,
   acceptances,
   decisionVerdicts,
+  declinedProposals,
   freshDecisions,
   latestDecisionId,
+  removeDeclinedReports,
   suffixSuspects,
   supersede,
   verdictIsOpen,
@@ -1019,5 +1021,82 @@ describe("acceptances", () => {
   test("refuses what the validator would refuse", () => {
     expect(acceptances([accept({ traditional: "hura" })], ROSTER, indexOf())).toEqual([]);
     expect(acceptances([accept({ cyrillic: "hur" })], ROSTER, indexOf())).toEqual([]);
+  });
+});
+
+describe("declinedProposals", () => {
+  const reject = (over: Partial<DecisionRow> = {}) =>
+    decision({ cyrillic: "хур", traditional: "ᠬᠤᠷᠠ", action: "reject", ...over });
+
+  test("a trusted no to a spelling the lexicon does not hold is a decline", () => {
+    const got = declinedProposals([reject()], ROSTER, indexOf());
+    expect(got).toEqual([{ cyrillic: "хур", traditional: "ᠬᠤᠷᠠ", labels: ["r1"] }]);
+  });
+
+  test("a no to a stored candidate is a rejection, never a decline", () => {
+    // A stored candidate travels the other road: a dispute in the ledger and
+    // a write-up naming the file — removing it stays a human's edit.
+    expect(declinedProposals([reject({ traditional: "ᠤᠤᠯ", cyrillic: "уул" })], ROSTER, indexOf(UUL))).toEqual([]);
+  });
+
+  test("two reviewers declining one spelling merge into one line", () => {
+    const got = declinedProposals([reject({ reviewer_id: GRANT_A }), reject({ reviewer_id: GRANT_B })], ROSTER, indexOf());
+    expect(got).toHaveLength(1);
+    expect(got[0]!.labels).toEqual(["r1", "r2"]);
+  });
+
+  test("an unknown stamp declines nothing", () => {
+    const stranger = "00000000-0000-4000-8000-000000000000";
+    expect(declinedProposals([reject({ reviewer_id: stranger })], ROSTER, indexOf())).toEqual([]);
+  });
+
+  test("verify and accept are not declines", () => {
+    expect(declinedProposals([decision({ action: "verify" })], ROSTER, indexOf())).toEqual([]);
+    expect(declinedProposals([decision({ action: "accept_proposal" })], ROSTER, indexOf())).toEqual([]);
+  });
+});
+
+describe("removeDeclinedReports", () => {
+  function proposalReport(over: Partial<Report> = {}): Report {
+    return {
+      cyrillic: "хур",
+      kind: "new_word",
+      proposal_traditional: "ᠬᠤᠷᠠ",
+      sessions: 2,
+      first_seen: "2026-08-01T00:00:00Z",
+      last_seen: "2026-08-01T00:00:00Z",
+      ...over,
+    };
+  }
+
+  test("closes every report carrying the declined spelling", () => {
+    const l: Ledger = { through: null, reports: [proposalReport(), proposalReport({ kind: "correction" })] };
+    const removed = removeDeclinedReports(l, [{ cyrillic: "хур", traditional: "ᠬᠤᠷᠠ", labels: ["r1"] }]);
+    expect(removed).toBe(2);
+    expect(l.reports).toEqual([]);
+  });
+
+  test("a different proposed spelling for the same word stays open", () => {
+    // The reviewer declined a spelling, not the word.
+    const other = proposalReport({ proposal_traditional: "ᠬᠤᠷ" });
+    const l: Ledger = { through: null, reports: [proposalReport(), other] };
+    removeDeclinedReports(l, [{ cyrillic: "хур", traditional: "ᠬᠤᠷᠠ", labels: ["r1"] }]);
+    expect(l.reports).toEqual([other]);
+  });
+
+  test("a closed report cannot become a mechanical addition", () => {
+    // The veto: two strangers typing the same spelling stops mattering in the
+    // run a trusted reviewer says that spelling is wrong.
+    const l: Ledger = { through: null, reports: [proposalReport()] };
+    expect(mechanicalAdditions(l.reports, new Set())).toHaveLength(1);
+    removeDeclinedReports(l, [{ cyrillic: "хур", traditional: "ᠬᠤᠷᠠ", labels: ["r1"] }]);
+    expect(mechanicalAdditions(l.reports, new Set())).toEqual([]);
+  });
+
+  test("reports without a proposal are untouched", () => {
+    const flag = proposalReport({ proposal_traditional: undefined, kind: "correction", traditional: "ᠬᠤᠷ" });
+    const l: Ledger = { through: null, reports: [flag] };
+    expect(removeDeclinedReports(l, [{ cyrillic: "хур", traditional: "ᠬᠤᠷᠠ", labels: ["r1"] }])).toBe(0);
+    expect(l.reports).toEqual([flag]);
   });
 });

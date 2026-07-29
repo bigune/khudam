@@ -34,8 +34,10 @@ import {
  *
  * `verify`   — a stored candidate, and it is right. The row that becomes
  *              `verified: true`.
- * `reject`   — a stored candidate, and it is not a written form of this word
- *              for any meaning.
+ * `reject`   — the spelling is not a written form of this word for any
+ *              meaning. For a stored candidate this is written up for a human
+ *              and never applied; for a proposed spelling it declines the
+ *              proposal and closes its report.
  * `accept_proposal` — a spelling somebody proposed that the lexicon does not
  *              hold, and it should be added.
  */
