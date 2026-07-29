@@ -393,7 +393,7 @@ export default function ReviewPage() {
       </header>
 
       {trusted === false && (
-        <section className="info">
+        <section className="notice notice-warn">
           <h2>Энэ хөтөч дээр хянагчийн эрх алга</h2>
           <p>
             Энэ хуудсыг үзэж болох ч, эндээс илгээсэн шийдвэр{" "}
@@ -413,7 +413,7 @@ export default function ReviewPage() {
       )}
 
       {!signalsEnabled && (
-        <section className="info">
+        <section className="notice notice-warn">
           <p>
             Хариулт хүлээн авах тохиргоо энэ хувилбар дээр идэвхгүй байна.
             Жагсаалтыг үзэж болох ч шийдвэр хадгалагдахгүй.
@@ -422,7 +422,7 @@ export default function ReviewPage() {
       )}
 
       {lock === "locked" && (
-        <section className="info">
+        <section className="notice notice-warn">
           <h2>Өмнөх шийдвэрүүд хүлээгдэж байна</h2>
           <p>
             Нэгтгэгдээгүй pull request нээлттэй байна. Энэ жагсаалт түүнийг
@@ -436,7 +436,7 @@ export default function ReviewPage() {
       )}
 
       {lock === "unknown" && (
-        <section className="info">
+        <section className="notice">
           <p>
             GitHub-тай холбогдож чадсангүй тул нээлттэй pull request байгаа
             эсэхийг шалгаж чадаагүй. Үргэлжлүүлж болно — давхардсан шийдвэрийг
@@ -446,7 +446,7 @@ export default function ReviewPage() {
       )}
 
       {failed && (
-        <section className="info">
+        <section className="notice notice-error">
           <p>
             Жагсаалтыг ачаалж чадсангүй. Сүлжээгээ шалгаад хуудсыг дахин
             ачаална уу.
@@ -454,8 +454,10 @@ export default function ReviewPage() {
         </section>
       )}
 
+      {bundle === null && !failed && <p className="note">Ачаалж байна…</p>}
+
       {sending === "sent" && (
-        <section className="info">
+        <section className="notice notice-ok">
           <h2>Илгээгдлээ</h2>
           <p>
             {sentCount} шийдвэрийг хүлээн авлаа. Дараагийн алхам нь{" "}

@@ -311,7 +311,7 @@ export default function QueuePage() {
       <ReviewerBadge />
 
       {!signalsEnabled && (
-        <section className="info">
+        <section className="notice notice-warn">
           <p>
             Хариулт хүлээн авах тохиргоо энэ хувилбар дээр идэвхгүй байна.
             Асуултуудыг үзэж болох ч хариулт хадгалагдахгүй.
@@ -320,13 +320,18 @@ export default function QueuePage() {
       )}
 
       {failed && (
-        <section className="info">
+        <section className="notice notice-error">
           <p>
             Жагсаалтыг ачаалж чадсангүй. Сүлжээгээ шалгаад хуудсыг дахин ачаална
             уу.
           </p>
         </section>
       )}
+
+      {/* Between mount and the fetch resolving the page had nothing at all
+          here, which on a slow connection reads as broken. One quiet line;
+          the queue is not a place for a spinner. */}
+      {!queue && !failed && <p className="note">Ачаалж байна…</p>}
 
       {queue && set.length === 0 && (
         <section className="info">

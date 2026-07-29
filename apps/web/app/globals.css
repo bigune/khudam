@@ -578,6 +578,77 @@ textarea,
   gap: 1.1rem;
 }
 
+/* ---- notices ---- */
+
+/* A status the page is reporting, as opposed to something it is teaching.
+   The shape is the reviewer badge's — panel, hairline, a coloured left edge —
+   because that block already means "this line is about right now, not about
+   the product". The edge is the only place the colour appears, and it keeps
+   the palette's one meaning per colour: red = this failed, amber = mind this
+   before you continue, green = this succeeded. Anything still .info is
+   documentation. */
+.notice {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--neutral);
+  border-radius: var(--radius-md);
+}
+
+.notice p {
+  margin: 0;
+}
+
+.notice h2 {
+  margin: 0;
+  font-size: var(--text-md);
+}
+
+.notice-error {
+  border-left-color: var(--error);
+}
+
+.notice-warn {
+  border-left-color: var(--warn);
+}
+
+.notice-ok {
+  border-left-color: var(--verified);
+}
+
+/* ---- badge legend ---- */
+
+/* The three quality tiers shown as the chips they actually are: the reader
+   meets the real badge here once, with its meaning beside it, instead of
+   reconstructing it from a sentence about a checkmark. */
+.legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: var(--text-sm);
+}
+
+.legend li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.legend .badge {
+  flex: 0 0 auto;
+  font-size: var(--text-xs);
+}
+
+.legend-what {
+  color: var(--muted);
+}
+
 /* ---- trusted reviewer ---- */
 
 /* The only block on either page that says something about the reader rather

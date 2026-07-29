@@ -456,14 +456,36 @@ export default function Home() {
         <h2>Өгөгдлийн чанар</h2>
         <p>
           Одоогийн үгсийн сангийн дийлэнх нь машинаар үүсгэгдсэн, хүн хараахан
-          хянаагүй суурь өгөгдөл тул <strong>баталгаажаагүй</strong>. Хүн хянаж
-          баталгаажуулсан хэлбэрийг ✓ тэмдгээр ялгана. Алдааг олон нийтийн хувь
-          нэмрээр аажмаар засаж, баталгаажуулж байна.
+          хянаагүй суурь өгөгдөл тул <strong>баталгаажаагүй</strong>. Алдааг
+          олон нийтийн хувь нэмрээр аажмаар засаж, баталгаажуулж байна.
         </p>
+        {/* The tiers as the chips they actually are, meanings beside them.
+            The sentence this replaces asked the reader to imagine a
+            checkmark; the chip is right here. */}
+        <ul className="legend">
+          <li>
+            <span className="badge verified">баталгаажсан ✓</span>
+            <span className="legend-what">
+              монгол бичиг уншдаг хүн хянаж, зөв гэж баталсан
+            </span>
+          </li>
+          <li>
+            <span className="badge unverified">баталгаажаагүй</span>
+            <span className="legend-what">
+              машинаар орсон, хүн хараахан хянаагүй
+            </span>
+          </li>
+          <li>
+            <span className="badge fallback">галиг · таамаг</span>
+            <span className="legend-what">
+              толь бичигт байхгүй тул дүрмээр галигласан — алдаатай байж болно
+            </span>
+          </li>
+        </ul>
         <p className="en" lang="en">
           Most of the lexicon today is machine-generated seed data no human has
-          reviewed yet, so it is unverified. Human-checked spellings are marked
-          ✓. We correct and verify it gradually through community contributions.
+          reviewed yet, so it is unverified. We correct and verify it gradually
+          through community contributions.
         </p>
         {signalsEnabled && (
           <>
