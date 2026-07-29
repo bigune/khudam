@@ -10,19 +10,23 @@ import {
   addReports,
   addSelections,
   addVerdicts,
+  fastTrack,
   freshRows,
+  isAttested,
+  isDisputed,
   latestTimestamp,
   mechanicalAdditions,
   reportKey,
   resolutionOf,
   suffixSuspects,
   verdictIsOpen,
+  type EntryIndex,
   type Ledger,
   type Report,
   type VerdictTally,
 } from "./aggregate-signals.ts";
 import type { SignalRow } from "./export-signals.ts";
-import type { Entry } from "./lib.ts";
+import { hashGrant, type Entry } from "./lib.ts";
 
 const NNBSP = String.fromCodePoint(0x202f);
 
@@ -428,5 +432,220 @@ describe("reportKey", () => {
     expect(reportKey({ ...base, proposal_sense: "mountain" })).not.toBe(
       reportKey({ ...base, proposal_sense: "original" }),
     );
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Trusted reviewers (contribution pipeline, Phase C)
+
+const GRANT_A = "c51f2be7-6ba8-47d0-9a1c-9334dfc8338b";
+const GRANT_B = "9a1c9334-dfc8-4338-b6ba-847d0c51f2be";
+const GRANT_C = "11111111-2222-4333-8444-555555555555";
+const ROSTER = [
+  { label: "r1", hash: hashGrant(GRANT_A), granted: "2026-07-29" },
+  { label: "r2", hash: hashGrant(GRANT_B), granted: "2026-07-29" },
+  { label: "r3", hash: hashGrant(GRANT_C), granted: "2026-07-29" },
+];
+
+function verdictRow(verdict: boolean, over: Partial<SignalRow> = {}): SignalRow {
+  return row({ signal_type: "verdict", context: "queue", verdict, question_id: "e-1a2b3c4d", ...over });
+}
+
+describe("addVerdicts — attestations", () => {
+  function ledger(): Ledger {
+    return { through: null, reports: [] };
+  }
+
+  test("records a trusted answer by label as well as counting it", () => {
+    const l = ledger();
+    addVerdicts(l, [verdictRow(true, { reviewer_id: GRANT_A })], ROSTER);
+    expect(l.verdicts![0]!.yes).toBe(1);
+    expect(l.verdicts![0]!.attested).toEqual(["r1"]);
+    expect(l.verdicts![0]!.disputed).toBeUndefined();
+  });
+
+  test("one reviewer answering from two browsers is one attestation", () => {
+    // The quorum is people, not sessions — the mailbox cannot dedupe across
+    // browsers, so counting sessions would let one grant reach the threshold.
+    const l = ledger();
+    addVerdicts(
+      l,
+      [
+        verdictRow(true, { reviewer_id: GRANT_A, session_id: "session-a" }),
+        verdictRow(true, { reviewer_id: GRANT_A, session_id: "session-b" }),
+      ],
+      ROSTER,
+    );
+    expect(l.verdicts![0]!.attested).toEqual(["r1"]);
+    expect(isAttested(l.verdicts![0]!)).toBe(false);
+  });
+
+  test("two different reviewers agreeing is the threshold", () => {
+    const l = ledger();
+    addVerdicts(l, [verdictRow(true, { reviewer_id: GRANT_A }), verdictRow(true, { reviewer_id: GRANT_B })], ROSTER);
+    expect(l.verdicts![0]!.attested).toEqual(["r1", "r2"]);
+    expect(isAttested(l.verdicts![0]!)).toBe(true);
+  });
+
+  test("a single trusted no vetoes any number of trusted yeses", () => {
+    const l = ledger();
+    addVerdicts(
+      l,
+      [
+        verdictRow(true, { reviewer_id: GRANT_A }),
+        verdictRow(true, { reviewer_id: GRANT_B }),
+        verdictRow(false, { reviewer_id: GRANT_C }),
+      ],
+      ROSTER,
+    );
+    expect(isAttested(l.verdicts![0]!)).toBe(false);
+    expect(isDisputed(l.verdicts![0]!)).toBe(true);
+  });
+
+  test("a reviewer who changes their mind moves lists rather than appearing in both", () => {
+    const l = ledger();
+    addVerdicts(l, [verdictRow(true, { reviewer_id: GRANT_A })], ROSTER);
+    addVerdicts(l, [verdictRow(false, { reviewer_id: GRANT_A, created_at: "2026-08-08T00:00:00Z" })], ROSTER);
+    expect(l.verdicts![0]!.attested).toBeUndefined();
+    expect(l.verdicts![0]!.disputed).toEqual(["r1"]);
+  });
+
+  test("a stamp nobody was granted counts as an anonymous vote", () => {
+    const l = ledger();
+    addVerdicts(l, [verdictRow(true, { reviewer_id: "00000000-0000-4000-8000-000000000000" })], ROSTER);
+    expect(l.verdicts![0]!.yes).toBe(1);
+    expect(l.verdicts![0]!.attested).toBeUndefined();
+  });
+
+  test("revoking a grant drops the attestations it already gave", () => {
+    const l = ledger();
+    addVerdicts(l, [verdictRow(true, { reviewer_id: GRANT_A }), verdictRow(true, { reviewer_id: GRANT_B })], ROSTER);
+    const afterRevoke: Ledger = { through: null, reports: [] };
+    addVerdicts(
+      afterRevoke,
+      [verdictRow(true, { reviewer_id: GRANT_A }), verdictRow(true, { reviewer_id: GRANT_B })],
+      ROSTER.filter((r) => r.label !== "r2"),
+    );
+    expect(isAttested(l.verdicts![0]!)).toBe(true);
+    expect(isAttested(afterRevoke.verdicts![0]!)).toBe(false);
+    expect(afterRevoke.verdicts![0]!.yes).toBe(2);
+  });
+
+  test("with no roster at all, nothing is trusted", () => {
+    const l = ledger();
+    addVerdicts(l, [verdictRow(true, { reviewer_id: GRANT_A })]);
+    expect(l.verdicts![0]!.attested).toBeUndefined();
+  });
+});
+
+describe("addReports — trusted reports", () => {
+  test("names the reviewer who filed it, and merges labels across drains", () => {
+    const l: Ledger = { through: null, reports: [] };
+    const flag = { signal_type: "flag" as const, proposal_kind: "correction" as const };
+    addReports(l, [row({ ...flag, reviewer_id: GRANT_A })], ROSTER);
+    addReports(l, [row({ ...flag, reviewer_id: GRANT_B, session_id: "session-b" })], ROSTER);
+    expect(l.reports[0]!.sessions).toBe(2);
+    expect(l.reports[0]!.reviewers).toEqual(["r1", "r2"]);
+  });
+
+  test("an anonymous report carries no reviewers field at all", () => {
+    const l: Ledger = { through: null, reports: [] };
+    addReports(l, [row({ signal_type: "flag", proposal_kind: "correction" })], ROSTER);
+    expect("reviewers" in l.reports[0]!).toBe(false);
+  });
+});
+
+describe("fastTrack", () => {
+  function tally(over: Partial<VerdictTally> = {}): VerdictTally {
+    return {
+      cyrillic: "уул",
+      traditional: "ᠤᠤᠯ",
+      yes: 2,
+      no: 0,
+      attested: ["r1", "r2"],
+      first_seen: "2026-08-01T00:00:00Z",
+      last_seen: "2026-08-01T00:00:00Z",
+      ...over,
+    };
+  }
+
+  function index(...entries: Entry[]): EntryIndex {
+    return new Map(entries.map((e) => [e.cyrillic, { entry: e, file: "/repo/data/lexicon/у.json" }]));
+  }
+
+  test("stages a candidate two trusted reviewers attested", () => {
+    const staged = fastTrack([tally()], index(structuredClone(UUL)));
+    expect(staged).toHaveLength(1);
+    expect(staged[0]!.candidate.traditional).toBe("ᠤᠤᠯ");
+    expect(staged[0]!.file).toBe("/repo/data/lexicon/у.json");
+  });
+
+  test("stages nothing on one attestation, or on anonymous agreement alone", () => {
+    expect(fastTrack([tally({ attested: ["r1"] })], index(structuredClone(UUL)))).toEqual([]);
+    expect(fastTrack([tally({ attested: undefined, yes: 40 })], index(structuredClone(UUL)))).toEqual([]);
+  });
+
+  test("stages nothing when a trusted reviewer disagrees", () => {
+    expect(fastTrack([tally({ disputed: ["r3"] })], index(structuredClone(UUL)))).toEqual([]);
+  });
+
+  test("leaves an already verified candidate alone", () => {
+    const verified: Entry = {
+      cyrillic: "уул",
+      candidates: [{ traditional: "ᠤᠤᠯ", verified: true, source: "manual" }],
+    };
+    expect(fastTrack([tally()], index(verified))).toEqual([]);
+  });
+
+  test("cannot stage a composed suffix candidate, which lives in no file", () => {
+    const composed = tally({ cyrillic: "номын", traditional: `ᠨᠣᠮ${NNBSP}ᠤᠨ` });
+    expect(fastTrack([composed], index(structuredClone(UUL)))).toEqual([]);
+  });
+
+  test("cannot stage a spelling the entry does not have", () => {
+    expect(fastTrack([tally({ traditional: "ᠠᠭᠤᠯᠠ" })], index(structuredClone(UUL)))).toEqual([]);
+  });
+
+  test("orders by weight of attestation, so the cap keeps the strongest", () => {
+    const two = tally({ cyrillic: "ном", traditional: "ᠨᠣᠮ" });
+    const three = tally({ attested: ["r1", "r2", "r3"] });
+    const entries = index(structuredClone(UUL), {
+      cyrillic: "ном",
+      candidates: [{ traditional: "ᠨᠣᠮ", verified: false, source: "wmk-import" }],
+    });
+    expect(fastTrack([two, three], entries).map((s) => s.tally.cyrillic)).toEqual(["уул", "ном"]);
+  });
+});
+
+describe("verdictIsOpen — trusted disputes", () => {
+  const verified: Entry = {
+    cyrillic: "уул",
+    candidates: [{ traditional: "ᠤᠤᠯ", verified: true, source: "manual" }],
+  };
+  const base: VerdictTally = {
+    cyrillic: "уул",
+    traditional: "ᠤᠤᠯ",
+    yes: 1,
+    no: 1,
+    first_seen: "2026-08-01T00:00:00Z",
+    last_seen: "2026-08-01T00:00:00Z",
+  };
+
+  test("a verified candidate normally settles its tally", () => {
+    expect(verdictIsOpen(base, lexiconOf(verified))).toBe(false);
+  });
+
+  test("a trusted no about a verified candidate keeps being asked", () => {
+    // Two people who read the script contradicting each other is the one thing
+    // this pipeline must not quietly close.
+    expect(verdictIsOpen({ ...base, disputed: ["r3"] }, lexiconOf(verified))).toBe(true);
+  });
+
+  test("but a form that is gone stays gone", () => {
+    const replaced: Entry = {
+      cyrillic: "уул",
+      candidates: [{ traditional: "ᠠᠭᠤᠯᠠ", verified: true, source: "manual" }],
+    };
+    expect(verdictIsOpen({ ...base, disputed: ["r3"] }, lexiconOf(replaced))).toBe(false);
   });
 });
