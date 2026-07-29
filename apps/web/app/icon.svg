@@ -2,7 +2,9 @@
   <!-- Not a letter. Every Mongol bichig word hangs off one vertical spine and
        opens with a crown stroke; this is that shape and nothing more specific,
        because a real glyph drawn by hand here would be an encoding claim the
-       data does not make. Colours are --bg/--panel and --ink from globals.css. -->
+       data does not make. Colours mirror the bg/panel and ink tokens in
+       globals.css. (No double hyphen may appear in this comment: SVG is
+       strict XML, and one broke the whole favicon once.) -->
   <style>
     .paper { fill: #faf9f7 }
     .ink { fill: #1a1c1e }
