@@ -11,11 +11,21 @@ mailbox**: the converter writes anonymous signals into one table, a weekly job
 drains it into a pull request, and a human merging that PR is the only thing
 that ever changes the lexicon.
 
-Losing this project entirely loses at most one week of signals and **no
-canonical data**. Treat it accordingly — do not add anything here that would
-be painful to lose, and never let it become a source of truth.
+Two tables, both mailboxes and neither a source of truth:
 
-Signals are not verification. Nothing written here may set `verified: true`.
+| Table | Who writes | Repeats | Drained |
+| --- | --- | --- | --- |
+| `signals` | mostly anonymous visitors | deduplicated, first wins | weekly |
+| `decisions` | trusted reviewers, on `/review` | newest per reviewer + spelling wins | when the review PR is built |
+
+Losing this project entirely loses at most one week of signals plus one review
+session of decisions, and **no canonical data**. Treat it accordingly — do not
+add anything here that would be painful to lose, and never let it become a
+source of truth.
+
+Signals are not verification. Nothing written here may set `verified: true` by
+itself: a `decisions` row only becomes a flip after the aggregator matches its
+stamp against the roster **in git** and a human merges the diff it lands in.
 
 ## Setup
 
@@ -301,3 +311,45 @@ flip is staged. One trusted no vetoes it however many yeses there are, and opens
 a "trusted reviewers disagree" section that no amount of time closes. One
 reviewer answering from two browsers is still one label, which is why the quorum
 counts labels rather than sessions.
+
+## Expert review
+
+Traditional script cannot be judged in a diff — several distinct letters share
+identical glyphs, and a diff renders nothing — so the judgement happens on a
+page that renders it properly, and the maintainer's job is merging an
+already-judged pull request.
+
+**The page reads from git, not from here.** `/review` fetches
+`review-bundle.json`, compiled from `data/stats/reports.json` at deploy time by
+`bun run build:review-bundle`, exactly like the queue. It needs **no read access
+to this database** — no view, no RLS exception, no leak surface. The cost is
+latency: a vote cast today reaches the reviewer after the next weekly merge and
+deploy. That is the right trade at this project's cadence.
+
+**Send inserts, and only inserts.** Pressing send files `decisions` rows. The
+page cannot create a pull request and holds no credential that could — the anon
+key it carries can insert into this table and do nothing else.
+
+**The soft lock.** Before showing the bundle the page asks GitHub's public REST
+API whether a `signals/…` pull request is open. One is → it shows "waiting for
+merge" instead, because decisions judged against a stale bundle would be
+transcribed onto data that has already moved. No state is stored anywhere for
+this; a PR closed *without* merging releases the lock by itself, and the
+decisions it carried survive in the workflow artifact.
+
+**Draining.** Run `signals.yml` by hand (Actions → signals → Run workflow) after
+a review session. The same job drains both tables, hash-checks every stamp,
+transcribes the surviving decisions into the diff, and opens one pull request:
+
+```sh
+bun run signals:export signals.jsonl decisions.jsonl          # read, never deletes
+bun run signals:aggregate signals.jsonl --decisions decisions.jsonl
+bun run validate
+bun run signals:export --delete signals.jsonl decisions.jsonl # once committed
+```
+
+**What a decision may do to the data.** `verify` flips a stored candidate to
+`verified: true`. `accept_proposal` adds a proposed spelling as a new
+`verified: true` candidate. `reject` changes nothing — it is written up in
+`data/REVIEW.md` for a human, because removing a candidate is the one edit that
+can lose data and a leaked grant must not be able to cause it.

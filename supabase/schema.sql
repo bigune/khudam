@@ -1,9 +1,16 @@
 -- Khudam community signal mailbox.
 --
--- Git is the database of record. This table is a DISPOSABLE MAILBOX: the
--- weekly export job drains it into a pull request and deletes what it took,
+-- Git is the database of record. These tables are a DISPOSABLE MAILBOX: the
+-- weekly export job drains them into a pull request and deletes what it took,
 -- so losing this project loses at most a week of signals and never canonical
 -- data. Nothing here is authoritative; nothing here sets `verified: true`.
+--
+-- Two tables, because two different things arrive:
+--   signals   — what visitors report from the converter and the queue, mostly
+--               anonymous, deduplicated, drained weekly.
+--   decisions — what a trusted reviewer decided on the expert review page,
+--               always stamped, superseding, drained when the review PR is
+--               built. See "Expert review decisions" below.
 --
 -- Apply to a fresh Supabase project with:
 --   psql "$SUPABASE_DB_URL" -f supabase/schema.sql
@@ -363,6 +370,171 @@ alter table public.signals enable row level security;
 drop policy if exists "anon inserts signals" on public.signals;
 create policy "anon inserts signals"
   on public.signals
+  for insert
+  to anon
+  with check (true);
+
+-- ---------------------------------------------------------------------------
+-- Expert review decisions
+-- ---------------------------------------------------------------------------
+
+-- What a trusted reviewer decided on the expert review page.
+--
+-- Separate from `signals` because every dimension differs. A signal is mostly
+-- anonymous, deduplicated first-wins, and drained on a fixed weekly schedule.
+-- A decision is always stamped, SUPERSEDING rather than deduplicated -- a
+-- reviewer who changes their mind before the drain must be able to -- and is
+-- drained when the review pull request is built, which is what releases the
+-- soft lock on the page.
+--
+-- Every row is one judgement about one spelling, self-describing:
+--
+--   verify           `traditional` is a stored candidate of `cyrillic`, and it
+--                    is right. This is the row that becomes `verified: true`.
+--   reject           `traditional` is a stored candidate, and it is not a
+--                    written form of this word for any meaning. Nothing is
+--                    deleted mechanically -- removing a candidate is the one
+--                    edit that can lose data, so a rejection is written into
+--                    data/REVIEW.md for a human to act on.
+--   accept_proposal  `traditional` is a spelling somebody PROPOSED and the
+--                    lexicon does not hold, and it should be added.
+--
+-- `traditional` is therefore always the spelling being judged, never an anchor
+-- to something else. "This stored form is wrong and here is the right one" is
+-- two independent judgements about two different spellings, so it is two rows,
+-- and each stands on its own if the other is dropped.
+--
+-- The stamp is `not null` here because a decision without one is meaningless,
+-- but that column documents intent and nothing more: this database holds no
+-- roster and cannot tell a real grant from an invented one. Validity is decided
+-- only by scripts/aggregate-signals.ts matching the SHA-256 hash against
+-- data/reviewers.json, in the repository, at transcription time. Rows carrying
+-- an unknown grant are discarded and counted in the job's summary.
+create table if not exists public.decisions (
+  id          bigint generated always as identity primary key,
+  created_at  timestamptz not null default now(),
+
+  -- The spelling being judged. `cyrillic` is NFC and lowercase, as normalized
+  -- by the engine; `traditional` is standard Unicode with NNBSP where a suffix
+  -- is written apart.
+  cyrillic    text not null,
+  traditional text not null,
+
+  action      text not null,
+
+  -- The meaning label, for an accepted proposal only.
+  --
+  -- Load-bearing rather than decorative: the entry schema requires a `sense` on
+  -- every candidate once an entry holds more than one, so a proposal accepted
+  -- into an entry that already has a candidate cannot be transcribed without
+  -- one. Where it is missing the acceptance is not lost -- it is written up in
+  -- data/REVIEW.md as an entry needing a label, which is a smaller ask of the
+  -- maintainer than judging the spelling would have been.
+  sense       text,
+
+  -- Which grant the browser held. Never a name, never resolved to a person.
+  reviewer_id uuid not null
+);
+
+comment on table public.decisions is
+  'Disposable mailbox of trusted-reviewer decisions. Drained when the review PR is built; git is the database of record.';
+
+-- Constraints, dropped and re-added by name for the same reason as the signals
+-- constraints above: `create table if not exists` is a no-op on a live project,
+-- so anything declared inline would silently never reach it.
+alter table public.decisions drop constraint if exists decisions_action_check;
+alter table public.decisions add  constraint decisions_action_check
+  check (action in ('verify', 'reject', 'accept_proposal'));
+
+alter table public.decisions drop constraint if exists decisions_cyrillic_len;
+alter table public.decisions add  constraint decisions_cyrillic_len
+  check (char_length(cyrillic) between 1 and 64);
+
+alter table public.decisions drop constraint if exists decisions_traditional_len;
+alter table public.decisions add  constraint decisions_traditional_len
+  check (char_length(traditional) between 1 and 128);
+
+alter table public.decisions drop constraint if exists decisions_sense_len;
+alter table public.decisions add  constraint decisions_sense_len
+  check (char_length(sense) <= 200);
+
+-- Code-point validation, identical in intent to the signals constraints above
+-- and written the same way -- U&'' escapes rather than literal characters,
+-- because NNBSP is invisible and a bracket range is collation-dependent.
+alter table public.decisions drop constraint if exists decisions_cyrillic_charset;
+alter table public.decisions add  constraint decisions_cyrillic_charset
+  check (cyrillic ~ U&'^[\0430-\044F\0451\04AF\04E9]+$');
+
+alter table public.decisions drop constraint if exists decisions_traditional_charset;
+alter table public.decisions add  constraint decisions_traditional_charset
+  check (traditional ~ U&'^[\1800-\18AF\202F]+$');
+
+alter table public.decisions drop constraint if exists decisions_sense_clean;
+alter table public.decisions add  constraint decisions_sense_clean
+  check (sense is null or
+         (btrim(sense) <> '' and sense !~ '[[:cntrl:]]'));
+
+-- A meaning label answers a question only `accept_proposal` asks. Saying so as
+-- a constraint keeps a future page from quietly attaching one to a `verify`,
+-- where the transcriber would ignore it and the reviewer would never know.
+alter table public.decisions drop constraint if exists decisions_sense_shape;
+alter table public.decisions add  constraint decisions_sense_shape
+  check (sense is null or action = 'accept_proposal');
+
+-- The drain reads oldest-first and deletes what it took.
+create index if not exists decisions_created_at_idx
+  on public.decisions (created_at);
+
+-- Supports both the rate-limit trigger below and the supersede rule the
+-- transcriber applies: newest row per (reviewer, cyrillic, traditional) wins.
+create index if not exists decisions_reviewer_recent_idx
+  on public.decisions (reviewer_id, created_at);
+
+-- Rate limiting. The same speed bump as `signals`, for the same reason: the
+-- anon role may insert here, so `reviewer_id` is a claim rather than an
+-- identity, and a flood would cost a maintainer their time even though the
+-- hash check discards every row of it. A real review session sends one batch of
+-- a few hundred rows at most.
+--
+-- SECURITY DEFINER so the count can read rows the anon role cannot select.
+create or replace function public.decisions_rate_limit()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  recent integer;
+begin
+  select count(*) into recent
+    from public.decisions
+   where reviewer_id = new.reviewer_id
+     and created_at > now() - interval '1 hour';
+
+  if recent >= 2000 then
+    raise exception 'khudam: decision rate limit reached for this reviewer'
+      using errcode = 'check_violation';
+  end if;
+
+  return new;
+end;
+$$;
+
+drop trigger if exists decisions_rate_limit_trg on public.decisions;
+create trigger decisions_rate_limit_trg
+  before insert on public.decisions
+  for each row execute function public.decisions_rate_limit();
+
+-- Same posture as `signals`: insert and nothing else. The review page holds no
+-- credential beyond the published anon key, so it cannot read back what other
+-- reviewers decided, cannot amend the roster, and cannot touch the repository.
+-- A static page that could write to the repository would break zero-ops, and
+-- would put the one secret that matters into every visitor's browser.
+alter table public.decisions enable row level security;
+
+drop policy if exists "anon inserts decisions" on public.decisions;
+create policy "anon inserts decisions"
+  on public.decisions
   for insert
   to anon
   with check (true);
