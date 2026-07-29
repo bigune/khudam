@@ -178,6 +178,27 @@ export interface VerdictTally {
   last_seen: string;
 }
 
+/**
+ * One flip the fast track staged, remembered so revocation can find it again.
+ *
+ * The tally that earned a flip leaves the ledger the moment the candidate is
+ * verified — its question is answered — so without this record, "which labels
+ * stood behind that verification" would live only in git history, where no
+ * script can act on it. This is the line the single-reviewer era rests on:
+ * every `verified: true` this pipeline ever wrote is auditable here, and
+ * `revokedFlips` reads it to unwind the ones whose grants are all gone.
+ */
+export interface Flip {
+  cyrillic: string;
+  traditional: string;
+  /** The labels that stood behind it when it was staged. Kept verbatim,
+   *  revoked or not — this records what happened; what a label is currently
+   *  worth is the roster's business, not this record's. */
+  labels: string[];
+  /** ISO date of the run that staged it. */
+  date: string;
+}
+
 export interface Ledger {
   /** Latest `created_at` already folded in. Rows at or before it are ignored,
    *  so a re-run — or a week whose delete failed and re-exported the same
@@ -196,6 +217,8 @@ export interface Ledger {
   decisions_through?: number | null;
   reports: Report[];
   verdicts?: VerdictTally[];
+  /** Every fast-track flip ever staged, one record each. See `Flip`. */
+  flips?: Flip[];
 }
 
 // ---------------------------------------------------------------------------
@@ -776,6 +799,59 @@ export function fastTrack(tallies: readonly VerdictTally[], index: EntryIndex): 
   );
 }
 
+/** One verification this run unwinds, and where it lives. */
+export interface RevertedFlip {
+  flip: Flip;
+  file: string;
+  candidate: Candidate;
+}
+
+/**
+ * The other end of the fast track: flips whose every grant is now revoked.
+ *
+ * A fast-tracked verification is an attestation this pipeline transcribed, so
+ * when the grants behind one are all tombstoned it has nothing left under it,
+ * and this run stages `verified: false` in the same kind of diff that once
+ * staged the opposite. The maintainer merges the revert exactly as they merged
+ * the flip — and dropping it from the pull request is how they say the
+ * spelling now stands on their own judgement instead, which is the one thing
+ * that outranks a lost attestation.
+ *
+ * While any label on a flip is still active the flip stands untouched. A
+ * record leaves the ledger when it stops meaning anything: the revert was
+ * staged, the candidate is gone, or somebody already unverified it by hand.
+ * Verifications a human wrote directly into an entry have no record here and
+ * are never touched — revocation unwinds what the pipeline did, not what a
+ * person decided.
+ */
+export function revokedFlips(
+  flips: readonly Flip[],
+  roster: readonly Reviewer[],
+  index: EntryIndex,
+): { keep: Flip[]; reverts: RevertedFlip[] } {
+  const active = new Set(roster.filter((r) => r.revoked === undefined).map((r) => r.label));
+  const keep: Flip[] = [];
+  const reverts: RevertedFlip[] = [];
+  for (const flip of flips) {
+    if (flip.labels.some((l) => active.has(l))) {
+      keep.push(flip);
+      continue;
+    }
+    const found = index.get(flip.cyrillic);
+    const candidate = found?.entry.candidates.find((c) => c.traditional === flip.traditional);
+    if (candidate === undefined || !candidate.verified) continue;
+    reverts.push({ flip, file: found!.file, candidate });
+  }
+  return {
+    keep,
+    reverts: reverts.sort(
+      (a, b) =>
+        compareWords(a.flip.cyrillic, b.flip.cyrillic) ||
+        compareWords(a.flip.traditional, b.flip.traditional),
+    ),
+  };
+}
+
 // ---------------------------------------------------------------------------
 // Files
 
@@ -851,13 +927,21 @@ function writeLedger(ledger: Ledger): void {
       out.last_seen = r.last_seen;
       return out as Report;
     });
+  const flips = [...(ledger.flips ?? [])]
+    .sort((a, b) => compareWords(a.cyrillic, b.cyrillic) || compareWords(a.traditional, b.traditional))
+    .map((f) => ({ cyrillic: f.cyrillic, traditional: f.traditional, labels: f.labels, date: f.date }));
   const head: { through: string | null; decisions_through?: number } = { through: ledger.through };
   // Omitted entirely until a decision has ever been transcribed, so a project
   // that has not used the review page yet has no field to explain.
   if (ledger.decisions_through !== null && ledger.decisions_through !== undefined) {
     head.decisions_through = ledger.decisions_through;
   }
-  writeFileSync(REPORTS_FILE, JSON.stringify({ ...head, reports, verdicts }, null, 2) + "\n", "utf8");
+  // `flips` likewise appears only once the fast track has ever staged one.
+  writeFileSync(
+    REPORTS_FILE,
+    JSON.stringify({ ...head, reports, verdicts, ...(flips.length > 0 ? { flips } : {}) }, null, 2) + "\n",
+    "utf8",
+  );
 }
 
 // ---------------------------------------------------------------------------
@@ -973,6 +1057,8 @@ interface Review {
   staged: Staged[];
   /** Eligible flips left for next week by the per-pull-request cap. */
   heldBack: number;
+  /** Verifications unwound because every grant behind them was revoked. */
+  reverts: RevertedFlip[];
   /** Proposals a trusted reviewer accepted — written, and not written. */
   accepted: Acceptance[];
   tallies: VerdictTally[];
@@ -989,6 +1075,7 @@ function renderReview({
   added,
   staged,
   heldBack,
+  reverts,
   accepted,
   tallies,
   lexicon,
@@ -1053,6 +1140,27 @@ function renderReview({
         `${plural(heldBack, "more candidate")} also qualified and ${heldBack === 1 ? "was" : "were"} ` +
           `left for next week: at most ${MAX_FAST_TRACK} flips ship per pull request, because a ` +
           "fast-track section too long to read is a section that gets merged unread.",
+      );
+    }
+    lines.push("");
+  }
+
+  if (reverts.length > 0) {
+    lines.push(`### Un-verified by revocation (${reverts.length})`);
+    lines.push("");
+    lines.push(
+      "Every grant behind each verification below has been revoked, so this pull request sets " +
+        "the candidate back to `verified: false`. The spelling itself stays — un-verifying loses " +
+        "nothing that a fresh attestation cannot restore. To keep one verified anyway, drop its " +
+        "change from the diff: that is you standing behind the spelling yourself, which is " +
+        "exactly what `verified: true` means.",
+    );
+    lines.push("");
+    for (const { flip, file } of reverts) {
+      const where = dataPath(file);
+      lines.push(
+        `- **${flip.cyrillic}** — \`${flip.traditional}\` — was ${fmtLabels(flip.labels)}, ` +
+          `verified ${flip.date} — [${where}](${where.replace(/^data\//u, "")})`,
       );
     }
     lines.push("");
@@ -1422,6 +1530,13 @@ function main(): void {
   const appliedKeys = new Set(additions.map((a) => reportKey(a.report)));
   const stillOpen = open.filter((r) => !appliedKeys.has(reportKey(r)));
 
+  // Verifications whose every grant has been revoked are unwound before new
+  // ones are staged: the revert happens in the same diff, under the same
+  // merge, and a candidate reverted here can be re-verified by an active
+  // reviewer's attestation in the very next line.
+  const { keep: flipsKept, reverts } = revokedFlips(ledger.flips ?? [], roster, index);
+  for (const { candidate } of reverts) candidate.verified = false;
+
   // The fast track, applied before anything is written: two different trusted
   // reviewers said yes, none said no. Flipping the candidate in place is what
   // puts it in the diff the maintainer merges — the only route by which this
@@ -1430,10 +1545,19 @@ function main(): void {
   const staged = eligible.slice(0, MAX_FAST_TRACK);
   const heldBack = eligible.length - staged.length;
   for (const { candidate } of staged) candidate.verified = true;
+  ledger.flips = [
+    ...flipsKept,
+    ...staged.map(({ tally }) => ({
+      cyrillic: tally.cyrillic,
+      traditional: tally.traditional,
+      labels: [...(tally.attested ?? [])],
+      date: now.toISOString().slice(0, 10),
+    })),
+  ];
 
   // New entries go into their shards, which stay sorted; the flips above are in
   // files already loaded and need no reordering.
-  const touched = new Set([...staged.map((s) => s.file), ...acceptedFiles]);
+  const touched = new Set([...staged.map((s) => s.file), ...reverts.map((r) => r.file), ...acceptedFiles]);
   const resorted = new Set(acceptedResorted);
   for (const { entry } of additions) {
     const file = shardFileFor(entry.cyrillic);
@@ -1464,6 +1588,7 @@ function main(): void {
       added: additions,
       staged,
       heldBack,
+      reverts,
       accepted,
       tallies: openTallies,
       lexicon,
@@ -1487,6 +1612,10 @@ function main(): void {
       ? `- ✓ **${plural(staged.length, "candidate")}** staged \`verified: true\` — ` +
         `${fmtThreshold()} each, none disagreeing` +
         (heldBack > 0 ? ` (${heldBack} more qualified, held for next week)` : "")
+      : "",
+    reverts.length > 0
+      ? `- ⚠ **${plural(reverts.length, "verification")}** unwound to \`verified: false\` — ` +
+        `every grant behind ${reverts.length === 1 ? "it" : "each"} has been revoked`
       : "",
     writtenCount > 0
       ? `- ✓ **${plural(writtenCount, "proposed spelling")}** a trusted reviewer accepted, ` +
@@ -1558,8 +1687,9 @@ function main(): void {
   // generated prose back is how a rename becomes a silent behaviour change.
   if (titleFile !== undefined) {
     const date = now.toISOString().slice(0, 10);
-    const flips = staged.length > 0 ? ` · ${plural(staged.length, "verification")} staged` : "";
-    writeFileSync(titleFile, `Community signals — ${date}${flips}\n`, "utf8");
+    const flipped = staged.length > 0 ? ` · ${plural(staged.length, "verification")} staged` : "";
+    const unwound = reverts.length > 0 ? ` · ${plural(reverts.length, "verification")} unwound` : "";
+    writeFileSync(titleFile, `Community signals — ${date}${flipped}${unwound}\n`, "utf8");
   }
   console.log(summary.replaceAll("**", ""));
 }

@@ -20,6 +20,7 @@ import {
   pruneRevoked,
   reportKey,
   resolutionOf,
+  revokedFlips,
   acceptances,
   decisionVerdicts,
   freshDecisions,
@@ -28,6 +29,7 @@ import {
   supersede,
   verdictIsOpen,
   type EntryIndex,
+  type Flip,
   type Ledger,
   type Report,
   type VerdictTally,
@@ -733,6 +735,61 @@ describe("fastTrack", () => {
       candidates: [{ traditional: "ᠨᠣᠮ", verified: false, source: "wmk-import" }],
     });
     expect(fastTrack([two, three], entries).map((s) => s.tally.cyrillic)).toEqual(["уул", "ном"]);
+  });
+});
+
+describe("revokedFlips", () => {
+  function flip(over: Partial<Flip> = {}): Flip {
+    return { cyrillic: "уул", traditional: "ᠤᠤᠯ", labels: ["r1"], date: "2026-08-01", ...over };
+  }
+
+  function indexOf(...entries: Entry[]): EntryIndex {
+    return new Map(entries.map((e) => [e.cyrillic, { entry: e, file: "/repo/data/lexicon/у.json" }]));
+  }
+
+  const VERIFIED: Entry = {
+    cyrillic: "уул",
+    candidates: [{ traditional: "ᠤᠤᠯ", verified: true, source: "wmk-import" }],
+  };
+
+  function revoked(...labels: string[]) {
+    return ROSTER.map((r) => (labels.includes(r.label) ? { ...r, revoked: "2026-08-02" } : r));
+  }
+
+  test("a flip stands untouched while one of its labels is active", () => {
+    const { keep, reverts } = revokedFlips([flip({ labels: ["r1", "r2"] })], revoked("r2"), indexOf(VERIFIED));
+    expect(reverts).toEqual([]);
+    // Kept verbatim — the record says who stood behind it, not who still does.
+    expect(keep).toEqual([flip({ labels: ["r1", "r2"] })]);
+  });
+
+  test("unwinds a flip whose every grant is revoked, and drops its record", () => {
+    const { keep, reverts } = revokedFlips([flip()], revoked("r1"), indexOf(structuredClone(VERIFIED)));
+    expect(keep).toEqual([]);
+    expect(reverts).toHaveLength(1);
+    expect(reverts[0]!.flip.cyrillic).toBe("уул");
+    // The caller applies the write; this only stages it.
+    expect(reverts[0]!.candidate.verified).toBe(true);
+  });
+
+  test("a candidate that is gone has nothing to unwind — the record just leaves", () => {
+    const { keep, reverts } = revokedFlips([flip()], revoked("r1"), indexOf());
+    expect(keep).toEqual([]);
+    expect(reverts).toEqual([]);
+  });
+
+  test("a candidate already unverified by hand is left alone", () => {
+    const { keep, reverts } = revokedFlips([flip()], revoked("r1"), indexOf(structuredClone(UUL)));
+    expect(keep).toEqual([]);
+    expect(reverts).toEqual([]);
+  });
+
+  test("a hand-verified spelling has no record here and is never touched", () => {
+    // Revocation unwinds what the pipeline did, not what a person decided:
+    // only fast-track flips write records, so a verification typed into an
+    // entry by a human is simply not in this ledger.
+    const { reverts } = revokedFlips([], revoked("r1"), indexOf(VERIFIED));
+    expect(reverts).toEqual([]);
   });
 });
 
