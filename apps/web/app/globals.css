@@ -36,6 +36,11 @@
   --text-mong: 1.4rem;
   --text-mong-lg: 1.7rem;
 
+  /* The one column everything hangs in — the page and the bar above it, which
+     is what keeps the header's hairline on the same rhythm as the rules
+     between sections. */
+  --column: 780px;
+
   /* Radius: inline controls · containers · pills. Nothing else. */
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -107,17 +112,70 @@ h2 {
 }
 
 main {
-  max-width: 780px;
+  max-width: var(--column);
   margin: 0 auto;
-  padding: 2.5rem 1.25rem 4rem;
+  /* Less air on top than the page used to open with: the site header now
+     occupies that space, and its hairline is where the page begins. */
+  padding: 1.5rem 1.25rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-/* ---- header ---- */
+/* ---- site header ---- */
 
-header {
+/* The mark and the name on the page's left axis, the reader's own controls at
+   the right end — the same shape as a field label carrying its button. It sits
+   in the page's column rather than bleeding to the window edges, so the rule
+   under it belongs to the same rhythm as the rules between sections. */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--column);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-mark {
+  flex: 0 0 auto;
+}
+
+/* The wordmark, in both places the site signs its name. */
+.brand-name,
+.footer-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+}
+
+/* The name answers, not the mark: an open book turning blue reads as a
+   rendering fault rather than as a hover. */
+.brand:hover .brand-name,
+.brand:focus-visible .brand-name {
+  text-decoration: underline;
+}
+
+.site-header-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ---- page header ---- */
+
+/* What the page itself is: a title, its gloss, and a line of small print. Named
+   by exclusion because both are <header> — the site's is a bar and this one is
+   a stack, and no page has two of either. */
+header:not(.site-header) {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -132,22 +190,9 @@ h1 {
   text-wrap: balance;
 }
 
-/* The title's line, with the theme toggle at its far end — the same shape as
-   the output label carrying the copy button: one left-axis text, one quiet
-   utility on the right. The h1 keeps first claim on the width, so on a phone
-   a long title wraps beside the button rather than under it. */
-.header-bar {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
 .theme-toggle {
   flex: 0 0 auto;
   white-space: nowrap;
-  /* Optically on the h1's first line rather than the header's edge. */
-  margin-top: 0.3rem;
 }
 
 .subtitle {
@@ -1467,14 +1512,6 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-}
-
-/* The headword voice, small: the footer names the site the way the page
-   title does, not the way a paragraph does. */
-.footer-name {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--text-md);
 }
 
 .footer-tag {

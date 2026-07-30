@@ -11,7 +11,6 @@ import {
 import { ProposalForm } from "../proposal-form";
 import { ReviewerBadge } from "../reviewer-badge";
 import { SiteFooter } from "../site-footer";
-import { ThemeToggle } from "../theme-toggle";
 
 /**
  * The verification queue: one spelling at a time, answered by people who read
@@ -293,10 +292,7 @@ export default function QueuePage() {
   return (
     <main>
       <header>
-        <div className="header-bar">
-          <h1>Хянагдахаар хүлээгдэж буй үгс</h1>
-          <ThemeToggle />
-        </div>
+        <h1>Хянагдахаар хүлээгдэж буй үгс</h1>
         <p className="subtitle">
           Монгол бичиг уншдаг хүн бүрийн нэг минут хэрэгтэй
         </p>

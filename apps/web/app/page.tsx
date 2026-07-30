@@ -14,7 +14,6 @@ import {
 import { ReportDialog, type ReportTarget } from "./report-dialog";
 import { ReviewerBadge } from "./reviewer-badge";
 import { SiteFooter } from "./site-footer";
-import { ThemeToggle } from "./theme-toggle";
 
 const SAMPLES = ["монгол бичиг", "сайн байна уу", "уул ус"];
 
@@ -202,11 +201,10 @@ export default function Home() {
   return (
     <main>
       <header>
-        <div className="header-bar">
-          <h1>Худам</h1>
-          <ThemeToggle />
-        </div>
-        <p className="subtitle">Нээлттэй монгол бичиг хөрвүүлэгч</p>
+        {/* The site header above says whose page this is, so the title says
+            what the page does — and what it does is the project's own name for
+            itself, which used to sit beneath a headline repeating the brand. */}
+        <h1>Нээлттэй монгол бичиг хөрвүүлэгч</h1>
         <p className="en" lang="en">
           open-source Cyrillic → Traditional Mongolian Script converter
         </p>

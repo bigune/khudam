@@ -4,6 +4,7 @@ import { PT_Sans, PT_Serif } from "next/font/google";
 import localFont from "next/font/local";
 import { THEME_BG, THEME_KEY } from "../lib/theme";
 import "./globals.css";
+import { SiteHeader } from "./site-header";
 
 // Self-hosted FULL Noto Sans Mongolian (v3.002, OFL — see fonts/OFL.txt).
 // Do not switch to next/font/google: Google Fonts serves this family sliced
@@ -88,6 +89,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body>
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOT }} />
+        {/* Above <main> rather than inside it, so it is the document's banner
+            landmark and every page — including the 404 — gets it for free. */}
+        <SiteHeader />
         {children}
         <Analytics />
       </body>
