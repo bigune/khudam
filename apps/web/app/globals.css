@@ -508,6 +508,13 @@ textarea,
   flex-wrap: wrap;
   align-items: stretch;
   gap: 0.45rem;
+  /* Cards in a row are stretched to the tallest of them, and this is what
+     decides where that borrowed height goes. Growing the specimens means it
+     lands above their captions rather than below the buttons — so every badge
+     in a row sits on one line, and so does every row of buttons under them. It
+     used to pool at the bottom of the shorter cards, which left three cards'
+     worth of ✓ зөв at three different heights. */
+  flex-grow: 1;
 }
 
 /* ---- the same cards, on a screen with a mouse ---- */
