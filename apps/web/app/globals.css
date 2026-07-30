@@ -737,11 +737,12 @@ textarea,
   color: var(--warn);
 }
 
-/* Neutral, not amber: a composed form is a stem this lexicon holds plus a
-   suffix rule with citations behind it, which is a different claim from "a
-   machine guessed this". */
+/* Neutral for both of the marks that report an ordinary state: unverified is
+   what nearly every spelling is, and a composed form is a stem this lexicon
+   holds plus a suffix rule with citations behind it — a different claim from
+   "a machine guessed this", and not one to spend the caution colour on. */
 .mark.composed,
-.mark.none {
+.mark.unverified {
   color: var(--neutral);
 }
 

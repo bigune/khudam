@@ -26,17 +26,25 @@ const DATA_LICENSE_URL = `${REPO_URL}/blob/main/data/LICENSE`;
 /**
  * The stamps in a chip's corner, and what they mean.
  *
- * Unverified carries no mark at all, and that is the whole design: exactly one
- * of the 28,511 recorded spellings is verified today, so a pill reading
- * «баталгаажаагүй» said the same thing 28,510 times and cost a line of every
- * card to do it. A mark now means something happened to this spelling — a human
- * read it, a rule built it, or a machine guessed it — and the absence of one is
- * the ordinary state of the lexicon, said once in the key beside the section
- * label instead of once per candidate.
+ * Two things are being said at once, so a chip can carry two marks: where the
+ * spelling came from — a rule built it (+), a machine guessed it (≈), or the
+ * lexicon holds it (nothing to say) — and whether a human has read it (✓ or ?).
  *
- * `long` is the tooltip and the accessible name; `short` is for that key.
- * Neither a tooltip nor a hover exists on a thumb, which is why the key shows
- * the words for whichever marks the reader's own text actually produced.
+ * Every candidate with a verification state wears one, and that is deliberate.
+ * A green ✓ alone, on one chip of several a reader is being asked to choose
+ * between, reads as «take this one» rather than as «somebody checked this one»;
+ * beside a neutral ?, it goes back to being one value of a property. A ? rather
+ * than an unchecked ○ for the same reason in reverse — ○ against ✓ is the radio
+ * button a chip already looks a little like.
+ *
+ * None of this costs the card a line: the marks are in the corner, out of the
+ * column the specimen and its caption share. The pill they replaced spent a row
+ * of every card saying «баталгаажаагүй», which is what 28,510 of the 28,511
+ * recorded spellings are.
+ *
+ * `long` is the tooltip and the accessible name; `short` is for the key beside
+ * the section label. Neither a tooltip nor a hover exists on a thumb, which is
+ * why that key names whichever marks the reader's own text produced.
  */
 interface Mark {
   glyph: string;
@@ -50,6 +58,13 @@ const MARK_VERIFIED: Mark = {
   className: "mark verified",
   short: "баталгаажсан",
   long: "баталгаажсан — монгол бичиг уншдаг хүн хянаж, зөв гэж баталсан",
+};
+
+const MARK_UNVERIFIED: Mark = {
+  glyph: "?",
+  className: "mark unverified",
+  short: "баталгаажаагүй",
+  long: "баталгаажаагүй — машинаар орсон, хүн хараахан хянаагүй",
 };
 
 /** «Approximately this», rather than a warning triangle: the amber already says
@@ -74,10 +89,13 @@ const MARK_COMPOSED: Mark = {
 };
 
 function marksOf(c: Candidate): Mark[] {
+  // A guess is in no entry, so there is nothing for a human to have checked
+  // yet: ≈ already says nobody wrote this down. Everything else has a
+  // verification state, including a composed form — whose ✓ or ? is its stem's.
+  if (c.source === "fallback") return [MARK_FALLBACK];
   const marks: Mark[] = [];
-  if (c.source === "fallback") marks.push(MARK_FALLBACK);
-  else if (c.source === "suffix-rule") marks.push(MARK_COMPOSED);
-  if (c.verified) marks.push(MARK_VERIFIED);
+  if (c.source === "suffix-rule") marks.push(MARK_COMPOSED);
+  marks.push(c.verified ? MARK_VERIFIED : MARK_UNVERIFIED);
   return marks;
 }
 
@@ -215,7 +233,12 @@ export default function Home() {
   // Which corner marks this reader's own text actually produced. The key names
   // only those, so it stays one line for an ordinary conversion and never
   // teaches a symbol that is not on the screen.
-  const keyMarks = [MARK_VERIFIED, MARK_FALLBACK, MARK_COMPOSED].filter((m) =>
+  const keyMarks = [
+    MARK_UNVERIFIED,
+    MARK_VERIFIED,
+    MARK_FALLBACK,
+    MARK_COMPOSED,
+  ].filter((m) =>
     wordTokens.some(({ token }) =>
       token.candidates.some((c) => marksOf(c).includes(m)),
     ),
@@ -370,16 +393,12 @@ export default function Home() {
       {hasWords && (
         <section className="words">
           {/* The key rides in the label row rather than taking a line of its
-              own, and it leads with the unmarked case because that is what
-              nearly every chip is. A caption was cut from here once for saying
-              what the sections below already said; this earns its place by
-              being the only words a corner mark has on a touchscreen. */}
+              own. A caption was cut from here once for saying what the sections
+              below already said; this earns its place by being the only words a
+              corner mark has on a touchscreen. */}
           <span className="field-label">
             Үг тус бүрийн тайлбарууд
             <span className="words-key">
-              <span className="words-key-item">
-                тэмдэглэгээгүй нь баталгаажаагүй
-              </span>
               {keyMarks.map((m) => (
                 <span className="words-key-item" key={m.glyph}>
                   <span className={m.className} aria-hidden="true">
@@ -581,17 +600,15 @@ export default function Home() {
           хянаагүй суурь өгөгдөл тул <strong>баталгаажаагүй</strong>. Алдааг
           олон нийтийн хувь нэмрээр аажмаар засаж, баталгаажуулж байна.
         </p>
-        {/* The marks as they actually appear on a chip, meanings beside them.
-            The unmarked case comes first and keeps a slot of its own, because
-            a key that only lists symbols cannot explain the state almost every
-            spelling is in. */}
+        {/* The marks as they actually appear in a chip's corner, meanings
+            beside them, the commonest first. */}
         <ul className="legend">
           <li>
-            <span className="mark none" aria-hidden="true">
-              —
+            <span className="mark unverified" aria-hidden="true">
+              ?
             </span>
             <span className="legend-what">
-              <strong>тэмдэглэгээгүй</strong> — машинаар орсон, хүн хараахан
+              <strong>баталгаажаагүй</strong> — машинаар орсон, хүн хараахан
               хянаагүй
             </span>
           </li>
