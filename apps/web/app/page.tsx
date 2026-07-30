@@ -550,21 +550,26 @@ export default function Home() {
               If you read монгол бичиг, the verification queue takes a minute
               and needs no error to have gone wrong first.
             </p>
+            {/* «✓ зөв» goes first because it is the cheapest true thing a
+                reader of монгол бичиг can tell us and the one the section
+                forgot to mention — the three buttons it did list all ask the
+                reader to have found something wrong first. */}
             <p>
-              Үг тус бүрийн тайлбар хэсгээс буруу зурлагыг «⚑», дутуу салаа
-              утгыг «⊕», толь бичигт байхгүй үгийн зөв зурлагыг «✎» товчоор тус
-              тус шууд мэдэгдэх, илгээх боломжтой. Ирүүлсэн санал бүрийг хүн
-              хянаж, зөвшөөрсний дараа нээлттэй үгсийн санд{" "}
+              Үг тус бүрийн тайлбар хэсгээс зөв зурлагыг «✓», буруу зурлагыг
+              «⚑», дутуу салаа утгыг «⊕», толь бичигт байхгүй үгийн зурлагыг «✎»
+              товчоор тус тус шууд мэдэгдэх, илгээх боломжтой. Ирүүлсэн санал
+              бүрийг хүн хянаж, зөвшөөрсний дараа нээлттэй үгсийн санд{" "}
               <a href={DATA_LICENSE_URL} target="_blank" rel="noreferrer">
                 CC BY-SA 4.0
               </a>{" "}
               лицензтэйгээр нэмдэг.
             </p>
             <p className="en" lang="en">
-              You can contribute straight from the converter — report a wrong
-              spelling, a missing meaning, or the real spelling of a word we do
-              not know. Every submission is reviewed by a human before it
-              reaches the lexicon, and is licensed CC BY-SA 4.0.
+              You can contribute straight from the converter — confirm a
+              spelling is right, report a wrong one, name a missing meaning, or
+              give the real spelling of a word we do not know. Every submission
+              is reviewed by a human before it reaches the lexicon, and is
+              licensed CC BY-SA 4.0.
             </p>
           </>
         )}
