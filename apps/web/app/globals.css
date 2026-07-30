@@ -560,11 +560,20 @@ textarea,
    sense and badge beneath it are its caption, so they share its centre line
    rather than hanging off the left with the column standing apart. The action
    buttons below stay on the card's left rail — those are controls, not part
-   of the specimen. */
+   of the specimen.
+
+   On the other axis the specimen holds the top and its caption holds the floor.
+   Two chips of one word are stretched to a common height, and stacking both
+   from the top made that height show: the shorter spelling's latin, sense and
+   badge floated up out of line with its neighbour's, leaving a hole beneath
+   them. Vertical script is read downwards, so the two columns start together;
+   everything written about them is glued to the bottom, which is what puts the
+   badges — the loudest thing on the card — on one line. */
 .chip {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   text-align: center;
   gap: 0.4rem;
   flex: 1;
