@@ -422,13 +422,30 @@ textarea,
   gap: 0.6rem;
 }
 
-/* Word cards march left→right (echoing the vertical output's column flow) and
-   scroll horizontally; the wrap adds a right-edge fade hinting there is more. */
-.words-scroll-wrap {
+/* One sentence: its number, then its cards. The number sits outside the
+   scroller, which is not a detail — inside it, it was a flex item with no snap
+   point of its own, so proximity snapping pulled the first card to the
+   scroll-start and slid the number out of view on every row long enough to
+   scroll. It is a label for the row, and a label that leaves when you use the
+   row labels nothing. */
+.words-row {
   position: relative;
+  display: flex;
+  /* On the first card's headword line, by its baseline rather than by a
+     measurement: centring put the number in the gap between lines as soon as a
+     row wrapped, and a row's number belongs at the row's start. */
+  align-items: baseline;
+  gap: 0.5rem;
 }
 
-.words-scroll {
+.words-row > .words-cards {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Cards march left→right, echoing the vertical output's column flow, and
+   scroll horizontally on a phone. */
+.words-cards {
   display: flex;
   gap: 0.75rem;
   overflow-x: auto;
@@ -437,7 +454,8 @@ textarea,
   scroll-padding-left: 0.25rem;
 }
 
-.words-scroll-wrap::after {
+/* The right-edge fade that hints there is more of the row. */
+.words-row::after {
   content: "";
   position: absolute;
   top: 0;
@@ -451,7 +469,6 @@ textarea,
 /* Row marker when the text has more than one sentence. */
 .sentence-num {
   flex: 0 0 auto;
-  align-self: center;
   min-width: 1.2rem;
   text-align: center;
   font-size: var(--text-xs);
@@ -482,12 +499,45 @@ textarea,
 }
 
 /* Candidates sit side by side; the card grows wide, never tall, so an
-   ambiguous word doesn't push the whole sentence row down. */
+   ambiguous word doesn't push the whole sentence row down. Wrapping is the
+   safety valve for the rare word with four recorded spellings, whose card in
+   the desktop grid has a width it cannot exceed. */
 .chips {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: stretch;
   gap: 0.45rem;
+}
+
+/* ---- the same cards, on a screen with a mouse ---- */
+
+/* Wide enough for three columns, which is where a horizontal scroller stops
+   being a gesture and becomes a chore: a mouse has no swipe, and a row of
+   words is a thing to read all of rather than to drag through. The phone keeps
+   the scroller — there the swipe is the natural motion, and the vertical
+   script wants the whole width for the few cards on screen. */
+@media (min-width: 40rem) {
+  .words-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+    overflow-x: visible;
+    padding-bottom: 0;
+    scroll-snap-type: none;
+  }
+
+  /* Nothing scrolls, so there is nothing to hint at. */
+  .words-row::after {
+    content: none;
+  }
+
+  /* Each card asks for the columns its candidates need, so an ambiguous word
+     gets room for its chips side by side instead of one column's worth of
+     squeeze. Capped at three by the page — a fourth column of Mongolian would
+     be narrower than the script can be read at. */
+  .word-card {
+    grid-column: span var(--span, 1);
+  }
 }
 
 /* The pick button and its reporting affordance stack, so the flag never

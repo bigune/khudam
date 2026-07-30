@@ -322,13 +322,25 @@ export default function Home() {
         <section className="words">
           <span className="field-label">Үг тус бүрийн тайлбарууд</span>
           {sentences.map((sentence, si) => (
-            <div className="words-scroll-wrap" key={si}>
-              <div className="words-scroll">
-                {sentences.length > 1 && (
-                  <span className="sentence-num">{si + 1}</span>
-                )}
+            <div className="words-row" key={si}>
+              {sentences.length > 1 && (
+                <span className="sentence-num">{si + 1}</span>
+              )}
+              <div className="words-cards">
                 {sentence.map(({ token, index }) => (
-                  <div className="word-card" key={index}>
+                  <div
+                    className="word-card"
+                    key={index}
+                    // How many grid columns this card's candidates need on a
+                    // wide screen; ignored by the phone's scroller, where the
+                    // card is sized by its contents. Three is the cap — see
+                    // the grid rule in globals.css.
+                    style={
+                      {
+                        "--span": Math.min(token.candidates.length, 3),
+                      } as React.CSSProperties
+                    }
+                  >
                     <span className="word-input">{token.input}</span>
                     <div className="chips">
                       {token.candidates.map((c, ci) => {
