@@ -214,7 +214,57 @@ h1 {
   font-size: var(--text-sm);
 }
 
+/* Inside a sentence a link has only these two marks to be found by, so it
+   keeps both. The offset is for Cyrillic: у, д, ц and р all hang below the
+   baseline, and a default underline runs straight through them. */
 a {
+  color: var(--accent);
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.18em;
+}
+
+/* The site's own furniture — the bar under a title, the row of ways out, the
+   colophon's groups — as opposed to a link the page is making a point with.
+   Furniture is found by position: every item in these is a link, so the rule
+   says nothing and leaves, returning on hover where it means "this one". A
+   link in the running content keeps both marks even when it has a line to
+   itself, because there it is the point rather than the plumbing.
+
+   The colophon and the wordmark go further and give up the accent as well: six
+   ink links read as a book's imprint page, six blue ones as an advertisement. */
+.stats a,
+.links-row a {
+  text-decoration: none;
+}
+
+.brand,
+.footer-brand a,
+.footer-group a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.stats a:hover,
+.stats a:focus-visible,
+.links-row a:hover,
+.links-row a:focus-visible,
+.footer-brand a:hover,
+.footer-brand a:focus-visible,
+.footer-group a:hover,
+.footer-group a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* The imprint line is small print with links in it, so they keep the rule and
+   give up the colour — two licence names in accent blue were the loudest thing
+   on the quietest line of the page. */
+.footer-legal a {
+  color: inherit;
+}
+
+.footer-legal a:hover,
+.footer-legal a:focus-visible {
   color: var(--accent);
 }
 
@@ -277,6 +327,7 @@ button {
 }
 
 /* Interaction is felt, not announced: colour eases, nothing moves or grows. */
+a,
 textarea,
 .sample,
 .copy,
