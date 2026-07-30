@@ -52,8 +52,11 @@ const MARK_VERIFIED: Mark = {
   long: "баталгаажсан — монгол бичиг уншдаг хүн хянаж, зөв гэж баталсан",
 };
 
+/** «Approximately this», rather than a warning triangle: the amber already says
+ *  be careful, and what the mark has left to say is what kind of thing this is —
+ *  a spelling arrived at by rule, close to the word but not attested as it. */
 const MARK_FALLBACK: Mark = {
-  glyph: "▲",
+  glyph: "≈",
   className: "mark fallback",
   short: "галиг · таамаг",
   long: "галиг · таамаг — толь бичигт байхгүй тул дүрмээр галигласан, алдаатай байж болно",
@@ -603,7 +606,7 @@ export default function Home() {
           </li>
           <li>
             <span className="mark fallback" aria-hidden="true">
-              ▲
+              ≈
             </span>
             <span className="legend-what">
               <strong>галиг · таамаг</strong> — толь бичигт байхгүй тул дүрмээр
