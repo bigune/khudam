@@ -292,11 +292,15 @@ a {
   color: var(--muted);
 }
 
-/* The output label carries the copy button on its right. */
+/* A field label carries a utility at its right end — a button, or the key to
+   the tier marks. On a narrow screen that drops below the caption instead of
+   crushing it. */
 .field-label {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 0.15rem 0.75rem;
 }
 
 textarea {
@@ -577,6 +581,10 @@ textarea,
    everything written about them is glued to the bottom, which is what puts the
    badges — the loudest thing on the card — on one line. */
 .chip {
+  /* The corner mark's frame of reference. Without this the nearest positioned
+     ancestor is the sentence row, and every mark in a row stacks in one
+     corner of it. */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -694,6 +702,77 @@ textarea,
 
 .sense {
   color: var(--ink);
+}
+
+/* ---- tier marks ---- */
+
+/* A stamp in the chip's corner, where a pill used to take a line of every card.
+   Absolute, so it costs the specimen and its caption no height at all and does
+   not join the column they share — the chip's script is one narrow centred
+   column, and this corner is the one part of the box that was always empty. */
+.chip-marks {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.4rem;
+  display: flex;
+  gap: 0.25rem;
+  font-size: var(--text-xs);
+  line-height: 1;
+}
+
+/* Bold because a mark this small is a glyph doing a pill's work, and it has to
+   survive being 12px of punctuation. Never colour alone: each carries its own
+   shape, so the three are told apart by a reader who cannot tell green from
+   amber. */
+.mark {
+  font-weight: 700;
+  cursor: help;
+}
+
+.mark.verified {
+  color: var(--verified);
+}
+
+.mark.fallback {
+  color: var(--warn);
+}
+
+/* Neutral, not amber: a composed form is a stem this lexicon holds plus a
+   suffix rule with citations behind it, which is a different claim from "a
+   machine guessed this". */
+.mark.composed,
+.mark.none {
+  color: var(--neutral);
+}
+
+/* In the key and the legend the mark is being named, not consulted. */
+.words-key .mark,
+.legend .mark {
+  cursor: inherit;
+}
+
+/* The key beside the section label: normal case and weight against the label's
+   small caps, so it reads as a sentence sharing a line with a caption rather
+   than as more caption. It wraps to its own line when the text has produced
+   enough marks to need one. */
+.words-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.8rem;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+.words-key-item {
+  white-space: nowrap;
+}
+
+/* One column for the marks, so the four meanings hang off one left axis
+   instead of stepping in and out with the width of each glyph. */
+.legend .mark {
+  flex: 0 0 1rem;
+  text-align: center;
 }
 
 .badge {

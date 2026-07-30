@@ -23,22 +23,59 @@ const CONTRIBUTING_URL = `${REPO_URL}/blob/main/CONTRIBUTING.md`;
 const SOURCES_URL = `${REPO_URL}/blob/main/data/SOURCES.md`;
 const DATA_LICENSE_URL = `${REPO_URL}/blob/main/data/LICENSE`;
 
-function badgeOf(c: Candidate): { className: string; label: string } {
-  if (c.source === "fallback")
-    return { className: "badge fallback", label: "галиг · таамаг" };
-  if (c.source === "suffix-rule")
-    return c.verified
-      ? {
-          className: "badge verified",
-          label: "үндэс + нөхцөл · баталгаажсан ✓",
-        }
-      : {
-          className: "badge unverified",
-          label: "үндэс + нөхцөл · баталгаажаагүй",
-        };
-  if (c.verified)
-    return { className: "badge verified", label: "баталгаажсан ✓" };
-  return { className: "badge unverified", label: "баталгаажаагүй" };
+/**
+ * The stamps in a chip's corner, and what they mean.
+ *
+ * Unverified carries no mark at all, and that is the whole design: exactly one
+ * of the 28,511 recorded spellings is verified today, so a pill reading
+ * «баталгаажаагүй» said the same thing 28,510 times and cost a line of every
+ * card to do it. A mark now means something happened to this spelling — a human
+ * read it, a rule built it, or a machine guessed it — and the absence of one is
+ * the ordinary state of the lexicon, said once in the key beside the section
+ * label instead of once per candidate.
+ *
+ * `long` is the tooltip and the accessible name; `short` is for that key.
+ * Neither a tooltip nor a hover exists on a thumb, which is why the key shows
+ * the words for whichever marks the reader's own text actually produced.
+ */
+interface Mark {
+  glyph: string;
+  className: string;
+  short: string;
+  long: string;
+}
+
+const MARK_VERIFIED: Mark = {
+  glyph: "✓",
+  className: "mark verified",
+  short: "баталгаажсан",
+  long: "баталгаажсан — монгол бичиг уншдаг хүн хянаж, зөв гэж баталсан",
+};
+
+const MARK_FALLBACK: Mark = {
+  glyph: "▲",
+  className: "mark fallback",
+  short: "галиг · таамаг",
+  long: "галиг · таамаг — толь бичигт байхгүй тул дүрмээр галигласан, алдаатай байж болно",
+};
+
+/** Neutral rather than amber: a composed form is not a guess about how the word
+ *  is written, it is a stem this lexicon has plus a suffix rule with citations
+ *  behind it. What the mark says is that no single entry spells this — which is
+ *  the one thing about a chip that no colour could carry. */
+const MARK_COMPOSED: Mark = {
+  glyph: "+",
+  className: "mark composed",
+  short: "нөхцөлтэй",
+  long: "үндэс + нөхцөл — үндсэн үгэнд нөхцөлийг дүрмээр залгав",
+};
+
+function marksOf(c: Candidate): Mark[] {
+  const marks: Mark[] = [];
+  if (c.source === "fallback") marks.push(MARK_FALLBACK);
+  else if (c.source === "suffix-rule") marks.push(MARK_COMPOSED);
+  if (c.verified) marks.push(MARK_VERIFIED);
+  return marks;
 }
 
 /** How far a support vote has got. Keyed by candidate rather than by position,
@@ -172,6 +209,15 @@ export default function Home() {
     });
     if (current.length > 0) sentences.push(current);
   }
+  // Which corner marks this reader's own text actually produced. The key names
+  // only those, so it stays one line for an ordinary conversion and never
+  // teaches a symbol that is not on the screen.
+  const keyMarks = [MARK_VERIFIED, MARK_FALLBACK, MARK_COMPOSED].filter((m) =>
+    wordTokens.some(({ token }) =>
+      token.candidates.some((c) => marksOf(c).includes(m)),
+    ),
+  );
+
   const hasFallback = wordTokens.some(({ token }) => token.fallback);
   const hasAmbiguous = wordTokens.some(
     ({ token }) => token.candidates.length > 1,
@@ -320,7 +366,27 @@ export default function Home() {
 
       {hasWords && (
         <section className="words">
-          <span className="field-label">Үг тус бүрийн тайлбарууд</span>
+          {/* The key rides in the label row rather than taking a line of its
+              own, and it leads with the unmarked case because that is what
+              nearly every chip is. A caption was cut from here once for saying
+              what the sections below already said; this earns its place by
+              being the only words a corner mark has on a touchscreen. */}
+          <span className="field-label">
+            Үг тус бүрийн тайлбарууд
+            <span className="words-key">
+              <span className="words-key-item">
+                тэмдэглэгээгүй нь баталгаажаагүй
+              </span>
+              {keyMarks.map((m) => (
+                <span className="words-key-item" key={m.glyph}>
+                  <span className={m.className} aria-hidden="true">
+                    {m.glyph}
+                  </span>{" "}
+                  {m.short}
+                </span>
+              ))}
+            </span>
+          </span>
           {sentences.map((sentence, si) => (
             <div className="words-row" key={si}>
               {sentences.length > 1 && (
@@ -344,7 +410,7 @@ export default function Home() {
                     <span className="word-input">{token.input}</span>
                     <div className="chips">
                       {token.candidates.map((c, ci) => {
-                        const badge = badgeOf(c);
+                        const marks = marksOf(c);
                         const isPicked = (picks[index] ?? 0) === ci;
                         return (
                           <div className="chip-wrap" key={ci}>
@@ -352,25 +418,43 @@ export default function Home() {
                               className={isPicked ? "chip picked" : "chip"}
                               onClick={() => pick(index, ci)}
                             >
+                              {/* In the corner, so the specimen and its caption
+                                  keep the whole column. The words live in the
+                                  accessible name, which is also what a screen
+                                  reader reads out as part of this button. */}
+                              {marks.length > 0 && (
+                                <span className="chip-marks">
+                                  {marks.map((m) => (
+                                    <span
+                                      key={m.glyph}
+                                      className={m.className}
+                                      role="img"
+                                      aria-label={m.long}
+                                      title={m.long}
+                                    >
+                                      {m.glyph}
+                                    </span>
+                                  ))}
+                                </span>
+                              )}
                               <span
                                 className="chip-trad mongolian"
                                 lang="mn-Mong"
                               >
                                 {c.traditional}
                               </span>
-                              <span className="chip-meta">
-                                {c.latin && (
-                                  <span className="latin">{c.latin}</span>
-                                )}
-                                {displaySense(c) && (
-                                  <span className="sense">
-                                    {displaySense(c)}
-                                  </span>
-                                )}
-                                <span className={badge.className}>
-                                  {badge.label}
+                              {(c.latin || displaySense(c)) && (
+                                <span className="chip-meta">
+                                  {c.latin && (
+                                    <span className="latin">{c.latin}</span>
+                                  )}
+                                  {displaySense(c) && (
+                                    <span className="sense">
+                                      {displaySense(c)}
+                                    </span>
+                                  )}
                                 </span>
-                              </span>
+                              )}
                             </button>
                             {signalsEnabled &&
                               // A fallback candidate is a guess we already
@@ -494,26 +578,45 @@ export default function Home() {
           хянаагүй суурь өгөгдөл тул <strong>баталгаажаагүй</strong>. Алдааг
           олон нийтийн хувь нэмрээр аажмаар засаж, баталгаажуулж байна.
         </p>
-        {/* The tiers as the chips they actually are, meanings beside them.
-            The sentence this replaces asked the reader to imagine a
-            checkmark; the chip is right here. */}
+        {/* The marks as they actually appear on a chip, meanings beside them.
+            The unmarked case comes first and keeps a slot of its own, because
+            a key that only lists symbols cannot explain the state almost every
+            spelling is in. */}
         <ul className="legend">
           <li>
-            <span className="badge verified">баталгаажсан ✓</span>
+            <span className="mark none" aria-hidden="true">
+              —
+            </span>
             <span className="legend-what">
-              монгол бичиг уншдаг хүн хянаж, зөв гэж баталсан
+              <strong>тэмдэглэгээгүй</strong> — машинаар орсон, хүн хараахан
+              хянаагүй
             </span>
           </li>
           <li>
-            <span className="badge unverified">баталгаажаагүй</span>
+            <span className="mark verified" aria-hidden="true">
+              ✓
+            </span>
             <span className="legend-what">
-              машинаар орсон, хүн хараахан хянаагүй
+              <strong>баталгаажсан</strong> — монгол бичиг уншдаг хүн хянаж, зөв
+              гэж баталсан
             </span>
           </li>
           <li>
-            <span className="badge fallback">галиг · таамаг</span>
+            <span className="mark fallback" aria-hidden="true">
+              ▲
+            </span>
             <span className="legend-what">
-              толь бичигт байхгүй тул дүрмээр галигласан — алдаатай байж болно
+              <strong>галиг · таамаг</strong> — толь бичигт байхгүй тул дүрмээр
+              галигласан, алдаатай байж болно
+            </span>
+          </li>
+          <li>
+            <span className="mark composed" aria-hidden="true">
+              +
+            </span>
+            <span className="legend-what">
+              <strong>үндэс + нөхцөл</strong> — үндсэн үгэнд нөхцөлийг дүрмээр
+              залгасан
             </span>
           </li>
         </ul>
