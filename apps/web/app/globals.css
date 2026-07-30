@@ -330,7 +330,7 @@ button {
 a,
 textarea,
 .sample,
-.copy,
+.field-action,
 .chip,
 .card-action,
 .choice,
@@ -365,7 +365,11 @@ textarea,
   border-color: var(--accent);
 }
 
-.copy {
+/* The utility a field label carries at its right end: copy the output, empty
+   the input. One style for both — they are the same kind of thing, a small
+   convenience belonging to the field above which it sits, and the label row is
+   what makes it read that way. */
+.field-action {
   border: 1px solid var(--border);
   background: var(--panel);
   color: var(--ink);
@@ -376,7 +380,7 @@ textarea,
   letter-spacing: normal;
 }
 
-.copy:hover {
+.field-action:hover {
   border-color: var(--accent);
 }
 

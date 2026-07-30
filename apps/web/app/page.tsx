@@ -3,7 +3,7 @@
 import { convertText, LEXICON_ENTRY_COUNT, normalizeWord } from "khudam";
 import type { Candidate, Token } from "khudam";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import {
   displaySense,
   isLexiconCandidate,
@@ -104,6 +104,7 @@ export default function Home() {
   const [copyFailed, setCopyFailed] = useState(false);
   const [report, setReport] = useState<ReportTarget | null>(null);
   const [support, setSupport] = useState<Record<string, SupportState>>({});
+  const inputRef = useRef<HTMLTextAreaElement>(null);
 
   const tokens = useMemo(() => convertText(text), [text]);
 
@@ -112,6 +113,14 @@ export default function Home() {
     setPicks({});
     setCopied(false);
     setCopyFailed(false);
+  }
+
+  /** Emptying the field is the start of typing the next thing, so the caret
+   *  goes back where it was — clearing and then having to click the box again
+   *  is two actions for one intention. */
+  function clear() {
+    update("");
+    inputRef.current?.focus();
   }
 
   function pick(tokenIndex: number, candidateIndex: number) {
@@ -229,9 +238,25 @@ export default function Home() {
       <ReviewerBadge />
 
       <section className="io">
-        <label className="field">
-          <span className="field-label">Кирилл</span>
+        {/* A div with a bound label rather than a wrapping <label>: the label
+            row carries a button now, and a button inside a label is a click
+            two elements both want. */}
+        <div className="field">
+          <span className="field-label">
+            <label htmlFor="cyrillic">Кирилл</label>
+            {/* Only once there is something to clear — an always-present button
+                that does nothing is furniture. It takes the same place as the
+                copy button on the output below: the field's own utility, at the
+                right end of the field's own label. */}
+            {text !== "" && (
+              <button className="field-action" onClick={clear}>
+                Цэвэрлэх
+              </button>
+            )}
+          </span>
           <textarea
+            id="cyrillic"
+            ref={inputRef}
             value={text}
             onChange={(e) => update(e.target.value)}
             placeholder="Кирилл үгээ энд бичнэ үү…"
@@ -239,7 +264,7 @@ export default function Home() {
             autoFocus
             spellCheck={false}
           />
-        </label>
+        </div>
 
         {!hasWords && (
           <p className="samples">
@@ -256,7 +281,7 @@ export default function Home() {
           <div className="field">
             <span className="field-label">
               Монгол бичиг
-              <button className="copy" onClick={copy}>
+              <button className="field-action" onClick={copy}>
                 {copyFailed
                   ? "Хуулж чадсангүй — гараар сонгоно уу"
                   : copied
