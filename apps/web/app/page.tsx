@@ -33,9 +33,11 @@ const DATA_LICENSE_URL = `${REPO_URL}/blob/main/data/LICENSE`;
  * Every candidate with a verification state wears one, and that is deliberate.
  * A green ✓ alone, on one chip of several a reader is being asked to choose
  * between, reads as «take this one» rather than as «somebody checked this one»;
- * beside a neutral ?, it goes back to being one value of a property. A ? rather
- * than an unchecked ○ for the same reason in reverse — ○ against ✓ is the radio
- * button a chip already looks a little like.
+ * beside a neutral ○ it goes back to being one value of a property. The pair is
+ * the checkbox metaphor, which is a fair thing to borrow here as long as it
+ * cannot be mistaken for the chip's own state: choosing a candidate is said by
+ * a full accent border, a different channel from a glyph in the corner, and the
+ * corner is where + and ≈ live too — so it reads as the status area it is.
  *
  * None of this costs the card a line: the marks are in the corner, out of the
  * column the specimen and its caption share. The pill they replaced spent a row
@@ -61,7 +63,7 @@ const MARK_VERIFIED: Mark = {
 };
 
 const MARK_UNVERIFIED: Mark = {
-  glyph: "?",
+  glyph: "○",
   className: "mark unverified",
   short: "баталгаажаагүй",
   long: "баталгаажаагүй — машинаар орсон, хүн хараахан хянаагүй",
@@ -605,7 +607,7 @@ export default function Home() {
         <ul className="legend">
           <li>
             <span className="mark unverified" aria-hidden="true">
-              ?
+              ○
             </span>
             <span className="legend-what">
               <strong>баталгаажаагүй</strong> — машинаар орсон, хүн хараахан
